@@ -7857,6 +7857,16 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "assets/images/favicon-old.ico",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/favicon-old.ico"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "assets/images/favicon.ico",
       "output": {
         "resource": {
