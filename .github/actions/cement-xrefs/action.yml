@@ -1,0 +1,46 @@
+# .github/actions/cement-xrefs/action.yml
+name: "Cement XREFs & Prune"
+description: "Remove old API files and rewrite JSON/HTML xrefs"
+inputs:
+  dep_map:
+    description: "Library=URL mappings"
+    required: true
+runs:
+  using: "composite"
+  steps:
+    - name: Cement Shared XREFs and Prune
+      shell: bash
+      env:
+        DEP_MAP: ${{ inputs.dep_map }}
+      run: |
+        set -euo pipefail
+
+        while IFS='=' read -r LIB PREFIX; do
+          [[ -z "$LIB" || "$LIB" =~ ^# ]] && continue
+          echo "Processing $LIB -> $PREFIX"
+
+          # 1) delete old API files
+          find "$SITE_DIR/api" -type f -name "${LIB}*" -delete || true
+
+          # 2) prune index.json items
+          if [[ -f "$SITE_DIR/index.json" ]]; then
+            tmp=$(mktemp)
+            jq "(.items // []) |= map(select(.href | test(\"${LIB//./\\\\.}\") | not))" \
+              "$SITE_DIR/index.json" >"$tmp" && mv "$tmp" "$SITE_DIR/index.json"
+          fi
+
+          LIB_ESC=${LIB//./\\.}
+
+          # 3) JSON xref fixes
+          find "$SITE_DIR" -type f -name '*.json' -print0 | \
+            xargs -0 sed -i -E \
+              -e 's@("topicHref":")'"${LIB_ESC}"'\.([^"]+)"@\1'"${PREFIX}/${LIB}"'.\2"@g' \
+              -e 's@("href":")'"${LIB_ESC}"'\.([^"]+)"@\1'"${PREFIX}/${LIB}"'.\2"@g'
+
+          # 4) HTML xref fixes
+          find "$SITE_DIR" -type f -name '*.html' -print0 | \
+            xargs -0 sed -i -E \
+              -e "s@href=\"${LIB_ESC}\.([^\"]+\.html)\"@href=\"${PREFIX}/${LIB}.\1\"@g" \
+              -e "s@href='${LIB_ESC}\.([^']+\.html)'@href='${PREFIX}/${LIB}.\1'@g"
+
+        done <<< "$DEP_MAP"
