@@ -3,12 +3,12 @@ name: "Cement XREFs & Prune"
 description: "Remove old API files and rewrite JSON/HTML xrefs"
 inputs:
   dep_map:
-    description: "Library=URL mappings"
     required: true
+    description: "Library=URL mappings"
   site_dir:
-    description: "Directory under which site was built"
     required: false
     default: "_site"
+    description: "Directory under which site was built"
 runs:
   using: "composite"
   steps:
@@ -23,31 +23,25 @@ runs:
         while IFS='=' read -r LIB PREFIX; do
           [[ -z "$LIB" || "$LIB" =~ ^# ]] && continue
           echo "Processing $LIB -> $PREFIX"
-
-          # escape dots for regex
           LIB_ESC=${LIB//./\\.}
 
-          # 1) Delete old API files
+          # 1) delete old API files
           find "$SITE_DIR/api" -type f -name "${LIB}*" -delete || true
 
-          # 2) Prune index.json safely
+          # 2) prune index.json
           if [[ -f "$SITE_DIR/index.json" ]]; then
             tmp=$(mktemp)
-            jq --arg lib "$LIB_ESC" '
-              (.items //= []) 
-              | .items |= map(
-                  select(
-                    (.href | test($lib)) | not
-                  )
-                )
-            ' "$SITE_DIR/index.json" > "$tmp" && mv "$tmp" "$SITE_DIR/index.json"
+            jq --arg lib "$LIB_ESC" \
+              '(.items //= []) | .items |= map(select((.href | test($lib)) | not))' \
+              "$SITE_DIR/index.json" > "$tmp" \
+              && mv "$tmp" "$SITE_DIR/index.json"
           fi
 
           # 3) JSON xref fixes
           find "$SITE_DIR" -type f -name '*.json' -print0 | \
             xargs -0 sed -i -E \
-              -e 's@("topicHref":")'"${LIB_ESC}"'\.([^"']+)"@\1'"${PREFIX}/${LIB}"'.\2"@g' \
-              -e 's@("href":")'"${LIB_ESC}"'\.([^"']+)"@\1'"${PREFIX}/${LIB}"'.\2"@g'
+              -e 's@("topicHref":")'"${LIB_ESC}"'\.([^"'"'"']+)"@\1'"${PREFIX}/${LIB}"'.\2"@g' \
+              -e 's@("href":")'"${LIB_ESC}"'\.([^"'"'"']+)"@\1'"${PREFIX}/${LIB}"'.\2"@g'
 
           # 4) HTML xref fixes
           find "$SITE_DIR" -type f -name '*.html' -print0 | \
