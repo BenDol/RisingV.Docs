@@ -46,7 +46,7 @@ body::before {
 .header {
     position: relative;
     overflow: hidden;
-    padding: 5rem 1.5rem;
+    padding: 3rem 1.5rem;
     text-align: center;
     background: linear-gradient(135deg, #000000 0%, #1a0606 50%, #000000 100%);
 }
