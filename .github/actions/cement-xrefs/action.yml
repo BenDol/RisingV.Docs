@@ -5,6 +5,10 @@ inputs:
   dep_map:
     description: "Library=URL mappings"
     required: true
+  site_dir:
+    description: "Directory under which site was built"
+    required: false
+    default: "_site"
 runs:
   using: "composite"
   steps:
@@ -12,6 +16,7 @@ runs:
       shell: bash
       env:
         DEP_MAP: ${{ inputs.dep_map }}
+        SITE_DIR:  ${{ inputs.site_dir }}
       run: |
         set -euo pipefail
 
