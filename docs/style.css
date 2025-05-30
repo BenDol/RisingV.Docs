@@ -1,4 +1,3 @@
-
 /* Reset and Base Styles */
 * {
     margin: 0;
@@ -114,6 +113,39 @@ body::before {
 .icon {
     width: 1.5rem;
     height: 1.5rem;
+}
+
+/* Back Button */
+.back-button {
+    position: fixed;
+    top: 1.5rem;
+    left: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    background: transparent;
+    border: none;
+    color: #d1d5db;
+    text-decoration: underline;
+    font-family: 'Crimson Text', serif;
+    font-size: 1.125rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.back-button:hover {
+    color: #e5e5e5;
+    transform: translateX(-2px);
+}
+
+.back-arrow {
+    transition: transform 0.2s ease;
+}
+
+.back-button:hover .back-arrow {
+    transform: translateX(-2px);
 }
 
 /* Main Content */
