@@ -110,6 +110,11 @@ body::before {
     font-size: 1.125rem;
 }
 
+.archive-badge span {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 500;
+}
+
 .icon {
     width: 1.5rem;
     height: 1.5rem;
@@ -272,10 +277,11 @@ body::before {
 }
 
 .card-description {
-    font-family: 'Crimson Text', serif;
+    font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     color: #b8999;
     line-height: 1.6;
     margin-bottom: 1rem;
+    font-weight: 400;
 }
 
 .card-link {
@@ -322,6 +328,12 @@ body::before {
     color: #a33333;
     font-family: 'Cinzel', serif;
     font-weight: 500;
+}
+
+/* Global span styling for clarity */
+span {
+    font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-weight: 400;
 }
 
 /* Responsive Design */
