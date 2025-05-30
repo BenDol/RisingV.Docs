@@ -16,7 +16,7 @@ runs:
       shell: bash
       env:
         DEP_MAP: ${{ inputs.dep_map }}
-        SITE_DIR:  ${{ inputs.site_dir }}
+        SITE_DIR: ${{ inputs.site_dir }}
       run: |
         set -euo pipefail
 
