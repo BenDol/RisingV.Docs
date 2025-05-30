@@ -1,0 +1,2948 @@
+{
+  "source_base_path": "/home/runner/work/RisingV.Core/RisingV.Core",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      }
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "CHANGELOG.md",
+      "output": {
+        ".html": {
+          "relative_path": "CHANGELOG.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "README.md",
+      "output": {
+        ".html": {
+          "relative_path": "README.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Aspects.BehaviourTreeAspect.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Aspects.BehaviourTreeAspect.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Aspects.BehaviourTreeAspect",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.Aspects.BehaviourTreeAspect.yml\" sourcestartlinenumber=\"1\">Aspect of an entity that has a behaviour tree.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Aspects.BehaviourTreeQueries.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Aspects.BehaviourTreeQueries.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Aspects.BehaviourTreeQueries",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.Aspects.BehaviourTreeQueries.yml\" sourcestartlinenumber=\"1\">Queries for entities that have a behaviour tree.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Aspects.BuffAspect.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Aspects.BuffAspect.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Aspects.BuffAspect",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.Aspects.BuffAspect.yml\" sourcestartlinenumber=\"1\">Aspect of an entity that understands buffs.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Aspects.BuffQueries.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Aspects.BuffQueries.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Aspects.BuffQueries",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.Aspects.BuffQueries.yml\" sourcestartlinenumber=\"1\">Provides queries for buff entities.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Aspects.CharacterAspect.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Aspects.CharacterAspect.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Aspects.CharacterAspect",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.Aspects.CharacterAspect.yml\" sourcestartlinenumber=\"1\">Character aspect in the game, providing access to character-specific data and functionality.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Aspects.CharacterQueries.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Aspects.CharacterQueries.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Aspects.CharacterQueries",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.Aspects.CharacterQueries.yml\" sourcestartlinenumber=\"1\">Provides queries for character entities in the game.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Aspects.CombatAspect.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Aspects.CombatAspect.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Aspects.CombatAspect",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.Aspects.CombatAspect.yml\" sourcestartlinenumber=\"1\">Aspect of an entity that is related to combat.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Aspects.CombatQueries.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Aspects.CombatQueries.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Aspects.CombatQueries",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.Aspects.CombatQueries.yml\" sourcestartlinenumber=\"1\">Queries for combat-related entities.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Aspects.ComponentMonolith.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Aspects.ComponentMonolith.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Aspects.ComponentMonolith",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.Aspects.ComponentMonolith.yml\" sourcestartlinenumber=\"1\">A monolithic component that provides access to various components of an entity.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Aspects.EntityAspect.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Aspects.EntityAspect.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Aspects.EntityAspect",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.Aspects.EntityAspect.yml\" sourcestartlinenumber=\"1\">Aspect of an entity in the game world.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Aspects.EntityQueries.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Aspects.EntityQueries.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Aspects.EntityQueries",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.Aspects.EntityQueries.yml\" sourcestartlinenumber=\"1\">Abstract class for entity queries.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Aspects.EquipmentAspect.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Aspects.EquipmentAspect.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Aspects.EquipmentAspect",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.Aspects.EquipmentAspect.yml\" sourcestartlinenumber=\"1\">Aspect for equipment entities in the game.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Aspects.GatherableAspect.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Aspects.GatherableAspect.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Aspects.GatherableAspect",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.Aspects.GatherableAspect.yml\" sourcestartlinenumber=\"1\">Aspect of an entity that can be gathered, such as resources or materials.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Aspects.GatherableQueries.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Aspects.GatherableQueries.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Aspects.GatherableQueries",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.Aspects.GatherableQueries.yml\" sourcestartlinenumber=\"1\">Queries for gatherable entities in the game world.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Aspects.HybridModelAspect.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Aspects.HybridModelAspect.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Aspects.HybridModelAspect",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.Aspects.HybridModelAspect.yml\" sourcestartlinenumber=\"1\">Aspect of an entity that is part of the hybrid model system.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Aspects.HybridModelQueries.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Aspects.HybridModelQueries.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Aspects.HybridModelQueries",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.Aspects.HybridModelQueries.yml\" sourcestartlinenumber=\"1\">Queries for entities that are part of the hybrid model system.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Aspects.InventoryAspect.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Aspects.InventoryAspect.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Aspects.InventoryAspect",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.Aspects.InventoryAspect.yml\" sourcestartlinenumber=\"1\">Aspect of an entity that has an inventory.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Aspects.InventoryItemData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Aspects.InventoryItemData.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Aspects.InventoryItemData",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.Aspects.InventoryItemData.yml\" sourcestartlinenumber=\"1\">Represents data for an inventory item.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Aspects.InventoryQueries.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Aspects.InventoryQueries.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Aspects.InventoryQueries",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.Aspects.InventoryQueries.yml\" sourcestartlinenumber=\"1\">Queries for entities that have an inventory.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Aspects.ItemAspect.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Aspects.ItemAspect.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Aspects.ItemAspect",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.Aspects.ItemAspect.yml\" sourcestartlinenumber=\"1\">Aspect of an entity that represents an item.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Aspects.ItemQueries.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Aspects.ItemQueries.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Aspects.ItemQueries",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.Aspects.ItemQueries.yml\" sourcestartlinenumber=\"1\">Queries for entities that represent items.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Aspects.MinionAspect.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Aspects.MinionAspect.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Aspects.MinionAspect",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.Aspects.MinionAspect.yml\" sourcestartlinenumber=\"1\">Aspect of an entity that represents a minion in the game.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Aspects.MinionQueries.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Aspects.MinionQueries.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Aspects.MinionQueries",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.Aspects.MinionQueries.yml\" sourcestartlinenumber=\"1\">Queries for entities that represent minions in the game.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Aspects.MoveableAspect.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Aspects.MoveableAspect.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Aspects.MoveableAspect",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.Aspects.MoveableAspect.yml\" sourcestartlinenumber=\"1\">Aspect of an entity that can be moved, providing access to movement and velocity data.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Aspects.MoveableQueries.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Aspects.MoveableQueries.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Aspects.MoveableQueries",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.Aspects.MoveableQueries.yml\" sourcestartlinenumber=\"1\">Queries for entities that can be moved, specifically those with movement components.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Aspects.NetworkAspect.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Aspects.NetworkAspect.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Aspects.NetworkAspect",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.Aspects.NetworkAspect.yml\" sourcestartlinenumber=\"1\">Aspect of an entity that has network-related components.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Aspects.NetworkQueries.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Aspects.NetworkQueries.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Aspects.NetworkQueries",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.Aspects.NetworkQueries.yml\" sourcestartlinenumber=\"1\">Queries for entities that have network-related components.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Aspects.NpcAspect.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Aspects.NpcAspect.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Aspects.NpcAspect",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.Aspects.NpcAspect.yml\" sourcestartlinenumber=\"1\">Aspect of an entity that represents a non-player character (NPC).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Aspects.NpcQueries.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Aspects.NpcQueries.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Aspects.NpcQueries",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.Aspects.NpcQueries.yml\" sourcestartlinenumber=\"1\">Queries for entities that represent non-player characters (NPCs).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Aspects.PlayerAspect.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Aspects.PlayerAspect.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Aspects.PlayerAspect",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.Aspects.PlayerAspect.yml\" sourcestartlinenumber=\"1\">Aspect of an entity that represents a player in the game.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Aspects.PlayerQueries.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Aspects.PlayerQueries.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Aspects.PlayerQueries",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.Aspects.PlayerQueries.yml\" sourcestartlinenumber=\"1\">Queries for entities that represent players in the game.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Aspects.StructureAspect.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Aspects.StructureAspect.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Aspects.StructureAspect",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Aspects.StructureQueries.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Aspects.StructureQueries.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Aspects.StructureQueries",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Aspects.UnitAspect.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Aspects.UnitAspect.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Aspects.UnitAspect",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Aspects.UnitQueries.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Aspects.UnitQueries.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Aspects.UnitQueries",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Aspects.VBloodAspect.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Aspects.VBloodAspect.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Aspects.VBloodAspect",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Aspects.VBloodQueries.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Aspects.VBloodQueries.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Aspects.VBloodQueries",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Aspects.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Aspects.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Aspects",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Caches.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Caches.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Caches",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.CorePluginContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.CorePluginContext.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.CorePluginContext",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Databases.EntityKeyedMapDataSource-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Databases.EntityKeyedMapDataSource-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Databases.EntityKeyedMapDataSource<TData>",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.Databases.EntityKeyedMapDataSource-1.yml\" sourcestartlinenumber=\"1\">Represents a data source that uses an entity's hash code as the key, specifically for data types that implement <xref href=\"RisingV.Shared.Data.IData\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Databases.EntityKeyedMapDataSource-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Databases.EntityKeyedMapDataSource-2.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Databases.EntityKeyedMapDataSource<TData, TLoader>",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.Databases.EntityKeyedMapDataSource-2.yml\" sourcestartlinenumber=\"1\">Represents a data source that uses an entity's hash code as the key.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Databases.PrefabKeyedMapDataSource-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Databases.PrefabKeyedMapDataSource-2.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Databases.PrefabKeyedMapDataSource<TData, TLoader>",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.Databases.PrefabKeyedMapDataSource-2.yml\" sourcestartlinenumber=\"1\">Represents a data source that uses PrefabGUIDs as keys to access data.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Databases.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Databases.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Databases",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Engines.AchievementEngine.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Engines.AchievementEngine.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Engines.AchievementEngine",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.Engines.AchievementEngine.yml\" sourcestartlinenumber=\"1\">The Achievement Engine is responsible for managing achievements within the game.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Engines.AchievementEngineConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Engines.AchievementEngineConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Engines.AchievementEngineConfig",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Engines.AdminEngine.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Engines.AdminEngine.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Engines.AdminEngine",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.Engines.AdminEngine.yml\" sourcestartlinenumber=\"1\">AdminEngine is responsible for loading and managing admin-related systems and hooks.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Engines.AdminEngineConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Engines.AdminEngineConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Engines.AdminEngineConfig",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Engines.BuffEngine.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Engines.BuffEngine.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Engines.BuffEngine",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.Engines.BuffEngine.yml\" sourcestartlinenumber=\"1\">BuffEngine is responsible for managing buffs in the game.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Engines.BuffEngineConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Engines.BuffEngineConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Engines.BuffEngineConfig",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Engines.CastleEngine.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Engines.CastleEngine.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Engines.CastleEngine",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.Engines.CastleEngine.yml\" sourcestartlinenumber=\"1\">CastleEngine is an engine that provides functionality related to castles in the game.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Engines.CastleEngineConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Engines.CastleEngineConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Engines.CastleEngineConfig",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Engines.ChatEngine.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Engines.ChatEngine.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Engines.ChatEngine",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.Engines.ChatEngine.yml\" sourcestartlinenumber=\"1\">ChatEngine is responsible for managing chat functionality in the game.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Engines.ChatEngineConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Engines.ChatEngineConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Engines.ChatEngineConfig",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Engines.ClanEngine.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Engines.ClanEngine.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Engines.ClanEngine",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.Engines.ClanEngine.yml\" sourcestartlinenumber=\"1\">ClanEngine is an engine that provides functionality related to clans in the game.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Engines.ClanEngineConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Engines.ClanEngineConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Engines.ClanEngineConfig",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Engines.DamageEngine.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Engines.DamageEngine.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Engines.DamageEngine",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.Engines.DamageEngine.yml\" sourcestartlinenumber=\"1\">DamageEngine is responsible for handling damage events and processing damage-related logic in the game.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Engines.DamageEngineConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Engines.DamageEngineConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Engines.DamageEngineConfig",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Engines.DeathEngine.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Engines.DeathEngine.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Engines.DeathEngine",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.Engines.DeathEngine.yml\" sourcestartlinenumber=\"1\">DeathEngine is responsible for managing death-related events and processors in the game.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Engines.DeathEngineConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Engines.DeathEngineConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Engines.DeathEngineConfig",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Engines.EquipmentEngine.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Engines.EquipmentEngine.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Engines.EquipmentEngine",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.Engines.EquipmentEngine.yml\" sourcestartlinenumber=\"1\">EquipmentEngine is responsible for managing equipment-related functionality in the game.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Engines.EquipmentEngineConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Engines.EquipmentEngineConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Engines.EquipmentEngineConfig",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Engines.ItemEngine.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Engines.ItemEngine.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Engines.ItemEngine",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.Engines.ItemEngine.yml\" sourcestartlinenumber=\"1\">ItemEngine is responsible for managing custom items in the game.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Engines.ItemEngineConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Engines.ItemEngineConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Engines.ItemEngineConfig",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Engines.LootEngine.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Engines.LootEngine.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Engines.LootEngine",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.Engines.LootEngine.yml\" sourcestartlinenumber=\"1\">LootEngine is responsible for managing loot drops and item templates in the game.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Engines.LootEngineConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Engines.LootEngineConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Engines.LootEngineConfig",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Engines.SaveEngine.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Engines.SaveEngine.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Engines.SaveEngine",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.Engines.SaveEngine.yml\" sourcestartlinenumber=\"1\">SaveEngine is responsible for managing the save system in the game.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Engines.SaveEngineConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Engines.SaveEngineConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Engines.SaveEngineConfig",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Engines.SpawnEngine.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Engines.SpawnEngine.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Engines.SpawnEngine",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.Engines.SpawnEngine.yml\" sourcestartlinenumber=\"1\">SpawnEngine is responsible for managing spawn events and processing in the game.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Engines.SpawnEngineConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Engines.SpawnEngineConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Engines.SpawnEngineConfig",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Engines.StatEngine.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Engines.StatEngine.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Engines.StatEngine",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.Engines.StatEngine.yml\" sourcestartlinenumber=\"1\">StatEngine is responsible for managing and processing stat changes in the game.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Engines.StatEngineConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Engines.StatEngineConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Engines.StatEngineConfig",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Engines.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Engines.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Engines",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Entities.EntityComponentDatabase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Entities.EntityComponentDatabase.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Entities.EntityComponentDatabase",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.Entities.EntityComponentDatabase.yml\" sourcestartlinenumber=\"1\">Represents a database for managing entity component maps.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Entities.EntityComponentMap.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Entities.EntityComponentMap.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Entities.EntityComponentMap",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.Entities.EntityComponentMap.yml\" sourcestartlinenumber=\"1\">Represents a map of entity component data keyed by entity type.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Entities.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Entities.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Entities",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.EventBridge.DownedAllEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.EventBridge.DownedAllEvent.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.EventBridge.DownedAllEvent",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.EventBridge.DownedAllEvent.yml\" sourcestartlinenumber=\"1\">Event triggered when an entity is downed.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.EventBridge.DownedBossEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.EventBridge.DownedBossEvent.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.EventBridge.DownedBossEvent",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.EventBridge.DownedBossEvent.yml\" sourcestartlinenumber=\"1\">Event triggered when a boss is downed.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.EventBridge.DownedMinionEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.EventBridge.DownedMinionEvent.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.EventBridge.DownedMinionEvent",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.EventBridge.DownedMinionEvent.yml\" sourcestartlinenumber=\"1\">Event triggered when a minion is downed.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.EventBridge.DownedPlayerEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.EventBridge.DownedPlayerEvent.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.EventBridge.DownedPlayerEvent",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.EventBridge.DownedPlayerEvent.yml\" sourcestartlinenumber=\"1\">Event triggered when a unit is downed.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.EventBridge.DownedUnitEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.EventBridge.DownedUnitEvent.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.EventBridge.DownedUnitEvent",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.EventBridge.DownedUnitEvent.yml\" sourcestartlinenumber=\"1\">Event triggered when a gatherable entity is downed.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.EventBridge.ScriptDespawnBossEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.EventBridge.ScriptDespawnBossEvent.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.EventBridge.ScriptDespawnBossEvent",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.EventBridge.ScriptDespawnBossEvent.yml\" sourcestartlinenumber=\"1\">Event triggered by scripts to despawn a boss.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.EventBridge.ScriptDespawnGatherableEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.EventBridge.ScriptDespawnGatherableEvent.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.EventBridge.ScriptDespawnGatherableEvent",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.EventBridge.ScriptDespawnGatherableEvent.yml\" sourcestartlinenumber=\"1\">Event triggered by scripts to despawn a gatherable entity.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.EventBridge.ScriptDespawnMinionEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.EventBridge.ScriptDespawnMinionEvent.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.EventBridge.ScriptDespawnMinionEvent",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.EventBridge.ScriptDespawnMinionEvent.yml\" sourcestartlinenumber=\"1\">Event triggered by scripts to despawn a minion.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.EventBridge.ScriptDespawnPlayerEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.EventBridge.ScriptDespawnPlayerEvent.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.EventBridge.ScriptDespawnPlayerEvent",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.EventBridge.ScriptDespawnPlayerEvent.yml\" sourcestartlinenumber=\"1\">Event triggered by scripts to despawn a player.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.EventBridge.ScriptDespawnUnitEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.EventBridge.ScriptDespawnUnitEvent.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.EventBridge.ScriptDespawnUnitEvent",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.EventBridge.ScriptDespawnUnitEvent.yml\" sourcestartlinenumber=\"1\">Event triggered by scripts to despawn a unit.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.EventBridge.ScriptSpawnBossEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.EventBridge.ScriptSpawnBossEvent.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.EventBridge.ScriptSpawnBossEvent",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.EventBridge.ScriptSpawnBossEvent.yml\" sourcestartlinenumber=\"1\">Event triggered by scripts to spawn a boss.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.EventBridge.ScriptSpawnGatherableEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.EventBridge.ScriptSpawnGatherableEvent.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.EventBridge.ScriptSpawnGatherableEvent",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.EventBridge.ScriptSpawnGatherableEvent.yml\" sourcestartlinenumber=\"1\">Event triggered by scripts to spawn a gatherable entity.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.EventBridge.ScriptSpawnMinionEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.EventBridge.ScriptSpawnMinionEvent.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.EventBridge.ScriptSpawnMinionEvent",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.EventBridge.ScriptSpawnMinionEvent.yml\" sourcestartlinenumber=\"1\">Event triggered by scripts to spawn a minion.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.EventBridge.ScriptSpawnPlayerEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.EventBridge.ScriptSpawnPlayerEvent.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.EventBridge.ScriptSpawnPlayerEvent",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.EventBridge.ScriptSpawnPlayerEvent.yml\" sourcestartlinenumber=\"1\">Event triggered by scripts to spawn a player.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.EventBridge.ScriptSpawnUnitEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.EventBridge.ScriptSpawnUnitEvent.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.EventBridge.ScriptSpawnUnitEvent",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.EventBridge.ScriptSpawnUnitEvent.yml\" sourcestartlinenumber=\"1\">Event triggered by scripts to spawn a unit.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.EventBridge.SpawnBossEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.EventBridge.SpawnBossEvent.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.EventBridge.SpawnBossEvent",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.EventBridge.SpawnBossEvent.yml\" sourcestartlinenumber=\"1\">Event triggered when a boss is spawned.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.EventBridge.SpawnGatherableEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.EventBridge.SpawnGatherableEvent.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.EventBridge.SpawnGatherableEvent",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.EventBridge.SpawnGatherableEvent.yml\" sourcestartlinenumber=\"1\">Event triggered when a gatherable entity is spawned.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.EventBridge.SpawnMinionEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.EventBridge.SpawnMinionEvent.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.EventBridge.SpawnMinionEvent",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.EventBridge.SpawnMinionEvent.yml\" sourcestartlinenumber=\"1\">Event triggered when a minion is spawned.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.EventBridge.SpawnPlayerEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.EventBridge.SpawnPlayerEvent.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.EventBridge.SpawnPlayerEvent",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.EventBridge.SpawnPlayerEvent.yml\" sourcestartlinenumber=\"1\">Event triggered when a player is spawned.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.EventBridge.SpawnUnitEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.EventBridge.SpawnUnitEvent.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.EventBridge.SpawnUnitEvent",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.EventBridge.SpawnUnitEvent.yml\" sourcestartlinenumber=\"1\">Event triggered when a unit is spawned.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.EventBridge.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.EventBridge.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.EventBridge",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.EventBridge.yml\" sourcestartlinenumber=\"1\">Also see <xref href=\"RisingV.Shared.EventBridge\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Exceptions.PlayerAlreadyExistsException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Exceptions.PlayerAlreadyExistsException.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Exceptions.PlayerAlreadyExistsException",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.Exceptions.PlayerAlreadyExistsException.yml\" sourcestartlinenumber=\"1\">Exception thrown when a player with the specified name already exists.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Exceptions.PlayerNotFoundException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Exceptions.PlayerNotFoundException.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Exceptions.PlayerNotFoundException",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.Exceptions.PlayerNotFoundException.yml\" sourcestartlinenumber=\"1\">Exception thrown when a player is not found.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Exceptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Exceptions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Exceptions",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Extensions.EntityExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Extensions.EntityExtensions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Extensions.EntityExtensions",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.Extensions.EntityExtensions.yml\" sourcestartlinenumber=\"1\">Provides various utility methods for working with entities in the RisingV game.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Extensions.EntityManagerExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Extensions.EntityManagerExtensions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Extensions.EntityManagerExtensions",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Extensions.PrefabGuidExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Extensions.PrefabGuidExtensions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Extensions.PrefabGuidExtensions",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Extensions.UserExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Extensions.UserExtensions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Extensions.UserExtensions",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.Extensions.UserExtensions.yml\" sourcestartlinenumber=\"1\">Provides extension methods for the User class to access player aspects.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Extensions.WorldExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Extensions.WorldExtensions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Extensions.WorldExtensions",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.Extensions.WorldExtensions.yml\" sourcestartlinenumber=\"1\">Provides extension methods for the <xref href=\"Unity.Entities.World\" data-throw-if-not-resolved=\"false\"></xref> class to retrieve managed component data.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Extensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Extensions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Extensions",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Global.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Global.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Global",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.Global.yml\" sourcestartlinenumber=\"1\">Global access point for core systems and managers.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Hooks.AchievementHook.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Hooks.AchievementHook.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Hooks.AchievementHook",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.Hooks.AchievementHook.yml\" sourcestartlinenumber=\"1\">This class hooks into the <code sourcefile=\"api/RisingV.Core.Hooks.AchievementHook.yml\" sourcestartlinenumber=\"1\">ClaimAchievementSystem</code> to publish an event when an achievement is claimed.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Hooks.AdminAuthSystemHook.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Hooks.AdminAuthSystemHook.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Hooks.AdminAuthSystemHook",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.Hooks.AdminAuthSystemHook.yml\" sourcestartlinenumber=\"1\">Hook for the <xref href=\"ProjectM.AdminAuthSystem\" data-throw-if-not-resolved=\"false\"></xref> to allow custom admin authentication processing.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Hooks.ArmorLevelHook.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Hooks.ArmorLevelHook.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Hooks.ArmorLevelHook",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.Hooks.ArmorLevelHook.yml\" sourcestartlinenumber=\"1\">Hooks for the armor level system to publish events when armor levels are spawned or destroyed.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Hooks.BuffHook.BuffDebugSystemPatch.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Hooks.BuffHook.BuffDebugSystemPatch.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Hooks.BuffHook.BuffDebugSystemPatch",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Hooks.BuffHook.ModifyUnitStatBuffSystemPatch.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Hooks.BuffHook.ModifyUnitStatBuffSystemPatch.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Hooks.BuffHook.ModifyUnitStatBuffSystemPatch",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Hooks.BuffHook.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Hooks.BuffHook.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Hooks.BuffHook",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.Hooks.BuffHook.yml\" sourcestartlinenumber=\"1\">BuffHook is responsible for hooking into the buff systems to publish events</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Hooks.ClientChatHook.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Hooks.ClientChatHook.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Hooks.ClientChatHook",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.Hooks.ClientChatHook.yml\" sourcestartlinenumber=\"1\">Hook into the client chat system to monitor and handle chat messages.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Hooks.DownedHook.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Hooks.DownedHook.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Hooks.DownedHook",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.Hooks.DownedHook.yml\" sourcestartlinenumber=\"1\">Hook for the DownedEventSystem to process downed events.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Hooks.EquipmentHooks.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Hooks.EquipmentHooks.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Hooks.EquipmentHooks",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.Hooks.EquipmentHooks.yml\" sourcestartlinenumber=\"1\">Hooks for equipment-related systems in the game.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Hooks.GameplayInputSystemHook.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Hooks.GameplayInputSystemHook.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Hooks.GameplayInputSystemHook",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.Hooks.GameplayInputSystemHook.yml\" sourcestartlinenumber=\"1\">Hooks for the <xref href=\"ProjectM.GameplayInputSystem\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Hooks.Internal.ClientBootstrapSystemHook.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Hooks.Internal.ClientBootstrapSystemHook.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Hooks.Internal.ClientBootstrapSystemHook",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.Hooks.Internal.ClientBootstrapSystemHook.yml\" sourcestartlinenumber=\"1\">ClientBootstrapSystemHook is a Harmony patch for the ClientBootstrapSystem.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Hooks.Internal.GameManagerHook.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Hooks.Internal.GameManagerHook.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Hooks.Internal.GameManagerHook",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.Hooks.Internal.GameManagerHook.yml\" sourcestartlinenumber=\"1\">GameManagerHook is responsible for hooking into the game data manager's update method</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Hooks.Internal.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Hooks.Internal.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Hooks.Internal",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Hooks.SaveSystemHook.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Hooks.SaveSystemHook.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Hooks.SaveSystemHook",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.Hooks.SaveSystemHook.yml\" sourcestartlinenumber=\"1\">Patch for the TriggerPersistenceSaveSystem to hook into the TriggerSave method.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Hooks.Server.GameBootstrapHook.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Hooks.Server.GameBootstrapHook.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Hooks.Server.GameBootstrapHook",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.Hooks.Server.GameBootstrapHook.yml\" sourcestartlinenumber=\"1\">Hooks for the <xref href=\"ProjectM.GameBootstrap\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Hooks.Server.KickBanSystemServerHook.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Hooks.Server.KickBanSystemServerHook.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Hooks.Server.KickBanSystemServerHook",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.Hooks.Server.KickBanSystemServerHook.yml\" sourcestartlinenumber=\"1\">Hook for the KickBanSystem_Server to process ban checks.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Hooks.Server.LoadPersistenceSystemHook.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Hooks.Server.LoadPersistenceSystemHook.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Hooks.Server.LoadPersistenceSystemHook",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.Hooks.Server.LoadPersistenceSystemHook.yml\" sourcestartlinenumber=\"1\">Hook for the LoadPersistenceSystemV2 to publish events during the loading process.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Hooks.Server.OnUserConnectedHook.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Hooks.Server.OnUserConnectedHook.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Hooks.Server.OnUserConnectedHook",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.Hooks.Server.OnUserConnectedHook.yml\" sourcestartlinenumber=\"1\">Patch for handling user connection events in the server.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Hooks.Server.OnUserDisconnectedHook.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Hooks.Server.OnUserDisconnectedHook.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Hooks.Server.OnUserDisconnectedHook",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.Hooks.Server.OnUserDisconnectedHook.yml\" sourcestartlinenumber=\"1\">Hook for handling user disconnections from the server.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Hooks.Server.ScriptDestroyServerHook.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Hooks.Server.ScriptDestroyServerHook.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Hooks.Server.ScriptDestroyServerHook",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.Hooks.Server.ScriptDestroyServerHook.yml\" sourcestartlinenumber=\"1\">Hook for the <xref href=\"ProjectM.Shared.Systems.ScriptDestroyServer\" data-throw-if-not-resolved=\"false\"></xref> to integrate with the <xref href=\"RisingV.Core.Hooks.Server.ScriptDestroyServerHook.ScriptDespawnProcessor\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Hooks.Server.ScriptSpawnServerHook.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Hooks.Server.ScriptSpawnServerHook.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Hooks.Server.ScriptSpawnServerHook",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.Hooks.Server.ScriptSpawnServerHook.yml\" sourcestartlinenumber=\"1\">Hook for the ScriptSpawnServer to allow pre- and post-processing of script spawn data.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Hooks.Server.ServerBuffHook.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Hooks.Server.ServerBuffHook.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Hooks.Server.ServerBuffHook",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.Hooks.Server.ServerBuffHook.yml\" sourcestartlinenumber=\"1\">Hook for the server buff system to publish events when buffs are spawned.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Hooks.Server.SettingsManagerHook.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Hooks.Server.SettingsManagerHook.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Hooks.Server.SettingsManagerHook",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.Hooks.Server.SettingsManagerHook.yml\" sourcestartlinenumber=\"1\">Patch for the SettingsManager to hook into the VerifyServerGameSettings method.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Hooks.Server.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Hooks.Server.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Hooks.Server",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Hooks.ServerChatHook.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Hooks.ServerChatHook.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Hooks.ServerChatHook",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.Hooks.ServerChatHook.yml\" sourcestartlinenumber=\"1\">Patch for the ChatMessageSystem to hook into the OnUpdate method.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Hooks.StatChangeSystemHook.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Hooks.StatChangeSystemHook.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Hooks.StatChangeSystemHook",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.Hooks.StatChangeSystemHook.yml\" sourcestartlinenumber=\"1\">Patch for the StatChangeSystem to hook into the ApplyStatChanges method.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Hooks.UnitSpawnerHook.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Hooks.UnitSpawnerHook.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Hooks.UnitSpawnerHook",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.Hooks.UnitSpawnerHook.yml\" sourcestartlinenumber=\"1\">Patch for the UnitSpawnerReactSystem and MinionSpawnSystem to hook into the spawn processing.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Hooks.WeaponLevelHook.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Hooks.WeaponLevelHook.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Hooks.WeaponLevelHook",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.Hooks.WeaponLevelHook.yml\" sourcestartlinenumber=\"1\">Hooks for the weapon level system to publish events when weapon levels are spawned or destroyed.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Hooks.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Hooks.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Hooks",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Items.Drops.IHasItemDrops-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Items.Drops.IHasItemDrops-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Items.Drops.IHasItemDrops<T>",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.Items.Drops.IHasItemDrops-1.yml\" sourcestartlinenumber=\"1\">Interface for entities that can have item drops.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Items.Drops.IItemDrop.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Items.Drops.IItemDrop.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Items.Drops.IItemDrop",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.Items.Drops.IItemDrop.yml\" sourcestartlinenumber=\"1\">Interface for item drops in the game.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Items.Drops.IItemDroppable.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Items.Drops.IItemDroppable.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Items.Drops.IItemDroppable",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.Items.Drops.IItemDroppable.yml\" sourcestartlinenumber=\"1\">Interface for items that can be dropped from entities.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Items.Drops.ItemDrop.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Items.Drops.ItemDrop.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Items.Drops.ItemDrop",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.Items.Drops.ItemDrop.yml\" sourcestartlinenumber=\"1\">Represents an item drop in the game.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Items.Drops.ItemDropData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Items.Drops.ItemDropData.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Items.Drops.ItemDropData",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.Items.Drops.ItemDropData.yml\" sourcestartlinenumber=\"1\">Represents data for an item drop in the game.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Items.Drops.ItemDropPoolDataLoader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Items.Drops.ItemDropPoolDataLoader.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Items.Drops.ItemDropPoolDataLoader",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.Items.Drops.ItemDropPoolDataLoader.yml\" sourcestartlinenumber=\"1\">Data loader for item drop pool data.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Items.Drops.ItemDropPoolDataSource.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Items.Drops.ItemDropPoolDataSource.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Items.Drops.ItemDropPoolDataSource",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.Items.Drops.ItemDropPoolDataSource.yml\" sourcestartlinenumber=\"1\">Data source for item drop pool data.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Items.Drops.ItemDropTemplateDatabase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Items.Drops.ItemDropTemplateDatabase.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Items.Drops.ItemDropTemplateDatabase",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.Items.Drops.ItemDropTemplateDatabase.yml\" sourcestartlinenumber=\"1\">Database for item drop templates.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Items.Drops.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Items.Drops.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Items.Drops",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Items.IItem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Items.IItem.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Items.IItem",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.Items.IItem.yml\" sourcestartlinenumber=\"1\">Represents an item in the game.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Items.ItemData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Items.ItemData.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Items.ItemData",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.Items.ItemData.yml\" sourcestartlinenumber=\"1\">Base class for item data.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Items.ItemDataLoader-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Items.ItemDataLoader-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Items.ItemDataLoader<TItemData>",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.Items.ItemDataLoader-1.yml\" sourcestartlinenumber=\"1\">ItemDataLoader is a generic data loader for item data.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Items.ItemDataLoader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Items.ItemDataLoader.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Items.ItemDataLoader",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.Items.ItemDataLoader.yml\" sourcestartlinenumber=\"1\">ItemDataLoader is a default data loader for item data.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Items.ItemDataSource-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Items.ItemDataSource-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Items.ItemDataSource<TItemData>",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.Items.ItemDataSource-1.yml\" sourcestartlinenumber=\"1\">ItemDataSource is a data source for item data.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Items.ItemDataSource.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Items.ItemDataSource.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Items.ItemDataSource",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.Items.ItemDataSource.yml\" sourcestartlinenumber=\"1\">ItemDataSource is a default data source for item data.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Items.ItemDatabase-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Items.ItemDatabase-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Items.ItemDatabase<TItemData>",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.Items.ItemDatabase-1.yml\" sourcestartlinenumber=\"1\">ItemDatabase is a database for managing item data.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Items.ItemDatabase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Items.ItemDatabase.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Items.ItemDatabase",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.Items.ItemDatabase.yml\" sourcestartlinenumber=\"1\">ItemDatabase is a default database for managing item data.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Items.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Items.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Items",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.LogTags.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.LogTags.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.LogTags",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.LogTags.yml\" sourcestartlinenumber=\"1\">Represents a collection of log tags used throughout the RisingV.Core project.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Logging.LogTagCore.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Logging.LogTagCore.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Logging.LogTagCore",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.Logging.LogTagCore.yml\" sourcestartlinenumber=\"1\">LogTagCore is a specialized logging tag for the RisingV.Core namespace.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Logging.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Logging.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Logging",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.MyPluginInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.MyPluginInfo.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.MyPluginInfo",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Players.PlayerDatabase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Players.PlayerDatabase.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Players.PlayerDatabase",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.Players.PlayerDatabase.yml\" sourcestartlinenumber=\"1\">PlayerDatabase is responsible for managing player data in the game.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Players.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Players.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Players",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Plugin.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Plugin.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Plugin",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Plugins.PluginContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Plugins.PluginContext.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Plugins.PluginContext",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.Plugins.PluginContext.yml\" sourcestartlinenumber=\"1\">Represents the context for a plugin, providing access to plugin information, configuration, and Harmony instance.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Plugins.RisingPlugin-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Plugins.RisingPlugin-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Plugins.RisingPlugin<TContext>",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.Plugins.RisingPlugin-1.yml\" sourcestartlinenumber=\"1\">Base class for RisingV plugins with a specific context.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Plugins.RisingPluginBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Plugins.RisingPluginBase.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Plugins.RisingPluginBase",
+      "Summary": "<p>Base class for RisingV plugins.</p>\n<p>Example Usage:</p>\n<pre><code class=\"lang-csharp\">using BepInEx;\nusing RisingV.Shared.Plugins;\nusing RisingV.Shared.Engines;\nusing RisingV.Core.Engines;\n\npublic class MyCoolPluginConfig() : PluginConfig(MyPluginInfo.PLUGIN_GUID, MyPluginInfo.PLUGIN_GUID)\n{\n    public ConfigEntry&lt;float&gt; AttackModifier { get; set; } =\n        new(\"Gameplay\", \"AttackModifier\", 1f, \"Modifier for attack damage\");\n}\n\npublic class MyCoolPluginContext() : PluginContext(typeof(MyPluginInfo), new MyCoolPluginConfig());\n\n[BepInPlugin(MyPluginInfo.PLUGIN_GUID, MyPluginInfo.PLUGIN_NAME, MyPluginInfo.PLUGIN_VERSION)]\n[BepInDependency(\"gg.deca.VampireCommandFramework\")]\n[BepInDependency(\"RisingV.Core\")]\n[BepInDependency(\"RisingV.Scripting\")]\npublic class Plugin : RisingPlugin&lt;MyCoolPluginContext&gt;\n{\n    protected override void OnLoad()\n    {\n        // Plugin startup logic (pre-initialization)\n    }\n\n    protected override bool OnUnload()\n    {\n        return true;\n    }\n\n    protected override void RegisterEngines(EngineManager engineManager)\n    {\n        engineManager.AddEngine&lt;ScriptingEngine&gt;(this);\n        engineManager.AddEngine&lt;DamageEngine&gt;(this);\n        engineManager.AddEngine&lt;DeathEngine&gt;(this);\n    }\n\n    // You can also override other methods to register systems, processors, databases, etc.\n}</code></pre>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Plugins.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Plugins.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Plugins",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Processors.AdminAuthProcessor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Processors.AdminAuthProcessor.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Processors.AdminAuthProcessor",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.Processors.AdminAuthProcessor.yml\" sourcestartlinenumber=\"1\">Abstract class for processing ban status of players.\nInherit to implement specific admin checks.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Processors.BanProcessor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Processors.BanProcessor.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Processors.BanProcessor",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.Processors.BanProcessor.yml\" sourcestartlinenumber=\"1\">Abstract class for processing ban status of players.\nInherit to implement specific ban logic.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Processors.DeathProcessor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Processors.DeathProcessor.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Processors.DeathProcessor",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.Processors.DeathProcessor.yml\" sourcestartlinenumber=\"1\">Processes and route death events based on the types of entity involved in the death.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Processors.DownedProcessor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Processors.DownedProcessor.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Processors.DownedProcessor",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.Processors.DownedProcessor.yml\" sourcestartlinenumber=\"1\">Processor for routing downed events for the entity types involved.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Processors.ScriptDespawnProcessor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Processors.ScriptDespawnProcessor.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Processors.ScriptDespawnProcessor",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Processors.ScriptSpawnProcessor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Processors.ScriptSpawnProcessor.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Processors.ScriptSpawnProcessor",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Processors.SourceToTargetEntityProcessor-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Processors.SourceToTargetEntityProcessor-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Processors.SourceToTargetEntityProcessor<TEvent>",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.Processors.SourceToTargetEntityProcessor-1.yml\" sourcestartlinenumber=\"1\">Base class for entity processors that operate on a source entity and a target entity.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Processors.SpawnProcessor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Processors.SpawnProcessor.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Processors.SpawnProcessor",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.Processors.SpawnProcessor.yml\" sourcestartlinenumber=\"1\">Processes and routes spawn events for various entity types involved.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Processors.StatChangeProcessor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Processors.StatChangeProcessor.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Processors.StatChangeProcessor",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.Processors.StatChangeProcessor.yml\" sourcestartlinenumber=\"1\">Processes stat changes for entities and publishes events based on the type of entity\nand the reason for the stat change.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Processors.TargetEntityProcessor-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Processors.TargetEntityProcessor-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Processors.TargetEntityProcessor<TEvent>",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.Processors.TargetEntityProcessor-1.yml\" sourcestartlinenumber=\"1\">Base class for processors that target a specific entity type.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Processors.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Processors.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Processors",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Systems.CastleHeartSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Systems.CastleHeartSystem.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Systems.CastleHeartSystem",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.Systems.CastleHeartSystem.yml\" sourcestartlinenumber=\"1\">System for locating CastleHeart entities in the world.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Systems.CastleTerritorySystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Systems.CastleTerritorySystem.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Systems.CastleTerritorySystem",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.Systems.CastleTerritorySystem.yml\" sourcestartlinenumber=\"1\">System that maps world positions to castle territories and provides lookup utilities.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Systems.ChatSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Systems.ChatSystem.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Systems.ChatSystem",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Systems.ClanSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Systems.ClanSystem.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Systems.ClanSystem",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.Systems.ClanSystem.yml\" sourcestartlinenumber=\"1\">Provides lookup utilities for clan entities and their membership.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Systems.ClientRegisterMessageHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Systems.ClientRegisterMessageHandler.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Systems.ClientRegisterMessageHandler",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Systems.DamageTrackingSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Systems.DamageTrackingSystem.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Systems.DamageTrackingSystem",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.Systems.DamageTrackingSystem.yml\" sourcestartlinenumber=\"1\">System for tracking damage dealt to entities.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Systems.DamageTrackingSystemConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Systems.DamageTrackingSystemConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Systems.DamageTrackingSystemConfig",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Systems.EntityDamageEntry.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Systems.EntityDamageEntry.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Systems.EntityDamageEntry",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Systems.EntityDamageTrackingComponent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Systems.EntityDamageTrackingComponent.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Systems.EntityDamageTrackingComponent",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.Systems.EntityDamageTrackingComponent.yml\" sourcestartlinenumber=\"1\">Tracks damage dealt to entities, allowing retrieval of damage statistics by source entity.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Systems.LootCompletionMode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Systems.LootCompletionMode.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Systems.LootCompletionMode",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Systems.LootRollMode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Systems.LootRollMode.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Systems.LootRollMode",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Systems.LootSelectionMode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Systems.LootSelectionMode.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Systems.LootSelectionMode",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Systems.LootShuffleMode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Systems.LootShuffleMode.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Systems.LootShuffleMode",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Systems.LootSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Systems.LootSystem.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Systems.LootSystem",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.Systems.LootSystem.yml\" sourcestartlinenumber=\"1\">LootSystem is responsible for generating item drops based on the configured loot rules.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Systems.LootSystemConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Systems.LootSystemConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Systems.LootSystemConfig",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Systems.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Systems.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Systems",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Transport.MessageHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Transport.MessageHandler.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Transport.MessageHandler",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Transport.ServerMessageHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Transport.ServerMessageHandler.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Transport.ServerMessageHandler",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Transport.TransportUtil.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Transport.TransportUtil.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Transport.TransportUtil",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Transport.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Transport.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Transport",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Util.Helper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Util.Helper.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Util.Helper",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Util.UnitSpawn.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Util.UnitSpawn.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Util.UnitSpawn",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Util.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Util.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Util",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core",
+      "Summary": null
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html"
+        },
+        ".json": {
+          "relative_path": "api/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/favicon.ico",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/favicon.ico"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/logo.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/logo.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/logo_256.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/logo_256.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/logo_50.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/logo_50.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/getting-started.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/getting-started.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/introduction.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/introduction.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "docs/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/toc.html"
+        },
+        ".json": {
+          "relative_path": "docs/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html"
+        },
+        ".json": {
+          "relative_path": "toc.json"
+        }
+      },
+      "version": ""
+    }
+  ],
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
