@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class PluginConfig | RisingV.Shared </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class PluginConfig | RisingV.Shared ">
+      
+      <meta name="description" content="Represents a plugin configuration class.">
+      <link rel="icon" href="../assets/images/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/BenDol/RisingV.Shared/new/master/apiSpec/new?filename=RisingV_Shared_Plugins_PluginConfig.md&amp;value=---%0Auid%3A%20RisingV.Shared.Plugins.PluginConfig%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../assets/images/logo_50.png" alt="RisingV.Shared">
+            RisingV.Shared
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="RisingV.Shared.Plugins.PluginConfig">
+
+
+
+  <h1 id="RisingV_Shared_Plugins_PluginConfig" data-uid="RisingV.Shared.Plugins.PluginConfig" class="text-break">
+Class PluginConfig  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Plugins/PluginConfig.cs/#L27"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="RisingV.html">RisingV</a>.<a class="xref" href="RisingV.Shared.html">Shared</a>.<a class="xref" href="RisingV.Shared.Plugins.html">Plugins</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>RisingV.Shared.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Represents a plugin configuration class.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class PluginConfig : BaseConfig, IPluginConfig, IConfig, IManageableLifecycle&lt;PluginConfigManager&gt;, IManageableLifecycle, IReloadable, IManageable&lt;PluginConfigManager&gt;, IManageable</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="RisingV.Shared.Config.BaseConfig.html">BaseConfig</a></div>
+      <div><span class="xref">PluginConfig</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="RisingV.Shared.Plugins.IPluginConfig.html">IPluginConfig</a></div>
+      <div><a class="xref" href="RisingV.Shared.Config.IConfig.html">IConfig</a></div>
+      <div><a class="xref" href="RisingV.Shared.Managers.IManageableLifecycle-1.html">IManageableLifecycle</a>&lt;<a class="xref" href="RisingV.Shared.Plugins.PluginConfigManager.html">PluginConfigManager</a>&gt;</div>
+      <div><a class="xref" href="RisingV.Shared.Managers.IManageableLifecycle.html">IManageableLifecycle</a></div>
+      <div><a class="xref" href="RisingV.Shared.Managers.IReloadable.html">IReloadable</a></div>
+      <div><a class="xref" href="RisingV.Shared.Managers.IManageable-1.html">IManageable</a>&lt;<a class="xref" href="RisingV.Shared.Plugins.PluginConfigManager.html">PluginConfigManager</a>&gt;</div>
+      <div><a class="xref" href="RisingV.Shared.Managers.IManageable.html">IManageable</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist derived">
+    <dt>Derived</dt>
+    <dd>
+      <div><a class="xref" href="RisingV.Shared.SharedPluginConfig.html">SharedPluginConfig</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="RisingV.Shared.Config.BaseConfig.html#RisingV_Shared_Config_BaseConfig_ConfigRelativePath">BaseConfig.ConfigRelativePath</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Config.BaseConfig.html#RisingV_Shared_Config_BaseConfig_ConfigFileName">BaseConfig.ConfigFileName</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Config.BaseConfig.html#RisingV_Shared_Config_BaseConfig_ConfigFile">BaseConfig.ConfigFile</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Config.BaseConfig.html#RisingV_Shared_Config_BaseConfig_ConfigsToLoad">BaseConfig.ConfigsToLoad</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Config.BaseConfig.html#RisingV_Shared_Config_BaseConfig_Enabled">BaseConfig.Enabled</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Config.BaseConfig.html#RisingV_Shared_Config_BaseConfig_Start">BaseConfig.Start()</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Config.BaseConfig.html#RisingV_Shared_Config_BaseConfig_Initialize">BaseConfig.Initialize()</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Config.BaseConfig.html#RisingV_Shared_Config_BaseConfig_Load">BaseConfig.Load()</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Config.BaseConfig.html#RisingV_Shared_Config_BaseConfig_Ready">BaseConfig.Ready()</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Config.BaseConfig.html#RisingV_Shared_Config_BaseConfig_Unload">BaseConfig.Unload()</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Config.BaseConfig.html#RisingV_Shared_Config_BaseConfig_Terminate">BaseConfig.Terminate()</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Config.BaseConfig.html#RisingV_Shared_Config_BaseConfig_Reload_RisingV_Shared_Managers_ReloadReason_">BaseConfig.Reload(ReloadReason)</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Config.BaseConfig.html#RisingV_Shared_Config_BaseConfig_Bind__1_System_String_System_String___0_System_String_">BaseConfig.Bind&lt;T&gt;(string, string, T, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Config.BaseConfig.html#RisingV_Shared_Config_BaseConfig_GetValue__1_System_String_System_String___0_">BaseConfig.GetValue&lt;T&gt;(string, string, T)</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Config.BaseConfig.html#RisingV_Shared_Config_BaseConfig_GetEntry__1_System_String_System_String_">BaseConfig.GetEntry&lt;T&gt;(string, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="RisingV.Shared.Extensions.EntityExtensions.html#RisingV_Shared_Extensions_EntityExtensions_IsAspect__1_System_Object_">EntityExtensions.IsAspect&lt;TAspect&gt;(object)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="RisingV_Shared_Plugins_PluginConfig__ctor_" data-uid="RisingV.Shared.Plugins.PluginConfig.#ctor*"></a>
+
+  <h3 id="RisingV_Shared_Plugins_PluginConfig__ctor_System_String_System_String_" data-uid="RisingV.Shared.Plugins.PluginConfig.#ctor(System.String,System.String)">
+  PluginConfig(string, string?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Plugins/PluginConfig.cs/#L27"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Represents a plugin configuration class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PluginConfig(string configFileName, string? configRelativePath = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>configFileName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>configRelativePath</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="RisingV_Shared_Plugins_PluginConfig_DependencyAutoLoad_" data-uid="RisingV.Shared.Plugins.PluginConfig.DependencyAutoLoad*"></a>
+
+  <h3 id="RisingV_Shared_Plugins_PluginConfig_DependencyAutoLoad" data-uid="RisingV.Shared.Plugins.PluginConfig.DependencyAutoLoad">
+  DependencyAutoLoad
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Plugins/PluginConfig.cs/#L37"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets a configuration entry for allowing automatic dependency loading.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ConfigEntry&lt;bool&gt;? DependencyAutoLoad { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">ConfigEntry</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="RisingV_Shared_Plugins_PluginConfig_HotReload_" data-uid="RisingV.Shared.Plugins.PluginConfig.HotReload*"></a>
+
+  <h3 id="RisingV_Shared_Plugins_PluginConfig_HotReload" data-uid="RisingV.Shared.Plugins.PluginConfig.HotReload">
+  HotReload
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Plugins/PluginConfig.cs/#L42"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets a configuration entry for enabling hot reloading of the plugin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ConfigEntry&lt;bool&gt;? HotReload { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">ConfigEntry</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="RisingV_Shared_Plugins_PluginConfig_Log_" data-uid="RisingV.Shared.Plugins.PluginConfig.Log*"></a>
+
+  <h3 id="RisingV_Shared_Plugins_PluginConfig_Log" data-uid="RisingV.Shared.Plugins.PluginConfig.Log">
+  Log
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Plugins/PluginConfig.cs/#L44"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override Logger Log { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="RisingV.Shared.Logging.Logger.html">Logger</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="RisingV_Shared_Plugins_PluginConfig_RegisterCommands_" data-uid="RisingV.Shared.Plugins.PluginConfig.RegisterCommands*"></a>
+
+  <h3 id="RisingV_Shared_Plugins_PluginConfig_RegisterCommands" data-uid="RisingV.Shared.Plugins.PluginConfig.RegisterCommands">
+  RegisterCommands
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Plugins/PluginConfig.cs/#L32"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets a configuration entry for registering commands.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ConfigEntry&lt;bool&gt;? RegisterCommands { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">ConfigEntry</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="RisingV_Shared_Plugins_PluginConfig_Initialize_" data-uid="RisingV.Shared.Plugins.PluginConfig.Initialize*"></a>
+
+  <h3 id="RisingV_Shared_Plugins_PluginConfig_Initialize_RisingV_Shared_Plugins_PluginConfigManager_System_Collections_Generic_List_RisingV_Shared_Plugins_IPlugin__" data-uid="RisingV.Shared.Plugins.PluginConfig.Initialize(RisingV.Shared.Plugins.PluginConfigManager,System.Collections.Generic.List{RisingV.Shared.Plugins.IPlugin})">
+  Initialize(PluginConfigManager, List&lt;IPlugin&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Plugins/PluginConfig.cs/#L46"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes the lifecycle of the manager with a specific type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Initialize(PluginConfigManager manager, List&lt;IPlugin&gt; plugins)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>manager</code> <a class="xref" href="RisingV.Shared.Plugins.PluginConfigManager.html">PluginConfigManager</a></dt>
+    <dd></dd>
+    <dt><code>plugins</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="RisingV.Shared.Plugins.IPlugin.html">IPlugin</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RisingV_Shared_Plugins_PluginConfig_Load_" data-uid="RisingV.Shared.Plugins.PluginConfig.Load*"></a>
+
+  <h3 id="RisingV_Shared_Plugins_PluginConfig_Load_RisingV_Shared_Plugins_PluginConfigManager_System_Collections_Generic_List_RisingV_Shared_Plugins_IPlugin__" data-uid="RisingV.Shared.Plugins.PluginConfig.Load(RisingV.Shared.Plugins.PluginConfigManager,System.Collections.Generic.List{RisingV.Shared.Plugins.IPlugin})">
+  Load(PluginConfigManager, List&lt;IPlugin&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Plugins/PluginConfig.cs/#L51"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Loads the manager and its dependencies with a specific type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Load(PluginConfigManager manager, List&lt;IPlugin&gt; plugins)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>manager</code> <a class="xref" href="RisingV.Shared.Plugins.PluginConfigManager.html">PluginConfigManager</a></dt>
+    <dd></dd>
+    <dt><code>plugins</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="RisingV.Shared.Plugins.IPlugin.html">IPlugin</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RisingV_Shared_Plugins_PluginConfig_Ready_" data-uid="RisingV.Shared.Plugins.PluginConfig.Ready*"></a>
+
+  <h3 id="RisingV_Shared_Plugins_PluginConfig_Ready_RisingV_Shared_Plugins_PluginConfigManager_System_Collections_Generic_List_RisingV_Shared_Plugins_IPlugin__" data-uid="RisingV.Shared.Plugins.PluginConfig.Ready(RisingV.Shared.Plugins.PluginConfigManager,System.Collections.Generic.List{RisingV.Shared.Plugins.IPlugin})">
+  Ready(PluginConfigManager, List&lt;IPlugin&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Plugins/PluginConfig.cs/#L60"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Prepares the manager for use with a specific type, typically after loading.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Ready(PluginConfigManager manager, List&lt;IPlugin&gt; plugins)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>manager</code> <a class="xref" href="RisingV.Shared.Plugins.PluginConfigManager.html">PluginConfigManager</a></dt>
+    <dd></dd>
+    <dt><code>plugins</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="RisingV.Shared.Plugins.IPlugin.html">IPlugin</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RisingV_Shared_Plugins_PluginConfig_Reload_" data-uid="RisingV.Shared.Plugins.PluginConfig.Reload*"></a>
+
+  <h3 id="RisingV_Shared_Plugins_PluginConfig_Reload_RisingV_Shared_Plugins_PluginConfigManager_System_Collections_Generic_List_RisingV_Shared_Plugins_IPlugin__RisingV_Shared_Managers_ReloadReason_" data-uid="RisingV.Shared.Plugins.PluginConfig.Reload(RisingV.Shared.Plugins.PluginConfigManager,System.Collections.Generic.List{RisingV.Shared.Plugins.IPlugin},RisingV.Shared.Managers.ReloadReason)">
+  Reload(PluginConfigManager, List&lt;IPlugin&gt;, ReloadReason)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Plugins/PluginConfig.cs/#L77"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reloads the manager and its dependencies with a specific type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Reload(PluginConfigManager manager, List&lt;IPlugin&gt; plugins, ReloadReason reason)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>manager</code> <a class="xref" href="RisingV.Shared.Plugins.PluginConfigManager.html">PluginConfigManager</a></dt>
+    <dd></dd>
+    <dt><code>plugins</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="RisingV.Shared.Plugins.IPlugin.html">IPlugin</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>reason</code> <a class="xref" href="RisingV.Shared.Managers.ReloadReason.html">ReloadReason</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RisingV_Shared_Plugins_PluginConfig_Terminate_" data-uid="RisingV.Shared.Plugins.PluginConfig.Terminate*"></a>
+
+  <h3 id="RisingV_Shared_Plugins_PluginConfig_Terminate_RisingV_Shared_Plugins_PluginConfigManager_System_Collections_Generic_List_RisingV_Shared_Plugins_IPlugin__" data-uid="RisingV.Shared.Plugins.PluginConfig.Terminate(RisingV.Shared.Plugins.PluginConfigManager,System.Collections.Generic.List{RisingV.Shared.Plugins.IPlugin})">
+  Terminate(PluginConfigManager, List&lt;IPlugin&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Plugins/PluginConfig.cs/#L72"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Terminates the manager and cleans up resources with a specific type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Terminate(PluginConfigManager manager, List&lt;IPlugin&gt; plugins)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>manager</code> <a class="xref" href="RisingV.Shared.Plugins.PluginConfigManager.html">PluginConfigManager</a></dt>
+    <dd></dd>
+    <dt><code>plugins</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="RisingV.Shared.Plugins.IPlugin.html">IPlugin</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RisingV_Shared_Plugins_PluginConfig_ToString_" data-uid="RisingV.Shared.Plugins.PluginConfig.ToString*"></a>
+
+  <h3 id="RisingV_Shared_Plugins_PluginConfig_ToString" data-uid="RisingV.Shared.Plugins.PluginConfig.ToString">
+  ToString()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Plugins/PluginConfig.cs/#L82"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a string that represents the current object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>A string that represents the current object.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RisingV_Shared_Plugins_PluginConfig_Unload_" data-uid="RisingV.Shared.Plugins.PluginConfig.Unload*"></a>
+
+  <h3 id="RisingV_Shared_Plugins_PluginConfig_Unload_RisingV_Shared_Plugins_PluginConfigManager_System_Collections_Generic_List_RisingV_Shared_Plugins_IPlugin__" data-uid="RisingV.Shared.Plugins.PluginConfig.Unload(RisingV.Shared.Plugins.PluginConfigManager,System.Collections.Generic.List{RisingV.Shared.Plugins.IPlugin})">
+  Unload(PluginConfigManager, List&lt;IPlugin&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Plugins/PluginConfig.cs/#L65"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Unloads the manager and its dependencies with a specific type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Unload(PluginConfigManager manager, List&lt;IPlugin&gt; plugins)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>manager</code> <a class="xref" href="RisingV.Shared.Plugins.PluginConfigManager.html">PluginConfigManager</a></dt>
+    <dd></dd>
+    <dt><code>plugins</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="RisingV.Shared.Plugins.IPlugin.html">IPlugin</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Plugins/PluginConfig.cs/#L27" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

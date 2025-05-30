@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Interface IDatabase | RisingV.Shared </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Interface IDatabase | RisingV.Shared ">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/BenDol/RisingV.Shared/new/master/apiSpec/new?filename=RisingV_Shared_Databases_IDatabase.md&amp;value=---%0Auid%3A%20RisingV.Shared.Databases.IDatabase%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../assets/images/logo_50.png" alt="RisingV.Shared">
+            RisingV.Shared
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="RisingV.Shared.Databases.IDatabase">
+
+
+
+  <h1 id="RisingV_Shared_Databases_IDatabase" data-uid="RisingV.Shared.Databases.IDatabase" class="text-break">
+Interface IDatabase  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Databases/IDatabase.cs/#L13"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="RisingV.html">RisingV</a>.<a class="xref" href="RisingV.Shared.html">Shared</a>.<a class="xref" href="RisingV.Shared.Databases.html">Databases</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>RisingV.Shared.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"></div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IDatabase : IDataCrud, IManageableLifecycle&lt;DatabaseManager&gt;, IManageableLifecycle, IReloadable, IManageable&lt;DatabaseManager&gt;, IManageable</code></pre>
+  </div>
+
+
+
+
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="RisingV.Shared.Databases.Sources.IDataCrud.html#RisingV_Shared_Databases_Sources_IDataCrud_Clear">IDataCrud.Clear()</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Databases.Sources.IDataCrud.html#RisingV_Shared_Databases_Sources_IDataCrud_Count">IDataCrud.Count()</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Databases.Sources.IDataCrud.html#RisingV_Shared_Databases_Sources_IDataCrud_IsEmpty">IDataCrud.IsEmpty()</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Managers.IManageableLifecycle-1.html#RisingV_Shared_Managers_IManageableLifecycle_1_Initialize__0_System_Collections_Generic_List_RisingV_Shared_Plugins_IPlugin__">IManageableLifecycle&lt;DatabaseManager&gt;.Initialize(DatabaseManager, List&lt;IPlugin&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Managers.IManageableLifecycle-1.html#RisingV_Shared_Managers_IManageableLifecycle_1_Load__0_System_Collections_Generic_List_RisingV_Shared_Plugins_IPlugin__">IManageableLifecycle&lt;DatabaseManager&gt;.Load(DatabaseManager, List&lt;IPlugin&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Managers.IManageableLifecycle-1.html#RisingV_Shared_Managers_IManageableLifecycle_1_Unload__0_System_Collections_Generic_List_RisingV_Shared_Plugins_IPlugin__">IManageableLifecycle&lt;DatabaseManager&gt;.Unload(DatabaseManager, List&lt;IPlugin&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Managers.IManageableLifecycle-1.html#RisingV_Shared_Managers_IManageableLifecycle_1_Ready__0_System_Collections_Generic_List_RisingV_Shared_Plugins_IPlugin__">IManageableLifecycle&lt;DatabaseManager&gt;.Ready(DatabaseManager, List&lt;IPlugin&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Managers.IManageableLifecycle-1.html#RisingV_Shared_Managers_IManageableLifecycle_1_Terminate__0_System_Collections_Generic_List_RisingV_Shared_Plugins_IPlugin__">IManageableLifecycle&lt;DatabaseManager&gt;.Terminate(DatabaseManager, List&lt;IPlugin&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Managers.IManageableLifecycle-1.html#RisingV_Shared_Managers_IManageableLifecycle_1_Reload__0_System_Collections_Generic_List_RisingV_Shared_Plugins_IPlugin__RisingV_Shared_Managers_ReloadReason_">IManageableLifecycle&lt;DatabaseManager&gt;.Reload(DatabaseManager, List&lt;IPlugin&gt;, ReloadReason)</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Managers.IManageableLifecycle-1.html#RisingV_Shared_Managers_IManageableLifecycle_1_OnReload__0_System_Collections_Generic_List_RisingV_Shared_Plugins_IPlugin__RisingV_Shared_Managers_ReloadReason_">IManageableLifecycle&lt;DatabaseManager&gt;.OnReload(DatabaseManager, List&lt;IPlugin&gt;, ReloadReason)</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Managers.IManageableLifecycle.html#RisingV_Shared_Managers_IManageableLifecycle_Initialize_RisingV_Shared_Managers_IManager_">IManageableLifecycle.Initialize(IManager)</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Managers.IManageableLifecycle.html#RisingV_Shared_Managers_IManageableLifecycle_Initialize_RisingV_Shared_Managers_IManager_System_Collections_Generic_List_RisingV_Shared_Plugins_IPlugin__">IManageableLifecycle.Initialize(IManager, List&lt;IPlugin&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Managers.IManageableLifecycle.html#RisingV_Shared_Managers_IManageableLifecycle_Load_RisingV_Shared_Managers_IManager_">IManageableLifecycle.Load(IManager)</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Managers.IManageableLifecycle.html#RisingV_Shared_Managers_IManageableLifecycle_Load_RisingV_Shared_Managers_IManager_System_Collections_Generic_List_RisingV_Shared_Plugins_IPlugin__">IManageableLifecycle.Load(IManager, List&lt;IPlugin&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Managers.IManageableLifecycle.html#RisingV_Shared_Managers_IManageableLifecycle_Unload_RisingV_Shared_Managers_IManager_">IManageableLifecycle.Unload(IManager)</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Managers.IManageableLifecycle.html#RisingV_Shared_Managers_IManageableLifecycle_Unload_RisingV_Shared_Managers_IManager_System_Collections_Generic_List_RisingV_Shared_Plugins_IPlugin__">IManageableLifecycle.Unload(IManager, List&lt;IPlugin&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Managers.IManageableLifecycle.html#RisingV_Shared_Managers_IManageableLifecycle_Ready_RisingV_Shared_Managers_IManager_">IManageableLifecycle.Ready(IManager)</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Managers.IManageableLifecycle.html#RisingV_Shared_Managers_IManageableLifecycle_Ready_RisingV_Shared_Managers_IManager_System_Collections_Generic_List_RisingV_Shared_Plugins_IPlugin__">IManageableLifecycle.Ready(IManager, List&lt;IPlugin&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Managers.IManageableLifecycle.html#RisingV_Shared_Managers_IManageableLifecycle_Terminate_RisingV_Shared_Managers_IManager_">IManageableLifecycle.Terminate(IManager)</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Managers.IManageableLifecycle.html#RisingV_Shared_Managers_IManageableLifecycle_Terminate_RisingV_Shared_Managers_IManager_System_Collections_Generic_List_RisingV_Shared_Plugins_IPlugin__">IManageableLifecycle.Terminate(IManager, List&lt;IPlugin&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Managers.IReloadable.html#RisingV_Shared_Managers_IReloadable_Reload_RisingV_Shared_Managers_IManager_RisingV_Shared_Managers_ReloadReason_">IReloadable.Reload(IManager, ReloadReason)</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Managers.IReloadable.html#RisingV_Shared_Managers_IReloadable_Reload_RisingV_Shared_Managers_IManager_System_Collections_Generic_List_RisingV_Shared_Plugins_IPlugin__RisingV_Shared_Managers_ReloadReason_">IReloadable.Reload(IManager, List&lt;IPlugin&gt;, ReloadReason)</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Managers.IReloadable.html#RisingV_Shared_Managers_IReloadable_OnReload_RisingV_Shared_Managers_IManager_System_Collections_Generic_List_RisingV_Shared_Plugins_IPlugin__RisingV_Shared_Managers_ReloadReason_">IReloadable.OnReload(IManager, List&lt;IPlugin&gt;, ReloadReason)</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="RisingV.Shared.Databases.DatabaseDefaults.html#RisingV_Shared_Databases_DatabaseDefaults_IsEmpty_RisingV_Shared_Databases_IDatabase_">DatabaseDefaults.IsEmpty(IDatabase)</a>
+  </div>
+  <div>
+      <a class="xref" href="RisingV.Shared.Extensions.EntityExtensions.html#RisingV_Shared_Extensions_EntityExtensions_IsAspect__1_System_Object_">EntityExtensions.IsAspect&lt;TAspect&gt;(object)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="RisingV_Shared_Databases_IDatabase_IsInitialized_" data-uid="RisingV.Shared.Databases.IDatabase.IsInitialized*"></a>
+
+  <h3 id="RisingV_Shared_Databases_IDatabase_IsInitialized" data-uid="RisingV.Shared.Databases.IDatabase.IsInitialized">
+  IsInitialized
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Databases/IDatabase.cs/#L20"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Indicates whether the database has been initialized.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool IsInitialized { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="RisingV_Shared_Databases_IDatabase_IsLoaded_" data-uid="RisingV.Shared.Databases.IDatabase.IsLoaded*"></a>
+
+  <h3 id="RisingV_Shared_Databases_IDatabase_IsLoaded" data-uid="RisingV.Shared.Databases.IDatabase.IsLoaded">
+  IsLoaded
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Databases/IDatabase.cs/#L25"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Indicates whether the database has been loaded.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool IsLoaded { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="RisingV_Shared_Databases_IDatabase_Name_" data-uid="RisingV.Shared.Databases.IDatabase.Name*"></a>
+
+  <h3 id="RisingV_Shared_Databases_IDatabase_Name" data-uid="RisingV.Shared.Databases.IDatabase.Name">
+  Name
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Databases/IDatabase.cs/#L15"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string Name { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="RisingV_Shared_Databases_IDatabase_Clear_" data-uid="RisingV.Shared.Databases.IDatabase.Clear*"></a>
+
+  <h3 id="RisingV_Shared_Databases_IDatabase_Clear_RisingV_Shared_Databases_DatabaseManager_" data-uid="RisingV.Shared.Databases.IDatabase.Clear(RisingV.Shared.Databases.DatabaseManager)">
+  Clear(DatabaseManager)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Databases/IDatabase.cs/#L48"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Clears the database, removing all data.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void Clear(DatabaseManager manager)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>manager</code> <a class="xref" href="RisingV.Shared.Databases.DatabaseManager.html">DatabaseManager</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RisingV_Shared_Databases_IDatabase_Reload_" data-uid="RisingV.Shared.Databases.IDatabase.Reload*"></a>
+
+  <h3 id="RisingV_Shared_Databases_IDatabase_Reload_RisingV_Shared_Databases_DatabaseManager_" data-uid="RisingV.Shared.Databases.IDatabase.Reload(RisingV.Shared.Databases.DatabaseManager)">
+  Reload(DatabaseManager)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Databases/IDatabase.cs/#L36"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reloads the database from its source.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void Reload(DatabaseManager manager)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>manager</code> <a class="xref" href="RisingV.Shared.Databases.DatabaseManager.html">DatabaseManager</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RisingV_Shared_Databases_IDatabase_ThrowOnLoadFailure_" data-uid="RisingV.Shared.Databases.IDatabase.ThrowOnLoadFailure*"></a>
+
+  <h3 id="RisingV_Shared_Databases_IDatabase_ThrowOnLoadFailure" data-uid="RisingV.Shared.Databases.IDatabase.ThrowOnLoadFailure">
+  ThrowOnLoadFailure()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Databases/IDatabase.cs/#L54"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Should we throw an exception if the database fails to load.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool ThrowOnLoadFailure()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RisingV_Shared_Databases_IDatabase_Unload_" data-uid="RisingV.Shared.Databases.IDatabase.Unload*"></a>
+
+  <h3 id="RisingV_Shared_Databases_IDatabase_Unload_RisingV_Shared_Databases_DatabaseManager_" data-uid="RisingV.Shared.Databases.IDatabase.Unload(RisingV.Shared.Databases.DatabaseManager)">
+  Unload(DatabaseManager)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Databases/IDatabase.cs/#L42"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Unloads the database, clearing its data.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void Unload(DatabaseManager manager)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>manager</code> <a class="xref" href="RisingV.Shared.Databases.DatabaseManager.html">DatabaseManager</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RisingV_Shared_Databases_IDatabase_VerifySource_" data-uid="RisingV.Shared.Databases.IDatabase.VerifySource*"></a>
+
+  <h3 id="RisingV_Shared_Databases_IDatabase_VerifySource" data-uid="RisingV.Shared.Databases.IDatabase.VerifySource">
+  VerifySource()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Databases/IDatabase.cs/#L30"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Verify the source of the database.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void VerifySource()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Databases/IDatabase.cs/#L13" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,1235 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class LogWithTag | RisingV.Shared </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class LogWithTag | RisingV.Shared ">
+      
+      <meta name="description" content="Convenience logging helpers that prepend a custom  to every message.">
+      <link rel="icon" href="../assets/images/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/BenDol/RisingV.Shared/new/master/apiSpec/new?filename=RisingV_Shared_Logging_LogWithTag.md&amp;value=---%0Auid%3A%20RisingV.Shared.Logging.LogWithTag%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../assets/images/logo_50.png" alt="RisingV.Shared">
+            RisingV.Shared
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="RisingV.Shared.Logging.LogWithTag">
+
+
+
+  <h1 id="RisingV_Shared_Logging_LogWithTag" data-uid="RisingV.Shared.Logging.LogWithTag" class="text-break">
+Class LogWithTag  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Logging/ILogger.cs/#L156"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="RisingV.html">RisingV</a>.<a class="xref" href="RisingV.Shared.html">Shared</a>.<a class="xref" href="RisingV.Shared.Logging.html">Logging</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>RisingV.Shared.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Convenience logging helpers that prepend a custom <a class="xref" href="RisingV.Shared.Logging.ILogTag.html">ILogTag</a>
+to every message.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class LogWithTag</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">LogWithTag</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="RisingV_Shared_Logging_LogWithTag_Debug_" data-uid="RisingV.Shared.Logging.LogWithTag.Debug*"></a>
+
+  <h3 id="RisingV_Shared_Logging_LogWithTag_Debug_RisingV_Shared_Logging_ILogger_RisingV_Shared_Logging_ILogTag_System_String_System_Object___" data-uid="RisingV.Shared.Logging.LogWithTag.Debug(RisingV.Shared.Logging.ILogger,RisingV.Shared.Logging.ILogTag,System.String,System.Object[])">
+  Debug(ILogger, ILogTag, string, params object[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Logging/ILogger.cs/#L193"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Logs a message at the specified log level.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Debug(this ILogger logger, ILogTag tag, string message, params object[] args)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>logger</code> <a class="xref" href="RisingV.Shared.Logging.ILogger.html">ILogger</a></dt>
+    <dd></dd>
+    <dt><code>tag</code> <a class="xref" href="RisingV.Shared.Logging.ILogTag.html">ILogTag</a></dt>
+    <dd></dd>
+    <dt><code>message</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The message to log.</p>
+</dd>
+    <dt><code>args</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>[]</dt>
+    <dd><p>Optional arguments used to format <code class="paramref">message</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RisingV_Shared_Logging_LogWithTag_DebugTrace_" data-uid="RisingV.Shared.Logging.LogWithTag.DebugTrace*"></a>
+
+  <h3 id="RisingV_Shared_Logging_LogWithTag_DebugTrace_RisingV_Shared_Logging_ILogger_RisingV_Shared_Logging_ILogTag_System_String_System_Object___" data-uid="RisingV.Shared.Logging.LogWithTag.DebugTrace(RisingV.Shared.Logging.ILogger,RisingV.Shared.Logging.ILogTag,System.String,System.Object[])">
+  DebugTrace(ILogger, ILogTag, string, params object[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Logging/ILogger.cs/#L199"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Logs a debug message with trace information (if enabled).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void DebugTrace(this ILogger logger, ILogTag tag, string message, params object[] args)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>logger</code> <a class="xref" href="RisingV.Shared.Logging.ILogger.html">ILogger</a></dt>
+    <dd></dd>
+    <dt><code>tag</code> <a class="xref" href="RisingV.Shared.Logging.ILogTag.html">ILogTag</a></dt>
+    <dd></dd>
+    <dt><code>message</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>args</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RisingV_Shared_Logging_LogWithTag_Error_" data-uid="RisingV.Shared.Logging.LogWithTag.Error*"></a>
+
+  <h3 id="RisingV_Shared_Logging_LogWithTag_Error_RisingV_Shared_Logging_ILogger_RisingV_Shared_Logging_ILogTag_System_Exception_System_Object___" data-uid="RisingV.Shared.Logging.LogWithTag.Error(RisingV.Shared.Logging.ILogger,RisingV.Shared.Logging.ILogTag,System.Exception,System.Object[])">
+  Error(ILogger, ILogTag, Exception, params object[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Logging/ILogger.cs/#L244"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Logs an error encapsulating an <code class="paramref">exception</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Error(this ILogger logger, ILogTag tag, Exception exception, params object[] args)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>logger</code> <a class="xref" href="RisingV.Shared.Logging.ILogger.html">ILogger</a></dt>
+    <dd></dd>
+    <dt><code>tag</code> <a class="xref" href="RisingV.Shared.Logging.ILogTag.html">ILogTag</a></dt>
+    <dd></dd>
+    <dt><code>exception</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a></dt>
+    <dd></dd>
+    <dt><code>args</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RisingV_Shared_Logging_LogWithTag_Error_" data-uid="RisingV.Shared.Logging.LogWithTag.Error*"></a>
+
+  <h3 id="RisingV_Shared_Logging_LogWithTag_Error_RisingV_Shared_Logging_ILogger_RisingV_Shared_Logging_ILogTag_System_String_System_Exception_System_Object___" data-uid="RisingV.Shared.Logging.LogWithTag.Error(RisingV.Shared.Logging.ILogger,RisingV.Shared.Logging.ILogTag,System.String,System.Exception,System.Object[])">
+  Error(ILogger, ILogTag, string, Exception, params object[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Logging/ILogger.cs/#L256"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Logs an error with a custom message and attached <code class="paramref">exception</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Error(this ILogger logger, ILogTag tag, string message, Exception exception, params object[] args)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>logger</code> <a class="xref" href="RisingV.Shared.Logging.ILogger.html">ILogger</a></dt>
+    <dd></dd>
+    <dt><code>tag</code> <a class="xref" href="RisingV.Shared.Logging.ILogTag.html">ILogTag</a></dt>
+    <dd></dd>
+    <dt><code>message</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>exception</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a></dt>
+    <dd></dd>
+    <dt><code>args</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RisingV_Shared_Logging_LogWithTag_Error_" data-uid="RisingV.Shared.Logging.LogWithTag.Error*"></a>
+
+  <h3 id="RisingV_Shared_Logging_LogWithTag_Error_RisingV_Shared_Logging_ILogger_RisingV_Shared_Logging_ILogTag_System_String_System_Object___" data-uid="RisingV.Shared.Logging.LogWithTag.Error(RisingV.Shared.Logging.ILogger,RisingV.Shared.Logging.ILogTag,System.String,System.Object[])">
+  Error(ILogger, ILogTag, string, params object[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Logging/ILogger.cs/#L232"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Logs a message at the specified log level.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Error(this ILogger logger, ILogTag tag, string message, params object[] args)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>logger</code> <a class="xref" href="RisingV.Shared.Logging.ILogger.html">ILogger</a></dt>
+    <dd></dd>
+    <dt><code>tag</code> <a class="xref" href="RisingV.Shared.Logging.ILogTag.html">ILogTag</a></dt>
+    <dd></dd>
+    <dt><code>message</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The message to log.</p>
+</dd>
+    <dt><code>args</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>[]</dt>
+    <dd><p>Optional arguments used to format <code class="paramref">message</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RisingV_Shared_Logging_LogWithTag_ErrorTrace_" data-uid="RisingV.Shared.Logging.LogWithTag.ErrorTrace*"></a>
+
+  <h3 id="RisingV_Shared_Logging_LogWithTag_ErrorTrace_RisingV_Shared_Logging_ILogger_RisingV_Shared_Logging_ILogTag_System_Exception_System_Object___" data-uid="RisingV.Shared.Logging.LogWithTag.ErrorTrace(RisingV.Shared.Logging.ILogger,RisingV.Shared.Logging.ILogTag,System.Exception,System.Object[])">
+  ErrorTrace(ILogger, ILogTag, Exception, params object[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Logging/ILogger.cs/#L249"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Logs an error with trace information for <code class="paramref">exception</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void ErrorTrace(this ILogger logger, ILogTag tag, Exception exception, params object[] args)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>logger</code> <a class="xref" href="RisingV.Shared.Logging.ILogger.html">ILogger</a></dt>
+    <dd></dd>
+    <dt><code>tag</code> <a class="xref" href="RisingV.Shared.Logging.ILogTag.html">ILogTag</a></dt>
+    <dd></dd>
+    <dt><code>exception</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a></dt>
+    <dd></dd>
+    <dt><code>args</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RisingV_Shared_Logging_LogWithTag_ErrorTrace_" data-uid="RisingV.Shared.Logging.LogWithTag.ErrorTrace*"></a>
+
+  <h3 id="RisingV_Shared_Logging_LogWithTag_ErrorTrace_RisingV_Shared_Logging_ILogger_RisingV_Shared_Logging_ILogTag_System_String_System_Exception_System_Object___" data-uid="RisingV.Shared.Logging.LogWithTag.ErrorTrace(RisingV.Shared.Logging.ILogger,RisingV.Shared.Logging.ILogTag,System.String,System.Exception,System.Object[])">
+  ErrorTrace(ILogger, ILogTag, string, Exception, params object[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Logging/ILogger.cs/#L266"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Logs an error with trace data (if enabled) and attached <code class="paramref">exception</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void ErrorTrace(this ILogger logger, ILogTag tag, string message, Exception exception, params object[] args)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>logger</code> <a class="xref" href="RisingV.Shared.Logging.ILogger.html">ILogger</a></dt>
+    <dd></dd>
+    <dt><code>tag</code> <a class="xref" href="RisingV.Shared.Logging.ILogTag.html">ILogTag</a></dt>
+    <dd></dd>
+    <dt><code>message</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>exception</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a></dt>
+    <dd></dd>
+    <dt><code>args</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RisingV_Shared_Logging_LogWithTag_ErrorTrace_" data-uid="RisingV.Shared.Logging.LogWithTag.ErrorTrace*"></a>
+
+  <h3 id="RisingV_Shared_Logging_LogWithTag_ErrorTrace_RisingV_Shared_Logging_ILogger_RisingV_Shared_Logging_ILogTag_System_String_System_Object___" data-uid="RisingV.Shared.Logging.LogWithTag.ErrorTrace(RisingV.Shared.Logging.ILogger,RisingV.Shared.Logging.ILogTag,System.String,System.Object[])">
+  ErrorTrace(ILogger, ILogTag, string, params object[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Logging/ILogger.cs/#L238"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Logs an error message with trace data.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void ErrorTrace(this ILogger logger, ILogTag tag, string message, params object[] args)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>logger</code> <a class="xref" href="RisingV.Shared.Logging.ILogger.html">ILogger</a></dt>
+    <dd></dd>
+    <dt><code>tag</code> <a class="xref" href="RisingV.Shared.Logging.ILogTag.html">ILogTag</a></dt>
+    <dd></dd>
+    <dt><code>message</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>args</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RisingV_Shared_Logging_LogWithTag_Fatal_" data-uid="RisingV.Shared.Logging.LogWithTag.Fatal*"></a>
+
+  <h3 id="RisingV_Shared_Logging_LogWithTag_Fatal_RisingV_Shared_Logging_ILogger_RisingV_Shared_Logging_ILogTag_System_String_System_Object___" data-uid="RisingV.Shared.Logging.LogWithTag.Fatal(RisingV.Shared.Logging.ILogger,RisingV.Shared.Logging.ILogTag,System.String,System.Object[])">
+  Fatal(ILogger, ILogTag, string, params object[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Logging/ILogger.cs/#L219"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Logs a message at the specified log level.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Fatal(this ILogger logger, ILogTag tag, string message, params object[] args)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>logger</code> <a class="xref" href="RisingV.Shared.Logging.ILogger.html">ILogger</a></dt>
+    <dd></dd>
+    <dt><code>tag</code> <a class="xref" href="RisingV.Shared.Logging.ILogTag.html">ILogTag</a></dt>
+    <dd></dd>
+    <dt><code>message</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The message to log.</p>
+</dd>
+    <dt><code>args</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>[]</dt>
+    <dd><p>Optional arguments used to format <code class="paramref">message</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RisingV_Shared_Logging_LogWithTag_FatalTrace_" data-uid="RisingV.Shared.Logging.LogWithTag.FatalTrace*"></a>
+
+  <h3 id="RisingV_Shared_Logging_LogWithTag_FatalTrace_RisingV_Shared_Logging_ILogger_RisingV_Shared_Logging_ILogTag_System_String_System_Object___" data-uid="RisingV.Shared.Logging.LogWithTag.FatalTrace(RisingV.Shared.Logging.ILogger,RisingV.Shared.Logging.ILogTag,System.String,System.Object[])">
+  FatalTrace(ILogger, ILogTag, string, params object[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Logging/ILogger.cs/#L225"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Logs a fatal error with trace (if enabled).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void FatalTrace(this ILogger logger, ILogTag tag, string message, params object[] args)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>logger</code> <a class="xref" href="RisingV.Shared.Logging.ILogger.html">ILogger</a></dt>
+    <dd></dd>
+    <dt><code>tag</code> <a class="xref" href="RisingV.Shared.Logging.ILogTag.html">ILogTag</a></dt>
+    <dd></dd>
+    <dt><code>message</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>args</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RisingV_Shared_Logging_LogWithTag_Fine_" data-uid="RisingV.Shared.Logging.LogWithTag.Fine*"></a>
+
+  <h3 id="RisingV_Shared_Logging_LogWithTag_Fine_RisingV_Shared_Logging_ILogger_RisingV_Shared_Logging_ILogTag_System_String_System_Object___" data-uid="RisingV.Shared.Logging.LogWithTag.Fine(RisingV.Shared.Logging.ILogger,RisingV.Shared.Logging.ILogTag,System.String,System.Object[])">
+  Fine(ILogger, ILogTag, string, params object[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Logging/ILogger.cs/#L206"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Logs a message at the specified log level.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Fine(this ILogger logger, ILogTag tag, string message, params object[] args)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>logger</code> <a class="xref" href="RisingV.Shared.Logging.ILogger.html">ILogger</a></dt>
+    <dd></dd>
+    <dt><code>tag</code> <a class="xref" href="RisingV.Shared.Logging.ILogTag.html">ILogTag</a></dt>
+    <dd></dd>
+    <dt><code>message</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The message to log.</p>
+</dd>
+    <dt><code>args</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>[]</dt>
+    <dd><p>Optional arguments used to format <code class="paramref">message</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RisingV_Shared_Logging_LogWithTag_FineTrace_" data-uid="RisingV.Shared.Logging.LogWithTag.FineTrace*"></a>
+
+  <h3 id="RisingV_Shared_Logging_LogWithTag_FineTrace_RisingV_Shared_Logging_ILogger_RisingV_Shared_Logging_ILogTag_System_String_System_Object___" data-uid="RisingV.Shared.Logging.LogWithTag.FineTrace(RisingV.Shared.Logging.ILogger,RisingV.Shared.Logging.ILogTag,System.String,System.Object[])">
+  FineTrace(ILogger, ILogTag, string, params object[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Logging/ILogger.cs/#L212"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Logs a fine-level message with optional trace.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void FineTrace(this ILogger logger, ILogTag tag, string message, params object[] args)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>logger</code> <a class="xref" href="RisingV.Shared.Logging.ILogger.html">ILogger</a></dt>
+    <dd></dd>
+    <dt><code>tag</code> <a class="xref" href="RisingV.Shared.Logging.ILogTag.html">ILogTag</a></dt>
+    <dd></dd>
+    <dt><code>message</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>args</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RisingV_Shared_Logging_LogWithTag_Info_" data-uid="RisingV.Shared.Logging.LogWithTag.Info*"></a>
+
+  <h3 id="RisingV_Shared_Logging_LogWithTag_Info_RisingV_Shared_Logging_ILogger_RisingV_Shared_Logging_ILogTag_System_String_System_Object___" data-uid="RisingV.Shared.Logging.LogWithTag.Info(RisingV.Shared.Logging.ILogger,RisingV.Shared.Logging.ILogTag,System.String,System.Object[])">
+  Info(ILogger, ILogTag, string, params object[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Logging/ILogger.cs/#L168"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Logs a message at the specified log level.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Info(this ILogger logger, ILogTag tag, string message, params object[] args)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>logger</code> <a class="xref" href="RisingV.Shared.Logging.ILogger.html">ILogger</a></dt>
+    <dd></dd>
+    <dt><code>tag</code> <a class="xref" href="RisingV.Shared.Logging.ILogTag.html">ILogTag</a></dt>
+    <dd></dd>
+    <dt><code>message</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The message to log.</p>
+</dd>
+    <dt><code>args</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>[]</dt>
+    <dd><p>Optional arguments used to format <code class="paramref">message</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RisingV_Shared_Logging_LogWithTag_InfoTrace_" data-uid="RisingV.Shared.Logging.LogWithTag.InfoTrace*"></a>
+
+  <h3 id="RisingV_Shared_Logging_LogWithTag_InfoTrace_RisingV_Shared_Logging_ILogger_RisingV_Shared_Logging_ILogTag_System_String_System_Object___" data-uid="RisingV.Shared.Logging.LogWithTag.InfoTrace(RisingV.Shared.Logging.ILogger,RisingV.Shared.Logging.ILogTag,System.String,System.Object[])">
+  InfoTrace(ILogger, ILogTag, string, params object[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Logging/ILogger.cs/#L174"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Logs an informational message and, if enabled, appends a stack trace.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void InfoTrace(this ILogger logger, ILogTag tag, string message, params object[] args)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>logger</code> <a class="xref" href="RisingV.Shared.Logging.ILogger.html">ILogger</a></dt>
+    <dd></dd>
+    <dt><code>tag</code> <a class="xref" href="RisingV.Shared.Logging.ILogTag.html">ILogTag</a></dt>
+    <dd></dd>
+    <dt><code>message</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>args</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RisingV_Shared_Logging_LogWithTag_IsAllEnabled_" data-uid="RisingV.Shared.Logging.LogWithTag.IsAllEnabled*"></a>
+
+  <h3 id="RisingV_Shared_Logging_LogWithTag_IsAllEnabled_RisingV_Shared_Logging_ILogger_RisingV_Shared_Logging_ILogTag_" data-uid="RisingV.Shared.Logging.LogWithTag.IsAllEnabled(RisingV.Shared.Logging.ILogger,RisingV.Shared.Logging.ILogTag)">
+  IsAllEnabled(ILogger, ILogTag?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Logging/ILogger.cs/#L301"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if <a class="xref" href="RisingV.Shared.Logging.LogLevel.html#RisingV_Shared_Logging_LogLevel_All">All</a> is enabled for <code class="paramref">tag</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsAllEnabled(this ILogger logger, ILogTag? tag = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>logger</code> <a class="xref" href="RisingV.Shared.Logging.ILogger.html">ILogger</a></dt>
+    <dd></dd>
+    <dt><code>tag</code> <a class="xref" href="RisingV.Shared.Logging.ILogTag.html">ILogTag</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RisingV_Shared_Logging_LogWithTag_IsDebugEnabled_" data-uid="RisingV.Shared.Logging.LogWithTag.IsDebugEnabled*"></a>
+
+  <h3 id="RisingV_Shared_Logging_LogWithTag_IsDebugEnabled_RisingV_Shared_Logging_ILogger_RisingV_Shared_Logging_ILogTag_" data-uid="RisingV.Shared.Logging.LogWithTag.IsDebugEnabled(RisingV.Shared.Logging.ILogger,RisingV.Shared.Logging.ILogTag)">
+  IsDebugEnabled(ILogger, ILogTag?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Logging/ILogger.cs/#L291"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if debug-level logging is enabled for <code class="paramref">tag</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsDebugEnabled(this ILogger logger, ILogTag? tag = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>logger</code> <a class="xref" href="RisingV.Shared.Logging.ILogger.html">ILogger</a></dt>
+    <dd></dd>
+    <dt><code>tag</code> <a class="xref" href="RisingV.Shared.Logging.ILogTag.html">ILogTag</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RisingV_Shared_Logging_LogWithTag_IsErrorEnabled_" data-uid="RisingV.Shared.Logging.LogWithTag.IsErrorEnabled*"></a>
+
+  <h3 id="RisingV_Shared_Logging_LogWithTag_IsErrorEnabled_RisingV_Shared_Logging_ILogger_RisingV_Shared_Logging_ILogTag_" data-uid="RisingV.Shared.Logging.LogWithTag.IsErrorEnabled(RisingV.Shared.Logging.ILogger,RisingV.Shared.Logging.ILogTag)">
+  IsErrorEnabled(ILogger, ILogTag?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Logging/ILogger.cs/#L297"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if error-level logging is enabled for <code class="paramref">tag</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsErrorEnabled(this ILogger logger, ILogTag? tag = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>logger</code> <a class="xref" href="RisingV.Shared.Logging.ILogger.html">ILogger</a></dt>
+    <dd></dd>
+    <dt><code>tag</code> <a class="xref" href="RisingV.Shared.Logging.ILogTag.html">ILogTag</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RisingV_Shared_Logging_LogWithTag_IsFatalEnabled_" data-uid="RisingV.Shared.Logging.LogWithTag.IsFatalEnabled*"></a>
+
+  <h3 id="RisingV_Shared_Logging_LogWithTag_IsFatalEnabled_RisingV_Shared_Logging_ILogger_RisingV_Shared_Logging_ILogTag_" data-uid="RisingV.Shared.Logging.LogWithTag.IsFatalEnabled(RisingV.Shared.Logging.ILogger,RisingV.Shared.Logging.ILogTag)">
+  IsFatalEnabled(ILogger, ILogTag?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Logging/ILogger.cs/#L295"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if fatal-level logging is enabled for <code class="paramref">tag</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsFatalEnabled(this ILogger logger, ILogTag? tag = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>logger</code> <a class="xref" href="RisingV.Shared.Logging.ILogger.html">ILogger</a></dt>
+    <dd></dd>
+    <dt><code>tag</code> <a class="xref" href="RisingV.Shared.Logging.ILogTag.html">ILogTag</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RisingV_Shared_Logging_LogWithTag_IsFineEnabled_" data-uid="RisingV.Shared.Logging.LogWithTag.IsFineEnabled*"></a>
+
+  <h3 id="RisingV_Shared_Logging_LogWithTag_IsFineEnabled_RisingV_Shared_Logging_ILogger_RisingV_Shared_Logging_ILogTag_" data-uid="RisingV.Shared.Logging.LogWithTag.IsFineEnabled(RisingV.Shared.Logging.ILogger,RisingV.Shared.Logging.ILogTag)">
+  IsFineEnabled(ILogger, ILogTag?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Logging/ILogger.cs/#L293"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if fine-level logging is enabled for <code class="paramref">tag</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsFineEnabled(this ILogger logger, ILogTag? tag = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>logger</code> <a class="xref" href="RisingV.Shared.Logging.ILogger.html">ILogger</a></dt>
+    <dd></dd>
+    <dt><code>tag</code> <a class="xref" href="RisingV.Shared.Logging.ILogTag.html">ILogTag</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RisingV_Shared_Logging_LogWithTag_IsInfoEnabled_" data-uid="RisingV.Shared.Logging.LogWithTag.IsInfoEnabled*"></a>
+
+  <h3 id="RisingV_Shared_Logging_LogWithTag_IsInfoEnabled_RisingV_Shared_Logging_ILogger_RisingV_Shared_Logging_ILogTag_" data-uid="RisingV.Shared.Logging.LogWithTag.IsInfoEnabled(RisingV.Shared.Logging.ILogger,RisingV.Shared.Logging.ILogTag)">
+  IsInfoEnabled(ILogger, ILogTag?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Logging/ILogger.cs/#L287"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if info-level logging is enabled for <code class="paramref">tag</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsInfoEnabled(this ILogger logger, ILogTag? tag = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>logger</code> <a class="xref" href="RisingV.Shared.Logging.ILogger.html">ILogger</a></dt>
+    <dd></dd>
+    <dt><code>tag</code> <a class="xref" href="RisingV.Shared.Logging.ILogTag.html">ILogTag</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RisingV_Shared_Logging_LogWithTag_IsMessageEnabled_" data-uid="RisingV.Shared.Logging.LogWithTag.IsMessageEnabled*"></a>
+
+  <h3 id="RisingV_Shared_Logging_LogWithTag_IsMessageEnabled_RisingV_Shared_Logging_ILogger_RisingV_Shared_Logging_ILogTag_" data-uid="RisingV.Shared.Logging.LogWithTag.IsMessageEnabled(RisingV.Shared.Logging.ILogger,RisingV.Shared.Logging.ILogTag)">
+  IsMessageEnabled(ILogger, ILogTag?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Logging/ILogger.cs/#L299"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if message-level logging is enabled for <code class="paramref">tag</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsMessageEnabled(this ILogger logger, ILogTag? tag = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>logger</code> <a class="xref" href="RisingV.Shared.Logging.ILogger.html">ILogger</a></dt>
+    <dd></dd>
+    <dt><code>tag</code> <a class="xref" href="RisingV.Shared.Logging.ILogTag.html">ILogTag</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RisingV_Shared_Logging_LogWithTag_IsNoneEnabled_" data-uid="RisingV.Shared.Logging.LogWithTag.IsNoneEnabled*"></a>
+
+  <h3 id="RisingV_Shared_Logging_LogWithTag_IsNoneEnabled_RisingV_Shared_Logging_ILogger_RisingV_Shared_Logging_ILogTag_" data-uid="RisingV.Shared.Logging.LogWithTag.IsNoneEnabled(RisingV.Shared.Logging.ILogger,RisingV.Shared.Logging.ILogTag)">
+  IsNoneEnabled(ILogger, ILogTag?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Logging/ILogger.cs/#L303"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if <a class="xref" href="RisingV.Shared.Logging.LogLevel.html#RisingV_Shared_Logging_LogLevel_None">None</a> is enabled for <code class="paramref">tag</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsNoneEnabled(this ILogger logger, ILogTag? tag = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>logger</code> <a class="xref" href="RisingV.Shared.Logging.ILogger.html">ILogger</a></dt>
+    <dd></dd>
+    <dt><code>tag</code> <a class="xref" href="RisingV.Shared.Logging.ILogTag.html">ILogTag</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RisingV_Shared_Logging_LogWithTag_IsWarnEnabled_" data-uid="RisingV.Shared.Logging.LogWithTag.IsWarnEnabled*"></a>
+
+  <h3 id="RisingV_Shared_Logging_LogWithTag_IsWarnEnabled_RisingV_Shared_Logging_ILogger_RisingV_Shared_Logging_ILogTag_" data-uid="RisingV.Shared.Logging.LogWithTag.IsWarnEnabled(RisingV.Shared.Logging.ILogger,RisingV.Shared.Logging.ILogTag)">
+  IsWarnEnabled(ILogger, ILogTag?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Logging/ILogger.cs/#L289"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if warn-level logging is enabled for <code class="paramref">tag</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsWarnEnabled(this ILogger logger, ILogTag? tag = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>logger</code> <a class="xref" href="RisingV.Shared.Logging.ILogger.html">ILogger</a></dt>
+    <dd></dd>
+    <dt><code>tag</code> <a class="xref" href="RisingV.Shared.Logging.ILogTag.html">ILogTag</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RisingV_Shared_Logging_LogWithTag_Message_" data-uid="RisingV.Shared.Logging.LogWithTag.Message*"></a>
+
+  <h3 id="RisingV_Shared_Logging_LogWithTag_Message_RisingV_Shared_Logging_ILogger_RisingV_Shared_Logging_ILogTag_System_String_System_Object___" data-uid="RisingV.Shared.Logging.LogWithTag.Message(RisingV.Shared.Logging.ILogger,RisingV.Shared.Logging.ILogTag,System.String,System.Object[])">
+  Message(ILogger, ILogTag, string, params object[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Logging/ILogger.cs/#L274"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Logs a message at the specified log level.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Message(this ILogger logger, ILogTag tag, string message, params object[] args)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>logger</code> <a class="xref" href="RisingV.Shared.Logging.ILogger.html">ILogger</a></dt>
+    <dd></dd>
+    <dt><code>tag</code> <a class="xref" href="RisingV.Shared.Logging.ILogTag.html">ILogTag</a></dt>
+    <dd></dd>
+    <dt><code>message</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The message to log.</p>
+</dd>
+    <dt><code>args</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>[]</dt>
+    <dd><p>Optional arguments used to format <code class="paramref">message</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RisingV_Shared_Logging_LogWithTag_MessageTrace_" data-uid="RisingV.Shared.Logging.LogWithTag.MessageTrace*"></a>
+
+  <h3 id="RisingV_Shared_Logging_LogWithTag_MessageTrace_RisingV_Shared_Logging_ILogger_RisingV_Shared_Logging_ILogTag_System_String_System_Object___" data-uid="RisingV.Shared.Logging.LogWithTag.MessageTrace(RisingV.Shared.Logging.ILogger,RisingV.Shared.Logging.ILogTag,System.String,System.Object[])">
+  MessageTrace(ILogger, ILogTag, string, params object[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Logging/ILogger.cs/#L280"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Logs a general “message” level entry with optional trace.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void MessageTrace(this ILogger logger, ILogTag tag, string message, params object[] args)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>logger</code> <a class="xref" href="RisingV.Shared.Logging.ILogger.html">ILogger</a></dt>
+    <dd></dd>
+    <dt><code>tag</code> <a class="xref" href="RisingV.Shared.Logging.ILogTag.html">ILogTag</a></dt>
+    <dd></dd>
+    <dt><code>message</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>args</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RisingV_Shared_Logging_LogWithTag_Warn_" data-uid="RisingV.Shared.Logging.LogWithTag.Warn*"></a>
+
+  <h3 id="RisingV_Shared_Logging_LogWithTag_Warn_RisingV_Shared_Logging_ILogger_RisingV_Shared_Logging_ILogTag_System_String_System_Object___" data-uid="RisingV.Shared.Logging.LogWithTag.Warn(RisingV.Shared.Logging.ILogger,RisingV.Shared.Logging.ILogTag,System.String,System.Object[])">
+  Warn(ILogger, ILogTag, string, params object[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Logging/ILogger.cs/#L180"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Logs a message at the specified log level.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Warn(this ILogger logger, ILogTag tag, string message, params object[] args)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>logger</code> <a class="xref" href="RisingV.Shared.Logging.ILogger.html">ILogger</a></dt>
+    <dd></dd>
+    <dt><code>tag</code> <a class="xref" href="RisingV.Shared.Logging.ILogTag.html">ILogTag</a></dt>
+    <dd></dd>
+    <dt><code>message</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The message to log.</p>
+</dd>
+    <dt><code>args</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>[]</dt>
+    <dd><p>Optional arguments used to format <code class="paramref">message</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RisingV_Shared_Logging_LogWithTag_WarnTrace_" data-uid="RisingV.Shared.Logging.LogWithTag.WarnTrace*"></a>
+
+  <h3 id="RisingV_Shared_Logging_LogWithTag_WarnTrace_RisingV_Shared_Logging_ILogger_RisingV_Shared_Logging_ILogTag_System_String_System_Object___" data-uid="RisingV.Shared.Logging.LogWithTag.WarnTrace(RisingV.Shared.Logging.ILogger,RisingV.Shared.Logging.ILogTag,System.String,System.Object[])">
+  WarnTrace(ILogger, ILogTag, string, params object[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Logging/ILogger.cs/#L186"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Logs a warning with an optional stack trace (if enabled).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void WarnTrace(this ILogger logger, ILogTag tag, string message, params object[] args)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>logger</code> <a class="xref" href="RisingV.Shared.Logging.ILogger.html">ILogger</a></dt>
+    <dd></dd>
+    <dt><code>tag</code> <a class="xref" href="RisingV.Shared.Logging.ILogTag.html">ILogTag</a></dt>
+    <dd></dd>
+    <dt><code>message</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>args</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Logging/ILogger.cs/#L156" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
