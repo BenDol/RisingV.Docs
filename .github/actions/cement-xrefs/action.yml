@@ -24,23 +24,30 @@ runs:
           [[ -z "$LIB" || "$LIB" =~ ^# ]] && continue
           echo "Processing $LIB -> $PREFIX"
 
+          # escape dots for regex
           LIB_ESC=${LIB//./\\.}
 
           # 1) Delete old API files
           find "$SITE_DIR/api" -type f -name "${LIB}*" -delete || true
 
-          # 2) Prune index.json
+          # 2) Prune index.json safely
           if [[ -f "$SITE_DIR/index.json" ]]; then
             tmp=$(mktemp)
-            jq '(.items //= []) | .items |= map(select(.href | test("'"${LIB_ESC}"'") | not))' \
-              "$SITE_DIR/index.json" > "$tmp" && mv "$tmp" "$SITE_DIR/index.json"
+            jq --arg lib "$LIB_ESC" '
+              (.items //= []) 
+              | .items |= map(
+                  select(
+                    (.href | test($lib)) | not
+                  )
+                )
+            ' "$SITE_DIR/index.json" > "$tmp" && mv "$tmp" "$SITE_DIR/index.json"
           fi
 
           # 3) JSON xref fixes
           find "$SITE_DIR" -type f -name '*.json' -print0 | \
             xargs -0 sed -i -E \
-              -e 's@("topicHref":")'"${LIB_ESC}"'\.([^"]+)"@\1'"${PREFIX}/${LIB}"'.\2"@g' \
-              -e 's@("href":")'"${LIB_ESC}"'\.([^"]+)"@\1'"${PREFIX}/${LIB}"'.\2"@g'
+              -e 's@("topicHref":")'"${LIB_ESC}"'\.([^"']+)"@\1'"${PREFIX}/${LIB}"'.\2"@g' \
+              -e 's@("href":")'"${LIB_ESC}"'\.([^"']+)"@\1'"${PREFIX}/${LIB}"'.\2"@g'
 
           # 4) HTML xref fixes
           find "$SITE_DIR" -type f -name '*.html' -print0 | \
