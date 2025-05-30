@@ -25,24 +25,24 @@ runs:
           echo "Processing $LIB  ->  $PREFIX"
         
           # 1) delete old API files
-          find _site/api -type f -name "${LIB}*" -print -delete || true
+          find "$SITE_DIR/api" -type f -name "${LIB}*" -print -delete || true
         
           # 2) prune index.json items
-          if [[ -f _site/index.json ]]; then
+          if [[ -f "$SITE_DIR/index.json" ]]; then
             tmp=$(mktemp)
             jq "(.items // []) |= map(select(.href | test(\"${LIB//./\\\\.}\") | not))" \
-              _site/index.json > "$tmp" && mv "$tmp" _site/index.json
+              "$SITE_DIR/index.json" > "$tmp" && mv "$tmp" "$SITE_DIR/index.json"
           fi
         
           LIB_ESC=${LIB//./\\.}
         
           # 3) HTML xref fixes
-          find _site -type f -name '*.html' -print0 | \
+          find "$SITE_DIR" -type f -name '*.html' -print0 | \
             xargs -0 sed -i -E \
               "s@href=\"${LIB_ESC}\\.([^\"]+)\"@href=\"${PREFIX}/${LIB}.\\1\"@g"
         
           # 4) JSON xref fixes
-          find _site -type f -name '*.json' -print0 | \
+          find "$SITE_DIR" -type f -name '*.json' -print0 | \
             xargs -0 sed -i -E \
               -e 's@("topicHref":")'"${LIB_ESC}"'\.([^"]+)"@\1'"${PREFIX}/${LIB}"'.\2"@g' \
               -e 's@("href":")'"${LIB_ESC}"'\.([^"]+)"@\1'"${PREFIX}/${LIB}"'.\2"@g'
