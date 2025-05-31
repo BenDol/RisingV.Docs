@@ -178,6 +178,10 @@ form.filter {
   background-color: var(--material-danger-header);
 }
 
+.container-xxl {
+  --bs-gutter-x: 35.5rem;
+}
+
 /* CODE HIGHLIGHT */
 code {
   border-radius: var(--code-border-radius);
