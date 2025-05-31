@@ -118,6 +118,20 @@ to every message.</p>
     <dl class="jumplist">
       <dt><a class="xref" href="RisingV.Shared.Logging.Logger.html">Logger</a></dt>
       <dd><p>Provides a logger implementation that integrates with BepInEx's logging system.</p>
+<br>
+<p>Logs level can be adjusted setting <a class="xref" href="RisingV.Shared.Logging.Logger.html#RisingV_Shared_Logging_Logger_ListenedLogLevels">ListenedLogLevels</a></p>
+<p>Logs can be filtered by log level and tags, allowing for flexible logging configurations.</p>
+<ul>
+  <li><a class="xref" href="RisingV.Shared.Logging.Logger.html#RisingV_Shared_Logging_Logger_ActiveTags">ActiveTags</a> for assigning active tags to the logger.</li>
+  <li><a class="xref" href="RisingV.Shared.Logging.Logger.html#RisingV_Shared_Logging_Logger_InactiveTags">InactiveTags</a> for assigning tags that should be suppressed in logs.</li>
+</ul>
+<pre><code class="lang-csharp">private static readonly Logger logger = Logger.Create(typeof(MyPluginClass), LogTags.MyCustomTag);
+
+logger.Debug("This is an debug message with {} argument.", "example");
+logger.Info("This is an info message with {} argument.", "example");
+logger.Warn("This is a warning message with {} argument.", "example");
+logger.Error("This is an error message with an exception.", ex);
+logger.Fatal("This is a fatal message with an exception.", ex);</code></pre>
 </dd>
     </dl>
     <h3 id="interfaces">
