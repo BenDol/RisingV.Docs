@@ -1,0 +1,1763 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Enum Unit | RisingV.Core </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Enum Unit | RisingV.Core ">
+      
+      <meta name="description" content="Represents the unit prefabGUID value, available in the game.">
+      <link rel="icon" href="../assets/images/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/BenDol/RisingV.Shared/new/master/apiSpec/new?filename=RisingV_Shared_Prefabs_Unit.md&amp;value=---%0Auid%3A%20RisingV.Shared.Prefabs.Unit%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../assets/images/logo_50.png" alt="RisingV.Core">
+            RisingV.Core
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="RisingV.Shared.Prefabs.Unit">
+
+
+
+
+  <h1 id="RisingV_Shared_Prefabs_Unit" data-uid="RisingV.Shared.Prefabs.Unit" class="text-break">
+Enum Unit  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Prefabs/Unit.cs/#L13"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="RisingV.html">RisingV</a>.<a class="xref" href="RisingV.Shared.html">Shared</a>.<a class="xref" href="RisingV.Shared.Prefabs.html">Prefabs</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>RisingV.Shared.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Represents the unit prefabGUID value, available in the game.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public enum Unit : long</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="RisingV.Shared.Extensions.EnumExtensions.html#RisingV_Shared_Extensions_EnumExtensions_GetRandom__1___0_System_Random_">EnumExtensions.GetRandom&lt;TEnum&gt;(TEnum, Random)</a>
+  </div>
+  <div>
+      <a class="xref" href="RisingV.Core.Extensions.EntityExtensions.html#RisingV_Core_Extensions_EntityExtensions_IsAspect__1_System_Object_">EntityExtensions.IsAspect&lt;TAspect&gt;(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="RisingV.Shared.Extensions.EntityExtensions.html#RisingV_Shared_Extensions_EntityExtensions_IsAspect__1_System_Object_">EntityExtensions.IsAspect&lt;TAspect&gt;(object)</a>
+  </div>
+  </dd></dl>
+
+  <h2 id="fields">Fields
+</h2>
+  <dl class="parameters">
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_ArchMage_FlameSphere"><code>CHAR_ArchMage_FlameSphere = 2138173476</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_ArchMage_Summon"><code>CHAR_ArchMage_Summon = 805231073</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_ArchMage_VBlood"><code>CHAR_ArchMage_VBlood = -2013903325</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Arena_HealthOrb"><code>CHAR_Arena_HealthOrb = 692079022</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Bandit_Bomber"><code>CHAR_Bandit_Bomber = -1128238456</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Bandit_Bomber_Servant"><code>CHAR_Bandit_Bomber_Servant = -450600397</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Bandit_Bomber_VBlood"><code>CHAR_Bandit_Bomber_VBlood = 1896428751</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Bandit_Chaosarrow_GateBoss_Minor"><code>CHAR_Bandit_Chaosarrow_GateBoss_Minor = 1854211210</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Bandit_Chaosarrow_VBlood"><code>CHAR_Bandit_Chaosarrow_VBlood = 763273073</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Bandit_Deadeye"><code>CHAR_Bandit_Deadeye = -1030822544</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Bandit_Deadeye_Servant"><code>CHAR_Bandit_Deadeye_Servant = -2086044081</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Bandit_Fisherman_VBlood"><code>CHAR_Bandit_Fisherman_VBlood = -2122682556</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Bandit_Foreman_VBlood"><code>CHAR_Bandit_Foreman_VBlood = 2122229952</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Bandit_Foreman_VBlood_GateBoss_Minor"><code>CHAR_Bandit_Foreman_VBlood_GateBoss_Minor = 17609984</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Bandit_Frostarrow_VBlood"><code>CHAR_Bandit_Frostarrow_VBlood = 1124739990</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Bandit_Hunter"><code>CHAR_Bandit_Hunter = -1301144178</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Bandit_Hunter_MicroPOI_Cocoon"><code>CHAR_Bandit_Hunter_MicroPOI_Cocoon = 343676339</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Bandit_Hunter_Servant"><code>CHAR_Bandit_Hunter_Servant = -370708253</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Bandit_Leader_VBlood_UNUSED"><code>CHAR_Bandit_Leader_VBlood_UNUSED = -175381832</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Bandit_Leader_Wolf_Summon"><code>CHAR_Bandit_Leader_Wolf_Summon = -671059374</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Bandit_Miner_Standard_Servant"><code>CHAR_Bandit_Miner_Standard_Servant = 1112903312</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Bandit_Mugger"><code>CHAR_Bandit_Mugger = 2057508774</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Bandit_Mugger_Servant"><code>CHAR_Bandit_Mugger_Servant = 1727426580</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Bandit_Prisoner_Villager_Female"><code>CHAR_Bandit_Prisoner_Villager_Female = 1069072707</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Bandit_Prisoner_Villager_Male"><code>CHAR_Bandit_Prisoner_Villager_Male = 286320185</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Bandit_Rascal"><code>CHAR_Bandit_Rascal = -1194643220</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Bandit_Rascal_Servant"><code>CHAR_Bandit_Rascal_Servant = -1308100049</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Bandit_Scout"><code>CHAR_Bandit_Scout = 1220569089</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Bandit_Scout_Servant"><code>CHAR_Bandit_Scout_Servant = 1094898203</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Bandit_Stalker"><code>CHAR_Bandit_Stalker = -309264723</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Bandit_Stalker_Servant"><code>CHAR_Bandit_Stalker_Servant = 1453520986</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Bandit_Stalker_VBlood"><code>CHAR_Bandit_Stalker_VBlood = 1106149033</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Bandit_StoneBreaker_VBlood"><code>CHAR_Bandit_StoneBreaker_VBlood = -2025101517</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Bandit_StoneBreaker_VBlood_GateBoss_Minor"><code>CHAR_Bandit_StoneBreaker_VBlood_GateBoss_Minor = -1420322422</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Bandit_Thief"><code>CHAR_Bandit_Thief = 923140362</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Bandit_Thief_Servant"><code>CHAR_Bandit_Thief_Servant = -872078546</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Bandit_Thug"><code>CHAR_Bandit_Thug = -301730941</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Bandit_Thug_MicroPOI_Cocoon"><code>CHAR_Bandit_Thug_MicroPOI_Cocoon = -198252716</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Bandit_Thug_Servant"><code>CHAR_Bandit_Thug_Servant = 1466015976</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Bandit_Tourok_GateBoss_Minor"><code>CHAR_Bandit_Tourok_GateBoss_Minor = 478580792</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Bandit_Tourok_VBlood"><code>CHAR_Bandit_Tourok_VBlood = -1659822956</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Bandit_Trapper"><code>CHAR_Bandit_Trapper = -589412777</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Bandit_Trapper_Servant"><code>CHAR_Bandit_Trapper_Servant = 2112911542</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Bandit_Wolf"><code>CHAR_Bandit_Wolf = -1554428547</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Bandit_Woodcutter_Standard_Servant"><code>CHAR_Bandit_Woodcutter_Standard_Servant = 51737727</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Bandit_Worker_Gatherer"><code>CHAR_Bandit_Worker_Gatherer = 1743532914</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Bandit_Worker_Gatherer_Servant"><code>CHAR_Bandit_Worker_Gatherer_Servant = 48283616</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Bandit_Worker_Miner"><code>CHAR_Bandit_Worker_Miner = -2039670689</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Bandit_Worker_Woodcutter"><code>CHAR_Bandit_Worker_Woodcutter = 1309418594</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_BatVampire_VBlood"><code>CHAR_BatVampire_VBlood = 1112948824</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Blackfang_Alchemist"><code>CHAR_Blackfang_Alchemist = 326501064</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Blackfang_Alchemist_Servant"><code>CHAR_Blackfang_Alchemist_Servant = 2142021685</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Blackfang_CarverBoss_VBlood"><code>CHAR_Blackfang_CarverBoss_VBlood = -1669199769</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Blackfang_DartFlinger"><code>CHAR_Blackfang_DartFlinger = 1209580976</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Blackfang_DartFlinger_Servant"><code>CHAR_Blackfang_DartFlinger_Servant = -253226787</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Blackfang_Livith_Illusion"><code>CHAR_Blackfang_Livith_Illusion = 1254601307</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Blackfang_Livith_VBlood"><code>CHAR_Blackfang_Livith_VBlood = -1383529374</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Blackfang_Lucie_VBlood"><code>CHAR_Blackfang_Lucie_VBlood = 1295855316</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Blackfang_Lurker"><code>CHAR_Blackfang_Lurker = -1733829912</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Blackfang_Lurker_Servant"><code>CHAR_Blackfang_Lurker_Servant = 40217214</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Blackfang_Morgana_VBlood"><code>CHAR_Blackfang_Morgana_VBlood = 591725925</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Blackfang_MorganasTail"><code>CHAR_Blackfang_MorganasTail = -1075824048</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Blackfang_Peon"><code>CHAR_Blackfang_Peon = -1562098554</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Blackfang_PeonCarryingBarrel"><code>CHAR_Blackfang_PeonCarryingBarrel = 1924724671</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Blackfang_PeonLogCarryer"><code>CHAR_Blackfang_PeonLogCarryer = 1451256919</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Blackfang_Peon_Miner"><code>CHAR_Blackfang_Peon_Miner = -699233841</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Blackfang_Peon_Servant"><code>CHAR_Blackfang_Peon_Servant = -39008356</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Blackfang_Sentinel"><code>CHAR_Blackfang_Sentinel = 1531777139</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Blackfang_Sentinel_Servant"><code>CHAR_Blackfang_Sentinel_Servant = -1287013240</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Blackfang_Striker"><code>CHAR_Blackfang_Striker = 761646020</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Blackfang_Striker_Servant"><code>CHAR_Blackfang_Striker_Servant = -274383877</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Blackfang_ValyrCauldron"><code>CHAR_Blackfang_ValyrCauldron = 1439742793</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Blackfang_Valyr_VBlood"><code>CHAR_Blackfang_Valyr_VBlood = 173259239</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Blackfang_Venomblade"><code>CHAR_Blackfang_Venomblade = 1864177126</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Blackfang_Venomblade_Servant"><code>CHAR_Blackfang_Venomblade_Servant = 1906807803</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Blackfang_Viper"><code>CHAR_Blackfang_Viper = -436956599</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Blackfang_Viper_Servant"><code>CHAR_Blackfang_Viper_Servant = -1108748448</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Blackfang_WoodCarver"><code>CHAR_Blackfang_WoodCarver = -1508046438</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Blackfang_WoodCarver_Servant"><code>CHAR_Blackfang_WoodCarver_Servant = -2089362645</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Blackfang_WoodCarver_Worshipper"><code>CHAR_Blackfang_WoodCarver_Worshipper = -625375348</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_BloodBuff_Corrupted_Angel"><code>CHAR_BloodBuff_Corrupted_Angel = -932793458</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_BloodBuff_Corrupted_Harpy"><code>CHAR_BloodBuff_Corrupted_Harpy = -143994147</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_CarriageHorse_BanditAnimal"><code>CHAR_CarriageHorse_BanditAnimal = -799718518</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_CarriageHorse_BanditCopper"><code>CHAR_CarriageHorse_BanditCopper = -443327719</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_CarriageHorse_BanditPlank"><code>CHAR_CarriageHorse_BanditPlank = -1859852856</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_CarriageHorse_BanditPrisoners"><code>CHAR_CarriageHorse_BanditPrisoners = -1761137820</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_CarriageHorse_BanditSulfur"><code>CHAR_CarriageHorse_BanditSulfur = -1193126567</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_CarriageHorse_BlackfangBastion"><code>CHAR_CarriageHorse_BlackfangBastion = 731857280</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_CarriageHorse_BlackfangSouth"><code>CHAR_CarriageHorse_BlackfangSouth = 96544496</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_CarriageHorse_ChuchGrape"><code>CHAR_CarriageHorse_ChuchGrape = 803219139</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_CarriageHorse_ChuchSilver"><code>CHAR_CarriageHorse_ChuchSilver = -1588337666</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_CarriageHorse_ChurchLegion"><code>CHAR_CarriageHorse_ChurchLegion = 452018442</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_CarriageHorse_ChurchMutants"><code>CHAR_CarriageHorse_ChurchMutants = -1666526529</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_CarriageHorse_MilitiaCotton"><code>CHAR_CarriageHorse_MilitiaCotton = -755774482</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_CarriageHorse_MilitiaIron"><code>CHAR_CarriageHorse_MilitiaIron = 1510247015</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_CarriageHorse_MilitiaQuartz"><code>CHAR_CarriageHorse_MilitiaQuartz = 374565592</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Carriage_BanditAnimal"><code>CHAR_Carriage_BanditAnimal = 1900336326</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Carriage_BanditCopper"><code>CHAR_Carriage_BanditCopper = 1866779672</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Carriage_BanditPlank"><code>CHAR_Carriage_BanditPlank = -364183632</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Carriage_BanditPrisoners"><code>CHAR_Carriage_BanditPrisoners = -1190354298</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Carriage_BanditSulfur"><code>CHAR_Carriage_BanditSulfur = 855721879</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Carriage_BlackfangBastion"><code>CHAR_Carriage_BlackfangBastion = -1395711815</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Carriage_BlackfangSouth"><code>CHAR_Carriage_BlackfangSouth = -2075236675</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Carriage_ChuchGrape"><code>CHAR_Carriage_ChuchGrape = -84975023</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Carriage_ChuchSilver"><code>CHAR_Carriage_ChuchSilver = -1048977650</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Carriage_ChurchLegion"><code>CHAR_Carriage_ChurchLegion = 177376927</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Carriage_ChurchMutants"><code>CHAR_Carriage_ChurchMutants = 400170781</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Carriage_MilitiaCotton"><code>CHAR_Carriage_MilitiaCotton = 213173421</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Carriage_MilitiaIron"><code>CHAR_Carriage_MilitiaIron = 769065062</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Carriage_MilitiaQuartz"><code>CHAR_Carriage_MilitiaQuartz = -75106506</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_ChurchOfLight_Archer"><code>CHAR_ChurchOfLight_Archer = 426583055</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_ChurchOfLight_Archer_Servant"><code>CHAR_ChurchOfLight_Archer_Servant = -915884427</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_ChurchOfLight_CardinalAide"><code>CHAR_ChurchOfLight_CardinalAide = 1745498602</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_ChurchOfLight_Cardinal_VBlood"><code>CHAR_ChurchOfLight_Cardinal_VBlood = 114912615</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_ChurchOfLight_Cleric"><code>CHAR_ChurchOfLight_Cleric = -1464869978</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_ChurchOfLight_Cleric_Servant"><code>CHAR_ChurchOfLight_Cleric_Servant = 1218339832</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_ChurchOfLight_EnchantedCross"><code>CHAR_ChurchOfLight_EnchantedCross = -1449314709</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_ChurchOfLight_Footman"><code>CHAR_ChurchOfLight_Footman = 2128996433</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_ChurchOfLight_Footman_Servant"><code>CHAR_ChurchOfLight_Footman_Servant = -1719944550</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_ChurchOfLight_Knight_2H"><code>CHAR_ChurchOfLight_Knight_2H = -930333806</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_ChurchOfLight_Knight_2H_Servant"><code>CHAR_ChurchOfLight_Knight_2H_Servant = 17367048</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_ChurchOfLight_Knight_Shield"><code>CHAR_ChurchOfLight_Knight_Shield = 794228023</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_ChurchOfLight_Knight_Shield_Servant"><code>CHAR_ChurchOfLight_Knight_Shield_Servant = -694328454</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_ChurchOfLight_Lightweaver"><code>CHAR_ChurchOfLight_Lightweaver = 1185952775</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_ChurchOfLight_Lightweaver_Servant"><code>CHAR_ChurchOfLight_Lightweaver_Servant = -383158562</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_ChurchOfLight_Miner_Standard"><code>CHAR_ChurchOfLight_Miner_Standard = 924132254</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_ChurchOfLight_Miner_Standard_Servant"><code>CHAR_ChurchOfLight_Miner_Standard_Servant = -1988959460</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_ChurchOfLight_Overseer_VBlood"><code>CHAR_ChurchOfLight_Overseer_VBlood = -26105228</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_ChurchOfLight_Paladin"><code>CHAR_ChurchOfLight_Paladin = 1728773109</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_ChurchOfLight_Paladin_HomePos"><code>CHAR_ChurchOfLight_Paladin_HomePos = -502558061</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_ChurchOfLight_Paladin_Servant"><code>CHAR_ChurchOfLight_Paladin_Servant = 1649578802</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_ChurchOfLight_Paladin_VBlood"><code>CHAR_ChurchOfLight_Paladin_VBlood = -740796338</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_ChurchOfLight_Priest"><code>CHAR_ChurchOfLight_Priest = 1406393857</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_ChurchOfLight_Priest_Servant"><code>CHAR_ChurchOfLight_Priest_Servant = -1728284448</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_ChurchOfLight_Rifleman"><code>CHAR_ChurchOfLight_Rifleman = 1148936156</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_ChurchOfLight_Rifleman_Servant"><code>CHAR_ChurchOfLight_Rifleman_Servant = -268935837</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_ChurchOfLight_SlaveMaster_Enforcer"><code>CHAR_ChurchOfLight_SlaveMaster_Enforcer = 891705701</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_ChurchOfLight_SlaveMaster_Enforcer_Servant"><code>CHAR_ChurchOfLight_SlaveMaster_Enforcer_Servant = -2114140065</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_ChurchOfLight_SlaveMaster_Sentry"><code>CHAR_ChurchOfLight_SlaveMaster_Sentry = -240536861</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_ChurchOfLight_SlaveMaster_Sentry_Servant"><code>CHAR_ChurchOfLight_SlaveMaster_Sentry_Servant = -442412464</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_ChurchOfLight_SlaveRuffian"><code>CHAR_ChurchOfLight_SlaveRuffian = -1875351031</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_ChurchOfLight_SlaveRuffian_Cover"><code>CHAR_ChurchOfLight_SlaveRuffian_Cover = -1387838833</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_ChurchOfLight_SlaveRuffian_Servant"><code>CHAR_ChurchOfLight_SlaveRuffian_Servant = -1416355128</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_ChurchOfLight_SmiteOrb"><code>CHAR_ChurchOfLight_SmiteOrb = 1917502536</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_ChurchOfLight_Sommelier_BarrelMinion"><code>CHAR_ChurchOfLight_Sommelier_BarrelMinion = -1917548708</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_ChurchOfLight_Sommelier_VBlood"><code>CHAR_ChurchOfLight_Sommelier_VBlood = 192051202</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_ChurchOfLight_Villager_Female"><code>CHAR_ChurchOfLight_Villager_Female = -1224027101</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_ChurchOfLight_Villager_Female_Servant"><code>CHAR_ChurchOfLight_Villager_Female_Servant = 1157537604</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_ChurchOfLight_Villager_Male"><code>CHAR_ChurchOfLight_Villager_Male = -2025921616</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_ChurchOfLight_Villager_Male_Servant"><code>CHAR_ChurchOfLight_Villager_Male_Servant = -1786031969</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_CopperGolem"><code>CHAR_CopperGolem = 1107541186</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Corrupted_Bear_Standard"><code>CHAR_Corrupted_Bear_Standard = -1697944553</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Corrupted_Crow"><code>CHAR_Corrupted_Crow = 1029047051</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Corrupted_Deer"><code>CHAR_Corrupted_Deer = 1780171587</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Corrupted_Wolf"><code>CHAR_Corrupted_Wolf = 616274140</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_CreatureDeer_Mutated"><code>CHAR_CreatureDeer_Mutated = -575831311</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_CreatureMoose_Mutated"><code>CHAR_CreatureMoose_Mutated = 1570140219</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Critter_Rat"><code>CHAR_Critter_Rat = -2072914343</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Critter_Silkworm"><code>CHAR_Critter_Silkworm = -1587402408</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Critter_VerminNest_Rat"><code>CHAR_Critter_VerminNest_Rat = -372256748</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Crow_Manticore_Minion"><code>CHAR_Crow_Manticore_Minion = -1476015811</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Cultist_Pyromancer"><code>CHAR_Cultist_Pyromancer = 2055824593</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Cultist_Slicer"><code>CHAR_Cultist_Slicer = 1807491570</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Cursed_Bear_Spirit"><code>CHAR_Cursed_Bear_Spirit = 1105583702</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Cursed_Bear_Standard"><code>CHAR_Cursed_Bear_Standard = -559819989</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Cursed_MonsterToad"><code>CHAR_Cursed_MonsterToad = 575918722</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Cursed_MonsterToad_Minion"><code>CHAR_Cursed_MonsterToad_Minion = -38041784</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Cursed_Mosquito"><code>CHAR_Cursed_Mosquito = -744966291</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Cursed_MountainBeast_SpiritDouble"><code>CHAR_Cursed_MountainBeast_SpiritDouble = -935560085</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Cursed_MountainBeast_VBlood"><code>CHAR_Cursed_MountainBeast_VBlood = -1936575244</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Cursed_Nightlurker"><code>CHAR_Cursed_Nightlurker = -2046268156</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Cursed_ToadKing_VBlood"><code>CHAR_Cursed_ToadKing_VBlood = -203043163</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Cursed_ToadSpitter"><code>CHAR_Cursed_ToadSpitter = 1478790879</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Cursed_Witch"><code>CHAR_Cursed_Witch = -56441915</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Cursed_Witch_Exploding_Mosquito"><code>CHAR_Cursed_Witch_Exploding_Mosquito = -1399273168</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Cursed_Witch_NetherDemon"><code>CHAR_Cursed_Witch_NetherDemon = -54072010</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Cursed_Witch_VBlood"><code>CHAR_Cursed_Witch_VBlood = -910296704</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Cursed_Wolf"><code>CHAR_Cursed_Wolf = -218175217</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Cursed_Wolf_Spirit"><code>CHAR_Cursed_Wolf_Spirit = 407089231</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Cursed_WormTerror"><code>CHAR_Cursed_WormTerror = 658578725</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Dracula_BloodSoul"><code>CHAR_Dracula_BloodSoul = 1406266284</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Dracula_BloodSoul_Heart"><code>CHAR_Dracula_BloodSoul_Heart = 55100532</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Dracula_ShadowBatSwarm"><code>CHAR_Dracula_ShadowBatSwarm = -2092104425</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Dracula_SpellStone_LargeBlood"><code>CHAR_Dracula_SpellStone_LargeBlood = 32692466</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_EmeryElemental"><code>CHAR_EmeryElemental = -1388651766</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_EmeryGolem"><code>CHAR_EmeryGolem = 1787640747</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Farmland_Wolf"><code>CHAR_Farmland_Wolf = -578677530</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Farmlands_Cow"><code>CHAR_Farmlands_Cow = 721166952</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Farmlands_Farmer"><code>CHAR_Farmlands_Farmer = -1342764880</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Farmlands_Farmer_Servant"><code>CHAR_Farmlands_Farmer_Servant = 516718373</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Farmlands_HostileVillager_Female_FryingPan"><code>CHAR_Farmlands_HostileVillager_Female_FryingPan = 729746981</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Farmlands_HostileVillager_Female_Pitchfork"><code>CHAR_Farmlands_HostileVillager_Female_Pitchfork = 1576267559</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Farmlands_HostileVillager_Male_Club"><code>CHAR_Farmlands_HostileVillager_Male_Club = -164116132</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Farmlands_HostileVillager_Male_Shovel"><code>CHAR_Farmlands_HostileVillager_Male_Shovel = -864975423</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Farmlands_HostileVillager_Male_Torch"><code>CHAR_Farmlands_HostileVillager_Male_Torch = -81727312</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Farmlands_HostileVillager_Male_Unarmed"><code>CHAR_Farmlands_HostileVillager_Male_Unarmed = -1353870145</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Farmlands_HostileVillager_Werewolf"><code>CHAR_Farmlands_HostileVillager_Werewolf = -951976780</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Farmlands_Nun_Servant"><code>CHAR_Farmlands_Nun_Servant = -1788957652</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Farmlands_Pig"><code>CHAR_Farmlands_Pig = -1356006948</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Farmlands_Ram"><code>CHAR_Farmlands_Ram = 947731555</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Farmlands_Sheep"><code>CHAR_Farmlands_Sheep = 1012307512</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Farmlands_SheepOld"><code>CHAR_Farmlands_SheepOld = 1635167941</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Farmlands_SmallPig"><code>CHAR_Farmlands_SmallPig = 1420480270</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Farmlands_Villager_Female"><code>CHAR_Farmlands_Villager_Female = 525027204</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Farmlands_Villager_Female_Servant"><code>CHAR_Farmlands_Villager_Female_Servant = 1532829342</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Farmlands_Villager_Female_Sister"><code>CHAR_Farmlands_Villager_Female_Sister = 1772642154</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Farmlands_Villager_Female_Sister_Servant"><code>CHAR_Farmlands_Villager_Female_Sister_Servant = -444945115</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Farmlands_Villager_Male"><code>CHAR_Farmlands_Villager_Male = 1887807944</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Farmlands_Villager_Male_Servant"><code>CHAR_Farmlands_Villager_Male_Servant = 1426964824</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Farmlands_Woodcutter_Standard"><code>CHAR_Farmlands_Woodcutter_Standard = -893091615</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Farmlands_Woodcutter_Standard_Servant"><code>CHAR_Farmlands_Woodcutter_Standard_Servant = -1659842473</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Forest_AngryMoose"><code>CHAR_Forest_AngryMoose = 2097040330</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Forest_Bear_Dire_Vblood"><code>CHAR_Forest_Bear_Dire_Vblood = -1391546313</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Forest_Bear_Standard"><code>CHAR_Forest_Bear_Standard = 1043643344</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Forest_Crow"><code>CHAR_Forest_Crow = -2002658567</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Forest_Deer"><code>CHAR_Forest_Deer = 1897056612</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Forest_Deer_StayCloseToSpawn"><code>CHAR_Forest_Deer_StayCloseToSpawn = 1696014952</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Forest_Moose"><code>CHAR_Forest_Moose = -831097925</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Forest_Wolf"><code>CHAR_Forest_Wolf = -1418430647</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Forest_Wolf_VBlood"><code>CHAR_Forest_Wolf_VBlood = -1905691330</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Frostarrow_GateBoss_Minor"><code>CHAR_Frostarrow_GateBoss_Minor = 1318855899</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_GateBoss_Pixie"><code>CHAR_GateBoss_Pixie = -1084690188</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Geomancer_Golem_Minion"><code>CHAR_Geomancer_Golem_Minion = -2092246077</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Geomancer_Human_VBlood"><code>CHAR_Geomancer_Human_VBlood = -1065970933</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Gloomrot_AceIncinerator"><code>CHAR_Gloomrot_AceIncinerator = 1756241788</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Gloomrot_AceIncinerator_Servant"><code>CHAR_Gloomrot_AceIncinerator_Servant = -1897484769</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Gloomrot_Batoon"><code>CHAR_Gloomrot_Batoon = -1707267769</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Gloomrot_Batoon_Servant"><code>CHAR_Gloomrot_Batoon_Servant = 657708566</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Gloomrot_Iva_VBlood"><code>CHAR_Gloomrot_Iva_VBlood = 172235178</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Gloomrot_Monster_VBlood"><code>CHAR_Gloomrot_Monster_VBlood = 1233988687</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Gloomrot_Purifier_VBlood"><code>CHAR_Gloomrot_Purifier_VBlood = 106480588</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Gloomrot_Purifier_VBlood_GateBoss_Major"><code>CHAR_Gloomrot_Purifier_VBlood_GateBoss_Major = -440174408</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Gloomrot_Pyro"><code>CHAR_Gloomrot_Pyro = -322293503</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Gloomrot_Pyro_Servant"><code>CHAR_Gloomrot_Pyro_Servant = 1304434816</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Gloomrot_RailgunSergeant_HomePos"><code>CHAR_Gloomrot_RailgunSergeant_HomePos = -1499025256</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Gloomrot_RailgunSergeant_Minion"><code>CHAR_Gloomrot_RailgunSergeant_Minion = 1626314708</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Gloomrot_RailgunSergeant_VBlood"><code>CHAR_Gloomrot_RailgunSergeant_VBlood = 2054432370</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Gloomrot_Railgunner"><code>CHAR_Gloomrot_Railgunner = 1732477970</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Gloomrot_Railgunner_Servant"><code>CHAR_Gloomrot_Railgunner_Servant = -1070366200</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Gloomrot_SentryOfficer"><code>CHAR_Gloomrot_SentryOfficer = 1401026468</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Gloomrot_SentryOfficer_Servant"><code>CHAR_Gloomrot_SentryOfficer_Servant = -1213645419</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Gloomrot_SentryTurret"><code>CHAR_Gloomrot_SentryTurret = -1082044089</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Gloomrot_SpiderTank_Driller"><code>CHAR_Gloomrot_SpiderTank_Driller = 709450349</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Gloomrot_SpiderTank_Gattler"><code>CHAR_Gloomrot_SpiderTank_Gattler = -884401089</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Gloomrot_SpiderTank_LightningRod"><code>CHAR_Gloomrot_SpiderTank_LightningRod = 1655577903</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Gloomrot_SpiderTank_Zapper"><code>CHAR_Gloomrot_SpiderTank_Zapper = -2018710724</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Gloomrot_Tazer"><code>CHAR_Gloomrot_Tazer = 674807351</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Gloomrot_Tazer_Servant"><code>CHAR_Gloomrot_Tazer_Servant = -924080115</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Gloomrot_Technician"><code>CHAR_Gloomrot_Technician = 820492683</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Gloomrot_Technician_Labworker"><code>CHAR_Gloomrot_Technician_Labworker = -825299465</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Gloomrot_Technician_Labworker_Servant"><code>CHAR_Gloomrot_Technician_Labworker_Servant = -1034892278</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Gloomrot_Technician_Servant"><code>CHAR_Gloomrot_Technician_Servant = -775762125</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Gloomrot_TheProfessor_VBlood"><code>CHAR_Gloomrot_TheProfessor_VBlood = 814083983</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Gloomrot_TractorBeamer"><code>CHAR_Gloomrot_TractorBeamer = -293507834</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Gloomrot_TractorBeamer_Servant"><code>CHAR_Gloomrot_TractorBeamer_Servant = 565869317</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Gloomrot_Villager_Female"><code>CHAR_Gloomrot_Villager_Female = 1216169364</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Gloomrot_Villager_Female_Servant"><code>CHAR_Gloomrot_Villager_Female_Servant = -1192403515</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Gloomrot_Villager_Male"><code>CHAR_Gloomrot_Villager_Male = -732208863</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Gloomrot_Villager_Male_Servant"><code>CHAR_Gloomrot_Villager_Male_Servant = -2085282780</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Gloomrot_Voltage_VBlood"><code>CHAR_Gloomrot_Voltage_VBlood = -1101874342</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Gloomrot_Voltage_VBlood_GateBoss_Major"><code>CHAR_Gloomrot_Voltage_VBlood_GateBoss_Major = -427888732</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_GoldGolem"><code>CHAR_GoldGolem = 192241915</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Graveyard_Crow"><code>CHAR_Graveyard_Crow = -221278041</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Harpy_Dasher"><code>CHAR_Harpy_Dasher = -1846851895</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Harpy_Dasher_SUMMON"><code>CHAR_Harpy_Dasher_SUMMON = 1635780151</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Harpy_FeatherDuster"><code>CHAR_Harpy_FeatherDuster = -1407234470</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Harpy_Matriarch_VBlood"><code>CHAR_Harpy_Matriarch_VBlood = 685266977</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Harpy_Scratcher"><code>CHAR_Harpy_Scratcher = 1462269123</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Harpy_Sorceress"><code>CHAR_Harpy_Sorceress = 1224283123</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Harpy_Sorceress_NetherDemon"><code>CHAR_Harpy_Sorceress_NetherDemon = 1405099312</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_IceElemental"><code>CHAR_IceElemental = 302393064</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Illusion_Mosquito"><code>CHAR_Illusion_Mosquito = -303396552</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_IronGolem"><code>CHAR_IronGolem = 763796308</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_IronGolem_NetherDemon"><code>CHAR_IronGolem_NetherDemon = -1794508086</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Legion_Assassin"><code>CHAR_Legion_Assassin = -1076780215</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Legion_Assassin_Servant"><code>CHAR_Legion_Assassin_Servant = 1502148822</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Legion_BatSwarm"><code>CHAR_Legion_BatSwarm = 593505050</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Legion_BatSwarm_Lesser"><code>CHAR_Legion_BatSwarm_Lesser = -1055380229</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Legion_BloodProphet"><code>CHAR_Legion_BloodProphet = 1912966420</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Legion_BloodProphet_Lesser"><code>CHAR_Legion_BloodProphet_Lesser = -2080231735</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Legion_DreadHorn_Lesser"><code>CHAR_Legion_DreadHorn_Lesser = -1140588645</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Legion_Dreadhorn"><code>CHAR_Legion_Dreadhorn = 981369753</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Legion_Gargoyle"><code>CHAR_Legion_Gargoyle = -65981941</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Legion_Gargoyle_StatueSpawn"><code>CHAR_Legion_Gargoyle_StatueSpawn = 280858720</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Legion_Gargoyle_Styx"><code>CHAR_Legion_Gargoyle_Styx = -392776091</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Legion_Guardian_DraculaMinion"><code>CHAR_Legion_Guardian_DraculaMinion = -669027288</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Legion_Guardian_DraculaMinion_Lesser"><code>CHAR_Legion_Guardian_DraculaMinion_Lesser = 1144208724</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Legion_HighLord_GroundSword"><code>CHAR_Legion_HighLord_GroundSword = -1266036232</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Legion_NightMaiden"><code>CHAR_Legion_NightMaiden = -494298686</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Legion_NightMaiden_Lesser"><code>CHAR_Legion_NightMaiden_Lesser = 2111003460</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Legion_NightMaiden_Lesser_Servant"><code>CHAR_Legion_NightMaiden_Lesser_Servant = -1099047820</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Legion_NightMaiden_Servant"><code>CHAR_Legion_NightMaiden_Servant = -340923989</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Legion_Nightmare"><code>CHAR_Legion_Nightmare = -1009917656</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Legion_Nightmare_Lesser"><code>CHAR_Legion_Nightmare_Lesser = -981051151</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Legion_Shadowkin"><code>CHAR_Legion_Shadowkin = 1980594081</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Legion_Shadowkin_Lesser"><code>CHAR_Legion_Shadowkin_Lesser = -1200074387</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Legion_Vargulf"><code>CHAR_Legion_Vargulf = -653348998</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Legion_Vargulf_Lesser"><code>CHAR_Legion_Vargulf_Lesser = 2049379982</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Manticore_Airborne"><code>CHAR_Manticore_Airborne = -1252779334</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Manticore_FarbaneSuprise"><code>CHAR_Manticore_FarbaneSuprise = -767167590</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Manticore_HomePos"><code>CHAR_Manticore_HomePos = 980068444</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Manticore_VBlood"><code>CHAR_Manticore_VBlood = -393555055</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Mantrap_Corrupted"><code>CHAR_Mantrap_Corrupted = 1527640414</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Mantrap_Corrupted_Minion"><code>CHAR_Mantrap_Corrupted_Minion = 1906792990</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Mantrap_Corrupted_XL"><code>CHAR_Mantrap_Corrupted_XL = -1915060856</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Mantrap_Dull"><code>CHAR_Mantrap_Dull = -878541676</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Mantrap_Nest"><code>CHAR_Mantrap_Nest = 2016963774</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Mantrap_Standard"><code>CHAR_Mantrap_Standard = 173817657</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Militia_BellRinger"><code>CHAR_Militia_BellRinger = -1670130821</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Militia_BellRinger_Servant"><code>CHAR_Militia_BellRinger_Servant = -1433235567</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Militia_BishopOfDunley_VBlood"><code>CHAR_Militia_BishopOfDunley_VBlood = -680831417</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Militia_Bomber"><code>CHAR_Militia_Bomber = 847893333</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Militia_Bomber_Servant"><code>CHAR_Militia_Bomber_Servant = 232701971</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Militia_ConstrainingPole"><code>CHAR_Militia_ConstrainingPole = 85290673</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Militia_Crossbow"><code>CHAR_Militia_Crossbow = 956965183</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Militia_Crossbow_Servant"><code>CHAR_Militia_Crossbow_Servant = 1481842114</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Militia_Crossbow_Summon"><code>CHAR_Militia_Crossbow_Summon = 2036785949</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Militia_Devoted"><code>CHAR_Militia_Devoted = 1660801216</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Militia_Devoted_Servant"><code>CHAR_Militia_Devoted_Servant = -823557242</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Militia_EyeOfGod"><code>CHAR_Militia_EyeOfGod = -1254618756</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Militia_Fabian_VBlood"><code>CHAR_Militia_Fabian_VBlood = 619948378</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Militia_FabiansSteed"><code>CHAR_Militia_FabiansSteed = 826666431</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Militia_FabiansSteed_Minion"><code>CHAR_Militia_FabiansSteed_Minion = -1509286426</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Militia_Glassblower_VBlood"><code>CHAR_Militia_Glassblower_VBlood = 910988233</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Militia_Guard"><code>CHAR_Militia_Guard = 1730498275</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Militia_Guard_Servant"><code>CHAR_Militia_Guard_Servant = -1447279513</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Militia_Guard_Summon"><code>CHAR_Militia_Guard_Summon = 1050151632</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Militia_Guard_VBlood"><code>CHAR_Militia_Guard_VBlood = -29797003</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Militia_Guard_VBlood_GateBoss_Minor"><code>CHAR_Militia_Guard_VBlood_GateBoss_Minor = 1494126678</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Militia_Heavy"><code>CHAR_Militia_Heavy = 2005508157</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Militia_Heavy_Servant"><code>CHAR_Militia_Heavy_Servant = -1773935659</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Militia_Horseman"><code>CHAR_Militia_Horseman = -235172198</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Militia_Horseman_Mount"><code>CHAR_Militia_Horseman_Mount = -1914181232</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Militia_Horseman_Summon"><code>CHAR_Militia_Horseman_Summon = -1799461404</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Militia_Hound"><code>CHAR_Militia_Hound = -249647316</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Militia_HoundMaster_VBlood"><code>CHAR_Militia_HoundMaster_VBlood = -784265984</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Militia_Hound_VBlood"><code>CHAR_Militia_Hound_VBlood = -1373413273</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Militia_InkCrawler"><code>CHAR_Militia_InkCrawler = 2090982759</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Militia_Leader_VBlood"><code>CHAR_Militia_Leader_VBlood = 1688478381</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Militia_Leader_VBlood_GateBoss_Major"><code>CHAR_Militia_Leader_VBlood_GateBoss_Major = 1990744594</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Militia_Light"><code>CHAR_Militia_Light = -63435588</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Militia_Light_Servant"><code>CHAR_Militia_Light_Servant = 169329980</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Militia_Light_Summon"><code>CHAR_Militia_Light_Summon = 1772451421</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Militia_Longbowman"><code>CHAR_Militia_Longbowman = 203103783</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Militia_Longbowman_LightArrow_Vblood"><code>CHAR_Militia_Longbowman_LightArrow_Vblood = 850622034</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Militia_Longbowman_Servant"><code>CHAR_Militia_Longbowman_Servant = -242295780</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Militia_Longbowman_Summon"><code>CHAR_Militia_Longbowman_Summon = 1083647444</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Militia_Miner_Standard"><code>CHAR_Militia_Miner_Standard = -1072754152</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Militia_Miner_Standard_Servant"><code>CHAR_Militia_Miner_Standard_Servant = -1363137425</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Militia_Nun"><code>CHAR_Militia_Nun = -700632469</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Militia_Nun_VBlood"><code>CHAR_Militia_Nun_VBlood = -99012450</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Militia_Rider"><code>CHAR_Militia_Rider = -1719333743</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Militia_Rider_Mount"><code>CHAR_Militia_Rider_Mount = -138006205</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Militia_Scribe_VBlood"><code>CHAR_Militia_Scribe_VBlood = 1945956671</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Militia_Torchbearer"><code>CHAR_Militia_Torchbearer = 37713289</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Militia_Torchbearer_Servant"><code>CHAR_Militia_Torchbearer_Servant = 986768339</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Militia_Undead_Infiltrator"><code>CHAR_Militia_Undead_Infiltrator = -614820237</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Monster_LightningPillar"><code>CHAR_Monster_LightningPillar = -1977168943</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Mount_Horse"><code>CHAR_Mount_Horse = 1149585723</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Mount_Horse_Vampire"><code>CHAR_Mount_Horse_Vampire = -1502865710</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Mutant_Bear_Standard"><code>CHAR_Mutant_Bear_Standard = 1938756250</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Mutant_FleshGolem"><code>CHAR_Mutant_FleshGolem = 823276204</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Mutant_FleshGolem_PrisonVariant"><code>CHAR_Mutant_FleshGolem_PrisonVariant = -1025552087</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Mutant_RatHorror"><code>CHAR_Mutant_RatHorror = -375581934</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Mutant_Spitter"><code>CHAR_Mutant_Spitter = 1092792896</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Mutant_Wolf"><code>CHAR_Mutant_Wolf = 572729167</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Noctem_Crow"><code>CHAR_Noctem_Crow = 1239832946</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Ocean_Blowfish"><code>CHAR_Ocean_Blowfish = 1786690263</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Ocean_Piranha"><code>CHAR_Ocean_Piranha = 470753758</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Paladin_DivineAngel"><code>CHAR_Paladin_DivineAngel = -1737346940</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Paladin_FallenAngel"><code>CHAR_Paladin_FallenAngel = -76116724</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Pixie"><code>CHAR_Pixie = 1434914085</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Poloma_VBlood"><code>CHAR_Poloma_VBlood = -484556888</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Poloma_VBlood_GateBoss_Minor"><code>CHAR_Poloma_VBlood_GateBoss_Minor = -1381375644</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_RatHorror_Mutant_MutantBlood"><code>CHAR_RatHorror_Mutant_MutantBlood = 218843465</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_RockElemental"><code>CHAR_RockElemental = 20817667</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_RockElemental_NetherDemon"><code>CHAR_RockElemental_NetherDemon = 577495705</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_SUMMON_Wolf"><code>CHAR_SUMMON_Wolf = 1825512527</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Scarecrow"><code>CHAR_Scarecrow = -1750347680</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_SeaSerpent"><code>CHAR_SeaSerpent = -371347062</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_SeaSerpent_Hard"><code>CHAR_SeaSerpent_Hard = -694393029</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Spectral_Guardian"><code>CHAR_Spectral_Guardian = 304726480</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Spectral_SpellSlinger"><code>CHAR_Spectral_SpellSlinger = 2065149172</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Spider_Baneling"><code>CHAR_Spider_Baneling = -764515001</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Spider_Baneling_Summon"><code>CHAR_Spider_Baneling_Summon = -1004061470</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Spider_Broodmother"><code>CHAR_Spider_Broodmother = 342127250</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Spider_Forest"><code>CHAR_Spider_Forest = -581295882</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Spider_Forestling"><code>CHAR_Spider_Forestling = 574276383</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Spider_Melee"><code>CHAR_Spider_Melee = 2136899683</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Spider_Melee_GateBoss_Summon"><code>CHAR_Spider_Melee_GateBoss_Summon = -725251219</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Spider_Melee_Summon"><code>CHAR_Spider_Melee_Summon = 2119230788</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Spider_Queen_VBlood"><code>CHAR_Spider_Queen_VBlood = -548489519</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Spider_Queen_VBlood_GateBoss_Major"><code>CHAR_Spider_Queen_VBlood_GateBoss_Major = -943858353</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Spider_Range"><code>CHAR_Spider_Range = 2103131615</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Spider_Range_Summon"><code>CHAR_Spider_Range_Summon = 1974733695</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Spider_Spiderling"><code>CHAR_Spider_Spiderling = 1078424589</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Spider_Spiderling_VerminNest"><code>CHAR_Spider_Spiderling_VerminNest = 1767714956</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Spiderling_Summon"><code>CHAR_Spiderling_Summon = -18289884</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_StoneGolem"><code>CHAR_StoneGolem = -779411607</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_TargetDummy_Footman"><code>CHAR_TargetDummy_Footman = 1479720323</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Trader_Dunley_Gems_T02"><code>CHAR_Trader_Dunley_Gems_T02 = 194933933</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Trader_Dunley_Herbs_T02"><code>CHAR_Trader_Dunley_Herbs_T02 = 233171451</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Trader_Dunley_Knowledge_T02"><code>CHAR_Trader_Dunley_Knowledge_T02 = 281572043</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Trader_Dunley_RareGoods_T02"><code>CHAR_Trader_Dunley_RareGoods_T02 = -1594911649</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Trader_Farbane_Gems_T01"><code>CHAR_Trader_Farbane_Gems_T01 = -1168705805</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Trader_Farbane_Herbs_T01"><code>CHAR_Trader_Farbane_Herbs_T01 = -375258845</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Trader_Farbane_Knowledge_T01"><code>CHAR_Trader_Farbane_Knowledge_T01 = -208499374</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Trader_Farbane_RareGoods_T01"><code>CHAR_Trader_Farbane_RareGoods_T01 = -1810631919</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Trader_Gloomrot_T04"><code>CHAR_Trader_Gloomrot_T04 = -1292194494</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Trader_Noctem_Major"><code>CHAR_Trader_Noctem_Major = 1631713257</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Trader_Noctem_Minor"><code>CHAR_Trader_Noctem_Minor = 345283594</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Trader_Silverlight_Gems_T03"><code>CHAR_Trader_Silverlight_Gems_T03 = -1990875761</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Trader_Silverlight_Herbs_T03"><code>CHAR_Trader_Silverlight_Herbs_T03 = 1687896942</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Trader_Silverlight_Knowledge_T03"><code>CHAR_Trader_Silverlight_Knowledge_T03 = -915182578</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Trader_Silverlight_RareGoods_T03"><code>CHAR_Trader_Silverlight_RareGoods_T03 = 739223277</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Treant"><code>CHAR_Treant = -1089337069</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_TreantMantrap_Corrupted_Minion_Left"><code>CHAR_TreantMantrap_Corrupted_Minion_Left = 358623979</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_TreantMantrap_Corrupted_Minion_Right"><code>CHAR_TreantMantrap_Corrupted_Minion_Right = 2107764370</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Treant_Corrupted"><code>CHAR_Treant_Corrupted = 1496810447</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Treant_NetherDemon"><code>CHAR_Treant_NetherDemon = -2037006512</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Undead_ArenaChampion_VBlood"><code>CHAR_Undead_ArenaChampion_VBlood = -753453016</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Undead_ArmoredSkeletonCrossbow_Dunley"><code>CHAR_Undead_ArmoredSkeletonCrossbow_Dunley = -861407720</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Undead_ArmoredSkeletonCrossbow_Farbane"><code>CHAR_Undead_ArmoredSkeletonCrossbow_Farbane = -195077008</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Undead_Assassin"><code>CHAR_Undead_Assassin = -1365627158</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Undead_BishopOfDeath_VBlood"><code>CHAR_Undead_BishopOfDeath_VBlood = 577478542</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Undead_BishopOfDeath_VBlood_GateBoss_Minor"><code>CHAR_Undead_BishopOfDeath_VBlood_GateBoss_Minor = -1822337177</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Undead_BishopOfShadows_VBlood"><code>CHAR_Undead_BishopOfShadows_VBlood = 939467639</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Undead_BishopOfShadows_VBlood_GateBoss_Major"><code>CHAR_Undead_BishopOfShadows_VBlood_GateBoss_Major = -1805216630</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Undead_CursedSmith_FloatingWeapon_Axe"><code>CHAR_Undead_CursedSmith_FloatingWeapon_Axe = 1971653132</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Undead_CursedSmith_FloatingWeapon_Base"><code>CHAR_Undead_CursedSmith_FloatingWeapon_Base = -1099451233</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Undead_CursedSmith_FloatingWeapon_Mace"><code>CHAR_Undead_CursedSmith_FloatingWeapon_Mace = -55245645</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Undead_CursedSmith_FloatingWeapon_Slashers"><code>CHAR_Undead_CursedSmith_FloatingWeapon_Slashers = 769910415</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Undead_CursedSmith_FloatingWeapon_Spear"><code>CHAR_Undead_CursedSmith_FloatingWeapon_Spear = 233127264</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Undead_CursedSmith_FloatingWeapon_Sword"><code>CHAR_Undead_CursedSmith_FloatingWeapon_Sword = -2020619708</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Undead_CursedSmith_VBlood"><code>CHAR_Undead_CursedSmith_VBlood = 326378955</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Undead_FlyingSkull"><code>CHAR_Undead_FlyingSkull = -236166535</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Undead_GhostAssassin"><code>CHAR_Undead_GhostAssassin = 849891426</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Undead_GhostBanshee"><code>CHAR_Undead_GhostBanshee = -1146194149</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Undead_GhostBanshee_MorganaMinion"><code>CHAR_Undead_GhostBanshee_MorganaMinion = 153561250</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Undead_GhostBanshee_TombSummon"><code>CHAR_Undead_GhostBanshee_TombSummon = 414648299</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Undead_GhostGuardian"><code>CHAR_Undead_GhostGuardian = -458883491</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Undead_GhostMilitia_Crossbow"><code>CHAR_Undead_GhostMilitia_Crossbow = -85729652</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Undead_GhostMilitia_Crossbow_Summon"><code>CHAR_Undead_GhostMilitia_Crossbow_Summon = 348038236</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Undead_GhostMilitia_Light"><code>CHAR_Undead_GhostMilitia_Light = -1618703048</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Undead_GhostMilitia_Light_Summon"><code>CHAR_Undead_GhostMilitia_Light_Summon = 1684831595</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Undead_Ghoul_Armored_Farmlands"><code>CHAR_Undead_Ghoul_Armored_Farmlands = 2105565286</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Undead_Ghoul_TombSummon"><code>CHAR_Undead_Ghoul_TombSummon = 937597711</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Undead_Guardian"><code>CHAR_Undead_Guardian = -1967480038</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Undead_Infiltrator_AfterShadow"><code>CHAR_Undead_Infiltrator_AfterShadow = -558928562</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Undead_Infiltrator_VBlood"><code>CHAR_Undead_Infiltrator_VBlood = 613251918</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Undead_Infiltrator_VBlood_GateBoss_Major"><code>CHAR_Undead_Infiltrator_VBlood_GateBoss_Major = -982850914</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Undead_Leader_Vblood"><code>CHAR_Undead_Leader_Vblood = -1365931036</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Undead_Leader_Vblood_GateBoss_Minor"><code>CHAR_Undead_Leader_Vblood_GateBoss_Minor = -989493184</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Undead_Necromancer"><code>CHAR_Undead_Necromancer = -572568236</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Undead_Necromancer_TombSummon"><code>CHAR_Undead_Necromancer_TombSummon = 2025660438</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Undead_Priest"><code>CHAR_Undead_Priest = -1653554504</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Undead_Priest_VBlood"><code>CHAR_Undead_Priest_VBlood = 153390636</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Undead_RottingGhoul"><code>CHAR_Undead_RottingGhoul = -1722506709</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Undead_ShadowSoldier"><code>CHAR_Undead_ShadowSoldier = 678628353</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Undead_ShadowSoldier_GateBoss"><code>CHAR_Undead_ShadowSoldier_GateBoss = -361904832</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Undead_SkeletonApprentice"><code>CHAR_Undead_SkeletonApprentice = -1789347076</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Undead_SkeletonCrossbow_Base"><code>CHAR_Undead_SkeletonCrossbow_Base = 597386568</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Undead_SkeletonCrossbow_Farbane_OLD"><code>CHAR_Undead_SkeletonCrossbow_Farbane_OLD = 1250474035</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Undead_SkeletonCrossbow_GolemMinion"><code>CHAR_Undead_SkeletonCrossbow_GolemMinion = 1706319681</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Undead_SkeletonCrossbow_Graveyard"><code>CHAR_Undead_SkeletonCrossbow_Graveyard = 1395549638</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Undead_SkeletonGolem"><code>CHAR_Undead_SkeletonGolem = -1380216646</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Undead_SkeletonGolem_NetherDemon"><code>CHAR_Undead_SkeletonGolem_NetherDemon = -1115032717</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Undead_SkeletonMage"><code>CHAR_Undead_SkeletonMage = -1287507270</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Undead_SkeletonSoldier_Armored_Dunley"><code>CHAR_Undead_SkeletonSoldier_Armored_Dunley = 952695804</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Undead_SkeletonSoldier_Armored_Farbane"><code>CHAR_Undead_SkeletonSoldier_Armored_Farbane = -837329073</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Undead_SkeletonSoldier_Base"><code>CHAR_Undead_SkeletonSoldier_Base = -603934060</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Undead_SkeletonSoldier_GolemMinion"><code>CHAR_Undead_SkeletonSoldier_GolemMinion = 343833814</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Undead_SkeletonSoldier_Infiltrator"><code>CHAR_Undead_SkeletonSoldier_Infiltrator = -1642110920</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Undead_SkeletonSoldier_TombSummon"><code>CHAR_Undead_SkeletonSoldier_TombSummon = -259591573</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Undead_SkeletonSoldier_Unholy_Minion"><code>CHAR_Undead_SkeletonSoldier_Unholy_Minion = -1779239433</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Undead_SkeletonSoldier_Withered"><code>CHAR_Undead_SkeletonSoldier_Withered = -1584807109</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Undead_UndyingGhoul"><code>CHAR_Undead_UndyingGhoul = 1640311129</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Undead_ZealousCultist_Ghost"><code>CHAR_Undead_ZealousCultist_Ghost = 128488545</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Undead_ZealousCultist_VBlood"><code>CHAR_Undead_ZealousCultist_VBlood = -1208888966</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Undead_ZealousCultist_VBlood_GateBoss_Major"><code>CHAR_Undead_ZealousCultist_VBlood_GateBoss_Major = -1189707552</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Unholy_DeathKnight"><code>CHAR_Unholy_DeathKnight = 1857865401</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Unholy_FallenAngel"><code>CHAR_Unholy_FallenAngel = -1928607398</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Unholy_SkeletonApprentice_Summon"><code>CHAR_Unholy_SkeletonApprentice_Summon = 722671522</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Unholy_SkeletonWarrior_Summon"><code>CHAR_Unholy_SkeletonWarrior_Summon = 1604500740</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Unholy_UnstableArachnid"><code>CHAR_Unholy_UnstableArachnid = 834333879</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Unholy_UnstableArachnid_Small"><code>CHAR_Unholy_UnstableArachnid_Small = -1106602776</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_VHunter_CastleMan"><code>CHAR_VHunter_CastleMan = 336560131</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_VHunter_Jade_VBlood"><code>CHAR_VHunter_Jade_VBlood = -1968372384</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_VHunter_Jade_VBlood_GateBoss_Major"><code>CHAR_VHunter_Jade_VBlood_GateBoss_Major = 282791819</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_VHunter_Leader_GateBoss_Minor"><code>CHAR_VHunter_Leader_GateBoss_Minor = 2009018555</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_VHunter_Leader_VBlood"><code>CHAR_VHunter_Leader_VBlood = -1449631170</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_VampireMale"><code>CHAR_VampireMale = 38526109</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Vampire_BloodKnight_VBlood"><code>CHAR_Vampire_BloodKnight_VBlood = 495971434</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Vampire_CrimsonIronMaiden"><code>CHAR_Vampire_CrimsonIronMaiden = -1884553416</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Vampire_Cultist_BloodCrystal"><code>CHAR_Vampire_Cultist_BloodCrystal = -1671572471</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Vampire_Cultist_BloodCrystal_Female"><code>CHAR_Vampire_Cultist_BloodCrystal_Female = -1208066429</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Vampire_Cultist_Channeling"><code>CHAR_Vampire_Cultist_Channeling = 407967118</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Vampire_Cultist_Channeling_Female"><code>CHAR_Vampire_Cultist_Channeling_Female = 57255106</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Vampire_Cultist_Female_Servant"><code>CHAR_Vampire_Cultist_Female_Servant = 1703325932</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Vampire_Cultist_Male_Servant"><code>CHAR_Vampire_Cultist_Male_Servant = 1193263017</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Vampire_Cultist_Patrolling"><code>CHAR_Vampire_Cultist_Patrolling = 2018586909</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Vampire_Cultist_Patrolling_Female"><code>CHAR_Vampire_Cultist_Patrolling_Female = -1610391169</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Vampire_Cultist_PrayingArmsOut"><code>CHAR_Vampire_Cultist_PrayingArmsOut = -1438710930</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Vampire_Cultist_PrayingArmsOut_Female"><code>CHAR_Vampire_Cultist_PrayingArmsOut_Female = -1074322242</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Vampire_Cultist_PrayingGround"><code>CHAR_Vampire_Cultist_PrayingGround = -1832935107</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Vampire_Cultist_PrayingGround_Female"><code>CHAR_Vampire_Cultist_PrayingGround_Female = -2086433846</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Vampire_Cultist_Whittling"><code>CHAR_Vampire_Cultist_Whittling = -19416663</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Vampire_Cultist_Whittling_Female"><code>CHAR_Vampire_Cultist_Whittling_Female = -1925881340</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Vampire_Dracula_VBlood"><code>CHAR_Vampire_Dracula_VBlood = -327335305</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Vampire_Dracula_VeilOfBatsIllusion"><code>CHAR_Vampire_Dracula_VeilOfBatsIllusion = 1809382006</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Vampire_Ghost"><code>CHAR_Vampire_Ghost = -1893878700</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Vampire_HighLord_VBlood"><code>CHAR_Vampire_HighLord_VBlood = -496360395</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Vampire_IceRanger_VBlood"><code>CHAR_Vampire_IceRanger_VBlood = 795262842</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Vampire_Withered"><code>CHAR_Vampire_Withered = -1117581429</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Vermin_DireRat_VBlood"><code>CHAR_Vermin_DireRat_VBlood = -2039908510</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Vermin_GiantRat"><code>CHAR_Vermin_GiantRat = -1722278689</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Vermin_WickedRat_Rare"><code>CHAR_Vermin_WickedRat_Rare = -19165577</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Villager_CursedWanderer_VBlood"><code>CHAR_Villager_CursedWanderer_VBlood = 109969450</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Villager_CursedWanderer_VBlood_GateBoss_Major"><code>CHAR_Villager_CursedWanderer_VBlood_GateBoss_Major = -1160778038</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Villager_Tailor_VBlood"><code>CHAR_Villager_Tailor_VBlood = -1942352521</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Wendigo_GateBoss_Major"><code>CHAR_Wendigo_GateBoss_Major = 468179469</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Wendigo_VBlood"><code>CHAR_Wendigo_VBlood = 24378719</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_WerewolfChieftain_Human"><code>CHAR_WerewolfChieftain_Human = -1505705712</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_WerewolfChieftain_ShadowClone"><code>CHAR_WerewolfChieftain_ShadowClone = -1699898875</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_WerewolfChieftain_VBlood_GateBoss_Major"><code>CHAR_WerewolfChieftain_VBlood_GateBoss_Major = 2079933370</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Winter_Bear_Standard"><code>CHAR_Winter_Bear_Standard = 2041915372</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Winter_Moose"><code>CHAR_Winter_Moose = -779632831</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Winter_Wolf"><code>CHAR_Winter_Wolf = 134039094</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Winter_Wolf_Dracula_Minion"><code>CHAR_Winter_Wolf_Dracula_Minion = 2145471156</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Winter_Wolf_WerewolfChief_Minion"><code>CHAR_Winter_Wolf_WerewolfChief_Minion = -223185284</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Winter_Yeti_VBlood"><code>CHAR_Winter_Yeti_VBlood = -1347412392</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_CHAR_Winter_Yeti_VBlood_GateBoss_Major"><code>CHAR_Winter_Yeti_VBlood_GateBoss_Major = 666177656</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_Char_Fish_General"><code>Char_Fish_General = 1559481073</code></dt>
+  
+  <dd></dd>
+    <dt id="RisingV_Shared_Prefabs_Unit_Unknown"><code>Unknown = 0</code></dt>
+  
+  <dd></dd>
+  </dl>
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Prefabs/Unit.cs/#L13" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
