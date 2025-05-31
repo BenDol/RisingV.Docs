@@ -7,7 +7,7 @@
       <meta name="title" content="Interface IAspect | RisingV.Shared ">
       
       <meta name="description" content="Aspect (a.k.a. Aspecting) is the pattern this SDK uses to give a domain object or ECS entity one or more typed views without polluting the underlying model with cross-cutting concerns.  An aspect is: • a zero-allocation fa&#231;ade created on demand over an existing object • strongly-typed – each concrete aspect advertises the exact type it can wrap • qualifiable – construction calls    so the instance only represents objects that meet the aspect’s contract • side effect free – it never owns the data; it merely exposes convenience   helpers, computed state, or thin write-through setters.  Use As&amp;lt;TAspect&amp;gt;() (see ) to obtain a richer API for a target if that target qualifies.  When the strict flag is true, a non-qualifying target throws ; otherwise the instance logs a warning and remains inert. Aspects keep the core model clean, promote single-responsibility, and give you fluent, discoverable syntax such as: var unit = entity.As&amp;lt;UnitAspect&amp;gt;(); // throws if entity is not a unit unit.AddHealth(-10); Or in a less strict mode: var unit = entity.As&amp;lt;UnitAspect&amp;gt;(false); // warns if entity is not a unit, but returns null unit?.AddHealth(-10);">
-      <link rel="icon" href="../assets/images/favicon.ico">
+      <link rel="icon" href="../assets/favicon/favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
       <meta name="docfx:navrel" content="../toc.html">

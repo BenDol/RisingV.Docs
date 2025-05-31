@@ -4301,10 +4301,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "assets/images/favicon.ico",
+      "source_relative_path": "assets/favicon/favicon.ico",
       "output": {
         "resource": {
-          "relative_path": "assets/images/favicon.ico"
+          "relative_path": "assets/favicon/favicon.ico"
         }
       },
       "version": ""
@@ -4335,6 +4335,16 @@
       "output": {
         "resource": {
           "relative_path": "assets/images/logo_50.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/logo_512.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/logo_512.png"
         }
       },
       "version": ""
