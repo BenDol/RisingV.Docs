@@ -7101,10 +7101,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "assets/images/favicon.ico",
+      "source_relative_path": "assets/favicon/favicon.ico",
       "output": {
         "resource": {
-          "relative_path": "assets/images/favicon.ico"
+          "relative_path": "assets/favicon/favicon.ico"
         }
       },
       "version": ""
@@ -7135,6 +7135,56 @@
       "output": {
         "resource": {
           "relative_path": "assets/images/logo_50.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/logo_512.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/logo_512.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/old/favicon.ico",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/old/favicon.ico"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/old/logo.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/old/logo.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/old/logo_256.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/old/logo_256.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/old/logo_50.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/old/logo_50.png"
         }
       },
       "version": ""
