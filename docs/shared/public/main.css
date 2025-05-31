@@ -182,7 +182,7 @@ form.filter {
   --bs-gutter-x: 5.5rem;
 }
 
-body>header>nav, body[data-layout=landing]>header>nav {
+body[data-layout=landing]>header>nav .container-xxl {
   --bs-gutter-x: 25.5rem;
 }
 
