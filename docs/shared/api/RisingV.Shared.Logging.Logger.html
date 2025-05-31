@@ -535,7 +535,7 @@ logger.Fatal("This is a fatal message with an exception.", ex);</code></pre>
 
   <h3 id="RisingV_Shared_Logging_Logger_Create_System_String_RisingV_Shared_Logging_ILogTag___" data-uid="RisingV.Shared.Logging.Logger.Create(System.String,RisingV.Shared.Logging.ILogTag[])">
   Create(string, params ILogTag[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Logging/Logger.cs/#L294"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Logging/Logger.cs/#L306"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates a new logger instance with the specified logging name and optional auto tags.</p>
@@ -577,7 +577,7 @@ logger.Fatal("This is a fatal message with an exception.", ex);</code></pre>
 
   <h3 id="RisingV_Shared_Logging_Logger_Create_System_Type_RisingV_Shared_Logging_ILogTag___" data-uid="RisingV.Shared.Logging.Logger.Create(System.Type,RisingV.Shared.Logging.ILogTag[])">
   Create(Type, params ILogTag[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Logging/Logger.cs/#L197"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Logging/Logger.cs/#L209"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates a new logger instance for the specified type, automatically determining the plugin name</p>
@@ -605,6 +605,50 @@ logger.Fatal("This is a fatal message with an exception.", ex);</code></pre>
 </dd>
   </dl>
 
+
+
+
+
+
+
+
+
+
+
+  <a id="RisingV_Shared_Logging_Logger_Create_" data-uid="RisingV.Shared.Logging.Logger.Create*"></a>
+
+  <h3 id="RisingV_Shared_Logging_Logger_Create__1_RisingV_Shared_Logging_ILogTag___" data-uid="RisingV.Shared.Logging.Logger.Create``1(RisingV.Shared.Logging.ILogTag[])">
+  Create&lt;T&gt;(params ILogTag[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Logging/Logger.cs/#L197"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new logger instance for the specified type, automatically determining the plugin name</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Logger Create&lt;T&gt;(params ILogTag[] requiredTags)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>requiredTags</code> <a class="xref" href="RisingV.Shared.Logging.ILogTag.html">ILogTag</a>[]</dt>
+    <dd><p>Optional tags that this logger should automatically include.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="RisingV.Shared.Logging.Logger.html">Logger</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The type for which the logger is being created. This type should be part of the plugin assembly.</p>
+</dd>
+  </dl>
 
 
 
@@ -733,7 +777,7 @@ logger.Fatal("This is a fatal message with an exception.", ex);</code></pre>
 
   <h3 id="RisingV_Shared_Logging_Logger_IsEnabled_System_Int32_RisingV_Shared_Logging_ILogTag_" data-uid="RisingV.Shared.Logging.Logger.IsEnabled(System.Int32,RisingV.Shared.Logging.ILogTag)">
   IsEnabled(int, ILogTag?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Logging/Logger.cs/#L305"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Logging/Logger.cs/#L317"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Checks if the logger is enabled for the specified log level and category.</p>
