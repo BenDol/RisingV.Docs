@@ -4311,6 +4311,16 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "assets/images/icon.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/icon.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "assets/images/logo.png",
       "output": {
         "resource": {
