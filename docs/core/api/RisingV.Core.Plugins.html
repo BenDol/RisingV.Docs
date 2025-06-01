@@ -122,6 +122,15 @@ public class MyCoolPluginContext() : PluginContext(typeof(MyPluginInfo), new MyC
 [BepInDependency("RisingV.Scripting")]
 public class Plugin : RisingPlugin&lt;MyCoolPluginContext&gt;
 {
+    protected override void OnInitialize()
+    {
+        EngineManager.AddEngine&lt;ScriptingEngine&gt;(this);
+        EngineManager.AddEngine&lt;DamageEngine&gt;(this);
+        EngineManager.AddEngine&lt;DeathEngine&gt;(this);
+
+        // You can also register other systems, databases, or processors here
+    }
+
     protected override void OnLoad()
     {
         // Plugin startup logic (pre-initialization)
@@ -131,15 +140,6 @@ public class Plugin : RisingPlugin&lt;MyCoolPluginContext&gt;
     {
         return true;
     }
-
-    protected override void RegisterEngines(EngineManager engineManager)
-    {
-        engineManager.AddEngine&lt;ScriptingEngine&gt;(this);
-        engineManager.AddEngine&lt;DamageEngine&gt;(this);
-        engineManager.AddEngine&lt;DeathEngine&gt;(this);
-    }
-
-    // You can also override other methods to register systems, processors, databases, etc.
 }</code></pre>
 </dd>
     </dl>

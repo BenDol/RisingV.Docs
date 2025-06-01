@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class RisingPluginBase | RisingV.Core ">
       
-      <meta name="description" content="Base class for RisingV plugins. Example Usage: using BepInEx; using RisingV.Shared.Plugins; using RisingV.Shared.Engines; using RisingV.Core.Engines;  public class MyCoolPluginConfig() : PluginConfig(MyPluginInfo.PLUGIN_GUID, MyPluginInfo.PLUGIN_GUID) {     public ConfigEntry&amp;lt;float&amp;gt; AttackModifier { get; set; } =         new(&quot;Gameplay&quot;, &quot;AttackModifier&quot;, 1f, &quot;Modifier for attack damage&quot;); }  public class MyCoolPluginContext() : PluginContext(typeof(MyPluginInfo), new MyCoolPluginConfig());  [BepInPlugin(MyPluginInfo.PLUGIN_GUID, MyPluginInfo.PLUGIN_NAME, MyPluginInfo.PLUGIN_VERSION)] [BepInDependency(&quot;gg.deca.VampireCommandFramework&quot;)] [BepInDependency(&quot;RisingV.Core&quot;)] [BepInDependency(&quot;RisingV.Scripting&quot;)] public class Plugin : RisingPlugin&amp;lt;MyCoolPluginContext&amp;gt; {     protected override void OnLoad()     {         // Plugin startup logic (pre-initialization)     }      protected override bool OnUnload()     {         return true;     }      protected override void RegisterEngines(EngineManager engineManager)     {         engineManager.AddEngine&amp;lt;ScriptingEngine&amp;gt;(this);         engineManager.AddEngine&amp;lt;DamageEngine&amp;gt;(this);         engineManager.AddEngine&amp;lt;DeathEngine&amp;gt;(this);     }      // You can also override other methods to register systems, processors, databases, etc. }">
+      <meta name="description" content="Base class for RisingV plugins. Example Usage: using BepInEx; using RisingV.Shared.Plugins; using RisingV.Shared.Engines; using RisingV.Core.Engines;  public class MyCoolPluginConfig() : PluginConfig(MyPluginInfo.PLUGIN_GUID, MyPluginInfo.PLUGIN_GUID) {     public ConfigEntry&amp;lt;float&amp;gt; AttackModifier { get; set; } =         new(&quot;Gameplay&quot;, &quot;AttackModifier&quot;, 1f, &quot;Modifier for attack damage&quot;); }  public class MyCoolPluginContext() : PluginContext(typeof(MyPluginInfo), new MyCoolPluginConfig());  [BepInPlugin(MyPluginInfo.PLUGIN_GUID, MyPluginInfo.PLUGIN_NAME, MyPluginInfo.PLUGIN_VERSION)] [BepInDependency(&quot;gg.deca.VampireCommandFramework&quot;)] [BepInDependency(&quot;RisingV.Core&quot;)] [BepInDependency(&quot;RisingV.Scripting&quot;)] public class Plugin : RisingPlugin&amp;lt;MyCoolPluginContext&amp;gt; {     protected override void OnInitialize()     {         EngineManager.AddEngine&amp;lt;ScriptingEngine&amp;gt;(this);         EngineManager.AddEngine&amp;lt;DamageEngine&amp;gt;(this);         EngineManager.AddEngine&amp;lt;DeathEngine&amp;gt;(this);          // You can also register other systems, databases, or processors here     }      protected override void OnLoad()     {         // Plugin startup logic (pre-initialization)     }      protected override bool OnUnload()     {         return true;     } }">
       <link rel="icon" href="../assets/favicon/favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -118,6 +118,15 @@ public class MyCoolPluginContext() : PluginContext(typeof(MyPluginInfo), new MyC
 [BepInDependency("RisingV.Scripting")]
 public class Plugin : RisingPlugin&lt;MyCoolPluginContext&gt;
 {
+    protected override void OnInitialize()
+    {
+        EngineManager.AddEngine&lt;ScriptingEngine&gt;(this);
+        EngineManager.AddEngine&lt;DamageEngine&gt;(this);
+        EngineManager.AddEngine&lt;DeathEngine&gt;(this);
+
+        // You can also register other systems, databases, or processors here
+    }
+
     protected override void OnLoad()
     {
         // Plugin startup logic (pre-initialization)
@@ -127,15 +136,6 @@ public class Plugin : RisingPlugin&lt;MyCoolPluginContext&gt;
     {
         return true;
     }
-
-    protected override void RegisterEngines(EngineManager engineManager)
-    {
-        engineManager.AddEngine&lt;ScriptingEngine&gt;(this);
-        engineManager.AddEngine&lt;DamageEngine&gt;(this);
-        engineManager.AddEngine&lt;DeathEngine&gt;(this);
-    }
-
-    // You can also override other methods to register systems, processors, databases, etc.
 }</code></pre>
 </div>
   <div class="markdown conceptual"></div>
@@ -667,7 +667,7 @@ systems within the plugin.</p>
 
   <h3 id="RisingV_Core_Plugins_RisingPluginBase_AddSharedComponent__1_RisingV_Shared_Plugins_IPlugin_" data-uid="RisingV.Core.Plugins.RisingPluginBase.AddSharedComponent``1(RisingV.Shared.Plugins.IPlugin)">
   AddSharedComponent&lt;T&gt;(IPlugin)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Core/blob/master/RisingV.Core/Plugins/RisingPlugin.cs/#L527"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Core/blob/master/RisingV.Core/Plugins/RisingPlugin.cs/#L451"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Adds a shared component of the specified type to the plugin's shared components.</p>
@@ -712,7 +712,7 @@ systems within the plugin.</p>
 
   <h3 id="RisingV_Core_Plugins_RisingPluginBase_AddSharedComponent__1_RisingV_Shared_Plugins_IPlugin___0_" data-uid="RisingV.Core.Plugins.RisingPluginBase.AddSharedComponent``1(RisingV.Shared.Plugins.IPlugin,``0)">
   AddSharedComponent&lt;T&gt;(IPlugin, T)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Core/blob/master/RisingV.Core/Plugins/RisingPlugin.cs/#L538"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Core/blob/master/RisingV.Core/Plugins/RisingPlugin.cs/#L462"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Adds a shared component of the specified type to the plugin's shared components.</p>
@@ -754,7 +754,7 @@ systems within the plugin.</p>
 
   <h3 id="RisingV_Core_Plugins_RisingPluginBase_Dispose" data-uid="RisingV.Core.Plugins.RisingPluginBase.Dispose">
   Dispose()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Core/blob/master/RisingV.Core/Plugins/RisingPlugin.cs/#L546"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Core/blob/master/RisingV.Core/Plugins/RisingPlugin.cs/#L470"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Disposes of the plugin, cleaning up resources and unregistering events.</p>
@@ -781,7 +781,7 @@ systems within the plugin.</p>
 
   <h3 id="RisingV_Core_Plugins_RisingPluginBase_GetSharedComponent_System_Type_" data-uid="RisingV.Core.Plugins.RisingPluginBase.GetSharedComponent(System.Type)">
   GetSharedComponent(Type)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Core/blob/master/RisingV.Core/Plugins/RisingPlugin.cs/#L497"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Core/blob/master/RisingV.Core/Plugins/RisingPlugin.cs/#L421"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets a shared component of the specified type from the plugin's shared components.</p>
@@ -826,7 +826,7 @@ systems within the plugin.</p>
 
   <h3 id="RisingV_Core_Plugins_RisingPluginBase_GetSharedComponent__1" data-uid="RisingV.Core.Plugins.RisingPluginBase.GetSharedComponent``1">
   GetSharedComponent&lt;TX&gt;()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Core/blob/master/RisingV.Core/Plugins/RisingPlugin.cs/#L512"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Core/blob/master/RisingV.Core/Plugins/RisingPlugin.cs/#L436"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets a shared component of the specified type from the plugin's shared components.</p>
@@ -871,7 +871,7 @@ systems within the plugin.</p>
 
   <h3 id="RisingV_Core_Plugins_RisingPluginBase_Load" data-uid="RisingV.Core.Plugins.RisingPluginBase.Load">
   Load()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Core/blob/master/RisingV.Core/Plugins/RisingPlugin.cs/#L182"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Core/blob/master/RisingV.Core/Plugins/RisingPlugin.cs/#L187"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Loads the plugin, initializing it and registering necessary components and events.</p>
@@ -898,7 +898,7 @@ systems within the plugin.</p>
 
   <h3 id="RisingV_Core_Plugins_RisingPluginBase_OnGameDataInitialized_RisingV_Shared_EventBridge_OnGameDataInitializedEvent_" data-uid="RisingV.Core.Plugins.RisingPluginBase.OnGameDataInitialized(RisingV.Shared.EventBridge.OnGameDataInitializedEvent)">
   OnGameDataInitialized(OnGameDataInitializedEvent)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Core/blob/master/RisingV.Core/Plugins/RisingPlugin.cs/#L231"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Core/blob/master/RisingV.Core/Plugins/RisingPlugin.cs/#L236"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Called when the game data is initialized. This method is triggered by the <a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.EventBridge.OnGameDataInitializedEvent.html">EventBridge.OnGameDataInitializedEvent</a>.</p>
@@ -927,11 +927,38 @@ systems within the plugin.</p>
 
 
 
+  <a id="RisingV_Core_Plugins_RisingPluginBase_OnInitialize_" data-uid="RisingV.Core.Plugins.RisingPluginBase.OnInitialize*"></a>
+
+  <h3 id="RisingV_Core_Plugins_RisingPluginBase_OnInitialize" data-uid="RisingV.Core.Plugins.RisingPluginBase.OnInitialize">
+  OnInitialize()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Core/blob/master/RisingV.Core/Plugins/RisingPlugin.cs/#L171"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Called when the plugin is initialized. This method should be overridden by derived classes to perform</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract void OnInitialize()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
   <a id="RisingV_Core_Plugins_RisingPluginBase_OnLoad_" data-uid="RisingV.Core.Plugins.RisingPluginBase.OnLoad*"></a>
 
   <h3 id="RisingV_Core_Plugins_RisingPluginBase_OnLoad" data-uid="RisingV.Core.Plugins.RisingPluginBase.OnLoad">
   OnLoad()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Core/blob/master/RisingV.Core/Plugins/RisingPlugin.cs/#L171"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Core/blob/master/RisingV.Core/Plugins/RisingPlugin.cs/#L176"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Called when the plugin is loaded. This method should be overridden by derived classes to perform</p>
@@ -958,7 +985,7 @@ systems within the plugin.</p>
 
   <h3 id="RisingV_Core_Plugins_RisingPluginBase_OnPluginsInitializing_RisingV_Shared_EventBridge_OnPluginsInitializingEvent_" data-uid="RisingV.Core.Plugins.RisingPluginBase.OnPluginsInitializing(RisingV.Shared.EventBridge.OnPluginsInitializingEvent)">
   OnPluginsInitializing(OnPluginsInitializingEvent)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Core/blob/master/RisingV.Core/Plugins/RisingPlugin.cs/#L311"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Core/blob/master/RisingV.Core/Plugins/RisingPlugin.cs/#L316"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Called when the plugins are initializing. This method is triggered by the <a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.EventBridge.OnPluginsInitializingEvent.html">EventBridge.OnPluginsInitializingEvent</a>.
@@ -992,7 +1019,7 @@ Called after OnGameDataInitializedEvent, but before OnPluginsLoadingEvent.</p>
 
   <h3 id="RisingV_Core_Plugins_RisingPluginBase_OnPluginsLoading_RisingV_Shared_EventBridge_OnPluginsLoadingEvent_" data-uid="RisingV.Core.Plugins.RisingPluginBase.OnPluginsLoading(RisingV.Shared.EventBridge.OnPluginsLoadingEvent)">
   OnPluginsLoading(OnPluginsLoadingEvent)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Core/blob/master/RisingV.Core/Plugins/RisingPlugin.cs/#L376"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Core/blob/master/RisingV.Core/Plugins/RisingPlugin.cs/#L353"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Called when all the plugins are initialized and soft loaded. This method is triggered by the <a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.EventBridge.OnPluginsPartialLoadedEvent.html">EventBridge.OnPluginsPartialLoadedEvent</a>.</p>
@@ -1025,7 +1052,7 @@ Called after OnGameDataInitializedEvent, but before OnPluginsLoadingEvent.</p>
 
   <h3 id="RisingV_Core_Plugins_RisingPluginBase_OnPluginsReadying_RisingV_Shared_EventBridge_OnPluginsReadyingEvent_" data-uid="RisingV.Core.Plugins.RisingPluginBase.OnPluginsReadying(RisingV.Shared.EventBridge.OnPluginsReadyingEvent)">
   OnPluginsReadying(OnPluginsReadyingEvent)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Core/blob/master/RisingV.Core/Plugins/RisingPlugin.cs/#L405"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Core/blob/master/RisingV.Core/Plugins/RisingPlugin.cs/#L382"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Called when all the plugins are loaded. This method is triggered by the <a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.EventBridge.OnPluginsReadyingEvent.html">EventBridge.OnPluginsReadyingEvent</a>.</p>
@@ -1058,7 +1085,7 @@ Called after OnGameDataInitializedEvent, but before OnPluginsLoadingEvent.</p>
 
   <h3 id="RisingV_Core_Plugins_RisingPluginBase_OnReload_RisingV_Shared_Managers_IManager_System_Collections_Generic_List_RisingV_Shared_Plugins_IPlugin__RisingV_Shared_Managers_ReloadReason_" data-uid="RisingV.Core.Plugins.RisingPluginBase.OnReload(RisingV.Shared.Managers.IManager,System.Collections.Generic.List{RisingV.Shared.Plugins.IPlugin},RisingV.Shared.Managers.ReloadReason)">
   OnReload(IManager, List&lt;IPlugin&gt;, ReloadReason)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Core/blob/master/RisingV.Core/Plugins/RisingPlugin.cs/#L220"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Core/blob/master/RisingV.Core/Plugins/RisingPlugin.cs/#L225"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Called when the manager is reloaded. This can be used to handle any specific logic needed during a reload.
@@ -1101,7 +1128,7 @@ This can also override the default reload behavior.</p>
 
   <h3 id="RisingV_Core_Plugins_RisingPluginBase_OnReload_RisingV_Shared_Plugins_PluginManager_System_Collections_Generic_List_RisingV_Shared_Plugins_IPlugin__RisingV_Shared_Managers_ReloadReason_" data-uid="RisingV.Core.Plugins.RisingPluginBase.OnReload(RisingV.Shared.Plugins.PluginManager,System.Collections.Generic.List{RisingV.Shared.Plugins.IPlugin},RisingV.Shared.Managers.ReloadReason)">
   OnReload(PluginManager, List&lt;IPlugin&gt;, ReloadReason)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Core/blob/master/RisingV.Core/Plugins/RisingPlugin.cs/#L264"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Core/blob/master/RisingV.Core/Plugins/RisingPlugin.cs/#L269"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Called when the manager is reloaded with a specific type. This can be used to handle any specific logic needed during a reload.
@@ -1144,7 +1171,7 @@ This can also override the default reload behavior.</p>
 
   <h3 id="RisingV_Core_Plugins_RisingPluginBase_OnUnload" data-uid="RisingV.Core.Plugins.RisingPluginBase.OnUnload">
   OnUnload()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Core/blob/master/RisingV.Core/Plugins/RisingPlugin.cs/#L177"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Core/blob/master/RisingV.Core/Plugins/RisingPlugin.cs/#L182"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Called when the plugin is unloaded. This method should be overridden by derived classes to perform</p>
@@ -1172,203 +1199,11 @@ This can also override the default reload behavior.</p>
 
 
 
-  <a id="RisingV_Core_Plugins_RisingPluginBase_RegisterDatabases_" data-uid="RisingV.Core.Plugins.RisingPluginBase.RegisterDatabases*"></a>
-
-  <h3 id="RisingV_Core_Plugins_RisingPluginBase_RegisterDatabases_RisingV_Shared_Databases_DatabaseManager_" data-uid="RisingV.Core.Plugins.RisingPluginBase.RegisterDatabases(RisingV.Shared.Databases.DatabaseManager)">
-  RegisterDatabases(DatabaseManager)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Core/blob/master/RisingV.Core/Plugins/RisingPlugin.cs/#L458"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Registers databases for the plugin. This method can be overridden by derived classes</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected virtual void RegisterDatabases(DatabaseManager databaseManager)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>databaseManager</code> <a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Databases.DatabaseManager.html">DatabaseManager</a></dt>
-    <dd><p>The database manager to register databases with.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-
-  <a id="RisingV_Core_Plugins_RisingPluginBase_RegisterEngines_" data-uid="RisingV.Core.Plugins.RisingPluginBase.RegisterEngines*"></a>
-
-  <h3 id="RisingV_Core_Plugins_RisingPluginBase_RegisterEngines_RisingV_Shared_Engines_EngineManager_" data-uid="RisingV.Core.Plugins.RisingPluginBase.RegisterEngines(RisingV.Shared.Engines.EngineManager)">
-  RegisterEngines(EngineManager)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Core/blob/master/RisingV.Core/Plugins/RisingPlugin.cs/#L467"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Registers engines for the plugin. This method can be overridden by derived classes</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected virtual void RegisterEngines(EngineManager engineManager)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>engineManager</code> <a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Engines.EngineManager.html">EngineManager</a></dt>
-    <dd><p>The engine manager to register engines with.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-
-  <a id="RisingV_Core_Plugins_RisingPluginBase_RegisterGameEventHooks_" data-uid="RisingV.Core.Plugins.RisingPluginBase.RegisterGameEventHooks*"></a>
-
-  <h3 id="RisingV_Core_Plugins_RisingPluginBase_RegisterGameEventHooks" data-uid="RisingV.Core.Plugins.RisingPluginBase.RegisterGameEventHooks">
-  RegisterGameEventHooks()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Core/blob/master/RisingV.Core/Plugins/RisingPlugin.cs/#L431"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Registers game event hooks for the plugin. This method can be overridden by derived classes</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected virtual void RegisterGameEventHooks()</code></pre>
-  </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <a id="RisingV_Core_Plugins_RisingPluginBase_RegisterProcessors_" data-uid="RisingV.Core.Plugins.RisingPluginBase.RegisterProcessors*"></a>
-
-  <h3 id="RisingV_Core_Plugins_RisingPluginBase_RegisterProcessors_RisingV_Shared_Processors_ProcessorManager_" data-uid="RisingV.Core.Plugins.RisingPluginBase.RegisterProcessors(RisingV.Shared.Processors.ProcessorManager)">
-  RegisterProcessors(ProcessorManager)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Core/blob/master/RisingV.Core/Plugins/RisingPlugin.cs/#L449"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Registers processors for the plugin. This method can be overridden by derived classes</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected virtual void RegisterProcessors(ProcessorManager processorManager)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>processorManager</code> <a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Processors.ProcessorManager.html">ProcessorManager</a></dt>
-    <dd><p>The processor manager to register processors with.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-
-  <a id="RisingV_Core_Plugins_RisingPluginBase_RegisterSharedComponents_" data-uid="RisingV.Core.Plugins.RisingPluginBase.RegisterSharedComponents*"></a>
-
-  <h3 id="RisingV_Core_Plugins_RisingPluginBase_RegisterSharedComponents_RisingV_Shared_Plugins_PluginComponentsManager_" data-uid="RisingV.Core.Plugins.RisingPluginBase.RegisterSharedComponents(RisingV.Shared.Plugins.PluginComponentsManager)">
-  RegisterSharedComponents(PluginComponentsManager)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Core/blob/master/RisingV.Core/Plugins/RisingPlugin.cs/#L423"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Registers shared components for the plugin. This method can be overridden by derived classes</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected virtual void RegisterSharedComponents(PluginComponentsManager sharedComponents)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>sharedComponents</code> <a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Plugins.PluginComponentsManager.html">PluginComponentsManager</a></dt>
-    <dd><p>The shared components manager to register components with.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-
-  <a id="RisingV_Core_Plugins_RisingPluginBase_RegisterSystems_" data-uid="RisingV.Core.Plugins.RisingPluginBase.RegisterSystems*"></a>
-
-  <h3 id="RisingV_Core_Plugins_RisingPluginBase_RegisterSystems_RisingV_Shared_Systems_SystemManager_" data-uid="RisingV.Core.Plugins.RisingPluginBase.RegisterSystems(RisingV.Shared.Systems.SystemManager)">
-  RegisterSystems(SystemManager)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Core/blob/master/RisingV.Core/Plugins/RisingPlugin.cs/#L440"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Registers systems for the plugin. This method can be overridden by derived classes</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected virtual void RegisterSystems(SystemManager systemManager)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>systemManager</code> <a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Systems.SystemManager.html">SystemManager</a></dt>
-    <dd><p>The system manager to register systems with.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-
   <a id="RisingV_Core_Plugins_RisingPluginBase_Reload_" data-uid="RisingV.Core.Plugins.RisingPluginBase.Reload*"></a>
 
   <h3 id="RisingV_Core_Plugins_RisingPluginBase_Reload_RisingV_Shared_Plugins_PluginManager_RisingV_Shared_Managers_ReloadReason_" data-uid="RisingV.Core.Plugins.RisingPluginBase.Reload(RisingV.Shared.Plugins.PluginManager,RisingV.Shared.Managers.ReloadReason)">
   Reload(PluginManager, ReloadReason)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Core/blob/master/RisingV.Core/Plugins/RisingPlugin.cs/#L278"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Core/blob/master/RisingV.Core/Plugins/RisingPlugin.cs/#L283"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -1401,7 +1236,7 @@ This can also override the default reload behavior.</p>
 
   <h3 id="RisingV_Core_Plugins_RisingPluginBase_Reload_RisingV_Shared_Plugins_PluginManager_System_Collections_Generic_List_RisingV_Shared_Plugins_IPlugin__RisingV_Shared_Managers_ReloadReason_" data-uid="RisingV.Core.Plugins.RisingPluginBase.Reload(RisingV.Shared.Plugins.PluginManager,System.Collections.Generic.List{RisingV.Shared.Plugins.IPlugin},RisingV.Shared.Managers.ReloadReason)">
   Reload(PluginManager, List&lt;IPlugin&gt;, ReloadReason)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Core/blob/master/RisingV.Core/Plugins/RisingPlugin.cs/#L271"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Core/blob/master/RisingV.Core/Plugins/RisingPlugin.cs/#L276"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Reloads the manager and its dependencies with a specific type.</p>
@@ -1437,7 +1272,7 @@ This can also override the default reload behavior.</p>
 
   <h3 id="RisingV_Core_Plugins_RisingPluginBase_SetupConfiguration_RisingV_Shared_Plugins_PluginConfig_" data-uid="RisingV.Core.Plugins.RisingPluginBase.SetupConfiguration(RisingV.Shared.Plugins.PluginConfig)">
   SetupConfiguration(PluginConfig?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Core/blob/master/RisingV.Core/Plugins/RisingPlugin.cs/#L476"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Core/blob/master/RisingV.Core/Plugins/RisingPlugin.cs/#L400"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Sets up the plugin configuration. This method can be overridden by derived classes</p>
@@ -1470,7 +1305,7 @@ This can also override the default reload behavior.</p>
 
   <h3 id="RisingV_Core_Plugins_RisingPluginBase_SetupSharedEventBus_RisingV_Shared_Events_ManagedEventBus_" data-uid="RisingV.Core.Plugins.RisingPluginBase.SetupSharedEventBus(RisingV.Shared.Events.ManagedEventBus)">
   SetupSharedEventBus(ManagedEventBus)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Core/blob/master/RisingV.Core/Plugins/RisingPlugin.cs/#L486"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Core/blob/master/RisingV.Core/Plugins/RisingPlugin.cs/#L410"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Sets up the shared event bus for the plugin. This method can be overridden by derived classes</p>
@@ -1503,7 +1338,7 @@ This can also override the default reload behavior.</p>
 
   <h3 id="RisingV_Core_Plugins_RisingPluginBase_Unload" data-uid="RisingV.Core.Plugins.RisingPluginBase.Unload">
   Unload()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Core/blob/master/RisingV.Core/Plugins/RisingPlugin.cs/#L240"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Core/blob/master/RisingV.Core/Plugins/RisingPlugin.cs/#L245"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Unloads the plugin, unregistering events and cleaning up resources.</p>

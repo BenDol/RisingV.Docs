@@ -103,7 +103,7 @@ Each Aspect class groups related functionality around a specific gameplay concep
 </ul>
 </li>
 <li><p><strong>Simplified API</strong><br>
-By exposing clear, domain-focused methods (e.g., <code>GetHealth</code>, <code>AddItem</code>, <code>SpawnUnit</code>, <code>ApplyBuff</code>), Aspects allow plugin developers to quickly implement features without needing to understand low-level ECS or networking code.</p>
+By exposing clear, domain-focused methods (e.g., <code>Health</code>, <code>AddItem</code>, <code>Spawn</code>, etc.), Aspects allow plugin developers to quickly implement features without needing to understand low-level ECS or networking code.</p>
 </li>
 <li><p><strong>Consistency &amp; Reusability</strong></p>
 <ul>
@@ -122,55 +122,25 @@ Some Aspects internally publish or subscribe to events via the shared <code>Even
 <ol>
 <li><p><strong>Inject or Retrieve Aspects from AspectManager</strong><br>
 In your plugin’s <code>Awake</code> or <code>OnEnable</code> method, obtain references to needed Aspects:</p>
-<pre><code class="lang-csharp">private AspectManager _aspectManager;
-private CharacterAspect _characterAspect;
-private InventoryAspect _inventoryAspect;
+<pre><code class="lang-csharp">private CharacterAspect _characterAspect;
 
-public void Awake()
+public void SomeEntityMethod(Entity playerEntity)
 {
-    _aspectManager = new AspectManager();
-    _aspectManager.Initialize(this);
-
-    _characterAspect = _aspectManager.GetAspect&lt;CharacterAspect&gt;();
-    _inventoryAspect = _aspectManager.GetAspect&lt;InventoryAspect&gt;();
-
-    _aspectManager.Load(this);
-    _aspectManager.Ready(this);
+    _characterAspect = playerEntity.As&lt;CharacterAspect&gt;();
+    _unitAspect = playerEntity.As&lt;UnitAspect&gt;();
 }
 </code></pre>
 </li>
 <li><p><strong>Call High‐Level Methods</strong><br>
 Use Aspect methods to perform domain-specific operations:</p>
 <pre><code class="lang-csharp">// Retrieve a player’s current health
-float currentHealth = _characterAspect.GetHealth(playerEntity);
+float currentHealth = _characterAspect.Health.Value
 
 // Add an item to a player’s inventory
-_inventoryAspect.AddItem(playerEntity, &quot;IronSword&quot;, 1);
-
-// Apply a buff to a target unit
-_buffAspect.ApplyBuff(targetEntity, buffId: 12345, duration: 30f);
-
-// Spawn an NPC at a given location
-Entity newNpc = _unitAspect.SpawnUnit(NpcType.Bandit, spawnPosition);
+_inventoryAspect.AddItem(&quot;IronSword&quot;, 1);
 
 // Move an entity to a destination
-_moveableAspect.MoveTo(playerEntity, destinationPosition);
-</code></pre>
-</li>
-<li><p><strong>Combine Multiple Aspects for Complex Logic</strong><br>
-Aspects can be composed to implement more advanced behaviors:</p>
-<pre><code class="lang-csharp">// Example: When a player picks up a rare item, grant a temporary buff
-void OnItemPickedUp(ItemPickedUpEvent evt)
-{
-    if (evt.ItemId == &quot;RareGem&quot;)
-    {
-        Entity player     = evt.PlayerEntity;
-        int    buffId     = _buffAspect.GetBuffId(&quot;LuckBoost&quot;);
-        float  buffDuration = 60f;
-
-        _buffAspect.ApplyBuff(player, buffId, buffDuration);
-    }
-}
+_moveableAspect.MoveTo(destinationPosition);
 </code></pre>
 </li>
 <li><p><strong>Extend or Override Aspects</strong><br>

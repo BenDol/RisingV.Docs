@@ -309,7 +309,7 @@ public class MyFeaturePlugin : RisingPlugin&lt;MyFeatureContext&gt;
 </code></pre>
 <p><strong>Tips</strong>:</p>
 <ul>
-<li>Most plugins only need to override <code>RegisterEngines</code> (or <code>RegisterDatabases</code>, <code>RegisterSystems</code>).</li>
+<li>Most plugins only need to use <code>OnInitialize</code> or <code>OnLoad</code>.</li>
 <li><code>BasePlugin</code> automatically invokes <code>Load()</code> and <code>Ready()</code> on all registered managers, so custom logic can often be placed solely in <code>Ready()</code>.</li>
 <li>Declare <code>[BepInDependency]</code> attributes to enforce load order for dependent plugins or RisingV subsystems.</li>
 </ul>
@@ -364,7 +364,7 @@ public class MyFeaturePlugin : RisingPlugin&lt;MyFeatureContext&gt;
 Keep each plugin focused on a single responsibility. This makes it easier to manage dependencies and reduces coupling.</p>
 </li>
 <li><p><strong>Register Managers Early</strong><br>
-Override <code>RegisterEngines</code>, <code>RegisterDatabases</code>, and <code>RegisterSystems</code> during <code>Initialize</code> (via <code>RisingPlugin&lt;TContext&gt;</code>). Avoid delaying manager registration to <code>Ready</code> unless absolutely necessary.</p>
+Override <code>OnInitialize</code> (via <code>RisingPlugin&lt;TContext&gt;</code>). Avoid delaying manager registration to <code>Ready</code> unless absolutely necessary.</p>
 </li>
 <li><p><strong>Leverage Hot-Reload</strong></p>
 <ul>

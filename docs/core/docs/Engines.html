@@ -97,24 +97,20 @@
 <h2 id="how-engines-integrate">How Engines Integrate</h2>
 <ol>
 <li><p><strong>Initialization &amp; Registration</strong><br>
-During your plugin’s <code>Awake</code> or <code>OnEnable</code> method, the <code>EngineManager</code> (or a similar central registry) is responsible for creating and registering each Engine. Typically:</p>
+During your plugin’s <code>RegisterEngines</code> method, the <code>EngineManager</code> (or a similar central registry) is responsible for creating and registering each Engine. Typically:</p>
 <pre><code class="lang-csharp">private EngineManager _engineManager;
 private AchievementEngine  _achievementEngine;
 private BuffEngine         _buffEngine;
 // ... other engines
 
-public void Awake()
+public override void RegisterEngines()
 {
-    _engineManager = new EngineManager();
-    _engineManager.Initialize(this);
+    _engineManager ??= Global.EngineManager;
 
     // Register engines
     _achievementEngine = _engineManager.AddEngine&lt;AchievementEngine&gt;(this);
     _buffEngine        = _engineManager.AddEngine&lt;BuffEngine&gt;(this);
     // ... register additional engines
-
-    _engineManager.Load(this);
-    _engineManager.Ready(this);
 }
 </code></pre>
 </li>
