@@ -42,16 +42,6 @@ runs:
   using: "composite"
   steps:
 
-    - name: Print all inputs
-      shell: bash
-      run: |
-        echo "TARGET is <${{ inputs.target }}>"
-        echo "REPO_TOKEN is <${{ secrets.RISINGV_PAT }}>"
-        echo "DOCS_TOKEN is <${{ secrets.RISINGV_DOCS_PAT }}>"
-        echo "TEMPLATE_URL is <${{ inputs.template_url }}>"
-        echo "XREF_MAP is <${{ inputs.xref_map }}>"
-        echo "UPDATE_INDEX_README is <${{ inputs.update_index_readme }}>"
-
     - name: Derive lowercase target
       shell: bash
       env:
