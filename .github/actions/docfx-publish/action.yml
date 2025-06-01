@@ -110,17 +110,25 @@ runs:
     - name: Sync into Central Docs
       shell: bash
       run: |
-        rm -rf central-docs/docs/${TARGET_LOW}
-        mkdir -p central-docs/docs/${TARGET_LOW}
-        cp -R _site/* central-docs/docs/${TARGET_LOW}/
         cd central-docs
+
+        # Overwrite the directory for this target
+        rm -rf docs/${TARGET_LOW}
+        mkdir -p docs/${TARGET_LOW}
+        cp -R ../_site/* docs/${TARGET_LOW}/
+
+        # Pull latest master, rebasing our new files on top
+        git pull --rebase --autostash origin master
+
+        # Commit & push if there are changes
         git config user.name  "github-actions[bot]"
         git config user.email "github-actions[bot]@users.noreply.github.com"
         git add docs/${TARGET_LOW}
+
         if git diff --cached --quiet; then
           echo "No documentation changes to commit."
         else
           git commit -m "Update ${{ inputs.target }} docs: ${{ github.sha }}"
-          git push
+          git push origin HEAD:master
           echo "Docs updated and pushed."
         fi
