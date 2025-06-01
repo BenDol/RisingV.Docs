@@ -1,0 +1,118 @@
+name: "DocFX Publish"
+description: >-
+  Checkout code, download/extract a DocFX template, build the site,
+  run Cement XREFs, and sync output into the central docs repo.
+
+inputs:
+  target:
+    description: "Name of this project (e.g. Shared, Core, Scripting, BossDrops)."
+    required: true
+
+  repo_token:
+    description: "GitHub token to checkout this repo (and give DocFX permission)."
+    required: true
+
+  docs_token:
+    description: "GitHub token with push rights to the central‐docs repo."
+    required: true
+
+  template_url:
+    description: >-
+      URL of the zip file containing your DocFX template.  
+      Defaults to Material.zip if you don’t override.
+    required: false
+    default: "https://docs.risingv.dev/docfx/templates/material.zip"
+
+  xref_map:
+    description: >-
+      Pipe-delimited list of Dep_Map entries for Cement XREFs. For example:  
+      `RisingV.Shared=https://docs.risingv.dev/shared/api|RisingV.Core=https://docs.risingv.dev/core/api`.  
+      If you leave this blank, the Cement XREFs step will be skipped.
+    required: false
+    default: ""
+
+  update_index_readme:
+    description: >-
+      If set to “true”, the action will prepend your `README.md` (minus front-matter)  
+      into `index.md` automatically. Otherwise, it skips that step.
+    required: false
+    default: "false"
+
+runs:
+  using: "composite"
+  steps:
+
+    - name: Derive lowercase target
+      shell: bash
+      run: |
+        if [ -z "$INPUT_TARGET" ]; then
+          echo "::error::The 'target' input is required."
+          exit 1
+        fi
+        echo "TARGET_LOW=${INPUT_TARGET,,}" >> $GITHUB_ENV
+
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        submodules: recursive
+        fetch-depth: 0
+        token: ${{ inputs.repo_token }}
+
+    - name: Set DocFX GitHub Token
+      run: |
+        echo "DOCFX__SECRETS__GITHUB_TOKEN=${{ inputs.repo_token }}" >> $GITHUB_ENV
+
+    - name: Dotnet Setup
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: 8.x
+
+    - name: Update index.md with README content
+      if: ${{ inputs.update_index_readme == 'true' }}
+      run: |
+        frontmatter=$(sed -n '1,/^---$/p' index.md)
+        readme_content=$(sed '1d' README.md)
+        echo "$frontmatter" > index.md
+        echo "$readme_content" >> index.md
+
+    - name: Install DocFX CLI
+      run: dotnet tool update -g docfx
+
+    - name: Download and Extract Template
+      run: |
+        mkdir -p templates
+        curl -L ${{ inputs.template_url }} -o material.zip
+        unzip -o material.zip -d templates
+
+    - name: Build site
+      run: docfx ./docfx.json
+
+    - name: Cement XREFs & Prune
+      if: ${{ inputs.xref_map != '' }}
+      uses: BenDol/RisingV.Docs/.github/actions/cement-xrefs@master
+      with:
+        dep_map: ${{ inputs.xref_map }}
+
+    - name: Checkout Central Docs Repo
+      uses: actions/checkout@v4
+      with:
+        repository: BenDol/RisingV.Docs
+        token: ${{ inputs.docs_token }}
+        path: central-docs
+
+    - name: Sync into Central Docs
+      run: |
+        rm -rf central-docs/docs/${TARGET_LOW}
+        mkdir -p central-docs/docs/${TARGET_LOW}
+        cp -R _site/* central-docs/docs/${TARGET_LOW}/
+        cd central-docs
+        git config user.name  "github-actions[bot]"
+        git config user.email "github-actions[bot]@users.noreply.github.com"
+        git add docs/${TARGET_LOW}
+        if git diff --cached --quiet; then
+          echo "No documentation changes to commit."
+        else
+          git commit -m "Update ${{ inputs.target }} docs: ${{ github.sha }}"
+          git push
+          echo "Docs updated and pushed."
+        fi
