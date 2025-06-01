@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class BossDatabase | RisingV.BossDrops </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class BossDatabase | RisingV.BossDrops ">
+      
+      <meta name="description" content="Database for managing boss data.">
+      <link rel="icon" href="../assets/favicon/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/BenDol/RisingV.BossDrops/new/master/apiSpec/new?filename=RisingV_BossDrops_Database_BossDatabase.md&amp;value=---%0Auid%3A%20RisingV.BossDrops.Database.BossDatabase%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../assets/images/logo_50.png" alt="RisingV.BossDrops">
+            RisingV.BossDrops
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="RisingV.BossDrops.Database.BossDatabase">
+
+
+
+  <h1 id="RisingV_BossDrops_Database_BossDatabase" data-uid="RisingV.BossDrops.Database.BossDatabase" class="text-break">
+Class BossDatabase  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.BossDrops/blob/master/RisingV.BossDrops/Database/BossDatabase.cs/#L299"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="RisingV.html">RisingV</a>.<a class="xref" href="RisingV.BossDrops.html">BossDrops</a>.<a class="xref" href="RisingV.BossDrops.Database.html">Database</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>RisingV.BossDrops.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Database for managing boss data.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class BossDatabase : Database&lt;int, BossData, BossDataSource, BossDataLoader&gt;, IDatabase&lt;int, BossData&gt;, IDatabase, IDataCrud, IManageableLifecycle&lt;DatabaseManager&gt;, IManageableLifecycle, IReloadable, IManageable&lt;DatabaseManager&gt;, IManageable, IDataCrud&lt;int, BossData&gt;</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="RisingV.Shared.Databases.Database-4.html">Database</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>, <a class="xref" href="RisingV.BossDrops.Data.BossData.html">BossData</a>, <a class="xref" href="RisingV.BossDrops.Database.BossDataSource.html">BossDataSource</a>, <a class="xref" href="RisingV.BossDrops.Database.BossDataLoader.html">BossDataLoader</a>&gt;</div>
+      <div><span class="xref">BossDatabase</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="RisingV.Shared.Databases.IDatabase-2.html">IDatabase</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>, <a class="xref" href="RisingV.BossDrops.Data.BossData.html">BossData</a>&gt;</div>
+      <div><a class="xref" href="RisingV.Shared.Databases.IDatabase.html">IDatabase</a></div>
+      <div><a class="xref" href="RisingV.Shared.Databases.Sources.IDataCrud.html">IDataCrud</a></div>
+      <div><a class="xref" href="RisingV.Shared.Managers.IManageableLifecycle-1.html">IManageableLifecycle</a>&lt;<a class="xref" href="RisingV.Shared.Databases.DatabaseManager.html">DatabaseManager</a>&gt;</div>
+      <div><a class="xref" href="RisingV.Shared.Managers.IManageableLifecycle.html">IManageableLifecycle</a></div>
+      <div><a class="xref" href="RisingV.Shared.Managers.IReloadable.html">IReloadable</a></div>
+      <div><a class="xref" href="RisingV.Shared.Managers.IManageable-1.html">IManageable</a>&lt;<a class="xref" href="RisingV.Shared.Databases.DatabaseManager.html">DatabaseManager</a>&gt;</div>
+      <div><a class="xref" href="RisingV.Shared.Managers.IManageable.html">IManageable</a></div>
+      <div><a class="xref" href="RisingV.Shared.Databases.Sources.IDataCrud-2.html">IDataCrud</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>, <a class="xref" href="RisingV.BossDrops.Data.BossData.html">BossData</a>&gt;</div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="RisingV.Shared.Databases.Database-4.html#RisingV_Shared_Databases_Database_4_Log">Database&lt;int, BossData, BossDataSource, BossDataLoader&gt;.Log</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Databases.Database-4.html#RisingV_Shared_Databases_Database_4_Name">Database&lt;int, BossData, BossDataSource, BossDataLoader&gt;.Name</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Databases.Database-4.html#RisingV_Shared_Databases_Database_4_IsInitialized">Database&lt;int, BossData, BossDataSource, BossDataLoader&gt;.IsInitialized</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Databases.Database-4.html#RisingV_Shared_Databases_Database_4_IsLoaded">Database&lt;int, BossData, BossDataSource, BossDataLoader&gt;.IsLoaded</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Databases.Database-4.html#RisingV_Shared_Databases_Database_4_DataSource">Database&lt;int, BossData, BossDataSource, BossDataLoader&gt;.DataSource</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Databases.Database-4.html#RisingV_Shared_Databases_Database_4_DataLoader">Database&lt;int, BossData, BossDataSource, BossDataLoader&gt;.DataLoader</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Databases.Database-4.html#RisingV_Shared_Databases_Database_4_VerifySource">Database&lt;int, BossData, BossDataSource, BossDataLoader&gt;.VerifySource()</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Databases.Database-4.html#RisingV_Shared_Databases_Database_4_Initialize_RisingV_Shared_Databases_DatabaseManager_System_Collections_Generic_List_RisingV_Shared_Plugins_IPlugin__">Database&lt;int, BossData, BossDataSource, BossDataLoader&gt;.Initialize(DatabaseManager, List&lt;IPlugin&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Databases.Database-4.html#RisingV_Shared_Databases_Database_4_Terminate_RisingV_Shared_Databases_DatabaseManager_System_Collections_Generic_List_RisingV_Shared_Plugins_IPlugin__">Database&lt;int, BossData, BossDataSource, BossDataLoader&gt;.Terminate(DatabaseManager, List&lt;IPlugin&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Databases.Database-4.html#RisingV_Shared_Databases_Database_4_Load_RisingV_Shared_Databases_DatabaseManager_System_Collections_Generic_List_RisingV_Shared_Plugins_IPlugin__">Database&lt;int, BossData, BossDataSource, BossDataLoader&gt;.Load(DatabaseManager, List&lt;IPlugin&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Databases.Database-4.html#RisingV_Shared_Databases_Database_4_Ready_RisingV_Shared_Databases_DatabaseManager_System_Collections_Generic_List_RisingV_Shared_Plugins_IPlugin__">Database&lt;int, BossData, BossDataSource, BossDataLoader&gt;.Ready(DatabaseManager, List&lt;IPlugin&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Databases.Database-4.html#RisingV_Shared_Databases_Database_4_Reload_RisingV_Shared_Databases_DatabaseManager_">Database&lt;int, BossData, BossDataSource, BossDataLoader&gt;.Reload(DatabaseManager)</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Databases.Database-4.html#RisingV_Shared_Databases_Database_4_Reload_RisingV_Shared_Databases_DatabaseManager_System_Collections_Generic_List_RisingV_Shared_Plugins_IPlugin__RisingV_Shared_Managers_ReloadReason_">Database&lt;int, BossData, BossDataSource, BossDataLoader&gt;.Reload(DatabaseManager, List&lt;IPlugin&gt;, ReloadReason)</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Databases.Database-4.html#RisingV_Shared_Databases_Database_4_Unload_RisingV_Shared_Databases_DatabaseManager_">Database&lt;int, BossData, BossDataSource, BossDataLoader&gt;.Unload(DatabaseManager)</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Databases.Database-4.html#RisingV_Shared_Databases_Database_4_Unload_RisingV_Shared_Databases_DatabaseManager_System_Collections_Generic_List_RisingV_Shared_Plugins_IPlugin__">Database&lt;int, BossData, BossDataSource, BossDataLoader&gt;.Unload(DatabaseManager, List&lt;IPlugin&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Databases.Database-4.html#RisingV_Shared_Databases_Database_4_Clear_RisingV_Shared_Databases_DatabaseManager_">Database&lt;int, BossData, BossDataSource, BossDataLoader&gt;.Clear(DatabaseManager)</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Databases.Database-4.html#RisingV_Shared_Databases_Database_4_Clear">Database&lt;int, BossData, BossDataSource, BossDataLoader&gt;.Clear()</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Databases.Database-4.html#RisingV_Shared_Databases_Database_4_Count">Database&lt;int, BossData, BossDataSource, BossDataLoader&gt;.Count()</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Databases.Database-4.html#RisingV_Shared_Databases_Database_4_Get__0_">Database&lt;int, BossData, BossDataSource, BossDataLoader&gt;.Get(int)</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Databases.Database-4.html#RisingV_Shared_Databases_Database_4_TryGet__0_">Database&lt;int, BossData, BossDataSource, BossDataLoader&gt;.TryGet(int)</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Databases.Database-4.html#RisingV_Shared_Databases_Database_4_GetAll">Database&lt;int, BossData, BossDataSource, BossDataLoader&gt;.GetAll()</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Databases.Database-4.html#RisingV_Shared_Databases_Database_4_ForEach_System_Action__0__1__">Database&lt;int, BossData, BossDataSource, BossDataLoader&gt;.ForEach(Action&lt;int, BossData&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Databases.Database-4.html#RisingV_Shared_Databases_Database_4_Add__0__1_">Database&lt;int, BossData, BossDataSource, BossDataLoader&gt;.Add(int, BossData)</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Databases.Database-4.html#RisingV_Shared_Databases_Database_4_Add__1_">Database&lt;int, BossData, BossDataSource, BossDataLoader&gt;.Add(BossData)</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Databases.Database-4.html#RisingV_Shared_Databases_Database_4_Remove__0_">Database&lt;int, BossData, BossDataSource, BossDataLoader&gt;.Remove(int)</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Databases.Database-4.html#RisingV_Shared_Databases_Database_4_Item__0_">Database&lt;int, BossData, BossDataSource, BossDataLoader&gt;.this[int]</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="RisingV.Core.Extensions.EntityExtensions.html#RisingV_Core_Extensions_EntityExtensions_IsAspect__1_System_Object_">EntityExtensions.IsAspect&lt;TAspect&gt;(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="RisingV.Shared.Extensions.EntityExtensions.html#RisingV_Shared_Extensions_EntityExtensions_IsAspect__1_System_Object_">EntityExtensions.IsAspect&lt;TAspect&gt;(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="RisingV.Shared.Extensions.EntityExtensions.html#RisingV_Shared_Extensions_EntityExtensions_IsAspect__1_System_Object_">EntityExtensions.IsAspect&lt;TAspect&gt;(object)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="RisingV_BossDrops_Database_BossDatabase__ctor_" data-uid="RisingV.BossDrops.Database.BossDatabase.#ctor*"></a>
+
+  <h3 id="RisingV_BossDrops_Database_BossDatabase__ctor" data-uid="RisingV.BossDrops.Database.BossDatabase.#ctor">
+  BossDatabase()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.BossDrops/blob/master/RisingV.BossDrops/Database/BossDatabase.cs/#L299"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Database for managing boss data.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BossDatabase()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="RisingV_BossDrops_Database_BossDatabase_Log_" data-uid="RisingV.BossDrops.Database.BossDatabase.Log*"></a>
+
+  <h3 id="RisingV_BossDrops_Database_BossDatabase_Log" data-uid="RisingV.BossDrops.Database.BossDatabase.Log">
+  Log
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.BossDrops/blob/master/RisingV.BossDrops/Database/BossDatabase.cs/#L303"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override Logger Log { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="RisingV.Shared.Logging.Logger.html">Logger</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="RisingV_BossDrops_Database_BossDatabase_Get_" data-uid="RisingV.BossDrops.Database.BossDatabase.Get*"></a>
+
+  <h3 id="RisingV_BossDrops_Database_BossDatabase_Get_Stunlock_Core_PrefabGUID_" data-uid="RisingV.BossDrops.Database.BossDatabase.Get(Stunlock.Core.PrefabGUID)">
+  Get(PrefabGUID)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.BossDrops/blob/master/RisingV.BossDrops/Database/BossDatabase.cs/#L374"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a boss by its Prefab GUID.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BossData? Get(PrefabGUID prefabGuid)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>prefabGuid</code> <span class="xref">PrefabGUID</span></dt>
+    <dd><p>The Prefab GUID of the boss to retrieve.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="RisingV.BossDrops.Data.BossData.html">BossData</a></dt>
+    <dd><p>The <a class="xref" href="RisingV.BossDrops.Data.BossData.html">BossData</a> if found; otherwise, null.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RisingV_BossDrops_Database_BossDatabase_GetByEntity_" data-uid="RisingV.BossDrops.Database.BossDatabase.GetByEntity*"></a>
+
+  <h3 id="RisingV_BossDrops_Database_BossDatabase_GetByEntity_Unity_Entities_Entity_" data-uid="RisingV.BossDrops.Database.BossDatabase.GetByEntity(Unity.Entities.Entity)">
+  GetByEntity(Entity)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.BossDrops/blob/master/RisingV.BossDrops/Database/BossDatabase.cs/#L384"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a boss by its Entity.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BossData? GetByEntity(Entity entity)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>entity</code> <span class="xref">Entity</span></dt>
+    <dd><p>The Entity of the boss to retrieve.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="RisingV.BossDrops.Data.BossData.html">BossData</a></dt>
+    <dd><p>The <a class="xref" href="RisingV.BossDrops.Data.BossData.html">BossData</a> if found; otherwise, null.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RisingV_BossDrops_Database_BossDatabase_GetByName_" data-uid="RisingV.BossDrops.Database.BossDatabase.GetByName*"></a>
+
+  <h3 id="RisingV_BossDrops_Database_BossDatabase_GetByName_System_String_" data-uid="RisingV.BossDrops.Database.BossDatabase.GetByName(System.String)">
+  GetByName(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.BossDrops/blob/master/RisingV.BossDrops/Database/BossDatabase.cs/#L325"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a boss by its name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BossData? GetByName(string name)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the boss to retrieve.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="RisingV.BossDrops.Data.BossData.html">BossData</a></dt>
+    <dd><p>The <a class="xref" href="RisingV.BossDrops.Data.BossData.html">BossData</a> if found; otherwise, null.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RisingV_BossDrops_Database_BossDatabase_GetModelAndEntityByPrefabGuid_" data-uid="RisingV.BossDrops.Database.BossDatabase.GetModelAndEntityByPrefabGuid*"></a>
+
+  <h3 id="RisingV_BossDrops_Database_BossDatabase_GetModelAndEntityByPrefabGuid_Stunlock_Core_PrefabGUID_RisingV_BossDrops_Data_BossData__Unity_Entities_Entity__System_Boolean_" data-uid="RisingV.BossDrops.Database.BossDatabase.GetModelAndEntityByPrefabGuid(Stunlock.Core.PrefabGUID,RisingV.BossDrops.Data.BossData@,Unity.Entities.Entity@,System.Boolean)">
+  GetModelAndEntityByPrefabGuid(PrefabGUID, out BossData?, out Entity, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.BossDrops/blob/master/RisingV.BossDrops/Database/BossDatabase.cs/#L338"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the model and entity for a boss by its Prefab GUID.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool GetModelAndEntityByPrefabGuid(PrefabGUID prefabGuid, out BossData? bossData, out Entity bossEntity, bool noWarnLogs = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>prefabGuid</code> <span class="xref">PrefabGUID</span></dt>
+    <dd><p>The Prefab GUID of the boss.</p>
+</dd>
+    <dt><code>bossData</code> <a class="xref" href="RisingV.BossDrops.Data.BossData.html">BossData</a></dt>
+    <dd><p>The <a class="xref" href="RisingV.BossDrops.Data.BossData.html">BossData</a> if found; otherwise, null.</p>
+</dd>
+    <dt><code>bossEntity</code> <span class="xref">Entity</span></dt>
+    <dd><p>The Entity representing the boss.</p>
+</dd>
+    <dt><code>noWarnLogs</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>If true, suppresses warning logs when the boss entity is not found or is not a VBlood unit.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if the boss data and entity were successfully retrieved; otherwise, false.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RisingV_BossDrops_Database_BossDatabase_Initialize_" data-uid="RisingV.BossDrops.Database.BossDatabase.Initialize*"></a>
+
+  <h3 id="RisingV_BossDrops_Database_BossDatabase_Initialize_RisingV_Shared_Databases_DatabaseManager_System_Collections_Generic_List_RisingV_Shared_Plugins_IPlugin__" data-uid="RisingV.BossDrops.Database.BossDatabase.Initialize(RisingV.Shared.Databases.DatabaseManager,System.Collections.Generic.List{RisingV.Shared.Plugins.IPlugin})">
+  Initialize(DatabaseManager, List&lt;IPlugin&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.BossDrops/blob/master/RisingV.BossDrops/Database/BossDatabase.cs/#L305"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes the lifecycle of the manager with a specific type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Initialize(DatabaseManager manager, List&lt;IPlugin&gt; plugins)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>manager</code> <a class="xref" href="RisingV.Shared.Databases.DatabaseManager.html">DatabaseManager</a></dt>
+    <dd></dd>
+    <dt><code>plugins</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="RisingV.Shared.Plugins.IPlugin.html">IPlugin</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RisingV_BossDrops_Database_BossDatabase_RemoveByName_" data-uid="RisingV.BossDrops.Database.BossDatabase.RemoveByName*"></a>
+
+  <h3 id="RisingV_BossDrops_Database_BossDatabase_RemoveByName_System_String_" data-uid="RisingV.BossDrops.Database.BossDatabase.RemoveByName(System.String)">
+  RemoveByName(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.BossDrops/blob/master/RisingV.BossDrops/Database/BossDatabase.cs/#L315"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Removes a boss by its name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BossData? RemoveByName(string name)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the boss to remove.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="RisingV.BossDrops.Data.BossData.html">BossData</a></dt>
+    <dd><p>The removed <a class="xref" href="RisingV.BossDrops.Data.BossData.html">BossData</a> if found; otherwise, null.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RisingV_BossDrops_Database_BossDatabase_TryGetByEntity_" data-uid="RisingV.BossDrops.Database.BossDatabase.TryGetByEntity*"></a>
+
+  <h3 id="RisingV_BossDrops_Database_BossDatabase_TryGetByEntity_Unity_Entities_Entity_" data-uid="RisingV.BossDrops.Database.BossDatabase.TryGetByEntity(Unity.Entities.Entity)">
+  TryGetByEntity(Entity)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.BossDrops/blob/master/RisingV.BossDrops/Database/BossDatabase.cs/#L394"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Attempts to get a boss by its Entity.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BossData? TryGetByEntity(Entity entity)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>entity</code> <span class="xref">Entity</span></dt>
+    <dd><p>The Entity of the boss to retrieve.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="RisingV.BossDrops.Data.BossData.html">BossData</a></dt>
+    <dd><p>The <a class="xref" href="RisingV.BossDrops.Data.BossData.html">BossData</a> if found; otherwise, null.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/BenDol/RisingV.BossDrops/blob/master/RisingV.BossDrops/Database/BossDatabase.cs/#L299" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

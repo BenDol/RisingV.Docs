@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class TypeKeyedMap&lt;TValue&gt; | RisingV.BossDrops </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class TypeKeyedMap&lt;TValue&gt; | RisingV.BossDrops ">
+      
+      <meta name="description" content="Represents a map (dictionary) that uses types as keys.">
+      <link rel="icon" href="../assets/favicon/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/BenDol/RisingV.Shared/new/master/apiSpec/new?filename=RisingV_Shared_Collections_TypeKeyedMap_1.md&amp;value=---%0Auid%3A%20RisingV.Shared.Collections.TypeKeyedMap%601%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../assets/images/logo_50.png" alt="RisingV.BossDrops">
+            RisingV.BossDrops
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="RisingV.Shared.Collections.TypeKeyedMap`1">
+
+
+
+  <h1 id="RisingV_Shared_Collections_TypeKeyedMap_1" data-uid="RisingV.Shared.Collections.TypeKeyedMap`1" class="text-break">
+Class TypeKeyedMap&lt;TValue&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Collections/TypeKeyedMap.cs/#L14"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="RisingV.html">RisingV</a>.<a class="xref" href="RisingV.Shared.html">Shared</a>.<a class="xref" href="RisingV.Shared.Collections.html">Collections</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>RisingV.Shared.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Represents a map (dictionary) that uses types as keys.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class TypeKeyedMap&lt;TValue&gt;</code></pre>
+  </div>
+
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TValue</code></dt>
+    <dd></dd>
+  </dl>
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">TypeKeyedMap&lt;TValue&gt;</span></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist derived">
+    <dt>Derived</dt>
+    <dd>
+      <div><a class="xref" href="RisingV.Core.Entities.EntityComponentMap.html">EntityComponentMap</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="RisingV.Core.Extensions.EntityExtensions.html#RisingV_Core_Extensions_EntityExtensions_IsAspect__1_System_Object_">EntityExtensions.IsAspect&lt;TAspect&gt;(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="RisingV.Shared.Extensions.EntityExtensions.html#RisingV_Shared_Extensions_EntityExtensions_IsAspect__1_System_Object_">EntityExtensions.IsAspect&lt;TAspect&gt;(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="RisingV.Shared.Extensions.EntityExtensions.html#RisingV_Shared_Extensions_EntityExtensions_IsAspect__1_System_Object_">EntityExtensions.IsAspect&lt;TAspect&gt;(object)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="RisingV_Shared_Collections_TypeKeyedMap_1__ctor_" data-uid="RisingV.Shared.Collections.TypeKeyedMap`1.#ctor*"></a>
+
+  <h3 id="RisingV_Shared_Collections_TypeKeyedMap_1__ctor_RisingV_Shared_Collections_IMap_System_Type__0__" data-uid="RisingV.Shared.Collections.TypeKeyedMap`1.#ctor(RisingV.Shared.Collections.IMap{System.Type,`0})">
+  TypeKeyedMap(IMap&lt;Type, TValue&gt;?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Collections/TypeKeyedMap.cs/#L14"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Represents a map (dictionary) that uses types as keys.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TypeKeyedMap(IMap&lt;Type, TValue&gt;? map = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>map</code> <a class="xref" href="RisingV.Shared.Collections.IMap-2.html">IMap</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a>, TValue&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="RisingV_Shared_Collections_TypeKeyedMap_1_Count_" data-uid="RisingV.Shared.Collections.TypeKeyedMap`1.Count*"></a>
+
+  <h3 id="RisingV_Shared_Collections_TypeKeyedMap_1_Count" data-uid="RisingV.Shared.Collections.TypeKeyedMap`1.Count">
+  Count
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Collections/TypeKeyedMap.cs/#L83"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Count { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="RisingV_Shared_Collections_TypeKeyedMap_1_Item_" data-uid="RisingV.Shared.Collections.TypeKeyedMap`1.Item*"></a>
+
+  <h3 id="RisingV_Shared_Collections_TypeKeyedMap_1_Item_System_Type_" data-uid="RisingV.Shared.Collections.TypeKeyedMap`1.Item(System.Type)">
+  this[Type]
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Collections/TypeKeyedMap.cs/#L89"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TValue this[Type type] { get; set; }</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>type</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">TValue</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="RisingV_Shared_Collections_TypeKeyedMap_1_Keys_" data-uid="RisingV.Shared.Collections.TypeKeyedMap`1.Keys*"></a>
+
+  <h3 id="RisingV_Shared_Collections_TypeKeyedMap_1_Keys" data-uid="RisingV.Shared.Collections.TypeKeyedMap`1.Keys">
+  Keys
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Collections/TypeKeyedMap.cs/#L85"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;Type&gt; Keys { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="RisingV_Shared_Collections_TypeKeyedMap_1_Values_" data-uid="RisingV.Shared.Collections.TypeKeyedMap`1.Values*"></a>
+
+  <h3 id="RisingV_Shared_Collections_TypeKeyedMap_1_Values" data-uid="RisingV.Shared.Collections.TypeKeyedMap`1.Values">
+  Values
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Collections/TypeKeyedMap.cs/#L87"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;TValue&gt; Values { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;TValue&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="RisingV_Shared_Collections_TypeKeyedMap_1_Add_" data-uid="RisingV.Shared.Collections.TypeKeyedMap`1.Add*"></a>
+
+  <h3 id="RisingV_Shared_Collections_TypeKeyedMap_1_Add__1" data-uid="RisingV.Shared.Collections.TypeKeyedMap`1.Add``1">
+  Add&lt;TX&gt;()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Collections/TypeKeyedMap.cs/#L18"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TX Add&lt;TX&gt;() where TX : TValue</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">TX</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TX</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="RisingV_Shared_Collections_TypeKeyedMap_1_Add_" data-uid="RisingV.Shared.Collections.TypeKeyedMap`1.Add*"></a>
+
+  <h3 id="RisingV_Shared_Collections_TypeKeyedMap_1_Add__1___0_" data-uid="RisingV.Shared.Collections.TypeKeyedMap`1.Add``1(``0)">
+  Add&lt;TX&gt;(TX)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Collections/TypeKeyedMap.cs/#L23"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Add&lt;TX&gt;(TX value) where TX : TValue</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <span class="xref">TX</span></dt>
+    <dd></dd>
+  </dl>
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TX</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="RisingV_Shared_Collections_TypeKeyedMap_1_Clear_" data-uid="RisingV.Shared.Collections.TypeKeyedMap`1.Clear*"></a>
+
+  <h3 id="RisingV_Shared_Collections_TypeKeyedMap_1_Clear" data-uid="RisingV.Shared.Collections.TypeKeyedMap`1.Clear">
+  Clear()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Collections/TypeKeyedMap.cs/#L78"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Clear()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RisingV_Shared_Collections_TypeKeyedMap_1_Contains_" data-uid="RisingV.Shared.Collections.TypeKeyedMap`1.Contains*"></a>
+
+  <h3 id="RisingV_Shared_Collections_TypeKeyedMap_1_Contains__1" data-uid="RisingV.Shared.Collections.TypeKeyedMap`1.Contains``1">
+  Contains&lt;TX&gt;()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Collections/TypeKeyedMap.cs/#L72"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Contains&lt;TX&gt;() where TX : TValue</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TX</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="RisingV_Shared_Collections_TypeKeyedMap_1_GetOrCreate_" data-uid="RisingV.Shared.Collections.TypeKeyedMap`1.GetOrCreate*"></a>
+
+  <h3 id="RisingV_Shared_Collections_TypeKeyedMap_1_GetOrCreate__1" data-uid="RisingV.Shared.Collections.TypeKeyedMap`1.GetOrCreate``1">
+  GetOrCreate&lt;TX&gt;()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Collections/TypeKeyedMap.cs/#L62"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TX GetOrCreate&lt;TX&gt;() where TX : TValue</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">TX</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TX</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="RisingV_Shared_Collections_TypeKeyedMap_1_Remove_" data-uid="RisingV.Shared.Collections.TypeKeyedMap`1.Remove*"></a>
+
+  <h3 id="RisingV_Shared_Collections_TypeKeyedMap_1_Remove__1" data-uid="RisingV.Shared.Collections.TypeKeyedMap`1.Remove``1">
+  Remove&lt;TX&gt;()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Collections/TypeKeyedMap.cs/#L31"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TX Remove&lt;TX&gt;() where TX : TValue</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">TX</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TX</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="RisingV_Shared_Collections_TypeKeyedMap_1_TryGet_" data-uid="RisingV.Shared.Collections.TypeKeyedMap`1.TryGet*"></a>
+
+  <h3 id="RisingV_Shared_Collections_TypeKeyedMap_1_TryGet__1___0__" data-uid="RisingV.Shared.Collections.TypeKeyedMap`1.TryGet``1(``0@)">
+  TryGet&lt;TX&gt;(out TX?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Collections/TypeKeyedMap.cs/#L50"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryGet&lt;TX&gt;(out TX? value) where TX : TValue</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <span class="xref">TX</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TX</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="RisingV_Shared_Collections_TypeKeyedMap_1_TryRemove_" data-uid="RisingV.Shared.Collections.TypeKeyedMap`1.TryRemove*"></a>
+
+  <h3 id="RisingV_Shared_Collections_TypeKeyedMap_1_TryRemove__1" data-uid="RisingV.Shared.Collections.TypeKeyedMap`1.TryRemove``1">
+  TryRemove&lt;TX&gt;()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Collections/TypeKeyedMap.cs/#L41"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TX? TryRemove&lt;TX&gt;() where TX : TValue</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">TX</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TX</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Collections/TypeKeyedMap.cs/#L14" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
