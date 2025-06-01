@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>EntityComponentDatabase | RisingV.Core </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="EntityComponentDatabase | RisingV.Core ">
+      
+      
+      <link rel="icon" href="../../assets/favicon/favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/BenDol/RisingV.Core/blob/master/docs/Entities/EntityComponentDatabase.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../assets/images/logo_50.png" alt="RisingV.Core">
+            RisingV.Core
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="entitycomponentdatabase">EntityComponentDatabase</h1>
+
+<p><strong>Namespace:</strong> <code>RisingV.Core.Entities</code><br>
+<strong>Assembly:</strong> <em>RisingV.Core</em></p>
+<hr>
+<h2 id="overview">Overview</h2>
+<p>The <code>EntityComponentDatabase</code> is a concrete implementation of the RisingV database abstraction (see <a href="#">Databases.md</a> for full context). It provides a convenient, type-safe way to store and retrieve component data associated with Unity entities, leveraging the existing <code>DatabaseWithSource&lt;TKey, TMap, TSource&gt;</code> base class.</p>
+<ul>
+<li><p><strong>EntityComponentMap</strong><br>
+Internally, this database uses <code>EntityComponentMap</code> (a specialized <code>TypeKeyedMap&lt;IEntityComponentData&gt;</code>) to hold one or more components for each <code>Entity</code>. Each map entry is keyed by a <code>Type</code> (the component type) and stores an instance of <code>IEntityComponentData</code>.</p>
+</li>
+<li><p><strong>EntityComponentDatabase</strong><br>
+Extends <code>DatabaseWithSource&lt;int, EntityComponentMap, EntityKeyedMapDataSource&lt;EntityComponentMap&gt;&gt;</code>.</p>
+<ul>
+<li>The key (<code>int</code>) is the raw integer value of a Unity <code>Entity</code>.</li>
+<li>The value (<code>EntityComponentMap</code>) holds all component data for a given <code>Entity</code>.</li>
+<li>The data source (<code>EntityKeyedMapDataSource&lt;EntityComponentMap&gt;</code>) abstracts storage and retrieval of <code>EntityComponentMap</code> instances.</li>
+</ul>
+</li>
+</ul>
+<p>This database integrates into the RisingV framework’s lifecycle (<code>Initialize → Load → Ready → ...</code>) through <code>DatabaseManager</code>, allowing hot‐reload and consistent data management.</p>
+<hr>
+<h3 id="public-api">Public API</h3>
+<h4 id="entitycomponentmap-getentity-entity"><code>EntityComponentMap Get(Entity entity)</code></h4>
+<p>Retrieves the <code>EntityComponentMap</code> for the specified <code>Entity</code>.</p>
+<ul>
+<li>If no map exists for that entity, this method throws a <code>KeyNotFoundException</code> (via <code>DataSource.Get</code>).</li>
+<li>Use when you are certain the map is present (e.g., after <code>GetOrCreate</code>).</li>
+</ul>
+<p><strong>Usage Example</strong></p>
+<pre><code class="lang-csharp">var componentMap = entityComponentDb.Get(myEntity);
+</code></pre>
+<h4 id="entitycomponentmap-trygetentity-entity"><code>EntityComponentMap? TryGet(Entity entity)</code></h4>
+<p>Attempts to retrieve the <code>EntityComponentMap</code> for the specified <code>Entity</code>.</p>
+<ul>
+<li>Returns <code>null</code> if no entry exists.</li>
+<li>Use when you want to check presence without permitting exceptions.</li>
+</ul>
+<p><strong>Usage Example</strong></p>
+<pre><code class="lang-csharp">if (entityComponentDb.TryGet(myEntity) is EntityComponentMap map)
+{
+    // Found existing map
+}
+else
+{
+    // No components registered for myEntity
+}
+</code></pre>
+<h4 id="entitycomponentmap-getorcreateentity-entity"><code>EntityComponentMap GetOrCreate(Entity entity)</code></h4>
+<p>Retrieves the existing <code>EntityComponentMap</code> if it exists; otherwise, creates (and registers) a new <code>EntityComponentMap</code> for the <code>Entity</code>.</p>
+<ul>
+<li>Ensures that every <code>Entity</code> passed will have a non-null component map.</li>
+</ul>
+<p><strong>Usage Example</strong></p>
+<pre><code class="lang-csharp">var map = entityComponentDb.GetOrCreate(myEntity);
+// Now 'map' is guaranteed to exist; you can add component data to it.
+map[typeof(MyCustomComponent)] = new MyCustomComponent { ... };
+</code></pre>
+<hr>
+<h2 id="lifecycle-integration">Lifecycle Integration</h2>
+<p>To integrate <code>EntityComponentDatabase</code> into your plugin or game logic:</p>
+<ol>
+<li><p><strong>Instantiate</strong><br>
+In your plugin’s initialization sequence (e.g., inside a BepInEx plugin’s <code>Awake</code> or <code>OnEnable</code>):</p>
+<pre><code class="lang-csharp">private DatabaseManager _dbManager;
+private EntityComponentDatabase _entityComponentDb;
+
+public void Awake()
+{
+    _dbManager = new DatabaseManager();
+    _dbManager.Initialize(this);
+
+    _entityComponentDb = _dbManager.AddDatabase&lt;EntityComponentDatabase&gt;(this);
+    // Register any other databases here...
+}
+</code></pre>
+</li>
+<li><p><strong>Load &amp; Ready</strong><br>
+After registering all databases:</p>
+<pre><code class="lang-csharp">_dbManager.Load(this);
+_dbManager.Ready(this);
+</code></pre>
+</li>
+<li><p><strong>Usage at Runtime</strong><br>
+Once in the <strong>Ready</strong> state, you can add or retrieve component maps as needed:</p>
+<pre><code class="lang-csharp">// Ensure map exists
+var map = _entityComponentDb.GetOrCreate(someEntity);
+
+// Add or update a component for that entity
+map[typeof(HealthComponent)] = new HealthComponent { Current = 100, Max = 100 };
+
+// Retrieve a component
+if (map.TryGet&lt;HealthComponent&gt;(out var health))
+{
+    // Do something with health data
+}
+</code></pre>
+</li>
+<li><p><strong>Hot‐Reload / Reload</strong><br>
+If your plugin implements dynamic reloads (e.g., development hot‐reload), <code>EntityComponentDatabase</code> will automatically:</p>
+<ul>
+<li>Persist existing maps.</li>
+<li>Re‐initialize or reload underlying data sources.</li>
+<li>Maintain any existing component data between reloads (assuming the <code>IDataSource</code> persists to disk or an in-memory store).</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="thread-safety">Thread Safety</h2>
+<ul>
+<li>The underlying <code>EntityComponentMap</code> uses a <code>ConcurrentMap&lt;Type, IEntityComponentData&gt;</code>, allowing safe concurrent reads/writes to component entries on a single entity’s map.</li>
+<li><strong>However</strong>, access to the <code>EntityComponentDatabase</code> itself is not inherently thread-safe. If multiple threads may add or retrieve maps concurrently:
+<ul>
+<li>Wrap calls to <code>GetOrCreate</code>, <code>Get</code>, or <code>TryGet</code> in a lock, or</li>
+<li>Ensure database operations occur on the main Unity thread (common practice for ECS operations).</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="common-use-cases">Common Use Cases</h2>
+<ol>
+<li><p><strong>Attaching Component Data at Spawn</strong><br>
+When a new ECS <code>Entity</code> enters the world, create or populate its component map:</p>
+<pre><code class="lang-csharp">void OnEntitySpawned(Entity newEntity)
+{
+    newEntity.AddComponentData(new PositionComponent { X = 0, Y = 0, Z = 0 });
+    newEntity.AddCustomComponentData(new MyCustomRenderComponent { MeshId = &quot;MyMesh&quot;, MaterialId = &quot;Default&quot; });
+}
+</code></pre>
+</li>
+<li><p><strong>Querying All Components for an Entity</strong><br>
+To iterate over all stored components for a given <code>Entity</code>:</p>
+<pre><code class="lang-csharp">if (_entityComponentDb.TryGet(myEntity) is EntityComponentMap existingMap)
+{
+    foreach (var kvp in existingMap.Entries)
+    {
+        Type componentType           = kvp.Key;
+        IEntityComponentData instance = kvp.Value;
+        // Process or inspect component instance
+    }
+}
+</code></pre>
+</li>
+<li><p><strong>Removing Component Data</strong><br>
+If you need to clear or replace data:</p>
+<pre><code class="lang-csharp">var map = _entityComponentDb.GetOrCreate(myEntity);
+map.Remove(typeof(StatusEffectComponent));
+</code></pre>
+</li>
+<li><p><strong>Persisting / Saving State</strong><br>
+Because <code>EntityComponentDatabase</code> inherits from <code>DatabaseWithSource&lt;…&gt;</code>, invoking <code>Save</code> or <code>Reload</code> on the <code>DatabaseManager</code> will propagate calls down to the <code>EntityKeyedMapDataSource</code>, which may serialize each <code>EntityComponentMap</code> (depending on the configured loader). This enables persisting entity‐component relationships across sessions or allowing live hot‐reload of component data.</p>
+</li>
+</ol>
+<hr>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<table>
+<thead>
+<tr>
+<th>Symptom</th>
+<th>Possible Cause</th>
+<th>Remedy</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>KeyNotFoundException</code> when calling <code>Get(entity)</code></td>
+<td>No map exists for the given <code>Entity</code>.</td>
+<td>Use <code>GetOrCreate</code> to ensure a map is present, or check <code>TryGet</code> before <code>Get</code>.</td>
+</tr>
+<tr>
+<td>Missing component data after hot‐reload</td>
+<td>Custom <code>IDataSource</code> did not persist previous state or was re‐initialized empty.</td>
+<td>Verify that <code>EntityKeyedMapDataSource</code> is configured correctly and underlying file paths exist.</td>
+</tr>
+<tr>
+<td>Thread‐safety issues (race conditions)</td>
+<td>Concurrent calls to <code>GetOrCreate</code> or map modifications from multiple threads.</td>
+<td>Wrap database or map access in locks, or restrict operations to the Unity main thread.</td>
+</tr>
+<tr>
+<td>Unexpectedly empty <code>EntityComponentMap</code></td>
+<td>Components were never added, or map was never created via <code>GetOrCreate</code>.</td>
+<td>Confirm that <code>GetOrCreate</code> is called before reading or writing to the map.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="summary">Summary</h2>
+<p><code>EntityComponentDatabase</code> provides a powerful, schema‐agnostic way to attach arbitrary component data to Unity <code>Entity</code> instances within the RisingV framework. By leveraging the existing database‐and‐data‐source pattern, it supports:</p>
+<ul>
+<li><strong>Type‐safe storage</strong> of multiple component types per entity</li>
+<li><strong>Thread‐safe</strong> per‐entity maps via <code>ConcurrentMap&lt;Type, IEntityComponentData&gt;</code></li>
+<li><strong>Lifecycle integration</strong> through <code>DatabaseManager</code> (initialize, load, ready, etc.)</li>
+<li><strong>Persistency</strong> and <strong>hot‐reload</strong> capabilities, depending on the configured <code>IDataSource</code> and <code>IDataLoader</code></li>
+</ul>
+<p>Use <code>EntityComponentDatabase</code> whenever you need to manage custom component data outside of Unity’s built‐in ECS systems, particularly for modding scenarios where dynamic serialization, hot‐reloading, and plugin lifecycle coordination are critical.</p>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/BenDol/RisingV.Core/blob/master/docs/Entities/EntityComponentDatabase.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Plugins Overview | RisingV.Core </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Plugins Overview | RisingV.Core ">
+      
+      
+      <link rel="icon" href="../assets/favicon/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/BenDol/RisingV.Core/blob/master/docs/Plugins.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../assets/images/logo_50.png" alt="RisingV.Core">
+            RisingV.Core
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="plugins-overview">Plugins Overview</h1>
+
+<p>The <strong>RisingV.Core.Plugins</strong> (RisingV.Shared.Plugins) abstraction serves as the foundational entry point for building modular, self-contained feature packs—<strong>plugins</strong>—in the RisingV ecosystem. Rather than working directly with raw BepInEx <code>BasePlugin</code> classes, RisingV plugins leverage a consistent, six-stage lifecycle, integrated configuration binding, and automatic manager wiring (engines, databases, systems) to ensure a robust, maintainable, and hot-swappable modding framework.</p>
+<hr>
+<h2 id="api-documentation">API Documentation</h2>
+<p>For full details on available classes, interfaces, and methods within the Plugins namespace, refer to the official API reference:</p>
+<blockquote>
+<p>🔗 <a href="https://docs.risingv.dev/core/api/RisingV.Core.Plugins.html"><strong>RisingV.Core.Plugins API Reference</strong></a></p>
+</blockquote>
+<hr>
+<h2 id="1-core-abstraction">1. Core Abstraction</h2>
+<p>At its core, RisingV’s plugin system wraps BepInEx’s <code>BasePlugin</code> into a richer abstraction:</p>
+<ul>
+<li><p><strong>Uniform Six-Stage Lifecycle</strong><br>
+Each plugin follows a strict sequence:</p>
+<ol>
+<li><strong>Initialize</strong></li>
+<li><strong>Load</strong></li>
+<li><strong>Ready</strong></li>
+<li><strong>Reload</strong></li>
+<li><strong>Unload</strong></li>
+<li><strong>Terminate</strong></li>
+</ol>
+</li>
+<li><p><strong>Configuration Binding</strong><br>
+Built atop <code>BaseConfig</code>, each plugin can define a strongly-typed <code>PluginConfig</code> subclass. The abstraction queues up <code>ConfigEntry&lt;T&gt;</code> bindings and automatically reads or hot-reloads them at the appropriate lifecycle stage.</p>
+</li>
+<li><p><strong>Manager Wiring</strong><br>
+RisingV encourages separation of concerns by dividing functionality into managers such as:</p>
+<ul>
+<li><strong>EngineManager</strong> (coordinates Engines)</li>
+<li><strong>DatabaseManager</strong> (coordinates Databases)</li>
+<li><strong>SystemManager</strong> (coordinates custom systems or processors)<br>
+All managers are registered during <strong>Initialize</strong> and automatically invoked during <strong>Load</strong> and <strong>Ready</strong>.</li>
+</ul>
+</li>
+<li><p><strong>Logging &amp; EventBridge Integration</strong><br>
+Each plugin receives a <code>Logger</code> instance scoped to its GUID. Additionally, <code>Publish</code> and <code>Subscribe</code> wrappers simplify event handling through the shared <code>EventBridge</code>.</p>
+</li>
+</ul>
+<hr>
+<h2 id="2-key-contracts">2. Key Contracts</h2>
+<h3 id="iplugin">IPlugin</h3>
+<p>Defines the minimal contract for any RisingV plugin:</p>
+<pre><code class="lang-csharp">public interface IPlugin
+{
+    string   Guid     { get; }
+    string   Name     { get; }
+    Version  Version  { get; }
+    string   Author   { get; }
+
+    bool IsInitialized { get; }
+    bool IsLoaded      { get; }
+    bool IsReady       { get; }
+
+    void Initialize();
+    void Load();
+    void Ready();
+    void Reload(ReloadReason reason);
+    void Unload();
+    void Terminate();
+}
+</code></pre>
+<ul>
+<li><p><strong>GUID, Name, Version, Author</strong><br>
+Read-only metadata for plugin identification.</p>
+</li>
+<li><p><strong>Lifecycle State Flags</strong><br>
+<code>IsInitialized</code>, <code>IsLoaded</code>, <code>IsReady</code> serve as idempotent guards; any override must invoke <code>base.*()</code> to keep them in sync.</p>
+</li>
+<li><p><strong>Lifecycle Methods</strong></p>
+<ul>
+<li><code>Initialize()</code>: Register configuration, managers, default data.</li>
+<li><code>Load()</code>: Connect to external resources, allocate heavy objects.</li>
+<li><code>Ready()</code>: Safe point for inter-plugin communication (all plugins have completed Load).</li>
+<li><code>Reload(ReloadReason)</code>: Triggered on Hot-Reload or manual reload commands.</li>
+<li><code>Unload()</code>: Dispose caches, detach from events, stop threads.</li>
+<li><code>Terminate()</code>: Final cleanup before server shutdown.</li>
+</ul>
+</li>
+</ul>
+<h3 id="risingbaseplugin">RisingBasePlugin</h3>
+<p>A concrete, opinionated base class that implements <code>IPlugin</code> and extends BepInEx’s <code>BasePlugin</code>:</p>
+<ul>
+<li><p><strong>Logger</strong><br>
+Protected <code>Logger Log</code> is instantiated using the plugin’s GUID. Use <code>Log.Info()</code>, <code>Log.Warning()</code>, etc., for structured logging.</p>
+</li>
+<li><p><strong>PluginConfig</strong><br>
+A <code>public PluginConfig Config</code> instance is auto-instantiated. Override <code>CreateConfig()</code> to supply a custom <code>PluginConfig</code> subclass.</p>
+</li>
+<li><p><strong>Manager Accessors</strong><br>
+Provides helper properties to retrieve common managers:</p>
+<ul>
+<li><code>EngineManager Engines { get; }</code></li>
+<li><code>DatabaseManager Databases { get; }</code></li>
+<li><code>SystemManager Systems { get; }</code></li>
+<li>Additional managers (e.g., <code>AspectManager</code>, <code>ItemManager</code>) as needed.</li>
+</ul>
+</li>
+<li><p><strong>EventBridge Wrappers</strong><br>
+Simplifies usage of <code>EventBridge.Publish(...)</code> and <code>EventBridge.Subscribe&lt;TEvent&gt;(handler)</code>.</p>
+</li>
+</ul>
+<hr>
+<h2 id="3-lifecycle-flow">3. Lifecycle Flow</h2>
+<pre><code>┌──────────┐     ┌──────────┐     ┌──────────┐
+│Initialize│ ──► │   Load   │ ──► │  Ready   │
+└──────────┘     └──────────┘     └──────────┘
+      ▲               │               │
+      │               ▼               ▼
+┌──────────┐     ┌──────────┐     ┌──────────┐
+│Terminate │ ◄── │  Unload  │ ◄── │  Reload  │
+└──────────┘     └──────────┘     └──────────┘
+</code></pre>
+<ul>
+<li><p><strong>Initialize</strong></p>
+<ul>
+<li>Instantiate and register all necessary managers (Engines, Databases, Systems).</li>
+<li>Create or bind configuration entries (hot-reloadable by default).</li>
+<li>Seed any default data or static references.</li>
+</ul>
+</li>
+<li><p><strong>Load</strong></p>
+<ul>
+<li>Connect to external services (e.g., network resources, file I/O).</li>
+<li>Allocate heavy or long-lived objects (caches, background threads).</li>
+<li>Register event handlers (through <code>EventBridge</code> or game hooks).</li>
+</ul>
+</li>
+<li><p><strong>Ready</strong></p>
+<ul>
+<li>All other plugins have completed Load.</li>
+<li>Safe to perform cross-plugin interactions (subscribe to events published by other plugins).</li>
+<li>Begin gameplay-related logic (hook into game state, spawn objects).</li>
+</ul>
+</li>
+<li><p><strong>Reload</strong></p>
+<ul>
+<li>Called on manual “reloadall” or BepInEx hot-reload.</li>
+<li>Plugin should reload modified configurations or refresh resources.</li>
+<li>Use <code>ReloadReason.IsFull</code> to discriminate between full reload and partial reloads.</li>
+</ul>
+</li>
+<li><p><strong>Unload</strong></p>
+<ul>
+<li>Dispose of large caches, stop or signal threads to exit.</li>
+<li>Detach all event listeners to prevent memory leaks.</li>
+<li>Prepare for potential re-initialization on the next reload.</li>
+</ul>
+</li>
+<li><p><strong>Terminate</strong></p>
+<ul>
+<li>Final cleanup: close file handles, save critical data, remove persistent references.</li>
+<li>Called when the server or application is shutting down.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="4-quickstart-skeleton">4. Quick‑Start Skeleton</h2>
+<p>Below is a minimal plugin template demonstrating how to leverage the RisingV plugin abstraction:</p>
+<pre><code class="lang-csharp">using BepInEx;
+using RisingV.Shared.Plugins;
+using RisingV.Shared.Engines;
+using RisingV.Core.Engines;
+
+public class MyFeatureConfig : PluginConfig
+{
+    public ConfigEntry&lt;float&gt; AttackModifier { get; set; }
+
+    public MyFeatureConfig() 
+        : base(MyPluginInfo.PLUGIN_GUID, MyPluginInfo.PLUGIN_GUID)
+    {}
+
+    public override void Load()
+    {
+        base.Load();
+        AttackModifier = Bind(&quot;Gameplay&quot;, &quot;AttackModifier&quot;, 1f, 
+            &quot;Multiplier applied to all player attack damage&quot;);
+    }
+}
+
+public class MyFeatureContext : PluginContext
+{
+    public MyFeatureContext() 
+        : base(typeof(MyPluginInfo), new MyFeatureConfig())
+    {}
+}
+
+[BepInPlugin(MyPluginInfo.PLUGIN_GUID, MyPluginInfo.PLUGIN_NAME, MyPluginInfo.PLUGIN_VERSION)]
+[BepInDependency(&quot;RisingV.Core&quot;)]    // Ensures RisingV.Core binaries are loaded first
+[BepInDependency(&quot;RisingV.Scripting&quot;)] // If your plugin uses scripting features
+public class MyFeaturePlugin : RisingPlugin&lt;MyFeatureContext&gt;
+{
+    protected override void OnLoad()
+    {
+        // Pre-Initialize logic (before managers are created)
+    }
+
+    protected override void RegisterEngines(EngineManager engineManager)
+    {
+        // Register domain-specific Engines
+        engineManager.AddEngine&lt;DamageEngine&gt;(this);
+        engineManager.AddEngine&lt;BuffEngine&gt;(this);
+        engineManager.AddEngine&lt;DeathEngine&gt;(this);
+    }
+
+    protected override void OnUnload()
+    {
+        // Return true to allow unload, or false to veto
+        return true;
+    }
+
+    public override void Ready()
+    {
+        // All managers and other plugins are ready: hook game logic here
+        if (Context.Config.AttackModifier.Value != 1f)
+        {
+            // Apply a global damage multiplier or patch methods accordingly
+        }
+    }
+}
+</code></pre>
+<p><strong>Tips</strong>:</p>
+<ul>
+<li>Most plugins only need to override <code>RegisterEngines</code> (or <code>RegisterDatabases</code>, <code>RegisterSystems</code>).</li>
+<li><code>BasePlugin</code> automatically invokes <code>Load()</code> and <code>Ready()</code> on all registered managers, so custom logic can often be placed solely in <code>Ready()</code>.</li>
+<li>Declare <code>[BepInDependency]</code> attributes to enforce load order for dependent plugins or RisingV subsystems.</li>
+</ul>
+<hr>
+<h2 id="5-pluginconfig-pattern">5. PluginConfig Pattern</h2>
+<p>Every RisingV plugin typically defines a <code>PluginConfig</code> subclass:</p>
+<pre><code class="lang-csharp">public sealed class LootTweaksConfig : PluginConfig
+{
+    public ConfigEntry&lt;float&gt;? Multiplier { get; private set; }
+
+    public LootTweaksConfig() 
+        : base(LootTweaksInfo.PLUGIN_GUID, LootTweaksInfo.PLUGIN_GUID)
+    {}
+
+    public override void Load()
+    {
+        base.Load();
+        Multiplier = Bind(&quot;General&quot;, &quot;Multiplier&quot;, 2f, 
+            &quot;Multiply boss loot counts by this factor.&quot;);
+    }
+}
+</code></pre>
+<ul>
+<li>Inherits <code>BaseConfig</code>, so you automatically get:
+<ul>
+<li>An <code>Enabled</code> toggle for your entire plugin.</li>
+<li>Queued binding of all <code>ConfigEntry&lt;T&gt;</code> fields.</li>
+<li>Hot-reload support: when the underlying configuration file changes, <code>Reload()</code> will rebind updated values.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Best Practice</strong>: Always perform <code>Bind()</code> calls inside <code>Load()</code>—not in the constructor—to avoid <code>NullReferenceException</code> issues.</p>
+<hr>
+<h2 id="6-pluginmanager">6. PluginManager</h2>
+<ul>
+<li>Located in <code>RisingV.Shared.Plugins</code>.</li>
+<li>Discover and register all plugins (both via reflection on <code>[BepInPlugin]</code> attributes and manually instantiated ones used in unit tests).</li>
+<li>Resolves dependencies using <code>[PluginDependency(&quot;SomeOtherGUID&quot;)]</code> attributes.</li>
+<li>Exposes control methods:
+<ul>
+<li><code>ReloadAll()</code>: Invokes <code>Reload()</code> on each plugin (in dependency‐sorted order).</li>
+<li><code>UnloadAll()</code>: Invokes <code>Unload()</code> on each plugin.</li>
+<li><code>TerminateAll()</code>: Invokes <code>Terminate()</code> on each plugin.</li>
+</ul>
+</li>
+</ul>
+<p>PluginManager ensures that plugins are loaded, unloaded, and reloaded in a deterministic order based on declared dependencies.</p>
+<hr>
+<h2 id="7-best-practices--patterns">7. Best Practices &amp; Patterns</h2>
+<ol>
+<li><p><strong>One Feature per Plugin</strong><br>
+Keep each plugin focused on a single responsibility. This makes it easier to manage dependencies and reduces coupling.</p>
+</li>
+<li><p><strong>Register Managers Early</strong><br>
+Override <code>RegisterEngines</code>, <code>RegisterDatabases</code>, and <code>RegisterSystems</code> during <code>Initialize</code> (via <code>RisingPlugin&lt;TContext&gt;</code>). Avoid delaying manager registration to <code>Ready</code> unless absolutely necessary.</p>
+</li>
+<li><p><strong>Leverage Hot-Reload</strong></p>
+<ul>
+<li>Plugins automatically support hot-reload if you bind config entries and register managers correctly.</li>
+<li>Use <code>ReloadReason</code> to distinguish between a simple config change (<code>IsConfigChange</code>) and a full reload (<code>IsFull</code>).</li>
+</ul>
+</li>
+<li><p><strong>Use EventBridge</strong></p>
+<ul>
+<li>Prefer publishing and subscribing to events rather than writing direct Harmony patches across plugins.</li>
+<li>Events decouple plugin logic and allow multiple subscribers to respond independently.</li>
+</ul>
+</li>
+<li><p><strong>Cleanup on Unload</strong></p>
+<ul>
+<li>Detach all event handlers in <code>Unload()</code>.</li>
+<li>Dispose of or null out large data structures to prevent memory leaks.</li>
+<li>Stop any custom background tasks or threads.</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="8-troubleshooting">8. Troubleshooting</h2>
+<table>
+<thead>
+<tr>
+<th>Symptom</th>
+<th>Possible Cause</th>
+<th>Fix</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Plugin stuck in “Loaded” state</td>
+<td>Forgot to call <code>Ready()</code> on a manager or in <code>BasePlugin</code></td>
+<td>Ensure you call <code>base.Ready()</code> and/or register managers before calling <code>Ready()</code>.</td>
+</tr>
+<tr>
+<td><code>NullReferenceException</code> on Config access</td>
+<td>Attempted to read <code>ConfigEntry&lt;T&gt;</code> in constructor</td>
+<td>Move all <code>Bind()</code> calls to <code>Load()</code> method.</td>
+</tr>
+<tr>
+<td>Circular plugin dependency detected</td>
+<td>Two plugins depend on each other via <code>[PluginDependency]</code></td>
+<td>Break one dependency or mark it optional.</td>
+</tr>
+<tr>
+<td>Hot-reloaded plugin fails to reinitialize</td>
+<td>Managers were not designed for hot‐reload</td>
+<td>Implement idempotent <code>Reload()</code> logic and reset internal state properly.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="9-summary">9. Summary</h2>
+<p>RisingV’s plugin abstraction layer builds on BepInEx to provide:</p>
+<ul>
+<li>A <strong>uniform six‐stage lifecycle</strong> to manage initialization, loading, readiness, reloads, unloading, and termination.</li>
+<li><strong>Automatic wiring</strong> of key subsystems (Engines, Databases, Systems) via helper managers.</li>
+<li><strong>First‐class configuration binding</strong> through <code>PluginConfig</code> (hot-reloadable).</li>
+<li><strong>Integrated logging</strong> and event publishing/subscribing via <code>EventBridge</code>.</li>
+<li>A well-defined <strong>PluginManager</strong> to discover, sort, and control plugins based on declared dependencies.</li>
+</ul>
+<p>By using this system, plugin authors achieve <strong>consistency</strong>, <strong>robustness</strong>, and <strong>hot‐swappability</strong>, enabling rapid development of feature-rich, modular add-ons for the RisingV framework.</p>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/BenDol/RisingV.Core/blob/master/docs/Plugins.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

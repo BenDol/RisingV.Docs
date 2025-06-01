@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>EntityKeyedMapDataSource&lt;TData, TLoader&gt; | RisingV.Core </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="EntityKeyedMapDataSource&lt;TData, TLoader&gt; | RisingV.Core ">
+      
+      
+      <link rel="icon" href="../../assets/favicon/favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/BenDol/RisingV.Core/blob/master/docs/Databases/EntityKeyedMapDataSource.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../assets/images/logo_50.png" alt="RisingV.Core">
+            RisingV.Core
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="entitykeyedmapdatasourcetdata-tloader">EntityKeyedMapDataSource&lt;TData, TLoader&gt;</h1>
+
+<p><strong>Namespace:</strong> <code>RisingV.Core.Databases</code><br>
+<strong>Assembly:</strong> <code>RisingV.Core</code></p>
+<pre><code class="lang-csharp">public class EntityKeyedMapDataSource&lt;TData, TLoader&gt;(Map&lt;int, TData&gt;? map = null) 
+    : MapDataSource&lt;int, TData, TLoader&gt;
+    where TData : IData
+    where TLoader : IDataLoader&lt;int, TData&gt;
+{
+    // Logger for debugging
+    protected override Logger Log { get; } 
+        = Logger.Create(
+            typeof(EntityKeyedMapDataSource&lt;TData, TLoader&gt;), 
+            LogTags.Databases);
+
+    // KeyResolver can be provided to auto-generate keys from data
+    public override Func&lt;TData, int&gt;? KeyResolver { get; set; }
+
+    public EntityKeyedMapDataSource(Map&lt;int, TData&gt;? map = null)
+        : base(map)
+    {
+    }
+
+    public override void Initialize(IDatabase&lt;int, TData&gt; database)
+    {
+        Log.Debug(&quot; &gt; Initializing {0} data source&quot;, database.Name);
+    }
+
+    public override void Load(IDatabase&lt;int, TData&gt; database, TLoader loader)
+    {
+        Log.Debug(&quot; &gt; Loading {0} data source&quot;, database.Name);
+    }
+
+    public override void Verify(IDatabase&lt;int, TData&gt; database)
+    {
+        Log.Debug(&quot; &gt; Verifying {0} data source&quot;, database.Name);
+    }
+
+    /// &lt;summary&gt;
+    /// Gets the data for the given Entity, using entity.GetHashCode() as the key.
+    /// &lt;/summary&gt;
+    public TData Get(Entity entity)
+    {
+        if (entity == Entity.Null)
+            throw new DatabaseException(&quot;Entity is null.&quot;);
+
+        return Get(entity.GetHashCode());
+    }
+
+    /// &lt;summary&gt;
+    /// Tries to get data for the given Entity; returns null if not found or on error.
+    /// &lt;/summary&gt;
+    public TData? TryGet(Entity entity)
+    {
+        try
+        {
+            if (entity == Entity.Null)
+                throw new DatabaseException(&quot;Entity is null.&quot;);
+
+            return TryGet(entity.GetHashCode());
+        }
+        catch (System.Exception e)
+        {
+            Log.Debug($&quot;Error getting data by Entity: {e} ({entity.DebugName()})&quot;);
+            return default;
+        }
+    }
+
+    /// &lt;summary&gt;
+    /// Gets existing data or creates a new instance if not found.
+    /// &lt;/summary&gt;
+    public TData GetOrCreate(Entity entity)
+    {
+        if (entity == Entity.Null)
+            throw new DatabaseException(&quot;Entity is null.&quot;);
+
+        var existing = TryGet(entity);
+        if (existing != null)
+            return existing;
+
+        var data = System.Activator.CreateInstance&lt;TData&gt;();
+        Add(entity.GetHashCode(), data);
+        return data;
+    }
+
+    /// &lt;summary&gt;
+    /// Adds data for the given Entity.
+    /// &lt;/summary&gt;
+    public void Add(Entity entity, TData data)
+    {
+        if (entity == Entity.Null)
+            throw new DatabaseException(&quot;Entity is null.&quot;);
+
+        Add(entity.GetHashCode(), data);
+    }
+}
+</code></pre>
+<h2 id="overview">Overview</h2>
+<p><code>EntityKeyedMapDataSource&lt;TData, TLoader&gt;</code> is a specialization of <code>MapDataSource&lt;int, TData, TLoader&gt;</code> that uses an ECS <code>Entity</code>’s hash code (<code>entity.GetHashCode()</code>) as the lookup key. It provides convenience methods to work directly with <code>Entity</code> instances, handling null checks and logging.</p>
+<h3 id="key-methods">Key Methods</h3>
+<ul>
+<li><p><code>TData Get(Entity entity)</code><br>
+Throws if <code>entity</code> is <code>Entity.Null</code>. Otherwise returns stored <code>TData</code>.</p>
+</li>
+<li><p><code>TData? TryGet(Entity entity)</code><br>
+Returns stored <code>TData</code> or <code>null</code> on failure. Logs errors.</p>
+</li>
+<li><p><code>TData GetOrCreate(Entity entity)</code><br>
+Returns existing data or creates a new <code>TData</code> instance if none exists.</p>
+</li>
+<li><p><code>void Add(Entity entity, TData data)</code><br>
+Adds <code>data</code> under the key <code>entity.GetHashCode()</code>. Throws if <code>entity</code> is null.</p>
+</li>
+</ul>
+<h3 id="lifecycle-overrides">Lifecycle Overrides</h3>
+<ul>
+<li><code>Initialize(...)</code>, <code>Load(...)</code>, <code>Verify(...)</code><br>
+Each logs a debug message with the database name.</li>
+</ul>
+<hr>
+<h1 id="entitykeyedmapdatasource">EntityKeyedMapDataSource<tdata></tdata></h1>
+<pre><code class="lang-csharp">public class EntityKeyedMapDataSource&lt;TData&gt;(Map&lt;int, TData&gt;? map = null) 
+    : EntityKeyedMapDataSource&lt;TData, MapDataLoader&lt;int, TData&gt;&gt;
+    where TData : IData
+{
+    public EntityKeyedMapDataSource(Map&lt;int, TData&gt;? map = null)
+        : base(map)
+    {
+    }
+}
+</code></pre>
+<p>A convenience specialization that fixes <code>TLoader</code> to <code>MapDataLoader&lt;int, TData&gt;</code>. Inherits all methods and behavior unchanged.</p>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/BenDol/RisingV.Core/blob/master/docs/Databases/EntityKeyedMapDataSource.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

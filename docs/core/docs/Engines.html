@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Engines Overview | RisingV.Core </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Engines Overview | RisingV.Core ">
+      
+      
+      <link rel="icon" href="../assets/favicon/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/BenDol/RisingV.Core/blob/master/docs/Engines.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../assets/images/logo_50.png" alt="RisingV.Core">
+            RisingV.Core
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="engines-overview">Engines Overview</h1>
+
+<p>The <strong>RisingV.Core.Engines</strong> namespace comprises a suite of “Engine” classes that orchestrate high‐level, domain‐specific logic within the RisingV framework. Each Engine encapsulates core functionality—such as tracking achievements, processing damage, managing chat, or handling persistence—by coordinating between low‐level game events, shared databases, and the EventBridge. Rather than interacting directly with Unity’s ECS or raw game systems, plugin authors can leverage these Engines to:</p>
+<ul>
+<li><strong>Centralize gameplay logic</strong> for a particular domain (e.g., achievements, buffs, loot, chat), ensuring consistent behavior across multiple plugins.</li>
+<li><strong>Subscribe to and publish events</strong> via the <code>EventBridge</code> to trigger reactive workflows (e.g., awarding rewards, persisting data, or broadcasting notifications).</li>
+<li><strong>Coordinate with databases</strong> (e.g., the <code>EntityComponentDatabase</code>, <code>StatDatabase</code>) for stateful management of game entities and player progress.</li>
+<li><strong>Simplify plugin development</strong> by exposing clear, high‐level methods (e.g., <code>GrantAchievement</code>, <code>ApplyBuff</code>, <code>SpawnLoot</code>) instead of requiring manual event hooking and state management.</li>
+</ul>
+<h2 id="how-engines-integrate">How Engines Integrate</h2>
+<ol>
+<li><p><strong>Initialization &amp; Registration</strong><br>
+During your plugin’s <code>Awake</code> or <code>OnEnable</code> method, the <code>EngineManager</code> (or a similar central registry) is responsible for creating and registering each Engine. Typically:</p>
+<pre><code class="lang-csharp">private EngineManager _engineManager;
+private AchievementEngine  _achievementEngine;
+private BuffEngine         _buffEngine;
+// ... other engines
+
+public void Awake()
+{
+    _engineManager = new EngineManager();
+    _engineManager.Initialize(this);
+
+    // Register engines
+    _achievementEngine = _engineManager.AddEngine&lt;AchievementEngine&gt;(this);
+    _buffEngine        = _engineManager.AddEngine&lt;BuffEngine&gt;(this);
+    // ... register additional engines
+
+    _engineManager.Load(this);
+    _engineManager.Ready(this);
+}
+</code></pre>
+</li>
+<li><p><strong>Event‐Driven Workflows</strong><br>
+Each Engine subscribes to relevant game events (either directly via Harmony hooks or through the shared <code>EventBridge</code>) and executes domain‐specific logic. For example:</p>
+<ul>
+<li><strong>AchievementEngine</strong> listens for “player completed achievement” events and updates the player’s achievement progress in the database.</li>
+<li><strong>DamageEngine</strong> intercepts damage application events to calculate modified damage, apply resistances, or trigger custom effects.</li>
+<li><strong>LootEngine</strong> responds to “entity death” events, rolls on loot tables, and spawns items accordingly.</li>
+</ul>
+</li>
+<li><p><strong>Engine‐Provided APIs</strong><br>
+Beyond passive event handling, Engines often expose methods that plugin authors can call to invoke domain actions:</p>
+<pre><code class="lang-csharp">// Grant an achievement to a specific player
+_achievementEngine.GrantAchievement(playerEntity, achievementId);
+
+// Apply a buff to a target entity
+_buffEngine.ApplyBuff(targetEntity, buffDefinition, durationSeconds);
+
+// Spawn loot at a world position
+_lootEngine.SpawnLoot(worldPosition, lootTier, quantity);
+</code></pre>
+</li>
+<li><p><strong>Persistence and State Management</strong><br>
+Many Engines coordinate with underlying databases to persist state between sessions or over hot‐reloads. For example, <strong>SaveEngine</strong> manages serialization of RisingV‐specific data (e.g., custom player progress, clan membership), ensuring that on server restart or plugin reload, no data is lost. The SaveEngine typically integrates with Unity’s save pipeline or a RisingV file system abstraction.</p>
+</li>
+</ol>
+<h2 id="core-engines-and-their-responsibilities">Core Engines and Their Responsibilities</h2>
+<p>Below is a brief summary of each Engine class provided by RisingV.Core. Clicking its name will take you to the official API reference for detailed method signatures and behaviors.</p>
+<ul>
+<li><p><a href="https://docs.risingv.dev/core/api/RisingV.Core.Engines.AchievementEngine.html"><strong>AchievementEngine</strong></a><br>
+Manages player achievements. Listens for achievement completion events, updates player progress, and persists earned achievements. Provides methods to programmatically grant or revoke achievements.</p>
+</li>
+<li><p><a href="https://docs.risingv.dev/core/api/RisingV.Core.Engines.AdminEngine.html"><strong>AdminEngine</strong></a><br>
+Handles administrator‐level commands and permissions. Integrates with <code>AdminAuthSystemHook</code> to enforce who can execute elevated commands (e.g., teleport, kick, spawn). Exposes APIs for checking admin status and executing admin-only operations.</p>
+</li>
+<li><p><a href="https://docs.risingv.dev/core/api/RisingV.Core.Engines.BuffEngine.html"><strong>BuffEngine</strong></a><br>
+Oversees buff application and expiration. Subscribes to buff‐related hooks to track active buffs on entities, modify durations, and publish buff events. Provides methods to add, remove, or query buff status on any entity.</p>
+</li>
+<li><p><a href="https://docs.risingv.dev/core/api/RisingV.Core.Engines.CastleEngine.html"><strong>CastleEngine</strong></a><br>
+Coordinates castle‐related gameplay (e.g., siege events, ownership claims, defense mechanics). Listens for castle state changes and manages hierarchical relationships between players, clans, and controlled structures.</p>
+</li>
+<li><p><a href="https://docs.risingv.dev/core/api/RisingV.Core.Engines.ChatEngine.html"><strong>ChatEngine</strong></a><br>
+Processes in‐game chat messages. Integrates with <code>ClientChatHook</code> and <code>ServerChatHook</code> to filter, format, or broadcast chat. Offers plugin APIs to send system messages or custom announcements to players or channels.</p>
+</li>
+<li><p><a href="https://docs.risingv.dev/core/api/RisingV.Core.Engines.ClanEngine.html"><strong>ClanEngine</strong></a><br>
+Manages clan creation, membership, permissions, and inter‐clan relationships. Subscribes to clan‐related events, updates clan rosters, and ensures persistence of clan data. Exposes methods for inviting, promoting, or expelling members.</p>
+</li>
+<li><p><a href="https://docs.risingv.dev/core/api/RisingV.Core.Engines.DamageEngine.html"><strong>DamageEngine</strong></a><br>
+Handles damage calculations and event propagation. Applies custom damage modifiers, logs damage statistics to the <code>StatDatabase</code>, and triggers special effects (e.g., critical strikes, damage over time).</p>
+</li>
+<li><p><a href="https://docs.risingv.dev/core/api/RisingV.Core.Engines.DeathEngine.html"><strong>DeathEngine</strong></a><br>
+Oversees entity death logic. Subscribes to “unit died” events, manages respawn timers, awards experience or loot via the <code>LootEngine</code>, and publishes post‐death events for plugins to react.</p>
+</li>
+<li><p><a href="https://docs.risingv.dev/core/api/RisingV.Core.Engines.EquipmentEngine.html"><strong>EquipmentEngine</strong></a><br>
+Manages equipping and unequipping items. Enforces equipment restrictions, updates stat modifiers on equip, and notifies other systems (e.g., <code>StatEngine</code>) to recalculate derived stats.</p>
+</li>
+<li><p><a href="https://docs.risingv.dev/core/api/RisingV.Core.Engines.ItemEngine.html"><strong>ItemEngine</strong></a><br>
+Handles item spawning, usage, and depletion. Listens for “item used” events, triggers consumable effects, and integrates with the <code>InventoryAspect</code> and <code>LootEngine</code> to maintain item consistency.</p>
+</li>
+<li><p><a href="https://docs.risingv.dev/core/api/RisingV.Core.Engines.LootEngine.html"><strong>LootEngine</strong></a><br>
+Coordinates loot generation and distribution. Registers drop tables, determines drop chances on death, and spawns items or resources in the world. Allows plugins to define custom loot tiers or special event drops.</p>
+</li>
+<li><p><a href="https://docs.risingv.dev/core/api/RisingV.Core.Engines.SaveEngine.html"><strong>SaveEngine</strong></a><br>
+Manages serialization and persistence of RisingV plugin data. Hooks into Unity’s save system or a custom file system to write and read data for players, entities, and plugin state. Provides explicit save-and-load methods for on‐demand persistence.</p>
+</li>
+<li><p><a href="https://docs.risingv.dev/core/api/RisingV.Core.Engines.SpawnEngine.html"><strong>SpawnEngine</strong></a><br>
+Oversees entity spawning procedures. Wraps low‐level spawn hooks to validate spawn conditions, set up initial component data via <code>EntityComponentDatabase</code>, and publish “spawned” events for downstream consumption.</p>
+</li>
+<li><p><a href="https://docs.risingv.dev/core/api/RisingV.Core.Engines.StatEngine.html"><strong>StatEngine</strong></a><br>
+Tracks and manages statistical data (e.g., damage dealt, experience earned, resources gathered). Subscribes to relevant gameplay events, aggregates stats into the <code>StatDatabase</code>, and provides methods for querying or resetting stats.</p>
+</li>
+</ul>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/BenDol/RisingV.Core/blob/master/docs/Engines.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

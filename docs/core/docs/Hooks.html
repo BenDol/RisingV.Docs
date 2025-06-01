@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Hooks Overview | RisingV.Core </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Hooks Overview | RisingV.Core ">
+      
+      
+      <link rel="icon" href="../assets/favicon/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/BenDol/RisingV.Core/blob/master/docs/Hooks.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../assets/images/logo_50.png" alt="RisingV.Core">
+            RisingV.Core
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="hooks-overview">Hooks Overview</h1>
+
+<p>The <strong>RisingV.Core.Hooks</strong> namespace provides a collection of Harmony-based “hook” classes that intercept key game systems and events in V Rising. By injecting custom behavior at strategic points—such as when a player completes an achievement, when an entity spawns, or when a server message is processed—these hooks allow RisingV plugins to:</p>
+<ul>
+<li><strong>Publish events</strong> through the shared <code>EventBridge</code> to trigger custom reactions (e.g., awarding rewards, updating UI, enforcing rules).</li>
+<li><strong>Modify or augment game logic</strong> before or after the original game method runs (e.g., adjusting loot drops, validating player actions, or enforcing server policies).</li>
+<li><strong>Integrate with core RisingV systems</strong> (e.g., persistence, authentication, stat tracking) to ensure a unified, extensible modding framework.</li>
+</ul>
+<h2 id="key-responsibilities">Key Responsibilities</h2>
+<ol>
+<li><p><strong>Event Publication</strong><br>
+Most hook classes capture internal game calls—such as <code>OnPlayerCompleteAchievement</code> or <code>ApplyBuff</code>—and publish corresponding events (<code>PlayerCompleteAchievementEvent</code>, <code>BuffAppliedEvent</code>, etc.) into the RisingV EventBridge. This decouples plugin logic from direct game APIs and ensures that multiple plugins can subscribe and respond to the same underlying game action.</p>
+</li>
+<li><p><strong>Server‐Side Enforcement</strong><br>
+Several hooks reside under the <code>RisingV.Core.Hooks.Server</code> subnamespace. They handle server‐side-only behavior, including:</p>
+<ul>
+<li><strong>Authentication/Authorization</strong> (<code>AdminAuthSystemHook</code>, <code>KickBanSystemServerHook</code>, etc.)</li>
+<li><strong>Persistence and Save/Load</strong> (<code>SaveSystemHook</code>, <code>LoadPersistenceSystemHook</code>)</li>
+<li><strong>Lifecycle of networked players</strong> (<code>OnUserConnectedHook</code>, <code>OnUserDisconnectedHook</code>)</li>
+<li><strong>Spawn and destruction of server‐sided game objects</strong> (<code>ScriptSpawnServerHook</code>, <code>ScriptDestroyServerHook</code>)</li>
+</ul>
+<p>By running before or after authoritative game methods, these hooks ensure that RisingV’s server policies (e.g., whitelist/ban checks, custom data persistence) stay synchronized with the official game lifecycle.</p>
+</li>
+<li><p><strong>Gameplay Extension</strong><br>
+Hooks in the core “client” subnamespace—such as <code>BuffHook</code>, <code>DeathHook</code>, <code>UnitSpawnerHook</code>, and <code>StatChangeSystemHook</code>—allow RisingV plugins to:</p>
+<ul>
+<li>Adjust buff durations, override death behavior, or modify equipment stats.</li>
+<li>Listen for in‐game triggers (e.g., “player died,” “blood consumed,” “armor leveled up”) so custom logic (like special drops, stat scaling, or UI notifications) can be executed.</li>
+<li>Integrate scripting systems by hooking into the gameplay input pipeline (<code>GameplayInputSystemHook</code>).</li>
+</ul>
+</li>
+<li><p><strong>Chat and Communication</strong></p>
+<ul>
+<li><strong>ClientChatHook</strong> and <strong>ServerChatHook</strong> intercept chat packets to modify, filter, or broadcast custom messages.</li>
+<li><strong>ClientBootstrapSystemHook</strong> and <strong>GameManagerHook</strong> (found under <code>Internal</code>) ensure that RisingV’s chat formatting and announcements initialize correctly when the game or client starts.</li>
+</ul>
+</li>
+<li><p><strong>Cross‐Cutting Concerns</strong></p>
+<ul>
+<li>The <code>AdminAuthSystemHook</code> ties into the server’s authentication pipeline so that administrator privileges (e.g., commands, teleports) follow RisingV’s permission model.</li>
+<li>The <code>SaveSystemHook</code> ensures that any RisingV‐specific data (custom components, persistent plugin data) is written to disk and reloaded properly on server restarts or hot‐reloads.</li>
+<li>Hooks like <code>ArmorLevelHook</code>, <code>WeaponLevelHook</code>, and <code>VBloodConsumedHook</code> capture progression milestones—allowing RisingV to implement custom leveling or resource‐consumption logic tied to third‐party plugins.</li>
+</ul>
+</li>
+</ol>
+<h2 id="how-to-use-hooks">How to Use Hooks</h2>
+<ol>
+<li><p><strong>Reference the <code>RisingV.Core.Hooks</code> Namespace</strong><br>
+In your RisingV plugin class, import the Hooks namespace to ensure that hooks are automatically applied when your plugin loads:</p>
+<pre><code class="lang-csharp">using RisingV.Core.Hooks;
+</code></pre>
+</li>
+<li><p><strong>Subscribe to Bridge Events</strong><br>
+Each hook publishes a dedicated event type. For example, <code>AchievementHook</code> publishes <code>PlayerCompleteAchievementEvent</code>. In your plugin’s <code>OnEnable</code> or <code>Awake</code> method, subscribe to the EventBridge:</p>
+<pre><code class="lang-csharp">EventBridge.Subscribe&lt;PlayerCompleteAchievementEvent&gt;(OnAchievementCompleted);
+
+private void OnAchievementCompleted(PlayerCompleteAchievementEvent evt)
+{
+    // Custom logic: grant a reward, send a notification, etc.
+}
+</code></pre>
+</li>
+<li><p><strong>Leverage Pre‐ and Post‐Processing</strong><br>
+Some hooks support both “prefix” and “postfix” Harmony patches. For instance, <code>BuffHook</code> may intercept buff application <strong>before</strong> it takes effect (to modify duration or cancel) and also <strong>after</strong> (to trigger downstream logic). Consult the individual hook’s API to determine which event or callback is raised.</p>
+</li>
+<li><p><strong>Server Hooks vs. Client Hooks</strong></p>
+<ul>
+<li><strong>Client/Gameplay Hooks</strong> run in both single‐player and server‐AM (client) contexts. They generally capture in‐game actions that all players can trigger (e.g., death, buffs, equipment changes).</li>
+<li><strong>Server Hooks</strong> (in <code>RisingV.Core.Hooks.Server</code>) only execute on the authoritative server and should not be used for client‐only logic. For example, <code>KickBanSystemServerHook</code> ensures that banned users cannot join, whereas <code>ClientChatHook</code> only modifies chat on the local client side.</li>
+</ul>
+</li>
+<li><p><strong>Customizing Behavior</strong><br>
+If you need to override or suppress default RisingV logic in a hook, you can implement a Harmony “prefix” patch in your own plugin that runs <strong>before</strong> a hook’s prefix/postfix triggers. Make sure to set the Harmony priority appropriately so that your patch executes in the correct order. Refer to Harmony’s documentation for advanced patch ordering.</p>
+</li>
+</ol>
+<h2 id="available-hook-classes">Available Hook Classes</h2>
+<p>Below is a high‐level list of hooks provided by RisingV.Core, organized by category. Click each name to view its full API reference:</p>
+<ul>
+<li><p><strong>Achievement &amp; Progression</strong><br>
+– <a href="https://docs.risingv.dev/core/api/RisingV.Core.Hooks.AchievementHook.html">AchievementHook</a><br>
+– <a href="https://docs.risingv.dev/core/api/RisingV.Core.Hooks.ArmorLevelHook.html">ArmorLevelHook</a><br>
+– <a href="https://docs.risingv.dev/core/api/RisingV.Core.Hooks.WeaponLevelHook.html">WeaponLevelHook</a><br>
+– <a href="https://docs.risingv.dev/core/api/RisingV.Core.Hooks.VBloodConsumedHook.html">VBloodConsumedHook</a></p>
+</li>
+<li><p><strong>Buffs, Stats, and Debuffs</strong><br>
+– <a href="https://docs.risingv.dev/core/api/RisingV.Core.Hooks.BuffHook.html">BuffHook</a><br>
+– <a href="https://docs.risingv.dev/core/api/RisingV.Core.Hooks.StatChangeSystemHook.html">StatChangeSystemHook</a></p>
+</li>
+<li><p><strong>Entity Lifecycle</strong><br>
+– <a href="https://docs.risingv.dev/core/api/RisingV.Core.Hooks.DeathHook.html">DeathHook</a><br>
+– <a href="https://docs.risingv.dev/core/api/RisingV.Core.Hooks.DownedHook.html">DownedHook</a><br>
+– <a href="https://docs.risingv.dev/core/api/RisingV.Core.Hooks.UnitSpawnerHook.html">UnitSpawnerHook</a></p>
+</li>
+<li><p><strong>Chat &amp; Communication</strong><br>
+– <a href="https://docs.risingv.dev/core/api/RisingV.Core.Hooks.ClientChatHook.html">ClientChatHook</a><br>
+– <a href="https://docs.risingv.dev/core/api/RisingV.Core.Hooks.ServerChatHook.html">ServerChatHook</a><br>
+– <a href="https://docs.risingv.dev/core/api/RisingV.Core.Hooks.GameplayInputSystemHook.html">GameplayInputSystemHook</a></p>
+</li>
+<li><p><strong>Server‐Side Systems</strong><br>
+– <a href="https://docs.risingv.dev/core/api/RisingV.Core.Hooks.AdminAuthSystemHook.html">AdminAuthSystemHook</a><br>
+– <a href="https://docs.risingv.dev/core/api/RisingV.Core.Hooks.SaveSystemHook.html">SaveSystemHook</a><br>
+– <a href="https://docs.risingv.dev/core/api/RisingV.Core.Hooks.Server.LoadPersistenceSystemHook.html">LoadPersistenceSystemHook</a><br>
+– <a href="https://docs.risingv.dev/core/api/RisingV.Core.Hooks.Server.OnUserConnectedHook.html">OnUserConnectedHook</a><br>
+– <a href="https://docs.risingv.dev/core/api/RisingV.Core.Hooks.Server.OnUserDisconnectedHook.html">OnUserDisconnectedHook</a><br>
+– <a href="https://docs.risingv.dev/core/api/RisingV.Core.Hooks.Server.ScriptSpawnServerHook.html">ScriptSpawnServerHook</a><br>
+– <a href="https://docs.risingv.dev/core/api/RisingV.Core.Hooks.Server.ScriptDestroyServerHook.html">ScriptDestroyServerHook</a><br>
+– <a href="https://docs.risingv.dev/core/api/RisingV.Core.Hooks.Server.KickBanSystemServerHook.html">KickBanSystemServerHook</a><br>
+– <a href="https://docs.risingv.dev/core/api/RisingV.Core.Hooks.Server.SettingsManagerHook.html">SettingsManagerHook</a><br>
+– <a href="https://docs.risingv.dev/core/api/RisingV.Core.Hooks.Server.GameBootstrapHook.html">GameBootstrapHook</a><br>
+– <a href="https://docs.risingv.dev/core/api/RisingV.Core.Hooks.Server.ServerBuffHook.html">ServerBuffHook</a></p>
+</li>
+<li><p><strong>Miscellaneous / Internal</strong><br>
+– <a href="https://docs.risingv.dev/core/api/RisingV.Core.Hooks.Internal.ClientBootstrapSystemHook.html">ClientBootstrapSystemHook</a><br>
+– <a href="https://docs.risingv.dev/core/api/RisingV.Core.Hooks.Internal.GameManagerHook.html">GameManagerHook</a></p>
+</li>
+</ul>
+<p>For complete details on each hook (method signatures, prefix/postfix behavior, and event payloads), refer to the official API documentation:</p>
+<blockquote>
+<p>🔗 <a href="https://docs.risingv.dev/core/api/RisingV.Core.Hooks.html"><strong>RisingV.Core.Hooks API Reference</strong></a></p>
+</blockquote>
+<hr>
+<h2 id="summary">Summary</h2>
+<p>RisingV’s Hooks layer serves as the primary extension point for modders and plugin authors to:</p>
+<ul>
+<li>Intercept core game functions (achievements, buffs, chat, spawns).</li>
+<li>Publish high‐level events into the <code>EventBridge</code> for downstream consumer plugins.</li>
+<li>Enforce server‐side rules (authentication, persistence, bans).</li>
+<li>Customize gameplay behavior (e.g., stat adjustments, loot modifications).</li>
+<li>Seamlessly integrate with RisingV’s plugin lifecycle (<code>Initialize → Load → Ready → Unload → Terminate</code>).</li>
+</ul>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/BenDol/RisingV.Core/blob/master/docs/Hooks.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

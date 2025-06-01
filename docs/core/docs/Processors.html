@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Processors Overview | RisingV.Core </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Processors Overview | RisingV.Core ">
+      
+      
+      <link rel="icon" href="../assets/favicon/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/BenDol/RisingV.Core/blob/master/docs/Processors.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../assets/images/logo_50.png" alt="RisingV.Core">
+            RisingV.Core
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="processors-overview">Processors Overview</h1>
+
+<p>The <strong>RisingV.Core.Processors</strong> namespace provides a set of “Processor” classes responsible for handling discrete game‐related events and routing them through the RisingV framework. Processors act as the bridge between low‐level events—often published by Hooks—and high‐level Engines or Aspects that implement persistent or game‐affecting logic. By centralizing event‐specific processing, Processors ensure that RisingV’s domain workflows (such as administering bans, managing death logic, or spawning scripts) are consistently applied across all plugins.</p>
+<p>For full details on available classes and methods, see the official API documentation:</p>
+<blockquote>
+<p>🔗 <a href="https://docs.risingv.dev/core/api/RisingV.Core.Processors.html"><strong>RisingV.Core.Processors API Reference</strong></a></p>
+</blockquote>
+<hr>
+<h2 id="role-and-responsibilities">Role and Responsibilities</h2>
+<ol>
+<li><p><strong>Event Handling Pipeline</strong></p>
+<ul>
+<li><strong>Source</strong>: Most Processors receive events published by the Harmony Hook layer (e.g., a player death, a script‐triggered spawn, or an admin command) via the shared <code>EventBridge</code>.</li>
+<li><strong>Processing</strong>: Each Processor filters, validates, or enriches the event data—often resolving <code>Entity</code> IDs, player references, or context metadata.</li>
+<li><strong>Delegation</strong>: After processing, Processors invoke appropriate Engines or Aspects to carry out domain‐specific logic (e.g., updating databases, applying buffs, enforcing permissions).</li>
+<li><strong>Consistency</strong>: By consolidating domain workflows into discrete Processor classes, RisingV maintains a consistent behavior across plugins, simplifies hot‐reload, and reduces duplicate code.</li>
+</ul>
+</li>
+<li><p><strong>Separation of Concerns</strong></p>
+<ul>
+<li><strong>Hooks</strong> are responsible for intercepting game methods and publishing raw events.</li>
+<li><strong>Processors</strong> interpret these events—applying RisingV rules, transforming data, or performing validations.</li>
+<li><strong>Engines/Aspects</strong> then execute persistent logic (database updates, world modifications, network sends).<br>
+This separation ensures each class has a single responsibility: Hooks → Processors → Engines/Aspects.</li>
+</ul>
+</li>
+<li><p><strong>Abstract Base Classes</strong></p>
+<ul>
+<li><strong>TargetEntityProcessor&lt;TEvent&gt;</strong> and <strong>SourceToTargetEntityProcessor&lt;TSourceEvent, TTargetEvent&gt;</strong> provide generic frameworks to handle events involving one or two entity references, respectively.</li>
+<li>Subclasses override the <code>Process(TEvent evt)</code> method to implement specific workflows (e.g., resolving player data, checking permissions, or invoking Engine methods).</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="core-processor-classes">Core Processor Classes</h2>
+<p>Below is a summary of each Processor class in <strong>RisingV.Core.Processors</strong>, along with its primary responsibilities and typical usage.</p>
+<h3 id="adminauthprocessor">AdminAuthProcessor</h3>
+<p><strong>Purpose</strong></p>
+<ul>
+<li>Abstract base for processing player “admin” status checks.</li>
+<li>Validates whether a sender (command issuer) has appropriate permissions before downstream logic executes.</li>
+</ul>
+<p><strong>Key Responsibilities</strong></p>
+<ul>
+<li>Subscribe to admin‐related events (e.g., <code>/ban</code>, <code>/kick</code>).</li>
+<li>Extract the requesting player’s <code>Entity</code> or <code>UserId</code>.</li>
+<li>Check against RisingV’s admin configuration or persistent list.</li>
+<li>If authorized, forward the event to a concrete handler; otherwise, block or respond with a “permission denied” message.</li>
+</ul>
+<p><strong>Typical Flow</strong></p>
+<pre><code class="lang-csharp">public class MyBanProcessor : AdminAuthProcessor
+{
+    public override void Process(MyBanEvent evt)
+    {
+        // Base class already verified admin rights
+        var targetPlayer = evt.TargetEntity;
+        BanEngine.BanPlayer(targetPlayer, evt.Reason);
+    }
+}
+</code></pre>
+<hr>
+<h3 id="banprocessor">BanProcessor</h3>
+<p><strong>Purpose</strong></p>
+<ul>
+<li>Listens for <code>PlayerBanEvent</code> (or similar) and enforces ban logic.</li>
+</ul>
+<p><strong>Key Responsibilities</strong></p>
+<ul>
+<li>Validate ban parameters (duration, target player).</li>
+<li>Invoke <code>AdminEngine</code> or <code>BanService</code> to mark a player as banned.</li>
+<li>Disconnect or prevent future connections for banned players.</li>
+</ul>
+<p><strong>Typical Flow</strong></p>
+<pre><code class="lang-csharp">public void Process(PlayerBanEvent evt)
+{
+    var playerEntity = evt.TargetEntity;
+    BanDatabase.MarkBanned(playerEntity, evt.Duration);
+    ServerConnection.KickPlayer(playerEntity, &quot;You have been banned.&quot;);
+}
+</code></pre>
+<hr>
+<h3 id="deathprocessor">DeathProcessor</h3>
+<p><strong>Purpose</strong></p>
+<ul>
+<li>Handles entity death events published by <code>DeathHook</code> or similar hooks.</li>
+</ul>
+<p><strong>Key Responsibilities</strong></p>
+<ul>
+<li>Extract victim and killer entity references from the event.</li>
+<li>Coordinate with <code>DeathEngine</code> to process death‐related workflows:
+<ul>
+<li>Award experience or drop loot via <code>LootEngine</code>.</li>
+<li>Update statistics (e.g., death counts) through <code>StatChangeProcessor</code>.</li>
+<li>Trigger respawn timers or “downed” flow if applicable.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Typical Flow</strong></p>
+<pre><code class="lang-csharp">public void Process(UnitDeathEvent evt)
+{
+    var victim = evt.VictimEntity;
+    var killer = evt.KillerEntity;
+
+    // Update death count
+    StatEngine.IncrementDeathCount(victim);
+
+    // Generate loot drop
+    LootEngine.SpawnLootAt(victim.Position, evt.LootTier);
+
+    // Invoke any special death animations or UI
+    DeathEngine.HandlePostMortem(victim, killer);
+}
+</code></pre>
+<hr>
+<h3 id="downedprocessor">DownedProcessor</h3>
+<p><strong>Purpose</strong></p>
+<ul>
+<li>Processes the “downed” state of an entity before final death.</li>
+</ul>
+<p><strong>Key Responsibilities</strong></p>
+<ul>
+<li>Listen for events where a character transitions to a “downed” animation or state (e.g., <code>CharacterDownedEvent</code>).</li>
+<li>Apply RisingV’s rules for revivable states or bleed‐out timers.</li>
+<li>If bleed‐out occurs, forward to <code>DeathProcessor</code>; otherwise, allow for revival workflows (e.g., <code>ReviveEngine</code> or <code>RescueEngine</code>).</li>
+</ul>
+<p><strong>Typical Flow</strong></p>
+<pre><code class="lang-csharp">public void Process(CharacterDownedEvent evt)
+{
+    var downedEntity = evt.Entity;
+    // Start bleed-out countdown
+    BleedOutManager.StartTimer(downedEntity, evt.Duration);
+
+    // If revived before timer expires, cancel bleed-out
+}
+</code></pre>
+<hr>
+<h3 id="spawnprocessor">SpawnProcessor</h3>
+<p><strong>Purpose</strong></p>
+<ul>
+<li>Handles general spawn events, whether triggered by the game or by script.</li>
+</ul>
+<p><strong>Key Responsibilities</strong></p>
+<ul>
+<li>Subscribe to <code>UnitSpawnedEvent</code> or similar published by <code>SpawnHook</code>.</li>
+<li>Validate spawn conditions (e.g., permission, location).</li>
+<li>Initialize component data (via <code>EntityComponentDatabase</code>) for the spawned entity.</li>
+<li>Invoke <code>SpawnEngine</code> or domain‐specific initializers (e.g., assign default equipment).</li>
+</ul>
+<p><strong>Typical Flow</strong></p>
+<pre><code class="lang-csharp">public void Process(UnitSpawnedEvent evt)
+{
+    var newEntity = evt.Entity;
+    // Initialize health, buffs, or AI components
+    EntityComponentDatabase.GetOrCreate(newEntity);
+    BuffAspect.ApplyDefaultBuffs(newEntity);
+}
+</code></pre>
+<hr>
+<h3 id="scriptspawnprocessor--scriptdespawnprocessor">ScriptSpawnProcessor &amp; ScriptDespawnProcessor</h3>
+<p><strong>Purpose</strong></p>
+<ul>
+<li>Specifically handle entities spawned or despawned by script (e.g., Lua or C# scripting systems).</li>
+</ul>
+<p><strong>Key Responsibilities</strong></p>
+<ul>
+<li><strong>ScriptSpawnProcessor</strong>:
+<ul>
+<li>Listen for <code>ScriptSpawnEvent</code>, which includes a script identifier and spawn parameters.</li>
+<li>Delegate to <code>SpawnEngine.SpawnScriptedEntity(...)</code> to create the entity with the correct archetype and initial state.</li>
+</ul>
+</li>
+<li><strong>ScriptDespawnProcessor</strong>:
+<ul>
+<li>Listen for <code>ScriptDespawnEvent</code>, identifying which scripted entity to remove.</li>
+<li>Invoke <code>SpawnEngine.DespawnEntity(...)</code> and clean up related data (e.g., remove from <code>EntityComponentDatabase</code>).</li>
+</ul>
+</li>
+</ul>
+<p><strong>Typical Flow</strong></p>
+<pre><code class="lang-csharp">public void Process(ScriptSpawnEvent evt)
+{
+    var parameters = evt.SpawnParameters;
+    SpawnEngine.SpawnScriptedEntity(parameters.Prefab, parameters.Location);
+}
+</code></pre>
+<pre><code class="lang-csharp">public void Process(ScriptDespawnEvent evt)
+{
+    var target = evt.EntityToDespawn;
+    SpawnEngine.DespawnEntity(target);
+    EntityComponentDatabase.Remove(target);
+}
+</code></pre>
+<hr>
+<h3 id="sourcetotargetentityprocessor--targetentityprocessor">SourceToTargetEntityProcessor &amp; TargetEntityProcessor</h3>
+<p><strong>Purpose</strong></p>
+<ul>
+<li>Provide generic, reusable bases for processors that require one or two entity references.</li>
+</ul>
+<p><strong>Key Responsibilities</strong></p>
+<ul>
+<li><strong>TargetEntityProcessor&lt;TEvent&gt;</strong>:
+<ul>
+<li>Extract a single <code>Entity</code> from the event payload.</li>
+<li>Commonly used for events like “player requested action” or “entity took damage.”</li>
+</ul>
+</li>
+<li><strong>SourceToTargetEntityProcessor&lt;TSourceEvent, TTargetEvent&gt;</strong>:
+<ul>
+<li>Map an incoming “source” event (e.g., a network packet or command issuer) to a “target” event involving a different entity.</li>
+<li>For example, converting a raw “knockback request” from a client‐side entity into a server‐validated “apply knockback” on a target entity.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Typical Flow</strong></p>
+<pre><code class="lang-csharp">public class DamageProcessor : TargetEntityProcessor&lt;DamageEvent&gt;
+{
+    public override void Process(DamageEvent evt)
+    {
+        var target = evt.TargetEntity;
+        var amount = evt.DamageAmount;
+        DamageEngine.ApplyDamage(target, amount);
+    }
+}
+</code></pre>
+<hr>
+<h3 id="statchangeprocessor">StatChangeProcessor</h3>
+<p><strong>Purpose</strong></p>
+<ul>
+<li>Processes events that modify or query entity statistics (e.g., health, stamina, mana).</li>
+</ul>
+<p><strong>Key Responsibilities</strong></p>
+<ul>
+<li>Listen for <code>StatChangeEvent</code>, which encapsulates the stat type and delta (increase or decrease).</li>
+<li>Update the <code>StatDatabase</code> entry for the entity.</li>
+<li>Notify other systems (e.g., <code>DeathProcessor</code> if health drops to zero) or publish follow‐up events.</li>
+</ul>
+<p><strong>Typical Flow</strong></p>
+<pre><code class="lang-csharp">public void Process(StatChangeEvent evt)
+{
+    var entity = evt.Entity;
+    var statType = evt.StatType;
+    var delta = evt.Delta;
+
+    StatDatabase.Update(entity, statType, delta);
+
+    if (statType == StatType.Health &amp;&amp; StatDatabase.Get(entity, StatType.Health) &lt;= 0)
+    {
+        EventBridge.Publish(new UnitDeathEvent(entity, evt.Source));
+    }
+}
+</code></pre>
+<hr>
+<h2 id="integration--workflow">Integration &amp; Workflow</h2>
+<ol>
+<li><p><strong>Hook Publication</strong></p>
+<ul>
+<li>Hooks (e.g., <code>DeathHook</code>, <code>SpawnHook</code>, <code>StatChangeSystemHook</code>, <code>AdminAuthSystemHook</code>) intercept game methods and publish raw events to the <code>EventBridge</code>.</li>
+</ul>
+</li>
+<li><p><strong>Processor Subscription</strong></p>
+<ul>
+<li>Each Processor subscribes to a specific event type using <code>EventBridge.Subscribe&lt;TEvent&gt;</code>.</li>
+<li>When an event is published, the corresponding Processor’s <code>Process(...)</code> method is invoked.</li>
+</ul>
+</li>
+<li><p><strong>Delegation to Engines/Aspects</strong></p>
+<ul>
+<li>Processors delegate domain logic to Engines (e.g., <code>DeathEngine</code>, <code>SpawnEngine</code>, <code>BanEngine</code>) and Aspects (e.g., <code>BuffAspect</code>, <code>EntityAspect</code>).</li>
+<li>Engines handle persistent state changes, database updates, or world modifications.</li>
+<li>Aspects provide high‐level facades for component manipulation or network calls.</li>
+</ul>
+</li>
+<li><p><strong>Hot‐Reload &amp; State Preservation</strong></p>
+<ul>
+<li>Because Processors rely on abstract event subscriptions and Engine/Aspect calls, they support hot‐reload seamlessly:
+<ul>
+<li>On <code>Reload</code>, existing subscriptions remain intact, and stateful Engines/Aspects restore from their respective databases.</li>
+<li>Any in‐flight events are either re‐published or ignored based on the <code>ReloadReason</code>.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Server vs. Client Context</strong></p>
+<ul>
+<li>Most Processors execute on the server side (authoritative game logic).</li>
+<li>Some lightweight Processors (e.g., <code>StatChangeProcessor</code>) may also run on the client for prediction or UI updates, but any authoritative state change is forwarded to the server Processor to avoid desynchronization.</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="summary">Summary</h2>
+<p>The <strong>Processors</strong> in RisingV.Core orchestrate the following responsibilities:</p>
+<ul>
+<li><strong>Interpret &amp; Validate Events</strong>: Transform raw events from Hooks into validated, context‐rich payloads (resolving entity references, checking permissions).</li>
+<li><strong>Coordinate Domain Workflows</strong>: Invoke the correct Engine or Aspect to fulfill a workflow—such as banning a player, processing a death, or spawning scripted content.</li>
+<li><strong>Maintain Consistency</strong>: Centralize processing logic to avoid duplication across plugins, ensuring uniform behavior throughout the modding ecosystem.</li>
+<li><strong>Facilitate Hot‐Reload</strong>: Rely on <code>EventBridge</code> subscriptions and abstract base classes so that event workflows seamlessly survive plugin or server reloads.</li>
+</ul>
+<p>By understanding and leveraging Processors, plugin authors can ensure that their custom features integrate cleanly with RisingV’s event‐driven architecture and scale reliably as the framework evolves.</p>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/BenDol/RisingV.Core/blob/master/docs/Processors.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

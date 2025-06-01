@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>EquipmentHooks | RisingV.Core </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="EquipmentHooks | RisingV.Core ">
+      
+      
+      <link rel="icon" href="../../assets/favicon/favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/BenDol/RisingV.Core/blob/master/docs/Hooks/EquipmentHooks.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../assets/images/logo_50.png" alt="RisingV.Core">
+            RisingV.Core
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="equipmenthooks">EquipmentHooks</h1>
+
+<p><strong>Namespace:</strong> <code>RisingV.Core.Hooks</code></p>
+<h2 id="overview">Overview</h2>
+<p>Hooks for equipment-related systems in the game.</p>
+<h2 id="patching-details">Patching Details</h2>
+<ul>
+<li><p><strong>Attributes:</strong></p>
+<ul>
+<li><code>[HarmonyPatch]</code></li>
+</ul>
+</li>
+<li><p><strong>Method Signature:</strong> <code>public static class EquipmentHooks</code></p>
+</li>
+<li><p><strong>Attributes:</strong></p>
+<ul>
+<li><code>[HarmonyPatch(typeof(EquipItemSystem), nameof(EquipItemSystem.OnUpdate))]</code></li>
+<li><code>[HarmonyPostfix]</code></li>
+</ul>
+</li>
+<li><p><strong>Method Signature:</strong> <code>private static void EquipItem(EquipItemSystem __instance)</code></p>
+</li>
+<li><p><strong>Attributes:</strong></p>
+<ul>
+<li><code>[HarmonyPatch(typeof(EquipItemFromInventorySystem), nameof(EquipItemFromInventorySystem.OnUpdate))]</code></li>
+<li><code>[HarmonyPostfix]</code></li>
+</ul>
+</li>
+<li><p><strong>Method Signature:</strong> <code>private static void EquipItemFromInventory(EquipItemFromInventorySystem __instance)</code></p>
+</li>
+<li><p><strong>Attributes:</strong></p>
+<ul>
+<li><code>[HarmonyPatch(typeof(UnEquipItemSystem), nameof(UnEquipItemSystem.OnUpdate))]</code></li>
+<li><code>[HarmonyPostfix]</code></li>
+</ul>
+</li>
+<li><p><strong>Method Signature:</strong> <code>private static void UnequipItem(UnEquipItemSystem __instance)</code></p>
+</li>
+<li><p><strong>Attributes:</strong></p>
+<ul>
+<li><code>[HarmonyPatch(typeof(MoveItemBetweenInventoriesSystem), nameof(MoveItemBetweenInventoriesSystem.OnUpdate))]</code></li>
+</ul>
+</li>
+<li><p><strong>Method Signature:</strong> <code>private static class MoveItemBetweenInventories</code></p>
+</li>
+<li><p><strong>Attributes:</strong></p>
+<ul>
+<li><code>[HarmonyPatch(typeof(DropInventoryItemSystem), nameof(DropInventoryItemSystem.OnUpdate))]</code></li>
+<li><code>[HarmonyPostfix]</code></li>
+</ul>
+</li>
+<li><p><strong>Method Signature:</strong> <code>private static void DropInventoryItem(DropInventoryItemSystem __instance)</code></p>
+</li>
+<li><p><strong>Attributes:</strong></p>
+<ul>
+<li><code>[HarmonyPatch(typeof(DropItemSystem), nameof(DropItemSystem.OnUpdate))]</code></li>
+</ul>
+</li>
+<li><p><strong>Method Signature:</strong> <code>private static class DropItem</code></p>
+</li>
+<li><p><strong>Attributes:</strong></p>
+<ul>
+<li><code>[HarmonyPatch(typeof(ItemPickupSystem), nameof(ItemPickupSystem.OnUpdate))]</code></li>
+<li><code>[HarmonyPostfix]</code></li>
+</ul>
+</li>
+<li><p><strong>Method Signature:</strong> <code>private static void ItemPickup(ItemPickupSystem __instance)</code></p>
+</li>
+</ul>
+<h2 id="implementation">Implementation</h2>
+<pre><code class="lang-csharp">[HarmonyPatch]
+public static class EquipmentHooks
+public static class EquipmentHooks
+{
+    private static readonly Logger Log = Logger.Create(nameof(EquipmentHooks), LogTags.Hooks);
+    
+    [HarmonyPatch(typeof(EquipItemSystem), nameof(EquipItemSystem.OnUpdate))]
+    [HarmonyPostfix]
+    private static void EquipItem(EquipItemSystem __instance)
+    {
+        Log.Debug(&quot;EquipItemSystem.OnUpdate called&quot;);
+        if (!Application.IsServer || __instance.__query_1850505309_0.IsEmpty) {
+            return;
+        }
+
+        var entityManager = Global.EntityManager;
+        var entities = __instance.__query_1850505309_0.ToEntityArray(Allocator.Temp);
+        foreach (var entity in entities) {
+            if (entityManager.TryGetComponentData&lt;FromCharacter&gt;(entity, out var fromCharacter)) {
+                Log.Debug(&quot;Publishing OnEquipItemEvent&quot;);
+                EventBridge.PublishSafe(new OnEquipItemEvent(entity, fromCharacter));
+            }
+        }
+        
+        entities.Dispose();
+    }
+
+    [HarmonyPatch(typeof(EquipItemFromInventorySystem), nameof(EquipItemFromInventorySystem.OnUpdate))]
+    [HarmonyPostfix]
+    private static void EquipItemFromInventory(EquipItemFromInventorySystem __instance)
+    {
+        Log.Debug(&quot;EquipItemFromInventorySystem.OnUpdate called&quot;);
+        if (!Application.IsServer || __instance.__query_1850505600_0.IsEmpty) {
+            return;
+        }
+
+        var entityManager = Global.EntityManager;
+        var entities = __instance.__query_1850505600_0.ToEntityArray(Allocator.Temp);
+        foreach (var entity in entities) {
+            if (entityManager.TryGetComponentData&lt;FromCharacter&gt;(entity, out var fromCharacter)) {
+                Log.Debug(&quot;Publishing OnEquipItemFromInventoryEvent&quot;);
+                EventBridge.PublishSafe(new OnEquipItemFromInventoryEvent(entity, fromCharacter));
+            }
+        }
+        
+        entities.Dispose();
+    }
+
+    [HarmonyPatch(typeof(UnEquipItemSystem), nameof(UnEquipItemSystem.OnUpdate))]
+    [HarmonyPostfix]
+    private static void UnequipItem(UnEquipItemSystem __instance)
+    {
+        Log.Debug(&quot;UnEquipItemSystem.OnUpdate called&quot;);
+        if (!Application.IsServer || __instance.__query_1850505763_0.IsEmpty) {
+            return;
+        }
+
+        var entityManager = Global.EntityManager;
+        var entities = __instance.__query_1850505763_0.ToEntityArray(Allocator.Temp);
+        foreach (var entity in entities) {
+            if (entityManager.TryGetComponentData&lt;FromCharacter&gt;(entity, out var fromCharacter)) {
+                Log.Debug(&quot;Publishing OnUnequipItemEvent&quot;);
+                EventBridge.PublishSafe(new OnUnequipItemEvent(entity, fromCharacter));
+            }
+        }
+        
+        entities.Dispose();
+    }
+
+    [HarmonyPatch(typeof(MoveItemBetweenInventoriesSystem), nameof(MoveItemBetweenInventoriesSystem.OnUpdate))]
+    private static class MoveItemBetweenInventories
+    {
+        private static void Prefix(MoveItemBetweenInventoriesSystem __instance, out List&lt;FromCharacter&gt; __state)
+        {
+            Log.Debug(&quot;MoveItemBetweenInventoriesSystem.OnUpdate called&quot;);
+            __state = [];
+            if (!Application.IsServer || __instance._MoveItemBetweenInventoriesEventQuery.IsEmpty) {
+                return;
+            }
+
+            var entityManager = Global.EntityManager;
+            var entities = __instance._MoveItemBetweenInventoriesEventQuery.ToEntityArray(Allocator.Temp);
+            foreach (var entity in entities) {
+                if (entityManager.TryGetComponentData&lt;FromCharacter&gt;(entity, out var fromCharacter)
+                    &amp;&amp; !__state.Contains(fromCharacter))
+                {
+                    Log.Debug($&quot;Adding FromCharacter {fromCharacter.Character.Index} to state&quot;);
+                    __state.Add(fromCharacter);
+                }
+            }
+            
+            entities.Dispose();
+        }
+
+        private static void Postfix(List&lt;FromCharacter&gt; __state)
+        {
+            Log.Debug(&quot;Postfix for MoveItemBetweenInventoriesSystem.OnUpdate called&quot;);
+            __state.ForEach(character =&gt; EventBridge.PublishSafe(new OnMoveItemBetweenInventoriesEvent(character)));
+        }
+    }
+
+    [HarmonyPatch(typeof(MoveAllItemsBetweenInventoriesSystem),
+        nameof(MoveAllItemsBetweenInventoriesSystem.OnUpdate))]
+    private static class MoveAllItemsBetweenInventories
+    {
+        private static void Prefix(MoveAllItemsBetweenInventoriesSystem __instance, out List&lt;FromCharacter&gt; __state)
+        {
+            Log.Debug(&quot;MoveAllItemsBetweenInventoriesSystem.OnUpdate called&quot;);
+            __state = [];
+            if (!Application.IsServer || __instance.__query_133601579_0.IsEmpty) {
+                return;
+            }
+
+            var entityManager = Global.EntityManager;
+            var entities = __instance.__query_133601579_0.ToEntityArray(Allocator.Temp);
+            foreach (var entity in entities) {
+                if (entityManager.TryGetComponentData&lt;FromCharacter&gt;(entity, out var fromCharacter) 
+                    &amp;&amp; !__state.Contains(fromCharacter))
+                {
+                    Log.Debug($&quot;Adding FromCharacter {fromCharacter.Character.Index} to state&quot;);
+                    __state.Add(fromCharacter);
+                }
+            }
+            
+            entities.Dispose();
+        }
+
+        private static void Postfix(List&lt;FromCharacter&gt; __state)
+        {
+            Log.Debug(&quot;Postfix for MoveAllItemsBetweenInventoriesSystem.OnUpdate called&quot;);
+            __state.ForEach(character =&gt; EventBridge.PublishSafe(new OnMoveAllItemsBetweenInventoriesEvent(character)));
+        }
+    }
+
+    [HarmonyPatch(typeof(DropInventoryItemSystem), nameof(DropInventoryItemSystem.OnUpdate))]
+    [HarmonyPostfix]
+    private static void DropInventoryItem(DropInventoryItemSystem __instance)
+    {
+        Log.Debug(&quot;DropInventoryItemSystem.OnUpdate called&quot;);
+        if (!Application.IsServer || __instance.__query_1470978904_0.IsEmpty) {
+            return;
+        }
+
+        var entityManager = Global.EntityManager;
+        var entities = __instance.__query_1470978904_0.ToEntityArray(Allocator.Temp);
+        foreach (var entity in entities) {
+            if (entityManager.TryGetComponentData&lt;FromCharacter&gt;(entity, out var fromCharacter)) {
+                Log.Debug($&quot;Publishing OnDropInventoryItemEvent for entity {entity.Index} from character {fromCharacter.Character.Index}&quot;);
+                EventBridge.PublishSafe(new OnDropInventoryItemEvent(entity, fromCharacter));
+            }
+        }
+        
+        entities.Dispose();
+    }
+
+    [HarmonyPatch(typeof(DropItemSystem), nameof(DropItemSystem.OnUpdate))]
+    private static class DropItem
+    {
+        private static void Prefix(DropItemSystem __instance, out List&lt;FromCharacter&gt; __state)
+        {
+            Log.Debug(&quot;DropItemSystem.OnUpdate called&quot;);
+            __state = [];
+            if (!Application.IsServer) {
+                return;
+            }
+
+            if (__instance.__query_1470978519_0.IsEmpty &amp;&amp; __instance._EventQuery2.IsEmpty) {
+                return;
+            }
+
+            var entityManager = Global.EntityManager;
+            var entities = __instance.__query_1470978519_0.ToEntityArray(Allocator.Temp);
+            foreach (var entity in entities) {
+                if (entityManager.TryGetComponentData&lt;FromCharacter&gt;(entity, out var fromCharacter) 
+                    &amp;&amp; !__state.Contains(fromCharacter))
+                {
+                    Log.Debug($&quot;Adding FromCharacter {fromCharacter.Character.Index} to state&quot;);
+                    __state.Add(fromCharacter);
+                }
+            }
+            
+            entities.Dispose();
+            entities = __instance._EventQuery2.ToEntityArray(Allocator.Temp);
+            foreach (var entity in entities) {
+                if (entityManager.TryGetComponentData&lt;FromCharacter&gt;(entity, out var fromCharacter) 
+                    &amp;&amp; !__state.Contains(fromCharacter))
+                {
+                    Log.Debug($&quot;Adding FromCharacter {fromCharacter.Character.Index} to state from EventQuery2&quot;);
+                    __state.Add(fromCharacter);
+                }
+            }
+            
+            entities.Dispose();
+        }
+
+        private static void Postfix(List&lt;FromCharacter&gt; __state)
+        {
+            Log.Debug(&quot;Postfix for DropItemSystem.OnUpdate called&quot;);
+            __state.ForEach(character =&gt; EventBridge.PublishSafe(new OnDroppedItemsEvent(character)));
+        }
+    }
+
+    [HarmonyPatch(typeof(ItemPickupSystem), nameof(ItemPickupSystem.OnUpdate))]
+    [HarmonyPostfix]
+    private static void ItemPickup(ItemPickupSystem __instance)
+    {
+        Log.Debug(&quot;ItemPickupSystem.OnUpdate called&quot;);
+        if (!Application.IsServer || __instance.__query_1414696066_0.IsEmpty) {
+            return;
+        }
+
+        var entityManager = Global.EntityManager;
+        var entities = __instance.__query_1414696066_0.ToEntityArray(Allocator.Temp);
+        foreach (var entity in entities)
+        {
+            if (!entityManager.TryGetComponentData&lt;EntityOwner&gt;(entity, out var ownerData)) {
+                continue;
+            }
+            
+            var characterEntity = ownerData.Owner;
+            if (!entityManager.TryGetComponentData&lt;PlayerCharacter&gt;(characterEntity, out var playerCharacter)) {
+                continue;
+            }
+            
+            Log.Debug(&quot;Publishing OnItemPickupEvent&quot;);
+            EventBridge.PublishSafe(new OnItemPickupEvent(entity, new FromCharacter {
+                Character = characterEntity,
+                User = playerCharacter.UserEntity,
+            }));
+        }
+        
+        entities.Dispose();
+    }
+}
+[HarmonyPatch(typeof(EquipItemSystem), nameof(EquipItemSystem.OnUpdate))]
+[HarmonyPostfix]
+private static void EquipItem(EquipItemSystem __instance)
+    private static void EquipItem(EquipItemSystem __instance)
+    {
+        Log.Debug(&quot;EquipItemSystem.OnUpdate called&quot;);
+        if (!Application.IsServer || __instance.__query_1850505309_0.IsEmpty) {
+            return;
+        }
+
+        var entityManager = Global.EntityManager;
+        var entities = __instance.__query_1850505309_0.ToEntityArray(Allocator.Temp);
+        foreach (var entity in entities) {
+            if (entityManager.TryGetComponentData&lt;FromCharacter&gt;(entity, out var fromCharacter)) {
+                Log.Debug(&quot;Publishing OnEquipItemEvent&quot;);
+                EventBridge.PublishSafe(new OnEquipItemEvent(entity, fromCharacter));
+            }
+        }
+        
+        entities.Dispose();
+    }
+[HarmonyPatch(typeof(EquipItemFromInventorySystem), nameof(EquipItemFromInventorySystem.OnUpdate))]
+[HarmonyPostfix]
+private static void EquipItemFromInventory(EquipItemFromInventorySystem __instance)
+    private static void EquipItemFromInventory(EquipItemFromInventorySystem __instance)
+    {
+        Log.Debug(&quot;EquipItemFromInventorySystem.OnUpdate called&quot;);
+        if (!Application.IsServer || __instance.__query_1850505600_0.IsEmpty) {
+            return;
+        }
+
+        var entityManager = Global.EntityManager;
+        var entities = __instance.__query_1850505600_0.ToEntityArray(Allocator.Temp);
+        foreach (var entity in entities) {
+            if (entityManager.TryGetComponentData&lt;FromCharacter&gt;(entity, out var fromCharacter)) {
+                Log.Debug(&quot;Publishing OnEquipItemFromInventoryEvent&quot;);
+                EventBridge.PublishSafe(new OnEquipItemFromInventoryEvent(entity, fromCharacter));
+            }
+        }
+        
+        entities.Dispose();
+    }
+[HarmonyPatch(typeof(UnEquipItemSystem), nameof(UnEquipItemSystem.OnUpdate))]
+[HarmonyPostfix]
+private static void UnequipItem(UnEquipItemSystem __instance)
+    private static void UnequipItem(UnEquipItemSystem __instance)
+    {
+        Log.Debug(&quot;UnEquipItemSystem.OnUpdate called&quot;);
+        if (!Application.IsServer || __instance.__query_1850505763_0.IsEmpty) {
+            return;
+        }
+
+        var entityManager = Global.EntityManager;
+        var entities = __instance.__query_1850505763_0.ToEntityArray(Allocator.Temp);
+        foreach (var entity in entities) {
+            if (entityManager.TryGetComponentData&lt;FromCharacter&gt;(entity, out var fromCharacter)) {
+                Log.Debug(&quot;Publishing OnUnequipItemEvent&quot;);
+                EventBridge.PublishSafe(new OnUnequipItemEvent(entity, fromCharacter));
+            }
+        }
+        
+        entities.Dispose();
+    }
+[HarmonyPatch(typeof(MoveItemBetweenInventoriesSystem), nameof(MoveItemBetweenInventoriesSystem.OnUpdate))]
+private static class MoveItemBetweenInventories
+    private static class MoveItemBetweenInventories
+    {
+        private static void Prefix(MoveItemBetweenInventoriesSystem __instance, out List&lt;FromCharacter&gt; __state)
+        {
+            Log.Debug(&quot;MoveItemBetweenInventoriesSystem.OnUpdate called&quot;);
+            __state = [];
+            if (!Application.IsServer || __instance._MoveItemBetweenInventoriesEventQuery.IsEmpty) {
+                return;
+            }
+
+            var entityManager = Global.EntityManager;
+            var entities = __instance._MoveItemBetweenInventoriesEventQuery.ToEntityArray(Allocator.Temp);
+            foreach (var entity in entities) {
+                if (entityManager.TryGetComponentData&lt;FromCharacter&gt;(entity, out var fromCharacter)
+                    &amp;&amp; !__state.Contains(fromCharacter))
+                {
+                    Log.Debug($&quot;Adding FromCharacter {fromCharacter.Character.Index} to state&quot;);
+                    __state.Add(fromCharacter);
+                }
+            }
+            
+            entities.Dispose();
+        }
+
+        private static void Postfix(List&lt;FromCharacter&gt; __state)
+        {
+            Log.Debug(&quot;Postfix for MoveItemBetweenInventoriesSystem.OnUpdate called&quot;);
+            __state.ForEach(character =&gt; EventBridge.PublishSafe(new OnMoveItemBetweenInventoriesEvent(character)));
+        }
+    }
+[HarmonyPatch(typeof(DropInventoryItemSystem), nameof(DropInventoryItemSystem.OnUpdate))]
+[HarmonyPostfix]
+private static void DropInventoryItem(DropInventoryItemSystem __instance)
+    private static void DropInventoryItem(DropInventoryItemSystem __instance)
+    {
+        Log.Debug(&quot;DropInventoryItemSystem.OnUpdate called&quot;);
+        if (!Application.IsServer || __instance.__query_1470978904_0.IsEmpty) {
+            return;
+        }
+
+        var entityManager = Global.EntityManager;
+        var entities = __instance.__query_1470978904_0.ToEntityArray(Allocator.Temp);
+        foreach (var entity in entities) {
+            if (entityManager.TryGetComponentData&lt;FromCharacter&gt;(entity, out var fromCharacter)) {
+                Log.Debug($&quot;Publishing OnDropInventoryItemEvent for entity {entity.Index} from character {fromCharacter.Character.Index}&quot;);
+                EventBridge.PublishSafe(new OnDropInventoryItemEvent(entity, fromCharacter));
+            }
+        }
+        
+        entities.Dispose();
+    }
+[HarmonyPatch(typeof(DropItemSystem), nameof(DropItemSystem.OnUpdate))]
+private static class DropItem
+    private static class DropItem
+    {
+        private static void Prefix(DropItemSystem __instance, out List&lt;FromCharacter&gt; __state)
+        {
+            Log.Debug(&quot;DropItemSystem.OnUpdate called&quot;);
+            __state = [];
+            if (!Application.IsServer) {
+                return;
+            }
+
+            if (__instance.__query_1470978519_0.IsEmpty &amp;&amp; __instance._EventQuery2.IsEmpty) {
+                return;
+            }
+
+            var entityManager = Global.EntityManager;
+            var entities = __instance.__query_1470978519_0.ToEntityArray(Allocator.Temp);
+            foreach (var entity in entities) {
+                if (entityManager.TryGetComponentData&lt;FromCharacter&gt;(entity, out var fromCharacter) 
+                    &amp;&amp; !__state.Contains(fromCharacter))
+                {
+                    Log.Debug($&quot;Adding FromCharacter {fromCharacter.Character.Index} to state&quot;);
+                    __state.Add(fromCharacter);
+                }
+            }
+            
+            entities.Dispose();
+            entities = __instance._EventQuery2.ToEntityArray(Allocator.Temp);
+            foreach (var entity in entities) {
+                if (entityManager.TryGetComponentData&lt;FromCharacter&gt;(entity, out var fromCharacter) 
+                    &amp;&amp; !__state.Contains(fromCharacter))
+                {
+                    Log.Debug($&quot;Adding FromCharacter {fromCharacter.Character.Index} to state from EventQuery2&quot;);
+                    __state.Add(fromCharacter);
+                }
+            }
+            
+            entities.Dispose();
+        }
+
+        private static void Postfix(List&lt;FromCharacter&gt; __state)
+        {
+            Log.Debug(&quot;Postfix for DropItemSystem.OnUpdate called&quot;);
+            __state.ForEach(character =&gt; EventBridge.PublishSafe(new OnDroppedItemsEvent(character)));
+        }
+    }
+[HarmonyPatch(typeof(ItemPickupSystem), nameof(ItemPickupSystem.OnUpdate))]
+[HarmonyPostfix]
+private static void ItemPickup(ItemPickupSystem __instance)
+    private static void ItemPickup(ItemPickupSystem __instance)
+    {
+        Log.Debug(&quot;ItemPickupSystem.OnUpdate called&quot;);
+        if (!Application.IsServer || __instance.__query_1414696066_0.IsEmpty) {
+            return;
+        }
+
+        var entityManager = Global.EntityManager;
+        var entities = __instance.__query_1414696066_0.ToEntityArray(Allocator.Temp);
+        foreach (var entity in entities)
+        {
+            if (!entityManager.TryGetComponentData&lt;EntityOwner&gt;(entity, out var ownerData)) {
+                continue;
+            }
+            
+            var characterEntity = ownerData.Owner;
+            if (!entityManager.TryGetComponentData&lt;PlayerCharacter&gt;(characterEntity, out var playerCharacter)) {
+                continue;
+            }
+            
+            Log.Debug(&quot;Publishing OnItemPickupEvent&quot;);
+            EventBridge.PublishSafe(new OnItemPickupEvent(entity, new FromCharacter {
+                Character = characterEntity,
+                User = playerCharacter.UserEntity,
+            }));
+        }
+        
+        entities.Dispose();
+    }
+</code></pre>
+<h2 id="usage">Usage</h2>
+<p>Include this hook class in your plugin. Harmony patches will be applied automatically once Harmony is initialized. When the target method is invoked, the hook logic executes.</p>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/BenDol/RisingV.Core/blob/master/docs/Hooks/EquipmentHooks.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
