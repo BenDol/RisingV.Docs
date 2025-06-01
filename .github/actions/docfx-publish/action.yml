@@ -8,6 +8,11 @@ inputs:
     description: "Name of this project (e.g. Shared, Core, Scripting, BossDrops)."
     required: true
 
+  path:
+    description: "Path to the directory where the site will be built.  
+      This is used to derive the lowercase path for the central-docs repo."
+    required: true
+
   repo_token:
     description: "GitHub token to checkout this repo (and give DocFX permission)."
     required: true
@@ -42,16 +47,16 @@ runs:
   using: "composite"
   steps:
 
-    - name: Derive lowercase target
+    - name: Derive lowercase path
       shell: bash
       env:
-        TARGET: ${{ inputs.target }}
+        PATH: ${{ inputs.path }}
       run: |
-        if [ -z "$TARGET" ]; then
-          echo "::error::The 'target' input is required."
+        if [ -z "$PATH" ]; then
+          echo "::error::The 'path' input is required."
           exit 1
         fi
-        echo "TARGET_LOW=${TARGET,,}" >> $GITHUB_ENV
+        echo "PATH_LOW=${PATH,,}" >> $GITHUB_ENV
 
     - name: Checkout repository
       uses: actions/checkout@v4
@@ -112,10 +117,10 @@ runs:
       run: |
         cd central-docs
 
-        # Overwrite the directory for this target
-        rm -rf docs/${TARGET_LOW}
-        mkdir -p docs/${TARGET_LOW}
-        cp -R ../_site/* docs/${TARGET_LOW}/
+        # Overwrite the directory for this target path
+        rm -rf docs/${PATH_LOW}
+        mkdir -p docs/${PATH_LOW}
+        cp -R ../_site/* docs/${PATH_LOW}/
 
         # Pull latest master, rebasing our new files on top
         git pull --rebase --autostash origin master
@@ -123,7 +128,7 @@ runs:
         # Commit & push if there are changes
         git config user.name  "github-actions[bot]"
         git config user.email "github-actions[bot]@users.noreply.github.com"
-        git add docs/${TARGET_LOW}
+        git add docs/${PATH_LOW}
 
         if git diff --cached --quiet; then
           echo "No documentation changes to commit."
