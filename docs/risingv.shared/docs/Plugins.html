@@ -91,7 +91,7 @@
 <strong>Assemblies:</strong> <em>RisingV.Shared</em></p>
 <p>The <strong>Plugins</strong> abstraction is the entry‑point layer that lets you build modular,
 self‑contained <strong>feature packs</strong> for RisingV.<br>
-It wraps the raw <strong>BepInEx</strong> <code>BaseUnityPlugin</code> base class with:</p>
+It wraps the raw <strong>BepInEx</strong> <code>BasePlugin</code> base class with:</p>
 <ul>
 <li>A uniform <strong>6‑stage lifecycle</strong> shared by every RisingV subsystem.</li>
 <li>First‑class <strong>configuration binding</strong> via <code>BaseConfig</code>.</li>
@@ -114,7 +114,7 @@ It wraps the raw <strong>BepInEx</strong> <code>BaseUnityPlugin</code> base clas
 </tr>
 <tr>
 <td><strong><code>BasePlugin</code></strong></td>
-<td>Convenience abstract base: derives from <code>BaseUnityPlugin</code>, auto‑registers with <code>PluginManager</code>, exposes virtual hooks.</td>
+<td>Convenience abstract base: derives from <code>BasePlugin</code>, auto‑registers with <code>PluginManager</code>, exposes virtual hooks.</td>
 </tr>
 <tr>
 <td><strong><code>PluginConfig</code></strong></td>
