@@ -278,17 +278,13 @@ EventBridge.Subscribe&lt;UnitDeathEvent&gt;(evt =&gt; {
 <ol>
 <li><p><strong>Registration</strong></p>
 <ul>
-<li>Systems are typically registered during plugin initialization via <code>SystemManager</code>. For example:
-<pre><code class="lang-csharp">var systemManager = new SystemManager();
-systemManager.Initialize(this);
-systemManager.AddSystem&lt;ChatSystem&gt;(this);
-systemManager.AddSystem&lt;ClanSystem&gt;(this);
-systemManager.AddSystem&lt;DamageTrackingSystem&gt;(this);
-systemManager.AddSystem&lt;LootSystem&gt;(this);
-systemManager.AddSystem&lt;CastleHeartSystem&gt;(this);
-systemManager.AddSystem&lt;CastleTerritorySystem&gt;(this);
-systemManager.Load(this);
-systemManager.Ready(this);
+<li>Systems are typically registered during plugin initialization via <code>SystemManager</code>. For example in <code>Plugin.OnInitialize()</code>:
+<pre><code class="lang-csharp">SystemManager.AddSystem&lt;ChatSystem&gt;(this);
+SystemManager.AddSystem&lt;ClanSystem&gt;(this);
+SystemManager.AddSystem&lt;DamageTrackingSystem&gt;(this);
+SystemManager.AddSystem&lt;LootSystem&gt;(this);
+SystemManager.AddSystem&lt;CastleHeartSystem&gt;(this);
+SystemManager.AddSystem&lt;CastleTerritorySystem&gt;(this);
 </code></pre>
 </li>
 <li>After <code>Ready()</code>, all systems are active: queries are built, event subscriptions are live, and ECS interactions can proceed normally.</li>

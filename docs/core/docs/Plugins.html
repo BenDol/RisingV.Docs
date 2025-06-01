@@ -250,47 +250,39 @@ using RisingV.Shared.Plugins;
 using RisingV.Shared.Engines;
 using RisingV.Core.Engines;
 
-public class MyFeatureConfig : PluginConfig
+public class MyFeatureConfig() 
+    : PluginConfig(MyPluginInfo.PLUGIN_GUID, MyPluginInfo.PLUGIN_GUID)
 {
     public ConfigEntry&lt;float&gt; AttackModifier { get; set; }
-
-    public MyFeatureConfig() 
-        : base(MyPluginInfo.PLUGIN_GUID, MyPluginInfo.PLUGIN_GUID)
-    {}
 
     public override void Load()
     {
         base.Load();
+        
         AttackModifier = Bind(&quot;Gameplay&quot;, &quot;AttackModifier&quot;, 1f, 
             &quot;Multiplier applied to all player attack damage&quot;);
     }
 }
 
-public class MyFeatureContext : PluginContext
-{
-    public MyFeatureContext() 
-        : base(typeof(MyPluginInfo), new MyFeatureConfig())
-    {}
-}
+public class MyFeatureContext() : PluginContext(typeof(MyPluginInfo), new MyFeatureConfig());
 
 [BepInPlugin(MyPluginInfo.PLUGIN_GUID, MyPluginInfo.PLUGIN_NAME, MyPluginInfo.PLUGIN_VERSION)]
 [BepInDependency(&quot;RisingV.Core&quot;)]    // Ensures RisingV.Core binaries are loaded first
 [BepInDependency(&quot;RisingV.Scripting&quot;)] // If your plugin uses scripting features
 public class MyFeaturePlugin : RisingPlugin&lt;MyFeatureContext&gt;
 {
+    protected override void OnInitialize()
+    {
+        EngineManager.AddEngine&lt;DamageEngine&gt;(this);
+        EngineManager.AddEngine&lt;BuffEngine&gt;(this);
+        EngineManager.AddEngine&lt;DeathEngine&gt;(this);
+    }
+    
     protected override void OnLoad()
     {
         // Pre-Initialize logic (before managers are created)
     }
-
-    protected override void RegisterEngines(EngineManager engineManager)
-    {
-        // Register domain-specific Engines
-        engineManager.AddEngine&lt;DamageEngine&gt;(this);
-        engineManager.AddEngine&lt;BuffEngine&gt;(this);
-        engineManager.AddEngine&lt;DeathEngine&gt;(this);
-    }
-
+    
     protected override void OnUnload()
     {
         // Return true to allow unload, or false to veto
@@ -316,13 +308,10 @@ public class MyFeaturePlugin : RisingPlugin&lt;MyFeatureContext&gt;
 <hr>
 <h2 id="5-pluginconfig-pattern">5. PluginConfig Pattern</h2>
 <p>Every RisingV plugin typically defines a <code>PluginConfig</code> subclass:</p>
-<pre><code class="lang-csharp">public sealed class LootTweaksConfig : PluginConfig
+<pre><code class="lang-csharp">public sealed class LootTweaksConfig() 
+    : PluginConfig(LootTweaksInfo.PLUGIN_GUID, LootTweaksInfo.PLUGIN_GUID)
 {
     public ConfigEntry&lt;float&gt;? Multiplier { get; private set; }
-
-    public LootTweaksConfig() 
-        : base(LootTweaksInfo.PLUGIN_GUID, LootTweaksInfo.PLUGIN_GUID)
-    {}
 
     public override void Load()
     {
@@ -348,13 +337,6 @@ public class MyFeaturePlugin : RisingPlugin&lt;MyFeatureContext&gt;
 <li>Located in <code>RisingV.Shared.Plugins</code>.</li>
 <li>Discover and register all plugins (both via reflection on <code>[BepInPlugin]</code> attributes and manually instantiated ones used in unit tests).</li>
 <li>Resolves dependencies using <code>[PluginDependency(&quot;SomeOtherGUID&quot;)]</code> attributes.</li>
-<li>Exposes control methods:
-<ul>
-<li><code>ReloadAll()</code>: Invokes <code>Reload()</code> on each plugin (in dependency‐sorted order).</li>
-<li><code>UnloadAll()</code>: Invokes <code>Unload()</code> on each plugin.</li>
-<li><code>TerminateAll()</code>: Invokes <code>Terminate()</code> on each plugin.</li>
-</ul>
-</li>
 </ul>
 <p>PluginManager ensures that plugins are loaded, unloaded, and reloaded in a deterministic order based on declared dependencies.</p>
 <hr>

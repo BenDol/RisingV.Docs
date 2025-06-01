@@ -97,19 +97,16 @@
 <h2 id="how-engines-integrate">How Engines Integrate</h2>
 <ol>
 <li><p><strong>Initialization &amp; Registration</strong><br>
-During your plugin’s <code>RegisterEngines</code> method, the <code>EngineManager</code> (or a similar central registry) is responsible for creating and registering each Engine. Typically:</p>
-<pre><code class="lang-csharp">private EngineManager _engineManager;
-private AchievementEngine  _achievementEngine;
+During your plugin’s <code>OnInitialize</code> method, the <code>EngineManager</code> (or a similar central registry) is responsible for creating and registering each Engine. Typically:</p>
+<pre><code class="lang-csharp">private AchievementEngine  _achievementEngine;
 private BuffEngine         _buffEngine;
 // ... other engines
 
-public override void RegisterEngines()
+public void OnInitialize()
 {
-    _engineManager ??= Global.EngineManager;
-
     // Register engines
-    _achievementEngine = _engineManager.AddEngine&lt;AchievementEngine&gt;(this);
-    _buffEngine        = _engineManager.AddEngine&lt;BuffEngine&gt;(this);
+    _achievementEngine = EngineManager.AddEngine&lt;AchievementEngine&gt;(this);
+    _buffEngine        = EngineManager.AddEngine&lt;BuffEngine&gt;(this);
     // ... register additional engines
 }
 </code></pre>
@@ -121,18 +118,6 @@ Each Engine subscribes to relevant game events (either directly via Harmony hook
 <li><strong>DamageEngine</strong> intercepts damage application events to calculate modified damage, apply resistances, or trigger custom effects.</li>
 <li><strong>LootEngine</strong> responds to “entity death” events, rolls on loot tables, and spawns items accordingly.</li>
 </ul>
-</li>
-<li><p><strong>Engine‐Provided APIs</strong><br>
-Beyond passive event handling, Engines often expose methods that plugin authors can call to invoke domain actions:</p>
-<pre><code class="lang-csharp">// Grant an achievement to a specific player
-_achievementEngine.GrantAchievement(playerEntity, achievementId);
-
-// Apply a buff to a target entity
-_buffEngine.ApplyBuff(targetEntity, buffDefinition, durationSeconds);
-
-// Spawn loot at a world position
-_lootEngine.SpawnLoot(worldPosition, lootTier, quantity);
-</code></pre>
 </li>
 <li><p><strong>Persistence and State Management</strong><br>
 Many Engines coordinate with underlying databases to persist state between sessions or over hot‐reloads. For example, <strong>SaveEngine</strong> manages serialization of RisingV‐specific data (e.g., custom player progress, clan membership), ensuring that on server restart or plugin reload, no data is lost. The SaveEngine typically integrates with Unity’s save pipeline or a RisingV file system abstraction.</p>
