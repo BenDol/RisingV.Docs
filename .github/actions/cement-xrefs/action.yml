@@ -2,7 +2,7 @@
 name: "Cement XREFs & Prune"
 description: "Remove old API files and rewrite JSON/HTML xrefs"
 inputs:
-  dep_map:
+  xref_map:
     required: true
     description: "Library=URL mappings"
   site_dir:
@@ -15,7 +15,7 @@ runs:
     - name: Cement Shared XREFs and Prune
       shell: bash
       env:
-        DEP_MAP: ${{ inputs.dep_map }}
+        XREF_MAP: ${{ inputs.xref_map }}
         SITE_DIR: ${{ inputs.site_dir }}
       run: |
         set -euo pipefail
@@ -49,4 +49,4 @@ runs:
               -e "s@href=\"${LIB_ESC}\.([^\"]+\.html)\"@href=\"${PREFIX}/${LIB}.\1\"@g" \
               -e "s@href='${LIB_ESC}\.([^']+\.html)'@href='${PREFIX}/${LIB}.\1'@g"
 
-        done <<< "$DEP_MAP"
+        done <<< "$XREF_MAP"

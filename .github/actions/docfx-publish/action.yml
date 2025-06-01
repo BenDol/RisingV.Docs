@@ -96,9 +96,9 @@ runs:
 
     - name: Cement XREFs & Prune
       if: ${{ inputs.xref_map != '' }}
-      uses: ./.github/actions/cement-xrefs@master
+      uses: BenDol/RisingV.Docs/.github/actions/cement-xrefs@master
       with:
-        dep_map: ${{ inputs.xref_map }}
+        xref_map: ${{ inputs.xref_map }}
 
     - name: Checkout Central Docs Repo
       uses: actions/checkout@v4
