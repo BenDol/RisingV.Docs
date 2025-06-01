@@ -91,7 +91,7 @@
 <strong>Assembly:</strong> <em>RisingV.Core</em></p>
 <hr>
 <h2 id="overview">Overview</h2>
-<p>The <code>EntityComponentDatabase</code> is a concrete implementation of the RisingV database abstraction (see <a href="#">Databases.md</a> for full context). It provides a convenient, type-safe way to store and retrieve component data associated with Unity entities, leveraging the existing <code>DatabaseWithSource&lt;TKey, TMap, TSource&gt;</code> base class.</p>
+<p>The <code>EntityComponentDatabase</code> is a concrete implementation of the RisingV database abstraction (see <a href="https://docs.risingv.dev/shared/docs/Databases.html">Databases</a> for full context). It provides a convenient, type-safe way to store and retrieve component data associated with Unity entities, leveraging the existing <code>DatabaseWithSource&lt;TKey, TMap, TSource&gt;</code> base class.</p>
 <ul>
 <li><p><strong>EntityComponentMap</strong><br>
 Internally, this database uses <code>EntityComponentMap</code> (a specialized <code>TypeKeyedMap&lt;IEntityComponentData&gt;</code>) to hold one or more components for each <code>Entity</code>. Each map entry is keyed by a <code>Type</code> (the component type) and stores an instance of <code>IEntityComponentData</code>.</p>
@@ -148,24 +148,14 @@ map[typeof(MyCustomComponent)] = new MyCustomComponent { ... };
 <p>To integrate <code>EntityComponentDatabase</code> into your plugin or game logic:</p>
 <ol>
 <li><p><strong>Instantiate</strong><br>
-In your plugin’s initialization sequence (e.g., inside a BepInEx plugin’s <code>Awake</code> or <code>OnEnable</code>):</p>
-<pre><code class="lang-csharp">private DatabaseManager _dbManager;
-private EntityComponentDatabase _entityComponentDb;
+In your plugin’s initialization sequence (e.g., inside a BepInEx plugin’s <code>OnInitialize</code> or <code>OnLoad</code>):</p>
+<pre><code class="lang-csharp">private EntityComponentDatabase _entityComponentDb;
 
-public void Awake()
+public void OnInitialize()
 {
-    _dbManager = new DatabaseManager();
-    _dbManager.Initialize(this);
-
-    _entityComponentDb = _dbManager.AddDatabase&lt;EntityComponentDatabase&gt;(this);
+    _entityComponentDb = DatabaseManager.AddDatabase&lt;EntityComponentDatabase&gt;(this);
     // Register any other databases here...
 }
-</code></pre>
-</li>
-<li><p><strong>Load &amp; Ready</strong><br>
-After registering all databases:</p>
-<pre><code class="lang-csharp">_dbManager.Load(this);
-_dbManager.Ready(this);
 </code></pre>
 </li>
 <li><p><strong>Usage at Runtime</strong><br>
@@ -174,13 +164,19 @@ Once in the <strong>Ready</strong> state, you can add or retrieve component maps
 var map = _entityComponentDb.GetOrCreate(someEntity);
 
 // Add or update a component for that entity
-map[typeof(HealthComponent)] = new HealthComponent { Current = 100, Max = 100 };
+map[typeof(CustomHealthComponent)] = new CustomHealthComponent { Current = 100, Max = 100 };
 
 // Retrieve a component
-if (map.TryGet&lt;HealthComponent&gt;(out var health))
+if (map.TryGet&lt;CustomHealthComponent&gt;(out var health))
 {
     // Do something with health data
 }
+</code></pre>
+<p>or from the Entity itself:</p>
+<pre><code class="lang-csharp"> if (someEntity.TryGetCustomComponentData&lt;CustomHealthComponent&gt;(out var health))
+ {
+      // Do something with health data
+ }
 </code></pre>
 </li>
 <li><p><strong>Hot‐Reload / Reload</strong><br>
@@ -206,11 +202,10 @@ If your plugin implements dynamic reloads (e.g., development hot‐reload), <cod
 <hr>
 <h2 id="common-use-cases">Common Use Cases</h2>
 <ol>
-<li><p><strong>Attaching Component Data at Spawn</strong><br>
+<li><p><strong>Attaching Custom Component Data</strong><br>
 When a new ECS <code>Entity</code> enters the world, create or populate its component map:</p>
 <pre><code class="lang-csharp">void OnEntitySpawned(Entity newEntity)
 {
-    newEntity.AddComponentData(new PositionComponent { X = 0, Y = 0, Z = 0 });
     newEntity.AddCustomComponentData(new MyCustomRenderComponent { MeshId = &quot;MyMesh&quot;, MaterialId = &quot;Default&quot; });
 }
 </code></pre>
@@ -221,7 +216,7 @@ To iterate over all stored components for a given <code>Entity</code>:</p>
 {
     foreach (var kvp in existingMap.Entries)
     {
-        Type componentType           = kvp.Key;
+        Type componentType            = kvp.Key;
         IEntityComponentData instance = kvp.Value;
         // Process or inspect component instance
     }
@@ -232,6 +227,12 @@ To iterate over all stored components for a given <code>Entity</code>:</p>
 If you need to clear or replace data:</p>
 <pre><code class="lang-csharp">var map = _entityComponentDb.GetOrCreate(myEntity);
 map.Remove(typeof(StatusEffectComponent));
+</code></pre>
+<p>or from the Entity itself:</p>
+<pre><code class="lang-csharp"> if (myEntity.TryGetCustomComponentData&lt;StatusEffectComponent&gt;(out var statusEffect))
+ {
+      myEntity.RemoveCustomComponentData&lt;StatusEffectComponent&gt;();
+ }
 </code></pre>
 </li>
 <li><p><strong>Persisting / Saving State</strong><br>
