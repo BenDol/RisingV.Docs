@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Aspecting Abstraction | RisingV.Shared </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Aspecting Abstraction | RisingV.Shared ">
+      
+      
+      <link rel="icon" href="../assets/favicon/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/BenDol/RisingV.Shared/blob/master/docs/Aspects.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../assets/images/logo_50.png" alt="RisingV.Shared">
+            RisingV.Shared
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="aspecting-abstraction">Aspecting Abstraction</h1>
+
+<p><strong>Namespace:</strong> <code>RisingV.Shared.Aspects</code><br>
+<strong>Assembly:</strong> <em>RisingV.Shared</em></p>
+<p>The <strong>Aspect</strong> pattern (also called <em>Aspecting</em>) provides a way to attach <strong>typed views</strong> or <strong>behaviors</strong> onto an existing domain object (like an ECS <code>Entity</code>, a data DTO, or any class) without modifying that object’s source. An <strong>aspect</strong> wraps a target instance and exposes a tailored API for cross‑cutting concerns (validation, convenience methods, helper logic, etc.) while preserving the original model’s purity.</p>
+<hr>
+<h2 id="1-core-interfaces">1. Core Interfaces</h2>
+<h3 id="iaspect"><code>IAspect</code></h3>
+<p>A marker interface with no members:</p>
+<pre><code class="lang-csharp">public interface IAspect { }
+</code></pre>
+<p>This non‑generic base allows you to treat all aspects uniformly when you don’t care about the concrete target type.</p>
+<h3 id="iaspectt"><code>IAspect&lt;T&gt;</code></h3>
+<pre><code class="lang-csharp">public interface IAspect&lt;T&gt; : IAspect
+{
+    /// &lt;summary&gt;
+    /// The wrapped object this aspect operates on.
+    /// &lt;/summary&gt;
+    T Target { get; }
+
+    /// &lt;summary&gt;
+    /// Returns true if the provided instance satisfies the structural and semantic
+    /// requirements of this aspect (e.g., required components are present, tags set,
+    /// or valid state).
+    /// &lt;/summary&gt;
+    bool Qualifies(T entity);
+}
+</code></pre>
+<ul>
+<li><strong><code>Target</code></strong><br>
+The underlying object (e.g., an <code>Entity</code> or some DTO) that this aspect augments.</li>
+<li><strong><code>Qualifies(T entity)</code></strong><br>
+A guard method that checks whether the passed‐in <code>entity</code> has the correct shape, components, tags, or state needed to create this aspect. For example, a <code>UnitAspect</code> might require that <code>entity.Has&lt;ComponentHealth&gt;() &amp;&amp; entity.Has&lt;TagUnit&gt;()</code>.</li>
+</ul>
+<hr>
+<h2 id="2-base-support-baseaspectt">2. Base Support: <code>BaseAspect&lt;T&gt;</code></h2>
+<p>Most aspects will inherit from <code>BaseAspect&lt;T&gt;</code>, which implements common logic:</p>
+<pre><code class="lang-csharp">public abstract class BaseAspect&lt;T&gt; : IAspect&lt;T&gt;
+{
+    protected abstract Logger Log { get; }
+
+    /// &lt;summary&gt;
+    /// The wrapped target instance.
+    /// &lt;/summary&gt;
+    public T Target { get; }
+
+    protected BaseAspect(T target)
+    {
+        // Verify that target is not null
+        if (target == null)
+            throw new UnqualifiedTargetException(target);
+
+        if (!Qualifies(target))
+            throw new UnqualifiedTargetException(target);
+
+        this.Target = target;
+    }
+
+    /// &lt;summary&gt;
+    /// Derived types override this to define qualification logic.
+    /// &lt;/summary&gt;
+    public abstract bool Qualifies(T entity);
+
+    /// &lt;summary&gt;
+    /// Friendly display of the target for logging (can be overridden).
+    /// &lt;/summary&gt;
+    protected virtual string DisplayName(T obj) 
+        =&gt; obj?.ToString() ?? string.Empty;
+
+    /// &lt;summary&gt;
+    /// Additional details about the target for error messages (optional).
+    /// &lt;/summary&gt;
+    protected virtual string ExtraDetails(T obj) 
+        =&gt; string.Empty;
+
+    // … additional utility methods to throw with context, etc. …
+}
+</code></pre>
+<p>Key points:</p>
+<ul>
+<li>The constructor in <code>BaseAspect&lt;T&gt;</code> calls <code>Qualifies(target)</code> and throws <code>UnqualifiedTargetException</code> if it returns <code>false</code>.</li>
+<li>Derived aspects implement <code>Qualifies</code> to check for required components, tags, or properties.</li>
+<li>Use <code>DisplayName</code> and <code>ExtraDetails</code> to improve error/log messages.</li>
+<li>A <code>Logger</code> field is provided for consistent logging inside aspect methods.</li>
+</ul>
+<hr>
+<h2 id="3-handling-unqualified-targets-unqualifiedtargetexception">3. Handling Unqualified Targets: <code>UnqualifiedTargetException</code></h2>
+<pre><code class="lang-csharp">public class UnqualifiedTargetException : BaseException
+{
+    /// &lt;summary&gt;
+    /// The actual object that failed qualification.
+    /// &lt;/summary&gt;
+    public object? Target { get; }
+
+    public UnqualifiedTargetException(object? target)
+        : base(target == null 
+            ? &quot;Target is null&quot; 
+            : $&quot;Target {target} is not qualified&quot;) 
+    {
+        Target = target;
+    }
+
+    public UnqualifiedTargetException(string message, object? target)
+        : base(message)
+    {
+        Target = target;
+    }
+
+    public UnqualifiedTargetException(string message, Exception innerException, object? target)
+        : base(message, innerException)
+    {
+        Target = target;
+    }
+}
+</code></pre>
+<ul>
+<li>Thrown when you attempt to create an aspect around a target that fails <code>Qualifies</code>.</li>
+<li>Contains the offending <code>Target</code> object for diagnostics.</li>
+</ul>
+<hr>
+<h2 id="4-metadata-support-metaserializer">4. Metadata Support: <code>MetaSerializer</code></h2>
+<pre><code class="lang-csharp">public static class MetaSerializer
+{
+    // Provides JSON serialization helpers for aspect‐related data.
+    // (e.g., generating “aspect metadata” files for documentation or runtime reflection).
+    public static string Serialize&lt;TAspect&gt;(TAspect aspect) 
+        where TAspect : IAspect 
+    {
+        // …implementation using reflection attributes and JSON …
+    }
+
+    public static TAspect Deserialize&lt;TAspect&gt;(string json)
+        where TAspect : IAspect 
+    {
+        // …reconstruct aspect metadata from JSON, then wrap a target…
+    }
+}
+</code></pre>
+<p>Although not strictly required for simple aspects, <code>MetaSerializer</code> can be used to:</p>
+<ul>
+<li>Export aspect specifications (e.g., field names, default values) to JSON.</li>
+<li>Rehydrate aspects at runtime or for code generation.</li>
+<li>Combine with source‐generation to produce high‐performance lookup tables.</li>
+</ul>
+<hr>
+<h2 id="5-typical-usage">5. Typical Usage</h2>
+<p>Below is a step‐by‐step example of creating and using a custom aspect:</p>
+<h3 id="step1-define-a-domain-type">Step 1: Define a Domain Type</h3>
+<p>Assume you have a DOTS <code>Entity</code> that represents an in‑game “Unit”:</p>
+<pre><code class="lang-csharp">public struct ComponentHealth : IComponentData 
+{ 
+    public int Current; 
+}
+public struct TagUnit : IComponentData { }
+</code></pre>
+<h3 id="step2-create-a-unitaspect">Step 2: Create a <code>UnitAspect</code></h3>
+<pre><code class="lang-csharp">public sealed class UnitAspect : BaseAspect&lt;Entity&gt;
+{
+    private readonly EntityManager _mgr;
+    protected override Logger Log { get; } = Logger.Create&lt;UnitAspect&gt;();
+
+    public UnitAspect(Entity entity, EntityManager manager) : base(entity)
+    {
+        _mgr = manager;
+    }
+
+    public override bool Qualifies(Entity entity)
+    {
+        // Must have both a Health component and be tagged as a Unit
+        return _mgr.HasComponent&lt;ComponentHealth&gt;(entity) 
+            &amp;&amp; _mgr.HasComponent&lt;TagUnit&gt;(entity);
+    }
+
+    /// &lt;summary&gt;
+    /// Reduce health by the specified damage amount.
+    /// &lt;/summary&gt;
+    public void TakeDamage(int damage)
+    {
+        var health = _mgr.GetComponentData&lt;ComponentHealth&gt;(Target);
+        health.Current = Math.Max(0, health.Current - damage);
+        _mgr.SetComponentData(Target, health);
+        Log.Info($&quot;Unit {Target} took {damage} damage, now at {health.Current} HP.&quot;);
+    }
+
+    /// &lt;summary&gt;
+    /// Heal the unit by the specified amount.
+    /// &lt;/summary&gt;
+    public void Heal(int amount)
+    {
+        var health = _mgr.GetComponentData&lt;ComponentHealth&gt;(Target);
+        health.Current += amount;
+        _mgr.SetComponentData(Target, health);
+        Log.Info($&quot;Unit {Target} healed by {amount}, now at {health.Current} HP.&quot;);
+    }
+}
+</code></pre>
+<h3 id="step3-attach--use-the-aspect">Step 3: Attach &amp; Use the Aspect</h3>
+<p>Somewhere in your gameplay code, given an <code>Entity e</code>:</p>
+<pre><code class="lang-csharp">// Attempt to wrap e as a UnitAspect
+UnitAspect? unit;
+try
+{
+    unit = new UnitAspect(e, entityManager);
+}
+catch (UnqualifiedTargetException)
+{
+    // e is not a valid “Unit”
+    unit = null;
+}
+
+if (unit != null)
+{
+    // Safely call aspect methods
+    unit.TakeDamage(10);
+    if (unit.TargetExists()) // example helper
+        unit.Heal(5);
+}
+</code></pre>
+<p>Alternatively, you can write an <strong>extension method</strong> for concise syntax:</p>
+<pre><code class="lang-csharp">public static class EntityExtensions
+{
+    public static UnitAspect AsUnit(this Entity e, EntityManager mgr, bool strict = true)
+    {
+        if (!new UnitAspect(e, mgr).Qualifies(e))
+        {
+            if (strict)
+                throw new UnqualifiedTargetException(e);
+            else
+                return null!;
+        }
+        return new UnitAspect(e, mgr);
+    }
+}
+
+// Usage:
+var unit = e.AsUnit(entityManager, strict: false);
+unit?.TakeDamage(10);
+</code></pre>
+<hr>
+<h2 id="6-design-principles--best-practices">6. Design Principles &amp; Best Practices</h2>
+<ol>
+<li><p><strong>Separation of Concerns</strong><br>
+Keep domain data (components, DTOs) free from UI/validation/logging logic. Aspects live outside the core model.</p>
+</li>
+<li><p><strong>Stateless Aspects</strong><br>
+Aspects should not store mutable state beyond references to the target and required services (<code>EntityManager</code>, other managers, etc.).</p>
+</li>
+<li><p><strong>Qualifies Method</strong></p>
+<ul>
+<li>Efficient checks: avoid expensive reflection in <code>Qualifies</code>.</li>
+<li>Return <code>false</code> quickly if missing a required component or tag.</li>
+</ul>
+</li>
+<li><p><strong>Throw Early</strong><br>
+The base constructor in <code>BaseAspect&lt;T&gt;</code> immediately throws <code>UnqualifiedTargetException</code> if the target fails qualification. This prevents misuse later.</p>
+</li>
+<li><p><strong>Logging &amp; Diagnostics</strong></p>
+<ul>
+<li>Use the built‑in <code>Logger</code> to record aspect‐specific events.</li>
+<li>Override <code>DisplayName</code>/<code>ExtraDetails</code> in your aspect to provide helpful context in errors.</li>
+</ul>
+</li>
+<li><p><strong>Composable</strong><br>
+You can wrap multiple aspects around the same target if needed. For example, a single <code>Entity</code> could have both a <code>UnitAspect</code> and a <code>MovementAspect</code>.</p>
+</li>
+</ol>
+<hr>
+<h2 id="7-troubleshooting">7. Troubleshooting</h2>
+<p><strong>Symptom:</strong><br>
+<code>UnqualifiedTargetException: Target Entity(0x1234) is not qualified</code></p>
+<p><strong>Cause:</strong><br>
+Your aspect’s <code>Qualifies</code> check returned <code>false</code> (missing component/tag).</p>
+<p><strong>Fix:</strong></p>
+<ul>
+<li>Ensure the <code>Entity</code> has all required components before creating the aspect.</li>
+<li>If dynamic, add debug logs in <code>Qualifies</code> to see which condition failed.</li>
+</ul>
+<hr>
+<h3 id="tldr">TL;DR</h3>
+<ul>
+<li><strong><code>IAspect&lt;T&gt;</code></strong> defines a typed wrapper around a target object, with a <code>Qualifies</code> guard.</li>
+<li><strong><code>BaseAspect&lt;T&gt;</code></strong> provides a constructor that enforces qualification and supplies logging helpers.</li>
+<li><strong><code>UnqualifiedTargetException</code></strong> is thrown if the target doesn’t meet the aspect’s requirements.</li>
+<li><strong>Use</strong> aspects to attach cross‑cutting behavior (validation, helper methods, etc.) without modifying the original data model.</li>
+<li><strong>Implement</strong> each aspect by inheriting <code>BaseAspect&lt;T&gt;</code> and overriding <code>Qualifies(T)</code> plus any additional methods you need.</li>
+</ul>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/BenDol/RisingV.Shared/blob/master/docs/Aspects.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
