@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Configs | RisingV.Shared </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Configs | RisingV.Shared ">
+      
+      
+      <link rel="icon" href="../assets/favicon/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/BenDol/RisingV.Shared/blob/master/docs/Configs.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../assets/images/logo_50.png" alt="RisingV.Shared">
+            RisingV.Shared
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="configs">Configs</h1>
+
+<p><strong>Namespace:</strong> <code>RisingV.Shared.Config</code><br>
+<strong>Assembly:</strong> <em>RisingV.Shared</em></p>
+<p><code>BaseConfig</code> is an <strong>abstract helper</strong> that streamlines <em>BepInEx</em> configuration handling for your RisingV plugins and libraries.<br>
+It wires the entire configuration <strong>lifecycle</strong>—from creation to hot‑reload—while giving you a concise <code>Bind</code> helper and strongly‑typed accessors.</p>
+<blockquote>
+<p><strong>TL;DR</strong> – Derive from <code>BaseConfig</code>, override <code>Log</code>, declare your own config fields, and call <code>Bind(...)</code> inside <code>Load()</code>.</p>
+</blockquote>
+<hr>
+<h2 id="ataglance">At a Glance</h2>
+<table>
+<thead>
+<tr>
+<th>Stage</th>
+<th>Method</th>
+<th>Typical responsibility</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Construction</strong></td>
+<td><code>BaseConfig(..)</code></td>
+<td>Capture file name / sub‑folder and call <code>Start()</code></td>
+</tr>
+<tr>
+<td><strong>Start‑up trio</strong></td>
+<td><code>Initialize()</code> → <code>Load()</code> → <code>Ready()</code></td>
+<td>Create the <code>ConfigFile</code>, bind your entries, run post‑load code</td>
+</tr>
+<tr>
+<td><strong>Hot Reload</strong></td>
+<td><code>Reload(ReloadReason)</code></td>
+<td>Respond to external reload triggers (manual or on‑disk)</td>
+</tr>
+<tr>
+<td><strong>Tear‑down</strong></td>
+<td><code>Unload()</code> → <code>Terminate()</code></td>
+<td>Release references and clear the file</td>
+</tr>
+</tbody>
+</table>
+<p>Each step is <strong>virtual</strong> so you can extend (or skip) logic as needed.</p>
+<hr>
+<h2 id="deriving-from-baseconfig">Deriving from BaseConfig</h2>
+<pre><code class="lang-csharp">public class MyPluginConfig : BaseConfig
+{
+    protected override Logger Log { get; } = LogManager.GetLogger&lt;MyPluginConfig&gt;();
+
+    // Strongly‑typed handles
+    public ConfigEntry&lt;int&gt;? SpawnRate { get; private set; }
+    public ConfigEntry&lt;string&gt;? WelcomeMessage { get; private set; }
+
+    public MyPluginConfig() : base(&quot;MyPlugin&quot;) { }
+
+    public override void Load()
+    {
+        // Always call base.Load() – binds Enabled + queued entries
+        base.Load();
+
+        SpawnRate = Bind(&quot;Gameplay&quot;, &quot;SpawnRate&quot;, 3,
+            &quot;Number of mobs spawned per wave&quot;);
+
+        WelcomeMessage = Bind(&quot;UI&quot;, &quot;WelcomeMessage&quot;,
+            &quot;Welcome, Vampire Lord!&quot;,
+            &quot;Text shown to newly connected players&quot;);
+    }
+
+    public override void Ready()
+    {
+        base.Ready();
+        Log.Info($&quot;SpawnRate={SpawnRate?.Value}  Message='{WelcomeMessage?.Value}'&quot;);
+    }
+}
+</code></pre>
+<hr>
+<h2 id="file-placement-rules">File Placement Rules</h2>
+<pre><code>&lt;game root&gt;/
+└─ BepInEx/
+   └─ config/
+      └─ {ConfigRelativePath?}/
+         └─ {ConfigFileName}.cfg
+</code></pre>
+<ul>
+<li><strong><code>ConfigRelativePath</code></strong> <em>(optional)</em> – lets you group configs under sub‑folders (e.g. <code>RisingV/Core</code>).</li>
+<li><strong><code>ConfigFileName</code></strong> – pass without the <code>.cfg</code> extension; the class adds it automatically.</li>
+</ul>
+<hr>
+<h2 id="builtin-enabled-toggle">Built‑in <code>Enabled</code> Toggle</h2>
+<p>Every <code>BaseConfig</code> implementation automatically exposes:</p>
+<pre><code class="lang-csharp">public ConfigEntry&lt;bool&gt;? Enabled { get; private set; }
+</code></pre>
+<p>Use this flag to disable big chunks of functionality at runtime without removing the DLL.</p>
+<pre><code class="lang-csharp">if (Enabled?.Value is false) return; // early‑out
+</code></pre>
+<hr>
+<h2 id="helper-methods">Helper Methods</h2>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Bind&lt;T&gt;(section, key, default, desc)</code></td>
+<td>Wraps <code>ConfigFile.Bind</code>, but queues the request if the file isn't ready yet (e.g. called in constructor).</td>
+</tr>
+<tr>
+<td><code>GetEntry&lt;T&gt;(section, key)</code></td>
+<td>Fetches the raw <code>ConfigEntry&lt;T&gt;</code>; returns <code>null</code> if missing.</td>
+</tr>
+<tr>
+<td><code>GetValue&lt;T&gt;(section, key, default?)</code></td>
+<td>Convenience accessor returning the stored value or fallback.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="responding-to-reloads">Responding to Reloads</h2>
+<p><code>BaseConfig</code> itself does <strong>not</strong> re‑load values automatically; it just provides the hook.</p>
+<pre><code class="lang-csharp">public override void Reload(ReloadReason reason)
+{
+    base.Reload(reason);
+
+    // Re‑read dynamic settings
+    Log.Info(&quot;Config hot‑reloaded – refreshing internal state&quot;);
+    UpdateDifficulty(SpawnRate?.Value ?? 3);
+}
+</code></pre>
+<p>Invoke your plugin’s <code>Reload</code> via:</p>
+<ul>
+<li>In‑game command, or</li>
+<li>Manually editing the <code>.cfg</code> and saving (if you have a file‑watcher).</li>
+</ul>
+<hr>
+<h2 id="threadsafety-notes">Thread‑Safety Notes</h2>
+<ul>
+<li><code>ConfigFile</code> operations are <em>not</em> thread‑safe.</li>
+<li>Bind and access entries on the main thread or guard with locks if required.</li>
+</ul>
+<hr>
+<h2 id="key-takeaways">Key Takeaways</h2>
+<ul>
+<li><strong>Zero‑ceremony setup</strong> – just subclass and override.</li>
+<li><strong>Lazy bind queue</strong> ensures you can define configs even before <code>Initialize()</code>.</li>
+<li><strong>Lifecycle hooks</strong> give you fine‑grained control over start‑up, shutdown, and reload.</li>
+</ul>
+<p>Happy modding! 🦇</p>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/BenDol/RisingV.Shared/blob/master/docs/Configs.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Manager Abstraction | RisingV.Shared </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Manager Abstraction | RisingV.Shared ">
+      
+      
+      <link rel="icon" href="../assets/favicon/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/BenDol/RisingV.Shared/blob/master/docs/Managers.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../assets/images/logo_50.png" alt="RisingV.Shared">
+            RisingV.Shared
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="manager-abstraction">Manager Abstraction</h1>
+
+<p><strong>Namespaces:</strong> <code>RisingV.Shared.Managers</code>, <code>RisingV.Shared.Extensions</code>, <code>RisingV.Shared.Collections</code><br>
+<strong>Assemblies:</strong> <em>RisingV.Shared</em></p>
+<p>The <strong>manager framework</strong> gives RisingV plugins a <em>uniform, pluggable</em> way to
+register, track, and hot‑reload feature modules (“manageable objects”).
+It is built around five core ideas:</p>
+<table>
+<thead>
+<tr>
+<th>Concept</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>IManageable</strong></td>
+<td>Marker interface for anything that <em>belongs to</em> a manager.</td>
+</tr>
+<tr>
+<td><strong>IManager</strong></td>
+<td>Orchestrator that owns one or more manageables.</td>
+</tr>
+<tr>
+<td><strong>IManagerSource</strong></td>
+<td>Pluggable repository that stores and enumerates manageables.</td>
+</tr>
+<tr>
+<td><strong>ManagerBase&lt;T, TM&gt;</strong></td>
+<td>Generic skeleton that implements the full lifecycle and event hooks.</td>
+</tr>
+<tr>
+<td><strong>TypeMapManager&lt;T, TM&gt;</strong></td>
+<td>Ready‑made base using an <strong>insertion‑ordered map</strong> for storage.</td>
+</tr>
+</tbody>
+</table>
+<p>Together they let you spin up new subsystems in minutes while preserving
+discoverability, dependency injection, and reload safety.</p>
+<hr>
+<h2 id="1-key-interfaces">1. Key Interfaces</h2>
+<h3 id="imanageable--imanageabletmanager">IManageable &amp; IManageable&lt;TManager&gt;</h3>
+<pre><code class="lang-csharp">public interface IManageable { }
+
+public interface IManageable&lt;in TManager&gt; : IManageable
+    where TManager : class, IManager
+{ }
+</code></pre>
+<p>Any class that should be <em>owned</em> by a manager implements one of these.
+The generic flavour lets the manageable know <em>which</em> manager type controls it,
+unlocking strongly‑typed callbacks later on.</p>
+<h3 id="imanager">IManager</h3>
+<pre><code class="lang-csharp">public interface IManager
+{
+    bool IsInitialized  { get; }
+    bool IsLoaded       { get; }
+    bool IsReady        { get; }
+
+    void Initialize(IPlugin plugin);
+    void Load(IPlugin plugin);
+    void Ready(IPlugin plugin);
+    void Reload(IPlugin plugin, ReloadReason reason);
+    void Unload(IPlugin plugin);
+    void Terminate(IPlugin plugin);
+}
+</code></pre>
+<p>Every manager exposes the <strong>6‑stage lifecycle</strong> (see §3) plus a few helpers
+(Add/Remove/Get/Has) that delegate to its source.</p>
+<h3 id="ireloadable--reloadreason">IReloadable / ReloadReason</h3>
+<p>Manageables <em>may</em> implement <code>IReloadable</code> to react to hot‑reload signals
+triggered by file changes or admin commands.</p>
+<pre><code class="lang-csharp">public sealed record ReloadReason(
+    string Reason,
+    IReadOnlyList&lt;FileChange&gt;? Changes = null,
+    bool   IsForced   = false,
+    bool   IsCritical = false,
+    bool   IsFull     = false,
+    string? Key       = null);
+</code></pre>
+<h3 id="itypesource">ITypeSource</h3>
+<p>A minimal CRUD abstraction returning instances keyed by <code>Type</code>.<br>
+Managers <em>compose</em> one of these so they stay agnostic of the underlying store.</p>
+<hr>
+<h2 id="2-core-classes">2. Core Classes</h2>
+<h3 id="managerbasetmanageabletself">ManagerBase&lt;TManageable, TSelf&gt;</h3>
+<p>An <strong>abstract</strong> class that:</p>
+<ul>
+<li>Implements <code>IManager</code></li>
+<li>Tracks state (<code>IsInitialized</code>, <code>IsLoaded</code>, <code>IsReady</code>)</li>
+<li>Subscribes/unsubscribes to <em>global</em> events via <code>EventBridge</code></li>
+<li>Delegates storage to <strong><code>Source</code></strong> (an <code>IManagerSource</code>)</li>
+<li>Provides convenience wrappers:</li>
+</ul>
+<pre><code class="lang-csharp">public TX?  Add&lt;TX&gt;(IPlugin plugin)               where TX : TManageable;
+public void Add&lt;TX&gt;(IPlugin plugin, TX obj);
+public bool Remove&lt;TX&gt;()                          where TX : TManageable;
+public TX?  Get&lt;TX&gt;(bool required = true)         where TX : TManageable;
+public bool Has&lt;TX&gt;()                             where TX : TManageable;
+</code></pre>
+<blockquote>
+<p><strong>Tip</strong> – derive directly from <code>ManagerBase</code> only if you need exotic storage.
+Most projects should extend <code>TypeMapManager</code>.</p>
+</blockquote>
+<h3 id="managersourcetmanageabletmanager">ManagerSource&lt;TManageable, TManager&gt;</h3>
+<p>A reusable base for writing custom <code>IManagerSource</code>s.<br>
+Takes care of plugin ownership and logging.</p>
+<h3 id="typemapmanagertmanageabletmanager">TypeMapManager&lt;TManageable, TManager&gt;</h3>
+<p>The <strong>batteries‑included</strong> implementation.<br>
+Internally it uses an <code>OrderedMap&lt;Type,T&gt;</code> so enumeration order
+matches <em>insertion</em> order, making debugging predictable and enabling simple
+LRU‑style eviction if you ever need it.</p>
+<pre><code class="lang-csharp">public abstract class CombatSystemManager
+    : TypeMapManager&lt;ICombatSystem, CombatSystemManager&gt;
+{
+    protected override Logger Log { get; } =
+        Logger.Create&lt;CombatSystemManager&gt;();
+}
+</code></pre>
+<hr>
+<h2 id="3-the-manager-lifecycle">3. The Manager Lifecycle</h2>
+<pre><code>┌──────────┐     ┌──────────┐     ┌──────────┐
+│Initialize│ ──► │   Load   │ ──► │  Ready   │
+└──────────┘     └──────────┘     └──────────┘
+      ▲               │               │
+      │               ▼               ▼
+┌──────────┐     ┌──────────┐     ┌──────────┐
+│Terminate │ ◄── │  Unload  │ ◄── │  Reload  │
+└──────────┘     └──────────┘     └──────────┘
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Stage</th>
+<th>Typical Responsibility</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Initialize</strong></td>
+<td>Allocate the <code>Source</code>, register default manageables.</td>
+</tr>
+<tr>
+<td><strong>Load</strong></td>
+<td>Wire external dependencies, read config files.</td>
+</tr>
+<tr>
+<td><strong>Ready</strong></td>
+<td>Final handshake after <strong>all</strong> managers are loaded – safe point to emit events.</td>
+</tr>
+<tr>
+<td><strong>Reload</strong></td>
+<td>Refresh config or state without a full restart (hot‑swap).</td>
+</tr>
+<tr>
+<td><strong>Unload</strong></td>
+<td>Free resources, unsubscribe events.</td>
+</tr>
+<tr>
+<td><strong>Terminate</strong></td>
+<td>Final shutdown (called once).</td>
+</tr>
+</tbody>
+</table>
+<p>All state transitions are <strong>idempotent</strong> – calling <code>Load</code> twice
+does nothing once <code>IsLoaded=true</code>.</p>
+<hr>
+<h2 id="4-creating-your-own-manager">4. Creating Your Own Manager</h2>
+<pre><code class="lang-csharp">public interface IWeaponSystem : IManageable&lt;WeaponManager&gt; { }
+
+public sealed class RangedSystem : IWeaponSystem { /* … */ }
+
+public sealed class WeaponManager
+    : TypeMapManager&lt;IWeaponSystem, WeaponManager&gt;
+{
+    protected override Logger Log { get; } = Logger.Create&lt;WeaponManager&gt;();
+
+    public override void Initialize(IPlugin plugin)
+    {
+        base.Initialize(plugin);
+        Add&lt;RangedSystem&gt;(plugin);   // auto‑instantiated
+    }
+}
+</code></pre>
+<p>And from your plugin:</p>
+<pre><code class="lang-csharp">_weaponManager = new WeaponManager();
+_weaponManager.Initialize(this);
+_weaponManager.Load(this);
+_weaponManager.Ready(this);
+</code></pre>
+<p>Hot‑reload support:</p>
+<pre><code class="lang-csharp">_weaponManager.Reload(this,
+    new ReloadReason(&quot;Config changed&quot;, changes: fileChanges, isFull:false));
+</code></pre>
+<hr>
+<h2 id="5-best-practices">5. Best Practices</h2>
+<ul>
+<li><strong>One responsibility per manageable</strong> – keeps dependency graphs shallow.</li>
+<li>Prefer <strong><code>TypeMapManager</code></strong> unless you need multi‑key or sharded storage.</li>
+<li>Implement <strong><code>IReloadable</code></strong> on manageables for zero‑downtime tweaks.</li>
+<li>Toggle subsystems at runtime by exposing an <code>Enabled</code> config entry.</li>
+<li>Call <code>Ready</code> <em>only after</em> every manager has loaded to avoid race conditions.</li>
+</ul>
+<hr>
+<h2 id="6-troubleshooting">6. Troubleshooting</h2>
+<table>
+<thead>
+<tr>
+<th>Symptom</th>
+<th>Likely Cause</th>
+<th>Fix</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>MissingRequiredException</code> on <code>Ready</code></td>
+<td>Dependency manager not loaded</td>
+<td>Check plugin load order, call <code>Add</code> in <code>Initialize</code></td>
+</tr>
+<tr>
+<td>Repeated <code>Load</code> logs</td>
+<td>Manager called twice</td>
+<td>Guard with <code>IsLoaded</code> <em>(handled by base class but avoid manual calls)</em></td>
+</tr>
+<tr>
+<td>No reaction to file edits</td>
+<td>Manageable lacks <code>IReloadable</code></td>
+<td>Implement <code>Reload</code> and return <code>true</code> from <code>OnReload</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="tldr">TL;DR</h3>
+<p>The manager abstraction lets you <strong>compose</strong> complex subsystems from small,
+self‑contained units and still enjoy:</p>
+<ul>
+<li>Deterministic lifecycle hooks</li>
+<li>Hot‑reload with zero downtime</li>
+<li>Strong compile‑time typing (no string keys)</li>
+<li>Centralised logging and diagnostics</li>
+</ul>
+<p>Use it to keep your RisingV codebase <em>organised, testable, and future‑proof</em>.</p>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/BenDol/RisingV.Shared/blob/master/docs/Managers.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

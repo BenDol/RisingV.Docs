@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class TypeMapManager&lt;T, TM&gt; | RisingV.Shared </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class TypeMapManager&lt;T, TM&gt; | RisingV.Shared ">
+      
+      <meta name="description" content="A base class for managers that use a type map to manage instances of .">
+      <link rel="icon" href="../assets/favicon/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/BenDol/RisingV.Shared/new/master/apiSpec/new?filename=RisingV_Shared_Managers_TypeMapManager_2.md&amp;value=---%0Auid%3A%20RisingV.Shared.Managers.TypeMapManager%602%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../assets/images/logo_50.png" alt="RisingV.Shared">
+            RisingV.Shared
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="RisingV.Shared.Managers.TypeMapManager`2">
+
+
+
+  <h1 id="RisingV_Shared_Managers_TypeMapManager_2" data-uid="RisingV.Shared.Managers.TypeMapManager`2" class="text-break">
+Class TypeMapManager&lt;T, TM&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Managers/TypeMapManager.cs/#L145"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="RisingV.html">RisingV</a>.<a class="xref" href="RisingV.Shared.html">Shared</a>.<a class="xref" href="RisingV.Shared.Managers.html">Managers</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>RisingV.Shared.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>A base class for managers that use a type map to manage instances of <a class="xref" href="RisingV.Shared.Managers.IManageable-1.html">IManageable&lt;T&gt;</a>.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract class TypeMapManager&lt;T, TM&gt; : ManagerBase&lt;T, TM&gt;, IManager&lt;T, TM&gt;, IManager, IManageable where T : class, IManageable&lt;TM&gt; where TM : class, IManager</code></pre>
+  </div>
+
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The type of manageable objects, which must implement <a class="xref" href="RisingV.Shared.Managers.IManageable-1.html">IManageable&lt;T&gt;</a>.</p>
+</dd>
+    <dt><code>TM</code></dt>
+    <dd><p>The type of manager, which must implement <a class="xref" href="RisingV.Shared.Managers.IManager.html">IManager</a>.</p>
+</dd>
+  </dl>
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="RisingV.Shared.Managers.ManagerBase-2.html">ManagerBase</a>&lt;T, TM&gt;</div>
+      <div><span class="xref">TypeMapManager&lt;T, TM&gt;</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="RisingV.Shared.Managers.IManager-2.html">IManager</a>&lt;T, TM&gt;</div>
+      <div><a class="xref" href="RisingV.Shared.Managers.IManager.html">IManager</a></div>
+      <div><a class="xref" href="RisingV.Shared.Managers.IManageable.html">IManageable</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist derived">
+    <dt>Derived</dt>
+    <dd>
+      <div><a class="xref" href="RisingV.Shared.Databases.DatabaseManager.html">DatabaseManager</a></div>
+      <div><a class="xref" href="RisingV.Shared.Engines.EngineManager.html">EngineManager</a></div>
+      <div><a class="xref" href="RisingV.Shared.Plugins.PluginComponentsManager.html">PluginComponentsManager</a></div>
+      <div><a class="xref" href="RisingV.Shared.Plugins.PluginConfigManager.html">PluginConfigManager</a></div>
+      <div><a class="xref" href="RisingV.Shared.Plugins.PluginManager.html">PluginManager</a></div>
+      <div><a class="xref" href="RisingV.Shared.Processors.ProcessorManager.html">ProcessorManager</a></div>
+      <div><a class="xref" href="RisingV.Shared.Systems.SystemManager.html">SystemManager</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="RisingV.Shared.Managers.ManagerBase-2.html#RisingV_Shared_Managers_ManagerBase_2_InitializedMap">ManagerBase&lt;T, TM&gt;.InitializedMap</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Managers.ManagerBase-2.html#RisingV_Shared_Managers_ManagerBase_2_LoadedMap">ManagerBase&lt;T, TM&gt;.LoadedMap</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Managers.ManagerBase-2.html#RisingV_Shared_Managers_ManagerBase_2_ReadyMap">ManagerBase&lt;T, TM&gt;.ReadyMap</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Managers.ManagerBase-2.html#RisingV_Shared_Managers_ManagerBase_2_ReloadingMap">ManagerBase&lt;T, TM&gt;.ReloadingMap</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Managers.ManagerBase-2.html#RisingV_Shared_Managers_ManagerBase_2_PluginsMap">ManagerBase&lt;T, TM&gt;.PluginsMap</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Managers.ManagerBase-2.html#RisingV_Shared_Managers_ManagerBase_2_Source">ManagerBase&lt;T, TM&gt;.Source</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Managers.ManagerBase-2.html#RisingV_Shared_Managers_ManagerBase_2_Log">ManagerBase&lt;T, TM&gt;.Log</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Managers.ManagerBase-2.html#RisingV_Shared_Managers_ManagerBase_2_AllowAutoReload">ManagerBase&lt;T, TM&gt;.AllowAutoReload</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Managers.ManagerBase-2.html#RisingV_Shared_Managers_ManagerBase_2_UnsubscribeEventsOnRemoval">ManagerBase&lt;T, TM&gt;.UnsubscribeEventsOnRemoval</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Managers.ManagerBase-2.html#RisingV_Shared_Managers_ManagerBase_2_IsInitialized">ManagerBase&lt;T, TM&gt;.IsInitialized</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Managers.ManagerBase-2.html#RisingV_Shared_Managers_ManagerBase_2_IsLoaded">ManagerBase&lt;T, TM&gt;.IsLoaded</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Managers.ManagerBase-2.html#RisingV_Shared_Managers_ManagerBase_2_IsReady">ManagerBase&lt;T, TM&gt;.IsReady</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Managers.ManagerBase-2.html#RisingV_Shared_Managers_ManagerBase_2_IsFullReloading">ManagerBase&lt;T, TM&gt;.IsFullReloading</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Managers.ManagerBase-2.html#RisingV_Shared_Managers_ManagerBase_2_IsEnabled__1___0_">ManagerBase&lt;T, TM&gt;.IsEnabled&lt;TX&gt;(TX)</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Managers.ManagerBase-2.html#RisingV_Shared_Managers_ManagerBase_2_GetDependentPlugins_System_Type_">ManagerBase&lt;T, TM&gt;.GetDependentPlugins(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Managers.ManagerBase-2.html#RisingV_Shared_Managers_ManagerBase_2_GetDependentPlugins">ManagerBase&lt;T, TM&gt;.GetDependentPlugins()</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Managers.ManagerBase-2.html#RisingV_Shared_Managers_ManagerBase_2_AssignDependentPlugins_System_Type_System_Collections_Generic_List_RisingV_Shared_Plugins_IPlugin__">ManagerBase&lt;T, TM&gt;.AssignDependentPlugins(Type, List&lt;IPlugin&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Managers.ManagerBase-2.html#RisingV_Shared_Managers_ManagerBase_2_Initialize_RisingV_Shared_Plugins_IPlugin_">ManagerBase&lt;T, TM&gt;.Initialize(IPlugin)</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Managers.ManagerBase-2.html#RisingV_Shared_Managers_ManagerBase_2_CanAutoReloadAll_System_Collections_Generic_IReadOnlyList_RisingV_Shared_Files_FileChange__">ManagerBase&lt;T, TM&gt;.CanAutoReloadAll(IReadOnlyList&lt;FileChange&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Managers.ManagerBase-2.html#RisingV_Shared_Managers_ManagerBase_2_AutoReload_System_Collections_Generic_IReadOnlyList_RisingV_Shared_Files_FileChange__RisingV_Shared_Plugins_IPlugin_System_Boolean_">ManagerBase&lt;T, TM&gt;.AutoReload(IReadOnlyList&lt;FileChange&gt;, IPlugin, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Managers.ManagerBase-2.html#RisingV_Shared_Managers_ManagerBase_2_Ready_RisingV_Shared_Plugins_IPlugin_">ManagerBase&lt;T, TM&gt;.Ready(IPlugin)</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Managers.ManagerBase-2.html#RisingV_Shared_Managers_ManagerBase_2_Load_RisingV_Shared_Plugins_IPlugin_">ManagerBase&lt;T, TM&gt;.Load(IPlugin)</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Managers.ManagerBase-2.html#RisingV_Shared_Managers_ManagerBase_2_Unload_RisingV_Shared_Plugins_IPlugin_">ManagerBase&lt;T, TM&gt;.Unload(IPlugin)</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Managers.ManagerBase-2.html#RisingV_Shared_Managers_ManagerBase_2_Reload_RisingV_Shared_Managers_ReloadReason_">ManagerBase&lt;T, TM&gt;.Reload(ReloadReason)</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Managers.ManagerBase-2.html#RisingV_Shared_Managers_ManagerBase_2_Reload_RisingV_Shared_Plugins_IPlugin_RisingV_Shared_Managers_ReloadReason_">ManagerBase&lt;T, TM&gt;.Reload(IPlugin, ReloadReason)</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Managers.ManagerBase-2.html#RisingV_Shared_Managers_ManagerBase_2_OnReload_RisingV_Shared_Plugins_IPlugin_RisingV_Shared_Managers_ReloadReason_">ManagerBase&lt;T, TM&gt;.OnReload(IPlugin, ReloadReason)</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Managers.ManagerBase-2.html#RisingV_Shared_Managers_ManagerBase_2_Terminate_RisingV_Shared_Plugins_IPlugin_">ManagerBase&lt;T, TM&gt;.Terminate(IPlugin)</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Managers.ManagerBase-2.html#RisingV_Shared_Managers_ManagerBase_2_TryInitialize_RisingV_Shared_Managers_IManageable_RisingV_Shared_Plugins_IPlugin_">ManagerBase&lt;T, TM&gt;.TryInitialize(IManageable, IPlugin)</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Managers.ManagerBase-2.html#RisingV_Shared_Managers_ManagerBase_2_TryReady_RisingV_Shared_Managers_IManageable_RisingV_Shared_Plugins_IPlugin_">ManagerBase&lt;T, TM&gt;.TryReady(IManageable, IPlugin)</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Managers.ManagerBase-2.html#RisingV_Shared_Managers_ManagerBase_2_TryLoad_RisingV_Shared_Managers_IManageable_RisingV_Shared_Plugins_IPlugin_">ManagerBase&lt;T, TM&gt;.TryLoad(IManageable, IPlugin)</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Managers.ManagerBase-2.html#RisingV_Shared_Managers_ManagerBase_2_TryUnload_RisingV_Shared_Managers_IManageable_RisingV_Shared_Plugins_IPlugin_">ManagerBase&lt;T, TM&gt;.TryUnload(IManageable, IPlugin)</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Managers.ManagerBase-2.html#RisingV_Shared_Managers_ManagerBase_2_TryTerminate_RisingV_Shared_Managers_IManageable_RisingV_Shared_Plugins_IPlugin_">ManagerBase&lt;T, TM&gt;.TryTerminate(IManageable, IPlugin)</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Managers.ManagerBase-2.html#RisingV_Shared_Managers_ManagerBase_2_TryReload_RisingV_Shared_Managers_IManageable_RisingV_Shared_Plugins_IPlugin_RisingV_Shared_Managers_ReloadReason_">ManagerBase&lt;T, TM&gt;.TryReload(IManageable, IPlugin, ReloadReason)</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Managers.ManagerBase-2.html#RisingV_Shared_Managers_ManagerBase_2_Add__1_RisingV_Shared_Plugins_IPlugin_System_Boolean_">ManagerBase&lt;T, TM&gt;.Add&lt;TX&gt;(IPlugin, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Managers.ManagerBase-2.html#RisingV_Shared_Managers_ManagerBase_2_Add__1_RisingV_Shared_Plugins_IPlugin___0_System_Boolean_">ManagerBase&lt;T, TM&gt;.Add&lt;TX&gt;(IPlugin, TX, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Managers.ManagerBase-2.html#RisingV_Shared_Managers_ManagerBase_2_Add__1_RisingV_Shared_Plugins_IPlugin_System_Type_System_Boolean_">ManagerBase&lt;T, TM&gt;.Add&lt;TX&gt;(IPlugin, Type, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Managers.ManagerBase-2.html#RisingV_Shared_Managers_ManagerBase_2_OnManageableAdded__1_RisingV_Shared_Plugins_IPlugin__0_System_Boolean_">ManagerBase&lt;T, TM&gt;.OnManageableAdded&lt;TX&gt;(IPlugin, T, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Managers.ManagerBase-2.html#RisingV_Shared_Managers_ManagerBase_2_Remove__1_RisingV_Shared_Plugins_IPlugin_">ManagerBase&lt;T, TM&gt;.Remove&lt;TX&gt;(IPlugin)</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Managers.ManagerBase-2.html#RisingV_Shared_Managers_ManagerBase_2_Remove__1_RisingV_Shared_Plugins_IPlugin___0_">ManagerBase&lt;T, TM&gt;.Remove&lt;TX&gt;(IPlugin, TX)</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Managers.ManagerBase-2.html#RisingV_Shared_Managers_ManagerBase_2_Get__1_System_Boolean_">ManagerBase&lt;T, TM&gt;.Get&lt;TX&gt;(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Managers.ManagerBase-2.html#RisingV_Shared_Managers_ManagerBase_2_Get_System_Type_System_Boolean_">ManagerBase&lt;T, TM&gt;.Get(Type, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Managers.ManagerBase-2.html#RisingV_Shared_Managers_ManagerBase_2_GetOrCreate__1_RisingV_Shared_Plugins_IPlugin_">ManagerBase&lt;T, TM&gt;.GetOrCreate&lt;TX&gt;(IPlugin)</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Managers.ManagerBase-2.html#RisingV_Shared_Managers_ManagerBase_2_Has__1">ManagerBase&lt;T, TM&gt;.Has&lt;TX&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Managers.ManagerBase-2.html#RisingV_Shared_Managers_ManagerBase_2_Has_System_Type_System_Boolean_">ManagerBase&lt;T, TM&gt;.Has(Type, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Managers.ManagerBase-2.html#RisingV_Shared_Managers_ManagerBase_2_Count">ManagerBase&lt;T, TM&gt;.Count()</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Managers.ManagerBase-2.html#RisingV_Shared_Managers_ManagerBase_2_RequiredType">ManagerBase&lt;T, TM&gt;.RequiredType()</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Managers.ManagerBase-2.html#RisingV_Shared_Managers_ManagerBase_2_RequiredTypeName">ManagerBase&lt;T, TM&gt;.RequiredTypeName()</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Managers.ManagerBase-2.html#RisingV_Shared_Managers_ManagerBase_2_Equals_RisingV_Shared_Managers_ManagerBase__0__1__">ManagerBase&lt;T, TM&gt;.Equals(ManagerBase&lt;T, TM&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Managers.ManagerBase-2.html#RisingV_Shared_Managers_ManagerBase_2_Equals_System_Object_">ManagerBase&lt;T, TM&gt;.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Managers.ManagerBase-2.html#RisingV_Shared_Managers_ManagerBase_2_GetHashCode">ManagerBase&lt;T, TM&gt;.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Managers.ManagerBase-2.html#RisingV_Shared_Managers_ManagerBase_2_DebugPrintAll_System_String_">ManagerBase&lt;T, TM&gt;.DebugPrintAll(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Managers.ManagerBase-2.html#RisingV_Shared_Managers_ManagerBase_2_ToString">ManagerBase&lt;T, TM&gt;.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="RisingV.Shared.Extensions.EntityExtensions.html#RisingV_Shared_Extensions_EntityExtensions_IsAspect__1_System_Object_">EntityExtensions.IsAspect&lt;TAspect&gt;(object)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="RisingV_Shared_Managers_TypeMapManager_2__ctor_" data-uid="RisingV.Shared.Managers.TypeMapManager`2.#ctor*"></a>
+
+  <h3 id="RisingV_Shared_Managers_TypeMapManager_2__ctor" data-uid="RisingV.Shared.Managers.TypeMapManager`2.#ctor">
+  TypeMapManager()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Managers/TypeMapManager.cs/#L150"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected TypeMapManager()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="RisingV_Shared_Managers_TypeMapManager_2_Source_" data-uid="RisingV.Shared.Managers.TypeMapManager`2.Source*"></a>
+
+  <h3 id="RisingV_Shared_Managers_TypeMapManager_2_Source" data-uid="RisingV.Shared.Managers.TypeMapManager`2.Source">
+  Source
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Managers/TypeMapManager.cs/#L157"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Source of manageable objects for this manager.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override TypeMapManagerSource&lt;T, TM&gt; Source { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="RisingV.Shared.Managers.TypeMapManagerSource-2.html">TypeMapManagerSource</a>&lt;T, TM&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Managers/TypeMapManager.cs/#L145" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Namespace RisingV.Shared.Logging | RisingV.Shared </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Namespace RisingV.Shared.Logging | RisingV.Shared ">
+      
+      
+      <link rel="icon" href="../assets/favicon/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../assets/images/logo_50.png" alt="RisingV.Shared">
+            RisingV.Shared
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="RisingV.Shared.Logging">
+
+  <h1 id="RisingV_Shared_Logging" data-uid="RisingV.Shared.Logging" class="text-break">Namespace RisingV.Shared.Logging</h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="markdown level0 remarks"></div>
+
+    <h3 id="classes">
+Classes
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RisingV.Shared.Logging.LogNoTag.html">LogNoTag</a></dt>
+      <dd><p>Convenience logging helpers that do <b>not</b> apply a tag.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RisingV.Shared.Logging.LogTag.html">LogTag</a></dt>
+      <dd><p>Represents a tag for logging purposes, allowing for hierarchical organization of log messages.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RisingV.Shared.Logging.LogTagShared.html">LogTagShared</a></dt>
+      <dd><p>Represents a log tag for shared components in the RisingV project.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RisingV.Shared.Logging.LogWithTag.html">LogWithTag</a></dt>
+      <dd><p>Convenience logging helpers that prepend a custom <a class="xref" href="RisingV.Shared.Logging.ILogTag.html">ILogTag</a>
+to every message.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RisingV.Shared.Logging.Logger.html">Logger</a></dt>
+      <dd><p>Provides a logger implementation that integrates with BepInEx's logging system.</p>
+<br>
+<p>Logs level can be adjusted setting <a class="xref" href="RisingV.Shared.Logging.Logger.html#RisingV_Shared_Logging_Logger_ListenedLogLevels">ListenedLogLevels</a></p>
+<p>Logs can be filtered by log level and tags, allowing for flexible logging configurations.</p>
+<ul>
+  <li><a class="xref" href="RisingV.Shared.Logging.Logger.html#RisingV_Shared_Logging_Logger_ActiveTags">ActiveTags</a> for assigning active tags to the logger.</li>
+  <li><a class="xref" href="RisingV.Shared.Logging.Logger.html#RisingV_Shared_Logging_Logger_InactiveTags">InactiveTags</a> for assigning tags that should be suppressed in logs.</li>
+</ul>
+<pre><code class="lang-csharp">private static readonly Logger logger = Logger.Create(typeof(MyPluginClass), LogTags.MyCustomTag);
+
+logger.Debug("This is an debug message with {} argument.", "example");
+logger.Info("This is an info message with {} argument.", "example");
+logger.Warn("This is a warning message with {} argument.", "example");
+logger.Error("This is an error message with an exception.", ex);
+logger.Fatal("This is a fatal message with an exception.", ex);</code></pre>
+</dd>
+    </dl>
+    <h3 id="interfaces">
+Interfaces
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RisingV.Shared.Logging.ILogTag.html">ILogTag</a></dt>
+      <dd><p>Represents a tag for logging purposes.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RisingV.Shared.Logging.ILogger.html">ILogger</a></dt>
+      <dd><p>Represents a logger interface for logging messages at various levels.</p>
+</dd>
+    </dl>
+    <h3 id="enums">
+Enums
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RisingV.Shared.Logging.LogLevel.html">LogLevel</a></dt>
+      <dd><p>Represents the different levels of logging that can be used in the application.</p>
+</dd>
+    </dl>
+
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

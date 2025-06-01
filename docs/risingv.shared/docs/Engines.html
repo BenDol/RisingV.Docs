@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Engine Abstraction | RisingV.Shared </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Engine Abstraction | RisingV.Shared ">
+      
+      
+      <link rel="icon" href="../assets/favicon/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/BenDol/RisingV.Shared/blob/master/docs/Engines.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../assets/images/logo_50.png" alt="RisingV.Shared">
+            RisingV.Shared
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="engine-abstraction">Engine Abstraction</h1>
+
+<p><strong>Namespace root:</strong> <code>RisingV.Shared.Engines</code><br>
+<strong>Assemblies:</strong> <em>RisingV.Shared</em></p>
+<p>The <strong>Engine abstraction</strong> is a lightweight framework for building modular,
+self‑contained subsystems (“engines”) that plug into a <strong>Manager</strong>–driven
+lifecycle.  Each engine encapsulates a single concern—AI, combat, analytics,
+UI overlay, etc.—and relies on an <code>EngineManager</code> (which in turn derives from
+the generic manager base) to orchestrate start‑up, hot‑reload, and shut‑down.</p>
+<blockquote>
+<p>Think of an <em>engine</em> as a service and <code>EngineManager</code> as the service host.</p>
+</blockquote>
+<hr>
+<h2 id="1-building-blocks">1. Building Blocks</h2>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Role</th>
+<th>Key Properties / Methods</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Dependency</code> record</td>
+<td>Describes a <strong>hard or soft link</strong> on another engine.</td>
+<td><code>Type Type</code>, <code>string? Version</code></td>
+</tr>
+<tr>
+<td><code>IEngineConfig</code></td>
+<td>BepInEx‑backed <strong>feature config</strong> that every engine owns.</td>
+<td><code>Enabled</code>, <code>AutoLoadDependencies</code></td>
+</tr>
+<tr>
+<td><code>EngineConfig</code></td>
+<td>Standard concrete config with sensible defaults.</td>
+<td><code>Deconstruct</code> for pattern matching</td>
+</tr>
+<tr>
+<td><code>IEngine</code></td>
+<td>Minimal marker + lifecycle bridge to the <code>EngineManager</code>.</td>
+<td><code>IEngineConfig Config</code>, <code>bool Enabled</code>, <code>GetDependencies()</code>, <code>GetRecommended()</code></td>
+</tr>
+<tr>
+<td><code>Engine&lt;TConfig&gt;</code></td>
+<td><strong>Base class</strong> that implements 90 % of the boilerplate.</td>
+<td>Virtual <code>Load</code>, abstract <code>Ready</code>, helper filters</td>
+</tr>
+<tr>
+<td><code>EngineManager</code></td>
+<td>Specialised <code>TypeMapManager&lt;IEngine&gt;</code> that solves dependency graphs and calls lifecycle hooks in order.</td>
+<td><code>AddEngine</code>, <code>OrderEnginesByDependencies</code>, <code>CheckDependencies</code></td>
+</tr>
+</tbody>
+</table>
+<p>The abstraction <strong>inherits</strong> all advantages of the Manager layer: deterministic
+lifecycle, hot‑reload hooks, and pluggable storage.</p>
+<hr>
+<h2 id="2-dependency-model">2. Dependency Model</h2>
+<ol>
+<li><strong>Declare</strong> Hard dependencies in <code>Dependencies</code>, soft links in <code>Recommended</code>.</li>
+<li><strong>Validate</strong> <code>EngineManager.CheckDependencies</code> gathers missing items and
+throws <code>MissingDependenciesException</code> (or logs a warning for recommended).</li>
+<li><strong>Auto‑load</strong> If <strong>both</strong> <code>EngineManager.AllowAutoLoad</code> and the engine’s
+<code>Config.AutoLoadDependencies</code> are <code>true</code>, missing engines are instantiated
+on the fly and injected into the manager.</li>
+</ol>
+<pre><code class="lang-csharp">public sealed class CombatEngine : Engine&lt;EngineConfig&gt;
+{
+    public CombatEngine() : base(new EngineConfig(&quot;Combat&quot;, &quot;Core combat loop&quot;))
+    {
+        Dependencies.Add(new Dependency(typeof(PhysicsEngine)));
+        Recommended.Add(new Dependency(typeof(AnalyticsEngine)));
+    }
+}
+</code></pre>
+<hr>
+<h2 id="3-lifecycle-walkthrough">3. Lifecycle Walkthrough</h2>
+<p>EngineManager forwards the familiar <strong>six‑stage</strong> lifecycle to each engine:</p>
+<table>
+<thead>
+<tr>
+<th>Stage</th>
+<th>Typical work in an engine</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Initialize</code></td>
+<td>Minimal allocation, subscribe to global events.</td>
+</tr>
+<tr>
+<td><code>Load</code></td>
+<td>Read config, build internal data tables, resolve external handles.</td>
+</tr>
+<tr>
+<td><code>Ready</code> ❗</td>
+<td>Hook into other engines, register gameplay systems. <strong>Must be overridden.</strong></td>
+</tr>
+<tr>
+<td><code>Reload</code></td>
+<td>Refresh runtime state when config/files change.</td>
+</tr>
+<tr>
+<td><code>Unload</code></td>
+<td>Dispose timers, unregister events.</td>
+</tr>
+<tr>
+<td><code>Terminate</code></td>
+<td>Final GC‑safe clean‑up (rarely needed in practice).</td>
+</tr>
+</tbody>
+</table>
+<p><code>Ready</code> is kept <strong>abstract</strong> in <code>Engine&lt;TConfig&gt;</code> so you never forget to wire
+the core behaviour.</p>
+<hr>
+<h2 id="4-authoring-a-new-engine">4. Authoring a New Engine</h2>
+<pre><code class="lang-csharp">public sealed class ChatEngine : Engine&lt;EngineConfig&gt;
+{
+    public ChatEngine() : base(new EngineConfig(
+        name:        &quot;Chat&quot;,
+        description: &quot;Player‑to‑player text chat&quot;,
+        version:     &quot;1.2.0&quot;,
+        author:      &quot;Ben Dol&quot;,
+        relativePath:&quot;RisingV/Core&quot;))
+    {
+        // No hard deps, optional analytics
+        Recommended.Add(new Dependency(typeof(AnalyticsEngine)));
+    }
+
+    public override void Ready(EngineManager mgr, List&lt;IPlugin&gt; plugins)
+    {
+        // Register chat commands, message bus, etc.
+        mgr.Log.Info(&quot;ChatEngine ready – commands registered.&quot;);
+    }
+}
+</code></pre>
+<p>Register with your plugin:</p>
+<pre><code class="lang-csharp">_engineManager.AddEngine&lt;ChatEngine&gt;(this);
+
+// This is called by the EngineManager no need to manually call, but just to demonstrate the order
+_engineManager.Initialize(this);
+_engineManager.Load(this);
+_engineManager.Ready(this);   // after all engines have been added
+</code></pre>
+<hr>
+<h2 id="5-runtime-hotreload">5. Runtime Hot‑Reload</h2>
+<ol>
+<li>Edit <code>BepInEx/config/RisingV/Core/Chat.cfg</code>.</li>
+<li><code>EngineManager.Reload</code> propagates a <code>ReloadReason</code> to every engine.</li>
+<li>Override <code>Reload</code> to pick up new values:</li>
+</ol>
+<pre><code class="lang-csharp">public override void Reload(EngineManager m, ReloadReason r)
+{
+    base.Reload(m, r);
+    Log.Info(&quot;ChatEngine reloaded: {}&quot;, r.Reason);
+    _throttle = Config.GetValue(&quot;ThrottlePerMinute&quot;, 20);
+}
+</code></pre>
+<hr>
+<h2 id="6-best-practices--tips">6. Best Practices &amp; Tips</h2>
+<ul>
+<li><strong>Single Responsibility</strong> – keep each engine focused; split large ones.</li>
+<li><strong>Prefer Recommended</strong> – reserve hard dependencies for <em>must‑have</em> links.</li>
+<li><strong>Guard With <code>Enabled</code></strong> – short‑circuit early if the engine is disabled.</li>
+<li><strong>Leverage Auto‑Load</strong> – great for optional gameplay features users can toggle.</li>
+<li><strong>Test Dependency Graphs</strong> – unit‑test <code>EngineManager.OrderEnginesByDependencies</code>.</li>
+</ul>
+<hr>
+<h2 id="7-faq">7. FAQ</h2>
+<p><strong>Q: Do I need a separate manager for every engine type?</strong><br>
+A: No. A single <code>EngineManager</code> can host any number of heterogeneous engines.</p>
+<p><strong>Q: Can engines depend on managers?</strong><br>
+A: Indirectly – they retrieve managers via the plugin context, but circular
+dependencies (Engine ⇄ Manager) should be avoided.</p>
+<p><strong>Q: How heavy is auto‑load?</strong><br>
+A: Instantiation is a single <code>Activator.CreateInstance</code> call plus registration,
+so negligible for typical plugin sizes.</p>
+<hr>
+<h3 id="tldr">TL;DR</h3>
+<p><em>Engines</em> are modular, reload‑friendly mini‑services.<br>
+<code>Engine&lt;TConfig&gt;</code> gives you the boilerplate; <code>EngineManager</code> keeps them
+orchestrated and dependency‑aware.<br>
+Focus on domain logic—let the abstraction handle the rest. 🚀</p>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/BenDol/RisingV.Shared/blob/master/docs/Engines.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
