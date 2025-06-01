@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Getting Started | RisingV.Scripting </title>
+      <title>Commands | RisingV.Scripting </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Getting Started | RisingV.Scripting ">
+      <meta name="title" content="Commands | RisingV.Scripting ">
       
       
       <link rel="icon" href="../assets/favicon/favicon.ico">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/BenDol/RisingV.Scripting/blob/master/docs/getting-started.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/BenDol/RisingV.Scripting/blob/master/docs/Commands.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -85,13 +85,22 @@
         </div>
 
         <article data-uid="">
-<h1 id="getting-started">Getting Started</h1>
+<h1 id="commands">Commands</h1>
 
+<p>The <code>Commands</code> namespace provides classes and interfaces for integrating chat commands with the scripting system. It includes:</p>
+<ul>
+<li><strong>ChatCommandScriptContext</strong>: A record that extends <code>ScriptContext&lt;ChatCommandContext&gt;</code>, providing command-specific data such as the user, character entity, admin status, and service provider.</li>
+<li><strong>IChatCommandScript</strong>: An interface defining synchronous (<code>Run</code>) and asynchronous (<code>RunAsync</code>) methods that chat command scripts must implement.</li>
+<li><strong>ScriptCommands</strong>: A static class providing built-in chat commands for managing scripts (e.g., reload).</li>
+<li><strong>ScriptExecutionCommand</strong>: A static class allowing execution of arbitrary C# code at runtime via chat.</li>
+</ul>
+<p>These classes enable scripts to respond to in-game chat commands and permit administrators to manage and execute scripts during gameplay.</p>
+<p><a href="https://docs.risingv.dev/scripting/api/RisingV.Scripting.Commands.html">API Documentation</a></p>
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/BenDol/RisingV.Scripting/blob/master/docs/getting-started.md/#L1" class="edit-link">Edit this page</a>
+          <a href="https://github.com/BenDol/RisingV.Scripting/blob/master/docs/Commands.md/#L1" class="edit-link">Edit this page</a>
         </div>
 
         <div class="next-article d-print-none border-top" id="nextArticle"></div>

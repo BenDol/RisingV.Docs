@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Introduction | RisingV.Scripting </title>
+      <title>Managers | RisingV.Scripting </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Introduction | RisingV.Scripting ">
+      <meta name="title" content="Managers | RisingV.Scripting ">
       
       
       <link rel="icon" href="../assets/favicon/favicon.ico">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/BenDol/RisingV.Scripting/blob/master/docs/introduction.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/BenDol/RisingV.Scripting/blob/master/docs/Managers.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -85,13 +85,22 @@
         </div>
 
         <article data-uid="">
-<h1 id="introduction">Introduction</h1>
+<h1 id="managers">Managers</h1>
 
+<p>The <code>Managers</code> namespace provides the <code>ScriptManager</code> class, responsible for discovering, loading, and managing the lifecycle of scripts. The <code>ScriptManager</code>:</p>
+<ul>
+<li>Tracks script file paths for each plugin.</li>
+<li>Detects file changes to trigger automatic reloads.</li>
+<li>Compiles and loads scripts into the runtime host via <code>ScriptLoader</code>.</li>
+<li>Provides methods to reload all or modified scripts, and to initialize and load scripts during plugin startup.</li>
+</ul>
+<p>This manager ensures that scripts are properly compiled, loaded, and reloaded as needed at runtime.</p>
+<p><a href="https://docs.risingv.dev/scripting/api/RisingV.Scripting.Managers.html">API Documentation</a></p>
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/BenDol/RisingV.Scripting/blob/master/docs/introduction.md/#L1" class="edit-link">Edit this page</a>
+          <a href="https://github.com/BenDol/RisingV.Scripting/blob/master/docs/Managers.md/#L1" class="edit-link">Edit this page</a>
         </div>
 
         <div class="next-article d-print-none border-top" id="nextArticle"></div>
