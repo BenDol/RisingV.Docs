@@ -104,7 +104,7 @@ runs:
 
     - name: Cement XREFs & Prune
       if: ${{ inputs.xref_map != '' }}
-      uses: BenDol/RisingV.Docs/.github/actions/cement-xrefs@master
+      uses: .github/actions/cement-xrefs@master
       with:
         dep_map: ${{ inputs.xref_map }}
 
