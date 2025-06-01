@@ -1,3 +1,5 @@
+# File: .github/actions/docfx-publish/action.yml
+
 name: "DocFX Publish"
 description: >-
   Checkout code, download/extract a DocFX template, build the site,
@@ -13,7 +15,7 @@ inputs:
     required: true
 
   docs_token:
-    description: "GitHub token with push rights to the central‐docs repo."
+    description: "GitHub token with push rights to the central-docs repo."
     required: true
 
   template_url:
@@ -59,6 +61,7 @@ runs:
         token: ${{ inputs.repo_token }}
 
     - name: Set DocFX GitHub Token
+      shell: bash
       run: |
         echo "DOCFX__SECRETS__GITHUB_TOKEN=${{ inputs.repo_token }}" >> $GITHUB_ENV
 
@@ -69,6 +72,7 @@ runs:
 
     - name: Update index.md with README content
       if: ${{ inputs.update_index_readme == 'true' }}
+      shell: bash
       run: |
         frontmatter=$(sed -n '1,/^---$/p' index.md)
         readme_content=$(sed '1d' README.md)
@@ -76,15 +80,18 @@ runs:
         echo "$readme_content" >> index.md
 
     - name: Install DocFX CLI
+      shell: bash
       run: dotnet tool update -g docfx
 
     - name: Download and Extract Template
+      shell: bash
       run: |
         mkdir -p templates
         curl -L ${{ inputs.template_url }} -o material.zip
         unzip -o material.zip -d templates
 
     - name: Build site
+      shell: bash
       run: docfx ./docfx.json
 
     - name: Cement XREFs & Prune
@@ -101,6 +108,7 @@ runs:
         path: central-docs
 
     - name: Sync into Central Docs
+      shell: bash
       run: |
         rm -rf central-docs/docs/${TARGET_LOW}
         mkdir -p central-docs/docs/${TARGET_LOW}
