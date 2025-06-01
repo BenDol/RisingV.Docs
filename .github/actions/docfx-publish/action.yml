@@ -1,5 +1,3 @@
-# File: .github/actions/docfx-publish/action.yml
-
 name: "DocFX Publish"
 description: >-
   Checkout code, download/extract a DocFX template, build the site,
@@ -21,7 +19,7 @@ inputs:
   template_url:
     description: >-
       URL of the zip file containing your DocFX template.  
-      Defaults to Material.zip if you don’t override.
+      Defaults to Material.zip if you don't override.
     required: false
     default: "https://docs.risingv.dev/docfx/templates/material.zip"
 
