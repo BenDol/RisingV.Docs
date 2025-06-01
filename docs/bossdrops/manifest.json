@@ -7917,10 +7917,10 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "docs/Command.md",
+      "source_relative_path": "docs/Commands.md",
       "output": {
         ".html": {
-          "relative_path": "docs/Command.html"
+          "relative_path": "docs/Commands.html"
         }
       },
       "version": ""
