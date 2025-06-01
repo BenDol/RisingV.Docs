@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Systems Overview | RisingV.Core </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Systems Overview | RisingV.Core ">
+      
+      
+      <link rel="icon" href="../assets/favicon/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/BenDol/RisingV.Core/blob/master/docs/Systems.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../assets/images/logo_50.png" alt="RisingV.Core">
+            RisingV.Core
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="systems-overview">Systems Overview</h1>
+
+<p>The <strong>RisingV.Core.Systems</strong> namespace contains a collection of “System” classes that encapsulate core game mechanics and domain-specific logic within the RisingV framework. Each System interacts directly with Unity’s Entity Component System (ECS) or hooks into RisingV’s event architecture to manage in‑game functionality such as castle ownership, territorial control, chat handling, clan management, damage tracking, and loot distribution. By centralizing these workflows, Systems ensure consistent, maintainable behavior across plugins and support hot‑reload without losing runtime state.</p>
+<hr>
+<h2 id="api-documentation">API Documentation</h2>
+<p>For full details on available classes and methods in RisingV.Core.Systems, refer to the official API reference:</p>
+<blockquote>
+<p>🔗 <a href="https://docs.risingv.dev/core/api/RisingV.Core.Systems.html"><strong>RisingV.Core.Systems API Reference</strong></a></p>
+</blockquote>
+<hr>
+<h2 id="role-and-responsibilities">Role and Responsibilities</h2>
+<ol>
+<li><p><strong>Encapsulation of Domain Logic</strong><br>
+Each System class groups related functionality around a specific game domain. For example:</p>
+<ul>
+<li><strong>CastleHeartSystem</strong> locates and queries “Castle Heart” entities (the central building in a player’s castle).</li>
+<li><strong>CastleTerritorySystem</strong> translates world‑space positions into grid coordinates and determines which castle (and thus which clan) controls a particular region.</li>
+<li><strong>ChatSystem</strong> intercepts low‑level network chat events, decodes message payloads, and publishes them as RisingV events.</li>
+<li><strong>ClanSystem</strong> manages clan creation, membership, and leadership roles by manipulating ECS components on player entities.</li>
+<li><strong>DamageTrackingSystem</strong> tracks and aggregates damage dealt by players to targets, enabling percent‑based loot distribution or stat calculations.</li>
+<li><strong>LootSystem</strong> listens for unit death events, consults damage tracking data, and spawns item drops based on configured loot tables and player contributions.</li>
+</ul>
+</li>
+<li><p><strong>Integration with ECS &amp; EventBridge</strong></p>
+<ul>
+<li>Most Systems inherit from <code>Shared.Systems.System</code>, which provides convenience methods for scheduling updates and subscribing to RisingV’s in‑game events (<code>EventBridge</code>).</li>
+<li>Systems often create <code>EntityQuery</code> instances (wrapped in <code>LazyRetry</code> for on‑demand initialization) to locate entities with specific component combinations (e.g., <code>CastleHeart</code> + <code>TeamData</code> for castle ownership).</li>
+<li>By responding to events instead of patching game methods directly, Systems decouple game integration from mod logic. This allows multiple plugins to rely on the same core System APIs and ensures consistent behavior even if underlying game code changes.</li>
+</ul>
+</li>
+<li><p><strong>Stateful Management &amp; Hot‑Reload</strong></p>
+<ul>
+<li>Many Systems maintain runtime state (cached queries, dictionaries of tracked damage, etc.).</li>
+<li>When a plugin or server hot‑reloads, System constructors and <code>OnUpdate</code> loops re‑initialize or resume operation seamlessly—no manual intervention needed to rebuild queries or re‑attach handlers.</li>
+<li>Underlying data (e.g., active damage maps, registered clan relationships) may persist in shared databases or in ECS components, ensuring minimal disruption across reloads.</li>
+</ul>
+</li>
+<li><p><strong>Interoperability with Engines &amp; Aspects</strong></p>
+<ul>
+<li>Systems often delegate specific tasks to Engines (e.g., <code>LootEngine</code>, <code>DamageEngine</code>, <code>DeathEngine</code>) and Aspects (e.g., <code>EntityAspect</code>, <code>BuffAspect</code>) to perform high‑level operations such as spawning loot, applying buffs, or writing to persistent databases.</li>
+<li>For example, <code>LootSystem</code> uses <code>DamageTrackingSystem</code> data to call <code>LootEngine.SpawnLoot</code> for each eligible player, ensuring correct distribution of drops.</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="core-system-classes">Core System Classes</h2>
+<p>Below is a summary of each System class provided by <strong>RisingV.Core.Systems</strong>, along with its primary purpose and typical usage. Click the class name to view its API reference.</p>
+<h3 id="castleheartsystem"><strong>CastleHeartSystem</strong></h3>
+<ul>
+<li><strong>Namespace</strong>: <code>RisingV.Core.Systems</code></li>
+<li><strong>Purpose</strong>: Locates all “Castle Heart” entities and provides utilities to query which castle belongs to which player or clan.</li>
+<li><strong>Key Methods</strong>:
+<ul>
+<li><code>GetAllCastleHearts()</code>: Returns an array of all active <code>Entity</code> instances that have both <code>CastleHeart</code> and <code>TeamData</code> components.</li>
+<li><code>FindCastleHeartForUser(Entity user)</code>: Searches for the castle heart entity associated with a given user’s <code>User</code> component.</li>
+</ul>
+</li>
+<li><strong>Usage</strong>:
+<pre><code class="lang-csharp">// Determine if a user owns a castle
+if (CastleHeartSystem.FindCastleHeartForUser(playerUserEntity, out var heartEntity))
+{
+    // 'heartEntity' is the Castle Heart owned by the player
+}
+</code></pre>
+</li>
+<li><strong>API Reference</strong>: <a href="https://docs.risingv.dev/core/api/RisingV.Core.Systems.CastleHeartSystem.html">CastleHeartSystem</a></li>
+</ul>
+<hr>
+<h3 id="castleterritorysystem"><strong>CastleTerritorySystem</strong></h3>
+<ul>
+<li><strong>Namespace</strong>: <code>RisingV.Core.Systems</code></li>
+<li><strong>Purpose</strong>: Converts world positions into a grid coordinate system and determines which castle (and thus which clan) controls a specific tile. This supports territory‑based gameplay (e.g., claiming land, region‑specific rules).</li>
+<li><strong>Key Methods</strong>:
+<ul>
+<li><code>GetGridPosition(Vector3 worldPos)</code>: Computes the discrete grid tile for a world position.</li>
+<li><code>GetCastleOwnerAtPos(float3 worldPos)</code>: Returns the <code>Entity</code> of the castle that controls the given position, or <code>Entity.Null</code> if unoccupied.</li>
+</ul>
+</li>
+<li><strong>Usage</strong>:
+<pre><code class="lang-csharp">// Check castle ownership for a location
+float3 worldPosition = new float3(10f, 0f, -5f);
+Entity owningCastle = CastleTerritorySystem.GetCastleOwnerAtPos(worldPosition);
+if (owningCastle != Entity.Null)
+{
+    // The returned Entity is the Castle Heart controlling that tile
+}
+</code></pre>
+</li>
+<li><strong>API Reference</strong>: <a href="https://docs.risingv.dev/core/api/RisingV.Core.Systems.CastleTerritorySystem.html">CastleTerritorySystem</a></li>
+</ul>
+<hr>
+<h3 id="chatsystem"><strong>ChatSystem</strong></h3>
+<ul>
+<li><strong>Namespace</strong>: <code>RisingV.Core.Systems</code></li>
+<li><strong>Purpose</strong>: Intercepts and processes raw network chat events from Stunlock’s game code, decodes message payloads, and exposes a clean API for sending or receiving chat messages via RisingV’s <code>EventBridge</code>.</li>
+<li><strong>Key Features</strong>:
+<ul>
+<li>Registers handlers for incoming chat packets (<code>ChatMessageEventQuery</code>) to publish <code>ChatMessageEvent</code>s to plugin subscribers.</li>
+<li>Provides <code>SendChat(Entity sourceEntity, string message)</code> to programmatically broadcast messages from a specific player or system.</li>
+</ul>
+</li>
+<li><strong>Usage</strong>:
+<pre><code class="lang-csharp">// Subscribe to chat messages
+EventBridge.Subscribe&lt;ChatMessageEvent&gt;(evt =&gt; {
+    Logger.LogInfo($&quot;Received chat from {evt.SourceEntity}: {evt.MessageText}&quot;);
+});
+
+// Send a system announcement
+ChatSystem.SendChat(systemEntity, &quot;[Server] Welcome to the Realm!&quot;);
+</code></pre>
+</li>
+<li><strong>API Reference</strong>: <a href="https://docs.risingv.dev/core/api/RisingV.Core.Systems.ChatSystem.html">ChatSystem</a></li>
+</ul>
+<hr>
+<h3 id="clansystem"><strong>ClanSystem</strong></h3>
+<ul>
+<li><strong>Namespace</strong>: <code>RisingV.Core.Systems</code></li>
+<li><strong>Purpose</strong>: Manages all clan‑related state, including creation, membership, leadership roles, and deletion. Encapsulates common clan operations by reading and writing ECS components on user entities.</li>
+<li><strong>Key Methods</strong>:
+<ul>
+<li><code>GetClanFromUser(User user)</code>: Returns the <code>Entity</code> representing the clan that a given user belongs to, or <code>Entity.Null</code> if none.</li>
+<li><code>CreateClan(User user, string clanName)</code>: Initializes a new clan, assigning the creator as clan leader.</li>
+<li><code>AddMember(Entity clanEntity, User newMember)</code>: Adds a user to an existing clan.</li>
+<li><code>PromoteMember(User user)</code>: Assigns “Leader” role to a clan member.</li>
+<li><code>IsClanLeader(User user)</code>: Checks if a user holds the Leader role.</li>
+</ul>
+</li>
+<li><strong>Usage</strong>:
+<pre><code class="lang-csharp">// Create a new clan for the player
+Entity newClan = ClanSystem.CreateClan(playerUser, &quot;VampireLegion&quot;);
+
+// Add another player to the clan
+ClanSystem.AddMember(newClan, otherUser);
+
+// Check if a user is the clan leader
+bool isLeader = ClanSystem.IsClanLeader(playerUser);
+</code></pre>
+</li>
+<li><strong>API Reference</strong>: <a href="https://docs.risingv.dev/core/api/RisingV.Core.Systems.ClanSystem.html">ClanSystem</a></li>
+</ul>
+<hr>
+<h3 id="damagetrackingsystem"><strong>DamageTrackingSystem</strong></h3>
+<ul>
+<li><strong>Namespace</strong>: <code>RisingV.Core.Systems</code></li>
+<li><strong>Purpose</strong>: Aggregates all damage dealt by players (or other entities) to a given target. This fine‑grained tracking enables percent‑based reward distribution (e.g., loot sharing) and advanced stat calculations.</li>
+<li><strong>Key Features</strong>:
+<ul>
+<li>Listens for <code>DamageEvent</code>s or similar hooks to incrementally accumulate damage per source entity.</li>
+<li>Maintains an in‑memory map (<code>damageComponent</code>) keyed by target entity ID, storing <code>DamageMap</code> instances that record totals, percentages, and level information.</li>
+<li>Exposes methods to retrieve or reset damage data for a given target.</li>
+</ul>
+</li>
+<li><strong>Usage</strong>:
+<pre><code class="lang-csharp">// During a death event, query top damage contributor
+IReadOnlyDictionary&lt;NetworkId, DamageMap&gt; damageMap = DamageTrackingSystem.GetDamageMap(targetEntity);
+var sortedContributors = damageMap.OrderByDescending(kvp =&gt; kvp.Value.TotalDamage);
+var topContributor = sortedContributors.First().Key;
+</code></pre>
+</li>
+<li><strong>API Reference</strong>: <a href="https://docs.risingv.dev/core/api/RisingV.Core.Systems.DamageTrackingSystem.html">DamageTrackingSystem</a></li>
+</ul>
+<hr>
+<h3 id="lootsystem"><strong>LootSystem</strong></h3>
+<ul>
+<li><strong>Namespace</strong>: <code>RisingV.Core.Systems</code></li>
+<li><strong>Purpose</strong>: Coordinates item drop logic when entities die. By consulting <code>DamageTrackingSystem</code>, it fairly distributes loot according to each contributor’s damage percentage, and then interacts with RisingV’s item‐spawning APIs to physically drop items in the world.</li>
+<li><strong>Key Features</strong>:
+<ul>
+<li>Subscribes to <code>UnitDeathEvent</code> and calculates drop shares for each eligible player.</li>
+<li>Uses <code>IItemDrop</code> implementations (configured through item definitions or drop tables) to determine exactly what to spawn for each contributor.</li>
+<li>Safely handles errors in drop operations and logs failures to aid debugging.</li>
+</ul>
+</li>
+<li><strong>Usage</strong>:
+<pre><code class="lang-csharp">// Automated via event subscription; no explicit call needed unless customizing behavior
+
+// Example: Extend drop logic with a special event
+EventBridge.Subscribe&lt;UnitDeathEvent&gt;(evt =&gt; {
+    // Force an extra drop if target belonged to a special faction
+    if (FactionAspect.GetFaction(evt.Victim).Equals(Faction.Boss))
+    {
+        LootSystem.ForceExtraDrop(evt.Victim, &quot;LegendarySword&quot;);
+    }
+});
+</code></pre>
+</li>
+<li><strong>API Reference</strong>: <a href="https://docs.risingv.dev/core/api/RisingV.Core.Systems.LootSystem.html">LootSystem</a></li>
+</ul>
+<hr>
+<h2 id="integration--usage">Integration &amp; Usage</h2>
+<ol>
+<li><p><strong>Registration</strong></p>
+<ul>
+<li>Systems are typically registered during plugin initialization via <code>SystemManager</code>. For example:
+<pre><code class="lang-csharp">var systemManager = new SystemManager();
+systemManager.Initialize(this);
+systemManager.AddSystem&lt;ChatSystem&gt;(this);
+systemManager.AddSystem&lt;ClanSystem&gt;(this);
+systemManager.AddSystem&lt;DamageTrackingSystem&gt;(this);
+systemManager.AddSystem&lt;LootSystem&gt;(this);
+systemManager.AddSystem&lt;CastleHeartSystem&gt;(this);
+systemManager.AddSystem&lt;CastleTerritorySystem&gt;(this);
+systemManager.Load(this);
+systemManager.Ready(this);
+</code></pre>
+</li>
+<li>After <code>Ready()</code>, all systems are active: queries are built, event subscriptions are live, and ECS interactions can proceed normally.</li>
+</ul>
+</li>
+<li><p><strong>Event Subscriptions</strong></p>
+<ul>
+<li>Many Systems publish or consume events via <code>EventBridge</code>. Plugin authors can hook into these events for custom logic. For example, subscribe to <code>ChatMessageEvent</code> to modify or filter chat messages, or to <code>UnitDeathEvent</code> to award achievements.</li>
+</ul>
+</li>
+<li><p><strong>ECS Queries</strong></p>
+<ul>
+<li>Systems use <code>LazyRetry&lt;EntityQuery&gt;</code> wrappers to defer query creation until entities and components are guaranteed to exist. This avoids null references during server start or plugin reload.</li>
+<li>For example, <code>CastleHeartSystem.HeartQuery</code> only builds its <code>EntityQuery</code> the first time it’s needed, and retries if initial creation fails.</li>
+</ul>
+</li>
+<li><p><strong>Hot‑Reload Support</strong></p>
+<ul>
+<li>Because Systems rely on shared ECS components and event subscriptions, a hot‑reload (triggered by BepInEx or plugin manager) seamlessly reconnects Systems:
+<ul>
+<li>Queries are lazily reinitialized.</li>
+<li>Cached damage data or clan state stored in persistent components remains intact.</li>
+<li>Event subscriptions resume automatically once <code>Reload()</code> completes.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Cross‑System Collaboration</strong></p>
+<ul>
+<li>Systems often delegate tasks to Engines or Aspects. For example:
+<ul>
+<li><code>LootSystem</code> calls <code>DamageTrackingSystem.GetDamageMap(...)</code> (another System) before spawning items via <code>ItemAspect</code> or <code>LootEngine</code>.</li>
+<li><code>CastleTerritorySystem</code> uses <code>CastleHeartSystem.FindCastleHeartForUser(...)</code> to resolve ownership.</li>
+</ul>
+</li>
+<li>This layered approach promotes single responsibility:
+<ul>
+<li><strong>Hooks</strong> publish raw events.</li>
+<li><strong>Systems</strong> process and validate event data.</li>
+<li><strong>Engines/Aspects</strong> execute high‑level logic (e.g., database updates, world modifications).</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="summary">Summary</h2>
+<p>The <strong>RisingV.Core.Systems</strong> layer is a critical part of the RisingV architecture, responsible for:</p>
+<ul>
+<li>Encapsulating core gameplay mechanics (chat, clans, castles, damage, loot).</li>
+<li>Processing in‑game events and coordinating with Engines/Aspects for persistent effects.</li>
+<li>Abstracting direct ECS interactions and network packet handling behind well-defined APIs.</li>
+<li>Ensuring consistent behavior across plugins and supporting hot‑reload without losing runtime state.</li>
+</ul>
+<p>By leveraging these System classes, plugin authors can focus on feature development—knowing that RisingV.Core.Systems will reliably manage underlying game interactions and maintain a cohesive, event‑driven workflow.</p>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/BenDol/RisingV.Core/blob/master/docs/Systems.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
