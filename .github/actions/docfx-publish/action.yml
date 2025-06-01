@@ -45,28 +45,30 @@ runs:
     - name: Print all inputs
       shell: bash
       run: |
-        echo "TARGET is <$INPUT_TARGET>"
-        echo "REPO_TOKEN is <$INPUT_REPO_TOKEN>"
-        echo "DOCS_TOKEN is <$INPUT_DOCS_TOKEN>"
-        echo "TEMPLATE_URL is <$INPUT_TEMPLATE_URL>"
-        echo "XREF_MAP is <$INPUT_XREF_MAP>"
-        echo "UPDATE_INDEX_README is <$INPUT_UPDATE_INDEX_README>"
+        echo "TARGET is <${{ inputs.target }}>"
+        echo "REPO_TOKEN is <${{ secrets.RISINGV_PAT }}>"
+        echo "DOCS_TOKEN is <${{ secrets.RISINGV_DOCS_PAT }}>"
+        echo "TEMPLATE_URL is <${{ inputs.template_url }}>"
+        echo "XREF_MAP is <${{ inputs.xref_map }}>"
+        echo "UPDATE_INDEX_README is <${{ inputs.update_index_readme }}>"
 
     - name: Derive lowercase target
       shell: bash
+      env:
+        TARGET: ${{ inputs.target }}
       run: |
-        if [ -z "$INPUT_TARGET" ]; then
+        if [ -z "$TARGET" ]; then
           echo "::error::The 'target' input is required."
           exit 1
         fi
-        echo "TARGET_LOW=${INPUT_TARGET,,}" >> $GITHUB_ENV
+        echo "TARGET_LOW=${TARGET,,}" >> $GITHUB_ENV
 
     - name: Checkout repository
       uses: actions/checkout@v4
       with:
+        token: ${{ inputs.repo_token }}
         submodules: recursive
         fetch-depth: 0
-        token: ${{ inputs.repo_token }}
 
     - name: Set DocFX GitHub Token
       shell: bash
