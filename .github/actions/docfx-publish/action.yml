@@ -42,6 +42,16 @@ runs:
   using: "composite"
   steps:
 
+    - name: Print all inputs
+      shell: bash
+      run: |
+        echo "TARGET is <$INPUT_TARGET>"
+        echo "REPO_TOKEN is <$INPUT_REPO_TOKEN>"
+        echo "DOCS_TOKEN is <$INPUT_DOCS_TOKEN>"
+        echo "TEMPLATE_URL is <$INPUT_TEMPLATE_URL>"
+        echo "XREF_MAP is <$INPUT_XREF_MAP>"
+        echo "UPDATE_INDEX_README is <$INPUT_UPDATE_INDEX_README>"
+
     - name: Derive lowercase target
       shell: bash
       run: |
