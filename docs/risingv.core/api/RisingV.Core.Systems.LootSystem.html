@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class LootSystem | RisingV.Core </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class LootSystem | RisingV.Core ">
+      
+      <meta name="description" content="LootSystem is responsible for generating item drops based on the configured loot rules.">
+      <link rel="icon" href="../assets/favicon/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/BenDol/RisingV.Core/new/master/apiSpec/new?filename=RisingV_Core_Systems_LootSystem.md&amp;value=---%0Auid%3A%20RisingV.Core.Systems.LootSystem%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../assets/images/logo_50.png" alt="RisingV.Core">
+            RisingV.Core
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="RisingV.Core.Systems.LootSystem">
+
+
+
+  <h1 id="RisingV_Core_Systems_LootSystem" data-uid="RisingV.Core.Systems.LootSystem" class="text-break">
+Class LootSystem  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Core/blob/master/RisingV.Core/Systems/LootSystem.cs/#L65"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="RisingV.html">RisingV</a>.<a class="xref" href="RisingV.Core.html">Core</a>.<a class="xref" href="RisingV.Core.Systems.html">Systems</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>RisingV.Core.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>LootSystem is responsible for generating item drops based on the configured loot rules.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class LootSystem : System&lt;LootSystemConfig&gt;, ISystem, IManageableLifecycle&lt;SystemManager&gt;, IManageableLifecycle, IReloadable, IManageable&lt;SystemManager&gt;, IManageable</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Systems.System.html">System</a></div>
+      <div><a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Systems.System-1.html">System</a>&lt;<a class="xref" href="RisingV.Core.Systems.LootSystemConfig.html">LootSystemConfig</a>&gt;</div>
+      <div><span class="xref">LootSystem</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Systems.ISystem.html">ISystem</a></div>
+      <div><a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Managers.IManageableLifecycle-1.html">IManageableLifecycle</a>&lt;<a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Systems.SystemManager.html">SystemManager</a>&gt;</div>
+      <div><a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Managers.IManageableLifecycle.html">IManageableLifecycle</a></div>
+      <div><a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Managers.IReloadable.html">IReloadable</a></div>
+      <div><a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Managers.IManageable-1.html">IManageable</a>&lt;<a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Systems.SystemManager.html">SystemManager</a>&gt;</div>
+      <div><a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Managers.IManageable.html">IManageable</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="RisingV.Shared.Systems.System-1.html#RisingV_Shared_Systems_System_1_Config">System&lt;LootSystemConfig&gt;.Config</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Systems.System.html#RisingV_Shared_Systems_System_Ready_RisingV_Shared_Systems_SystemManager_System_Collections_Generic_List_RisingV_Shared_Plugins_IPlugin__">System.Ready(SystemManager, List&lt;IPlugin&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Systems.System.html#RisingV_Shared_Systems_System_Unload_RisingV_Shared_Systems_SystemManager_System_Collections_Generic_List_RisingV_Shared_Plugins_IPlugin__">System.Unload(SystemManager, List&lt;IPlugin&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Systems.System.html#RisingV_Shared_Systems_System_Reload_RisingV_Shared_Systems_SystemManager_System_Collections_Generic_List_RisingV_Shared_Plugins_IPlugin__RisingV_Shared_Managers_ReloadReason_">System.Reload(SystemManager, List&lt;IPlugin&gt;, ReloadReason)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="RisingV.Core.Extensions.EntityExtensions.html#RisingV_Core_Extensions_EntityExtensions_IsAspect__1_System_Object_">EntityExtensions.IsAspect&lt;TAspect&gt;(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="RisingV.Shared.Extensions.EntityExtensions.html#RisingV_Shared_Extensions_EntityExtensions_IsAspect__1_System_Object_">EntityExtensions.IsAspect&lt;TAspect&gt;(object)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="RisingV_Core_Systems_LootSystem_DropItemsNearby_" data-uid="RisingV.Core.Systems.LootSystem.DropItemsNearby*"></a>
+
+  <h3 id="RisingV_Core_Systems_LootSystem_DropItemsNearby__1_Unity_Entities_Entity_System_Collections_Generic_List___0__System_String_" data-uid="RisingV.Core.Systems.LootSystem.DropItemsNearby``1(Unity.Entities.Entity,System.Collections.Generic.List{``0},System.String)">
+  DropItemsNearby&lt;T&gt;(Entity, List&lt;T&gt;, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Core/blob/master/RisingV.Core/Systems/LootSystem.cs/#L230"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static List&lt;IItemDrop&gt; DropItemsNearby&lt;T&gt;(Entity entity, List&lt;T&gt; itemsToDrop, string sourceName = &quot;&quot;) where T : class, IItemDrop</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>entity</code> <span class="xref">Entity</span></dt>
+    <dd></dd>
+    <dt><code>itemsToDrop</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;T&gt;</dt>
+    <dd></dd>
+    <dt><code>sourceName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="RisingV.Core.Items.Drops.IItemDrop.html">IItemDrop</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Systems_LootSystem_GenerateItemDrops_" data-uid="RisingV.Core.Systems.LootSystem.GenerateItemDrops*"></a>
+
+  <h3 id="RisingV_Core_Systems_LootSystem_GenerateItemDrops__1_RisingV_Core_Items_Drops_IHasItemDrops___0__System_Func___0_System_Single__System_Func___0_System_Single__RisingV_Shared_RangeInt_" data-uid="RisingV.Core.Systems.LootSystem.GenerateItemDrops``1(RisingV.Core.Items.Drops.IHasItemDrops{``0},System.Func{``0,System.Single},System.Func{``0,System.Single},RisingV.Shared.RangeInt)">
+  GenerateItemDrops&lt;T&gt;(IHasItemDrops&lt;T&gt;, Func&lt;T, float&gt;?, Func&lt;T, float&gt;?, RangeInt?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Core/blob/master/RisingV.Core/Systems/LootSystem.cs/#L88"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static List&lt;IItemDrop&gt; GenerateItemDrops&lt;T&gt;(IHasItemDrops&lt;T&gt; hasDrops, Func&lt;T, float&gt;? calculateDropScaleFunc = null, Func&lt;T, float&gt;? calculateAmountScaleFunc = null, RangeInt? defaultAmountRange = null) where T : IItem, IItemDroppable</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>hasDrops</code> <a class="xref" href="RisingV.Core.Items.Drops.IHasItemDrops-1.html">IHasItemDrops</a>&lt;T&gt;</dt>
+    <dd></dd>
+    <dt><code>calculateDropScaleFunc</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;T, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>calculateAmountScaleFunc</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;T, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>defaultAmountRange</code> <a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.RangeInt.html">RangeInt</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="RisingV.Core.Items.Drops.IItemDrop.html">IItemDrop</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Systems_LootSystem_GenerateItemDrops_" data-uid="RisingV.Core.Systems.LootSystem.GenerateItemDrops*"></a>
+
+  <h3 id="RisingV_Core_Systems_LootSystem_GenerateItemDrops__1_System_Collections_Generic_IEnumerable___0__System_Func___0_System_Single__System_Func___0_System_Single__RisingV_Shared_RangeInt_RisingV_Core_Systems_LootRollMode_RisingV_Core_Systems_LootCompletionMode_RisingV_Core_Systems_LootSelectionMode_RisingV_Core_Systems_LootShuffleMode_System_UInt32_" data-uid="RisingV.Core.Systems.LootSystem.GenerateItemDrops``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Single},System.Func{``0,System.Single},RisingV.Shared.RangeInt,RisingV.Core.Systems.LootRollMode,RisingV.Core.Systems.LootCompletionMode,RisingV.Core.Systems.LootSelectionMode,RisingV.Core.Systems.LootShuffleMode,System.UInt32)">
+  GenerateItemDrops&lt;T&gt;(IEnumerable&lt;T&gt;, Func&lt;T, float&gt;?, Func&lt;T, float&gt;?, RangeInt?, LootRollMode, LootCompletionMode, LootSelectionMode, LootShuffleMode, uint)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Core/blob/master/RisingV.Core/Systems/LootSystem.cs/#L106"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static List&lt;IItemDrop&gt; GenerateItemDrops&lt;T&gt;(IEnumerable&lt;T&gt; hasDrops, Func&lt;T, float&gt;? calculateDropScaleFunc = null, Func&lt;T, float&gt;? calculateAmountScaleFunc = null, RangeInt? defaultAmountRange = null, LootRollMode rollMode = LootRollMode.Always, LootCompletionMode completionMode = LootCompletionMode.OneIteration, LootSelectionMode selectionMode = LootSelectionMode.AllSuccess, LootShuffleMode shuffleMode = LootShuffleMode.Shuffle, uint indent = 0) where T : IItem, IItemDroppable</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>hasDrops</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;T&gt;</dt>
+    <dd></dd>
+    <dt><code>calculateDropScaleFunc</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;T, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>calculateAmountScaleFunc</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;T, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>defaultAmountRange</code> <a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.RangeInt.html">RangeInt</a></dt>
+    <dd></dd>
+    <dt><code>rollMode</code> <a class="xref" href="RisingV.Core.Systems.LootRollMode.html">LootRollMode</a></dt>
+    <dd></dd>
+    <dt><code>completionMode</code> <a class="xref" href="RisingV.Core.Systems.LootCompletionMode.html">LootCompletionMode</a></dt>
+    <dd></dd>
+    <dt><code>selectionMode</code> <a class="xref" href="RisingV.Core.Systems.LootSelectionMode.html">LootSelectionMode</a></dt>
+    <dd></dd>
+    <dt><code>shuffleMode</code> <a class="xref" href="RisingV.Core.Systems.LootShuffleMode.html">LootShuffleMode</a></dt>
+    <dd></dd>
+    <dt><code>indent</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="RisingV.Core.Items.Drops.IItemDrop.html">IItemDrop</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Systems_LootSystem_Initialize_" data-uid="RisingV.Core.Systems.LootSystem.Initialize*"></a>
+
+  <h3 id="RisingV_Core_Systems_LootSystem_Initialize_RisingV_Shared_Systems_SystemManager_System_Collections_Generic_List_RisingV_Shared_Plugins_IPlugin__" data-uid="RisingV.Core.Systems.LootSystem.Initialize(RisingV.Shared.Systems.SystemManager,System.Collections.Generic.List{RisingV.Shared.Plugins.IPlugin})">
+  Initialize(SystemManager, List&lt;IPlugin&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Core/blob/master/RisingV.Core/Systems/LootSystem.cs/#L70"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes the lifecycle of the manager with a specific type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Initialize(SystemManager systemManager, List&lt;IPlugin&gt; plugins)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>systemManager</code> <a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Systems.SystemManager.html">SystemManager</a></dt>
+    <dd></dd>
+    <dt><code>plugins</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Plugins.IPlugin.html">IPlugin</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Systems_LootSystem_Load_" data-uid="RisingV.Core.Systems.LootSystem.Load*"></a>
+
+  <h3 id="RisingV_Core_Systems_LootSystem_Load_RisingV_Shared_Systems_SystemManager_System_Collections_Generic_List_RisingV_Shared_Plugins_IPlugin__" data-uid="RisingV.Core.Systems.LootSystem.Load(RisingV.Shared.Systems.SystemManager,System.Collections.Generic.List{RisingV.Shared.Plugins.IPlugin})">
+  Load(SystemManager, List&lt;IPlugin&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Core/blob/master/RisingV.Core/Systems/LootSystem.cs/#L76"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Loads the manager and its dependencies with a specific type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Load(SystemManager systemManager, List&lt;IPlugin&gt; plugins)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>systemManager</code> <a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Systems.SystemManager.html">SystemManager</a></dt>
+    <dd></dd>
+    <dt><code>plugins</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Plugins.IPlugin.html">IPlugin</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Systems_LootSystem_Terminate_" data-uid="RisingV.Core.Systems.LootSystem.Terminate*"></a>
+
+  <h3 id="RisingV_Core_Systems_LootSystem_Terminate_RisingV_Shared_Systems_SystemManager_System_Collections_Generic_List_RisingV_Shared_Plugins_IPlugin__" data-uid="RisingV.Core.Systems.LootSystem.Terminate(RisingV.Shared.Systems.SystemManager,System.Collections.Generic.List{RisingV.Shared.Plugins.IPlugin})">
+  Terminate(SystemManager, List&lt;IPlugin&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Core/blob/master/RisingV.Core/Systems/LootSystem.cs/#L82"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Terminates the manager and cleans up resources with a specific type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Terminate(SystemManager systemManager, List&lt;IPlugin&gt; plugins)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>systemManager</code> <a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Systems.SystemManager.html">SystemManager</a></dt>
+    <dd></dd>
+    <dt><code>plugins</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Plugins.IPlugin.html">IPlugin</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/BenDol/RisingV.Core/blob/master/RisingV.Core/Systems/LootSystem.cs/#L65" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,1560 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class RisingPluginBase | RisingV.Core </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class RisingPluginBase | RisingV.Core ">
+      
+      <meta name="description" content="Base class for RisingV plugins. Example Usage: using BepInEx; using RisingV.Shared.Plugins; using RisingV.Shared.Engines; using RisingV.Core.Engines;  public class MyCoolPluginConfig() : PluginConfig(MyPluginInfo.PLUGIN_GUID, MyPluginInfo.PLUGIN_GUID) {     public ConfigEntry&amp;lt;float&amp;gt; AttackModifier { get; set; } =         new(&quot;Gameplay&quot;, &quot;AttackModifier&quot;, 1f, &quot;Modifier for attack damage&quot;); }  public class MyCoolPluginContext() : PluginContext(typeof(MyPluginInfo), new MyCoolPluginConfig());  [BepInPlugin(MyPluginInfo.PLUGIN_GUID, MyPluginInfo.PLUGIN_NAME, MyPluginInfo.PLUGIN_VERSION)] [BepInDependency(&quot;gg.deca.VampireCommandFramework&quot;)] [BepInDependency(&quot;RisingV.Core&quot;)] [BepInDependency(&quot;RisingV.Scripting&quot;)] public class Plugin : RisingPlugin&amp;lt;MyCoolPluginContext&amp;gt; {     protected override void OnLoad()     {         // Plugin startup logic (pre-initialization)     }      protected override bool OnUnload()     {         return true;     }      protected override void RegisterEngines(EngineManager engineManager)     {         engineManager.AddEngine&amp;lt;ScriptingEngine&amp;gt;(this);         engineManager.AddEngine&amp;lt;DamageEngine&amp;gt;(this);         engineManager.AddEngine&amp;lt;DeathEngine&amp;gt;(this);     }      // You can also override other methods to register systems, processors, databases, etc. }">
+      <link rel="icon" href="../assets/favicon/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/BenDol/RisingV.Core/new/master/apiSpec/new?filename=RisingV_Core_Plugins_RisingPluginBase.md&amp;value=---%0Auid%3A%20RisingV.Core.Plugins.RisingPluginBase%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../assets/images/logo_50.png" alt="RisingV.Core">
+            RisingV.Core
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="RisingV.Core.Plugins.RisingPluginBase">
+
+
+
+  <h1 id="RisingV_Core_Plugins_RisingPluginBase" data-uid="RisingV.Core.Plugins.RisingPluginBase" class="text-break">
+Class RisingPluginBase  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Core/blob/master/RisingV.Core/Plugins/RisingPlugin.cs/#L72"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="RisingV.html">RisingV</a>.<a class="xref" href="RisingV.Core.html">Core</a>.<a class="xref" href="RisingV.Core.Plugins.html">Plugins</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>RisingV.Core.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Base class for RisingV plugins.</p>
+<p>Example Usage:</p>
+<pre><code class="lang-csharp">using BepInEx;
+using RisingV.Shared.Plugins;
+using RisingV.Shared.Engines;
+using RisingV.Core.Engines;
+
+public class MyCoolPluginConfig() : PluginConfig(MyPluginInfo.PLUGIN_GUID, MyPluginInfo.PLUGIN_GUID)
+{
+    public ConfigEntry&lt;float&gt; AttackModifier { get; set; } =
+        new("Gameplay", "AttackModifier", 1f, "Modifier for attack damage");
+}
+
+public class MyCoolPluginContext() : PluginContext(typeof(MyPluginInfo), new MyCoolPluginConfig());
+
+[BepInPlugin(MyPluginInfo.PLUGIN_GUID, MyPluginInfo.PLUGIN_NAME, MyPluginInfo.PLUGIN_VERSION)]
+[BepInDependency("gg.deca.VampireCommandFramework")]
+[BepInDependency("RisingV.Core")]
+[BepInDependency("RisingV.Scripting")]
+public class Plugin : RisingPlugin&lt;MyCoolPluginContext&gt;
+{
+    protected override void OnLoad()
+    {
+        // Plugin startup logic (pre-initialization)
+    }
+
+    protected override bool OnUnload()
+    {
+        return true;
+    }
+
+    protected override void RegisterEngines(EngineManager engineManager)
+    {
+        engineManager.AddEngine&lt;ScriptingEngine&gt;(this);
+        engineManager.AddEngine&lt;DamageEngine&gt;(this);
+        engineManager.AddEngine&lt;DeathEngine&gt;(this);
+    }
+
+    // You can also override other methods to register systems, processors, databases, etc.
+}</code></pre>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract class RisingPluginBase : BasePlugin, IPlugin, IPluginContext, IPluginComponent, IManageable&lt;PluginComponentsManager&gt;, IManageable&lt;PluginManager&gt;, IManageable, IReloadable&lt;PluginManager&gt;, IReloadable, IDisposable</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">BasePlugin</span></div>
+      <div><span class="xref">RisingPluginBase</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Plugins.IPlugin.html">IPlugin</a></div>
+      <div><a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Plugins.IPluginContext.html">IPluginContext</a></div>
+      <div><a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Plugins.IPluginComponent.html">IPluginComponent</a></div>
+      <div><a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Managers.IManageable-1.html">IManageable</a>&lt;<a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Plugins.PluginComponentsManager.html">PluginComponentsManager</a>&gt;</div>
+      <div><a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Managers.IManageable-1.html">IManageable</a>&lt;<a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Plugins.PluginManager.html">PluginManager</a>&gt;</div>
+      <div><a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Managers.IManageable.html">IManageable</a></div>
+      <div><a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Managers.IReloadable-1.html">IReloadable</a>&lt;<a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Plugins.PluginManager.html">PluginManager</a>&gt;</div>
+      <div><a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Managers.IReloadable.html">IReloadable</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist derived">
+    <dt>Derived</dt>
+    <dd>
+      <div><a class="xref" href="RisingV.Core.Plugins.RisingPlugin-1.html">RisingPlugin&lt;TContext&gt;</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <span class="xref">BasePlugin.AddComponent&lt;T&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">BasePlugin.Config</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="RisingV.Core.Extensions.EntityExtensions.html#RisingV_Core_Extensions_EntityExtensions_IsAspect__1_System_Object_">EntityExtensions.IsAspect&lt;TAspect&gt;(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="RisingV.Shared.Extensions.EntityExtensions.html#RisingV_Shared_Extensions_EntityExtensions_IsAspect__1_System_Object_">EntityExtensions.IsAspect&lt;TAspect&gt;(object)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="RisingV_Core_Plugins_RisingPluginBase__ctor_" data-uid="RisingV.Core.Plugins.RisingPluginBase.#ctor*"></a>
+
+  <h3 id="RisingV_Core_Plugins_RisingPluginBase__ctor_RisingV_Core_Plugins_PluginContext_" data-uid="RisingV.Core.Plugins.RisingPluginBase.#ctor(RisingV.Core.Plugins.PluginContext)">
+  RisingPluginBase(PluginContext)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Core/blob/master/RisingV.Core/Plugins/RisingPlugin.cs/#L160"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="RisingV.Core.Plugins.RisingPluginBase.html">RisingPluginBase</a> class with the specified plugin context.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected RisingPluginBase(PluginContext context)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>context</code> <a class="xref" href="RisingV.Core.Plugins.PluginContext.html">PluginContext</a></dt>
+    <dd><p>The context for the plugin, containing information about
+the plugin's configuration, target, and other details.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="RisingV_Core_Plugins_RisingPluginBase_Context_" data-uid="RisingV.Core.Plugins.RisingPluginBase.Context*"></a>
+
+  <h3 id="RisingV_Core_Plugins_RisingPluginBase_Context" data-uid="RisingV.Core.Plugins.RisingPluginBase.Context">
+  Context
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Core/blob/master/RisingV.Core/Plugins/RisingPlugin.cs/#L93"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Context for the plugin, containing information about the plugin's configuration,
+target, and other details.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PluginContext Context { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="RisingV.Core.Plugins.PluginContext.html">PluginContext</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Plugins_RisingPluginBase_DatabaseManager_" data-uid="RisingV.Core.Plugins.RisingPluginBase.DatabaseManager*"></a>
+
+  <h3 id="RisingV_Core_Plugins_RisingPluginBase_DatabaseManager" data-uid="RisingV.Core.Plugins.RisingPluginBase.DatabaseManager">
+  DatabaseManager
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Core/blob/master/RisingV.Core/Plugins/RisingPlugin.cs/#L139"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the DatabaseManager instance, which is responsible for managing
+databases within the plugin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DatabaseManager DatabaseManager { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Databases.DatabaseManager.html">DatabaseManager</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Plugins_RisingPluginBase_EngineManager_" data-uid="RisingV.Core.Plugins.RisingPluginBase.EngineManager*"></a>
+
+  <h3 id="RisingV_Core_Plugins_RisingPluginBase_EngineManager" data-uid="RisingV.Core.Plugins.RisingPluginBase.EngineManager">
+  EngineManager
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Core/blob/master/RisingV.Core/Plugins/RisingPlugin.cs/#L145"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the EngineManager instance, which is responsible for managing
+engines within the plugin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public EngineManager EngineManager { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Engines.EngineManager.html">EngineManager</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Plugins_RisingPluginBase_EventBus_" data-uid="RisingV.Core.Plugins.RisingPluginBase.EventBus*"></a>
+
+  <h3 id="RisingV_Core_Plugins_RisingPluginBase_EventBus" data-uid="RisingV.Core.Plugins.RisingPluginBase.EventBus">
+  EventBus
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Core/blob/master/RisingV.Core/Plugins/RisingPlugin.cs/#L121"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The event bus used for managing events within the plugin.
+This allows the plugin to publish and subscribe events.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ManagedEventBus EventBus { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Events.ManagedEventBus.html">ManagedEventBus</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Plugins_RisingPluginBase_Harmony_" data-uid="RisingV.Core.Plugins.RisingPluginBase.Harmony*"></a>
+
+  <h3 id="RisingV_Core_Plugins_RisingPluginBase_Harmony" data-uid="RisingV.Core.Plugins.RisingPluginBase.Harmony">
+  Harmony
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Core/blob/master/RisingV.Core/Plugins/RisingPlugin.cs/#L115"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The Harmony instance used for patching methods in the plugin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Harmony Harmony { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Harmony</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Plugins_RisingPluginBase_Initialized_" data-uid="RisingV.Core.Plugins.RisingPluginBase.Initialized*"></a>
+
+  <h3 id="RisingV_Core_Plugins_RisingPluginBase_Initialized" data-uid="RisingV.Core.Plugins.RisingPluginBase.Initialized">
+  Initialized
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Core/blob/master/RisingV.Core/Plugins/RisingPlugin.cs/#L153"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Indicates whether the plugin has been initialized and is ready
+for use.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected bool Initialized { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Plugins_RisingPluginBase_Log_" data-uid="RisingV.Core.Plugins.RisingPluginBase.Log*"></a>
+
+  <h3 id="RisingV_Core_Plugins_RisingPluginBase_Log" data-uid="RisingV.Core.Plugins.RisingPluginBase.Log">
+  Log
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Core/blob/master/RisingV.Core/Plugins/RisingPlugin.cs/#L147"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Logger Log { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Logging.Logger.html">Logger</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Plugins_RisingPluginBase_PluginConfig_" data-uid="RisingV.Core.Plugins.RisingPluginBase.PluginConfig*"></a>
+
+  <h3 id="RisingV_Core_Plugins_RisingPluginBase_PluginConfig" data-uid="RisingV.Core.Plugins.RisingPluginBase.PluginConfig">
+  PluginConfig
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Core/blob/master/RisingV.Core/Plugins/RisingPlugin.cs/#L104"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Configuration for the plugin, if available. This can be used to access settings and
+options defined in the plugin's configuration file.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PluginConfig? PluginConfig { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Plugins.PluginConfig.html">PluginConfig</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Plugins_RisingPluginBase_PluginInfo_" data-uid="RisingV.Core.Plugins.RisingPluginBase.PluginInfo*"></a>
+
+  <h3 id="RisingV_Core_Plugins_RisingPluginBase_PluginInfo" data-uid="RisingV.Core.Plugins.RisingPluginBase.PluginInfo">
+  PluginInfo
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Core/blob/master/RisingV.Core/Plugins/RisingPlugin.cs/#L98"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Information about the plugin, such as its name, version, and GUID.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PluginInfo PluginInfo { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Plugins.PluginInfo.html">PluginInfo</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Plugins_RisingPluginBase_PluginTarget_" data-uid="RisingV.Core.Plugins.RisingPluginBase.PluginTarget*"></a>
+
+  <h3 id="RisingV_Core_Plugins_RisingPluginBase_PluginTarget" data-uid="RisingV.Core.Plugins.RisingPluginBase.PluginTarget">
+  PluginTarget
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Core/blob/master/RisingV.Core/Plugins/RisingPlugin.cs/#L110"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The target platform for the plugin, which can be either Client or DedicatedServer.
+This indicates where the plugin is intended to run.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PluginTarget PluginTarget { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Plugins.PluginTarget.html">PluginTarget</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Plugins_RisingPluginBase_ProcessorManager_" data-uid="RisingV.Core.Plugins.RisingPluginBase.ProcessorManager*"></a>
+
+  <h3 id="RisingV_Core_Plugins_RisingPluginBase_ProcessorManager" data-uid="RisingV.Core.Plugins.RisingPluginBase.ProcessorManager">
+  ProcessorManager
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Core/blob/master/RisingV.Core/Plugins/RisingPlugin.cs/#L133"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the ProcessorManager instance, which is responsible for managing
+processors within the plugin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ProcessorManager ProcessorManager { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Processors.ProcessorManager.html">ProcessorManager</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Plugins_RisingPluginBase_SystemManager_" data-uid="RisingV.Core.Plugins.RisingPluginBase.SystemManager*"></a>
+
+  <h3 id="RisingV_Core_Plugins_RisingPluginBase_SystemManager" data-uid="RisingV.Core.Plugins.RisingPluginBase.SystemManager">
+  SystemManager
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Core/blob/master/RisingV.Core/Plugins/RisingPlugin.cs/#L127"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the SystemManager instance, which is responsible for managing
+systems within the plugin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SystemManager SystemManager { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Systems.SystemManager.html">SystemManager</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="RisingV_Core_Plugins_RisingPluginBase_AddSharedComponent_" data-uid="RisingV.Core.Plugins.RisingPluginBase.AddSharedComponent*"></a>
+
+  <h3 id="RisingV_Core_Plugins_RisingPluginBase_AddSharedComponent__1_RisingV_Shared_Plugins_IPlugin_" data-uid="RisingV.Core.Plugins.RisingPluginBase.AddSharedComponent``1(RisingV.Shared.Plugins.IPlugin)">
+  AddSharedComponent&lt;T&gt;(IPlugin)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Core/blob/master/RisingV.Core/Plugins/RisingPlugin.cs/#L527"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds a shared component of the specified type to the plugin's shared components.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public T? AddSharedComponent&lt;T&gt;(IPlugin plugin) where T : class, IPluginComponent</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>plugin</code> <a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Plugins.IPlugin.html">IPlugin</a></dt>
+    <dd><p>The plugin that owns the shared component.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd><p>Returns the added shared component of the specified type, or null if it could not be added.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The type of the shared component to add. Must implement <a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Plugins.IPluginComponent.html">IPluginComponent</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Plugins_RisingPluginBase_AddSharedComponent_" data-uid="RisingV.Core.Plugins.RisingPluginBase.AddSharedComponent*"></a>
+
+  <h3 id="RisingV_Core_Plugins_RisingPluginBase_AddSharedComponent__1_RisingV_Shared_Plugins_IPlugin___0_" data-uid="RisingV.Core.Plugins.RisingPluginBase.AddSharedComponent``1(RisingV.Shared.Plugins.IPlugin,``0)">
+  AddSharedComponent&lt;T&gt;(IPlugin, T)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Core/blob/master/RisingV.Core/Plugins/RisingPlugin.cs/#L538"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds a shared component of the specified type to the plugin's shared components.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddSharedComponent&lt;T&gt;(IPlugin plugin, T obj) where T : class, IPluginComponent</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>plugin</code> <a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Plugins.IPlugin.html">IPlugin</a></dt>
+    <dd><p>The plugin that owns the shared component.</p>
+</dd>
+    <dt><code>obj</code> <span class="xref">T</span></dt>
+    <dd><p>The shared component instance to add.</p>
+</dd>
+  </dl>
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The type of the shared component to add. Must implement <a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Plugins.IPluginComponent.html">IPluginComponent</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Plugins_RisingPluginBase_Dispose_" data-uid="RisingV.Core.Plugins.RisingPluginBase.Dispose*"></a>
+
+  <h3 id="RisingV_Core_Plugins_RisingPluginBase_Dispose" data-uid="RisingV.Core.Plugins.RisingPluginBase.Dispose">
+  Dispose()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Core/blob/master/RisingV.Core/Plugins/RisingPlugin.cs/#L546"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Disposes of the plugin, cleaning up resources and unregistering events.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void Dispose()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Plugins_RisingPluginBase_GetSharedComponent_" data-uid="RisingV.Core.Plugins.RisingPluginBase.GetSharedComponent*"></a>
+
+  <h3 id="RisingV_Core_Plugins_RisingPluginBase_GetSharedComponent_System_Type_" data-uid="RisingV.Core.Plugins.RisingPluginBase.GetSharedComponent(System.Type)">
+  GetSharedComponent(Type)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Core/blob/master/RisingV.Core/Plugins/RisingPlugin.cs/#L497"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a shared component of the specified type from the plugin's shared components.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IPluginComponent? GetSharedComponent(Type type)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>type</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd><p>The type of the shared component to retrieve.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Plugins.IPluginComponent.html">IPluginComponent</a></dt>
+    <dd><p>Returns the shared component of the specified type, or null if it does not exist.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.accessviolationexception">AccessViolationException</a></dt>
+    <dd><p>Thrown if the plugin is not initialized when trying to get a shared component.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="RisingV_Core_Plugins_RisingPluginBase_GetSharedComponent_" data-uid="RisingV.Core.Plugins.RisingPluginBase.GetSharedComponent*"></a>
+
+  <h3 id="RisingV_Core_Plugins_RisingPluginBase_GetSharedComponent__1" data-uid="RisingV.Core.Plugins.RisingPluginBase.GetSharedComponent``1">
+  GetSharedComponent&lt;TX&gt;()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Core/blob/master/RisingV.Core/Plugins/RisingPlugin.cs/#L512"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a shared component of the specified type from the plugin's shared components.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TX? GetSharedComponent&lt;TX&gt;() where TX : class, IPluginComponent</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">TX</span></dt>
+    <dd><p>Returns the shared component of the specified type, or null if it does not exist.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TX</code></dt>
+    <dd><p>The type of the shared component to retrieve. Must implement <a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Plugins.IPluginComponent.html">IPluginComponent</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.accessviolationexception">AccessViolationException</a></dt>
+    <dd><p>Thrown if the plugin is not initialized when trying to get a shared component.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="RisingV_Core_Plugins_RisingPluginBase_Load_" data-uid="RisingV.Core.Plugins.RisingPluginBase.Load*"></a>
+
+  <h3 id="RisingV_Core_Plugins_RisingPluginBase_Load" data-uid="RisingV.Core.Plugins.RisingPluginBase.Load">
+  Load()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Core/blob/master/RisingV.Core/Plugins/RisingPlugin.cs/#L182"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Loads the plugin, initializing it and registering necessary components and events.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Load()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Plugins_RisingPluginBase_OnGameDataInitialized_" data-uid="RisingV.Core.Plugins.RisingPluginBase.OnGameDataInitialized*"></a>
+
+  <h3 id="RisingV_Core_Plugins_RisingPluginBase_OnGameDataInitialized_RisingV_Shared_EventBridge_OnGameDataInitializedEvent_" data-uid="RisingV.Core.Plugins.RisingPluginBase.OnGameDataInitialized(RisingV.Shared.EventBridge.OnGameDataInitializedEvent)">
+  OnGameDataInitialized(OnGameDataInitializedEvent)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Core/blob/master/RisingV.Core/Plugins/RisingPlugin.cs/#L231"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Called when the game data is initialized. This method is triggered by the <a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.EventBridge.OnGameDataInitializedEvent.html">EventBridge.OnGameDataInitializedEvent</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnGameDataInitialized(EventBridge.OnGameDataInitializedEvent @event)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>event</code> <a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.EventBridge.html">EventBridge</a>.<a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.EventBridge.OnGameDataInitializedEvent.html">OnGameDataInitializedEvent</a></dt>
+    <dd><p>The event containing the initialized game data.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Plugins_RisingPluginBase_OnLoad_" data-uid="RisingV.Core.Plugins.RisingPluginBase.OnLoad*"></a>
+
+  <h3 id="RisingV_Core_Plugins_RisingPluginBase_OnLoad" data-uid="RisingV.Core.Plugins.RisingPluginBase.OnLoad">
+  OnLoad()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Core/blob/master/RisingV.Core/Plugins/RisingPlugin.cs/#L171"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Called when the plugin is loaded. This method should be overridden by derived classes to perform</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract void OnLoad()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Plugins_RisingPluginBase_OnPluginsInitializing_" data-uid="RisingV.Core.Plugins.RisingPluginBase.OnPluginsInitializing*"></a>
+
+  <h3 id="RisingV_Core_Plugins_RisingPluginBase_OnPluginsInitializing_RisingV_Shared_EventBridge_OnPluginsInitializingEvent_" data-uid="RisingV.Core.Plugins.RisingPluginBase.OnPluginsInitializing(RisingV.Shared.EventBridge.OnPluginsInitializingEvent)">
+  OnPluginsInitializing(OnPluginsInitializingEvent)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Core/blob/master/RisingV.Core/Plugins/RisingPlugin.cs/#L311"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Called when the plugins are initializing. This method is triggered by the <a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.EventBridge.OnPluginsInitializingEvent.html">EventBridge.OnPluginsInitializingEvent</a>.
+Called after OnGameDataInitializedEvent, but before OnPluginsLoadingEvent.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnPluginsInitializing(EventBridge.OnPluginsInitializingEvent @event)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>event</code> <a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.EventBridge.html">EventBridge</a>.<a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.EventBridge.OnPluginsInitializingEvent.html">OnPluginsInitializingEvent</a></dt>
+    <dd><p>The event containing the initialized game data.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Plugins_RisingPluginBase_OnPluginsLoading_" data-uid="RisingV.Core.Plugins.RisingPluginBase.OnPluginsLoading*"></a>
+
+  <h3 id="RisingV_Core_Plugins_RisingPluginBase_OnPluginsLoading_RisingV_Shared_EventBridge_OnPluginsLoadingEvent_" data-uid="RisingV.Core.Plugins.RisingPluginBase.OnPluginsLoading(RisingV.Shared.EventBridge.OnPluginsLoadingEvent)">
+  OnPluginsLoading(OnPluginsLoadingEvent)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Core/blob/master/RisingV.Core/Plugins/RisingPlugin.cs/#L376"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Called when all the plugins are initialized and soft loaded. This method is triggered by the <a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.EventBridge.OnPluginsPartialLoadedEvent.html">EventBridge.OnPluginsPartialLoadedEvent</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnPluginsLoading(EventBridge.OnPluginsLoadingEvent @event)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>event</code> <a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.EventBridge.html">EventBridge</a>.<a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.EventBridge.OnPluginsLoadingEvent.html">OnPluginsLoadingEvent</a></dt>
+    <dd><p>The event containing the state of the plugins initializing.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Plugins_RisingPluginBase_OnPluginsReadying_" data-uid="RisingV.Core.Plugins.RisingPluginBase.OnPluginsReadying*"></a>
+
+  <h3 id="RisingV_Core_Plugins_RisingPluginBase_OnPluginsReadying_RisingV_Shared_EventBridge_OnPluginsReadyingEvent_" data-uid="RisingV.Core.Plugins.RisingPluginBase.OnPluginsReadying(RisingV.Shared.EventBridge.OnPluginsReadyingEvent)">
+  OnPluginsReadying(OnPluginsReadyingEvent)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Core/blob/master/RisingV.Core/Plugins/RisingPlugin.cs/#L405"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Called when all the plugins are loaded. This method is triggered by the <a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.EventBridge.OnPluginsReadyingEvent.html">EventBridge.OnPluginsReadyingEvent</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnPluginsReadying(EventBridge.OnPluginsReadyingEvent @event)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>event</code> <a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.EventBridge.html">EventBridge</a>.<a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.EventBridge.OnPluginsReadyingEvent.html">OnPluginsReadyingEvent</a></dt>
+    <dd><p>The event containing the state of the plugins readying.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Plugins_RisingPluginBase_OnReload_" data-uid="RisingV.Core.Plugins.RisingPluginBase.OnReload*"></a>
+
+  <h3 id="RisingV_Core_Plugins_RisingPluginBase_OnReload_RisingV_Shared_Managers_IManager_System_Collections_Generic_List_RisingV_Shared_Plugins_IPlugin__RisingV_Shared_Managers_ReloadReason_" data-uid="RisingV.Core.Plugins.RisingPluginBase.OnReload(RisingV.Shared.Managers.IManager,System.Collections.Generic.List{RisingV.Shared.Plugins.IPlugin},RisingV.Shared.Managers.ReloadReason)">
+  OnReload(IManager, List&lt;IPlugin&gt;, ReloadReason)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Core/blob/master/RisingV.Core/Plugins/RisingPlugin.cs/#L220"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Called when the manager is reloaded. This can be used to handle any specific logic needed during a reload.
+This can also override the default reload behavior.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool OnReload(IManager manager, List&lt;IPlugin&gt; plugins, ReloadReason reason)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>manager</code> <a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Managers.IManager.html">IManager</a></dt>
+    <dd></dd>
+    <dt><code>plugins</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Plugins.IPlugin.html">IPlugin</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>reason</code> <a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Managers.ReloadReason.html">ReloadReason</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>true to allow default reload behaviour, false to stop</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Plugins_RisingPluginBase_OnReload_" data-uid="RisingV.Core.Plugins.RisingPluginBase.OnReload*"></a>
+
+  <h3 id="RisingV_Core_Plugins_RisingPluginBase_OnReload_RisingV_Shared_Plugins_PluginManager_System_Collections_Generic_List_RisingV_Shared_Plugins_IPlugin__RisingV_Shared_Managers_ReloadReason_" data-uid="RisingV.Core.Plugins.RisingPluginBase.OnReload(RisingV.Shared.Plugins.PluginManager,System.Collections.Generic.List{RisingV.Shared.Plugins.IPlugin},RisingV.Shared.Managers.ReloadReason)">
+  OnReload(PluginManager, List&lt;IPlugin&gt;, ReloadReason)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Core/blob/master/RisingV.Core/Plugins/RisingPlugin.cs/#L264"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Called when the manager is reloaded with a specific type. This can be used to handle any specific logic needed during a reload.
+This can also override the default reload behavior.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool OnReload(PluginManager manager, List&lt;IPlugin&gt; plugins, ReloadReason reason)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>manager</code> <a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Plugins.PluginManager.html">PluginManager</a></dt>
+    <dd></dd>
+    <dt><code>plugins</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Plugins.IPlugin.html">IPlugin</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>reason</code> <a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Managers.ReloadReason.html">ReloadReason</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>true to allow default reload behaviour, false to stop</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Plugins_RisingPluginBase_OnUnload_" data-uid="RisingV.Core.Plugins.RisingPluginBase.OnUnload*"></a>
+
+  <h3 id="RisingV_Core_Plugins_RisingPluginBase_OnUnload" data-uid="RisingV.Core.Plugins.RisingPluginBase.OnUnload">
+  OnUnload()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Core/blob/master/RisingV.Core/Plugins/RisingPlugin.cs/#L177"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Called when the plugin is unloaded. This method should be overridden by derived classes to perform</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract bool OnUnload()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Plugins_RisingPluginBase_RegisterDatabases_" data-uid="RisingV.Core.Plugins.RisingPluginBase.RegisterDatabases*"></a>
+
+  <h3 id="RisingV_Core_Plugins_RisingPluginBase_RegisterDatabases_RisingV_Shared_Databases_DatabaseManager_" data-uid="RisingV.Core.Plugins.RisingPluginBase.RegisterDatabases(RisingV.Shared.Databases.DatabaseManager)">
+  RegisterDatabases(DatabaseManager)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Core/blob/master/RisingV.Core/Plugins/RisingPlugin.cs/#L458"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Registers databases for the plugin. This method can be overridden by derived classes</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void RegisterDatabases(DatabaseManager databaseManager)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>databaseManager</code> <a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Databases.DatabaseManager.html">DatabaseManager</a></dt>
+    <dd><p>The database manager to register databases with.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Plugins_RisingPluginBase_RegisterEngines_" data-uid="RisingV.Core.Plugins.RisingPluginBase.RegisterEngines*"></a>
+
+  <h3 id="RisingV_Core_Plugins_RisingPluginBase_RegisterEngines_RisingV_Shared_Engines_EngineManager_" data-uid="RisingV.Core.Plugins.RisingPluginBase.RegisterEngines(RisingV.Shared.Engines.EngineManager)">
+  RegisterEngines(EngineManager)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Core/blob/master/RisingV.Core/Plugins/RisingPlugin.cs/#L467"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Registers engines for the plugin. This method can be overridden by derived classes</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void RegisterEngines(EngineManager engineManager)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>engineManager</code> <a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Engines.EngineManager.html">EngineManager</a></dt>
+    <dd><p>The engine manager to register engines with.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Plugins_RisingPluginBase_RegisterGameEventHooks_" data-uid="RisingV.Core.Plugins.RisingPluginBase.RegisterGameEventHooks*"></a>
+
+  <h3 id="RisingV_Core_Plugins_RisingPluginBase_RegisterGameEventHooks" data-uid="RisingV.Core.Plugins.RisingPluginBase.RegisterGameEventHooks">
+  RegisterGameEventHooks()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Core/blob/master/RisingV.Core/Plugins/RisingPlugin.cs/#L431"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Registers game event hooks for the plugin. This method can be overridden by derived classes</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void RegisterGameEventHooks()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Plugins_RisingPluginBase_RegisterProcessors_" data-uid="RisingV.Core.Plugins.RisingPluginBase.RegisterProcessors*"></a>
+
+  <h3 id="RisingV_Core_Plugins_RisingPluginBase_RegisterProcessors_RisingV_Shared_Processors_ProcessorManager_" data-uid="RisingV.Core.Plugins.RisingPluginBase.RegisterProcessors(RisingV.Shared.Processors.ProcessorManager)">
+  RegisterProcessors(ProcessorManager)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Core/blob/master/RisingV.Core/Plugins/RisingPlugin.cs/#L449"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Registers processors for the plugin. This method can be overridden by derived classes</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void RegisterProcessors(ProcessorManager processorManager)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>processorManager</code> <a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Processors.ProcessorManager.html">ProcessorManager</a></dt>
+    <dd><p>The processor manager to register processors with.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Plugins_RisingPluginBase_RegisterSharedComponents_" data-uid="RisingV.Core.Plugins.RisingPluginBase.RegisterSharedComponents*"></a>
+
+  <h3 id="RisingV_Core_Plugins_RisingPluginBase_RegisterSharedComponents_RisingV_Shared_Plugins_PluginComponentsManager_" data-uid="RisingV.Core.Plugins.RisingPluginBase.RegisterSharedComponents(RisingV.Shared.Plugins.PluginComponentsManager)">
+  RegisterSharedComponents(PluginComponentsManager)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Core/blob/master/RisingV.Core/Plugins/RisingPlugin.cs/#L423"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Registers shared components for the plugin. This method can be overridden by derived classes</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void RegisterSharedComponents(PluginComponentsManager sharedComponents)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sharedComponents</code> <a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Plugins.PluginComponentsManager.html">PluginComponentsManager</a></dt>
+    <dd><p>The shared components manager to register components with.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Plugins_RisingPluginBase_RegisterSystems_" data-uid="RisingV.Core.Plugins.RisingPluginBase.RegisterSystems*"></a>
+
+  <h3 id="RisingV_Core_Plugins_RisingPluginBase_RegisterSystems_RisingV_Shared_Systems_SystemManager_" data-uid="RisingV.Core.Plugins.RisingPluginBase.RegisterSystems(RisingV.Shared.Systems.SystemManager)">
+  RegisterSystems(SystemManager)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Core/blob/master/RisingV.Core/Plugins/RisingPlugin.cs/#L440"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Registers systems for the plugin. This method can be overridden by derived classes</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void RegisterSystems(SystemManager systemManager)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>systemManager</code> <a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Systems.SystemManager.html">SystemManager</a></dt>
+    <dd><p>The system manager to register systems with.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Plugins_RisingPluginBase_Reload_" data-uid="RisingV.Core.Plugins.RisingPluginBase.Reload*"></a>
+
+  <h3 id="RisingV_Core_Plugins_RisingPluginBase_Reload_RisingV_Shared_Plugins_PluginManager_RisingV_Shared_Managers_ReloadReason_" data-uid="RisingV.Core.Plugins.RisingPluginBase.Reload(RisingV.Shared.Plugins.PluginManager,RisingV.Shared.Managers.ReloadReason)">
+  Reload(PluginManager, ReloadReason)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Core/blob/master/RisingV.Core/Plugins/RisingPlugin.cs/#L278"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Reload(PluginManager manager, ReloadReason reason)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>manager</code> <a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Plugins.PluginManager.html">PluginManager</a></dt>
+    <dd></dd>
+    <dt><code>reason</code> <a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Managers.ReloadReason.html">ReloadReason</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Plugins_RisingPluginBase_Reload_" data-uid="RisingV.Core.Plugins.RisingPluginBase.Reload*"></a>
+
+  <h3 id="RisingV_Core_Plugins_RisingPluginBase_Reload_RisingV_Shared_Plugins_PluginManager_System_Collections_Generic_List_RisingV_Shared_Plugins_IPlugin__RisingV_Shared_Managers_ReloadReason_" data-uid="RisingV.Core.Plugins.RisingPluginBase.Reload(RisingV.Shared.Plugins.PluginManager,System.Collections.Generic.List{RisingV.Shared.Plugins.IPlugin},RisingV.Shared.Managers.ReloadReason)">
+  Reload(PluginManager, List&lt;IPlugin&gt;, ReloadReason)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Core/blob/master/RisingV.Core/Plugins/RisingPlugin.cs/#L271"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reloads the manager and its dependencies with a specific type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Reload(PluginManager manager, List&lt;IPlugin&gt; plugins, ReloadReason reason)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>manager</code> <a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Plugins.PluginManager.html">PluginManager</a></dt>
+    <dd></dd>
+    <dt><code>plugins</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Plugins.IPlugin.html">IPlugin</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>reason</code> <a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Managers.ReloadReason.html">ReloadReason</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Plugins_RisingPluginBase_SetupConfiguration_" data-uid="RisingV.Core.Plugins.RisingPluginBase.SetupConfiguration*"></a>
+
+  <h3 id="RisingV_Core_Plugins_RisingPluginBase_SetupConfiguration_RisingV_Shared_Plugins_PluginConfig_" data-uid="RisingV.Core.Plugins.RisingPluginBase.SetupConfiguration(RisingV.Shared.Plugins.PluginConfig)">
+  SetupConfiguration(PluginConfig?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Core/blob/master/RisingV.Core/Plugins/RisingPlugin.cs/#L476"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets up the plugin configuration. This method can be overridden by derived classes</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void SetupConfiguration(PluginConfig? pluginConfig)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>pluginConfig</code> <a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Plugins.PluginConfig.html">PluginConfig</a></dt>
+    <dd><p>The plugin configuration to set up.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Plugins_RisingPluginBase_SetupSharedEventBus_" data-uid="RisingV.Core.Plugins.RisingPluginBase.SetupSharedEventBus*"></a>
+
+  <h3 id="RisingV_Core_Plugins_RisingPluginBase_SetupSharedEventBus_RisingV_Shared_Events_ManagedEventBus_" data-uid="RisingV.Core.Plugins.RisingPluginBase.SetupSharedEventBus(RisingV.Shared.Events.ManagedEventBus)">
+  SetupSharedEventBus(ManagedEventBus)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Core/blob/master/RisingV.Core/Plugins/RisingPlugin.cs/#L486"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets up the shared event bus for the plugin. This method can be overridden by derived classes</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void SetupSharedEventBus(ManagedEventBus eventBus)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>eventBus</code> <a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Events.ManagedEventBus.html">ManagedEventBus</a></dt>
+    <dd><p>The event bus to set up.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Plugins_RisingPluginBase_Unload_" data-uid="RisingV.Core.Plugins.RisingPluginBase.Unload*"></a>
+
+  <h3 id="RisingV_Core_Plugins_RisingPluginBase_Unload" data-uid="RisingV.Core.Plugins.RisingPluginBase.Unload">
+  Unload()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Core/blob/master/RisingV.Core/Plugins/RisingPlugin.cs/#L240"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Unloads the plugin, unregistering events and cleaning up resources.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool Unload()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Returns true if the plugin was successfully unloaded, otherwise false.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/BenDol/RisingV.Core/blob/master/RisingV.Core/Plugins/RisingPlugin.cs/#L72" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,1196 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class PlayerDatabase | RisingV.Core </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class PlayerDatabase | RisingV.Core ">
+      
+      <meta name="description" content="PlayerDatabase is responsible for managing player data in the game.">
+      <link rel="icon" href="../assets/favicon/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/BenDol/RisingV.Core/new/master/apiSpec/new?filename=RisingV_Core_Players_PlayerDatabase.md&amp;value=---%0Auid%3A%20RisingV.Core.Players.PlayerDatabase%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../assets/images/logo_50.png" alt="RisingV.Core">
+            RisingV.Core
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="RisingV.Core.Players.PlayerDatabase">
+
+
+
+  <h1 id="RisingV_Core_Players_PlayerDatabase" data-uid="RisingV.Core.Players.PlayerDatabase" class="text-break">
+Class PlayerDatabase  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Core/blob/master/RisingV.Core/Players/PlayerDatabase.cs/#L24"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="RisingV.html">RisingV</a>.<a class="xref" href="RisingV.Core.html">Core</a>.<a class="xref" href="RisingV.Core.Players.html">Players</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>RisingV.Core.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>PlayerDatabase is responsible for managing player data in the game.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class PlayerDatabase : Database&lt;FixedString64Bytes, PlayerAspect&gt;, IDatabase&lt;FixedString64Bytes, PlayerAspect&gt;, IDatabase, IDataCrud, IManageableLifecycle&lt;DatabaseManager&gt;, IManageableLifecycle, IReloadable, IManageable&lt;DatabaseManager&gt;, IManageable, IDataCrud&lt;FixedString64Bytes, PlayerAspect&gt;</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Databases.Database-4.html">Database</a>&lt;<span class="xref">FixedString64Bytes</span>, <a class="xref" href="RisingV.Core.Aspects.PlayerAspect.html">PlayerAspect</a>, <a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Databases.Sources.MapDataSource-2.html">MapDataSource</a>&lt;<span class="xref">FixedString64Bytes</span>, <a class="xref" href="RisingV.Core.Aspects.PlayerAspect.html">PlayerAspect</a>&gt;, <a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Databases.Loaders.MapDataLoader-2.html">MapDataLoader</a>&lt;<span class="xref">FixedString64Bytes</span>, <a class="xref" href="RisingV.Core.Aspects.PlayerAspect.html">PlayerAspect</a>&gt;&gt;</div>
+      <div><a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Databases.Database-2.html">Database</a>&lt;<span class="xref">FixedString64Bytes</span>, <a class="xref" href="RisingV.Core.Aspects.PlayerAspect.html">PlayerAspect</a>&gt;</div>
+      <div><span class="xref">PlayerDatabase</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Databases.IDatabase-2.html">IDatabase</a>&lt;<span class="xref">FixedString64Bytes</span>, <a class="xref" href="RisingV.Core.Aspects.PlayerAspect.html">PlayerAspect</a>&gt;</div>
+      <div><a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Databases.IDatabase.html">IDatabase</a></div>
+      <div><a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Databases.Sources.IDataCrud.html">IDataCrud</a></div>
+      <div><a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Managers.IManageableLifecycle-1.html">IManageableLifecycle</a>&lt;<a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Databases.DatabaseManager.html">DatabaseManager</a>&gt;</div>
+      <div><a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Managers.IManageableLifecycle.html">IManageableLifecycle</a></div>
+      <div><a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Managers.IReloadable.html">IReloadable</a></div>
+      <div><a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Managers.IManageable-1.html">IManageable</a>&lt;<a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Databases.DatabaseManager.html">DatabaseManager</a>&gt;</div>
+      <div><a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Managers.IManageable.html">IManageable</a></div>
+      <div><a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Databases.Sources.IDataCrud-2.html">IDataCrud</a>&lt;<span class="xref">FixedString64Bytes</span>, <a class="xref" href="RisingV.Core.Aspects.PlayerAspect.html">PlayerAspect</a>&gt;</div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="RisingV.Shared.Databases.Database-4.html#RisingV_Shared_Databases_Database_4_Log">Database&lt;FixedString64Bytes, PlayerAspect, MapDataSource&lt;FixedString64Bytes, PlayerAspect&gt;, MapDataLoader&lt;FixedString64Bytes, PlayerAspect&gt;&gt;.Log</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Databases.Database-4.html#RisingV_Shared_Databases_Database_4_Name">Database&lt;FixedString64Bytes, PlayerAspect, MapDataSource&lt;FixedString64Bytes, PlayerAspect&gt;, MapDataLoader&lt;FixedString64Bytes, PlayerAspect&gt;&gt;.Name</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Databases.Database-4.html#RisingV_Shared_Databases_Database_4_IsInitialized">Database&lt;FixedString64Bytes, PlayerAspect, MapDataSource&lt;FixedString64Bytes, PlayerAspect&gt;, MapDataLoader&lt;FixedString64Bytes, PlayerAspect&gt;&gt;.IsInitialized</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Databases.Database-4.html#RisingV_Shared_Databases_Database_4_IsLoaded">Database&lt;FixedString64Bytes, PlayerAspect, MapDataSource&lt;FixedString64Bytes, PlayerAspect&gt;, MapDataLoader&lt;FixedString64Bytes, PlayerAspect&gt;&gt;.IsLoaded</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Databases.Database-4.html#RisingV_Shared_Databases_Database_4_DataSource">Database&lt;FixedString64Bytes, PlayerAspect, MapDataSource&lt;FixedString64Bytes, PlayerAspect&gt;, MapDataLoader&lt;FixedString64Bytes, PlayerAspect&gt;&gt;.DataSource</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Databases.Database-4.html#RisingV_Shared_Databases_Database_4_DataLoader">Database&lt;FixedString64Bytes, PlayerAspect, MapDataSource&lt;FixedString64Bytes, PlayerAspect&gt;, MapDataLoader&lt;FixedString64Bytes, PlayerAspect&gt;&gt;.DataLoader</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Databases.Database-4.html#RisingV_Shared_Databases_Database_4_VerifySource">Database&lt;FixedString64Bytes, PlayerAspect, MapDataSource&lt;FixedString64Bytes, PlayerAspect&gt;, MapDataLoader&lt;FixedString64Bytes, PlayerAspect&gt;&gt;.VerifySource()</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Databases.Database-4.html#RisingV_Shared_Databases_Database_4_Initialize_RisingV_Shared_Databases_DatabaseManager_System_Collections_Generic_List_RisingV_Shared_Plugins_IPlugin__">Database&lt;FixedString64Bytes, PlayerAspect, MapDataSource&lt;FixedString64Bytes, PlayerAspect&gt;, MapDataLoader&lt;FixedString64Bytes, PlayerAspect&gt;&gt;.Initialize(DatabaseManager, List&lt;IPlugin&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Databases.Database-4.html#RisingV_Shared_Databases_Database_4_Terminate_RisingV_Shared_Databases_DatabaseManager_System_Collections_Generic_List_RisingV_Shared_Plugins_IPlugin__">Database&lt;FixedString64Bytes, PlayerAspect, MapDataSource&lt;FixedString64Bytes, PlayerAspect&gt;, MapDataLoader&lt;FixedString64Bytes, PlayerAspect&gt;&gt;.Terminate(DatabaseManager, List&lt;IPlugin&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Databases.Database-4.html#RisingV_Shared_Databases_Database_4_Load_RisingV_Shared_Databases_DatabaseManager_System_Collections_Generic_List_RisingV_Shared_Plugins_IPlugin__">Database&lt;FixedString64Bytes, PlayerAspect, MapDataSource&lt;FixedString64Bytes, PlayerAspect&gt;, MapDataLoader&lt;FixedString64Bytes, PlayerAspect&gt;&gt;.Load(DatabaseManager, List&lt;IPlugin&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Databases.Database-4.html#RisingV_Shared_Databases_Database_4_Ready_RisingV_Shared_Databases_DatabaseManager_System_Collections_Generic_List_RisingV_Shared_Plugins_IPlugin__">Database&lt;FixedString64Bytes, PlayerAspect, MapDataSource&lt;FixedString64Bytes, PlayerAspect&gt;, MapDataLoader&lt;FixedString64Bytes, PlayerAspect&gt;&gt;.Ready(DatabaseManager, List&lt;IPlugin&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Databases.Database-4.html#RisingV_Shared_Databases_Database_4_Reload_RisingV_Shared_Databases_DatabaseManager_">Database&lt;FixedString64Bytes, PlayerAspect, MapDataSource&lt;FixedString64Bytes, PlayerAspect&gt;, MapDataLoader&lt;FixedString64Bytes, PlayerAspect&gt;&gt;.Reload(DatabaseManager)</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Databases.Database-4.html#RisingV_Shared_Databases_Database_4_Reload_RisingV_Shared_Databases_DatabaseManager_System_Collections_Generic_List_RisingV_Shared_Plugins_IPlugin__RisingV_Shared_Managers_ReloadReason_">Database&lt;FixedString64Bytes, PlayerAspect, MapDataSource&lt;FixedString64Bytes, PlayerAspect&gt;, MapDataLoader&lt;FixedString64Bytes, PlayerAspect&gt;&gt;.Reload(DatabaseManager, List&lt;IPlugin&gt;, ReloadReason)</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Databases.Database-4.html#RisingV_Shared_Databases_Database_4_Unload_RisingV_Shared_Databases_DatabaseManager_">Database&lt;FixedString64Bytes, PlayerAspect, MapDataSource&lt;FixedString64Bytes, PlayerAspect&gt;, MapDataLoader&lt;FixedString64Bytes, PlayerAspect&gt;&gt;.Unload(DatabaseManager)</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Databases.Database-4.html#RisingV_Shared_Databases_Database_4_Unload_RisingV_Shared_Databases_DatabaseManager_System_Collections_Generic_List_RisingV_Shared_Plugins_IPlugin__">Database&lt;FixedString64Bytes, PlayerAspect, MapDataSource&lt;FixedString64Bytes, PlayerAspect&gt;, MapDataLoader&lt;FixedString64Bytes, PlayerAspect&gt;&gt;.Unload(DatabaseManager, List&lt;IPlugin&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Databases.Database-4.html#RisingV_Shared_Databases_Database_4_Clear_RisingV_Shared_Databases_DatabaseManager_">Database&lt;FixedString64Bytes, PlayerAspect, MapDataSource&lt;FixedString64Bytes, PlayerAspect&gt;, MapDataLoader&lt;FixedString64Bytes, PlayerAspect&gt;&gt;.Clear(DatabaseManager)</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Databases.Database-4.html#RisingV_Shared_Databases_Database_4_Clear">Database&lt;FixedString64Bytes, PlayerAspect, MapDataSource&lt;FixedString64Bytes, PlayerAspect&gt;, MapDataLoader&lt;FixedString64Bytes, PlayerAspect&gt;&gt;.Clear()</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Databases.Database-4.html#RisingV_Shared_Databases_Database_4_Count">Database&lt;FixedString64Bytes, PlayerAspect, MapDataSource&lt;FixedString64Bytes, PlayerAspect&gt;, MapDataLoader&lt;FixedString64Bytes, PlayerAspect&gt;&gt;.Count()</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Databases.Database-4.html#RisingV_Shared_Databases_Database_4_Get__0_">Database&lt;FixedString64Bytes, PlayerAspect, MapDataSource&lt;FixedString64Bytes, PlayerAspect&gt;, MapDataLoader&lt;FixedString64Bytes, PlayerAspect&gt;&gt;.Get(FixedString64Bytes)</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Databases.Database-4.html#RisingV_Shared_Databases_Database_4_TryGet__0_">Database&lt;FixedString64Bytes, PlayerAspect, MapDataSource&lt;FixedString64Bytes, PlayerAspect&gt;, MapDataLoader&lt;FixedString64Bytes, PlayerAspect&gt;&gt;.TryGet(FixedString64Bytes)</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Databases.Database-4.html#RisingV_Shared_Databases_Database_4_GetAll">Database&lt;FixedString64Bytes, PlayerAspect, MapDataSource&lt;FixedString64Bytes, PlayerAspect&gt;, MapDataLoader&lt;FixedString64Bytes, PlayerAspect&gt;&gt;.GetAll()</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Databases.Database-4.html#RisingV_Shared_Databases_Database_4_ForEach_System_Action__0__1__">Database&lt;FixedString64Bytes, PlayerAspect, MapDataSource&lt;FixedString64Bytes, PlayerAspect&gt;, MapDataLoader&lt;FixedString64Bytes, PlayerAspect&gt;&gt;.ForEach(Action&lt;FixedString64Bytes, PlayerAspect&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Databases.Database-4.html#RisingV_Shared_Databases_Database_4_Add__0__1_">Database&lt;FixedString64Bytes, PlayerAspect, MapDataSource&lt;FixedString64Bytes, PlayerAspect&gt;, MapDataLoader&lt;FixedString64Bytes, PlayerAspect&gt;&gt;.Add(FixedString64Bytes, PlayerAspect)</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Databases.Database-4.html#RisingV_Shared_Databases_Database_4_Add__1_">Database&lt;FixedString64Bytes, PlayerAspect, MapDataSource&lt;FixedString64Bytes, PlayerAspect&gt;, MapDataLoader&lt;FixedString64Bytes, PlayerAspect&gt;&gt;.Add(PlayerAspect)</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Databases.Database-4.html#RisingV_Shared_Databases_Database_4_Remove__0_">Database&lt;FixedString64Bytes, PlayerAspect, MapDataSource&lt;FixedString64Bytes, PlayerAspect&gt;, MapDataLoader&lt;FixedString64Bytes, PlayerAspect&gt;&gt;.Remove(FixedString64Bytes)</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Databases.Database-4.html#RisingV_Shared_Databases_Database_4_Item__0_">Database&lt;FixedString64Bytes, PlayerAspect, MapDataSource&lt;FixedString64Bytes, PlayerAspect&gt;, MapDataLoader&lt;FixedString64Bytes, PlayerAspect&gt;&gt;.this[FixedString64Bytes]</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="RisingV.Shared.Databases.DatabaseDefaults.html#RisingV_Shared_Databases_DatabaseDefaults_IsEmpty_RisingV_Shared_Databases_IDatabase_">DatabaseDefaults.IsEmpty(IDatabase)</a>
+  </div>
+  <div>
+      <a class="xref" href="RisingV.Core.Extensions.EntityExtensions.html#RisingV_Core_Extensions_EntityExtensions_IsAspect__1_System_Object_">EntityExtensions.IsAspect&lt;TAspect&gt;(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="RisingV.Shared.Extensions.EntityExtensions.html#RisingV_Shared_Extensions_EntityExtensions_IsAspect__1_System_Object_">EntityExtensions.IsAspect&lt;TAspect&gt;(object)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="RisingV_Core_Players_PlayerDatabase__ctor_" data-uid="RisingV.Core.Players.PlayerDatabase.#ctor*"></a>
+
+  <h3 id="RisingV_Core_Players_PlayerDatabase__ctor" data-uid="RisingV.Core.Players.PlayerDatabase.#ctor">
+  PlayerDatabase()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Core/blob/master/RisingV.Core/Players/PlayerDatabase.cs/#L24"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>PlayerDatabase is responsible for managing player data in the game.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PlayerDatabase()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="RisingV_Core_Players_PlayerDatabase_NamePlayerCache" data-uid="RisingV.Core.Players.PlayerDatabase.NamePlayerCache">
+  NamePlayerCache
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Core/blob/master/RisingV.Core/Players/PlayerDatabase.cs/#L31"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Cache for player data indexed by character name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly Map&lt;FixedString64Bytes, PlayerAspect&gt; NamePlayerCache</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Collections.Map-2.html">Map</a>&lt;<span class="xref">FixedString64Bytes</span>, <a class="xref" href="RisingV.Core.Aspects.PlayerAspect.html">PlayerAspect</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="RisingV_Core_Players_PlayerDatabase_SteamPlayerCache" data-uid="RisingV.Core.Players.PlayerDatabase.SteamPlayerCache">
+  SteamPlayerCache
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Core/blob/master/RisingV.Core/Players/PlayerDatabase.cs/#L35"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Cache for player data indexed by Steam ID.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly Map&lt;ulong, PlayerAspect&gt; SteamPlayerCache</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Collections.Map-2.html">Map</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>, <a class="xref" href="RisingV.Core.Aspects.PlayerAspect.html">PlayerAspect</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="RisingV_Core_Players_PlayerDatabase_Log_" data-uid="RisingV.Core.Players.PlayerDatabase.Log*"></a>
+
+  <h3 id="RisingV_Core_Players_PlayerDatabase_Log" data-uid="RisingV.Core.Players.PlayerDatabase.Log">
+  Log
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Core/blob/master/RisingV.Core/Players/PlayerDatabase.cs/#L26"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override Logger Log { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Logging.Logger.html">Logger</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="RisingV_Core_Players_PlayerDatabase_Add_" data-uid="RisingV.Core.Players.PlayerDatabase.Add*"></a>
+
+  <h3 id="RisingV_Core_Players_PlayerDatabase_Add_Unity_Collections_FixedString64Bytes_RisingV_Core_Aspects_PlayerAspect_" data-uid="RisingV.Core.Players.PlayerDatabase.Add(Unity.Collections.FixedString64Bytes,RisingV.Core.Aspects.PlayerAspect)">
+  Add(FixedString64Bytes, PlayerAspect)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Core/blob/master/RisingV.Core/Players/PlayerDatabase.cs/#L141"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Add(FixedString64Bytes key, PlayerAspect playerAspect)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>key</code> <span class="xref">FixedString64Bytes</span></dt>
+    <dd></dd>
+    <dt><code>playerAspect</code> <a class="xref" href="RisingV.Core.Aspects.PlayerAspect.html">PlayerAspect</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Players_PlayerDatabase_Clear_" data-uid="RisingV.Core.Players.PlayerDatabase.Clear*"></a>
+
+  <h3 id="RisingV_Core_Players_PlayerDatabase_Clear_RisingV_Shared_Databases_DatabaseManager_" data-uid="RisingV.Core.Players.PlayerDatabase.Clear(RisingV.Shared.Databases.DatabaseManager)">
+  Clear(DatabaseManager)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Core/blob/master/RisingV.Core/Players/PlayerDatabase.cs/#L78"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Clears the database, removing all data.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Clear(DatabaseManager manager)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>manager</code> <a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Databases.DatabaseManager.html">DatabaseManager</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Players_PlayerDatabase_Count_" data-uid="RisingV.Core.Players.PlayerDatabase.Count*"></a>
+
+  <h3 id="RisingV_Core_Players_PlayerDatabase_Count" data-uid="RisingV.Core.Players.PlayerDatabase.Count">
+  Count()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Core/blob/master/RisingV.Core/Players/PlayerDatabase.cs/#L84"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int Count()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Players_PlayerDatabase_FindPlayer_" data-uid="RisingV.Core.Players.PlayerDatabase.FindPlayer*"></a>
+
+  <h3 id="RisingV_Core_Players_PlayerDatabase_FindPlayer_System_String_System_Boolean_Unity_Entities_Entity__Unity_Entities_Entity__" data-uid="RisingV.Core.Players.PlayerDatabase.FindPlayer(System.String,System.Boolean,Unity.Entities.Entity@,Unity.Entities.Entity@)">
+  FindPlayer(string, bool, out Entity, out Entity)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Core/blob/master/RisingV.Core/Players/PlayerDatabase.cs/#L264"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Finds a player by their name, checking if they are online and retrieving their player and user entities.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool FindPlayer(string name, bool mustOnline, out Entity playerEntity, out Entity userEntity)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the player to find.</p>
+</dd>
+    <dt><code>mustOnline</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Indicates whether the player must be online for the search to succeed.</p>
+</dd>
+    <dt><code>playerEntity</code> <span class="xref">Entity</span></dt>
+    <dd><p>The Entity representing the player's character.</p>
+</dd>
+    <dt><code>userEntity</code> <span class="xref">Entity</span></dt>
+    <dd><p>The Entity representing the user associated with the player.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if the player is found and online (if required), false otherwise.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Players_PlayerDatabase_FindPlayer_" data-uid="RisingV.Core.Players.PlayerDatabase.FindPlayer*"></a>
+
+  <h3 id="RisingV_Core_Players_PlayerDatabase_FindPlayer_System_UInt64_System_Boolean_Unity_Entities_Entity__Unity_Entities_Entity__ProjectM_Network_User__" data-uid="RisingV.Core.Players.PlayerDatabase.FindPlayer(System.UInt64,System.Boolean,Unity.Entities.Entity@,Unity.Entities.Entity@,ProjectM.Network.User@)">
+  FindPlayer(ulong, bool, out Entity, out Entity, out User)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Core/blob/master/RisingV.Core/Players/PlayerDatabase.cs/#L233"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Finds a player by their Steam ID, checking if they are online and retrieving their player and user entities.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool FindPlayer(ulong steamID, bool mustOnline, out Entity playerEntity, out Entity userEntity, out User user)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>steamID</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
+    <dd><p>The Steam ID of the player to find.</p>
+</dd>
+    <dt><code>mustOnline</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Indicates whether the player must be online for the search to succeed.</p>
+</dd>
+    <dt><code>playerEntity</code> <span class="xref">Entity</span></dt>
+    <dd><p>The Entity representing the player's character.</p>
+</dd>
+    <dt><code>userEntity</code> <span class="xref">Entity</span></dt>
+    <dd><p>The Entity representing the user associated with the player.</p>
+</dd>
+    <dt><code>user</code> <span class="xref">User</span></dt>
+    <dd><p>The User component associated with the player.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if the player is found and online (if required), false otherwise.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Players_PlayerDatabase_FindPlayerData_" data-uid="RisingV.Core.Players.PlayerDatabase.FindPlayerData*"></a>
+
+  <h3 id="RisingV_Core_Players_PlayerDatabase_FindPlayerData_System_String_" data-uid="RisingV.Core.Players.PlayerDatabase.FindPlayerData(System.String)">
+  FindPlayerData(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Core/blob/master/RisingV.Core/Players/PlayerDatabase.cs/#L209"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Finds player data by character name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static PlayerAspect? FindPlayerData(string name)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The character name of the player to find.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="RisingV.Core.Aspects.PlayerAspect.html">PlayerAspect</a></dt>
+    <dd><p>The PlayerAspect instance representing the player, or null if not found.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Players_PlayerDatabase_FindPlayerData_" data-uid="RisingV.Core.Players.PlayerDatabase.FindPlayerData*"></a>
+
+  <h3 id="RisingV_Core_Players_PlayerDatabase_FindPlayerData_System_UInt64_" data-uid="RisingV.Core.Players.PlayerDatabase.FindPlayerData(System.UInt64)">
+  FindPlayerData(ulong)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Core/blob/master/RisingV.Core/Players/PlayerDatabase.cs/#L199"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Finds player data by Steam ID.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static PlayerAspect? FindPlayerData(ulong steamId)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>steamId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
+    <dd><p>The Steam ID of the player to find.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="RisingV.Core.Aspects.PlayerAspect.html">PlayerAspect</a></dt>
+    <dd><p>The PlayerAspect instance representing the player, or null if not found.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Players_PlayerDatabase_FindPlayerData_" data-uid="RisingV.Core.Players.PlayerDatabase.FindPlayerData*"></a>
+
+  <h3 id="RisingV_Core_Players_PlayerDatabase_FindPlayerData_Unity_Collections_FixedString64Bytes_" data-uid="RisingV.Core.Players.PlayerDatabase.FindPlayerData(Unity.Collections.FixedString64Bytes)">
+  FindPlayerData(FixedString64Bytes)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Core/blob/master/RisingV.Core/Players/PlayerDatabase.cs/#L219"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Finds player data by character name using a FixedString64Bytes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static PlayerAspect? FindPlayerData(FixedString64Bytes name)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>name</code> <span class="xref">FixedString64Bytes</span></dt>
+    <dd><p>The FixedString64Bytes character name of the player to find.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="RisingV.Core.Aspects.PlayerAspect.html">PlayerAspect</a></dt>
+    <dd><p>The PlayerAspect instance representing the player, or null if not found.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Players_PlayerDatabase_Get_" data-uid="RisingV.Core.Players.PlayerDatabase.Get*"></a>
+
+  <h3 id="RisingV_Core_Players_PlayerDatabase_Get_Unity_Collections_FixedString64Bytes_" data-uid="RisingV.Core.Players.PlayerDatabase.Get(Unity.Collections.FixedString64Bytes)">
+  Get(FixedString64Bytes)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Core/blob/master/RisingV.Core/Players/PlayerDatabase.cs/#L89"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override PlayerAspect Get(FixedString64Bytes key)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>key</code> <span class="xref">FixedString64Bytes</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="RisingV.Core.Aspects.PlayerAspect.html">PlayerAspect</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Players_PlayerDatabase_GetAll_" data-uid="RisingV.Core.Players.PlayerDatabase.GetAll*"></a>
+
+  <h3 id="RisingV_Core_Players_PlayerDatabase_GetAll" data-uid="RisingV.Core.Players.PlayerDatabase.GetAll">
+  GetAll()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Core/blob/master/RisingV.Core/Players/PlayerDatabase.cs/#L98"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override List&lt;PlayerAspect&gt; GetAll()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="RisingV.Core.Aspects.PlayerAspect.html">PlayerAspect</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Players_PlayerDatabase_GetNameFromSteamID_" data-uid="RisingV.Core.Players.PlayerDatabase.GetNameFromSteamID*"></a>
+
+  <h3 id="RisingV_Core_Players_PlayerDatabase_GetNameFromSteamID_System_UInt64_" data-uid="RisingV.Core.Players.PlayerDatabase.GetNameFromSteamID(System.UInt64)">
+  GetNameFromSteamID(ulong)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Core/blob/master/RisingV.Core/Players/PlayerDatabase.cs/#L162"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Retrieves the character name associated with a given Steam ID.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string? GetNameFromSteamID(ulong steamID)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>steamID</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
+    <dd><p>The Steam ID of the player.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The character name of the player, or null if not found.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Players_PlayerDatabase_GetSteamIDFromName_" data-uid="RisingV.Core.Players.PlayerDatabase.GetSteamIDFromName*"></a>
+
+  <h3 id="RisingV_Core_Players_PlayerDatabase_GetSteamIDFromName_System_String_" data-uid="RisingV.Core.Players.PlayerDatabase.GetSteamIDFromName(System.String)">
+  GetSteamIDFromName(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Core/blob/master/RisingV.Core/Players/PlayerDatabase.cs/#L172"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Retrieves the Steam ID associated with a given character name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ulong GetSteamIDFromName(string name)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The character name of the player.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
+    <dd><p>The Steam ID of the player, or 0 if not found.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Players_PlayerDatabase_Initialize_" data-uid="RisingV.Core.Players.PlayerDatabase.Initialize*"></a>
+
+  <h3 id="RisingV_Core_Players_PlayerDatabase_Initialize_RisingV_Shared_Databases_DatabaseManager_System_Collections_Generic_List_RisingV_Shared_Plugins_IPlugin__" data-uid="RisingV.Core.Players.PlayerDatabase.Initialize(RisingV.Shared.Databases.DatabaseManager,System.Collections.Generic.List{RisingV.Shared.Plugins.IPlugin})">
+  Initialize(DatabaseManager, List&lt;IPlugin&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Core/blob/master/RisingV.Core/Players/PlayerDatabase.cs/#L42"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes the lifecycle of the manager with a specific type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Initialize(DatabaseManager manager, List&lt;IPlugin&gt; plugins)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>manager</code> <a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Databases.DatabaseManager.html">DatabaseManager</a></dt>
+    <dd></dd>
+    <dt><code>plugins</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Plugins.IPlugin.html">IPlugin</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Players_PlayerDatabase_IsPlayerOnline_" data-uid="RisingV.Core.Players.PlayerDatabase.IsPlayerOnline*"></a>
+
+  <h3 id="RisingV_Core_Players_PlayerDatabase_IsPlayerOnline_System_UInt64_" data-uid="RisingV.Core.Players.PlayerDatabase.IsPlayerOnline(System.UInt64)">
+  IsPlayerOnline(ulong)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Core/blob/master/RisingV.Core/Players/PlayerDatabase.cs/#L182"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Checks if a player is currently online based on their Steam ID.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsPlayerOnline(ulong steamID)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>steamID</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
+    <dd><p>The Steam ID of the player to check.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if the player is online, false otherwise.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Players_PlayerDatabase_Load_" data-uid="RisingV.Core.Players.PlayerDatabase.Load*"></a>
+
+  <h3 id="RisingV_Core_Players_PlayerDatabase_Load_RisingV_Shared_Databases_DatabaseManager_System_Collections_Generic_List_RisingV_Shared_Plugins_IPlugin__" data-uid="RisingV.Core.Players.PlayerDatabase.Load(RisingV.Shared.Databases.DatabaseManager,System.Collections.Generic.List{RisingV.Shared.Plugins.IPlugin})">
+  Load(DatabaseManager, List&lt;IPlugin&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Core/blob/master/RisingV.Core/Players/PlayerDatabase.cs/#L57"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Loads the manager and its dependencies with a specific type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Load(DatabaseManager manager, List&lt;IPlugin&gt; plugins)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>manager</code> <a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Databases.DatabaseManager.html">DatabaseManager</a></dt>
+    <dd></dd>
+    <dt><code>plugins</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Plugins.IPlugin.html">IPlugin</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Players_PlayerDatabase_Offline_" data-uid="RisingV.Core.Players.PlayerDatabase.Offline*"></a>
+
+  <h3 id="RisingV_Core_Players_PlayerDatabase_Offline_System_UInt64_" data-uid="RisingV.Core.Players.PlayerDatabase.Offline(System.UInt64)">
+  Offline(ulong)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Core/blob/master/RisingV.Core/Players/PlayerDatabase.cs/#L131"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Marks a player as offline by updating their status in the database.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PlayerAspect Offline(ulong steamID)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>steamID</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
+    <dd><p>The Steam ID of the player to mark as offline.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="RisingV.Core.Aspects.PlayerAspect.html">PlayerAspect</a></dt>
+    <dd><p>The PlayerAspect instance representing the player.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Players_PlayerDatabase_Online_" data-uid="RisingV.Core.Players.PlayerDatabase.Online*"></a>
+
+  <h3 id="RisingV_Core_Players_PlayerDatabase_Online_Unity_Entities_Entity_ProjectM_Network_User_" data-uid="RisingV.Core.Players.PlayerDatabase.Online(Unity.Entities.Entity,ProjectM.Network.User)">
+  Online(Entity, User)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Core/blob/master/RisingV.Core/Players/PlayerDatabase.cs/#L109"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new PlayerAspect for the user and adds it to the database.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PlayerAspect Online(Entity userEntity, User userData)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>userEntity</code> <span class="xref">Entity</span></dt>
+    <dd><p>The entity representing the user.</p>
+</dd>
+    <dt><code>userData</code> <span class="xref">User</span></dt>
+    <dd><p>The User data containing character name and platform ID.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="RisingV.Core.Aspects.PlayerAspect.html">PlayerAspect</a></dt>
+    <dd><p>A new PlayerAspect instance representing the user.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Players_PlayerDatabase_Remove_" data-uid="RisingV.Core.Players.PlayerDatabase.Remove*"></a>
+
+  <h3 id="RisingV_Core_Players_PlayerDatabase_Remove_Unity_Collections_FixedString64Bytes_" data-uid="RisingV.Core.Players.PlayerDatabase.Remove(Unity.Collections.FixedString64Bytes)">
+  Remove(FixedString64Bytes)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Core/blob/master/RisingV.Core/Players/PlayerDatabase.cs/#L147"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override PlayerAspect Remove(FixedString64Bytes key)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>key</code> <span class="xref">FixedString64Bytes</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="RisingV.Core.Aspects.PlayerAspect.html">PlayerAspect</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Players_PlayerDatabase_Terminate_" data-uid="RisingV.Core.Players.PlayerDatabase.Terminate*"></a>
+
+  <h3 id="RisingV_Core_Players_PlayerDatabase_Terminate_RisingV_Shared_Databases_DatabaseManager_System_Collections_Generic_List_RisingV_Shared_Plugins_IPlugin__" data-uid="RisingV.Core.Players.PlayerDatabase.Terminate(RisingV.Shared.Databases.DatabaseManager,System.Collections.Generic.List{RisingV.Shared.Plugins.IPlugin})">
+  Terminate(DatabaseManager, List&lt;IPlugin&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Core/blob/master/RisingV.Core/Players/PlayerDatabase.cs/#L48"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Terminates the manager and cleans up resources with a specific type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Terminate(DatabaseManager manager, List&lt;IPlugin&gt; plugins)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>manager</code> <a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Databases.DatabaseManager.html">DatabaseManager</a></dt>
+    <dd></dd>
+    <dt><code>plugins</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Plugins.IPlugin.html">IPlugin</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Players_PlayerDatabase_Unload_" data-uid="RisingV.Core.Players.PlayerDatabase.Unload*"></a>
+
+  <h3 id="RisingV_Core_Players_PlayerDatabase_Unload_RisingV_Shared_Databases_DatabaseManager_System_Collections_Generic_List_RisingV_Shared_Plugins_IPlugin__" data-uid="RisingV.Core.Players.PlayerDatabase.Unload(RisingV.Shared.Databases.DatabaseManager,System.Collections.Generic.List{RisingV.Shared.Plugins.IPlugin})">
+  Unload(DatabaseManager, List&lt;IPlugin&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Core/blob/master/RisingV.Core/Players/PlayerDatabase.cs/#L73"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Unloads the manager and its dependencies with a specific type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Unload(DatabaseManager manager, List&lt;IPlugin&gt; plugins)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>manager</code> <a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Databases.DatabaseManager.html">DatabaseManager</a></dt>
+    <dd></dd>
+    <dt><code>plugins</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Plugins.IPlugin.html">IPlugin</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Players_PlayerDatabase_VerifySource_" data-uid="RisingV.Core.Players.PlayerDatabase.VerifySource*"></a>
+
+  <h3 id="RisingV_Core_Players_PlayerDatabase_VerifySource" data-uid="RisingV.Core.Players.PlayerDatabase.VerifySource">
+  VerifySource()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Core/blob/master/RisingV.Core/Players/PlayerDatabase.cs/#L37"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Verify the source of the database.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void VerifySource()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/BenDol/RisingV.Core/blob/master/RisingV.Core/Players/PlayerDatabase.cs/#L24" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
