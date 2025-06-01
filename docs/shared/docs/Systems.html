@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Systems Abstraction | RisingV.Shared </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Systems Abstraction | RisingV.Shared ">
+      
+      
+      <link rel="icon" href="../assets/favicon/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/BenDol/RisingV.Shared/blob/master/docs/Systems.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../assets/images/logo_50.png" alt="RisingV.Shared">
+            RisingV.Shared
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="systems-abstraction">Systems Abstraction</h1>
+
+<p><strong>Namespaces:</strong> <code>RisingV.Shared.Systems</code>, <code>RisingV.Shared.Managers</code><br>
+<strong>Assembly:</strong> <em>RisingV.Shared</em></p>
+<p>The <strong>Systems</strong> abstraction is the lightest layer on top of the Manager
+framework, aimed at orchestrating <strong>game‐loop tickers</strong>—logic that runs every
+server tick, physics step, or fixed interval (think <code>Update</code> in Unity’s ECS).</p>
+<pre><code>Plugin
+  └─ SystemManager
+        ├─ HealthRegenSystem
+        ├─ WeatherSystem
+        └─ SpawnCleanupSystem
+</code></pre>
+<p>Each system supplies:</p>
+<ul>
+<li><strong><code>Update(float dt)</code></strong> – executed once per tick.</li>
+<li>Optional <strong>stages</strong> (<code>PreUpdate</code>, <code>PostUpdate</code>).</li>
+<li><code>IsEnabled</code> flag that can be toggled at runtime or via config.</li>
+</ul>
+<hr>
+<h2 id="1-core-contracts">1. Core Contracts</h2>
+<table>
+<thead>
+<tr>
+<th>Contract</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><code>ISystem</code></strong></td>
+<td>Marker; ties a system to <code>SystemManager</code>.</td>
+</tr>
+<tr>
+<td><strong><code>ITickSystem</code></strong></td>
+<td>Adds the <code>Update</code> method with delta‐time parameter.</td>
+</tr>
+<tr>
+<td><strong><code>IStageSystem</code></strong></td>
+<td>Adds optional <code>PreUpdate</code> / <code>PostUpdate</code> hooks.</td>
+</tr>
+<tr>
+<td><strong><code>SystemBase</code></strong></td>
+<td>Convenience abstract base that wires logging, enable flag, and config binding.</td>
+</tr>
+<tr>
+<td><strong><code>SystemManager</code></strong></td>
+<td><code>TypeMapManager</code> that registers systems and drives the tick loop.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="isystem--iticksystem">ISystem &amp; ITickSystem</h3>
+<pre><code class="lang-csharp">public interface ISystem : IManageable&lt;SystemManager&gt;
+{
+    bool IsEnabled { get; }
+}
+
+public interface ITickSystem : ISystem
+{
+    void Update(float deltaTime);
+}
+</code></pre>
+<h3 id="istagesystem-optional">IStageSystem (Optional)</h3>
+<pre><code class="lang-csharp">public interface IStageSystem : ITickSystem
+{
+    void PreUpdate(float dt)  { }
+    void PostUpdate(float dt) { }
+}
+</code></pre>
+<h3 id="systembase">SystemBase</h3>
+<p>Provides:</p>
+<ul>
+<li><code>protected readonly Logger Log</code></li>
+<li><code>protected ConfigEntry&lt;bool&gt;? EnabledEntry</code> (auto‐bound)</li>
+<li>Virtual <code>OnEnable()</code> / <code>OnDisable()</code> for side‐effects.</li>
+</ul>
+<pre><code class="lang-csharp">public abstract class SystemBase : IStageSystem
+{
+    public virtual bool IsEnabled =&gt; EnabledEntry?.Value ?? true;
+    public virtual void PreUpdate(float dt) { }
+    public abstract void Update(float dt);
+    public virtual void PostUpdate(float dt) { }
+}
+</code></pre>
+<hr>
+<h2 id="2-systemmanager">2. SystemManager</h2>
+<pre><code class="lang-csharp">public sealed class SystemManager
+    : TypeMapManager&lt;ISystem, SystemManager&gt;, IPluginComponent
+{
+    public float TimeScale { get; set; } = 1f;
+
+    // Tick driver – call from plugin’s server loop
+    public void Tick(float deltaTime)
+    {
+        deltaTime *= TimeScale;
+
+        foreach (var sys in this.Enumerate&lt;ITickSystem&gt;())
+        {
+            if (!sys.IsEnabled) continue;
+
+            if (sys is IStageSystem stage) stage.PreUpdate(deltaTime);
+            sys.Update(deltaTime);
+            if (sys is IStageSystem stage2) stage2.PostUpdate(deltaTime);
+        }
+    }
+}
+</code></pre>
+<p>Lifecycle mirrors other managers (<code>Initialize → Load → Ready …</code>) so systems can
+perform heavy allocation in <code>Load</code> and start ticking only after <code>Ready</code>.</p>
+<hr>
+<h2 id="3-typical-usage">3. Typical Usage</h2>
+<pre><code class="lang-csharp">// Plugin field
+private SystemManager _systems;
+
+public override void Initialize()
+{
+    _systems = new SystemManager();
+    _systems.Initialize(this);
+    _systems.AddSystem&lt;HealthRegenSystem&gt;(this);
+    _systems.AddSystem&lt;WeatherSystem&gt;(this);
+}
+
+public override void Load()   =&gt; _systems.Load(this);
+public override void Ready()  =&gt; _systems.Ready(this);
+
+public void OnServerTick(float dt) =&gt; _systems.Tick(dt);
+</code></pre>
+<p>Creating a system:</p>
+<pre><code class="lang-csharp">public sealed class HealthRegenSystem : SystemBase
+{
+    public override void Update(float dt)
+    {
+        foreach (var player in PlayerRegistry.All)
+            player.AddHealth(0.5f * dt);
+    }
+}
+</code></pre>
+<hr>
+<h2 id="4-advanced-features">4. Advanced Features</h2>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>TimeScale</strong></td>
+<td>Speed up / slow down simulation (<code>0</code> pauses all systems).</td>
+</tr>
+<tr>
+<td><strong>Dynamic Add/Remove</strong></td>
+<td>Add or unload systems at runtime; manager updates enumeration cache safely.</td>
+</tr>
+<tr>
+<td><strong>Priority Sorting (Optional)</strong></td>
+<td>Override <code>SystemManager.OrderItems</code> to sort by custom attribute <code>[SystemPriority]</code>.</td>
+</tr>
+<tr>
+<td><strong>Hot Reload</strong></td>
+<td>Systems implementing <code>IReloadable</code> will receive config changes without restart.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="5-best-practices">5. Best Practices</h2>
+<ul>
+<li>Keep per‐tick work <strong>tiny</strong>—heavy jobs belong in asynchronous Tasks or Jobs.</li>
+<li>Use <strong>deltaTime</strong> rather than <code>Time.fixedDeltaTime</code> constants to remain
+framerate‐independent.</li>
+<li>Toggle systems via config (<code>EnabledEntry</code>) for fast iteration.</li>
+<li>Log at <strong>Trace</strong> in hot paths; strip in release builds.</li>
+</ul>
+<hr>
+<h2 id="6-troubleshooting">6. Troubleshooting</h2>
+<table>
+<thead>
+<tr>
+<th>Symptom</th>
+<th>Possible Cause</th>
+<th>Remedy</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>System never runs</td>
+<td>Not registered / <code>IsEnabled=false</code></td>
+<td>Add in <code>Initialize</code>; check config.</td>
+</tr>
+<tr>
+<td>Stutter spikes</td>
+<td>Heavy logic in <code>Update</code></td>
+<td>Profile; move to job threads or cache expensive lookups.</td>
+</tr>
+<tr>
+<td>Tick order wrong</td>
+<td>Dependencies between systems</td>
+<td>Implement priority attribute or split into multiple managers.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="tldr">TL;DR</h3>
+<ul>
+<li><strong>System</strong> = ticked logic module with optional pre/post stages.</li>
+<li><strong>SystemManager</strong> orchestrates updates and plugs into the Manager lifecycle.</li>
+<li>Use for <strong>timers, regen, world effects, cleanups</strong>—any looped behaviour that
+doesn’t justify a full Engine.</li>
+</ul>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/BenDol/RisingV.Shared/blob/master/docs/Systems.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
