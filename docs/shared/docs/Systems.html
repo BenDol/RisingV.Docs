@@ -197,27 +197,23 @@ perform heavy allocation in <code>Load</code> and start ticking only after <code
 <hr>
 <h2 id="3-typical-usage">3. Typical Usage</h2>
 <pre><code class="lang-csharp">// Plugin field
-private SystemManager _systems;
-
-public override void Initialize()
+public override void OnInitialize()
 {
-    _systems = new SystemManager();
-    _systems.Initialize(this);
-    _systems.AddSystem&lt;HealthRegenSystem&gt;(this);
-    _systems.AddSystem&lt;WeatherSystem&gt;(this);
+    SystemManager.Initialize(this);
+    SystemManager.AddSystem&lt;HealthRegenSystem&gt;(this);
+    SystemManager.AddSystem&lt;WeatherSystem&gt;(this);
 }
 
-public override void Load()   =&gt; _systems.Load(this);
-public override void Ready()  =&gt; _systems.Ready(this);
-
-public void OnServerTick(float dt) =&gt; _systems.Tick(dt);
+// If you want to handle the ticks manually, e.g. in a server loop, you can do so:
+// Make sure the SystemManager.UseBuiltInTickRunner is set to false.
+public void OnServerTick(float dt) =&gt; _systems.Update(dt);
 </code></pre>
 <p>Creating a system:</p>
 <pre><code class="lang-csharp">public sealed class HealthRegenSystem : SystemBase
 {
     public override void Update(float dt)
     {
-        foreach (var player in PlayerRegistry.All)
+        foreach (var player in PlayerDatabase.All)
             player.AddHealth(0.5f * dt);
     }
 }
