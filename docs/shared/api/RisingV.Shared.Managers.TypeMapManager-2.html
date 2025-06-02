@@ -89,7 +89,7 @@
 
 
   <h1 id="RisingV_Shared_Managers_TypeMapManager_2" data-uid="RisingV.Shared.Managers.TypeMapManager`2" class="text-break">
-Class TypeMapManager&lt;T, TM&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Managers/TypeMapManager.cs/#L145"><i class="bi bi-code-slash"></i></a>
+Class TypeMapManager&lt;T, TM&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Managers/TypeMapManager.cs/#L144"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -165,9 +165,6 @@ Class TypeMapManager&lt;T, TM&gt;  <a class="header-action link-secondary" title
     </div>
     <div>
       <a class="xref" href="RisingV.Shared.Managers.ManagerBase-2.html#RisingV_Shared_Managers_ManagerBase_2_PluginsMap">ManagerBase&lt;T, TM&gt;.PluginsMap</a>
-    </div>
-    <div>
-      <a class="xref" href="RisingV.Shared.Managers.ManagerBase-2.html#RisingV_Shared_Managers_ManagerBase_2_Source">ManagerBase&lt;T, TM&gt;.Source</a>
     </div>
     <div>
       <a class="xref" href="RisingV.Shared.Managers.ManagerBase-2.html#RisingV_Shared_Managers_ManagerBase_2_Log">ManagerBase&lt;T, TM&gt;.Log</a>
@@ -263,6 +260,9 @@ Class TypeMapManager&lt;T, TM&gt;  <a class="header-action link-secondary" title
       <a class="xref" href="RisingV.Shared.Managers.ManagerBase-2.html#RisingV_Shared_Managers_ManagerBase_2_OnManageableAdded__1_RisingV_Shared_Plugins_IPlugin__0_System_Boolean_">ManagerBase&lt;T, TM&gt;.OnManageableAdded&lt;TX&gt;(IPlugin, T, bool)</a>
     </div>
     <div>
+      <a class="xref" href="RisingV.Shared.Managers.ManagerBase-2.html#RisingV_Shared_Managers_ManagerBase_2_OnManageableRemoved__1_RisingV_Shared_Plugins_IPlugin__0_">ManagerBase&lt;T, TM&gt;.OnManageableRemoved&lt;TX&gt;(IPlugin, T)</a>
+    </div>
+    <div>
       <a class="xref" href="RisingV.Shared.Managers.ManagerBase-2.html#RisingV_Shared_Managers_ManagerBase_2_Remove__1_RisingV_Shared_Plugins_IPlugin_">ManagerBase&lt;T, TM&gt;.Remove&lt;TX&gt;(IPlugin)</a>
     </div>
     <div>
@@ -287,10 +287,22 @@ Class TypeMapManager&lt;T, TM&gt;  <a class="header-action link-secondary" title
       <a class="xref" href="RisingV.Shared.Managers.ManagerBase-2.html#RisingV_Shared_Managers_ManagerBase_2_Count">ManagerBase&lt;T, TM&gt;.Count()</a>
     </div>
     <div>
+      <a class="xref" href="RisingV.Shared.Managers.ManagerBase-2.html#RisingV_Shared_Managers_ManagerBase_2_ForEach_System_Action__0__">ManagerBase&lt;T, TM&gt;.ForEach(Action&lt;T&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Managers.ManagerBase-2.html#RisingV_Shared_Managers_ManagerBase_2_GetList">ManagerBase&lt;T, TM&gt;.GetList()</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Managers.ManagerBase-2.html#RisingV_Shared_Managers_ManagerBase_2_Select_System_Func_System_Collections_Generic_KeyValuePair_System_Type__0___0__">ManagerBase&lt;T, TM&gt;.Select(Func&lt;KeyValuePair&lt;Type, T&gt;, T&gt;)</a>
+    </div>
+    <div>
       <a class="xref" href="RisingV.Shared.Managers.ManagerBase-2.html#RisingV_Shared_Managers_ManagerBase_2_RequiredType">ManagerBase&lt;T, TM&gt;.RequiredType()</a>
     </div>
     <div>
       <a class="xref" href="RisingV.Shared.Managers.ManagerBase-2.html#RisingV_Shared_Managers_ManagerBase_2_RequiredTypeName">ManagerBase&lt;T, TM&gt;.RequiredTypeName()</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Managers.ManagerBase-2.html#RisingV_Shared_Managers_ManagerBase_2_GetManagedInfo">ManagerBase&lt;T, TM&gt;.GetManagedInfo()</a>
     </div>
     <div>
       <a class="xref" href="RisingV.Shared.Managers.ManagerBase-2.html#RisingV_Shared_Managers_ManagerBase_2_Equals_RisingV_Shared_Managers_ManagerBase__0__1__">ManagerBase&lt;T, TM&gt;.Equals(ManagerBase&lt;T, TM&gt;)</a>
@@ -350,10 +362,11 @@ Class TypeMapManager&lt;T, TM&gt;  <a class="header-action link-secondary" title
 
   <h3 id="RisingV_Shared_Managers_TypeMapManager_2__ctor" data-uid="RisingV.Shared.Managers.TypeMapManager`2.#ctor">
   TypeMapManager()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Managers/TypeMapManager.cs/#L150"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Managers/TypeMapManager.cs/#L144"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A base class for managers that use a type map to manage instances of <a class="xref" href="RisingV.Shared.Managers.IManageable-1.html">IManageable&lt;T&gt;</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -372,47 +385,11 @@ Class TypeMapManager&lt;T, TM&gt;  <a class="header-action link-secondary" title
 
 
 
-  <h2 class="section" id="properties">Properties
-</h2>
-
-
-  <a id="RisingV_Shared_Managers_TypeMapManager_2_Source_" data-uid="RisingV.Shared.Managers.TypeMapManager`2.Source*"></a>
-
-  <h3 id="RisingV_Shared_Managers_TypeMapManager_2_Source" data-uid="RisingV.Shared.Managers.TypeMapManager`2.Source">
-  Source
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Managers/TypeMapManager.cs/#L157"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Source of manageable objects for this manager.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override TypeMapManagerSource&lt;T, TM&gt; Source { get; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="RisingV.Shared.Managers.TypeMapManagerSource-2.html">TypeMapManagerSource</a>&lt;T, TM&gt;</dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Managers/TypeMapManager.cs/#L145" class="edit-link">Edit this page</a>
+          <a href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Managers/TypeMapManager.cs/#L144" class="edit-link">Edit this page</a>
         </div>
 
 

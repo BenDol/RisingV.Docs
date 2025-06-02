@@ -89,7 +89,7 @@
 
 
   <h1 id="RisingV_Shared_Systems_SystemManager" data-uid="RisingV.Shared.Systems.SystemManager" class="text-break">
-Class SystemManager  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Systems/SystemManager.cs/#L16"><i class="bi bi-code-slash"></i></a>
+Class SystemManager  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Systems/SystemManager.cs/#L21"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -133,9 +133,6 @@ Class SystemManager  <a class="header-action link-secondary" title="View source"
   <dl class="typelist inheritedMembers">
     <dt>Inherited Members</dt>
     <dd>
-    <div>
-      <a class="xref" href="RisingV.Shared.Managers.TypeMapManager-2.html#RisingV_Shared_Managers_TypeMapManager_2_Source">TypeMapManager&lt;ISystem, SystemManager&gt;.Source</a>
-    </div>
     <div>
       <a class="xref" href="RisingV.Shared.Managers.ManagerBase-2.html#RisingV_Shared_Managers_ManagerBase_2_InitializedMap">ManagerBase&lt;ISystem, SystemManager&gt;.InitializedMap</a>
     </div>
@@ -245,6 +242,9 @@ Class SystemManager  <a class="header-action link-secondary" title="View source"
       <a class="xref" href="RisingV.Shared.Managers.ManagerBase-2.html#RisingV_Shared_Managers_ManagerBase_2_OnManageableAdded__1_RisingV_Shared_Plugins_IPlugin__0_System_Boolean_">ManagerBase&lt;ISystem, SystemManager&gt;.OnManageableAdded&lt;TX&gt;(IPlugin, ISystem, bool)</a>
     </div>
     <div>
+      <a class="xref" href="RisingV.Shared.Managers.ManagerBase-2.html#RisingV_Shared_Managers_ManagerBase_2_OnManageableRemoved__1_RisingV_Shared_Plugins_IPlugin__0_">ManagerBase&lt;ISystem, SystemManager&gt;.OnManageableRemoved&lt;TX&gt;(IPlugin, ISystem)</a>
+    </div>
+    <div>
       <a class="xref" href="RisingV.Shared.Managers.ManagerBase-2.html#RisingV_Shared_Managers_ManagerBase_2_Remove__1_RisingV_Shared_Plugins_IPlugin_">ManagerBase&lt;ISystem, SystemManager&gt;.Remove&lt;TX&gt;(IPlugin)</a>
     </div>
     <div>
@@ -269,10 +269,22 @@ Class SystemManager  <a class="header-action link-secondary" title="View source"
       <a class="xref" href="RisingV.Shared.Managers.ManagerBase-2.html#RisingV_Shared_Managers_ManagerBase_2_Count">ManagerBase&lt;ISystem, SystemManager&gt;.Count()</a>
     </div>
     <div>
+      <a class="xref" href="RisingV.Shared.Managers.ManagerBase-2.html#RisingV_Shared_Managers_ManagerBase_2_ForEach_System_Action__0__">ManagerBase&lt;ISystem, SystemManager&gt;.ForEach(Action&lt;ISystem&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Managers.ManagerBase-2.html#RisingV_Shared_Managers_ManagerBase_2_GetList">ManagerBase&lt;ISystem, SystemManager&gt;.GetList()</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Managers.ManagerBase-2.html#RisingV_Shared_Managers_ManagerBase_2_Select_System_Func_System_Collections_Generic_KeyValuePair_System_Type__0___0__">ManagerBase&lt;ISystem, SystemManager&gt;.Select(Func&lt;KeyValuePair&lt;Type, ISystem&gt;, ISystem&gt;)</a>
+    </div>
+    <div>
       <a class="xref" href="RisingV.Shared.Managers.ManagerBase-2.html#RisingV_Shared_Managers_ManagerBase_2_RequiredType">ManagerBase&lt;ISystem, SystemManager&gt;.RequiredType()</a>
     </div>
     <div>
       <a class="xref" href="RisingV.Shared.Managers.ManagerBase-2.html#RisingV_Shared_Managers_ManagerBase_2_RequiredTypeName">ManagerBase&lt;ISystem, SystemManager&gt;.RequiredTypeName()</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Managers.ManagerBase-2.html#RisingV_Shared_Managers_ManagerBase_2_GetManagedInfo">ManagerBase&lt;ISystem, SystemManager&gt;.GetManagedInfo()</a>
     </div>
     <div>
       <a class="xref" href="RisingV.Shared.Managers.ManagerBase-2.html#RisingV_Shared_Managers_ManagerBase_2_Equals_RisingV_Shared_Managers_ManagerBase__0__1__">ManagerBase&lt;ISystem, SystemManager&gt;.Equals(ManagerBase&lt;ISystem, SystemManager&gt;)</a>
@@ -324,15 +336,80 @@ Class SystemManager  <a class="header-action link-secondary" title="View source"
 
 
 
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="RisingV_Shared_Systems_SystemManager_TickManageables" data-uid="RisingV.Shared.Systems.SystemManager.TickManageables">
+  TickManageables
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Systems/SystemManager.cs/#L28"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected readonly List&lt;ITickSystem&gt; TickManageables</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="RisingV.Shared.Systems.ITickSystem.html">ITickSystem</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
   <h2 class="section" id="properties">Properties
 </h2>
+
+
+  <a id="RisingV_Shared_Systems_SystemManager_FrameInterval_" data-uid="RisingV.Shared.Systems.SystemManager.FrameInterval*"></a>
+
+  <h3 id="RisingV_Shared_Systems_SystemManager_FrameInterval" data-uid="RisingV.Shared.Systems.SystemManager.FrameInterval">
+  FrameInterval
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Systems/SystemManager.cs/#L26"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int FrameInterval { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
 
 
   <a id="RisingV_Shared_Systems_SystemManager_Log_" data-uid="RisingV.Shared.Systems.SystemManager.Log*"></a>
 
   <h3 id="RisingV_Shared_Systems_SystemManager_Log" data-uid="RisingV.Shared.Systems.SystemManager.Log">
   Log
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Systems/SystemManager.cs/#L18"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Systems/SystemManager.cs/#L23"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -359,6 +436,37 @@ Class SystemManager  <a class="header-action link-secondary" title="View source"
 
 
 
+  <a id="RisingV_Shared_Systems_SystemManager_TimeScale_" data-uid="RisingV.Shared.Systems.SystemManager.TimeScale*"></a>
+
+  <h3 id="RisingV_Shared_Systems_SystemManager_TimeScale" data-uid="RisingV.Shared.Systems.SystemManager.TimeScale">
+  TimeScale
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Systems/SystemManager.cs/#L25"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float TimeScale { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <h2 class="section" id="methods">Methods
 </h2>
 
@@ -367,7 +475,7 @@ Class SystemManager  <a class="header-action link-secondary" title="View source"
 
   <h3 id="RisingV_Shared_Systems_SystemManager_AddSystem__1_RisingV_Shared_Plugins_IPlugin_System_Boolean_" data-uid="RisingV.Shared.Systems.SystemManager.AddSystem``1(RisingV.Shared.Plugins.IPlugin,System.Boolean)">
   AddSystem&lt;T&gt;(IPlugin, bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Systems/SystemManager.cs/#L20"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Systems/SystemManager.cs/#L32"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -410,7 +518,7 @@ Class SystemManager  <a class="header-action link-secondary" title="View source"
 
   <h3 id="RisingV_Shared_Systems_SystemManager_AddSystem__1_RisingV_Shared_Plugins_IPlugin___0_System_Boolean_" data-uid="RisingV.Shared.Systems.SystemManager.AddSystem``1(RisingV.Shared.Plugins.IPlugin,``0,System.Boolean)">
   AddSystem&lt;T&gt;(IPlugin, T, bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Systems/SystemManager.cs/#L21"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Systems/SystemManager.cs/#L33"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -450,7 +558,7 @@ Class SystemManager  <a class="header-action link-secondary" title="View source"
 
   <h3 id="RisingV_Shared_Systems_SystemManager_GetSystem__1_System_Boolean_" data-uid="RisingV.Shared.Systems.SystemManager.GetSystem``1(System.Boolean)">
   GetSystem&lt;T&gt;(bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Systems/SystemManager.cs/#L23"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Systems/SystemManager.cs/#L35"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -491,7 +599,7 @@ Class SystemManager  <a class="header-action link-secondary" title="View source"
 
   <h3 id="RisingV_Shared_Systems_SystemManager_IsEnabled__1___0_" data-uid="RisingV.Shared.Systems.SystemManager.IsEnabled``1(``0)">
   IsEnabled&lt;TX&gt;(TX?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Systems/SystemManager.cs/#L25"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Systems/SystemManager.cs/#L52"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Is the manageable object enabled.</p>
@@ -529,11 +637,89 @@ Class SystemManager  <a class="header-action link-secondary" title="View source"
 
 
 
+  <a id="RisingV_Shared_Systems_SystemManager_OnManageableAdded_" data-uid="RisingV.Shared.Systems.SystemManager.OnManageableAdded*"></a>
+
+  <h3 id="RisingV_Shared_Systems_SystemManager_OnManageableAdded__1_RisingV_Shared_Plugins_IPlugin_RisingV_Shared_Systems_ISystem_System_Boolean_" data-uid="RisingV.Shared.Systems.SystemManager.OnManageableAdded``1(RisingV.Shared.Plugins.IPlugin,RisingV.Shared.Systems.ISystem,System.Boolean)">
+  OnManageableAdded&lt;TX&gt;(IPlugin, ISystem?, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Systems/SystemManager.cs/#L85"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnManageableAdded&lt;TX&gt;(IPlugin plugin, ISystem? manageable, bool failIfExists) where TX : ISystem</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>plugin</code> <a class="xref" href="RisingV.Shared.Plugins.IPlugin.html">IPlugin</a></dt>
+    <dd></dd>
+    <dt><code>manageable</code> <a class="xref" href="RisingV.Shared.Systems.ISystem.html">ISystem</a></dt>
+    <dd></dd>
+    <dt><code>failIfExists</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TX</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="RisingV_Shared_Systems_SystemManager_OnManageableRemoved_" data-uid="RisingV.Shared.Systems.SystemManager.OnManageableRemoved*"></a>
+
+  <h3 id="RisingV_Shared_Systems_SystemManager_OnManageableRemoved__1_RisingV_Shared_Plugins_IPlugin_RisingV_Shared_Systems_ISystem_" data-uid="RisingV.Shared.Systems.SystemManager.OnManageableRemoved``1(RisingV.Shared.Plugins.IPlugin,RisingV.Shared.Systems.ISystem)">
+  OnManageableRemoved&lt;TX&gt;(IPlugin, ISystem?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Systems/SystemManager.cs/#L97"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnManageableRemoved&lt;TX&gt;(IPlugin plugin, ISystem? manageable) where TX : ISystem</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>plugin</code> <a class="xref" href="RisingV.Shared.Plugins.IPlugin.html">IPlugin</a></dt>
+    <dd></dd>
+    <dt><code>manageable</code> <a class="xref" href="RisingV.Shared.Systems.ISystem.html">ISystem</a></dt>
+    <dd></dd>
+  </dl>
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TX</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
   <a id="RisingV_Shared_Systems_SystemManager_RemoveSystem_" data-uid="RisingV.Shared.Systems.SystemManager.RemoveSystem*"></a>
 
   <h3 id="RisingV_Shared_Systems_SystemManager_RemoveSystem__1_RisingV_Shared_Plugins_IPlugin_" data-uid="RisingV.Shared.Systems.SystemManager.RemoveSystem``1(RisingV.Shared.Plugins.IPlugin)">
   RemoveSystem&lt;T&gt;(IPlugin)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Systems/SystemManager.cs/#L22"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Systems/SystemManager.cs/#L34"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -569,7 +755,7 @@ Class SystemManager  <a class="header-action link-secondary" title="View source"
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Systems/SystemManager.cs/#L16" class="edit-link">Edit this page</a>
+          <a href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Systems/SystemManager.cs/#L21" class="edit-link">Edit this page</a>
         </div>
 
 

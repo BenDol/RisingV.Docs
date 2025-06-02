@@ -89,7 +89,7 @@
 
 
   <h1 id="RisingV_Shared_Databases_DatabaseManager" data-uid="RisingV.Shared.Databases.DatabaseManager" class="text-break">
-Class DatabaseManager  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Databases/DatabaseManager.cs/#L19"><i class="bi bi-code-slash"></i></a>
+Class DatabaseManager  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Databases/DatabaseManager.cs/#L18"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -133,9 +133,6 @@ Class DatabaseManager  <a class="header-action link-secondary" title="View sourc
   <dl class="typelist inheritedMembers">
     <dt>Inherited Members</dt>
     <dd>
-    <div>
-      <a class="xref" href="RisingV.Shared.Managers.TypeMapManager-2.html#RisingV_Shared_Managers_TypeMapManager_2_Source">TypeMapManager&lt;IDatabase, DatabaseManager&gt;.Source</a>
-    </div>
     <div>
       <a class="xref" href="RisingV.Shared.Managers.ManagerBase-2.html#RisingV_Shared_Managers_ManagerBase_2_InitializedMap">ManagerBase&lt;IDatabase, DatabaseManager&gt;.InitializedMap</a>
     </div>
@@ -245,6 +242,9 @@ Class DatabaseManager  <a class="header-action link-secondary" title="View sourc
       <a class="xref" href="RisingV.Shared.Managers.ManagerBase-2.html#RisingV_Shared_Managers_ManagerBase_2_OnManageableAdded__1_RisingV_Shared_Plugins_IPlugin__0_System_Boolean_">ManagerBase&lt;IDatabase, DatabaseManager&gt;.OnManageableAdded&lt;TX&gt;(IPlugin, IDatabase, bool)</a>
     </div>
     <div>
+      <a class="xref" href="RisingV.Shared.Managers.ManagerBase-2.html#RisingV_Shared_Managers_ManagerBase_2_OnManageableRemoved__1_RisingV_Shared_Plugins_IPlugin__0_">ManagerBase&lt;IDatabase, DatabaseManager&gt;.OnManageableRemoved&lt;TX&gt;(IPlugin, IDatabase)</a>
+    </div>
+    <div>
       <a class="xref" href="RisingV.Shared.Managers.ManagerBase-2.html#RisingV_Shared_Managers_ManagerBase_2_Remove__1_RisingV_Shared_Plugins_IPlugin_">ManagerBase&lt;IDatabase, DatabaseManager&gt;.Remove&lt;TX&gt;(IPlugin)</a>
     </div>
     <div>
@@ -269,10 +269,22 @@ Class DatabaseManager  <a class="header-action link-secondary" title="View sourc
       <a class="xref" href="RisingV.Shared.Managers.ManagerBase-2.html#RisingV_Shared_Managers_ManagerBase_2_Count">ManagerBase&lt;IDatabase, DatabaseManager&gt;.Count()</a>
     </div>
     <div>
+      <a class="xref" href="RisingV.Shared.Managers.ManagerBase-2.html#RisingV_Shared_Managers_ManagerBase_2_ForEach_System_Action__0__">ManagerBase&lt;IDatabase, DatabaseManager&gt;.ForEach(Action&lt;IDatabase&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Managers.ManagerBase-2.html#RisingV_Shared_Managers_ManagerBase_2_GetList">ManagerBase&lt;IDatabase, DatabaseManager&gt;.GetList()</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Managers.ManagerBase-2.html#RisingV_Shared_Managers_ManagerBase_2_Select_System_Func_System_Collections_Generic_KeyValuePair_System_Type__0___0__">ManagerBase&lt;IDatabase, DatabaseManager&gt;.Select(Func&lt;KeyValuePair&lt;Type, IDatabase&gt;, IDatabase&gt;)</a>
+    </div>
+    <div>
       <a class="xref" href="RisingV.Shared.Managers.ManagerBase-2.html#RisingV_Shared_Managers_ManagerBase_2_RequiredType">ManagerBase&lt;IDatabase, DatabaseManager&gt;.RequiredType()</a>
     </div>
     <div>
       <a class="xref" href="RisingV.Shared.Managers.ManagerBase-2.html#RisingV_Shared_Managers_ManagerBase_2_RequiredTypeName">ManagerBase&lt;IDatabase, DatabaseManager&gt;.RequiredTypeName()</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Managers.ManagerBase-2.html#RisingV_Shared_Managers_ManagerBase_2_GetManagedInfo">ManagerBase&lt;IDatabase, DatabaseManager&gt;.GetManagedInfo()</a>
     </div>
     <div>
       <a class="xref" href="RisingV.Shared.Managers.ManagerBase-2.html#RisingV_Shared_Managers_ManagerBase_2_Equals_RisingV_Shared_Managers_ManagerBase__0__1__">ManagerBase&lt;IDatabase, DatabaseManager&gt;.Equals(ManagerBase&lt;IDatabase, DatabaseManager&gt;)</a>
@@ -332,7 +344,7 @@ Class DatabaseManager  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="RisingV_Shared_Databases_DatabaseManager_ConfigPath" data-uid="RisingV.Shared.Databases.DatabaseManager.ConfigPath">
   ConfigPath
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Databases/DatabaseManager.cs/#L23"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Databases/DatabaseManager.cs/#L22"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -363,7 +375,7 @@ Class DatabaseManager  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="RisingV_Shared_Databases_DatabaseManager_Log" data-uid="RisingV.Shared.Databases.DatabaseManager.Log">
   Log
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Databases/DatabaseManager.cs/#L21"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Databases/DatabaseManager.cs/#L20"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -398,7 +410,7 @@ Class DatabaseManager  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="RisingV_Shared_Databases_DatabaseManager_AddDatabase__1_RisingV_Shared_Plugins_IPlugin_System_Boolean_" data-uid="RisingV.Shared.Databases.DatabaseManager.AddDatabase``1(RisingV.Shared.Plugins.IPlugin,System.Boolean)">
   AddDatabase&lt;T&gt;(IPlugin, bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Databases/DatabaseManager.cs/#L54"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Databases/DatabaseManager.cs/#L53"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -441,7 +453,7 @@ Class DatabaseManager  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="RisingV_Shared_Databases_DatabaseManager_AddDatabase__1_RisingV_Shared_Plugins_IPlugin___0_System_Boolean_" data-uid="RisingV.Shared.Databases.DatabaseManager.AddDatabase``1(RisingV.Shared.Plugins.IPlugin,``0,System.Boolean)">
   AddDatabase&lt;T&gt;(IPlugin, T, bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Databases/DatabaseManager.cs/#L55"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Databases/DatabaseManager.cs/#L54"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -481,7 +493,7 @@ Class DatabaseManager  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="RisingV_Shared_Databases_DatabaseManager_Add__1_RisingV_Shared_Plugins_IPlugin___0_System_Boolean_" data-uid="RisingV.Shared.Databases.DatabaseManager.Add``1(RisingV.Shared.Plugins.IPlugin,``0,System.Boolean)">
   Add&lt;TX&gt;(IPlugin, TX, bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Databases/DatabaseManager.cs/#L49"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Databases/DatabaseManager.cs/#L48"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Add a manageable object of the given type to the manager.</p>
@@ -522,7 +534,7 @@ Class DatabaseManager  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="RisingV_Shared_Databases_DatabaseManager_ClearAllDatabases" data-uid="RisingV.Shared.Databases.DatabaseManager.ClearAllDatabases">
   ClearAllDatabases()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Databases/DatabaseManager.cs/#L69"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Databases/DatabaseManager.cs/#L68"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -548,7 +560,7 @@ Class DatabaseManager  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="RisingV_Shared_Databases_DatabaseManager_ClearDatabase__1" data-uid="RisingV.Shared.Databases.DatabaseManager.ClearDatabase``1">
   ClearDatabase&lt;T&gt;()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Databases/DatabaseManager.cs/#L59"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Databases/DatabaseManager.cs/#L58"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -584,7 +596,7 @@ Class DatabaseManager  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="RisingV_Shared_Databases_DatabaseManager_GetDatabase__1_System_Boolean_" data-uid="RisingV.Shared.Databases.DatabaseManager.GetDatabase``1(System.Boolean)">
   GetDatabase&lt;T&gt;(bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Databases/DatabaseManager.cs/#L57"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Databases/DatabaseManager.cs/#L56"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -625,7 +637,7 @@ Class DatabaseManager  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="RisingV_Shared_Databases_DatabaseManager_Initialize_RisingV_Shared_Plugins_IPlugin_" data-uid="RisingV.Shared.Databases.DatabaseManager.Initialize(RisingV.Shared.Plugins.IPlugin)">
   Initialize(IPlugin)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Databases/DatabaseManager.cs/#L25"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Databases/DatabaseManager.cs/#L24"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Initialize the manager with the given plugin including its manageable objects.</p>
@@ -657,7 +669,7 @@ Class DatabaseManager  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="RisingV_Shared_Databases_DatabaseManager_ReloadAllDatabases" data-uid="RisingV.Shared.Databases.DatabaseManager.ReloadAllDatabases">
   ReloadAllDatabases()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Databases/DatabaseManager.cs/#L86"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Databases/DatabaseManager.cs/#L84"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -683,7 +695,7 @@ Class DatabaseManager  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="RisingV_Shared_Databases_DatabaseManager_ReloadDatabase__1" data-uid="RisingV.Shared.Databases.DatabaseManager.ReloadDatabase``1">
   ReloadDatabase&lt;T&gt;()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Databases/DatabaseManager.cs/#L76"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Databases/DatabaseManager.cs/#L75"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -719,7 +731,7 @@ Class DatabaseManager  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="RisingV_Shared_Databases_DatabaseManager_RemoveDatabase__1_RisingV_Shared_Plugins_IPlugin_" data-uid="RisingV.Shared.Databases.DatabaseManager.RemoveDatabase``1(RisingV.Shared.Plugins.IPlugin)">
   RemoveDatabase&lt;T&gt;(IPlugin)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Databases/DatabaseManager.cs/#L56"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Databases/DatabaseManager.cs/#L55"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -755,7 +767,7 @@ Class DatabaseManager  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="RisingV_Shared_Databases_DatabaseManager_UnloadAllDatabases" data-uid="RisingV.Shared.Databases.DatabaseManager.UnloadAllDatabases">
   UnloadAllDatabases()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Databases/DatabaseManager.cs/#L103"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Databases/DatabaseManager.cs/#L100"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -781,7 +793,7 @@ Class DatabaseManager  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="RisingV_Shared_Databases_DatabaseManager_UnloadDatabase__1" data-uid="RisingV.Shared.Databases.DatabaseManager.UnloadDatabase``1">
   UnloadDatabase&lt;T&gt;()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Databases/DatabaseManager.cs/#L93"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Databases/DatabaseManager.cs/#L91"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -817,7 +829,7 @@ Class DatabaseManager  <a class="header-action link-secondary" title="View sourc
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Databases/DatabaseManager.cs/#L19" class="edit-link">Edit this page</a>
+          <a href="https://github.com/BenDol/RisingV.Shared/blob/master/RisingV.Shared/Databases/DatabaseManager.cs/#L18" class="edit-link">Edit this page</a>
         </div>
 
 
