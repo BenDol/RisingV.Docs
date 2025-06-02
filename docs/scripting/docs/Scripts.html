@@ -104,6 +104,61 @@
 </li>
 </ul>
 <p>These core abstractions define how scripts interact with the scripting framework, receive context, and are managed at runtime.</p>
+<p>Creating a new script is as simple as creating a new C# file in the <code>BepInEx/config/&lt;YOURMOD_GUID&gt;/Scripts</code> directory.</p>
+<pre><code class="lang-csharp">using RisingV.Scripting.Managers;
+using RisingV.Scripting.RuntimeHost;
+using RisingV.Shared.Logging;
+using RisingV.Shared.Managers;
+using RisingV.Shared.Plugins;
+
+// Optional (namespace should match the plugin namespace or remove this line)
+namespace RisingV.Scripting.Tests;
+
+/// &lt;summary&gt;
+/// Sample script for testing purposes to demonstrate how it can be used.
+/// &lt;/summary&gt;
+/// &lt;param name=&quot;context&quot;&gt;The script context containing the script data.&lt;/param&gt;
+public class SampleScript(IScriptContext&lt;ScriptData&gt; context) : Script(context), IReloadableScript
+{
+    public override void Initialize(ScriptManager manager, List&lt;IPlugin&gt; plugins)
+    {
+        Log.Info(&quot;SampleScript initialized.&quot;);
+        // Called then the plugin is initializing, before any scripts are loaded.
+    }
+
+    public override void Load(ScriptManager manager, List&lt;IPlugin&gt; plugins)
+    {
+        Log.Info(&quot;SampleScript loaded.&quot;);
+        // Called when the Shared Components are loading, after the plugin is initialized.
+    }
+
+    public override void Unload(ScriptManager manager, List&lt;IPlugin&gt; plugins)
+    {
+        Log.Info(&quot;SampleScript unloaded.&quot;);
+        // Called when the Shared Components are unloading and before the plugin is terminated or reloading.
+    }
+
+    public override void Terminate(ScriptManager manager, List&lt;IPlugin&gt; plugins)
+    {
+        Log.Info(&quot;SampleScript terminated.&quot;);
+        // Called when the plugin is being terminated, after all scripts are unloaded.
+    }
+
+    public override void Reload(ScriptManager manager, List&lt;IPlugin&gt; plugins, ReloadReason reason)
+    {
+        Log.Info(&quot;SampleScript reloaded. Reason: &quot; + reason);
+        // Called when the script is being reloaded, e.g. due to a change in the script file.
+    }
+}
+</code></pre>
+<p>The script will be automatically compiled and loaded by the Scripting Engine. Make sure the script is marked with <code>IReloadableScript</code> interface to enable hot-reloading.</p>
+<h2 id="configurations">Configurations</h2>
+<p>RisingV.Scripting uses the <code>RisingV.Shared.Config</code> base class for configuration management. This allows you to define your plugin's configuration in a type-safe manner, with support for hot-reloading and easy access to configuration values.</p>
+<pre><code>BepInEx/configs
+└── RisingV.Scripting
+    └── Engines
+        └── ScriptingEngine.cfg
+</code></pre>
 
 </article>
 
