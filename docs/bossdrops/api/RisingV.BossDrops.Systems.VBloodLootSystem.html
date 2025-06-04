@@ -89,7 +89,7 @@
 
 
   <h1 id="RisingV_BossDrops_Systems_VBloodLootSystem" data-uid="RisingV.BossDrops.Systems.VBloodLootSystem" class="text-break">
-Class VBloodLootSystem  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.BossDrops/blob/master/RisingV.BossDrops/Systems/VBloodLootSystem.cs/#L98"><i class="bi bi-code-slash"></i></a>
+Class VBloodLootSystem  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.BossDrops/blob/master/RisingV.BossDrops/Systems/VBloodLootSystem.cs/#L124"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -102,7 +102,7 @@ Class VBloodLootSystem  <a class="header-action link-secondary" title="View sour
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class VBloodLootSystem : System, ISystem, IManageableLifecycle&lt;SystemManager&gt;, IManageableLifecycle, IReloadable, IManageable&lt;SystemManager&gt;, IManageable</code></pre>
+    <pre><code class="lang-csharp hljs">public class VBloodLootSystem : System&lt;VBloodLootSystemConfig&gt;, ISystem, IManageableLifecycle&lt;SystemManager&gt;, IManageableLifecycle, IReloadable, IManageable&lt;SystemManager&gt;, IManageable</code></pre>
   </div>
 
 
@@ -113,6 +113,7 @@ Class VBloodLootSystem  <a class="header-action link-secondary" title="View sour
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
       <div><a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Systems.System.html">System</a></div>
+      <div><a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Systems.System-1.html">System</a>&lt;<a class="xref" href="RisingV.BossDrops.Systems.VBloodLootSystemConfig.html">VBloodLootSystemConfig</a>&gt;</div>
       <div><span class="xref">VBloodLootSystem</span></div>
     </dd>
   </dl>
@@ -134,7 +135,7 @@ Class VBloodLootSystem  <a class="header-action link-secondary" title="View sour
     <dt>Inherited Members</dt>
     <dd>
     <div>
-      <a class="xref" href="RisingV.Shared.Systems.System.html#RisingV_Shared_Systems_System_Config">System.Config</a>
+      <a class="xref" href="RisingV.Shared.Systems.System-1.html#RisingV_Shared_Systems_System_1_Config">System&lt;VBloodLootSystemConfig&gt;.Config</a>
     </div>
     <div>
       <a class="xref" href="RisingV.Shared.Systems.System.html#RisingV_Shared_Systems_System_Enabled">System.Enabled</a>
@@ -206,7 +207,7 @@ Class VBloodLootSystem  <a class="header-action link-secondary" title="View sour
 
   <h3 id="RisingV_BossDrops_Systems_VBloodLootSystem_ComputeLootRateScale_System_Single_System_Single_System_Int32_System_Single_System_Single_" data-uid="RisingV.BossDrops.Systems.VBloodLootSystem.ComputeLootRateScale(System.Single,System.Single,System.Int32,System.Single,System.Single)">
   ComputeLootRateScale(float, float, int, float, float)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.BossDrops/blob/master/RisingV.BossDrops/Systems/VBloodLootSystem.cs/#L306"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.BossDrops/blob/master/RisingV.BossDrops/Systems/VBloodLootSystem.cs/#L349"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Computes the loot rate scale based on the total level of players, boss level, and player count.</p>
@@ -256,7 +257,7 @@ Class VBloodLootSystem  <a class="header-action link-secondary" title="View sour
 
   <h3 id="RisingV_BossDrops_Systems_VBloodLootSystem_Initialize_RisingV_Shared_Systems_SystemManager_System_Collections_Generic_List_RisingV_Shared_Plugins_IPlugin__" data-uid="RisingV.BossDrops.Systems.VBloodLootSystem.Initialize(RisingV.Shared.Systems.SystemManager,System.Collections.Generic.List{RisingV.Shared.Plugins.IPlugin})">
   Initialize(SystemManager, List&lt;IPlugin&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.BossDrops/blob/master/RisingV.BossDrops/Systems/VBloodLootSystem.cs/#L112"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.BossDrops/blob/master/RisingV.BossDrops/Systems/VBloodLootSystem.cs/#L138"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Initializes the lifecycle of the manager with a specific type.</p>
@@ -290,7 +291,7 @@ Class VBloodLootSystem  <a class="header-action link-secondary" title="View sour
 
   <h3 id="RisingV_BossDrops_Systems_VBloodLootSystem_Load_RisingV_Shared_Systems_SystemManager_System_Collections_Generic_List_RisingV_Shared_Plugins_IPlugin__" data-uid="RisingV.BossDrops.Systems.VBloodLootSystem.Load(RisingV.Shared.Systems.SystemManager,System.Collections.Generic.List{RisingV.Shared.Plugins.IPlugin})">
   Load(SystemManager, List&lt;IPlugin&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.BossDrops/blob/master/RisingV.BossDrops/Systems/VBloodLootSystem.cs/#L117"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.BossDrops/blob/master/RisingV.BossDrops/Systems/VBloodLootSystem.cs/#L143"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Loads the manager and its dependencies with a specific type.</p>
@@ -324,7 +325,7 @@ Class VBloodLootSystem  <a class="header-action link-secondary" title="View sour
 
   <h3 id="RisingV_BossDrops_Systems_VBloodLootSystem_Terminate_RisingV_Shared_Systems_SystemManager_System_Collections_Generic_List_RisingV_Shared_Plugins_IPlugin__" data-uid="RisingV.BossDrops.Systems.VBloodLootSystem.Terminate(RisingV.Shared.Systems.SystemManager,System.Collections.Generic.List{RisingV.Shared.Plugins.IPlugin})">
   Terminate(SystemManager, List&lt;IPlugin&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.BossDrops/blob/master/RisingV.BossDrops/Systems/VBloodLootSystem.cs/#L122"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.BossDrops/blob/master/RisingV.BossDrops/Systems/VBloodLootSystem.cs/#L148"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Terminates the manager and cleans up resources with a specific type.</p>
@@ -358,7 +359,7 @@ Class VBloodLootSystem  <a class="header-action link-secondary" title="View sour
 
   <h3 id="RisingV_BossDrops_Systems_VBloodLootSystem_TryDropLoot_System_Collections_Generic_List_ProjectM_VBloodConsumed__System_Nullable_Unity_Entities_Entity__System_Single_" data-uid="RisingV.BossDrops.Systems.VBloodLootSystem.TryDropLoot(System.Collections.Generic.List{ProjectM.VBloodConsumed},System.Nullable{Unity.Entities.Entity},System.Single)">
   TryDropLoot(List&lt;VBloodConsumed&gt;, Entity?, float)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.BossDrops/blob/master/RisingV.BossDrops/Systems/VBloodLootSystem.cs/#L150"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.BossDrops/blob/master/RisingV.BossDrops/Systems/VBloodLootSystem.cs/#L179"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Attempts to drop loot for the given list of V-Blood consumed events.</p>
@@ -366,7 +367,7 @@ Class VBloodLootSystem  <a class="header-action link-secondary" title="View sour
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static DropResult TryDropLoot(List&lt;VBloodConsumed&gt; consumedEvents, Entity? dropOnEntity = null, float effectiveLevel = 0)</code></pre>
+    <pre><code class="lang-csharp hljs">public DropResult TryDropLoot(List&lt;VBloodConsumed&gt; consumedEvents, Entity? dropOnEntity = null, float effectiveLevel = 0)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -402,7 +403,7 @@ Class VBloodLootSystem  <a class="header-action link-secondary" title="View sour
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/BenDol/RisingV.BossDrops/blob/master/RisingV.BossDrops/Systems/VBloodLootSystem.cs/#L98" class="edit-link">Edit this page</a>
+          <a href="https://github.com/BenDol/RisingV.BossDrops/blob/master/RisingV.BossDrops/Systems/VBloodLootSystem.cs/#L124" class="edit-link">Edit this page</a>
         </div>
 
 

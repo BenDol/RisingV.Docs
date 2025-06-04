@@ -256,6 +256,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.BossDrops.Systems.VBloodLootSystemConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.BossDrops.Systems.VBloodLootSystemConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.BossDrops.Systems.VBloodLootSystemConfig",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/RisingV.BossDrops.Systems.yml",
       "output": {
         ".html": {
