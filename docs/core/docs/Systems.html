@@ -205,19 +205,18 @@ ChatSystem.SendChat(systemEntity, &quot;[Server] Welcome to the Realm!&quot;);
 <li><strong>Purpose</strong>: Manages all clan‑related state, including creation, membership, leadership roles, and deletion. Encapsulates common clan operations by reading and writing ECS components on user entities.</li>
 <li><strong>Key Methods</strong>:
 <ul>
-<li><code>GetClanFromUser(User user)</code>: Returns the <code>Entity</code> representing the clan that a given user belongs to, or <code>Entity.Null</code> if none.</li>
-<li><code>CreateClan(User user, string clanName)</code>: Initializes a new clan, assigning the creator as clan leader.</li>
-<li><code>AddMember(Entity clanEntity, User newMember)</code>: Adds a user to an existing clan.</li>
-<li><code>PromoteMember(User user)</code>: Assigns “Leader” role to a clan member.</li>
+<li><code>GetByName(string clanName)</code>: Returns the <code>Entity</code> of a clan by its name, or <code>Entity.Null</code> if not found.</li>
+<li><code>GetClanLeader(Entity clanEntity)</code>: Returns the user entity of the clan leader for a specified clan.</li>
+<li><code>GetClanMembersAsPlayers(Entity clanEntity)</code>: Returns a list of all players in the specified clan, including their user entities.</li>
 <li><code>IsClanLeader(User user)</code>: Checks if a user holds the Leader role.</li>
 </ul>
 </li>
 <li><strong>Usage</strong>:
 <pre><code class="lang-csharp">// Create a new clan for the player
-Entity newClan = ClanSystem.CreateClan(playerUser, &quot;VampireLegion&quot;);
+Entity clanEntity = ClanSystem.GetByName(&quot;VampireLegion&quot;);
 
-// Add another player to the clan
-ClanSystem.AddMember(newClan, otherUser);
+var leader = ClanSystem.GetClanLeader(clanEntity);
+var members = ClanSystem.GetClanMembersAsPlayers(clanEntity);
 
 // Check if a user is the clan leader
 bool isLeader = ClanSystem.IsClanLeader(playerUser);
@@ -263,10 +262,12 @@ var topContributor = sortedContributors.First().Key;
 
 // Example: Extend drop logic with a special event
 EventBridge.Subscribe&lt;UnitDeathEvent&gt;(evt =&gt; {
-    // Force an extra drop if target belonged to a special faction
     if (FactionAspect.GetFaction(evt.Victim).Equals(Faction.Boss))
     {
-        LootSystem.ForceExtraDrop(evt.Victim, &quot;LegendarySword&quot;);
+        var itemsToDrop = LootSystem.GenerateItemDrops(_lootTables[evt.Victim.GetHashCode()]);
+        var itemsDropped = LootSystem.DropItemsNearby(evt.Victim, itemsToDrop);
+        // or
+        var itemsDropped = LootSystem.GenerateAndDropItems(evt.Victim, itemsToDrop);
     }
 });
 </code></pre>

@@ -129,19 +129,17 @@ This separation ensures each class has a single responsibility: Hooks → Proces
 </ul>
 <p><strong>Key Responsibilities</strong></p>
 <ul>
-<li>Subscribe to admin‐related events (e.g., <code>/ban</code>, <code>/kick</code>).</li>
+<li>Subscribe to admin‐related events.</li>
 <li>Extract the requesting player’s <code>Entity</code> or <code>UserId</code>.</li>
 <li>Check against RisingV’s admin configuration or persistent list.</li>
 <li>If authorized, forward the event to a concrete handler; otherwise, block or respond with a “permission denied” message.</li>
 </ul>
 <p><strong>Typical Flow</strong></p>
-<pre><code class="lang-csharp">public class MyBanProcessor : AdminAuthProcessor
+<pre><code class="lang-csharp">public class DevAdminAuthProcessor : AdminAuthProcessor
 {
-    public override void Process(MyBanEvent evt)
+    protected override bool? IsAdmin(PlayerAspect player)
     {
-        // Base class already verified admin rights
-        var targetPlayer = evt.TargetEntity;
-        BanEngine.BanPlayer(targetPlayer, evt.Reason);
+        return true; // Always allow for admin auth in dev
     }
 }
 </code></pre>
@@ -149,20 +147,21 @@ This separation ensures each class has a single responsibility: Hooks → Proces
 <h3 id="banprocessor">BanProcessor</h3>
 <p><strong>Purpose</strong></p>
 <ul>
-<li>Listens for <code>PlayerBanEvent</code> (or similar) and enforces ban logic.</li>
+<li>Listens for <code>KickBanSystem_Server.IsBanned</code> calls to determine the ban state of a player.</li>
 </ul>
 <p><strong>Key Responsibilities</strong></p>
 <ul>
 <li>Validate ban parameters (duration, target player).</li>
-<li>Invoke <code>AdminEngine</code> or <code>BanService</code> to mark a player as banned.</li>
-<li>Disconnect or prevent future connections for banned players.</li>
+<li>Invoke <code>AdminEngine</code> or a custom BanService to mark a player as banned.</li>
 </ul>
 <p><strong>Typical Flow</strong></p>
-<pre><code class="lang-csharp">public void Process(PlayerBanEvent evt)
+<pre><code class="lang-csharp">public class CustomBanProcessor : BanProcessor
 {
-    var playerEntity = evt.TargetEntity;
-    BanDatabase.MarkBanned(playerEntity, evt.Duration);
-    ServerConnection.KickPlayer(playerEntity, &quot;You have been banned.&quot;);
+    protected override bool? IsBanned(PlayerAspect player)
+    {
+        var result = MyBanService.IsBanned(player.UserId);
+        return result;
+    }
 }
 </code></pre>
 <hr>
@@ -174,6 +173,7 @@ This separation ensures each class has a single responsibility: Hooks → Proces
 <p><strong>Key Responsibilities</strong></p>
 <ul>
 <li>Extract victim and killer entity references from the event.</li>
+<li>Throw events specific to the unit type (e.g., <code>DeathUnitEvent</code> or <code>DeathPlayerEvent</code> for player characters).</li>
 <li>Coordinate with <code>DeathEngine</code> to process death‐related workflows:
 <ul>
 <li>Award experience or drop loot via <code>LootEngine</code>.</li>
@@ -183,19 +183,24 @@ This separation ensures each class has a single responsibility: Hooks → Proces
 </li>
 </ul>
 <p><strong>Typical Flow</strong></p>
-<pre><code class="lang-csharp">public void Process(UnitDeathEvent evt)
+<pre><code class="lang-csharp">public void Initialize()
 {
-    var victim = evt.VictimEntity;
-    var killer = evt.KillerEntity;
+    EventBridge.Subscribe&lt;DeathUnitEvent&gt;(OnDeathUnitEvent);
+}
+
+public void OnDeathUnitEvent(DeathUnitEvent evt)
+{
+    var victim = evt.VictimEntity.As&lt;UnitAspect&gt;();
+    var killer = evt.KillerEntity.As&lt;UnitAspect&gt;();
 
     // Update death count
-    StatEngine.IncrementDeathCount(victim);
+    MyStatService.IncrementDeathCount(victim);
 
     // Generate loot drop
-    LootEngine.SpawnLootAt(victim.Position, evt.LootTier);
+    LootEngine.GenerateAndDropItems(_itemTables[victim.UnitCategory], victim.Entity);
 
-    // Invoke any special death animations or UI
-    DeathEngine.HandlePostMortem(victim, killer);
+    // Invoke any special death animations or UI, etc
+    MyDeathService.HandlePostMortem(victim, killer);
 }
 </code></pre>
 <hr>
@@ -206,16 +211,21 @@ This separation ensures each class has a single responsibility: Hooks → Proces
 </ul>
 <p><strong>Key Responsibilities</strong></p>
 <ul>
-<li>Listen for events where a character transitions to a “downed” animation or state (e.g., <code>CharacterDownedEvent</code>).</li>
+<li>Listen for events where a character transitions to a “downed” animation or state (e.g., <code>DownedUnitEvent</code>, <code>DownedPlayerEvent</code>).</li>
 <li>Apply RisingV’s rules for revivable states or bleed‐out timers.</li>
-<li>If bleed‐out occurs, forward to <code>DeathProcessor</code>; otherwise, allow for revival workflows (e.g., <code>ReviveEngine</code> or <code>RescueEngine</code>).</li>
+<li>If bleed‐out occurs, the <code>DeathProcessor</code> will initiate from the death hook; otherwise, we could allow for revival workflows, etc.</li>
 </ul>
 <p><strong>Typical Flow</strong></p>
-<pre><code class="lang-csharp">public void Process(CharacterDownedEvent evt)
+<pre><code class="lang-csharp">public void Initialize()
+{
+    EventBridge.Subscribe&lt;DownedUnitEvent&gt;(OnDownedUnitEvent);
+}
+
+public void OnDownedUnitEvent(DownedUnitEvent evt)
 {
     var downedEntity = evt.Entity;
-    // Start bleed-out countdown
-    BleedOutManager.StartTimer(downedEntity, evt.Duration);
+    // Start a custom bleed-out countdown
+    CustomBleedOutService.StartTimer(downedEntity, evt.Duration);
 
     // If revived before timer expires, cancel bleed-out
 }
@@ -228,13 +238,15 @@ This separation ensures each class has a single responsibility: Hooks → Proces
 </ul>
 <p><strong>Key Responsibilities</strong></p>
 <ul>
-<li>Subscribe to <code>UnitSpawnedEvent</code> or similar published by <code>SpawnHook</code>.</li>
-<li>Validate spawn conditions (e.g., permission, location).</li>
-<li>Initialize component data (via <code>EntityComponentDatabase</code>) for the spawned entity.</li>
-<li>Invoke <code>SpawnEngine</code> or domain‐specific initializers (e.g., assign default equipment).</li>
+<li>Publishes events like <code>SpawnUnitEvent</code>, <code>SpawnPlayerEvent</code>, etc. based on the entity unit type.</li>
 </ul>
 <p><strong>Typical Flow</strong></p>
-<pre><code class="lang-csharp">public void Process(UnitSpawnedEvent evt)
+<pre><code class="lang-csharp">public void Initialize()
+{
+    EventBridge.Subscribe&lt;SpawnUnitEvent&gt;(OnSpawnUnitEvent);
+}
+
+public void OnSpawnUnitEvent(SpawnUnitEvent evt)
 {
     var newEntity = evt.Entity;
     // Initialize health, buffs, or AI components
@@ -246,35 +258,33 @@ This separation ensures each class has a single responsibility: Hooks → Proces
 <h3 id="scriptspawnprocessor--scriptdespawnprocessor">ScriptSpawnProcessor &amp; ScriptDespawnProcessor</h3>
 <p><strong>Purpose</strong></p>
 <ul>
-<li>Specifically handle entities spawned or despawned by script (e.g., Lua or C# scripting systems).</li>
+<li>Specifically handle entities spawned or despawned by script.</li>
 </ul>
 <p><strong>Key Responsibilities</strong></p>
 <ul>
 <li><strong>ScriptSpawnProcessor</strong>:
 <ul>
-<li>Listen for <code>ScriptSpawnEvent</code>, which includes a script identifier and spawn parameters.</li>
-<li>Delegate to <code>SpawnEngine.SpawnScriptedEntity(...)</code> to create the entity with the correct archetype and initial state.</li>
+<li>Publishes a <code>ScriptSpawnEvent</code>, which includes a script identifier and spawn parameters.</li>
 </ul>
 </li>
-<li><strong>ScriptDespawnProcessor</strong>:
-<ul>
-<li>Listen for <code>ScriptDespawnEvent</code>, identifying which scripted entity to remove.</li>
-<li>Invoke <code>SpawnEngine.DespawnEntity(...)</code> and clean up related data (e.g., remove from <code>EntityComponentDatabase</code>).</li>
-</ul>
-</li>
+<li><strong>ScriptDespawnProcessor</strong>:<br>
+-Publishes a <code>ScriptDespawnEvent</code>, identifying which scripted entity to remove.</li>
 </ul>
 <p><strong>Typical Flow</strong></p>
-<pre><code class="lang-csharp">public void Process(ScriptSpawnEvent evt)
+<pre><code class="lang-csharp">public void Initialize()
 {
-    var parameters = evt.SpawnParameters;
-    SpawnEngine.SpawnScriptedEntity(parameters.Prefab, parameters.Location);
+    EventBridge.Subscribe&lt;ScriptSpawnEvent&gt;(OnScriptSpawnEvent);
+    EventBridge.Subscribe&lt;ScriptDespawnEvent&gt;(OnScriptDespawnEvent);
 }
-</code></pre>
-<pre><code class="lang-csharp">public void Process(ScriptDespawnEvent evt)
+
+public void OnScriptSpawnEvent(ScriptSpawnEvent evt)
 {
-    var target = evt.EntityToDespawn;
-    SpawnEngine.DespawnEntity(target);
-    EntityComponentDatabase.Remove(target);
+    MyCustomScriptSpawnService.Handle(evt);
+}
+
+public void OnScriptDespawnEvent(ScriptDespawnEvent evt)
+{
+    MyCustomScriptSpawnService.Handle(evt);
 }
 </code></pre>
 <hr>
@@ -299,13 +309,14 @@ This separation ensures each class has a single responsibility: Hooks → Proces
 </li>
 </ul>
 <p><strong>Typical Flow</strong></p>
-<pre><code class="lang-csharp">public class DamageProcessor : TargetEntityProcessor&lt;DamageEvent&gt;
+<pre><code class="lang-csharp">public class MyDamageProcessor : TargetEntityProcessor&lt;DamagedUnitEvent&gt;
 {
-    public override void Process(DamageEvent evt)
+    public override void Process(DamagedUnitEvent evt)
     {
         var target = evt.TargetEntity;
-        var amount = evt.DamageAmount;
-        DamageEngine.ApplyDamage(target, amount);
+        var data = evt.Data;
+        var amount = data.Change;
+        // Apply damage logic
     }
 }
 </code></pre>
@@ -318,23 +329,12 @@ This separation ensures each class has a single responsibility: Hooks → Proces
 <p><strong>Key Responsibilities</strong></p>
 <ul>
 <li>Listen for <code>StatChangeEvent</code>, which encapsulates the stat type and delta (increase or decrease).</li>
-<li>Update the <code>StatDatabase</code> entry for the entity.</li>
-<li>Notify other systems (e.g., <code>DeathProcessor</code> if health drops to zero) or publish follow‐up events.</li>
+<li>Register custom events based on the type of stat and unit for custom events (e.g. DamagedUnitEvent).</li>
 </ul>
 <p><strong>Typical Flow</strong></p>
-<pre><code class="lang-csharp">public void Process(StatChangeEvent evt)
-{
-    var entity = evt.Entity;
-    var statType = evt.StatType;
-    var delta = evt.Delta;
-
-    StatDatabase.Update(entity, statType, delta);
-
-    if (statType == StatType.Health &amp;&amp; StatDatabase.Get(entity, StatType.Health) &lt;= 0)
-    {
-        EventBridge.Publish(new UnitDeathEvent(entity, evt.Source));
-    }
-}
+<pre><code class="lang-csharp">var statChangeProcessor = ProcessManager.Get&lt;StatChangeProcessor&gt;()!;
+statChangeProcessor.RegisterUnitEvent(StatType.Health, StatChangeReason.DealDamageSystem_0, (sourceEntity, targetEntity, @event) 
+        =&gt; new DamagedUnitEvent(sourceEntity, targetEntity, @event));
 </code></pre>
 <hr>
 <h2 id="integration--workflow">Integration &amp; Workflow</h2>
@@ -344,15 +344,14 @@ This separation ensures each class has a single responsibility: Hooks → Proces
 <li>Hooks (e.g., <code>DeathHook</code>, <code>SpawnHook</code>, <code>StatChangeSystemHook</code>, <code>AdminAuthSystemHook</code>) intercept game methods and publish raw events to the <code>EventBridge</code>.</li>
 </ul>
 </li>
-<li><p><strong>Processor Subscription</strong></p>
+<li><p><strong>Processor Event Publishing</strong></p>
 <ul>
-<li>Each Processor subscribes to a specific event type using <code>EventBridge.Subscribe&lt;TEvent&gt;</code>.</li>
-<li>When an event is published, the corresponding Processor’s <code>Process(...)</code> method is invoked.</li>
+<li>Each Processor publishes to a specific event types after processing 'paths' are made.</li>
 </ul>
 </li>
 <li><p><strong>Delegation to Engines/Aspects</strong></p>
 <ul>
-<li>Processors delegate domain logic to Engines (e.g., <code>DeathEngine</code>, <code>SpawnEngine</code>, <code>BanEngine</code>) and Aspects (e.g., <code>BuffAspect</code>, <code>EntityAspect</code>).</li>
+<li>Processors delegate domain logic to the EventBus and Aspects (e.g., <code>BuffAspect</code>, <code>EntityAspect</code>).</li>
 <li>Engines handle persistent state changes, database updates, or world modifications.</li>
 <li>Aspects provide high‐level facades for component manipulation or network calls.</li>
 </ul>

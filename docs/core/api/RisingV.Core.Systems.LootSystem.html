@@ -245,6 +245,51 @@ Class LootSystem  <a class="header-action link-secondary" title="View source" hr
 
 
 
+  <a id="RisingV_Core_Systems_LootSystem_GenerateAndDropItems_" data-uid="RisingV.Core.Systems.LootSystem.GenerateAndDropItems*"></a>
+
+  <h3 id="RisingV_Core_Systems_LootSystem_GenerateAndDropItems__1_System_Collections_Generic_IEnumerable___0__Unity_Entities_Entity_System_String_" data-uid="RisingV.Core.Systems.LootSystem.GenerateAndDropItems``1(System.Collections.Generic.IEnumerable{``0},Unity.Entities.Entity,System.String)">
+  GenerateAndDropItems&lt;T&gt;(IEnumerable&lt;T&gt;, Entity, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BenDol/RisingV.Core/blob/master/RisingV.Core/Systems/LootSystem.cs/#L247"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static List&lt;IItemDrop&gt; GenerateAndDropItems&lt;T&gt;(IEnumerable&lt;T&gt; hasDrops, Entity entity, string sourceName = &quot;&quot;) where T : IItem, IItemDroppable</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>hasDrops</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;T&gt;</dt>
+    <dd></dd>
+    <dt><code>entity</code> <span class="xref">Entity</span></dt>
+    <dd></dd>
+    <dt><code>sourceName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="RisingV.Core.Items.Drops.IItemDrop.html">IItemDrop</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
   <a id="RisingV_Core_Systems_LootSystem_GenerateItemDrops_" data-uid="RisingV.Core.Systems.LootSystem.GenerateItemDrops*"></a>
 
   <h3 id="RisingV_Core_Systems_LootSystem_GenerateItemDrops__1_RisingV_Core_Items_Drops_IHasItemDrops___0__System_Func___0_System_Single__System_Func___0_System_Single__RisingV_Shared_RangeInt_" data-uid="RisingV.Core.Systems.LootSystem.GenerateItemDrops``1(RisingV.Core.Items.Drops.IHasItemDrops{``0},System.Func{``0,System.Single},System.Func{``0,System.Single},RisingV.Shared.RangeInt)">
