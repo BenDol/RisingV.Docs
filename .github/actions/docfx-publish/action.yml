@@ -143,10 +143,10 @@ runs:
           done
         }
 
-        # Pull (rebase+autostash) with retries
+        # 1) Bring our local copy up to date before making changes:
         retry git pull --rebase --autostash origin master
 
-        # Stage any changed docs
+        # 2) Stage any changed docs
         git add docs/${PATH_LOW}
 
         if git diff --cached --quiet; then
@@ -154,7 +154,8 @@ runs:
         else
           git commit -m "Update ${{ inputs.target }} docs: ${{ github.sha }}"
 
-          # Push with retries
-          retry git push origin HEAD:master
+          # 3) In one retry call, do “pull+rebase” then “push”
+          retry bash -c "git pull --rebase --autostash origin master && git push origin HEAD:master"
+
           echo "Docs updated and pushed."
         fi
