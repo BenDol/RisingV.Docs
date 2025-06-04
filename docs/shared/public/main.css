@@ -183,9 +183,9 @@ form.filter {
 }*/
 
 @media (min-width: 1400px) {
-  body[data-layout=landing]>header>nav .container-xxl {
+  /*body[data-layout=landing]>header>nav .container-xxl {
     --bs-gutter-x: 25.5rem;
-  }
+  }*/
 
   body>main, body[data-layout=landing]>main {
     --bs-gutter-x: 35.5rem;
