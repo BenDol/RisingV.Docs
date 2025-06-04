@@ -26,6 +26,7 @@ jobs:
 
       - name: Package template
         run: |
+          rm -rf "$ZIP_DIR"
           ZIP_PATH="${ZIP_DIR}.zip"
           zip -r "$ZIP_PATH" "$ZIP_DIR"
 
