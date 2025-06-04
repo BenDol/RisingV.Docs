@@ -122,18 +122,39 @@ runs:
         mkdir -p docs/${PATH_LOW}
         cp -R ../_site/* docs/${PATH_LOW}/
 
-        # Pull latest master, rebasing our new files on top
-        git pull --rebase --autostash origin master
-
-        # Commit & push if there are changes
+        # Configure user for commits
         git config user.name  "github-actions[bot]"
         git config user.email "github-actions[bot]@users.noreply.github.com"
+
+        # Generic retry helper: run "$@" up to 3 times, waiting 3s between attempts
+        retry() {
+          local n=1
+          local max=3
+          local delay=3
+          while true; do
+            "$@" && return 0
+            if [ $n -ge $max ]; then
+              echo "Command failed after $n attempts: $*"
+              return 1
+            fi
+            echo "Attempt $n/$max failed: $*"
+            n=$((n+1))
+            sleep $delay
+          done
+        }
+
+        # Pull (rebase+autostash) with retries
+        retry git pull --rebase --autostash origin master
+
+        # Stage any changed docs
         git add docs/${PATH_LOW}
 
         if git diff --cached --quiet; then
           echo "No documentation changes to commit."
         else
           git commit -m "Update ${{ inputs.target }} docs: ${{ github.sha }}"
-          git push origin HEAD:master
+
+          # Push with retries
+          retry git push origin HEAD:master
           echo "Docs updated and pushed."
         fi
