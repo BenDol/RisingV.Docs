@@ -15,7 +15,6 @@ jobs:
   package_and_commit:
     runs-on: ubuntu-latest
     env:
-      ZIP_NAME: material
       ZIP_DIR: docs/docfx/templates/material
     steps:
       - name: Checkout repository
@@ -27,10 +26,9 @@ jobs:
 
       - name: Package template
         run: |
-          cd "$ZIP_DIR"
-          ZIP_PATH="${ZIP_NAME}.zip"
+          ZIP_PATH="${ZIP_DIR}.zip"
           rm -rf "$ZIP_PATH"
-          zip -r "$ZIP_PATH" "$ZIP_NAME"
+          zip -r "$ZIP_PATH" "$ZIP_DIR"
 
       - name: Commit package file if it changed
         run: |
