@@ -190,6 +190,12 @@ form.filter {
   body>main, body[data-layout=landing]>main {
     --bs-gutter-x: 44.5rem;
   }
+
+  .risingv-title-logo { 
+    padding-bottom:12px;
+    position: absolute;
+    margin-left: -18rem;
+  }
 }
 
 /* CODE HIGHLIGHT */
