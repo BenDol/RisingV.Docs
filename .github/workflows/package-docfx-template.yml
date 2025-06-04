@@ -12,7 +12,7 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  zip_and_commit:
+  package_and_commit:
     runs-on: ubuntu-latest
     env:
       ZIP_DIR: docs/docfx/templates/material
@@ -24,12 +24,12 @@ jobs:
           token: ${{ secrets.RISINGV_DOCS_PAT }}
           fetch-depth: 0
 
-      - name: Zip template
+      - name: Package template
         run: |
           ZIP_PATH="${ZIP_DIR}.zip"
           zip -r "$ZIP_PATH" "$ZIP_DIR"
 
-      - name: Commit zipped file if it changed
+      - name: Commit package file if it changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
