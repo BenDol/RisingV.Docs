@@ -5,6 +5,7 @@ on:
     paths:
       - 'material/**'
       - '!material.zip'
+  workflow_dispatch:
 
 jobs:
   zip_and_commit:
