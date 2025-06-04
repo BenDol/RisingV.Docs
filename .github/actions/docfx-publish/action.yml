@@ -90,7 +90,7 @@ runs:
       if: ${{ inputs.update_index_readme == 'true' }}
       shell: bash
       run: |
-        frontmatter=$(sed -n '1,/^---$/p' index.md)
+        frontmatter=$(cat index.md)
         readme_content=$(sed -n "${{ inputs.readme_copy_from }},\$p" README.md)
         echo "$frontmatter" > index.md
         echo "$readme_content" >> index.md
