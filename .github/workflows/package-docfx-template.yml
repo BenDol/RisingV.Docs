@@ -26,8 +26,8 @@ jobs:
 
       - name: Package template
         run: |
-          rm -rf "$ZIP_DIR"
           ZIP_PATH="${ZIP_DIR}.zip"
+          rm -rf "$ZIP_PATH"
           zip -r "$ZIP_PATH" "$ZIP_DIR"
 
       - name: Commit package file if it changed
