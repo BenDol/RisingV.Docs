@@ -97,7 +97,7 @@ runs:
 
     - name: Build site
       shell: bash
-      run: docfx ./docfx.json
+      run: docfx ./docfx.json --logLevel Error
 
     - name: Cement XREFs & Prune
       if: ${{ inputs.xref_map != '' }}
