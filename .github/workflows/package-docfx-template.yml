@@ -3,7 +3,7 @@ name: Package DocFX Template
 on:
   push:
     paths:
-      - 'material/**'
+      - 'docs/docfx/templates/material/**'
       - '!material.zip'
   workflow_dispatch:
 
