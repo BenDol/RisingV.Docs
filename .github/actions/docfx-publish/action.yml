@@ -30,7 +30,7 @@ inputs:
 
   xref_map:
     description: >-
-      Pipe-delimited list of Dep_Map entries for Cement XREFs. For example:  
+      Pipe-delimited list of xref_map entries for Cement XREFs. For example:  
       `RisingV.Shared=https://docs.risingv.dev/shared/api|RisingV.Core=https://docs.risingv.dev/core/api`.  
       If you leave this blank, the Cement XREFs step will be skipped.
     required: false
