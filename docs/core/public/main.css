@@ -192,8 +192,7 @@ form.filter {
   }
 
   .risingv-title-logo { 
-    padding-bottom:12px;
-    position: absolute;
+    position: fixed;
     margin-left: -18rem;
   }
 }
