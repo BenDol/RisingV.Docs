@@ -52,7 +52,7 @@ inputs:
         • `2` ⇒ skip line 1 and start at line 2
         • etc.
     required: false
-    default: "1"
+    default: "2"
 
 runs:
   using: "composite"
@@ -91,13 +91,7 @@ runs:
       shell: bash
       run: |
         frontmatter=$(sed -n '1,/^---$/p' index.md)
-
-        COPY_FROM=${{ inputs.readme_copy_from }}
-        if [ "$COPY_FROM" = "0" ]; then
-          readme_content=$(cat README.md)
-        else
-          readme_content=$(sed -n "${COPY_FROM},\$p" README.md)
-        fi
+        readme_content=$(sed -n "${{ inputs.readme_copy_from }},\$p" README.md)
         echo "$frontmatter" > index.md
         echo "$readme_content" >> index.md
 
