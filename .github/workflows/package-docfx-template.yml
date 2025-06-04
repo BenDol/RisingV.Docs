@@ -1,0 +1,35 @@
+name: Package DocFX Template
+
+on:
+  push:
+    paths:
+      - 'material/**'
+      - '!material.zip'
+
+jobs:
+  zip_and_commit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+          fetch-depth: 0
+
+      - name: Zip template
+        run: |
+          zip -r material.zip material
+
+      - name: Commit zipped file if it changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          if git diff --quiet --exit-code material.zip; then
+            echo "No changes in material.zip; skipping commit."
+            exit 0
+          fi
+
+          git add material.zip
+          git commit -m "Auto-update template material.zip"
+          git push
