@@ -188,7 +188,7 @@ form.filter {
   }*/
 
   body>main, body[data-layout=landing]>main {
-    --bs-gutter-x: 35.5rem;
+    --bs-gutter-x: 44.5rem;
   }
 }
 
