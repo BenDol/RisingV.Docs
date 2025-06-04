@@ -7,6 +7,10 @@ on:
       - '!docs/docfx/templates/material.zip'
   workflow_dispatch:
 
+concurrency:
+  group: publish-docs
+  cancel-in-progress: false
+
 jobs:
   zip_and_commit:
     runs-on: ubuntu-latest
