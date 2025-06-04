@@ -43,6 +43,17 @@ inputs:
     required: false
     default: "false"
 
+  readme_copy_from:
+    description: >-
+      (Integer) Which line number to start copying from `README.md`.  
+      Use `0` to copy the entire file. For example:
+        • `0` ⇒ copy all lines of `README.md`
+        • `1` ⇒ copy starting at line 1 (i.e. the whole file)
+        • `2` ⇒ skip line 1 and start at line 2
+        • etc.
+    required: false
+    default: "1"
+
 runs:
   using: "composite"
   steps:
@@ -80,7 +91,13 @@ runs:
       shell: bash
       run: |
         frontmatter=$(sed -n '1,/^---$/p' index.md)
-        readme_content=$(sed '1d' README.md)
+
+        COPY_FROM=${{ inputs.readme_copy_from }}
+        if [ "$COPY_FROM" = "0" ]; then
+          readme_content=$(cat README.md)
+        else
+          readme_content=$(sed -n "${COPY_FROM},\$p" README.md)
+        fi
         echo "$frontmatter" > index.md
         echo "$readme_content" >> index.md
 
