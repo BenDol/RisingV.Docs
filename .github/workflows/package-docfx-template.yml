@@ -4,12 +4,14 @@ on:
   push:
     paths:
       - 'docs/docfx/templates/material/**'
-      - '!material.zip'
+      - '!docs/docfx/templates/material.zip'
   workflow_dispatch:
 
 jobs:
   zip_and_commit:
     runs-on: ubuntu-latest
+    env:
+      ZIP_DIR: docs/docfx/templates/material
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -19,18 +21,21 @@ jobs:
 
       - name: Zip template
         run: |
-          zip -r material.zip material
+          ZIP_PATH="${ZIP_DIR}.zip"
+          zip -r "$ZIP_PATH" "$ZIP_DIR"
 
       - name: Commit zipped file if it changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-          if git diff --quiet --exit-code material.zip; then
-            echo "No changes in material.zip; skipping commit."
+          ZIP_PATH="${ZIP_DIR}.zip"
+
+          if git diff --quiet --exit-code "$ZIP_PATH"; then
+            echo "No changes in $ZIP_PATH; skipping commit."
             exit 0
           fi
 
-          git add material.zip
-          git commit -m "Auto-update template material.zip"
+          git add "$ZIP_PATH"
+          git commit -m "Auto-update template: ${ZIP_DIR##*/}.zip"
           git push
