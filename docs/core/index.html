@@ -75,6 +75,8 @@
 <p align="center" class="risingv-title-logo">
     <a href="https://risingv.dev"><img src="https://risingv.dev/images/core-logo.png" width="220" alt="RisingV.Core"></a>
 </p>
+<p><a href="https://github.com/RisingV-Mods/RisingV.Core/actions/workflows/build.yml"><img src="https://github.com/RisingV-Mods/RisingV.Core/actions/workflows/build.yml/badge.svg" alt="Build"></a>
+<a href="https://github.com/RisingV-Mods/RisingV.Core/actions/workflows/docfx.yml"><img src="https://github.com/RisingV-Mods/RisingV.Core/actions/workflows/docfx.yml/badge.svg" alt="DocFX"></a></p>
 <p>The beating (molten) heart of the <a href="https://risingv.dev">RisingV</a> ecosystem.</p>
 <blockquote>
 <p><em>“<a href="https://github.com/RisingV-Mods/RisingV.Core">RisingV.Core</a> is a core mod for V Rising that allows you to use RisingV mods.<br>
@@ -100,6 +102,11 @@ It provides a set of APIs and utilities that make it easier to create and manage
 <li><strong>Dependency</strong> – ensure <a href="https://github.com/RisingV-Mods/RisingV.Shared">RisingV.Shared</a> is already present.</li>
 <li>Copy <code>RisingV.Core.dll</code> to <code>BepInEx/plugins/RisingV</code>.</li>
 <li>Restart your dedicated server or client.</li>
+</ol>
+<h2 id="development">Development</h2>
+<ol>
+<li>Add NuGet package <code>dotnet add package RisingV.Core</code> to your project.</li>
+<li>Add <code>[BepInDependency(&quot;RisingV.Core&quot;)]</code> BepInEx dependency.</li>
 </ol>
 <h2 id="plugin-quick-start">Plugin quick start</h2>
 <pre><code class="lang-csharp">using BepInEx;
