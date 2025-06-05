@@ -112,14 +112,14 @@ runs:
 
     - name: Cement XREFs & Prune
       if: ${{ inputs.xref_map != '' }}
-      uses: BenDol/RisingV.Docs/.github/actions/cement-xrefs@master
+      uses: RisingV-Mods/RisingV.Docs/.github/actions/cement-xrefs@master
       with:
         xref_map: ${{ inputs.xref_map }}
 
     - name: Checkout Central Docs Repo
       uses: actions/checkout@v4
       with:
-        repository: BenDol/RisingV.Docs
+        repository: RisingV-Mods/RisingV.Docs
         token: ${{ inputs.docs_token }}
         path: central-docs
 
