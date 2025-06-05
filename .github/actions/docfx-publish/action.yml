@@ -112,7 +112,7 @@ runs:
 
     - name: Cement XREFs & Prune
       if: ${{ inputs.xref_map != '' }}
-      uses: RisingV-Mods/RisingV.Docs/.github/actions/cement-xrefs@master
+      uses: RisingV-Mods/RisingV.Docs/.github/actions/cement-xrefs@main
       with:
         xref_map: ${{ inputs.xref_map }}
 
@@ -155,7 +155,7 @@ runs:
         }
 
         # 1) Bring our local copy up to date before making changes:
-        retry git pull --rebase --autostash origin master
+        retry git pull --rebase --autostash origin main
 
         # 2) Stage any changed docs
         git add docs/${PATH_LOW}
@@ -166,7 +166,7 @@ runs:
           git commit -m "Update ${{ inputs.target }} docs: ${{ github.sha }}"
 
           # 3) In one retry call, do “pull+rebase” then “push”
-          retry bash -c "git pull --rebase --autostash origin master && git push origin HEAD:master"
+          retry bash -c "git pull --rebase --autostash origin main && git push origin HEAD:main"
 
           echo "Docs updated and pushed."
         fi
