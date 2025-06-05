@@ -91,20 +91,14 @@
 <ol start="2">
 <li><strong>Install Dependencies</strong>:</li>
 </ol>
-<pre><code class="lang-bash">   dotnet add package RisingV.Shared RisingV.Core RisingV.Scripting
+<pre><code class="lang-bash">   dotnet add package RisingV.Shared
+   dotnet add package RisingV.Core
+   dotnet add package RisingV.Scripting
 </code></pre>
 <ol start="3">
 <li><strong>Build the Project</strong>:</li>
 </ol>
-<ul>
-<li>With submodules:</li>
-</ul>
-<pre><code class="lang-bash">   dotnet build RisingV.Sample.submodules.sln
-</code></pre>
-<ul>
-<li>Without submodules:</li>
-</ul>
-<pre><code class="lang-bash">     dotnet build RisingV.Sample.sln
+<pre><code class="lang-bash">   dotnet build RisingV.Sample/RisingV.Sample.csproj
 </code></pre>
 <ol start="4">
 <li>Check the <a href="https://docs.risingv.dev/shared/docs/Aspects.html">shared docs</a> for more details on how to use the RisingV plugin and integrate mods into your project.</li>
