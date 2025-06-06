@@ -83,26 +83,112 @@
 It provides a set of APIs and utilities that make it easier to create and manage mods for V Rising.”</em></p>
 </blockquote>
 <h2 id="features">Features</h2>
-<ul>
-<li><strong>Event bus</strong> – decoupled, async pub-sub pipeline for game-wide events.</li>
-<li><strong>Engine modules</strong> – modular architecture for loading/unloading systems, processors and hooks.</li>
-<li><strong>Config base</strong> – hot-reloadable config manageable class with type-safe access.</li>
-<li><strong>Custom collections</strong> – generic collections like <code>TypeKeyedMap&lt;T&gt;</code>, <code>TimestampedMap&lt;K,V&gt;</code>, etc.</li>
-<li><strong>Common game data</strong> - type-safe wrappers for V Rising game data like <code>Territory</code>, <code>BuffData</code>, etc.</li>
-<li><strong>Database abstraction</strong> – a database API for storing and retrieving data, with support for JSON or Maps.</li>
-<li><strong>Comprehensive extensions</strong> – Class extensions for common operations on Entity, collections, strings, and more.</li>
-<li><strong>File system observers</strong> – watch for file changes with a simple API.</li>
-<li><strong>Manager abstraction</strong> – a base class for managing game objects with automatic object management with a lifecycle.</li>
-<li><strong>Plugin base API</strong> – a base class for creating BepInEx plugins with a managed lifecycle.</li>
-<li><strong>Prefab data</strong> – type-safe access to prefab data like <code>Item</code>, <code>Effect</code>, etc.</li>
-<li><strong>Processor system</strong> – a high-level abstraction for processing game objects/events in a type-safe manner.</li>
-<li><strong>Strings and localization</strong> – a simple string localization system with support for multiple languages.</li>
-<li><strong>Systems</strong> – a high-level abstraction for creating and managing systems for use in RisingV mods.</li>
-<li><strong>Logging facade</strong> – a unified logging interface with support for tagging and levels.</li>
-<li><strong>Reflection utilities</strong> – type-safe reflection helpers for dynamic type access.</li>
-<li><strong>Networking helpers</strong> – thin sugar over <code>Stunlock.Network</code> for RPCs &amp; sync vars.</li>
-<li><strong>Utilities</strong> – various utility classes for common tasks.</li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Link</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Aspecting</td>
+<td><a href="https://docs.risingv.dev/shared/docs/Aspects.html">Docs</a></td>
+<td>provides a way to attach typed views or behaviors onto an existing domain object (like an ECS Entity, a data DTO, or any class) without modifying that object’s source.</td>
+</tr>
+<tr>
+<td>Event bus</td>
+<td><a href="https://docs.risingv.dev/shared/docs/Events.html">Docs</a></td>
+<td>decoupled, async pub-sub pipeline for game-wide events.</td>
+</tr>
+<tr>
+<td>Engine modules</td>
+<td><a href="https://docs.risingv.dev/shared/docs/Engines.html">Docs</a></td>
+<td>modular architecture for loading/unloading systems, processors and hooks.</td>
+</tr>
+<tr>
+<td>Config base</td>
+<td><a href="https://docs.risingv.dev/shared/docs/Configs.html">Docs</a></td>
+<td>hot-reloadable config manageable class with type-safe access.</td>
+</tr>
+<tr>
+<td>Custom collections</td>
+<td><a href="https://docs.risingv.dev/shared/docs/Collections/ConcurrentMap.html">Docs</a></td>
+<td>generic collections like <code>TypeKeyedMap&lt;T&gt;</code>, <code>TimestampedMap&lt;K,V&gt;</code>, etc.</td>
+</tr>
+<tr>
+<td>Common game data</td>
+<td><a href="https://docs.risingv.dev/shared/api/RisingV.Shared.Data.html">Docs</a></td>
+<td>type-safe wrappers for V Rising game data like <code>Territory</code>, <code>BuffData</code>, etc.</td>
+</tr>
+<tr>
+<td>Database abstraction</td>
+<td><a href="https://docs.risingv.dev/shared/docs/Databases.html">Docs</a></td>
+<td>a database API for storing and retrieving data, with support for JSON or Maps.</td>
+</tr>
+<tr>
+<td>Comprehensive extensions</td>
+<td><a href="https://docs.risingv.dev/shared/api/RisingV.Shared.Extensions.html">Docs</a></td>
+<td>Class extensions for common operations on Entity, collections, strings, and more.</td>
+</tr>
+<tr>
+<td>File system observers</td>
+<td><a href="https://docs.risingv.dev/shared/api/RisingV.Shared.Files.html">Docs</a></td>
+<td>watch for file changes with a simple API.</td>
+</tr>
+<tr>
+<td>Manager abstraction</td>
+<td><a href="https://docs.risingv.dev/shared/docs/Managers.html">Docs</a></td>
+<td>a base class for managing game objects with automatic object management with a lifecycle.</td>
+</tr>
+<tr>
+<td>Plugin base API</td>
+<td><a href="https://docs.risingv.dev/shared/docs/Plugins.html">Docs</a></td>
+<td>a base class for creating BepInEx plugins with a managed lifecycle.</td>
+</tr>
+<tr>
+<td>Prefab data</td>
+<td><a href="https://docs.risingv.dev/shared/api/RisingV.Shared.Prefabs.html">Docs</a></td>
+<td>type-safe access to prefab data like <code>Item</code>, <code>Effect</code>, etc.</td>
+</tr>
+<tr>
+<td>Processor system</td>
+<td><a href="https://docs.risingv.dev/shared/docs/Processors.html">Docs</a></td>
+<td>a high-level abstraction for processing game objects/events in a type-safe manner.</td>
+</tr>
+<tr>
+<td>Strings and localization</td>
+<td><a href="https://docs.risingv.dev/shared/docs/StringResources.html">Docs</a></td>
+<td>a simple string localization system with support for multiple languages.</td>
+</tr>
+<tr>
+<td>Systems</td>
+<td><a href="https://docs.risingv.dev/shared/docs/Systems.html">Docs</a></td>
+<td>a high-level abstraction for creating and managing systems for use in RisingV mods.</td>
+</tr>
+<tr>
+<td>Logging facade</td>
+<td><a href="https://docs.risingv.dev/shared/docs/Logging.html">Docs</a></td>
+<td>a unified logging interface with support for tagging and levels.</td>
+</tr>
+<tr>
+<td>Reflection utilities</td>
+<td><a href="">Docs</a></td>
+<td>type-safe reflection helpers for dynamic type access.</td>
+</tr>
+<tr>
+<td>Networking helpers</td>
+<td><a href="">Docs</a></td>
+<td>thin sugar over <code>Stunlock.Network</code> for RPCs &amp; sync vars.</td>
+</tr>
+<tr>
+<td>Utilities</td>
+<td><a href="https://docs.risingv.dev/shared/api/RisingV.Shared.Utils.html">Docs</a></td>
+<td>various utility classes for common tasks.</td>
+</tr>
+</tbody>
+</table>
 <blockquote>
 <p><em>Note:</em> This may not be the entire list—refer to the <a href="https://docs.risingv.dev/shared/api/RisingV.Shared.html">API docs</a> for every class, interface, and extension method that RisingV.Shared provides.</p>
 </blockquote>
