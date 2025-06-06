@@ -1,0 +1,504 @@
+{
+  "source_base_path": "/home/runner/work/RisingV.GameData/RisingV.GameData",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      }
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "CHANGELOG.md",
+      "output": {
+        ".html": {
+          "relative_path": "CHANGELOG.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "CONTRIBUTING.md",
+      "output": {
+        ".html": {
+          "relative_path": "CONTRIBUTING.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "README.md",
+      "output": {
+        ".html": {
+          "relative_path": "README.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.GameData.Data.TerritoryAlignment.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.GameData.Data.TerritoryAlignment.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.GameData.Data.TerritoryAlignment",
+      "Summary": "<p sourcefile=\"api/RisingV.GameData.Data.TerritoryAlignment.yml\" sourcestartlinenumber=\"1\">Represents the alignment of a territory in a game or simulation.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.GameData.Data.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.GameData.Data.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.GameData.Data",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.GameData.Extensions.PrefabGuidExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.GameData.Extensions.PrefabGuidExtensions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.GameData.Extensions.PrefabGuidExtensions",
+      "Summary": "<p sourcefile=\"api/RisingV.GameData.Extensions.PrefabGuidExtensions.yml\" sourcestartlinenumber=\"1\">Provides extension methods for <xref href=\"Stunlock.Core.PrefabGUID\" data-throw-if-not-resolved=\"false\"></xref> to convert it to various game entities.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.GameData.Extensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.GameData.Extensions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.GameData.Extensions",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.GameData.Prefabs.Achievement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.GameData.Prefabs.Achievement.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.GameData.Prefabs.Achievement",
+      "Summary": "<p sourcefile=\"api/RisingV.GameData.Prefabs.Achievement.yml\" sourcestartlinenumber=\"1\">Represents the achievement prefabGUID value, available in the game.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.GameData.Prefabs.BloodType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.GameData.Prefabs.BloodType.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.GameData.Prefabs.BloodType",
+      "Summary": "<p sourcefile=\"api/RisingV.GameData.Prefabs.BloodType.yml\" sourcestartlinenumber=\"1\">Represents the blood type prefabGUID value, available in the game.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.GameData.Prefabs.Buff.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.GameData.Prefabs.Buff.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.GameData.Prefabs.Buff",
+      "Summary": "<p sourcefile=\"api/RisingV.GameData.Prefabs.Buff.yml\" sourcestartlinenumber=\"1\">Represents the buff prefabGUID value, available in the game.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.GameData.Prefabs.Effect.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.GameData.Prefabs.Effect.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.GameData.Prefabs.Effect",
+      "Summary": "<p sourcefile=\"api/RisingV.GameData.Prefabs.Effect.yml\" sourcestartlinenumber=\"1\">Represents the effect prefabGUID value, available in the game.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.GameData.Prefabs.EquipBuffs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.GameData.Prefabs.EquipBuffs.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.GameData.Prefabs.EquipBuffs",
+      "Summary": "<p sourcefile=\"api/RisingV.GameData.Prefabs.EquipBuffs.yml\" sourcestartlinenumber=\"1\">Represents the equip buffs prefabGUID value, available in the game.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.GameData.Prefabs.Faction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.GameData.Prefabs.Faction.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.GameData.Prefabs.Faction",
+      "Summary": "<p sourcefile=\"api/RisingV.GameData.Prefabs.Faction.yml\" sourcestartlinenumber=\"1\">Represents the faction prefabGUID value, available in the game.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.GameData.Prefabs.Item.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.GameData.Prefabs.Item.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.GameData.Prefabs.Item",
+      "Summary": "<p sourcefile=\"api/RisingV.GameData.Prefabs.Item.yml\" sourcestartlinenumber=\"1\">Represents the item prefabGUID value, available in the game.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.GameData.Prefabs.Prefabs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.GameData.Prefabs.Prefabs.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.GameData.Prefabs.Prefabs",
+      "Summary": "<p sourcefile=\"api/RisingV.GameData.Prefabs.Prefabs.yml\" sourcestartlinenumber=\"1\">Every prefabGuid value we have.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.GameData.Prefabs.SetBonus.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.GameData.Prefabs.SetBonus.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.GameData.Prefabs.SetBonus",
+      "Summary": "<p sourcefile=\"api/RisingV.GameData.Prefabs.SetBonus.yml\" sourcestartlinenumber=\"1\">Represents the set bonus prefabGUID value, available in the game.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.GameData.Prefabs.Unit.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.GameData.Prefabs.Unit.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.GameData.Prefabs.Unit",
+      "Summary": "<p sourcefile=\"api/RisingV.GameData.Prefabs.Unit.yml\" sourcestartlinenumber=\"1\">Represents the unit prefabGUID value, available in the game.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.GameData.Prefabs.VBlood.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.GameData.Prefabs.VBlood.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.GameData.Prefabs.VBlood",
+      "Summary": "<p sourcefile=\"api/RisingV.GameData.Prefabs.VBlood.yml\" sourcestartlinenumber=\"1\">Represents the VBlood prefabGUID value, available in the game.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.GameData.Prefabs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.GameData.Prefabs.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.GameData.Prefabs",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.GameData.Strings.ItemStrings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.GameData.Strings.ItemStrings.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.GameData.Strings.ItemStrings",
+      "Summary": "<p sourcefile=\"api/RisingV.GameData.Strings.ItemStrings.yml\" sourcestartlinenumber=\"1\">Provides methods to retrieve strings (like names, etc.) for items.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.GameData.Strings.PrefabStrings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.GameData.Strings.PrefabStrings.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.GameData.Strings.PrefabStrings",
+      "Summary": "<p sourcefile=\"api/RisingV.GameData.Strings.PrefabStrings.yml\" sourcestartlinenumber=\"1\">Provides methods to retrieve strings (like names, etc.) for prefabs using their GUIDs.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.GameData.Strings.UnitStrings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.GameData.Strings.UnitStrings.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.GameData.Strings.UnitStrings",
+      "Summary": "<p sourcefile=\"api/RisingV.GameData.Strings.UnitStrings.yml\" sourcestartlinenumber=\"1\">Provides a mapping of unit prefab GUIDs to their long and short names.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.GameData.Strings.WorldStrings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.GameData.Strings.WorldStrings.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.GameData.Strings.WorldStrings",
+      "Summary": "<p sourcefile=\"api/RisingV.GameData.Strings.WorldStrings.yml\" sourcestartlinenumber=\"1\">Provides string representations for world regions in the game.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.GameData.Strings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.GameData.Strings.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.GameData.Strings",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.GameData.Utils.Help.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.GameData.Utils.Help.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.GameData.Utils.Help",
+      "Summary": "<p sourcefile=\"api/RisingV.GameData.Utils.Help.yml\" sourcestartlinenumber=\"1\">Provides utility methods for various game-related operations.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.GameData.Utils.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.GameData.Utils.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.GameData.Utils",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.GameData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.GameData.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": null,
+      "Summary": null
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html"
+        },
+        ".json": {
+          "relative_path": "api/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/favicon/favicon.ico",
+      "output": {
+        "resource": {
+          "relative_path": "assets/favicon/favicon.ico"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/icon.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/icon.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/logo.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/logo.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/logo_256.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/logo_256.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/logo_50.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/logo_50.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/logo_512.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/logo_512.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/Sample.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/Sample.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "docs/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/toc.html"
+        },
+        ".json": {
+          "relative_path": "docs/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html"
+        },
+        ".json": {
+          "relative_path": "toc.json"
+        }
+      },
+      "version": ""
+    }
+  ],
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
