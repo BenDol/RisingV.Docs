@@ -199,7 +199,6 @@ perform heavy allocation in <code>Load</code> and start ticking only after <code
 <pre><code class="lang-csharp">// Plugin field
 public override void OnInitialize()
 {
-    SystemManager.Initialize(this);
     SystemManager.AddSystem&lt;HealthRegenSystem&gt;(this);
     SystemManager.AddSystem&lt;WeatherSystem&gt;(this);
 }
