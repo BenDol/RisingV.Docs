@@ -81,17 +81,62 @@
 It provides a set of APIs and utilities that make it easier to create and manage mods for V Rising.”</em></p>
 </blockquote>
 <h2 id="features">Features</h2>
-<ul>
-<li><strong>Plugin lifecycle</strong> – deterministic load / unload / reload with safe dependency ordering using <code>RisingPlugin&lt;TContext&gt;</code>.</li>
-<li><strong>Aspect abstraction</strong> – Aspect (a.k.a. Aspecting) is the pattern this SDK uses to give a domain object or ECS entity one or more typed views without polluting the underlying model with cross-cutting concerns.</li>
-<li><strong>Engine modules</strong> – modular architecture for loading/unloading systems, processors and hooks like <code>DamageEngine</code>, <code>DeathEngine</code>, <code>StatEngine</code>, etc.</li>
-<li><strong>Harmony Patches</strong> - a set of Harmony patches for common game hooks like <code>DeathHook</code>, <code>StatChangeSystemHook</code>, etc. The hooks all publish to the event bus, so you can subscribe to them without needing to patch the game code directly.</li>
-<li><strong>Processors</strong> – a high-level abstraction for processing game objects/events in a type-safe manner, allowing you to create custom processors that can be registered with the engine. Mostly used in Harmony patches.</li>
-<li><strong>Systems</strong> – a set of systems for common game mechanics like <code>LootSystem</code>, <code>DamageTrackingSystem</code>, <code>ChatSystem</code>, etc. These systems can be registered in your plugin or sometimes are pre-registered in an <code>Engine</code>.</li>
-<li><strong>Event bus</strong> – decoupled, async pub-sub pipeline for game-wide events.</li>
-<li><strong>Item Drops</strong> – a system for managing item drops, including support for custom drop tables and loot generation.</li>
-<li><strong>Extensions</strong> – Class extensions for common operations on Entity, PrefabGUID, and more.</li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Link</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Plugin lifecycle</td>
+<td><a href="https://docs.risingv.dev/core/docs/Plugins.html">Docs</a></td>
+<td>deterministic load / unload / reload with safe dependency ordering using RisingPlugin<tcontext>.</tcontext></td>
+</tr>
+<tr>
+<td>Aspect abstraction</td>
+<td><a href="https://docs.risingv.dev/core/docs/Aspects.html">Docs</a></td>
+<td>Aspect (a.k.a. Aspecting) is the pattern this SDK uses to give a domain object or ECS entity one or more typed views without polluting the underlying model with cross-cutting concerns.</td>
+</tr>
+<tr>
+<td>Engine modules</td>
+<td><a href="https://docs.risingv.dev/core/docs/Engines.html">Docs</a></td>
+<td>modular architecture for loading/unloading systems, processors and hooks like DamageEngine, DeathEngine, StatEngine, etc.</td>
+</tr>
+<tr>
+<td>Harmony Patches</td>
+<td><a href="https://docs.risingv.dev/core/docs/Hooks.html">Docs</a></td>
+<td>a set of Harmony patches for common game hooks like DeathHook, StatChangeSystemHook, etc. The hooks all publish to the event bus, so you can subscribe to them without needing to patch the game code directly.</td>
+</tr>
+<tr>
+<td>Processors</td>
+<td><a href="https://docs.risingv.dev/core/docs/Processors.html">Docs</a></td>
+<td>a high-level abstraction for processing game objects/events in a type-safe manner, allowing you to create custom processors that can be registered with the engine. Mostly used in Harmony patches.</td>
+</tr>
+<tr>
+<td>Systems</td>
+<td><a href="https://docs.risingv.dev/core/docs/Systems.html">Docs</a></td>
+<td>a set of systems for common game mechanics like LootSystem, DamageTrackingSystem, ChatSystem, etc. These systems can be registered in your plugin or sometimes are pre-registered in an Engine.</td>
+</tr>
+<tr>
+<td>Event bus</td>
+<td><a href="https://docs.risingv.dev/shared/docs/Events.html">Docs</a></td>
+<td>decoupled, async pub-sub pipeline for game-wide events.</td>
+</tr>
+<tr>
+<td>Loot System</td>
+<td><a href="https://docs.risingv.dev/core/docs/Systems.html#lootsystem">Docs</a></td>
+<td>a system for managing item drops, including support for custom drop tables and loot generation.</td>
+</tr>
+<tr>
+<td>Extensions</td>
+<td><a href="https://docs.risingv.dev/core/api/RisingV.Core.Extensions.html">Docs</a></td>
+<td>Class extensions for common operations on Entity, PrefabGUID, and more.</td>
+</tr>
+</tbody>
+</table>
 <blockquote>
 <p><em>Note:</em> This may not be the entire list—refer to the <a href="https://docs.risingv.dev/core/api/RisingV.Core.html">API docs</a> for every class, interface, and extension method that RisingV.Core provides.</p>
 </blockquote>
