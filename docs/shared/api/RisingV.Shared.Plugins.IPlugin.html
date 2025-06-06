@@ -293,9 +293,9 @@ Interface IPlugin  <a class="header-action link-secondary" title="View source" h
 
   <a id="RisingV_Shared_Plugins_IPlugin_AddSharedComponent_" data-uid="RisingV.Shared.Plugins.IPlugin.AddSharedComponent*"></a>
 
-  <h3 id="RisingV_Shared_Plugins_IPlugin_AddSharedComponent__1_RisingV_Shared_Plugins_IPlugin_" data-uid="RisingV.Shared.Plugins.IPlugin.AddSharedComponent``1(RisingV.Shared.Plugins.IPlugin)">
-  AddSharedComponent&lt;T&gt;(IPlugin)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugins/IPlugin.cs/#L57"><i class="bi bi-code-slash"></i></a>
+  <h3 id="RisingV_Shared_Plugins_IPlugin_AddSharedComponent__1_RisingV_Shared_Plugins_IPlugin_System_Boolean_" data-uid="RisingV.Shared.Plugins.IPlugin.AddSharedComponent``1(RisingV.Shared.Plugins.IPlugin,System.Boolean)">
+  AddSharedComponent&lt;T&gt;(IPlugin, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugins/IPlugin.cs/#L58"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Adds a shared component to the plugin context.</p>
@@ -303,13 +303,16 @@ Interface IPlugin  <a class="header-action link-secondary" title="View source" h
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">T? AddSharedComponent&lt;T&gt;(IPlugin plugin) where T : class, IPluginComponent</code></pre>
+    <pre><code class="lang-csharp hljs">T? AddSharedComponent&lt;T&gt;(IPlugin plugin, bool failIfExists = true) where T : class, IPluginComponent</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>plugin</code> <a class="xref" href="RisingV.Shared.Plugins.IPlugin.html">IPlugin</a></dt>
     <dd><p>The plugin to which the component belongs.</p>
+</dd>
+    <dt><code>failIfExists</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Throw an exception if the shared component already exists. Default: true</p>
 </dd>
   </dl>
 
@@ -338,9 +341,9 @@ Interface IPlugin  <a class="header-action link-secondary" title="View source" h
 
   <a id="RisingV_Shared_Plugins_IPlugin_AddSharedComponent_" data-uid="RisingV.Shared.Plugins.IPlugin.AddSharedComponent*"></a>
 
-  <h3 id="RisingV_Shared_Plugins_IPlugin_AddSharedComponent__1_RisingV_Shared_Plugins_IPlugin___0_" data-uid="RisingV.Shared.Plugins.IPlugin.AddSharedComponent``1(RisingV.Shared.Plugins.IPlugin,``0)">
-  AddSharedComponent&lt;T&gt;(IPlugin, T)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugins/IPlugin.cs/#L65"><i class="bi bi-code-slash"></i></a>
+  <h3 id="RisingV_Shared_Plugins_IPlugin_AddSharedComponent__1_RisingV_Shared_Plugins_IPlugin___0_System_Boolean_" data-uid="RisingV.Shared.Plugins.IPlugin.AddSharedComponent``1(RisingV.Shared.Plugins.IPlugin,``0,System.Boolean)">
+  AddSharedComponent&lt;T&gt;(IPlugin, T, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugins/IPlugin.cs/#L67"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Adds a shared component to the plugin context with an instance of the component.</p>
@@ -348,7 +351,7 @@ Interface IPlugin  <a class="header-action link-secondary" title="View source" h
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void AddSharedComponent&lt;T&gt;(IPlugin plugin, T obj) where T : class, IPluginComponent</code></pre>
+    <pre><code class="lang-csharp hljs">void AddSharedComponent&lt;T&gt;(IPlugin plugin, T obj, bool failIfExists = true) where T : class, IPluginComponent</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -358,6 +361,9 @@ Interface IPlugin  <a class="header-action link-secondary" title="View source" h
 </dd>
     <dt><code>obj</code> <span class="xref">T</span></dt>
     <dd><p>The instance of the plugin component to add.</p>
+</dd>
+    <dt><code>failIfExists</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Throw an exception if the shared component already exists. Default: true</p>
 </dd>
   </dl>
 

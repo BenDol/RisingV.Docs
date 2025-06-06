@@ -1638,6 +1638,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Shared.EventBridge.OnPluginsLoadedEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Shared.EventBridge.OnPluginsLoadedEvent.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Shared.EventBridge.OnPluginsLoadedEvent",
+      "Summary": "<p sourcefile=\"api/RisingV.Shared.EventBridge.OnPluginsLoadedEvent.yml\" sourcestartlinenumber=\"1\">Event triggered when all plugins are loaded.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/RisingV.Shared.EventBridge.OnPluginsLoadingEvent.yml",
       "output": {
         ".html": {
@@ -1677,20 +1691,6 @@
       "IsMRef": true,
       "Title": "RisingV.Shared.EventBridge.OnPluginsReadyEvent",
       "Summary": "<p sourcefile=\"api/RisingV.Shared.EventBridge.OnPluginsReadyEvent.yml\" sourcestartlinenumber=\"1\">Event triggered when all plugins are ready and everything is loaded.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/RisingV.Shared.EventBridge.OnPluginsReadyingEvent.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/RisingV.Shared.EventBridge.OnPluginsReadyingEvent.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "RisingV.Shared.EventBridge.OnPluginsReadyingEvent",
-      "Summary": "<p sourcefile=\"api/RisingV.Shared.EventBridge.OnPluginsReadyingEvent.yml\" sourcestartlinenumber=\"1\">Event triggered when all plugins are ready to be used.</p>\n"
     },
     {
       "type": "ManagedReference",
