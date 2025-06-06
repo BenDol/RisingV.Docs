@@ -474,6 +474,66 @@
       "version": ""
     },
     {
+      "type": "Resource",
+      "source_relative_path": "assets/images/old/icon.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/old/icon.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/old/logo.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/old/logo.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/old/logo_256.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/old/logo_256.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/old/logo_50.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/old/logo_50.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/old/logo_512.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/old/logo_512.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/old/logo_rounded.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/old/logo_rounded.png"
+        }
+      },
+      "version": ""
+    },
+    {
       "type": "Conceptual",
       "source_relative_path": "docs/Sample.md",
       "output": {
