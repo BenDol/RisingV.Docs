@@ -182,6 +182,19 @@ references:
   isSpec: "True"
   fullName: RisingV.Shared.Application.IsInitialized
   nameWithType: Application.IsInitialized
+- uid: RisingV.Shared.Application.IsLoaded
+  name: IsLoaded
+  href: api/RisingV.Shared.Application.html#RisingV_Shared_Application_IsLoaded
+  commentId: P:RisingV.Shared.Application.IsLoaded
+  fullName: RisingV.Shared.Application.IsLoaded
+  nameWithType: Application.IsLoaded
+- uid: RisingV.Shared.Application.IsLoaded*
+  name: IsLoaded
+  href: api/RisingV.Shared.Application.html#RisingV_Shared_Application_IsLoaded_
+  commentId: Overload:RisingV.Shared.Application.IsLoaded
+  isSpec: "True"
+  fullName: RisingV.Shared.Application.IsLoaded
+  nameWithType: Application.IsLoaded
 - uid: RisingV.Shared.Application.IsServer
   name: IsServer
   href: api/RisingV.Shared.Application.html#RisingV_Shared_Application_IsServer
