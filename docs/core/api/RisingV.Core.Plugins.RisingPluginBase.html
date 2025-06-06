@@ -665,9 +665,9 @@ systems within the plugin.</p>
 
   <a id="RisingV_Core_Plugins_RisingPluginBase_AddSharedComponent_" data-uid="RisingV.Core.Plugins.RisingPluginBase.AddSharedComponent*"></a>
 
-  <h3 id="RisingV_Core_Plugins_RisingPluginBase_AddSharedComponent__1_RisingV_Shared_Plugins_IPlugin_" data-uid="RisingV.Core.Plugins.RisingPluginBase.AddSharedComponent``1(RisingV.Shared.Plugins.IPlugin)">
-  AddSharedComponent&lt;T&gt;(IPlugin)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Plugins/RisingPlugin.cs/#L463"><i class="bi bi-code-slash"></i></a>
+  <h3 id="RisingV_Core_Plugins_RisingPluginBase_AddSharedComponent__1_RisingV_Shared_Plugins_IPlugin_System_Boolean_" data-uid="RisingV.Core.Plugins.RisingPluginBase.AddSharedComponent``1(RisingV.Shared.Plugins.IPlugin,System.Boolean)">
+  AddSharedComponent&lt;T&gt;(IPlugin, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Plugins/RisingPlugin.cs/#L464"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Adds a shared component of the specified type to the plugin's shared components.</p>
@@ -675,13 +675,16 @@ systems within the plugin.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public T? AddSharedComponent&lt;T&gt;(IPlugin plugin) where T : class, IPluginComponent</code></pre>
+    <pre><code class="lang-csharp hljs">public T? AddSharedComponent&lt;T&gt;(IPlugin plugin, bool failIfExists = true) where T : class, IPluginComponent</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>plugin</code> <a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Plugins.IPlugin.html">IPlugin</a></dt>
     <dd><p>The plugin that owns the shared component.</p>
+</dd>
+    <dt><code>failIfExists</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Throw an exception if the shared component already exists. Default: true</p>
 </dd>
   </dl>
 
@@ -710,9 +713,9 @@ systems within the plugin.</p>
 
   <a id="RisingV_Core_Plugins_RisingPluginBase_AddSharedComponent_" data-uid="RisingV.Core.Plugins.RisingPluginBase.AddSharedComponent*"></a>
 
-  <h3 id="RisingV_Core_Plugins_RisingPluginBase_AddSharedComponent__1_RisingV_Shared_Plugins_IPlugin___0_" data-uid="RisingV.Core.Plugins.RisingPluginBase.AddSharedComponent``1(RisingV.Shared.Plugins.IPlugin,``0)">
-  AddSharedComponent&lt;T&gt;(IPlugin, T)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Plugins/RisingPlugin.cs/#L474"><i class="bi bi-code-slash"></i></a>
+  <h3 id="RisingV_Core_Plugins_RisingPluginBase_AddSharedComponent__1_RisingV_Shared_Plugins_IPlugin___0_System_Boolean_" data-uid="RisingV.Core.Plugins.RisingPluginBase.AddSharedComponent``1(RisingV.Shared.Plugins.IPlugin,``0,System.Boolean)">
+  AddSharedComponent&lt;T&gt;(IPlugin, T, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Plugins/RisingPlugin.cs/#L476"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Adds a shared component of the specified type to the plugin's shared components.</p>
@@ -720,7 +723,7 @@ systems within the plugin.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void AddSharedComponent&lt;T&gt;(IPlugin plugin, T obj) where T : class, IPluginComponent</code></pre>
+    <pre><code class="lang-csharp hljs">public void AddSharedComponent&lt;T&gt;(IPlugin plugin, T obj, bool failIfExists = true) where T : class, IPluginComponent</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -730,6 +733,9 @@ systems within the plugin.</p>
 </dd>
     <dt><code>obj</code> <span class="xref">T</span></dt>
     <dd><p>The shared component instance to add.</p>
+</dd>
+    <dt><code>failIfExists</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Throw an exception if the shared component already exists. Default: true</p>
 </dd>
   </dl>
 
@@ -754,7 +760,7 @@ systems within the plugin.</p>
 
   <h3 id="RisingV_Core_Plugins_RisingPluginBase_Dispose" data-uid="RisingV.Core.Plugins.RisingPluginBase.Dispose">
   Dispose()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Plugins/RisingPlugin.cs/#L482"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Plugins/RisingPlugin.cs/#L484"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Disposes of the plugin, cleaning up resources and unregistering events.</p>
@@ -1015,6 +1021,39 @@ Called after OnGameDataInitializedEvent, but before OnPluginsLoadingEvent.</p>
 
 
 
+  <a id="RisingV_Core_Plugins_RisingPluginBase_OnPluginsLoaded_" data-uid="RisingV.Core.Plugins.RisingPluginBase.OnPluginsLoaded*"></a>
+
+  <h3 id="RisingV_Core_Plugins_RisingPluginBase_OnPluginsLoaded_RisingV_Shared_EventBridge_OnPluginsLoadedEvent_" data-uid="RisingV.Core.Plugins.RisingPluginBase.OnPluginsLoaded(RisingV.Shared.EventBridge.OnPluginsLoadedEvent)">
+  OnPluginsLoaded(OnPluginsLoadedEvent)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Plugins/RisingPlugin.cs/#L394"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Called when all the plugins are loaded. This method is triggered by the <a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.EventBridge.OnPluginsLoadedEvent.html">EventBridge.OnPluginsLoadedEvent</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnPluginsLoaded(EventBridge.OnPluginsLoadedEvent @event)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>event</code> <a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.EventBridge.html">EventBridge</a>.<a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.EventBridge.OnPluginsLoadedEvent.html">OnPluginsLoadedEvent</a></dt>
+    <dd><p>The event containing the state of the plugins are loaded.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
   <a id="RisingV_Core_Plugins_RisingPluginBase_OnPluginsLoading_" data-uid="RisingV.Core.Plugins.RisingPluginBase.OnPluginsLoading*"></a>
 
   <h3 id="RisingV_Core_Plugins_RisingPluginBase_OnPluginsLoading_RisingV_Shared_EventBridge_OnPluginsLoadingEvent_" data-uid="RisingV.Core.Plugins.RisingPluginBase.OnPluginsLoading(RisingV.Shared.EventBridge.OnPluginsLoadingEvent)">
@@ -1034,39 +1073,6 @@ Called after OnGameDataInitializedEvent, but before OnPluginsLoadingEvent.</p>
   <dl class="parameters">
     <dt><code>event</code> <a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.EventBridge.html">EventBridge</a>.<a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.EventBridge.OnPluginsLoadingEvent.html">OnPluginsLoadingEvent</a></dt>
     <dd><p>The event containing the state of the plugins initializing.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-
-  <a id="RisingV_Core_Plugins_RisingPluginBase_OnPluginsReadying_" data-uid="RisingV.Core.Plugins.RisingPluginBase.OnPluginsReadying*"></a>
-
-  <h3 id="RisingV_Core_Plugins_RisingPluginBase_OnPluginsReadying_RisingV_Shared_EventBridge_OnPluginsReadyingEvent_" data-uid="RisingV.Core.Plugins.RisingPluginBase.OnPluginsReadying(RisingV.Shared.EventBridge.OnPluginsReadyingEvent)">
-  OnPluginsReadying(OnPluginsReadyingEvent)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Plugins/RisingPlugin.cs/#L394"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Called when all the plugins are loaded. This method is triggered by the <a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.EventBridge.OnPluginsReadyingEvent.html">EventBridge.OnPluginsReadyingEvent</a>.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected virtual void OnPluginsReadying(EventBridge.OnPluginsReadyingEvent @event)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>event</code> <a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.EventBridge.html">EventBridge</a>.<a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.EventBridge.OnPluginsReadyingEvent.html">OnPluginsReadyingEvent</a></dt>
-    <dd><p>The event containing the state of the plugins readying.</p>
 </dd>
   </dl>
 
