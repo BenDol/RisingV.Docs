@@ -75,36 +75,45 @@
 <p><a href="https://risingv.dev"><p align="center"><img src="https://github.com/RisingV-Mods/RisingV.GameData/blob/main/assets/images/logo_rounded.png?raw=true" width="400" alt="RisingV.GameData"></p></a></p>
 <p>A <a href="https://github.com/RisingV-Mods/RisingV.GameData">gamedata project</a> for integrating <a href="https://risingv.dev">RisingV</a> mods.</p>
 <h1 id="purpose">Purpose</h1>
-<ul>
-<li><strong>Mod Integration</strong>: Demonstrates how to integrate RisingV mods into a project.</li>
-<li><strong>Mod Management</strong>: Shows how to manage mods using the RisingV plugin.</li>
-<li><strong>Mod Development</strong>: Provides a foundation for developing your own RisingV mods.</li>
-<li><strong>Community Support</strong>: Join the RisingV community for help and collaboration.</li>
-</ul>
+<p>Provide a maintained data pack for V Rising game data.</p>
+<blockquote>
+<p><em>Note that <code>RisingV.GameData</code> is used internally by <code>RisingV.Core</code> so this is not required as a seperate library mod if you're already using this.</em></p>
+</blockquote>
 <h1 id="getting-started">Getting Started</h1>
 <ol>
-<li><p><strong>Clone the Repository</strong>:</p>
-<pre><code class="lang-bash">git clone https://github.com/RisingV-Mods/RisingV.GameData.git
-cd RisingV.GameData
-</code></pre>
-</li>
-<li><p><strong>Install Dependencies</strong>:</p>
-<pre><code class="lang-bash">dotnet add package RisingV.Shared RisingV.Core RisingV.Scripting
-</code></pre>
-</li>
-<li><p><strong>Build the Project</strong>:</p>
+<li><strong>Prerequisites</strong>
 <ul>
-<li>With submodules:
-<pre><code class="lang-bash">dotnet build RisingV.GameData.submodules.sln
-</code></pre>
-</li>
-<li>Without submodules:
-<pre><code class="lang-bash">dotnet build RisingV.GameData.sln
-</code></pre>
-</li>
+<li><strong>V Rising</strong> (vanilla game/dedicated server installed)</li>
+<li><strong>BepInEx</strong> (version compatible with your V Rising installation)</li>
 </ul>
 </li>
-<li><p>Check the <a href="https://docs.risingv.dev/shared/docs/Aspects.html">shared docs</a> for more details on how to use the RisingV plugin and integrate mods into your project.</p>
+<li><strong>Build/Download</strong>
+<ul>
+<li>Clone or download the latest <code>RisingV.GameData.&lt;version&gt;.zip</code> from the <a href="https://github.com/RisingV-Mods/RisingV.GameData/releases">Releases</a>.</li>
+</ul>
+</li>
+<li><strong>Deploy</strong>
+<ul>
+<li>Extract the zip file to your <code>/BepInEx</code> directory.</li>
+</ul>
+</li>
+</ol>
+<h1 id="development">Development</h1>
+<ol>
+<li><p><strong>Install package</strong>:</p>
+<pre><code class="lang-bash">dotnet add package RisingV.GameData
+</code></pre>
+<p>or <strong>Clone the Repository and Build</strong>:</p>
+<pre><code class="lang-bash">git clone https://github.com/RisingV-Mods/RisingV.GameData.git
+cd RisingV.GameData
+dotnet build RisingV.GameData.sln
+dotnet pack RisingV.GameData
+</code></pre>
+</li>
+<li><p><strong>Add BepInEx dependency</strong> to your plugin:</p>
+<pre><code class="lang-csharp">// Added to your plugin class
+[BepInDependency(&quot;RisingV.GameData&quot;)]
+</code></pre>
 </li>
 </ol>
 <h2 id="contributing">Contributing</h2>
