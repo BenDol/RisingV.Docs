@@ -1,5 +1,5 @@
 {
-  "source_base_path": "/home/runner/work/RisingV.GameData/RisingV.GameData",
+  "source_base_path": "/home/runner/work/RisingV.Template/RisingV.Template",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -7767,6 +7767,16 @@
       "output": {
         "resource": {
           "relative_path": "assets/images/logo_512.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/images/logo_rounded.png",
+      "output": {
+        "resource": {
+          "relative_path": "assets/images/logo_rounded.png"
         }
       },
       "version": ""
