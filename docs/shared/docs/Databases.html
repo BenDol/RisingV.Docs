@@ -293,12 +293,8 @@ public bool RemoveDatabase&lt;T&gt;();
 }
 </code></pre>
 <h3 id="5-register-with-the-manager">5️⃣ Register with the manager</h3>
-<pre><code class="lang-csharp">_dbMgr = new DatabaseManager();
-_dbMgr.Initialize(this);
+<pre><code class="lang-csharp">_dbMgr = SharedComponents.Get&lt;DatabaseManager&gt;(); // or `DatabaseManager` property in the plugin
 _dbMgr.AddDatabase&lt;BossDropDatabase&gt;(this);
-
-_dbMgr.Load(this);
-_dbMgr.Ready(this);
 </code></pre>
 <p>Now query anywhere:</p>
 <pre><code class="lang-csharp">var drops    = _dbMgr.GetDatabase&lt;BossDropDatabase&gt;()!;
@@ -323,8 +319,8 @@ upgrades before returning the object.</p>
 <td>Validate DB directory, ping remote host, check permissions.</td>
 </tr>
 <tr>
-<td><code>IDataLoader.ExtractKey</code></td>
-<td>Custom composite keys or hash IDs.</td>
+<td><code>IDataSource.KeyResolver</code></td>
+<td>Key resolver for this data source.</td>
 </tr>
 <tr>
 <td><code>IDataSource.Load</code></td>
