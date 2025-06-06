@@ -89,7 +89,7 @@
 
 
   <h1 id="RisingV_Core_Extensions_EntityExtensions" data-uid="RisingV.Core.Extensions.EntityExtensions" class="text-break">
-Class EntityExtensions  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Extensions/EntityExtensions.cs/#L69"><i class="bi bi-code-slash"></i></a>
+Class EntityExtensions  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Extensions/EntityExtensions.cs/#L70"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -157,7 +157,7 @@ Class EntityExtensions  <a class="header-action link-secondary" title="View sour
 
   <h3 id="RisingV_Core_Extensions_EntityExtensions_AddCustomComponentData__1_Unity_Entities_Entity_System_Boolean_" data-uid="RisingV.Core.Extensions.EntityExtensions.AddCustomComponentData``1(Unity.Entities.Entity,System.Boolean)">
   AddCustomComponentData&lt;TX&gt;(Entity, bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Extensions/EntityExtensions.cs/#L480"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Extensions/EntityExtensions.cs/#L486"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Adds custom component data of type <code class="typeparamref">TX</code> to the entity.</p>
@@ -211,7 +211,7 @@ Class EntityExtensions  <a class="header-action link-secondary" title="View sour
 
   <h3 id="RisingV_Core_Extensions_EntityExtensions_As__1_Unity_Entities_Entity_System_Boolean_System_Object___" data-uid="RisingV.Core.Extensions.EntityExtensions.As``1(Unity.Entities.Entity,System.Boolean,System.Object[])">
   As&lt;TX&gt;(Entity, bool, params object?[]?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Extensions/EntityExtensions.cs/#L283"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Extensions/EntityExtensions.cs/#L289"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Entity as aspect of type <code class="typeparamref">TX</code>.</p>
@@ -262,7 +262,7 @@ Class EntityExtensions  <a class="header-action link-secondary" title="View sour
 
   <h3 id="RisingV_Core_Extensions_EntityExtensions_Aspect__1_Unity_Entities_Entity_System_Boolean_System_Object___" data-uid="RisingV.Core.Extensions.EntityExtensions.Aspect``1(Unity.Entities.Entity,System.Boolean,System.Object[])">
   Aspect&lt;TX&gt;(Entity, bool, params object?[]?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Extensions/EntityExtensions.cs/#L297"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Extensions/EntityExtensions.cs/#L303"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates an aspect of type <code class="typeparamref">TX</code> for the given entity.</p>
@@ -313,7 +313,7 @@ Class EntityExtensions  <a class="header-action link-secondary" title="View sour
 
   <h3 id="RisingV_Core_Extensions_EntityExtensions_CountStashedItems_Unity_Entities_Entity_Stunlock_Core_PrefabGUID_System_Boolean_" data-uid="RisingV.Core.Extensions.EntityExtensions.CountStashedItems(Unity.Entities.Entity,Stunlock.Core.PrefabGUID,System.Boolean)">
   CountStashedItems(Entity, PrefabGUID, bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Extensions/EntityExtensions.cs/#L411"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Extensions/EntityExtensions.cs/#L417"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Counts the number of stashed items of a specific type in an entity's stashes.</p>
@@ -354,11 +354,47 @@ Class EntityExtensions  <a class="header-action link-secondary" title="View sour
 
 
 
+  <a id="RisingV_Core_Extensions_EntityExtensions_DisplayName_" data-uid="RisingV.Core.Extensions.EntityExtensions.DisplayName*"></a>
+
+  <h3 id="RisingV_Core_Extensions_EntityExtensions_DisplayName_Unity_Entities_Entity_" data-uid="RisingV.Core.Extensions.EntityExtensions.DisplayName(Unity.Entities.Entity)">
+  DisplayName(Entity)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Extensions/EntityExtensions.cs/#L83"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string DisplayName(this Entity entity)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>entity</code> <span class="xref">Entity</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="RisingV_Core_Extensions_EntityExtensions_FetchPlayer_" data-uid="RisingV.Core.Extensions.EntityExtensions.FetchPlayer*"></a>
 
   <h3 id="RisingV_Core_Extensions_EntityExtensions_FetchPlayer_Unity_Entities_Entity_" data-uid="RisingV.Core.Extensions.EntityExtensions.FetchPlayer(Unity.Entities.Entity)">
   FetchPlayer(Entity)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Extensions/EntityExtensions.cs/#L263"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Extensions/EntityExtensions.cs/#L269"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Fetches the PlayerAspect for a player entity.</p>
@@ -397,7 +433,7 @@ Class EntityExtensions  <a class="header-action link-secondary" title="View sour
 
   <h3 id="RisingV_Core_Extensions_EntityExtensions_GetAllStashItems_Unity_Entities_Entity_System_Boolean_" data-uid="RisingV.Core.Extensions.EntityExtensions.GetAllStashItems(Unity.Entities.Entity,System.Boolean)">
   GetAllStashItems(Entity, bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Extensions/EntityExtensions.cs/#L394"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Extensions/EntityExtensions.cs/#L400"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets all stash items associated with an entity.</p>
@@ -439,7 +475,7 @@ Class EntityExtensions  <a class="header-action link-secondary" title="View sour
 
   <h3 id="RisingV_Core_Extensions_EntityExtensions_GetCustomComponentData__1_Unity_Entities_Entity_" data-uid="RisingV.Core.Extensions.EntityExtensions.GetCustomComponentData``1(Unity.Entities.Entity)">
   GetCustomComponentData&lt;TX&gt;(Entity)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Extensions/EntityExtensions.cs/#L427"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Extensions/EntityExtensions.cs/#L433"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets custom component data of type <code class="typeparamref">TX</code> from the entity.</p>
@@ -484,7 +520,7 @@ Class EntityExtensions  <a class="header-action link-secondary" title="View sour
 
   <h3 id="RisingV_Core_Extensions_EntityExtensions_GetOrCreateCustomComponentData__1_Unity_Entities_Entity_" data-uid="RisingV.Core.Extensions.EntityExtensions.GetOrCreateCustomComponentData``1(Unity.Entities.Entity)">
   GetOrCreateCustomComponentData&lt;TX&gt;(Entity)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Extensions/EntityExtensions.cs/#L460"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Extensions/EntityExtensions.cs/#L466"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets or creates custom component data of type <code class="typeparamref">TX</code> for the entity.</p>
@@ -529,7 +565,7 @@ Class EntityExtensions  <a class="header-action link-secondary" title="View sour
 
   <h3 id="RisingV_Core_Extensions_EntityExtensions_GetPrefabEntity_Unity_Entities_Entity_" data-uid="RisingV.Core.Extensions.EntityExtensions.GetPrefabEntity(Unity.Entities.Entity)">
   GetPrefabEntity(Entity)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Extensions/EntityExtensions.cs/#L108"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Extensions/EntityExtensions.cs/#L114"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the PrefabGUID of an entity.</p>
@@ -568,7 +604,7 @@ Class EntityExtensions  <a class="header-action link-secondary" title="View sour
 
   <h3 id="RisingV_Core_Extensions_EntityExtensions_GetStashes_Unity_Entities_Entity_System_Boolean_" data-uid="RisingV.Core.Extensions.EntityExtensions.GetStashes(Unity.Entities.Entity,System.Boolean)">
   GetStashes(Entity, bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Extensions/EntityExtensions.cs/#L369"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Extensions/EntityExtensions.cs/#L375"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets all stashes associated with an entity.</p>
@@ -610,7 +646,7 @@ Class EntityExtensions  <a class="header-action link-secondary" title="View sour
 
   <h3 id="RisingV_Core_Extensions_EntityExtensions_IsAllied_Unity_Entities_Entity_Unity_Entities_Entity_" data-uid="RisingV.Core.Extensions.EntityExtensions.IsAllied(Unity.Entities.Entity,Unity.Entities.Entity)">
   IsAllied(Entity, Entity)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Extensions/EntityExtensions.cs/#L119"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Extensions/EntityExtensions.cs/#L125"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Checks if an entity is allied with a player entity.</p>
@@ -652,7 +688,7 @@ Class EntityExtensions  <a class="header-action link-secondary" title="View sour
 
   <h3 id="RisingV_Core_Extensions_EntityExtensions_IsAspect__1_System_Object_" data-uid="RisingV.Core.Extensions.EntityExtensions.IsAspect``1(System.Object)">
   IsAspect&lt;TAspect&gt;(object)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Extensions/EntityExtensions.cs/#L346"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Extensions/EntityExtensions.cs/#L352"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Checks if an entity has a specific aspect type.</p>
@@ -697,7 +733,7 @@ Class EntityExtensions  <a class="header-action link-secondary" title="View sour
 
   <h3 id="RisingV_Core_Extensions_EntityExtensions_IsDifferentPlayer_Unity_Entities_Entity_Unity_Entities_Entity_" data-uid="RisingV.Core.Extensions.EntityExtensions.IsDifferentPlayer(Unity.Entities.Entity,Unity.Entities.Entity)">
   IsDifferentPlayer(Entity, Entity)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Extensions/EntityExtensions.cs/#L88"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Extensions/EntityExtensions.cs/#L94"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Checks if two entities are different players.</p>
@@ -739,7 +775,7 @@ Class EntityExtensions  <a class="header-action link-secondary" title="View sour
 
   <h3 id="RisingV_Core_Extensions_EntityExtensions_IsFollowingPlayer_Unity_Entities_Entity_" data-uid="RisingV.Core.Extensions.EntityExtensions.IsFollowingPlayer(Unity.Entities.Entity)">
   IsFollowingPlayer(Entity)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Extensions/EntityExtensions.cs/#L98"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Extensions/EntityExtensions.cs/#L104"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Checks if an entity is following a player.</p>
@@ -778,7 +814,7 @@ Class EntityExtensions  <a class="header-action link-secondary" title="View sour
 
   <h3 id="RisingV_Core_Extensions_EntityExtensions_IsGatherable_Unity_Entities_Entity_" data-uid="RisingV.Core.Extensions.EntityExtensions.IsGatherable(Unity.Entities.Entity)">
   IsGatherable(Entity)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Extensions/EntityExtensions.cs/#L223"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Extensions/EntityExtensions.cs/#L229"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Checks if an entity is a gatherable entity (e.g., resources, plants).</p>
@@ -815,9 +851,9 @@ Class EntityExtensions  <a class="header-action link-secondary" title="View sour
 
   <a id="RisingV_Core_Extensions_EntityExtensions_IsInBase_" data-uid="RisingV.Core.Extensions.EntityExtensions.IsInBase*"></a>
 
-  <h3 id="RisingV_Core_Extensions_EntityExtensions_IsInBase_Unity_Entities_Entity_Unity_Entities_Entity__RisingV_Shared_Data_TerritoryAlignment__System_Boolean_" data-uid="RisingV.Core.Extensions.EntityExtensions.IsInBase(Unity.Entities.Entity,Unity.Entities.Entity@,RisingV.Shared.Data.TerritoryAlignment@,System.Boolean)">
+  <h3 id="RisingV_Core_Extensions_EntityExtensions_IsInBase_Unity_Entities_Entity_Unity_Entities_Entity__RisingV_GameData_Data_TerritoryAlignment__System_Boolean_" data-uid="RisingV.Core.Extensions.EntityExtensions.IsInBase(Unity.Entities.Entity,Unity.Entities.Entity@,RisingV.GameData.Data.TerritoryAlignment@,System.Boolean)">
   IsInBase(Entity, out Entity, out TerritoryAlignment, bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Extensions/EntityExtensions.cs/#L132"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Extensions/EntityExtensions.cs/#L138"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Checks if an entity is within a castle territory and determines the alignment relationship.</p>
@@ -836,7 +872,7 @@ Class EntityExtensions  <a class="header-action link-secondary" title="View sour
     <dt><code>territory</code> <span class="xref">Entity</span></dt>
     <dd><p>The output territory entity if found</p>
 </dd>
-    <dt><code>territoryAlignment</code> <a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Data.TerritoryAlignment.html">TerritoryAlignment</a></dt>
+    <dt><code>territoryAlignment</code> <a class="xref" href="RisingV.GameData.Data.TerritoryAlignment.html">TerritoryAlignment</a></dt>
     <dd><p>The alignment relationship (Friendly, Enemy, or Neutral)</p>
 </dd>
     <dt><code>requireRoom</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
@@ -865,7 +901,7 @@ Class EntityExtensions  <a class="header-action link-secondary" title="View sour
 
   <h3 id="RisingV_Core_Extensions_EntityExtensions_IsMinion_Unity_Entities_Entity_" data-uid="RisingV.Core.Extensions.EntityExtensions.IsMinion(Unity.Entities.Entity)">
   IsMinion(Entity)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Extensions/EntityExtensions.cs/#L253"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Extensions/EntityExtensions.cs/#L259"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Checks if an entity is a minion entity (e.g., summoned creatures).</p>
@@ -904,7 +940,7 @@ Class EntityExtensions  <a class="header-action link-secondary" title="View sour
 
   <h3 id="RisingV_Core_Extensions_EntityExtensions_IsNpc_Unity_Entities_Entity_" data-uid="RisingV.Core.Extensions.EntityExtensions.IsNpc(Unity.Entities.Entity)">
   IsNpc(Entity)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Extensions/EntityExtensions.cs/#L243"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Extensions/EntityExtensions.cs/#L249"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Checks if an entity is a minion entity (e.g., summoned creatures).</p>
@@ -943,7 +979,7 @@ Class EntityExtensions  <a class="header-action link-secondary" title="View sour
 
   <h3 id="RisingV_Core_Extensions_EntityExtensions_IsPlayer_Unity_Entities_Entity_" data-uid="RisingV.Core.Extensions.EntityExtensions.IsPlayer(Unity.Entities.Entity)">
   IsPlayer(Entity)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Extensions/EntityExtensions.cs/#L203"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Extensions/EntityExtensions.cs/#L209"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Checks if an entity is a player entity.</p>
@@ -982,7 +1018,7 @@ Class EntityExtensions  <a class="header-action link-secondary" title="View sour
 
   <h3 id="RisingV_Core_Extensions_EntityExtensions_IsUnit_Unity_Entities_Entity_" data-uid="RisingV.Core.Extensions.EntityExtensions.IsUnit(Unity.Entities.Entity)">
   IsUnit(Entity)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Extensions/EntityExtensions.cs/#L213"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Extensions/EntityExtensions.cs/#L219"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Checks if an entity is a player character entity.</p>
@@ -1021,7 +1057,7 @@ Class EntityExtensions  <a class="header-action link-secondary" title="View sour
 
   <h3 id="RisingV_Core_Extensions_EntityExtensions_IsVBlood_Unity_Entities_Entity_" data-uid="RisingV.Core.Extensions.EntityExtensions.IsVBlood(Unity.Entities.Entity)">
   IsVBlood(Entity)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Extensions/EntityExtensions.cs/#L233"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Extensions/EntityExtensions.cs/#L239"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Checks if an entity is a VBlood entity (e.g., bosses, special enemies).</p>
@@ -1060,7 +1096,7 @@ Class EntityExtensions  <a class="header-action link-secondary" title="View sour
 
   <h3 id="RisingV_Core_Extensions_EntityExtensions_RemoveCustomComponentData__1_Unity_Entities_Entity_" data-uid="RisingV.Core.Extensions.EntityExtensions.RemoveCustomComponentData``1(Unity.Entities.Entity)">
   RemoveCustomComponentData&lt;TX&gt;(Entity)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Extensions/EntityExtensions.cs/#L507"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Extensions/EntityExtensions.cs/#L513"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Removes custom component data of type <code class="typeparamref">TX</code> from the entity.</p>
@@ -1105,7 +1141,7 @@ Class EntityExtensions  <a class="header-action link-secondary" title="View sour
 
   <h3 id="RisingV_Core_Extensions_EntityExtensions_TryAspect__1_Unity_Entities_Entity_System_Boolean_System_Object___" data-uid="RisingV.Core.Extensions.EntityExtensions.TryAspect``1(Unity.Entities.Entity,System.Boolean,System.Object[])">
   TryAspect&lt;TX&gt;(Entity, bool, params object?[]?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Extensions/EntityExtensions.cs/#L311"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Extensions/EntityExtensions.cs/#L317"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Attempts to create an aspect of type <code class="typeparamref">TX</code> for the given entity.</p>
@@ -1156,7 +1192,7 @@ Class EntityExtensions  <a class="header-action link-secondary" title="View sour
 
   <h3 id="RisingV_Core_Extensions_EntityExtensions_TryAspect__1_Unity_Entities_Entity___0__System_Boolean_System_Object___" data-uid="RisingV.Core.Extensions.EntityExtensions.TryAspect``1(Unity.Entities.Entity,``0@,System.Boolean,System.Object[])">
   TryAspect&lt;TX&gt;(Entity, out TX?, bool, params object?[]?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Extensions/EntityExtensions.cs/#L326"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Extensions/EntityExtensions.cs/#L332"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Attempts to create an aspect of type <code class="typeparamref">TX</code> for the given entity.</p>
@@ -1210,7 +1246,7 @@ Class EntityExtensions  <a class="header-action link-secondary" title="View sour
 
   <h3 id="RisingV_Core_Extensions_EntityExtensions_TryGetCustomComponentData__1_Unity_Entities_Entity___0__" data-uid="RisingV.Core.Extensions.EntityExtensions.TryGetCustomComponentData``1(Unity.Entities.Entity,``0@)">
   TryGetCustomComponentData&lt;TX&gt;(Entity, out TX?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Extensions/EntityExtensions.cs/#L448"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Extensions/EntityExtensions.cs/#L454"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Attempts to get custom component data of type <code class="typeparamref">TX</code> from the entity.</p>
@@ -1258,7 +1294,7 @@ Class EntityExtensions  <a class="header-action link-secondary" title="View sour
 
   <h3 id="RisingV_Core_Extensions_EntityExtensions_TryGetFloorEntityBelowEntity_Unity_Entities_Entity_Unity_Entities_Entity__" data-uid="RisingV.Core.Extensions.EntityExtensions.TryGetFloorEntityBelowEntity(Unity.Entities.Entity,Unity.Entities.Entity@)">
   TryGetFloorEntityBelowEntity(Entity, out Entity)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Extensions/EntityExtensions.cs/#L169"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Extensions/EntityExtensions.cs/#L175"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Attempts to find the floor entity directly below a given entity.</p>
@@ -1300,7 +1336,7 @@ Class EntityExtensions  <a class="header-action link-secondary" title="View sour
 
   <h3 id="RisingV_Core_Extensions_EntityExtensions_TryRemoveCustomComponentData__1_Unity_Entities_Entity___0__" data-uid="RisingV.Core.Extensions.EntityExtensions.TryRemoveCustomComponentData``1(Unity.Entities.Entity,``0@)">
   TryRemoveCustomComponentData&lt;TX&gt;(Entity, out TX?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Extensions/EntityExtensions.cs/#L526"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Extensions/EntityExtensions.cs/#L532"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Attempts to remove custom component data of type <code class="typeparamref">TX</code> from the entity.</p>
@@ -1348,7 +1384,7 @@ Class EntityExtensions  <a class="header-action link-secondary" title="View sour
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Extensions/EntityExtensions.cs/#L69" class="edit-link">Edit this page</a>
+          <a href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Extensions/EntityExtensions.cs/#L70" class="edit-link">Edit this page</a>
         </div>
 
 
