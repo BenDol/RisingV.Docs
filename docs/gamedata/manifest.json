@@ -42,6 +42,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.GameData.Data.BuffData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.GameData.Data.BuffData.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.GameData.Data.BuffData",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/RisingV.GameData.Data.TerritoryAlignment.yml",
       "output": {
         ".html": {
