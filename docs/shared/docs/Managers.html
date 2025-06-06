@@ -268,14 +268,11 @@ public sealed class WeaponManager
     }
 }
 </code></pre>
-<p>And from your plugin:</p>
-<pre><code class="lang-csharp">_weaponManager = new WeaponManager();
-_weaponManager.Initialize(this);
-_weaponManager.Load(this);
-_weaponManager.Ready(this);
+<p>And from your plugin <code>OnInitialize</code>:</p>
+<pre><code class="lang-csharp">var weaponManager = AddSharedComponent&lt;WeaponManager&gt;(this);
 </code></pre>
 <p>Hot‑reload support:</p>
-<pre><code class="lang-csharp">_weaponManager.Reload(this,
+<pre><code class="lang-csharp">weaponManager.Reload(this,
     new ReloadReason(&quot;Config changed&quot;, changes: fileChanges, isFull:false));
 </code></pre>
 <hr>
