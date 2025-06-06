@@ -91,11 +91,17 @@ It provides a set of APIs and utilities that make it easier to create and manage
 <p><em>Note:</em> This may not be the entire list—refer to the <a href="https://docs.risingv.dev/scripting/api/RisingV.Scripting.html">API docs</a> for every class, interface, and extension method that RisingV.Scripting provides.</p>
 </blockquote>
 <h2 id="installation">Installation</h2>
-<pre><code class="lang-bash">dotnet add package RisingV.Shared RisingV.Scripting 
+<ol>
+<li><strong>Dependency</strong> – ensure <a href="https://github.com/RisingV-Mods/RisingV.Shared">RisingV.Shared</a> is already installed.</li>
+<li>Download the latest release from <a href="https://github.com/RisingV-Mods/RisingV.Scripting/releases">Release</a></li>
+<li>Extract <code>RisingV.Scripting.&lt;version&gt;.zip</code> to your VRising <code>BepInEx</code> directory.</li>
+<li>Restart your dedicated server or client.</li>
+<li>The server or client will install the required DLLs upon first run, and then ask you to restart again.</li>
+</ol>
+<p>For development in your mod, install the following:</p>
+<pre><code class="lang-bash">dotnet add package RisingV.Shared
+dotnet add package RisingV.Scripting
 </code></pre>
-<blockquote>
-<p>Or drop the compiled <code>RisingV.Shared.dll</code>, <code>RisingV.Scripting.dll</code> into your BepInEx <code>/plugins/RisingV</code> folder.</p>
-</blockquote>
 <h2 id="getting-started">Getting started</h2>
 <pre><code class="lang-csharp">// Added to your plugin class
 [BepInDependency(&quot;RisingV.Scripting&quot;)]
