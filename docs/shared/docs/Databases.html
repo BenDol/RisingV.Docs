@@ -141,11 +141,26 @@ interfaces.</p>
 </blockquote>
 <hr>
 <h3 id="idataloadertkeytdata">IDataLoader&lt;TKey,TData&gt;</h3>
-<pre><code class="lang-csharp">public interface IDataLoader&lt;TKey,TData&gt;
+<pre><code class="lang-csharp">public interface IDataLoader&lt;TKey, TData&gt; : IDataLoader
+    where TData : IData
 {
-    TKey   ExtractKey(TData obj);
-    TData  Load(Stream stream);
-    void   Save(Stream stream, TData obj);
+    void Load&lt;TSource&gt;(TSource source, object? input) where TSource : IDataSource&lt;TKey, TData&gt;;
+}
+
+public interface IDataLoader&lt;TKey, TData, in TInput&gt; : IDataLoader&lt;TKey, TData&gt;
+    where TData : IData
+{
+    void Load&lt;TSource&gt;(TSource source, TInput input) where TSource : IDataSource&lt;TKey, TData&gt;;
+
+    void IDataLoader&lt;TKey, TData&gt;.Load&lt;TSource&gt;(TSource source, object? input)
+    {
+        Load(source, (TInput)input! ?? throw new InvalidOperationException());
+    }
+}
+
+public interface IDataStreamLoader&lt;TKey, TData&gt; : IDataLoader&lt;TKey, TData, Stream&gt;
+    where TData : IData
+{
 }
 </code></pre>
 <p><em>Examples</em> – <code>JsonDataLoader</code>, <code>MapDataLoader</code>, <code>BinaryDataLoader</code>.</p>
