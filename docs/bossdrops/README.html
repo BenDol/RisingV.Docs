@@ -91,9 +91,10 @@
 </blockquote>
 <h2 id="installation">Installation</h2>
 <ol>
-<li><strong>Dependency</strong> – ensure <a href="https://github.com/RisingV-Mods/RisingV.Shared">RisingV.Shared</a>, <a href="https://github.com/RisingV-Mods/RisingV.Core">RisingV.Core</a> are already present.</li>
-<li>Copy <code>RisingV.BossDrops.dll</code> to <code>BepInEx/plugins/RisingV</code>.</li>
-<li>(Optional) Copy <code>Bosses.json</code>, <code>ItemDropTemplates.json</code> to <code>BepInEx/configs/VRising.BossDrops/Databases</code> for the default loot configurations.</li>
+<li><strong>Dependency</strong> – ensure <a href="https://github.com/RisingV-Mods/RisingV.Shared">RisingV.Shared</a>, <a href="https://github.com/RisingV-Mods/RisingV.Core">RisingV.Core</a> are already installed.</li>
+<li>Downloaded the latest release from <a href="https://github.com/RisingV-Mods/RisingV.BossDrops/releases">Release</a></li>
+<li>Extract <code>RisingV.BossDrops.&lt;version&gt;.zip</code> to your VRising <code>BepInEx</code> directory.</li>
+<li>(Optional) Edit the <code>Bosses.json</code>, <code>ItemDropTemplates.json</code> inside <code>BepInEx/configs/VRising.BossDrops/Databases</code> for your desired loot drops/rates/amounts.</li>
 <li>Restart your dedicated server or client.</li>
 </ol>
 <h2 id="quick-start">Quick start</h2>
@@ -109,6 +110,37 @@
     │   ├── CustomItems.json
     │   └── ItemDropTemplates.json
     └── RisingV.BossDrops.cfg
+</code></pre>
+<p><strong>VBloodLootSystem.cfg</strong></p>
+<p>Configure boss drops inside <code>VBloodLootSystem.cfg</code>:</p>
+<pre><code class="lang-ini">[General]
+
+## Enable or disable the plugin
+# Setting type: Boolean
+# Default value: true
+Enabled = true
+
+## If true, loot drop rates will not be affected by the global drop rate settings.
+# Setting type: Boolean
+# Default value: false
+IgnoreGlobalDropRate = false
+
+[Scaling]
+
+## If true, loot drop rates will be scaled based on the equipment level of players involved in the boss fight.
+# Setting type: Boolean
+# Default value: true
+ScaleDropsByEquipmentLevel = true
+
+## Exponent to control the loot drop rate scaling based on player and boss levels. &lt;1 → mild squish, &gt;1 → stronger squish
+# Setting type: Single
+# Default value: 0.8
+DropChanceScalingExponent = 0.8
+
+## Exponent to control the stack amount drop rate scaling based on player and boss levels. &lt;1 → mild squish, &gt;1 → stronger squish
+# Setting type: Single
+# Default value: 1.7
+AmountChanceScalingExponent = 1.7
 </code></pre>
 <h2 id="documentation">Documentation</h2>
 <p>For a deeper dive, API reference, and design docs see <a href="https://docs.risingv.dev/bossdrops">https://docs.risingv.dev/bossdrops</a>.</p>
