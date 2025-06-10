@@ -686,6 +686,48 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Shared.Bootstrap.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Shared.Bootstrap.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Shared.Bootstrap",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Shared.BootstrapPlugin.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Shared.BootstrapPlugin.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Shared.BootstrapPlugin",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Shared.BootstrapPluginContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Shared.BootstrapPluginContext.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Shared.BootstrapPluginContext",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/RisingV.Shared.Caches.yml",
       "output": {
         ".html": {
@@ -938,20 +980,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/RisingV.Shared.Data.BuffData.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/RisingV.Shared.Data.BuffData.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "RisingV.Shared.Data.BuffData",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/RisingV.Shared.Data.IData.yml",
       "output": {
         ".html": {
@@ -1033,20 +1061,6 @@
       "IsMRef": true,
       "Title": "RisingV.Shared.Data.StatChangeData",
       "Summary": "<p sourcefile=\"api/RisingV.Shared.Data.StatChangeData.yml\" sourcestartlinenumber=\"1\">Represents data for a stat change event.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/RisingV.Shared.Data.TerritoryAlignment.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/RisingV.Shared.Data.TerritoryAlignment.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "RisingV.Shared.Data.TerritoryAlignment",
-      "Summary": "<p sourcefile=\"api/RisingV.Shared.Data.TerritoryAlignment.yml\" sourcestartlinenumber=\"1\">Represents the alignment of a territory in a game or simulation.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -2240,34 +2254,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/RisingV.Shared.EventBridge.PlayerBuffedEvent.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/RisingV.Shared.EventBridge.PlayerBuffedEvent.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "RisingV.Shared.EventBridge.PlayerBuffedEvent",
-      "Summary": "<p sourcefile=\"api/RisingV.Shared.EventBridge.PlayerBuffedEvent.yml\" sourcestartlinenumber=\"1\">Event triggered when a player has been successfully buffed.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/RisingV.Shared.EventBridge.PlayerBuffingEvent.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/RisingV.Shared.EventBridge.PlayerBuffingEvent.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "RisingV.Shared.EventBridge.PlayerBuffingEvent",
-      "Summary": "<p sourcefile=\"api/RisingV.Shared.EventBridge.PlayerBuffingEvent.yml\" sourcestartlinenumber=\"1\">Event triggered when a player is buffing another entity.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/RisingV.Shared.EventBridge.PlayerCompleteAchievementEvent.yml",
       "output": {
         ".html": {
@@ -2461,34 +2447,6 @@
       "IsMRef": true,
       "Title": "RisingV.Shared.EventBridge.StatChangedUnitEvent",
       "Summary": "<p sourcefile=\"api/RisingV.Shared.EventBridge.StatChangedUnitEvent.yml\" sourcestartlinenumber=\"1\">Event indicating that any entity stat has changed.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/RisingV.Shared.EventBridge.UnitBuffedEvent.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/RisingV.Shared.EventBridge.UnitBuffedEvent.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "RisingV.Shared.EventBridge.UnitBuffedEvent",
-      "Summary": "<p sourcefile=\"api/RisingV.Shared.EventBridge.UnitBuffedEvent.yml\" sourcestartlinenumber=\"1\">Event triggered after a unit has been successfully buffed.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/RisingV.Shared.EventBridge.UnitBuffingEvent.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/RisingV.Shared.EventBridge.UnitBuffingEvent.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "RisingV.Shared.EventBridge.UnitBuffingEvent",
-      "Summary": "<p sourcefile=\"api/RisingV.Shared.EventBridge.UnitBuffingEvent.yml\" sourcestartlinenumber=\"1\">Event triggered while a unit is being buffed.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -3934,6 +3892,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Shared.Plugins.PluginContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Shared.Plugins.PluginContext.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Shared.Plugins.PluginContext",
+      "Summary": "<p sourcefile=\"api/RisingV.Shared.Plugins.PluginContext.yml\" sourcestartlinenumber=\"1\">Represents the context for a plugin, providing access to plugin information, configuration, and Harmony instance.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/RisingV.Shared.Plugins.PluginInfo.yml",
       "output": {
         ".html": {
@@ -3990,6 +3962,34 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Shared.Plugins.RisingPluginBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Shared.Plugins.RisingPluginBase.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Shared.Plugins.RisingPluginBase",
+      "Summary": "<p>Base class for RisingV plugins.</p>\n<p>Example Usage:</p>\n<pre><code class=\"lang-csharp\">using BepInEx;\nusing RisingV.Shared.Plugins;\nusing RisingV.Shared.Engines;\nusing RisingV.Core.Engines;\n\npublic class MyCoolPluginConfig() : PluginConfig(MyPluginInfo.PLUGIN_GUID, MyPluginInfo.PLUGIN_GUID)\n{\n    public ConfigEntry&lt;float&gt; AttackModifier { get; set; } =\n        new(\"Gameplay\", \"AttackModifier\", 1f, \"Modifier for attack damage\");\n}\n\npublic class MyCoolPluginContext() : PluginContext(typeof(MyPluginInfo), new MyCoolPluginConfig());\n\n[BepInPlugin(MyPluginInfo.PLUGIN_GUID, MyPluginInfo.PLUGIN_NAME, MyPluginInfo.PLUGIN_VERSION)]\n[BepInDependency(\"gg.deca.VampireCommandFramework\")]\n[BepInDependency(\"RisingV.Core\")]\n[BepInDependency(\"RisingV.Scripting\")]\npublic class Plugin : RisingPlugin&lt;MyCoolPluginContext&gt;\n{\n    protected override void OnInitialize()\n    {\n        EngineManager.AddEngine&lt;ScriptingEngine&gt;(this);\n        EngineManager.AddEngine&lt;DamageEngine&gt;(this);\n        EngineManager.AddEngine&lt;DeathEngine&gt;(this);\n\n        // You can also register other systems, databases, or processors here\n    }\n\n    protected override void OnLoad()\n    {\n        // Plugin startup logic (pre-initialization)\n    }\n\n    protected override bool OnUnload()\n    {\n        return true;\n    }\n}</code></pre>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Shared.Plugins.RisingSharedPlugin-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Shared.Plugins.RisingSharedPlugin-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Shared.Plugins.RisingSharedPlugin<TContext>",
+      "Summary": "<p sourcefile=\"api/RisingV.Shared.Plugins.RisingSharedPlugin-1.yml\" sourcestartlinenumber=\"1\">Base class for shared RisingV plugins with a specific context.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/RisingV.Shared.Plugins.yml",
       "output": {
         ".html": {
@@ -4000,174 +4000,6 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "RisingV.Shared.Plugins",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/RisingV.Shared.Prefabs.Achievement.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/RisingV.Shared.Prefabs.Achievement.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "RisingV.Shared.Prefabs.Achievement",
-      "Summary": "<p sourcefile=\"api/RisingV.Shared.Prefabs.Achievement.yml\" sourcestartlinenumber=\"1\">Represents the achievement prefabGUID value, available in the game.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/RisingV.Shared.Prefabs.BloodType.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/RisingV.Shared.Prefabs.BloodType.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "RisingV.Shared.Prefabs.BloodType",
-      "Summary": "<p sourcefile=\"api/RisingV.Shared.Prefabs.BloodType.yml\" sourcestartlinenumber=\"1\">Represents the blood type prefabGUID value, available in the game.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/RisingV.Shared.Prefabs.Buff.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/RisingV.Shared.Prefabs.Buff.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "RisingV.Shared.Prefabs.Buff",
-      "Summary": "<p sourcefile=\"api/RisingV.Shared.Prefabs.Buff.yml\" sourcestartlinenumber=\"1\">Represents the buff prefabGUID value, available in the game.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/RisingV.Shared.Prefabs.Effect.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/RisingV.Shared.Prefabs.Effect.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "RisingV.Shared.Prefabs.Effect",
-      "Summary": "<p sourcefile=\"api/RisingV.Shared.Prefabs.Effect.yml\" sourcestartlinenumber=\"1\">Represents the effect prefabGUID value, available in the game.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/RisingV.Shared.Prefabs.EquipBuffs.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/RisingV.Shared.Prefabs.EquipBuffs.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "RisingV.Shared.Prefabs.EquipBuffs",
-      "Summary": "<p sourcefile=\"api/RisingV.Shared.Prefabs.EquipBuffs.yml\" sourcestartlinenumber=\"1\">Represents the equip buffs prefabGUID value, available in the game.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/RisingV.Shared.Prefabs.Faction.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/RisingV.Shared.Prefabs.Faction.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "RisingV.Shared.Prefabs.Faction",
-      "Summary": "<p sourcefile=\"api/RisingV.Shared.Prefabs.Faction.yml\" sourcestartlinenumber=\"1\">Represents the faction prefabGUID value, available in the game.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/RisingV.Shared.Prefabs.Item.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/RisingV.Shared.Prefabs.Item.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "RisingV.Shared.Prefabs.Item",
-      "Summary": "<p sourcefile=\"api/RisingV.Shared.Prefabs.Item.yml\" sourcestartlinenumber=\"1\">Represents the item prefabGUID value, available in the game.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/RisingV.Shared.Prefabs.Prefabs.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/RisingV.Shared.Prefabs.Prefabs.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "RisingV.Shared.Prefabs.Prefabs",
-      "Summary": "<p sourcefile=\"api/RisingV.Shared.Prefabs.Prefabs.yml\" sourcestartlinenumber=\"1\">Every prefabGuid value we have.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/RisingV.Shared.Prefabs.SetBonus.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/RisingV.Shared.Prefabs.SetBonus.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "RisingV.Shared.Prefabs.SetBonus",
-      "Summary": "<p sourcefile=\"api/RisingV.Shared.Prefabs.SetBonus.yml\" sourcestartlinenumber=\"1\">Represents the set bonus prefabGUID value, available in the game.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/RisingV.Shared.Prefabs.Unit.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/RisingV.Shared.Prefabs.Unit.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "RisingV.Shared.Prefabs.Unit",
-      "Summary": "<p sourcefile=\"api/RisingV.Shared.Prefabs.Unit.yml\" sourcestartlinenumber=\"1\">Represents the unit prefabGUID value, available in the game.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/RisingV.Shared.Prefabs.VBlood.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/RisingV.Shared.Prefabs.VBlood.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "RisingV.Shared.Prefabs.VBlood",
-      "Summary": "<p sourcefile=\"api/RisingV.Shared.Prefabs.VBlood.yml\" sourcestartlinenumber=\"1\">Represents the VBlood prefabGUID value, available in the game.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/RisingV.Shared.Prefabs.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/RisingV.Shared.Prefabs.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "RisingV.Shared.Prefabs",
       "Summary": null
     },
     {
@@ -4336,76 +4168,6 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "RisingV.Shared.SharedPluginConfig",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/RisingV.Shared.Strings.ItemStrings.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/RisingV.Shared.Strings.ItemStrings.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "RisingV.Shared.Strings.ItemStrings",
-      "Summary": "<p sourcefile=\"api/RisingV.Shared.Strings.ItemStrings.yml\" sourcestartlinenumber=\"1\">Provides methods to retrieve strings (like names, etc.) for items.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/RisingV.Shared.Strings.PrefabStrings.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/RisingV.Shared.Strings.PrefabStrings.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "RisingV.Shared.Strings.PrefabStrings",
-      "Summary": "<p sourcefile=\"api/RisingV.Shared.Strings.PrefabStrings.yml\" sourcestartlinenumber=\"1\">Provides methods to retrieve strings (like names, etc.) for prefabs using their GUIDs.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/RisingV.Shared.Strings.UnitStrings.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/RisingV.Shared.Strings.UnitStrings.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "RisingV.Shared.Strings.UnitStrings",
-      "Summary": "<p sourcefile=\"api/RisingV.Shared.Strings.UnitStrings.yml\" sourcestartlinenumber=\"1\">Provides a mapping of unit prefab GUIDs to their long and short names.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/RisingV.Shared.Strings.WorldStrings.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/RisingV.Shared.Strings.WorldStrings.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "RisingV.Shared.Strings.WorldStrings",
-      "Summary": "<p sourcefile=\"api/RisingV.Shared.Strings.WorldStrings.yml\" sourcestartlinenumber=\"1\">Provides string representations for world regions in the game.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/RisingV.Shared.Strings.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/RisingV.Shared.Strings.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "RisingV.Shared.Strings",
       "Summary": null
     },
     {

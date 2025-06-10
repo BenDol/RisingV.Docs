@@ -77,8 +77,8 @@
 <a href="https://github.com/RisingV-Mods/RisingV.Scripting/actions/workflows/docfx.yml"><img src="https://github.com/RisingV-Mods/RisingV.Scripting/actions/workflows/docfx.yml/badge.svg" alt="DocFX"></a></p>
 <p>Hot-reloadable C# scripting for live mod prototyping for <a href="https://risingv.dev">RisingV</a>.</p>
 <blockquote>
-<p><em>“<a href="https://github.com/RisingV-Mods/RisingV.Scripting">RisingV.Scripting</a> is a core mod for V Rising that allows you to use RisingV mods.<br>
-It provides a set of APIs and utilities that make it easier to create and manage mods for V Rising.”</em></p>
+<p><em>“<a href="https://github.com/RisingV-Mods/RisingV.Scripting">RisingV.Scripting</a> is a scripting mod for V Rising that allows you to write reloadable scripts in a sandboxed domain.<br>
+It only depends on RisingV.Shared so does not need to be run from a core plugin.”</em></p>
 </blockquote>
 <h2 id="features">Features</h2>
 <ul>
@@ -103,10 +103,34 @@ It provides a set of APIs and utilities that make it easier to create and manage
 dotnet add package RisingV.Scripting
 </code></pre>
 <h2 id="getting-started">Getting started</h2>
+<ol>
+<li><p>Add the <code>RisingV.Scripting</code> dependency to your plugin class to enable scripting support:</p>
 <pre><code class="lang-csharp">// Added to your plugin class
 [BepInDependency(&quot;RisingV.Scripting&quot;)]
 </code></pre>
-<p>Creating a new script is as simple as creating a new C# file in the <code>BepInEx/config/&lt;YOURMOD_GUID&gt;/Scripts</code> directory.</p>
+</li>
+<li><p>Add the <code>ScriptingEngine</code> to your plugin's <code>Initialize</code> method:</p>
+<pre><code class="lang-csharp">public override void OnInitialize()
+{
+    EngineManager.AddEngine&lt;ScripingEngine&gt;();
+}
+</code></pre>
+<p>or, if you aren't using the RisingPlugin base class you can add the engine directly:</p>
+<pre><code class="lang-csharp">[BepInPlugin(MyPluginInfo.PLUGIN_GUID, MyPluginInfo.PLUGIN_NAME, MyPluginInfo.PLUGIN_VERSION)]
+[BepInDependency(&quot;RisingV.Scripting&quot;)]
+public class Plugin : BasePlugin
+{
+    public override void Load()
+    {
+        Bootstrap.Load(p =&gt; {
+            var engineManager = Bootstrap.SharedComponents.Get&lt;EngineManager&gt;();
+            engineManager!.AddEngine&lt;ScriptingEngine&gt;(p);
+        });
+    }
+}
+</code></pre>
+</li>
+<li><p>Creating a new script is as simple as creating a new C# file in the <code>BepInEx/config/&lt;YOURMOD_GUID&gt;/Scripts</code> directory.</p>
 <pre><code class="lang-csharp">using RisingV.Scripting.Managers;
 using RisingV.Scripting.RuntimeHost;
 using RisingV.Shared.Logging;
@@ -153,6 +177,8 @@ public class SampleScript(IScriptContext&lt;ScriptData&gt; context) : Script(con
     }
 }
 </code></pre>
+</li>
+</ol>
 <p>The script will be automatically compiled and loaded by the Scripting Engine. Make sure the script is marked with <code>IReloadableScript</code> interface to enable hot-reloading.</p>
 <h2 id="configurations">Configurations</h2>
 <p>RisingV.Scripting uses the <code>RisingV.Shared.Config</code> base class for configuration management. This allows you to define your plugin's configuration in a type-safe manner, with support for hot-reloading and easy access to configuration values.</p>
