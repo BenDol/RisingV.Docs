@@ -3318,6 +3318,48 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Shared.Hooks.Internal.ClientBootstrapSystemHook.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Shared.Hooks.Internal.ClientBootstrapSystemHook.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Shared.Hooks.Internal.ClientBootstrapSystemHook",
+      "Summary": "<p sourcefile=\"api/RisingV.Shared.Hooks.Internal.ClientBootstrapSystemHook.yml\" sourcestartlinenumber=\"1\">ClientBootstrapSystemHook is a Harmony patch for the ClientBootstrapSystem.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Shared.Hooks.Internal.GameManagerHook.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Shared.Hooks.Internal.GameManagerHook.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Shared.Hooks.Internal.GameManagerHook",
+      "Summary": "<p sourcefile=\"api/RisingV.Shared.Hooks.Internal.GameManagerHook.yml\" sourcestartlinenumber=\"1\">GameManagerHook is responsible for hooking into the game data manager's update method</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Shared.Hooks.Internal.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Shared.Hooks.Internal.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Shared.Hooks.Internal",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/RisingV.Shared.LogTags.yml",
       "output": {
         ".html": {
@@ -3440,7 +3482,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "RisingV.Shared.Logging.Logger",
-      "Summary": "<p>Provides a logger implementation that integrates with BepInEx's logging system.</p>\n<br>\n<p>Logs level can be adjusted setting <xref href=\"RisingV.Shared.Logging.Logger.ListenedLogLevels\" data-throw-if-not-resolved=\"false\"></xref></p>\n<p>Logs can be filtered by log level and tags, allowing for flexible logging configurations.</p>\n<ul>\n  <li><xref href=\"RisingV.Shared.Logging.Logger.ActiveTags\" data-throw-if-not-resolved=\"false\"></xref> for assigning active tags to the logger.</li>\n  <li><xref href=\"RisingV.Shared.Logging.Logger.InactiveTags\" data-throw-if-not-resolved=\"false\"></xref> for assigning tags that should be suppressed in logs.</li>\n</ul>\n<pre><code class=\"lang-csharp\">private static readonly Logger logger = Logger.Create(typeof(MyPluginClass), LogTags.MyCustomTag);\n\nlogger.Debug(\"This is an debug message with {} argument.\", \"example\");\nlogger.Info(\"This is an info message with {} argument.\", \"example\");\nlogger.Warn(\"This is a warning message with {} argument.\", \"example\");\nlogger.Error(\"This is an error message with an exception.\", ex);\nlogger.Fatal(\"This is a fatal message with an exception.\", ex);</code></pre>\n"
+      "Summary": "<p>Provides a logger implementation that integrates with BepInEx's logging system.</p>\n<br>\n<p>Logs level can be adjusted setting <xref href=\"RisingV.Shared.Logging.Logger.ActiveLogLevels\" data-throw-if-not-resolved=\"false\"></xref></p>\n<p>Logs can be filtered by log level and tags, allowing for flexible logging configurations.</p>\n<ul>\n  <li><xref href=\"RisingV.Shared.Logging.Logger.ActiveTags\" data-throw-if-not-resolved=\"false\"></xref> for assigning active tags to the logger.</li>\n  <li><xref href=\"RisingV.Shared.Logging.Logger.InactiveTags\" data-throw-if-not-resolved=\"false\"></xref> for assigning tags that should be suppressed in logs.</li>\n</ul>\n<pre><code class=\"lang-csharp\">private static readonly Logger logger = Logger.Create(typeof(MyPluginClass), LogTags.MyCustomTag);\n\nlogger.Debug(\"This is an debug message with {} argument.\", \"example\");\nlogger.Info(\"This is an info message with {} argument.\", \"example\");\nlogger.Warn(\"This is a warning message with {} argument.\", \"example\");\nlogger.Error(\"This is an error message with an exception.\", ex);\nlogger.Fatal(\"This is a fatal message with an exception.\", ex);</code></pre>\n"
     },
     {
       "type": "ManagedReference",
