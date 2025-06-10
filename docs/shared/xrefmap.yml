@@ -17115,6 +17115,12 @@ references:
   isSpec: "True"
   fullName: RisingV.Shared.Plugin.Load
   nameWithType: Plugin.Load
+- uid: RisingV.Shared.Plugin.Log
+  name: Log
+  href: api/RisingV.Shared.Plugin.html#RisingV_Shared_Plugin_Log
+  commentId: F:RisingV.Shared.Plugin.Log
+  fullName: RisingV.Shared.Plugin.Log
+  nameWithType: Plugin.Log
 - uid: RisingV.Shared.Plugin.OnInitialized(RisingV.Shared.EventBridge.OnGameDataInitializedEvent)
   name: OnInitialized(OnGameDataInitializedEvent)
   href: api/RisingV.Shared.Plugin.html#RisingV_Shared_Plugin_OnInitialized_RisingV_Shared_EventBridge_OnGameDataInitializedEvent_
