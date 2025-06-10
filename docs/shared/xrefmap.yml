@@ -1017,6 +1017,15 @@ references:
   fullName.vb: RisingV.Shared.Bootstrap.Load(RisingV.Shared.Plugins.IPlugin)
   nameWithType: Bootstrap.Load(IPlugin?)
   nameWithType.vb: Bootstrap.Load(IPlugin)
+- uid: RisingV.Shared.Bootstrap.Load(System.Action{RisingV.Shared.Plugins.IPlugin})
+  name: Load(Action<IPlugin>)
+  href: api/RisingV.Shared.Bootstrap.html#RisingV_Shared_Bootstrap_Load_System_Action_RisingV_Shared_Plugins_IPlugin__
+  commentId: M:RisingV.Shared.Bootstrap.Load(System.Action{RisingV.Shared.Plugins.IPlugin})
+  name.vb: Load(Action(Of IPlugin))
+  fullName: RisingV.Shared.Bootstrap.Load(System.Action<RisingV.Shared.Plugins.IPlugin>)
+  fullName.vb: RisingV.Shared.Bootstrap.Load(System.Action(Of RisingV.Shared.Plugins.IPlugin))
+  nameWithType: Bootstrap.Load(Action<IPlugin>)
+  nameWithType.vb: Bootstrap.Load(Action(Of IPlugin))
 - uid: RisingV.Shared.Bootstrap.Load*
   name: Load
   href: api/RisingV.Shared.Bootstrap.html#RisingV_Shared_Bootstrap_Load_
