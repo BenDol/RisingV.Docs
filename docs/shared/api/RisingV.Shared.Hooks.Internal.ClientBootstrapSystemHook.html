@@ -2,11 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Class BootstrapPluginContext | RisingV.Shared </title>
+      <title>Class ClientBootstrapSystemHook | RisingV.Shared </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Class BootstrapPluginContext | RisingV.Shared ">
+      <meta name="title" content="Class ClientBootstrapSystemHook | RisingV.Shared ">
       
-      
+      <meta name="description" content="ClientBootstrapSystemHook is a Harmony patch for the ClientBootstrapSystem.">
       <link rel="icon" href="../assets/favicon/favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/RisingV-Mods/RisingV.Shared/new/main/apiSpec/new?filename=RisingV_Shared_BootstrapPluginContext.md&amp;value=---%0Auid%3A%20RisingV.Shared.BootstrapPluginContext%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/RisingV-Mods/RisingV.Shared/new/main/apiSpec/new?filename=RisingV_Shared_Hooks_Internal_ClientBootstrapSystemHook.md&amp;value=---%0Auid%3A%20RisingV.Shared.Hooks.Internal.ClientBootstrapSystemHook%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -84,24 +84,25 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="RisingV.Shared.BootstrapPluginContext">
+        <article data-uid="RisingV.Shared.Hooks.Internal.ClientBootstrapSystemHook">
 
 
 
-  <h1 id="RisingV_Shared_BootstrapPluginContext" data-uid="RisingV.Shared.BootstrapPluginContext" class="text-break">
-Class BootstrapPluginContext  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Bootstrap.cs/#L18"><i class="bi bi-code-slash"></i></a>
+  <h1 id="RisingV_Shared_Hooks_Internal_ClientBootstrapSystemHook" data-uid="RisingV.Shared.Hooks.Internal.ClientBootstrapSystemHook" class="text-break">
+Class ClientBootstrapSystemHook  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Hooks/Internal/ClientBootstrapSystemHook.cs/#L18"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
-    <dl><dt>Namespace</dt><dd><a class="xref" href="RisingV.html">RisingV</a>.<a class="xref" href="RisingV.Shared.html">Shared</a></dd></dl>
+    <dl><dt>Namespace</dt><dd><a class="xref" href="RisingV.html">RisingV</a>.<a class="xref" href="RisingV.Shared.html">Shared</a>.<a class="xref" href="RisingV.Shared.Hooks.html">Hooks</a>.<a class="xref" href="RisingV.Shared.Hooks.Internal.html">Internal</a></dd></dl>
   <dl><dt>Assembly</dt><dd>RisingV.Shared.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"></div>
+  <div class="markdown summary"><p>ClientBootstrapSystemHook is a Harmony patch for the ClientBootstrapSystem.</p>
+</div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class BootstrapPluginContext : PluginContext, IPluginContext, IPluginComponent, IManageable&lt;PluginComponentsManager&gt;, IManageable</code></pre>
+    <pre><code class="lang-csharp hljs">public class ClientBootstrapSystemHook</code></pre>
   </div>
 
 
@@ -111,37 +112,15 @@ Class BootstrapPluginContext  <a class="header-action link-secondary" title="Vie
     <dt>Inheritance</dt>
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
-      <div><a class="xref" href="RisingV.Shared.Plugins.PluginContext.html">PluginContext</a></div>
-      <div><span class="xref">BootstrapPluginContext</span></div>
+      <div><span class="xref">ClientBootstrapSystemHook</span></div>
     </dd>
   </dl>
 
-  <dl class="typelist implements">
-    <dt>Implements</dt>
-    <dd>
-      <div><a class="xref" href="RisingV.Shared.Plugins.IPluginContext.html">IPluginContext</a></div>
-      <div><a class="xref" href="RisingV.Shared.Plugins.IPluginComponent.html">IPluginComponent</a></div>
-      <div><a class="xref" href="RisingV.Shared.Managers.IManageable-1.html">IManageable</a>&lt;<a class="xref" href="RisingV.Shared.Plugins.PluginComponentsManager.html">PluginComponentsManager</a>&gt;</div>
-      <div><a class="xref" href="RisingV.Shared.Managers.IManageable.html">IManageable</a></div>
-    </dd>
-  </dl>
 
 
   <dl class="typelist inheritedMembers">
     <dt>Inherited Members</dt>
     <dd>
-    <div>
-      <a class="xref" href="RisingV.Shared.Plugins.PluginContext.html#RisingV_Shared_Plugins_PluginContext_PluginInfo">PluginContext.PluginInfo</a>
-    </div>
-    <div>
-      <a class="xref" href="RisingV.Shared.Plugins.PluginContext.html#RisingV_Shared_Plugins_PluginContext_PluginConfig">PluginContext.PluginConfig</a>
-    </div>
-    <div>
-      <a class="xref" href="RisingV.Shared.Plugins.PluginContext.html#RisingV_Shared_Plugins_PluginContext_Harmony">PluginContext.Harmony</a>
-    </div>
-    <div>
-      <a class="xref" href="RisingV.Shared.Plugins.PluginContext.html#RisingV_Shared_Plugins_PluginContext_PluginTarget">PluginContext.PluginTarget</a>
-    </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
     </div>
@@ -177,52 +156,11 @@ Class BootstrapPluginContext  <a class="header-action link-secondary" title="Vie
 
 
 
-  <h2 class="section" id="constructors">Constructors
-</h2>
-
-
-  <a id="RisingV_Shared_BootstrapPluginContext__ctor_" data-uid="RisingV.Shared.BootstrapPluginContext.#ctor*"></a>
-
-  <h3 id="RisingV_Shared_BootstrapPluginContext__ctor_System_String_System_String_System_String_System_String_" data-uid="RisingV.Shared.BootstrapPluginContext.#ctor(System.String,System.String,System.String,System.String)">
-  BootstrapPluginContext(string, string?, string?, string?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Bootstrap.cs/#L18"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public BootstrapPluginContext(string pluginGuid, string? pluginName = null, string? pluginVersion = null, string? configRelativePath = null)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>pluginGuid</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-    <dt><code>pluginName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-    <dt><code>pluginVersion</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-    <dt><code>configRelativePath</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Bootstrap.cs/#L18" class="edit-link">Edit this page</a>
+          <a href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Hooks/Internal/ClientBootstrapSystemHook.cs/#L18" class="edit-link">Edit this page</a>
         </div>
 
 

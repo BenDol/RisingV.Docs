@@ -99,7 +99,7 @@ Class Logger  <a class="header-action link-secondary" title="View source" href="
 
   <div class="markdown summary"><p>Provides a logger implementation that integrates with BepInEx's logging system.</p>
 <br>
-<p>Logs level can be adjusted setting <a class="xref" href="RisingV.Shared.Logging.Logger.html#RisingV_Shared_Logging_Logger_ListenedLogLevels">ListenedLogLevels</a></p>
+<p>Logs level can be adjusted setting <a class="xref" href="RisingV.Shared.Logging.Logger.html#RisingV_Shared_Logging_Logger_ActiveLogLevels">ActiveLogLevels</a></p>
 <p>Logs can be filtered by log level and tags, allowing for flexible logging configurations.</p>
 <ul>
   <li><a class="xref" href="RisingV.Shared.Logging.Logger.html#RisingV_Shared_Logging_Logger_ActiveTags">ActiveTags</a> for assigning active tags to the logger.</li>
@@ -351,7 +351,7 @@ logger.Fatal("This is a fatal message with an exception.", ex);</code></pre>
 
   <div class="markdown level1 summary"><p>Provides a logger implementation that integrates with BepInEx's logging system.</p>
 <br>
-<p>Logs level can be adjusted setting <a class="xref" href="RisingV.Shared.Logging.Logger.html#RisingV_Shared_Logging_Logger_ListenedLogLevels">ListenedLogLevels</a></p>
+<p>Logs level can be adjusted setting <a class="xref" href="RisingV.Shared.Logging.Logger.html#RisingV_Shared_Logging_Logger_ActiveLogLevels">ActiveLogLevels</a></p>
 <p>Logs can be filtered by log level and tags, allowing for flexible logging configurations.</p>
 <ul>
   <li><a class="xref" href="RisingV.Shared.Logging.Logger.html#RisingV_Shared_Logging_Logger_ActiveTags">ActiveTags</a> for assigning active tags to the logger.</li>
@@ -399,75 +399,11 @@ logger.Fatal("This is a fatal message with an exception.", ex);</code></pre>
 </h2>
 
 
-  <a id="RisingV_Shared_Logging_Logger_ActiveTags_" data-uid="RisingV.Shared.Logging.Logger.ActiveTags*"></a>
+  <a id="RisingV_Shared_Logging_Logger_ActiveLogLevels_" data-uid="RisingV.Shared.Logging.Logger.ActiveLogLevels*"></a>
 
-  <h3 id="RisingV_Shared_Logging_Logger_ActiveTags" data-uid="RisingV.Shared.Logging.Logger.ActiveTags">
-  ActiveTags
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Logging/Logger.cs/#L57"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Gets the active tags for this logger.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static List&lt;ILogTag&gt; ActiveTags { get; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="RisingV.Shared.Logging.ILogTag.html">ILogTag</a>&gt;</dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <a id="RisingV_Shared_Logging_Logger_InactiveTags_" data-uid="RisingV.Shared.Logging.Logger.InactiveTags*"></a>
-
-  <h3 id="RisingV_Shared_Logging_Logger_InactiveTags" data-uid="RisingV.Shared.Logging.Logger.InactiveTags">
-  InactiveTags
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Logging/Logger.cs/#L62"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Gets the inactive (suppressed) tags for this logger.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static List&lt;ILogTag&gt; InactiveTags { get; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="RisingV.Shared.Logging.ILogTag.html">ILogTag</a>&gt;</dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <a id="RisingV_Shared_Logging_Logger_ListenedLogLevels_" data-uid="RisingV.Shared.Logging.Logger.ListenedLogLevels*"></a>
-
-  <h3 id="RisingV_Shared_Logging_Logger_ListenedLogLevels" data-uid="RisingV.Shared.Logging.Logger.ListenedLogLevels">
-  ListenedLogLevels
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Logging/Logger.cs/#L52"><i class="bi bi-code-slash"></i></a>
+  <h3 id="RisingV_Shared_Logging_Logger_ActiveLogLevels" data-uid="RisingV.Shared.Logging.Logger.ActiveLogLevels">
+  ActiveLogLevels
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Logging/Logger.cs/#L50"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Our global logging defined listened log levels.</p>
@@ -475,7 +411,7 @@ logger.Fatal("This is a fatal message with an exception.", ex);</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static LogLevel ListenedLogLevels { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static LogLevel ActiveLogLevels { get; }</code></pre>
   </div>
 
 
@@ -495,11 +431,75 @@ logger.Fatal("This is a fatal message with an exception.", ex);</code></pre>
 
 
 
+  <a id="RisingV_Shared_Logging_Logger_ActiveTags_" data-uid="RisingV.Shared.Logging.Logger.ActiveTags*"></a>
+
+  <h3 id="RisingV_Shared_Logging_Logger_ActiveTags" data-uid="RisingV.Shared.Logging.Logger.ActiveTags">
+  ActiveTags
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Logging/Logger.cs/#L55"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the active tags for this logger.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static LogTag[] ActiveTags { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="RisingV.Shared.Logging.LogTag.html">LogTag</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="RisingV_Shared_Logging_Logger_InactiveTags_" data-uid="RisingV.Shared.Logging.Logger.InactiveTags*"></a>
+
+  <h3 id="RisingV_Shared_Logging_Logger_InactiveTags" data-uid="RisingV.Shared.Logging.Logger.InactiveTags">
+  InactiveTags
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Logging/Logger.cs/#L60"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the inactive (suppressed) tags for this logger.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static LogTag[] InactiveTags { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="RisingV.Shared.Logging.LogTag.html">LogTag</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="RisingV_Shared_Logging_Logger_PluginName_" data-uid="RisingV.Shared.Logging.Logger.PluginName*"></a>
 
   <h3 id="RisingV_Shared_Logging_Logger_PluginName" data-uid="RisingV.Shared.Logging.Logger.PluginName">
   PluginName
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Logging/Logger.cs/#L69"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Logging/Logger.cs/#L65"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Plugin name for which this logger is created.</p>
@@ -535,7 +535,7 @@ logger.Fatal("This is a fatal message with an exception.", ex);</code></pre>
 
   <h3 id="RisingV_Shared_Logging_Logger_Create_System_String_RisingV_Shared_Logging_ILogTag___" data-uid="RisingV.Shared.Logging.Logger.Create(System.String,RisingV.Shared.Logging.ILogTag[])">
   Create(string, params ILogTag[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Logging/Logger.cs/#L306"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Logging/Logger.cs/#L302"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates a new logger instance with the specified logging name and optional auto tags.</p>
@@ -577,7 +577,7 @@ logger.Fatal("This is a fatal message with an exception.", ex);</code></pre>
 
   <h3 id="RisingV_Shared_Logging_Logger_Create_System_Type_RisingV_Shared_Logging_ILogTag___" data-uid="RisingV.Shared.Logging.Logger.Create(System.Type,RisingV.Shared.Logging.ILogTag[])">
   Create(Type, params ILogTag[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Logging/Logger.cs/#L209"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Logging/Logger.cs/#L205"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates a new logger instance for the specified type, automatically determining the plugin name</p>
@@ -619,7 +619,7 @@ logger.Fatal("This is a fatal message with an exception.", ex);</code></pre>
 
   <h3 id="RisingV_Shared_Logging_Logger_Create__1_RisingV_Shared_Logging_ILogTag___" data-uid="RisingV.Shared.Logging.Logger.Create``1(RisingV.Shared.Logging.ILogTag[])">
   Create&lt;T&gt;(params ILogTag[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Logging/Logger.cs/#L197"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Logging/Logger.cs/#L193"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates a new logger instance for the specified type, automatically determining the plugin name</p>
@@ -663,7 +663,7 @@ logger.Fatal("This is a fatal message with an exception.", ex);</code></pre>
 
   <h3 id="RisingV_Shared_Logging_Logger_Enable_System_Boolean_" data-uid="RisingV.Shared.Logging.Logger.Enable(System.Boolean)">
   Enable(bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Logging/Logger.cs/#L76"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Logging/Logger.cs/#L72"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Sets whether this logger is enabled or disabled.</p>
@@ -696,7 +696,7 @@ logger.Fatal("This is a fatal message with an exception.", ex);</code></pre>
 
   <h3 id="RisingV_Shared_Logging_Logger_FindCallerStackFrame_System_Diagnostics_StackTrace_System_Int32_" data-uid="RisingV.Shared.Logging.Logger.FindCallerStackFrame(System.Diagnostics.StackTrace,System.Int32)">
   FindCallerStackFrame(StackTrace, int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Logging/Logger.cs/#L167"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Logging/Logger.cs/#L163"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Finds the caller stack frame in the current stack trace, skipping a specified number of frames.</p>
@@ -738,7 +738,7 @@ logger.Fatal("This is a fatal message with an exception.", ex);</code></pre>
 
   <h3 id="RisingV_Shared_Logging_Logger_GetBepLogLevel_System_Int32_" data-uid="RisingV.Shared.Logging.Logger.GetBepLogLevel(System.Int32)">
   GetBepLogLevel(int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Logging/Logger.cs/#L83"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Logging/Logger.cs/#L79"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Get the BepInEx log level from an integer value.</p>
@@ -777,7 +777,7 @@ logger.Fatal("This is a fatal message with an exception.", ex);</code></pre>
 
   <h3 id="RisingV_Shared_Logging_Logger_IsEnabled_System_Int32_RisingV_Shared_Logging_ILogTag_" data-uid="RisingV.Shared.Logging.Logger.IsEnabled(System.Int32,RisingV.Shared.Logging.ILogTag)">
   IsEnabled(int, ILogTag?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Logging/Logger.cs/#L317"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Logging/Logger.cs/#L313"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Checks if the logger is enabled for the specified log level and category.</p>
@@ -819,7 +819,7 @@ logger.Fatal("This is a fatal message with an exception.", ex);</code></pre>
 
   <h3 id="RisingV_Shared_Logging_Logger_Log_RisingV_Shared_Logging_LogLevel_System_String_System_Int32_System_Object___" data-uid="RisingV.Shared.Logging.Logger.Log(RisingV.Shared.Logging.LogLevel,System.String,System.Int32,System.Object[])">
   Log(LogLevel, string, int, params object[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Logging/Logger.cs/#L101"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Logging/Logger.cs/#L97"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Logs a message with the specified log level, message, and optional arguments.</p>
@@ -862,7 +862,7 @@ and stack trace will be included.</p>
 
   <h3 id="RisingV_Shared_Logging_Logger_Log_System_Int32_System_String_System_Int32_System_Object___" data-uid="RisingV.Shared.Logging.Logger.Log(System.Int32,System.String,System.Int32,System.Object[])">
   Log(int, string, int, params object[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Logging/Logger.cs/#L114"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Logging/Logger.cs/#L110"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Logs a message with the specified log level value, message, and optional arguments.</p>

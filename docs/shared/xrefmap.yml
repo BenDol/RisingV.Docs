@@ -1017,15 +1017,15 @@ references:
   fullName.vb: RisingV.Shared.Bootstrap.Load(RisingV.Shared.Plugins.IPlugin)
   nameWithType: Bootstrap.Load(IPlugin?)
   nameWithType.vb: Bootstrap.Load(IPlugin)
-- uid: RisingV.Shared.Bootstrap.Load(System.Action{RisingV.Shared.Plugins.IPlugin})
-  name: Load(Action<IPlugin>)
-  href: api/RisingV.Shared.Bootstrap.html#RisingV_Shared_Bootstrap_Load_System_Action_RisingV_Shared_Plugins_IPlugin__
-  commentId: M:RisingV.Shared.Bootstrap.Load(System.Action{RisingV.Shared.Plugins.IPlugin})
-  name.vb: Load(Action(Of IPlugin))
-  fullName: RisingV.Shared.Bootstrap.Load(System.Action<RisingV.Shared.Plugins.IPlugin>)
-  fullName.vb: RisingV.Shared.Bootstrap.Load(System.Action(Of RisingV.Shared.Plugins.IPlugin))
-  nameWithType: Bootstrap.Load(Action<IPlugin>)
-  nameWithType.vb: Bootstrap.Load(Action(Of IPlugin))
+- uid: RisingV.Shared.Bootstrap.Load(System.String,System.String,System.String,System.Action{RisingV.Shared.Plugins.IPlugin})
+  name: Load(string, string, string, Action<IPlugin>)
+  href: api/RisingV.Shared.Bootstrap.html#RisingV_Shared_Bootstrap_Load_System_String_System_String_System_String_System_Action_RisingV_Shared_Plugins_IPlugin__
+  commentId: M:RisingV.Shared.Bootstrap.Load(System.String,System.String,System.String,System.Action{RisingV.Shared.Plugins.IPlugin})
+  name.vb: Load(String, String, String, Action(Of IPlugin))
+  fullName: RisingV.Shared.Bootstrap.Load(string, string, string, System.Action<RisingV.Shared.Plugins.IPlugin>)
+  fullName.vb: RisingV.Shared.Bootstrap.Load(String, String, String, System.Action(Of RisingV.Shared.Plugins.IPlugin))
+  nameWithType: Bootstrap.Load(string, string, string, Action<IPlugin>)
+  nameWithType.vb: Bootstrap.Load(String, String, String, Action(Of IPlugin))
 - uid: RisingV.Shared.Bootstrap.Load*
   name: Load
   href: api/RisingV.Shared.Bootstrap.html#RisingV_Shared_Bootstrap_Load_
@@ -1111,6 +1111,19 @@ references:
   isSpec: "True"
   fullName: RisingV.Shared.Bootstrap.PluginManager
   nameWithType: Bootstrap.PluginManager
+- uid: RisingV.Shared.Bootstrap.ProxyPlugins
+  name: ProxyPlugins
+  href: api/RisingV.Shared.Bootstrap.html#RisingV_Shared_Bootstrap_ProxyPlugins
+  commentId: P:RisingV.Shared.Bootstrap.ProxyPlugins
+  fullName: RisingV.Shared.Bootstrap.ProxyPlugins
+  nameWithType: Bootstrap.ProxyPlugins
+- uid: RisingV.Shared.Bootstrap.ProxyPlugins*
+  name: ProxyPlugins
+  href: api/RisingV.Shared.Bootstrap.html#RisingV_Shared_Bootstrap_ProxyPlugins_
+  commentId: Overload:RisingV.Shared.Bootstrap.ProxyPlugins
+  isSpec: "True"
+  fullName: RisingV.Shared.Bootstrap.ProxyPlugins
+  nameWithType: Bootstrap.ProxyPlugins
 - uid: RisingV.Shared.Bootstrap.Reload(RisingV.Shared.Plugins.IPlugin)
   name: Reload(IPlugin?)
   href: api/RisingV.Shared.Bootstrap.html#RisingV_Shared_Bootstrap_Reload_RisingV_Shared_Plugins_IPlugin_
@@ -1162,21 +1175,40 @@ references:
   commentId: T:RisingV.Shared.BootstrapPlugin
   fullName: RisingV.Shared.BootstrapPlugin
   nameWithType: BootstrapPlugin
+- uid: RisingV.Shared.BootstrapPlugin.#ctor(System.String,System.String,System.String,System.String)
+  name: BootstrapPlugin(string, string?, string?, string?)
+  href: api/RisingV.Shared.BootstrapPlugin.html#RisingV_Shared_BootstrapPlugin__ctor_System_String_System_String_System_String_System_String_
+  commentId: M:RisingV.Shared.BootstrapPlugin.#ctor(System.String,System.String,System.String,System.String)
+  name.vb: New(String, String, String, String)
+  fullName: RisingV.Shared.BootstrapPlugin.BootstrapPlugin(string, string?, string?, string?)
+  fullName.vb: RisingV.Shared.BootstrapPlugin.New(String, String, String, String)
+  nameWithType: BootstrapPlugin.BootstrapPlugin(string, string?, string?, string?)
+  nameWithType.vb: BootstrapPlugin.New(String, String, String, String)
+- uid: RisingV.Shared.BootstrapPlugin.#ctor*
+  name: BootstrapPlugin
+  href: api/RisingV.Shared.BootstrapPlugin.html#RisingV_Shared_BootstrapPlugin__ctor_
+  commentId: Overload:RisingV.Shared.BootstrapPlugin.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: RisingV.Shared.BootstrapPlugin.BootstrapPlugin
+  fullName.vb: RisingV.Shared.BootstrapPlugin.New
+  nameWithType: BootstrapPlugin.BootstrapPlugin
+  nameWithType.vb: BootstrapPlugin.New
 - uid: RisingV.Shared.BootstrapPluginContext
   name: BootstrapPluginContext
   href: api/RisingV.Shared.BootstrapPluginContext.html
   commentId: T:RisingV.Shared.BootstrapPluginContext
   fullName: RisingV.Shared.BootstrapPluginContext
   nameWithType: BootstrapPluginContext
-- uid: RisingV.Shared.BootstrapPluginContext.#ctor
-  name: BootstrapPluginContext()
-  href: api/RisingV.Shared.BootstrapPluginContext.html#RisingV_Shared_BootstrapPluginContext__ctor
-  commentId: M:RisingV.Shared.BootstrapPluginContext.#ctor
-  name.vb: New()
-  fullName: RisingV.Shared.BootstrapPluginContext.BootstrapPluginContext()
-  fullName.vb: RisingV.Shared.BootstrapPluginContext.New()
-  nameWithType: BootstrapPluginContext.BootstrapPluginContext()
-  nameWithType.vb: BootstrapPluginContext.New()
+- uid: RisingV.Shared.BootstrapPluginContext.#ctor(System.String,System.String,System.String,System.String)
+  name: BootstrapPluginContext(string, string?, string?, string?)
+  href: api/RisingV.Shared.BootstrapPluginContext.html#RisingV_Shared_BootstrapPluginContext__ctor_System_String_System_String_System_String_System_String_
+  commentId: M:RisingV.Shared.BootstrapPluginContext.#ctor(System.String,System.String,System.String,System.String)
+  name.vb: New(String, String, String, String)
+  fullName: RisingV.Shared.BootstrapPluginContext.BootstrapPluginContext(string, string?, string?, string?)
+  fullName.vb: RisingV.Shared.BootstrapPluginContext.New(String, String, String, String)
+  nameWithType: BootstrapPluginContext.BootstrapPluginContext(string, string?, string?, string?)
+  nameWithType.vb: BootstrapPluginContext.New(String, String, String, String)
 - uid: RisingV.Shared.BootstrapPluginContext.#ctor*
   name: BootstrapPluginContext
   href: api/RisingV.Shared.BootstrapPluginContext.html#RisingV_Shared_BootstrapPluginContext__ctor_
@@ -2484,13 +2516,13 @@ references:
   fullName: RisingV.Shared.Config.BaseConfig
   nameWithType: BaseConfig
 - uid: RisingV.Shared.Config.BaseConfig.#ctor(System.String,System.String)
-  name: BaseConfig(string, string?)
+  name: BaseConfig(string?, string?)
   href: api/RisingV.Shared.Config.BaseConfig.html#RisingV_Shared_Config_BaseConfig__ctor_System_String_System_String_
   commentId: M:RisingV.Shared.Config.BaseConfig.#ctor(System.String,System.String)
   name.vb: New(String, String)
-  fullName: RisingV.Shared.Config.BaseConfig.BaseConfig(string, string?)
+  fullName: RisingV.Shared.Config.BaseConfig.BaseConfig(string?, string?)
   fullName.vb: RisingV.Shared.Config.BaseConfig.New(String, String)
-  nameWithType: BaseConfig.BaseConfig(string, string?)
+  nameWithType: BaseConfig.BaseConfig(string?, string?)
   nameWithType.vb: BaseConfig.New(String, String)
 - uid: RisingV.Shared.Config.BaseConfig.#ctor*
   name: BaseConfig
@@ -12787,6 +12819,24 @@ references:
   commentId: T:RisingV.Shared.GameFrameUpdateEventHandler
   fullName: RisingV.Shared.GameFrameUpdateEventHandler
   nameWithType: GameFrameUpdateEventHandler
+- uid: RisingV.Shared.Hooks.Internal
+  name: RisingV.Shared.Hooks.Internal
+  href: api/RisingV.Shared.Hooks.Internal.html
+  commentId: N:RisingV.Shared.Hooks.Internal
+  fullName: RisingV.Shared.Hooks.Internal
+  nameWithType: RisingV.Shared.Hooks.Internal
+- uid: RisingV.Shared.Hooks.Internal.ClientBootstrapSystemHook
+  name: ClientBootstrapSystemHook
+  href: api/RisingV.Shared.Hooks.Internal.ClientBootstrapSystemHook.html
+  commentId: T:RisingV.Shared.Hooks.Internal.ClientBootstrapSystemHook
+  fullName: RisingV.Shared.Hooks.Internal.ClientBootstrapSystemHook
+  nameWithType: ClientBootstrapSystemHook
+- uid: RisingV.Shared.Hooks.Internal.GameManagerHook
+  name: GameManagerHook
+  href: api/RisingV.Shared.Hooks.Internal.GameManagerHook.html
+  commentId: T:RisingV.Shared.Hooks.Internal.GameManagerHook
+  fullName: RisingV.Shared.Hooks.Internal.GameManagerHook
+  nameWithType: GameManagerHook
 - uid: RisingV.Shared.LogTags
   name: LogTags
   href: api/RisingV.Shared.LogTags.html
@@ -13455,6 +13505,15 @@ references:
   commentId: T:RisingV.Shared.Logging.LogTag
   fullName: RisingV.Shared.Logging.LogTag
   nameWithType: LogTag
+- uid: RisingV.Shared.Logging.LogTag.#ctor(System.String)
+  name: LogTag(string)
+  href: api/RisingV.Shared.Logging.LogTag.html#RisingV_Shared_Logging_LogTag__ctor_System_String_
+  commentId: M:RisingV.Shared.Logging.LogTag.#ctor(System.String)
+  name.vb: New(String)
+  fullName: RisingV.Shared.Logging.LogTag.LogTag(string)
+  fullName.vb: RisingV.Shared.Logging.LogTag.New(String)
+  nameWithType: LogTag.LogTag(string)
+  nameWithType.vb: LogTag.New(String)
 - uid: RisingV.Shared.Logging.LogTag.#ctor(System.String,RisingV.Shared.Logging.ILogTag,System.String)
   name: LogTag(string, ILogTag, string)
   href: api/RisingV.Shared.Logging.LogTag.html#RisingV_Shared_Logging_LogTag__ctor_System_String_RisingV_Shared_Logging_ILogTag_System_String_
@@ -14039,6 +14098,19 @@ references:
   fullName.vb: RisingV.Shared.Logging.Logger.New
   nameWithType: Logger.Logger
   nameWithType.vb: Logger.New
+- uid: RisingV.Shared.Logging.Logger.ActiveLogLevels
+  name: ActiveLogLevels
+  href: api/RisingV.Shared.Logging.Logger.html#RisingV_Shared_Logging_Logger_ActiveLogLevels
+  commentId: P:RisingV.Shared.Logging.Logger.ActiveLogLevels
+  fullName: RisingV.Shared.Logging.Logger.ActiveLogLevels
+  nameWithType: Logger.ActiveLogLevels
+- uid: RisingV.Shared.Logging.Logger.ActiveLogLevels*
+  name: ActiveLogLevels
+  href: api/RisingV.Shared.Logging.Logger.html#RisingV_Shared_Logging_Logger_ActiveLogLevels_
+  commentId: Overload:RisingV.Shared.Logging.Logger.ActiveLogLevels
+  isSpec: "True"
+  fullName: RisingV.Shared.Logging.Logger.ActiveLogLevels
+  nameWithType: Logger.ActiveLogLevels
 - uid: RisingV.Shared.Logging.Logger.ActiveTags
   name: ActiveTags
   href: api/RisingV.Shared.Logging.Logger.html#RisingV_Shared_Logging_Logger_ActiveTags
@@ -14163,19 +14235,6 @@ references:
   isSpec: "True"
   fullName: RisingV.Shared.Logging.Logger.IsEnabled
   nameWithType: Logger.IsEnabled
-- uid: RisingV.Shared.Logging.Logger.ListenedLogLevels
-  name: ListenedLogLevels
-  href: api/RisingV.Shared.Logging.Logger.html#RisingV_Shared_Logging_Logger_ListenedLogLevels
-  commentId: P:RisingV.Shared.Logging.Logger.ListenedLogLevels
-  fullName: RisingV.Shared.Logging.Logger.ListenedLogLevels
-  nameWithType: Logger.ListenedLogLevels
-- uid: RisingV.Shared.Logging.Logger.ListenedLogLevels*
-  name: ListenedLogLevels
-  href: api/RisingV.Shared.Logging.Logger.html#RisingV_Shared_Logging_Logger_ListenedLogLevels_
-  commentId: Overload:RisingV.Shared.Logging.Logger.ListenedLogLevels
-  isSpec: "True"
-  fullName: RisingV.Shared.Logging.Logger.ListenedLogLevels
-  nameWithType: Logger.ListenedLogLevels
 - uid: RisingV.Shared.Logging.Logger.Log(RisingV.Shared.Logging.LogLevel,System.String,System.Int32,System.Object[])
   name: Log(LogLevel, string, int, params object[])
   href: api/RisingV.Shared.Logging.Logger.html#RisingV_Shared_Logging_Logger_Log_RisingV_Shared_Logging_LogLevel_System_String_System_Int32_System_Object___
@@ -14537,12 +14596,15 @@ references:
   isSpec: "True"
   fullName: RisingV.Shared.Managers.IManager.Count
   nameWithType: IManager.Count
-- uid: RisingV.Shared.Managers.IManager.GetDependentPlugins(System.Type)
-  name: GetDependentPlugins(Type)
-  href: api/RisingV.Shared.Managers.IManager.html#RisingV_Shared_Managers_IManager_GetDependentPlugins_System_Type_
-  commentId: M:RisingV.Shared.Managers.IManager.GetDependentPlugins(System.Type)
-  fullName: RisingV.Shared.Managers.IManager.GetDependentPlugins(System.Type)
-  nameWithType: IManager.GetDependentPlugins(Type)
+- uid: RisingV.Shared.Managers.IManager.GetDependentPlugins(System.Type,RisingV.Shared.Plugins.IPlugin[])
+  name: GetDependentPlugins(Type, params IPlugin[]?)
+  href: api/RisingV.Shared.Managers.IManager.html#RisingV_Shared_Managers_IManager_GetDependentPlugins_System_Type_RisingV_Shared_Plugins_IPlugin___
+  commentId: M:RisingV.Shared.Managers.IManager.GetDependentPlugins(System.Type,RisingV.Shared.Plugins.IPlugin[])
+  name.vb: GetDependentPlugins(Type, ParamArray IPlugin())
+  fullName: RisingV.Shared.Managers.IManager.GetDependentPlugins(System.Type, params RisingV.Shared.Plugins.IPlugin[]?)
+  fullName.vb: RisingV.Shared.Managers.IManager.GetDependentPlugins(System.Type, ParamArray RisingV.Shared.Plugins.IPlugin())
+  nameWithType: IManager.GetDependentPlugins(Type, params IPlugin[]?)
+  nameWithType.vb: IManager.GetDependentPlugins(Type, ParamArray IPlugin())
 - uid: RisingV.Shared.Managers.IManager.GetDependentPlugins*
   name: GetDependentPlugins
   href: api/RisingV.Shared.Managers.IManager.html#RisingV_Shared_Managers_IManager_GetDependentPlugins_
@@ -14930,15 +14992,15 @@ references:
   fullName.vb: RisingV.Shared.Managers.IManager(Of T, TM).GetDependentPlugins
   nameWithType: IManager<T, TM>.GetDependentPlugins
   nameWithType.vb: IManager(Of T, TM).GetDependentPlugins
-- uid: RisingV.Shared.Managers.IManager`2.GetDependentPlugins``1
-  name: GetDependentPlugins<TX>()
-  href: api/RisingV.Shared.Managers.IManager-2.html#RisingV_Shared_Managers_IManager_2_GetDependentPlugins__1
-  commentId: M:RisingV.Shared.Managers.IManager`2.GetDependentPlugins``1
-  name.vb: GetDependentPlugins(Of TX)()
-  fullName: RisingV.Shared.Managers.IManager<T, TM>.GetDependentPlugins<TX>()
-  fullName.vb: RisingV.Shared.Managers.IManager(Of T, TM).GetDependentPlugins(Of TX)()
-  nameWithType: IManager<T, TM>.GetDependentPlugins<TX>()
-  nameWithType.vb: IManager(Of T, TM).GetDependentPlugins(Of TX)()
+- uid: RisingV.Shared.Managers.IManager`2.GetDependentPlugins``1(RisingV.Shared.Plugins.IPlugin[])
+  name: GetDependentPlugins<TX>(params IPlugin[]?)
+  href: api/RisingV.Shared.Managers.IManager-2.html#RisingV_Shared_Managers_IManager_2_GetDependentPlugins__1_RisingV_Shared_Plugins_IPlugin___
+  commentId: M:RisingV.Shared.Managers.IManager`2.GetDependentPlugins``1(RisingV.Shared.Plugins.IPlugin[])
+  name.vb: GetDependentPlugins(Of TX)(ParamArray IPlugin())
+  fullName: RisingV.Shared.Managers.IManager<T, TM>.GetDependentPlugins<TX>(params RisingV.Shared.Plugins.IPlugin[]?)
+  fullName.vb: RisingV.Shared.Managers.IManager(Of T, TM).GetDependentPlugins(Of TX)(ParamArray RisingV.Shared.Plugins.IPlugin())
+  nameWithType: IManager<T, TM>.GetDependentPlugins<TX>(params IPlugin[]?)
+  nameWithType.vb: IManager(Of T, TM).GetDependentPlugins(Of TX)(ParamArray IPlugin())
 - uid: RisingV.Shared.Managers.IManager`2.GetList
   name: GetList()
   href: api/RisingV.Shared.Managers.IManager-2.html#RisingV_Shared_Managers_IManager_2_GetList
@@ -15650,22 +15712,24 @@ references:
   fullName.vb: RisingV.Shared.Managers.ManagerBase(Of T, TM).Get
   nameWithType: ManagerBase<T, TM>.Get
   nameWithType.vb: ManagerBase(Of T, TM).Get
-- uid: RisingV.Shared.Managers.ManagerBase`2.GetDependentPlugins
-  name: GetDependentPlugins()
-  href: api/RisingV.Shared.Managers.ManagerBase-2.html#RisingV_Shared_Managers_ManagerBase_2_GetDependentPlugins
-  commentId: M:RisingV.Shared.Managers.ManagerBase`2.GetDependentPlugins
-  fullName: RisingV.Shared.Managers.ManagerBase<T, TM>.GetDependentPlugins()
-  fullName.vb: RisingV.Shared.Managers.ManagerBase(Of T, TM).GetDependentPlugins()
-  nameWithType: ManagerBase<T, TM>.GetDependentPlugins()
-  nameWithType.vb: ManagerBase(Of T, TM).GetDependentPlugins()
-- uid: RisingV.Shared.Managers.ManagerBase`2.GetDependentPlugins(System.Type)
-  name: GetDependentPlugins(Type)
-  href: api/RisingV.Shared.Managers.ManagerBase-2.html#RisingV_Shared_Managers_ManagerBase_2_GetDependentPlugins_System_Type_
-  commentId: M:RisingV.Shared.Managers.ManagerBase`2.GetDependentPlugins(System.Type)
-  fullName: RisingV.Shared.Managers.ManagerBase<T, TM>.GetDependentPlugins(System.Type)
-  fullName.vb: RisingV.Shared.Managers.ManagerBase(Of T, TM).GetDependentPlugins(System.Type)
-  nameWithType: ManagerBase<T, TM>.GetDependentPlugins(Type)
-  nameWithType.vb: ManagerBase(Of T, TM).GetDependentPlugins(Type)
+- uid: RisingV.Shared.Managers.ManagerBase`2.GetDependentPlugins(RisingV.Shared.Plugins.IPlugin[])
+  name: GetDependentPlugins(params IPlugin[]?)
+  href: api/RisingV.Shared.Managers.ManagerBase-2.html#RisingV_Shared_Managers_ManagerBase_2_GetDependentPlugins_RisingV_Shared_Plugins_IPlugin___
+  commentId: M:RisingV.Shared.Managers.ManagerBase`2.GetDependentPlugins(RisingV.Shared.Plugins.IPlugin[])
+  name.vb: GetDependentPlugins(ParamArray IPlugin())
+  fullName: RisingV.Shared.Managers.ManagerBase<T, TM>.GetDependentPlugins(params RisingV.Shared.Plugins.IPlugin[]?)
+  fullName.vb: RisingV.Shared.Managers.ManagerBase(Of T, TM).GetDependentPlugins(ParamArray RisingV.Shared.Plugins.IPlugin())
+  nameWithType: ManagerBase<T, TM>.GetDependentPlugins(params IPlugin[]?)
+  nameWithType.vb: ManagerBase(Of T, TM).GetDependentPlugins(ParamArray IPlugin())
+- uid: RisingV.Shared.Managers.ManagerBase`2.GetDependentPlugins(System.Type,RisingV.Shared.Plugins.IPlugin[])
+  name: GetDependentPlugins(Type, params IPlugin[]?)
+  href: api/RisingV.Shared.Managers.ManagerBase-2.html#RisingV_Shared_Managers_ManagerBase_2_GetDependentPlugins_System_Type_RisingV_Shared_Plugins_IPlugin___
+  commentId: M:RisingV.Shared.Managers.ManagerBase`2.GetDependentPlugins(System.Type,RisingV.Shared.Plugins.IPlugin[])
+  name.vb: GetDependentPlugins(Type, ParamArray IPlugin())
+  fullName: RisingV.Shared.Managers.ManagerBase<T, TM>.GetDependentPlugins(System.Type, params RisingV.Shared.Plugins.IPlugin[]?)
+  fullName.vb: RisingV.Shared.Managers.ManagerBase(Of T, TM).GetDependentPlugins(System.Type, ParamArray RisingV.Shared.Plugins.IPlugin())
+  nameWithType: ManagerBase<T, TM>.GetDependentPlugins(Type, params IPlugin[]?)
+  nameWithType.vb: ManagerBase(Of T, TM).GetDependentPlugins(Type, ParamArray IPlugin())
 - uid: RisingV.Shared.Managers.ManagerBase`2.GetDependentPlugins*
   name: GetDependentPlugins
   href: api/RisingV.Shared.Managers.ManagerBase-2.html#RisingV_Shared_Managers_ManagerBase_2_GetDependentPlugins_
@@ -17025,6 +17089,19 @@ references:
   isSpec: "True"
   fullName: RisingV.Shared.Plugin.Config
   nameWithType: Plugin.Config
+- uid: RisingV.Shared.Plugin.Harmony
+  name: Harmony
+  href: api/RisingV.Shared.Plugin.html#RisingV_Shared_Plugin_Harmony
+  commentId: P:RisingV.Shared.Plugin.Harmony
+  fullName: RisingV.Shared.Plugin.Harmony
+  nameWithType: Plugin.Harmony
+- uid: RisingV.Shared.Plugin.Harmony*
+  name: Harmony
+  href: api/RisingV.Shared.Plugin.html#RisingV_Shared_Plugin_Harmony_
+  commentId: Overload:RisingV.Shared.Plugin.Harmony
+  isSpec: "True"
+  fullName: RisingV.Shared.Plugin.Harmony
+  nameWithType: Plugin.Harmony
 - uid: RisingV.Shared.Plugin.Load
   name: Load()
   href: api/RisingV.Shared.Plugin.html#RisingV_Shared_Plugin_Load
@@ -17458,13 +17535,13 @@ references:
   fullName: RisingV.Shared.Plugins.PluginConfig
   nameWithType: PluginConfig
 - uid: RisingV.Shared.Plugins.PluginConfig.#ctor(System.String,System.String)
-  name: PluginConfig(string, string?)
+  name: PluginConfig(string?, string?)
   href: api/RisingV.Shared.Plugins.PluginConfig.html#RisingV_Shared_Plugins_PluginConfig__ctor_System_String_System_String_
   commentId: M:RisingV.Shared.Plugins.PluginConfig.#ctor(System.String,System.String)
   name.vb: New(String, String)
-  fullName: RisingV.Shared.Plugins.PluginConfig.PluginConfig(string, string?)
+  fullName: RisingV.Shared.Plugins.PluginConfig.PluginConfig(string?, string?)
   fullName.vb: RisingV.Shared.Plugins.PluginConfig.New(String, String)
-  nameWithType: PluginConfig.PluginConfig(string, string?)
+  nameWithType: PluginConfig.PluginConfig(string?, string?)
   nameWithType.vb: PluginConfig.New(String, String)
 - uid: RisingV.Shared.Plugins.PluginConfig.#ctor*
   name: PluginConfig
@@ -19156,6 +19233,32 @@ references:
   fullName.vb: RisingV.Shared.SharedPluginConfig.New
   nameWithType: SharedPluginConfig.SharedPluginConfig
   nameWithType.vb: SharedPluginConfig.New
+- uid: RisingV.Shared.SharedPluginConfig.ActiveLogLevels
+  name: ActiveLogLevels
+  href: api/RisingV.Shared.SharedPluginConfig.html#RisingV_Shared_SharedPluginConfig_ActiveLogLevels
+  commentId: P:RisingV.Shared.SharedPluginConfig.ActiveLogLevels
+  fullName: RisingV.Shared.SharedPluginConfig.ActiveLogLevels
+  nameWithType: SharedPluginConfig.ActiveLogLevels
+- uid: RisingV.Shared.SharedPluginConfig.ActiveLogLevels*
+  name: ActiveLogLevels
+  href: api/RisingV.Shared.SharedPluginConfig.html#RisingV_Shared_SharedPluginConfig_ActiveLogLevels_
+  commentId: Overload:RisingV.Shared.SharedPluginConfig.ActiveLogLevels
+  isSpec: "True"
+  fullName: RisingV.Shared.SharedPluginConfig.ActiveLogLevels
+  nameWithType: SharedPluginConfig.ActiveLogLevels
+- uid: RisingV.Shared.SharedPluginConfig.ActiveLogTags
+  name: ActiveLogTags
+  href: api/RisingV.Shared.SharedPluginConfig.html#RisingV_Shared_SharedPluginConfig_ActiveLogTags
+  commentId: P:RisingV.Shared.SharedPluginConfig.ActiveLogTags
+  fullName: RisingV.Shared.SharedPluginConfig.ActiveLogTags
+  nameWithType: SharedPluginConfig.ActiveLogTags
+- uid: RisingV.Shared.SharedPluginConfig.ActiveLogTags*
+  name: ActiveLogTags
+  href: api/RisingV.Shared.SharedPluginConfig.html#RisingV_Shared_SharedPluginConfig_ActiveLogTags_
+  commentId: Overload:RisingV.Shared.SharedPluginConfig.ActiveLogTags
+  isSpec: "True"
+  fullName: RisingV.Shared.SharedPluginConfig.ActiveLogTags
+  nameWithType: SharedPluginConfig.ActiveLogTags
 - uid: RisingV.Shared.SharedPluginConfig.DumpUnqualifiedAspectEntities
   name: DumpUnqualifiedAspectEntities
   href: api/RisingV.Shared.SharedPluginConfig.html#RisingV_Shared_SharedPluginConfig_DumpUnqualifiedAspectEntities
@@ -19169,6 +19272,19 @@ references:
   isSpec: "True"
   fullName: RisingV.Shared.SharedPluginConfig.DumpUnqualifiedAspectEntities
   nameWithType: SharedPluginConfig.DumpUnqualifiedAspectEntities
+- uid: RisingV.Shared.SharedPluginConfig.InactiveLogTags
+  name: InactiveLogTags
+  href: api/RisingV.Shared.SharedPluginConfig.html#RisingV_Shared_SharedPluginConfig_InactiveLogTags
+  commentId: P:RisingV.Shared.SharedPluginConfig.InactiveLogTags
+  fullName: RisingV.Shared.SharedPluginConfig.InactiveLogTags
+  nameWithType: SharedPluginConfig.InactiveLogTags
+- uid: RisingV.Shared.SharedPluginConfig.InactiveLogTags*
+  name: InactiveLogTags
+  href: api/RisingV.Shared.SharedPluginConfig.html#RisingV_Shared_SharedPluginConfig_InactiveLogTags_
+  commentId: Overload:RisingV.Shared.SharedPluginConfig.InactiveLogTags
+  isSpec: "True"
+  fullName: RisingV.Shared.SharedPluginConfig.InactiveLogTags
+  nameWithType: SharedPluginConfig.InactiveLogTags
 - uid: RisingV.Shared.SharedPluginConfig.IsDevelopmentMode
   name: IsDevelopmentMode
   href: api/RisingV.Shared.SharedPluginConfig.html#RisingV_Shared_SharedPluginConfig_IsDevelopmentMode

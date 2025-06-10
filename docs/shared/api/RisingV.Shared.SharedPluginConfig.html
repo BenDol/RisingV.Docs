@@ -89,7 +89,7 @@
 
 
   <h1 id="RisingV_Shared_SharedPluginConfig" data-uid="RisingV.Shared.SharedPluginConfig" class="text-break">
-Class SharedPluginConfig  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugin.cs/#L24"><i class="bi bi-code-slash"></i></a>
+Class SharedPluginConfig  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugin.cs/#L26"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -249,7 +249,7 @@ Class SharedPluginConfig  <a class="header-action link-secondary" title="View so
 
   <h3 id="RisingV_Shared_SharedPluginConfig__ctor" data-uid="RisingV.Shared.SharedPluginConfig.#ctor">
   SharedPluginConfig()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugin.cs/#L24"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugin.cs/#L26"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -275,11 +275,73 @@ Class SharedPluginConfig  <a class="header-action link-secondary" title="View so
 </h2>
 
 
+  <a id="RisingV_Shared_SharedPluginConfig_ActiveLogLevels_" data-uid="RisingV.Shared.SharedPluginConfig.ActiveLogLevels*"></a>
+
+  <h3 id="RisingV_Shared_SharedPluginConfig_ActiveLogLevels" data-uid="RisingV.Shared.SharedPluginConfig.ActiveLogLevels">
+  ActiveLogLevels
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugin.cs/#L32"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ConfigEntry&lt;LogLevel&gt;? ActiveLogLevels { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">ConfigEntry</span>&lt;<a class="xref" href="RisingV.Shared.Logging.LogLevel.html">LogLevel</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="RisingV_Shared_SharedPluginConfig_ActiveLogTags_" data-uid="RisingV.Shared.SharedPluginConfig.ActiveLogTags*"></a>
+
+  <h3 id="RisingV_Shared_SharedPluginConfig_ActiveLogTags" data-uid="RisingV.Shared.SharedPluginConfig.ActiveLogTags">
+  ActiveLogTags
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugin.cs/#L33"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ConfigEntry&lt;LogTag[]&gt;? ActiveLogTags { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">ConfigEntry</span>&lt;<a class="xref" href="RisingV.Shared.Logging.LogTag.html">LogTag</a>[]&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="RisingV_Shared_SharedPluginConfig_DumpUnqualifiedAspectEntities_" data-uid="RisingV.Shared.SharedPluginConfig.DumpUnqualifiedAspectEntities*"></a>
 
   <h3 id="RisingV_Shared_SharedPluginConfig_DumpUnqualifiedAspectEntities" data-uid="RisingV.Shared.SharedPluginConfig.DumpUnqualifiedAspectEntities">
   DumpUnqualifiedAspectEntities
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugin.cs/#L29"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugin.cs/#L31"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -306,11 +368,42 @@ Class SharedPluginConfig  <a class="header-action link-secondary" title="View so
 
 
 
+  <a id="RisingV_Shared_SharedPluginConfig_InactiveLogTags_" data-uid="RisingV.Shared.SharedPluginConfig.InactiveLogTags*"></a>
+
+  <h3 id="RisingV_Shared_SharedPluginConfig_InactiveLogTags" data-uid="RisingV.Shared.SharedPluginConfig.InactiveLogTags">
+  InactiveLogTags
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugin.cs/#L34"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ConfigEntry&lt;LogTag[]&gt;? InactiveLogTags { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">ConfigEntry</span>&lt;<a class="xref" href="RisingV.Shared.Logging.LogTag.html">LogTag</a>[]&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="RisingV_Shared_SharedPluginConfig_IsDevelopmentMode_" data-uid="RisingV.Shared.SharedPluginConfig.IsDevelopmentMode*"></a>
 
   <h3 id="RisingV_Shared_SharedPluginConfig_IsDevelopmentMode" data-uid="RisingV.Shared.SharedPluginConfig.IsDevelopmentMode">
   IsDevelopmentMode
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugin.cs/#L27"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugin.cs/#L29"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -341,7 +434,7 @@ Class SharedPluginConfig  <a class="header-action link-secondary" title="View so
 
   <h3 id="RisingV_Shared_SharedPluginConfig_ObserveConfigChanges" data-uid="RisingV.Shared.SharedPluginConfig.ObserveConfigChanges">
   ObserveConfigChanges
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugin.cs/#L28"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugin.cs/#L30"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -376,7 +469,7 @@ Class SharedPluginConfig  <a class="header-action link-secondary" title="View so
 
   <h3 id="RisingV_Shared_SharedPluginConfig_Load" data-uid="RisingV.Shared.SharedPluginConfig.Load">
   Load()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugin.cs/#L31"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugin.cs/#L62"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -402,7 +495,7 @@ Class SharedPluginConfig  <a class="header-action link-secondary" title="View so
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugin.cs/#L24" class="edit-link">Edit this page</a>
+          <a href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugin.cs/#L26" class="edit-link">Edit this page</a>
         </div>
 
 

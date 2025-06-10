@@ -264,7 +264,7 @@ Interface IManager  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="RisingV_Shared_Managers_IManager_Add__1_RisingV_Shared_Plugins_IPlugin_System_Type_System_Boolean_" data-uid="RisingV.Shared.Managers.IManager.Add``1(RisingV.Shared.Plugins.IPlugin,System.Type,System.Boolean)">
   Add&lt;TX&gt;(IPlugin, Type, bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Managers/IManager.cs/#L169"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Managers/IManager.cs/#L170"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Get a manageable object of the given type.</p>
@@ -309,7 +309,7 @@ Interface IManager  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="RisingV_Shared_Managers_IManager_AssignDependentPlugins_System_Type_System_Collections_Generic_List_RisingV_Shared_Plugins_IPlugin__" data-uid="RisingV.Shared.Managers.IManager.AssignDependentPlugins(System.Type,System.Collections.Generic.List{RisingV.Shared.Plugins.IPlugin})">
   AssignDependentPlugins(Type, List&lt;IPlugin&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Managers/IManager.cs/#L140"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Managers/IManager.cs/#L141"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Assign a list of dependent plugins to the given type.</p>
@@ -343,7 +343,7 @@ Interface IManager  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="RisingV_Shared_Managers_IManager_Count" data-uid="RisingV.Shared.Managers.IManager.Count">
   Count()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Managers/IManager.cs/#L152"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Managers/IManager.cs/#L153"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Count the number of manageable objects that are managed by this manager.</p>
@@ -373,9 +373,9 @@ Interface IManager  <a class="header-action link-secondary" title="View source" 
 
   <a id="RisingV_Shared_Managers_IManager_GetDependentPlugins_" data-uid="RisingV.Shared.Managers.IManager.GetDependentPlugins*"></a>
 
-  <h3 id="RisingV_Shared_Managers_IManager_GetDependentPlugins_System_Type_" data-uid="RisingV.Shared.Managers.IManager.GetDependentPlugins(System.Type)">
-  GetDependentPlugins(Type)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Managers/IManager.cs/#L133"><i class="bi bi-code-slash"></i></a>
+  <h3 id="RisingV_Shared_Managers_IManager_GetDependentPlugins_System_Type_RisingV_Shared_Plugins_IPlugin___" data-uid="RisingV.Shared.Managers.IManager.GetDependentPlugins(System.Type,RisingV.Shared.Plugins.IPlugin[])">
+  GetDependentPlugins(Type, params IPlugin[]?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Managers/IManager.cs/#L134"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Get a list of plugins that depend on the given type.</p>
@@ -383,12 +383,14 @@ Interface IManager  <a class="header-action link-secondary" title="View source" 
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">List&lt;IPlugin&gt; GetDependentPlugins(Type type)</code></pre>
+    <pre><code class="lang-csharp hljs">List&lt;IPlugin&gt; GetDependentPlugins(Type type, params IPlugin[]? additionalPlugins)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>type</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd></dd>
+    <dt><code>additionalPlugins</code> <a class="xref" href="RisingV.Shared.Plugins.IPlugin.html">IPlugin</a>[]</dt>
     <dd></dd>
   </dl>
 
@@ -412,7 +414,7 @@ Interface IManager  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="RisingV_Shared_Managers_IManager_GetManagedInfo" data-uid="RisingV.Shared.Managers.IManager.GetManagedInfo">
   GetManagedInfo()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Managers/IManager.cs/#L146"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Managers/IManager.cs/#L147"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Get a formatted string of all manageable objects that are managed by this manager.</p>
@@ -444,7 +446,7 @@ Interface IManager  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="RisingV_Shared_Managers_IManager_Has_System_Type_System_Boolean_" data-uid="RisingV.Shared.Managers.IManager.Has(System.Type,System.Boolean)">
   Has(Type, bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Managers/IManager.cs/#L160"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Managers/IManager.cs/#L161"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Check if the manager has a manageable object of the given type.</p>
@@ -657,7 +659,7 @@ The manageable objects should be unloaded before calling their Reload method and
 
   <h3 id="RisingV_Shared_Managers_IManager_RequiredType" data-uid="RisingV.Shared.Managers.IManager.RequiredType">
   RequiredType()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Managers/IManager.cs/#L175"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Managers/IManager.cs/#L176"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Type of the object that is required.</p>
@@ -690,7 +692,7 @@ The manageable objects should be unloaded before calling their Reload method and
 
   <h3 id="RisingV_Shared_Managers_IManager_RequiredTypeName" data-uid="RisingV.Shared.Managers.IManager.RequiredTypeName">
   RequiredTypeName()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Managers/IManager.cs/#L181"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Managers/IManager.cs/#L182"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Type name of the object that is required.</p>

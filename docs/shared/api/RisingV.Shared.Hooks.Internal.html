@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Namespace RisingV.Shared.Logging | RisingV.Shared </title>
+      <title>Namespace RisingV.Shared.Hooks.Internal | RisingV.Shared </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Namespace RisingV.Shared.Logging | RisingV.Shared ">
+      <meta name="title" content="Namespace RisingV.Shared.Hooks.Internal | RisingV.Shared ">
       
       
       <link rel="icon" href="../assets/favicon/favicon.ico">
@@ -84,9 +84,9 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="RisingV.Shared.Logging">
+        <article data-uid="RisingV.Shared.Hooks.Internal">
 
-  <h1 id="RisingV_Shared_Logging" data-uid="RisingV.Shared.Logging" class="text-break">Namespace RisingV.Shared.Logging</h1>
+  <h1 id="RisingV_Shared_Hooks_Internal" data-uid="RisingV.Shared.Hooks.Internal" class="text-break">Namespace RisingV.Shared.Hooks.Internal</h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="markdown level0 remarks"></div>
@@ -95,64 +95,13 @@
 Classes
 </h3>
     <dl class="jumplist">
-      <dt><a class="xref" href="RisingV.Shared.Logging.LogNoTag.html">LogNoTag</a></dt>
-      <dd><p>Convenience logging helpers that do <b>not</b> apply a tag.</p>
+      <dt><a class="xref" href="RisingV.Shared.Hooks.Internal.ClientBootstrapSystemHook.html">ClientBootstrapSystemHook</a></dt>
+      <dd><p>ClientBootstrapSystemHook is a Harmony patch for the ClientBootstrapSystem.</p>
 </dd>
     </dl>
     <dl class="jumplist">
-      <dt><a class="xref" href="RisingV.Shared.Logging.LogTag.html">LogTag</a></dt>
-      <dd><p>Represents a tag for logging purposes, allowing for hierarchical organization of log messages.</p>
-</dd>
-    </dl>
-    <dl class="jumplist">
-      <dt><a class="xref" href="RisingV.Shared.Logging.LogTagShared.html">LogTagShared</a></dt>
-      <dd><p>Represents a log tag for shared components in the RisingV project.</p>
-</dd>
-    </dl>
-    <dl class="jumplist">
-      <dt><a class="xref" href="RisingV.Shared.Logging.LogWithTag.html">LogWithTag</a></dt>
-      <dd><p>Convenience logging helpers that prepend a custom <a class="xref" href="RisingV.Shared.Logging.ILogTag.html">ILogTag</a>
-to every message.</p>
-</dd>
-    </dl>
-    <dl class="jumplist">
-      <dt><a class="xref" href="RisingV.Shared.Logging.Logger.html">Logger</a></dt>
-      <dd><p>Provides a logger implementation that integrates with BepInEx's logging system.</p>
-<br>
-<p>Logs level can be adjusted setting <a class="xref" href="RisingV.Shared.Logging.Logger.html#RisingV_Shared_Logging_Logger_ActiveLogLevels">ActiveLogLevels</a></p>
-<p>Logs can be filtered by log level and tags, allowing for flexible logging configurations.</p>
-<ul>
-  <li><a class="xref" href="RisingV.Shared.Logging.Logger.html#RisingV_Shared_Logging_Logger_ActiveTags">ActiveTags</a> for assigning active tags to the logger.</li>
-  <li><a class="xref" href="RisingV.Shared.Logging.Logger.html#RisingV_Shared_Logging_Logger_InactiveTags">InactiveTags</a> for assigning tags that should be suppressed in logs.</li>
-</ul>
-<pre><code class="lang-csharp">private static readonly Logger logger = Logger.Create(typeof(MyPluginClass), LogTags.MyCustomTag);
-
-logger.Debug("This is an debug message with {} argument.", "example");
-logger.Info("This is an info message with {} argument.", "example");
-logger.Warn("This is a warning message with {} argument.", "example");
-logger.Error("This is an error message with an exception.", ex);
-logger.Fatal("This is a fatal message with an exception.", ex);</code></pre>
-</dd>
-    </dl>
-    <h3 id="interfaces">
-Interfaces
-</h3>
-    <dl class="jumplist">
-      <dt><a class="xref" href="RisingV.Shared.Logging.ILogTag.html">ILogTag</a></dt>
-      <dd><p>Represents a tag for logging purposes.</p>
-</dd>
-    </dl>
-    <dl class="jumplist">
-      <dt><a class="xref" href="RisingV.Shared.Logging.ILogger.html">ILogger</a></dt>
-      <dd><p>Represents a logger interface for logging messages at various levels.</p>
-</dd>
-    </dl>
-    <h3 id="enums">
-Enums
-</h3>
-    <dl class="jumplist">
-      <dt><a class="xref" href="RisingV.Shared.Logging.LogLevel.html">LogLevel</a></dt>
-      <dd><p>Represents the different levels of logging that can be used in the application.</p>
+      <dt><a class="xref" href="RisingV.Shared.Hooks.Internal.GameManagerHook.html">GameManagerHook</a></dt>
+      <dd><p>GameManagerHook is responsible for hooking into the game data manager's update method</p>
 </dd>
     </dl>
 
