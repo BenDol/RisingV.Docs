@@ -110,6 +110,11 @@ Classes
 </dd>
     </dl>
     <dl class="jumplist">
+      <dt><a class="xref" href="RisingV.Shared.Plugins.PluginContext.html">PluginContext</a></dt>
+      <dd><p>Represents the context for a plugin, providing access to plugin information, configuration, and Harmony instance.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
       <dt><a class="xref" href="RisingV.Shared.Plugins.PluginInfo.html">PluginInfo</a></dt>
       <dd><p>Represents information about a plugin.</p>
 </dd>
@@ -117,6 +122,55 @@ Classes
     <dl class="jumplist">
       <dt><a class="xref" href="RisingV.Shared.Plugins.PluginManager.html">PluginManager</a></dt>
       <dd><p>Manages plugins in the RisingV framework.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RisingV.Shared.Plugins.RisingPluginBase.html">RisingPluginBase</a></dt>
+      <dd><p>Base class for RisingV plugins.</p>
+<p>Example Usage:</p>
+<pre><code class="lang-csharp">using BepInEx;
+using RisingV.Shared.Plugins;
+using RisingV.Shared.Engines;
+using RisingV.Core.Engines;
+
+public class MyCoolPluginConfig() : PluginConfig(MyPluginInfo.PLUGIN_GUID, MyPluginInfo.PLUGIN_GUID)
+{
+    public ConfigEntry&lt;float&gt; AttackModifier { get; set; } =
+        new("Gameplay", "AttackModifier", 1f, "Modifier for attack damage");
+}
+
+public class MyCoolPluginContext() : PluginContext(typeof(MyPluginInfo), new MyCoolPluginConfig());
+
+[BepInPlugin(MyPluginInfo.PLUGIN_GUID, MyPluginInfo.PLUGIN_NAME, MyPluginInfo.PLUGIN_VERSION)]
+[BepInDependency("gg.deca.VampireCommandFramework")]
+[BepInDependency("RisingV.Core")]
+[BepInDependency("RisingV.Scripting")]
+public class Plugin : RisingPlugin&lt;MyCoolPluginContext&gt;
+{
+    protected override void OnInitialize()
+    {
+        EngineManager.AddEngine&lt;ScriptingEngine&gt;(this);
+        EngineManager.AddEngine&lt;DamageEngine&gt;(this);
+        EngineManager.AddEngine&lt;DeathEngine&gt;(this);
+
+        // You can also register other systems, databases, or processors here
+    }
+
+    protected override void OnLoad()
+    {
+        // Plugin startup logic (pre-initialization)
+    }
+
+    protected override bool OnUnload()
+    {
+        return true;
+    }
+}</code></pre>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="RisingV.Shared.Plugins.RisingSharedPlugin-1.html">RisingSharedPlugin&lt;TContext&gt;</a></dt>
+      <dd><p>Base class for shared RisingV plugins with a specific context.</p>
 </dd>
     </dl>
     <h3 id="interfaces">

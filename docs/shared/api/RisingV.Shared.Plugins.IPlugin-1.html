@@ -89,7 +89,7 @@
 
 
   <h1 id="RisingV_Shared_Plugins_IPlugin_1" data-uid="RisingV.Shared.Plugins.IPlugin`1" class="text-break">
-Interface IPlugin&lt;T&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugins/IPlugin.cs/#L84"><i class="bi bi-code-slash"></i></a>
+Interface IPlugin&lt;T&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugins/IPlugin.cs/#L97"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -102,7 +102,7 @@ Interface IPlugin&lt;T&gt;  <a class="header-action link-secondary" title="View 
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface IPlugin&lt;out T&gt; : IPlugin, IManageable&lt;PluginManager&gt;, IReloadable&lt;PluginManager&gt;, IReloadable, IHasPluginContext&lt;T&gt;, IPluginContext, IPluginComponent, IManageable&lt;PluginComponentsManager&gt;, IManageable where T : IPluginContext</code></pre>
+    <pre><code class="lang-csharp hljs">public interface IPlugin&lt;out T&gt; : IPlugin, IManageable&lt;PluginManager&gt;, IReloadable&lt;PluginManager&gt;, IReloadable, IDisposable, IHasPluginContext&lt;T&gt;, IPluginContext, IPluginComponent, IManageable&lt;PluginComponentsManager&gt;, IManageable where T : IPluginContext</code></pre>
   </div>
 
 
@@ -145,6 +145,27 @@ Interface IPlugin&lt;T&gt;  <a class="header-action link-secondary" title="View 
       <a class="xref" href="RisingV.Shared.Plugins.IPlugin.html#RisingV_Shared_Plugins_IPlugin_AddSharedComponent__1_RisingV_Shared_Plugins_IPlugin___0_System_Boolean_">IPlugin.AddSharedComponent&lt;T&gt;(IPlugin, T, bool)</a>
     </div>
     <div>
+      <a class="xref" href="RisingV.Shared.Plugins.IPlugin.html#RisingV_Shared_Plugins_IPlugin_Load">IPlugin.Load()</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Plugins.IPlugin.html#RisingV_Shared_Plugins_IPlugin_OnPreLoad">IPlugin.OnPreLoad()</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Plugins.IPlugin.html#RisingV_Shared_Plugins_IPlugin_OnInitialize">IPlugin.OnInitialize()</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Plugins.IPlugin.html#RisingV_Shared_Plugins_IPlugin_OnLoad">IPlugin.OnLoad()</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Plugins.IPlugin.html#RisingV_Shared_Plugins_IPlugin_OnUnload">IPlugin.OnUnload()</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Plugins.IPlugin.html#RisingV_Shared_Plugins_IPlugin_SetupConfiguration_RisingV_Shared_Plugins_PluginConfig_">IPlugin.SetupConfiguration(PluginConfig)</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Plugins.IPlugin.html#RisingV_Shared_Plugins_IPlugin_SetupSharedEventBus_RisingV_Shared_Events_ManagedEventBus_">IPlugin.SetupSharedEventBus(ManagedEventBus)</a>
+    </div>
+    <div>
       <a class="xref" href="RisingV.Shared.Managers.IReloadable-1.html#RisingV_Shared_Managers_IReloadable_1_Reload__0_System_Collections_Generic_List_RisingV_Shared_Plugins_IPlugin__RisingV_Shared_Managers_ReloadReason_">IReloadable&lt;PluginManager&gt;.Reload(PluginManager, List&lt;IPlugin&gt;, ReloadReason)</a>
     </div>
     <div>
@@ -158,6 +179,9 @@ Interface IPlugin&lt;T&gt;  <a class="header-action link-secondary" title="View 
     </div>
     <div>
       <a class="xref" href="RisingV.Shared.Managers.IReloadable.html#RisingV_Shared_Managers_IReloadable_OnReload_RisingV_Shared_Managers_IManager_System_Collections_Generic_List_RisingV_Shared_Plugins_IPlugin__RisingV_Shared_Managers_ReloadReason_">IReloadable.OnReload(IManager, List&lt;IPlugin&gt;, ReloadReason)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable.dispose">IDisposable.Dispose()</a>
     </div>
     <div>
       <a class="xref" href="RisingV.Shared.Plugins.IHasPluginContext-1.html#RisingV_Shared_Plugins_IHasPluginContext_1_Context">IHasPluginContext&lt;T&gt;.Context</a>
@@ -192,7 +216,7 @@ Interface IPlugin&lt;T&gt;  <a class="header-action link-secondary" title="View 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugins/IPlugin.cs/#L84" class="edit-link">Edit this page</a>
+          <a href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugins/IPlugin.cs/#L97" class="edit-link">Edit this page</a>
         </div>
 
 

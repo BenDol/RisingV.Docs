@@ -89,7 +89,7 @@
 
 
   <h1 id="RisingV_Shared_Plugins_IPlugin" data-uid="RisingV.Shared.Plugins.IPlugin" class="text-break">
-Interface IPlugin  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugins/IPlugin.cs/#L18"><i class="bi bi-code-slash"></i></a>
+Interface IPlugin  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugins/IPlugin.cs/#L19"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -102,7 +102,7 @@ Interface IPlugin  <a class="header-action link-secondary" title="View source" h
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface IPlugin : IPluginContext, IPluginComponent, IManageable&lt;PluginComponentsManager&gt;, IManageable&lt;PluginManager&gt;, IManageable, IReloadable&lt;PluginManager&gt;, IReloadable</code></pre>
+    <pre><code class="lang-csharp hljs">public interface IPlugin : IPluginContext, IPluginComponent, IManageable&lt;PluginComponentsManager&gt;, IManageable&lt;PluginManager&gt;, IManageable, IReloadable&lt;PluginManager&gt;, IReloadable, IDisposable</code></pre>
   </div>
 
 
@@ -141,6 +141,9 @@ Interface IPlugin  <a class="header-action link-secondary" title="View source" h
     <div>
       <a class="xref" href="RisingV.Shared.Managers.IReloadable.html#RisingV_Shared_Managers_IReloadable_OnReload_RisingV_Shared_Managers_IManager_System_Collections_Generic_List_RisingV_Shared_Plugins_IPlugin__RisingV_Shared_Managers_ReloadReason_">IReloadable.OnReload(IManager, List&lt;IPlugin&gt;, ReloadReason)</a>
     </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable.dispose">IDisposable.Dispose()</a>
+    </div>
   </dd></dl>
 
   <dl class="typelist extensionMethods">
@@ -163,7 +166,7 @@ Interface IPlugin  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="RisingV_Shared_Plugins_IPlugin_DatabaseManager" data-uid="RisingV.Shared.Plugins.IPlugin.DatabaseManager">
   DatabaseManager
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugins/IPlugin.cs/#L31"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugins/IPlugin.cs/#L32"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The database manager for the plugin.</p>
@@ -195,7 +198,7 @@ Interface IPlugin  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="RisingV_Shared_Plugins_IPlugin_EngineManager" data-uid="RisingV.Shared.Plugins.IPlugin.EngineManager">
   EngineManager
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugins/IPlugin.cs/#L35"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugins/IPlugin.cs/#L36"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The engine manager for the plugin.</p>
@@ -227,7 +230,7 @@ Interface IPlugin  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="RisingV_Shared_Plugins_IPlugin_ProcessorManager" data-uid="RisingV.Shared.Plugins.IPlugin.ProcessorManager">
   ProcessorManager
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugins/IPlugin.cs/#L27"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugins/IPlugin.cs/#L28"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The processor manager for the plugin.</p>
@@ -259,7 +262,7 @@ Interface IPlugin  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="RisingV_Shared_Plugins_IPlugin_SystemManager" data-uid="RisingV.Shared.Plugins.IPlugin.SystemManager">
   SystemManager
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugins/IPlugin.cs/#L23"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugins/IPlugin.cs/#L24"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The system manager for the plugin.</p>
@@ -295,7 +298,7 @@ Interface IPlugin  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="RisingV_Shared_Plugins_IPlugin_AddSharedComponent__1_RisingV_Shared_Plugins_IPlugin_System_Boolean_" data-uid="RisingV.Shared.Plugins.IPlugin.AddSharedComponent``1(RisingV.Shared.Plugins.IPlugin,System.Boolean)">
   AddSharedComponent&lt;T&gt;(IPlugin, bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugins/IPlugin.cs/#L58"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugins/IPlugin.cs/#L59"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Adds a shared component to the plugin context.</p>
@@ -343,7 +346,7 @@ Interface IPlugin  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="RisingV_Shared_Plugins_IPlugin_AddSharedComponent__1_RisingV_Shared_Plugins_IPlugin___0_System_Boolean_" data-uid="RisingV.Shared.Plugins.IPlugin.AddSharedComponent``1(RisingV.Shared.Plugins.IPlugin,``0,System.Boolean)">
   AddSharedComponent&lt;T&gt;(IPlugin, T, bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugins/IPlugin.cs/#L67"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugins/IPlugin.cs/#L68"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Adds a shared component to the plugin context with an instance of the component.</p>
@@ -388,7 +391,7 @@ Interface IPlugin  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="RisingV_Shared_Plugins_IPlugin_GetSharedComponent_System_Type_" data-uid="RisingV.Shared.Plugins.IPlugin.GetSharedComponent(System.Type)">
   GetSharedComponent(Type)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugins/IPlugin.cs/#L42"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugins/IPlugin.cs/#L43"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets a shared component of the specified type from the plugin context.</p>
@@ -427,7 +430,7 @@ Interface IPlugin  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="RisingV_Shared_Plugins_IPlugin_GetSharedComponent__1" data-uid="RisingV.Shared.Plugins.IPlugin.GetSharedComponent``1">
   GetSharedComponent&lt;TX&gt;()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugins/IPlugin.cs/#L49"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugins/IPlugin.cs/#L50"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets a shared component of the specified type from the plugin context.</p>
@@ -462,11 +465,209 @@ Interface IPlugin  <a class="header-action link-secondary" title="View source" h
 
 
 
+  <a id="RisingV_Shared_Plugins_IPlugin_Load_" data-uid="RisingV.Shared.Plugins.IPlugin.Load*"></a>
+
+  <h3 id="RisingV_Shared_Plugins_IPlugin_Load" data-uid="RisingV.Shared.Plugins.IPlugin.Load">
+  Load()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugins/IPlugin.cs/#L73"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Loads the plugin, initializing it and registering necessary components and events.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void Load()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RisingV_Shared_Plugins_IPlugin_OnInitialize_" data-uid="RisingV.Shared.Plugins.IPlugin.OnInitialize*"></a>
+
+  <h3 id="RisingV_Shared_Plugins_IPlugin_OnInitialize" data-uid="RisingV.Shared.Plugins.IPlugin.OnInitialize">
+  OnInitialize()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugins/IPlugin.cs/#L86"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void OnInitialize()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RisingV_Shared_Plugins_IPlugin_OnLoad_" data-uid="RisingV.Shared.Plugins.IPlugin.OnLoad*"></a>
+
+  <h3 id="RisingV_Shared_Plugins_IPlugin_OnLoad" data-uid="RisingV.Shared.Plugins.IPlugin.OnLoad">
+  OnLoad()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugins/IPlugin.cs/#L87"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void OnLoad()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RisingV_Shared_Plugins_IPlugin_OnPreLoad_" data-uid="RisingV.Shared.Plugins.IPlugin.OnPreLoad*"></a>
+
+  <h3 id="RisingV_Shared_Plugins_IPlugin_OnPreLoad" data-uid="RisingV.Shared.Plugins.IPlugin.OnPreLoad">
+  OnPreLoad()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugins/IPlugin.cs/#L85"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void OnPreLoad()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RisingV_Shared_Plugins_IPlugin_OnUnload_" data-uid="RisingV.Shared.Plugins.IPlugin.OnUnload*"></a>
+
+  <h3 id="RisingV_Shared_Plugins_IPlugin_OnUnload" data-uid="RisingV.Shared.Plugins.IPlugin.OnUnload">
+  OnUnload()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugins/IPlugin.cs/#L88"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool OnUnload()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RisingV_Shared_Plugins_IPlugin_SetupConfiguration_" data-uid="RisingV.Shared.Plugins.IPlugin.SetupConfiguration*"></a>
+
+  <h3 id="RisingV_Shared_Plugins_IPlugin_SetupConfiguration_RisingV_Shared_Plugins_PluginConfig_" data-uid="RisingV.Shared.Plugins.IPlugin.SetupConfiguration(RisingV.Shared.Plugins.PluginConfig)">
+  SetupConfiguration(PluginConfig?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugins/IPlugin.cs/#L89"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void SetupConfiguration(PluginConfig? pluginConfig)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>pluginConfig</code> <a class="xref" href="RisingV.Shared.Plugins.PluginConfig.html">PluginConfig</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RisingV_Shared_Plugins_IPlugin_SetupSharedEventBus_" data-uid="RisingV.Shared.Plugins.IPlugin.SetupSharedEventBus*"></a>
+
+  <h3 id="RisingV_Shared_Plugins_IPlugin_SetupSharedEventBus_RisingV_Shared_Events_ManagedEventBus_" data-uid="RisingV.Shared.Plugins.IPlugin.SetupSharedEventBus(RisingV.Shared.Events.ManagedEventBus)">
+  SetupSharedEventBus(ManagedEventBus)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugins/IPlugin.cs/#L90"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void SetupSharedEventBus(ManagedEventBus eventBus)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>eventBus</code> <a class="xref" href="RisingV.Shared.Events.ManagedEventBus.html">ManagedEventBus</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugins/IPlugin.cs/#L18" class="edit-link">Edit this page</a>
+          <a href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugins/IPlugin.cs/#L19" class="edit-link">Edit this page</a>
         </div>
 
 

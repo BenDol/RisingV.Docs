@@ -942,6 +942,242 @@ references:
   isSpec: "True"
   fullName: RisingV.Shared.Aspects.Meta.MetaSerializer.Serialize
   nameWithType: MetaSerializer.Serialize
+- uid: RisingV.Shared.Bootstrap
+  name: Bootstrap
+  href: api/RisingV.Shared.Bootstrap.html
+  commentId: T:RisingV.Shared.Bootstrap
+  fullName: RisingV.Shared.Bootstrap
+  nameWithType: Bootstrap
+- uid: RisingV.Shared.Bootstrap.AddSharedComponent*
+  name: AddSharedComponent
+  href: api/RisingV.Shared.Bootstrap.html#RisingV_Shared_Bootstrap_AddSharedComponent_
+  commentId: Overload:RisingV.Shared.Bootstrap.AddSharedComponent
+  isSpec: "True"
+  fullName: RisingV.Shared.Bootstrap.AddSharedComponent
+  nameWithType: Bootstrap.AddSharedComponent
+- uid: RisingV.Shared.Bootstrap.AddSharedComponent``1(RisingV.Shared.Plugins.IPlugin,System.Boolean)
+  name: AddSharedComponent<T>(IPlugin, bool)
+  href: api/RisingV.Shared.Bootstrap.html#RisingV_Shared_Bootstrap_AddSharedComponent__1_RisingV_Shared_Plugins_IPlugin_System_Boolean_
+  commentId: M:RisingV.Shared.Bootstrap.AddSharedComponent``1(RisingV.Shared.Plugins.IPlugin,System.Boolean)
+  name.vb: AddSharedComponent(Of T)(IPlugin, Boolean)
+  fullName: RisingV.Shared.Bootstrap.AddSharedComponent<T>(RisingV.Shared.Plugins.IPlugin, bool)
+  fullName.vb: RisingV.Shared.Bootstrap.AddSharedComponent(Of T)(RisingV.Shared.Plugins.IPlugin, Boolean)
+  nameWithType: Bootstrap.AddSharedComponent<T>(IPlugin, bool)
+  nameWithType.vb: Bootstrap.AddSharedComponent(Of T)(IPlugin, Boolean)
+- uid: RisingV.Shared.Bootstrap.AddSharedComponent``1(RisingV.Shared.Plugins.IPlugin,``0,System.Boolean)
+  name: AddSharedComponent<T>(IPlugin, T, bool)
+  href: api/RisingV.Shared.Bootstrap.html#RisingV_Shared_Bootstrap_AddSharedComponent__1_RisingV_Shared_Plugins_IPlugin___0_System_Boolean_
+  commentId: M:RisingV.Shared.Bootstrap.AddSharedComponent``1(RisingV.Shared.Plugins.IPlugin,``0,System.Boolean)
+  name.vb: AddSharedComponent(Of T)(IPlugin, T, Boolean)
+  fullName: RisingV.Shared.Bootstrap.AddSharedComponent<T>(RisingV.Shared.Plugins.IPlugin, T, bool)
+  fullName.vb: RisingV.Shared.Bootstrap.AddSharedComponent(Of T)(RisingV.Shared.Plugins.IPlugin, T, Boolean)
+  nameWithType: Bootstrap.AddSharedComponent<T>(IPlugin, T, bool)
+  nameWithType.vb: Bootstrap.AddSharedComponent(Of T)(IPlugin, T, Boolean)
+- uid: RisingV.Shared.Bootstrap.Configurations
+  name: Configurations
+  href: api/RisingV.Shared.Bootstrap.html#RisingV_Shared_Bootstrap_Configurations
+  commentId: P:RisingV.Shared.Bootstrap.Configurations
+  fullName: RisingV.Shared.Bootstrap.Configurations
+  nameWithType: Bootstrap.Configurations
+- uid: RisingV.Shared.Bootstrap.Configurations*
+  name: Configurations
+  href: api/RisingV.Shared.Bootstrap.html#RisingV_Shared_Bootstrap_Configurations_
+  commentId: Overload:RisingV.Shared.Bootstrap.Configurations
+  isSpec: "True"
+  fullName: RisingV.Shared.Bootstrap.Configurations
+  nameWithType: Bootstrap.Configurations
+- uid: RisingV.Shared.Bootstrap.GetSharedComponent(System.Type)
+  name: GetSharedComponent(Type)
+  href: api/RisingV.Shared.Bootstrap.html#RisingV_Shared_Bootstrap_GetSharedComponent_System_Type_
+  commentId: M:RisingV.Shared.Bootstrap.GetSharedComponent(System.Type)
+  fullName: RisingV.Shared.Bootstrap.GetSharedComponent(System.Type)
+  nameWithType: Bootstrap.GetSharedComponent(Type)
+- uid: RisingV.Shared.Bootstrap.GetSharedComponent*
+  name: GetSharedComponent
+  href: api/RisingV.Shared.Bootstrap.html#RisingV_Shared_Bootstrap_GetSharedComponent_
+  commentId: Overload:RisingV.Shared.Bootstrap.GetSharedComponent
+  isSpec: "True"
+  fullName: RisingV.Shared.Bootstrap.GetSharedComponent
+  nameWithType: Bootstrap.GetSharedComponent
+- uid: RisingV.Shared.Bootstrap.GetSharedComponent``1
+  name: GetSharedComponent<TX>()
+  href: api/RisingV.Shared.Bootstrap.html#RisingV_Shared_Bootstrap_GetSharedComponent__1
+  commentId: M:RisingV.Shared.Bootstrap.GetSharedComponent``1
+  name.vb: GetSharedComponent(Of TX)()
+  fullName: RisingV.Shared.Bootstrap.GetSharedComponent<TX>()
+  fullName.vb: RisingV.Shared.Bootstrap.GetSharedComponent(Of TX)()
+  nameWithType: Bootstrap.GetSharedComponent<TX>()
+  nameWithType.vb: Bootstrap.GetSharedComponent(Of TX)()
+- uid: RisingV.Shared.Bootstrap.Load(RisingV.Shared.Plugins.IPlugin)
+  name: Load(IPlugin?)
+  href: api/RisingV.Shared.Bootstrap.html#RisingV_Shared_Bootstrap_Load_RisingV_Shared_Plugins_IPlugin_
+  commentId: M:RisingV.Shared.Bootstrap.Load(RisingV.Shared.Plugins.IPlugin)
+  name.vb: Load(IPlugin)
+  fullName: RisingV.Shared.Bootstrap.Load(RisingV.Shared.Plugins.IPlugin?)
+  fullName.vb: RisingV.Shared.Bootstrap.Load(RisingV.Shared.Plugins.IPlugin)
+  nameWithType: Bootstrap.Load(IPlugin?)
+  nameWithType.vb: Bootstrap.Load(IPlugin)
+- uid: RisingV.Shared.Bootstrap.Load*
+  name: Load
+  href: api/RisingV.Shared.Bootstrap.html#RisingV_Shared_Bootstrap_Load_
+  commentId: Overload:RisingV.Shared.Bootstrap.Load
+  isSpec: "True"
+  fullName: RisingV.Shared.Bootstrap.Load
+  nameWithType: Bootstrap.Load
+- uid: RisingV.Shared.Bootstrap.OnGameDataInitialized(RisingV.Shared.EventBridge.OnGameDataInitializedEvent)
+  name: OnGameDataInitialized(OnGameDataInitializedEvent)
+  href: api/RisingV.Shared.Bootstrap.html#RisingV_Shared_Bootstrap_OnGameDataInitialized_RisingV_Shared_EventBridge_OnGameDataInitializedEvent_
+  commentId: M:RisingV.Shared.Bootstrap.OnGameDataInitialized(RisingV.Shared.EventBridge.OnGameDataInitializedEvent)
+  fullName: RisingV.Shared.Bootstrap.OnGameDataInitialized(RisingV.Shared.EventBridge.OnGameDataInitializedEvent)
+  nameWithType: Bootstrap.OnGameDataInitialized(EventBridge.OnGameDataInitializedEvent)
+- uid: RisingV.Shared.Bootstrap.OnGameDataInitialized*
+  name: OnGameDataInitialized
+  href: api/RisingV.Shared.Bootstrap.html#RisingV_Shared_Bootstrap_OnGameDataInitialized_
+  commentId: Overload:RisingV.Shared.Bootstrap.OnGameDataInitialized
+  isSpec: "True"
+  fullName: RisingV.Shared.Bootstrap.OnGameDataInitialized
+  nameWithType: Bootstrap.OnGameDataInitialized
+- uid: RisingV.Shared.Bootstrap.OnPluginsInitializing(RisingV.Shared.EventBridge.OnPluginsInitializingEvent,RisingV.Shared.Plugins.IPlugin)
+  name: OnPluginsInitializing(OnPluginsInitializingEvent, IPlugin)
+  href: api/RisingV.Shared.Bootstrap.html#RisingV_Shared_Bootstrap_OnPluginsInitializing_RisingV_Shared_EventBridge_OnPluginsInitializingEvent_RisingV_Shared_Plugins_IPlugin_
+  commentId: M:RisingV.Shared.Bootstrap.OnPluginsInitializing(RisingV.Shared.EventBridge.OnPluginsInitializingEvent,RisingV.Shared.Plugins.IPlugin)
+  fullName: RisingV.Shared.Bootstrap.OnPluginsInitializing(RisingV.Shared.EventBridge.OnPluginsInitializingEvent, RisingV.Shared.Plugins.IPlugin)
+  nameWithType: Bootstrap.OnPluginsInitializing(EventBridge.OnPluginsInitializingEvent, IPlugin)
+- uid: RisingV.Shared.Bootstrap.OnPluginsInitializing*
+  name: OnPluginsInitializing
+  href: api/RisingV.Shared.Bootstrap.html#RisingV_Shared_Bootstrap_OnPluginsInitializing_
+  commentId: Overload:RisingV.Shared.Bootstrap.OnPluginsInitializing
+  isSpec: "True"
+  fullName: RisingV.Shared.Bootstrap.OnPluginsInitializing
+  nameWithType: Bootstrap.OnPluginsInitializing
+- uid: RisingV.Shared.Bootstrap.OnPluginsLoaded(RisingV.Shared.EventBridge.OnPluginsLoadedEvent,RisingV.Shared.Plugins.IPlugin)
+  name: OnPluginsLoaded(OnPluginsLoadedEvent, IPlugin)
+  href: api/RisingV.Shared.Bootstrap.html#RisingV_Shared_Bootstrap_OnPluginsLoaded_RisingV_Shared_EventBridge_OnPluginsLoadedEvent_RisingV_Shared_Plugins_IPlugin_
+  commentId: M:RisingV.Shared.Bootstrap.OnPluginsLoaded(RisingV.Shared.EventBridge.OnPluginsLoadedEvent,RisingV.Shared.Plugins.IPlugin)
+  fullName: RisingV.Shared.Bootstrap.OnPluginsLoaded(RisingV.Shared.EventBridge.OnPluginsLoadedEvent, RisingV.Shared.Plugins.IPlugin)
+  nameWithType: Bootstrap.OnPluginsLoaded(EventBridge.OnPluginsLoadedEvent, IPlugin)
+- uid: RisingV.Shared.Bootstrap.OnPluginsLoaded*
+  name: OnPluginsLoaded
+  href: api/RisingV.Shared.Bootstrap.html#RisingV_Shared_Bootstrap_OnPluginsLoaded_
+  commentId: Overload:RisingV.Shared.Bootstrap.OnPluginsLoaded
+  isSpec: "True"
+  fullName: RisingV.Shared.Bootstrap.OnPluginsLoaded
+  nameWithType: Bootstrap.OnPluginsLoaded
+- uid: RisingV.Shared.Bootstrap.OnPluginsLoading(RisingV.Shared.EventBridge.OnPluginsLoadingEvent,RisingV.Shared.Plugins.IPlugin)
+  name: OnPluginsLoading(OnPluginsLoadingEvent, IPlugin)
+  href: api/RisingV.Shared.Bootstrap.html#RisingV_Shared_Bootstrap_OnPluginsLoading_RisingV_Shared_EventBridge_OnPluginsLoadingEvent_RisingV_Shared_Plugins_IPlugin_
+  commentId: M:RisingV.Shared.Bootstrap.OnPluginsLoading(RisingV.Shared.EventBridge.OnPluginsLoadingEvent,RisingV.Shared.Plugins.IPlugin)
+  fullName: RisingV.Shared.Bootstrap.OnPluginsLoading(RisingV.Shared.EventBridge.OnPluginsLoadingEvent, RisingV.Shared.Plugins.IPlugin)
+  nameWithType: Bootstrap.OnPluginsLoading(EventBridge.OnPluginsLoadingEvent, IPlugin)
+- uid: RisingV.Shared.Bootstrap.OnPluginsLoading*
+  name: OnPluginsLoading
+  href: api/RisingV.Shared.Bootstrap.html#RisingV_Shared_Bootstrap_OnPluginsLoading_
+  commentId: Overload:RisingV.Shared.Bootstrap.OnPluginsLoading
+  isSpec: "True"
+  fullName: RisingV.Shared.Bootstrap.OnPluginsLoading
+  nameWithType: Bootstrap.OnPluginsLoading
+- uid: RisingV.Shared.Bootstrap.Plugin
+  name: Plugin
+  href: api/RisingV.Shared.Bootstrap.html#RisingV_Shared_Bootstrap_Plugin
+  commentId: P:RisingV.Shared.Bootstrap.Plugin
+  fullName: RisingV.Shared.Bootstrap.Plugin
+  nameWithType: Bootstrap.Plugin
+- uid: RisingV.Shared.Bootstrap.Plugin*
+  name: Plugin
+  href: api/RisingV.Shared.Bootstrap.html#RisingV_Shared_Bootstrap_Plugin_
+  commentId: Overload:RisingV.Shared.Bootstrap.Plugin
+  isSpec: "True"
+  fullName: RisingV.Shared.Bootstrap.Plugin
+  nameWithType: Bootstrap.Plugin
+- uid: RisingV.Shared.Bootstrap.PluginManager
+  name: PluginManager
+  href: api/RisingV.Shared.Bootstrap.html#RisingV_Shared_Bootstrap_PluginManager
+  commentId: P:RisingV.Shared.Bootstrap.PluginManager
+  fullName: RisingV.Shared.Bootstrap.PluginManager
+  nameWithType: Bootstrap.PluginManager
+- uid: RisingV.Shared.Bootstrap.PluginManager*
+  name: PluginManager
+  href: api/RisingV.Shared.Bootstrap.html#RisingV_Shared_Bootstrap_PluginManager_
+  commentId: Overload:RisingV.Shared.Bootstrap.PluginManager
+  isSpec: "True"
+  fullName: RisingV.Shared.Bootstrap.PluginManager
+  nameWithType: Bootstrap.PluginManager
+- uid: RisingV.Shared.Bootstrap.Reload(RisingV.Shared.Plugins.IPlugin)
+  name: Reload(IPlugin?)
+  href: api/RisingV.Shared.Bootstrap.html#RisingV_Shared_Bootstrap_Reload_RisingV_Shared_Plugins_IPlugin_
+  commentId: M:RisingV.Shared.Bootstrap.Reload(RisingV.Shared.Plugins.IPlugin)
+  name.vb: Reload(IPlugin)
+  fullName: RisingV.Shared.Bootstrap.Reload(RisingV.Shared.Plugins.IPlugin?)
+  fullName.vb: RisingV.Shared.Bootstrap.Reload(RisingV.Shared.Plugins.IPlugin)
+  nameWithType: Bootstrap.Reload(IPlugin?)
+  nameWithType.vb: Bootstrap.Reload(IPlugin)
+- uid: RisingV.Shared.Bootstrap.Reload*
+  name: Reload
+  href: api/RisingV.Shared.Bootstrap.html#RisingV_Shared_Bootstrap_Reload_
+  commentId: Overload:RisingV.Shared.Bootstrap.Reload
+  isSpec: "True"
+  fullName: RisingV.Shared.Bootstrap.Reload
+  nameWithType: Bootstrap.Reload
+- uid: RisingV.Shared.Bootstrap.SharedComponents
+  name: SharedComponents
+  href: api/RisingV.Shared.Bootstrap.html#RisingV_Shared_Bootstrap_SharedComponents
+  commentId: P:RisingV.Shared.Bootstrap.SharedComponents
+  fullName: RisingV.Shared.Bootstrap.SharedComponents
+  nameWithType: Bootstrap.SharedComponents
+- uid: RisingV.Shared.Bootstrap.SharedComponents*
+  name: SharedComponents
+  href: api/RisingV.Shared.Bootstrap.html#RisingV_Shared_Bootstrap_SharedComponents_
+  commentId: Overload:RisingV.Shared.Bootstrap.SharedComponents
+  isSpec: "True"
+  fullName: RisingV.Shared.Bootstrap.SharedComponents
+  nameWithType: Bootstrap.SharedComponents
+- uid: RisingV.Shared.Bootstrap.Unload(RisingV.Shared.Plugins.IPlugin)
+  name: Unload(IPlugin?)
+  href: api/RisingV.Shared.Bootstrap.html#RisingV_Shared_Bootstrap_Unload_RisingV_Shared_Plugins_IPlugin_
+  commentId: M:RisingV.Shared.Bootstrap.Unload(RisingV.Shared.Plugins.IPlugin)
+  name.vb: Unload(IPlugin)
+  fullName: RisingV.Shared.Bootstrap.Unload(RisingV.Shared.Plugins.IPlugin?)
+  fullName.vb: RisingV.Shared.Bootstrap.Unload(RisingV.Shared.Plugins.IPlugin)
+  nameWithType: Bootstrap.Unload(IPlugin?)
+  nameWithType.vb: Bootstrap.Unload(IPlugin)
+- uid: RisingV.Shared.Bootstrap.Unload*
+  name: Unload
+  href: api/RisingV.Shared.Bootstrap.html#RisingV_Shared_Bootstrap_Unload_
+  commentId: Overload:RisingV.Shared.Bootstrap.Unload
+  isSpec: "True"
+  fullName: RisingV.Shared.Bootstrap.Unload
+  nameWithType: Bootstrap.Unload
+- uid: RisingV.Shared.BootstrapPlugin
+  name: BootstrapPlugin
+  href: api/RisingV.Shared.BootstrapPlugin.html
+  commentId: T:RisingV.Shared.BootstrapPlugin
+  fullName: RisingV.Shared.BootstrapPlugin
+  nameWithType: BootstrapPlugin
+- uid: RisingV.Shared.BootstrapPluginContext
+  name: BootstrapPluginContext
+  href: api/RisingV.Shared.BootstrapPluginContext.html
+  commentId: T:RisingV.Shared.BootstrapPluginContext
+  fullName: RisingV.Shared.BootstrapPluginContext
+  nameWithType: BootstrapPluginContext
+- uid: RisingV.Shared.BootstrapPluginContext.#ctor
+  name: BootstrapPluginContext()
+  href: api/RisingV.Shared.BootstrapPluginContext.html#RisingV_Shared_BootstrapPluginContext__ctor
+  commentId: M:RisingV.Shared.BootstrapPluginContext.#ctor
+  name.vb: New()
+  fullName: RisingV.Shared.BootstrapPluginContext.BootstrapPluginContext()
+  fullName.vb: RisingV.Shared.BootstrapPluginContext.New()
+  nameWithType: BootstrapPluginContext.BootstrapPluginContext()
+  nameWithType.vb: BootstrapPluginContext.New()
+- uid: RisingV.Shared.BootstrapPluginContext.#ctor*
+  name: BootstrapPluginContext
+  href: api/RisingV.Shared.BootstrapPluginContext.html#RisingV_Shared_BootstrapPluginContext__ctor_
+  commentId: Overload:RisingV.Shared.BootstrapPluginContext.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: RisingV.Shared.BootstrapPluginContext.BootstrapPluginContext
+  fullName.vb: RisingV.Shared.BootstrapPluginContext.New
+  nameWithType: BootstrapPluginContext.BootstrapPluginContext
+  nameWithType.vb: BootstrapPluginContext.New
 - uid: RisingV.Shared.Caches
   name: Caches
   href: api/RisingV.Shared.Caches.html
@@ -16988,6 +17224,71 @@ references:
   fullName.vb: RisingV.Shared.Plugins.IPlugin.GetSharedComponent(Of TX)()
   nameWithType: IPlugin.GetSharedComponent<TX>()
   nameWithType.vb: IPlugin.GetSharedComponent(Of TX)()
+- uid: RisingV.Shared.Plugins.IPlugin.Load
+  name: Load()
+  href: api/RisingV.Shared.Plugins.IPlugin.html#RisingV_Shared_Plugins_IPlugin_Load
+  commentId: M:RisingV.Shared.Plugins.IPlugin.Load
+  fullName: RisingV.Shared.Plugins.IPlugin.Load()
+  nameWithType: IPlugin.Load()
+- uid: RisingV.Shared.Plugins.IPlugin.Load*
+  name: Load
+  href: api/RisingV.Shared.Plugins.IPlugin.html#RisingV_Shared_Plugins_IPlugin_Load_
+  commentId: Overload:RisingV.Shared.Plugins.IPlugin.Load
+  isSpec: "True"
+  fullName: RisingV.Shared.Plugins.IPlugin.Load
+  nameWithType: IPlugin.Load
+- uid: RisingV.Shared.Plugins.IPlugin.OnInitialize
+  name: OnInitialize()
+  href: api/RisingV.Shared.Plugins.IPlugin.html#RisingV_Shared_Plugins_IPlugin_OnInitialize
+  commentId: M:RisingV.Shared.Plugins.IPlugin.OnInitialize
+  fullName: RisingV.Shared.Plugins.IPlugin.OnInitialize()
+  nameWithType: IPlugin.OnInitialize()
+- uid: RisingV.Shared.Plugins.IPlugin.OnInitialize*
+  name: OnInitialize
+  href: api/RisingV.Shared.Plugins.IPlugin.html#RisingV_Shared_Plugins_IPlugin_OnInitialize_
+  commentId: Overload:RisingV.Shared.Plugins.IPlugin.OnInitialize
+  isSpec: "True"
+  fullName: RisingV.Shared.Plugins.IPlugin.OnInitialize
+  nameWithType: IPlugin.OnInitialize
+- uid: RisingV.Shared.Plugins.IPlugin.OnLoad
+  name: OnLoad()
+  href: api/RisingV.Shared.Plugins.IPlugin.html#RisingV_Shared_Plugins_IPlugin_OnLoad
+  commentId: M:RisingV.Shared.Plugins.IPlugin.OnLoad
+  fullName: RisingV.Shared.Plugins.IPlugin.OnLoad()
+  nameWithType: IPlugin.OnLoad()
+- uid: RisingV.Shared.Plugins.IPlugin.OnLoad*
+  name: OnLoad
+  href: api/RisingV.Shared.Plugins.IPlugin.html#RisingV_Shared_Plugins_IPlugin_OnLoad_
+  commentId: Overload:RisingV.Shared.Plugins.IPlugin.OnLoad
+  isSpec: "True"
+  fullName: RisingV.Shared.Plugins.IPlugin.OnLoad
+  nameWithType: IPlugin.OnLoad
+- uid: RisingV.Shared.Plugins.IPlugin.OnPreLoad
+  name: OnPreLoad()
+  href: api/RisingV.Shared.Plugins.IPlugin.html#RisingV_Shared_Plugins_IPlugin_OnPreLoad
+  commentId: M:RisingV.Shared.Plugins.IPlugin.OnPreLoad
+  fullName: RisingV.Shared.Plugins.IPlugin.OnPreLoad()
+  nameWithType: IPlugin.OnPreLoad()
+- uid: RisingV.Shared.Plugins.IPlugin.OnPreLoad*
+  name: OnPreLoad
+  href: api/RisingV.Shared.Plugins.IPlugin.html#RisingV_Shared_Plugins_IPlugin_OnPreLoad_
+  commentId: Overload:RisingV.Shared.Plugins.IPlugin.OnPreLoad
+  isSpec: "True"
+  fullName: RisingV.Shared.Plugins.IPlugin.OnPreLoad
+  nameWithType: IPlugin.OnPreLoad
+- uid: RisingV.Shared.Plugins.IPlugin.OnUnload
+  name: OnUnload()
+  href: api/RisingV.Shared.Plugins.IPlugin.html#RisingV_Shared_Plugins_IPlugin_OnUnload
+  commentId: M:RisingV.Shared.Plugins.IPlugin.OnUnload
+  fullName: RisingV.Shared.Plugins.IPlugin.OnUnload()
+  nameWithType: IPlugin.OnUnload()
+- uid: RisingV.Shared.Plugins.IPlugin.OnUnload*
+  name: OnUnload
+  href: api/RisingV.Shared.Plugins.IPlugin.html#RisingV_Shared_Plugins_IPlugin_OnUnload_
+  commentId: Overload:RisingV.Shared.Plugins.IPlugin.OnUnload
+  isSpec: "True"
+  fullName: RisingV.Shared.Plugins.IPlugin.OnUnload
+  nameWithType: IPlugin.OnUnload
 - uid: RisingV.Shared.Plugins.IPlugin.ProcessorManager
   name: ProcessorManager
   href: api/RisingV.Shared.Plugins.IPlugin.html#RisingV_Shared_Plugins_IPlugin_ProcessorManager
@@ -17001,6 +17302,35 @@ references:
   isSpec: "True"
   fullName: RisingV.Shared.Plugins.IPlugin.ProcessorManager
   nameWithType: IPlugin.ProcessorManager
+- uid: RisingV.Shared.Plugins.IPlugin.SetupConfiguration(RisingV.Shared.Plugins.PluginConfig)
+  name: SetupConfiguration(PluginConfig?)
+  href: api/RisingV.Shared.Plugins.IPlugin.html#RisingV_Shared_Plugins_IPlugin_SetupConfiguration_RisingV_Shared_Plugins_PluginConfig_
+  commentId: M:RisingV.Shared.Plugins.IPlugin.SetupConfiguration(RisingV.Shared.Plugins.PluginConfig)
+  name.vb: SetupConfiguration(PluginConfig)
+  fullName: RisingV.Shared.Plugins.IPlugin.SetupConfiguration(RisingV.Shared.Plugins.PluginConfig?)
+  fullName.vb: RisingV.Shared.Plugins.IPlugin.SetupConfiguration(RisingV.Shared.Plugins.PluginConfig)
+  nameWithType: IPlugin.SetupConfiguration(PluginConfig?)
+  nameWithType.vb: IPlugin.SetupConfiguration(PluginConfig)
+- uid: RisingV.Shared.Plugins.IPlugin.SetupConfiguration*
+  name: SetupConfiguration
+  href: api/RisingV.Shared.Plugins.IPlugin.html#RisingV_Shared_Plugins_IPlugin_SetupConfiguration_
+  commentId: Overload:RisingV.Shared.Plugins.IPlugin.SetupConfiguration
+  isSpec: "True"
+  fullName: RisingV.Shared.Plugins.IPlugin.SetupConfiguration
+  nameWithType: IPlugin.SetupConfiguration
+- uid: RisingV.Shared.Plugins.IPlugin.SetupSharedEventBus(RisingV.Shared.Events.ManagedEventBus)
+  name: SetupSharedEventBus(ManagedEventBus)
+  href: api/RisingV.Shared.Plugins.IPlugin.html#RisingV_Shared_Plugins_IPlugin_SetupSharedEventBus_RisingV_Shared_Events_ManagedEventBus_
+  commentId: M:RisingV.Shared.Plugins.IPlugin.SetupSharedEventBus(RisingV.Shared.Events.ManagedEventBus)
+  fullName: RisingV.Shared.Plugins.IPlugin.SetupSharedEventBus(RisingV.Shared.Events.ManagedEventBus)
+  nameWithType: IPlugin.SetupSharedEventBus(ManagedEventBus)
+- uid: RisingV.Shared.Plugins.IPlugin.SetupSharedEventBus*
+  name: SetupSharedEventBus
+  href: api/RisingV.Shared.Plugins.IPlugin.html#RisingV_Shared_Plugins_IPlugin_SetupSharedEventBus_
+  commentId: Overload:RisingV.Shared.Plugins.IPlugin.SetupSharedEventBus
+  isSpec: "True"
+  fullName: RisingV.Shared.Plugins.IPlugin.SetupSharedEventBus
+  nameWithType: IPlugin.SetupSharedEventBus
 - uid: RisingV.Shared.Plugins.IPlugin.SystemManager
   name: SystemManager
   href: api/RisingV.Shared.Plugins.IPlugin.html#RisingV_Shared_Plugins_IPlugin_SystemManager
@@ -17317,6 +17647,92 @@ references:
   isSpec: "True"
   fullName: RisingV.Shared.Plugins.PluginConfigManager.Log
   nameWithType: PluginConfigManager.Log
+- uid: RisingV.Shared.Plugins.PluginContext
+  name: PluginContext
+  href: api/RisingV.Shared.Plugins.PluginContext.html
+  commentId: T:RisingV.Shared.Plugins.PluginContext
+  fullName: RisingV.Shared.Plugins.PluginContext
+  nameWithType: PluginContext
+- uid: RisingV.Shared.Plugins.PluginContext.#ctor(RisingV.Shared.Plugins.PluginInfo,RisingV.Shared.Plugins.PluginConfig,RisingV.Shared.Plugins.PluginTarget)
+  name: PluginContext(PluginInfo, PluginConfig?, PluginTarget)
+  href: api/RisingV.Shared.Plugins.PluginContext.html#RisingV_Shared_Plugins_PluginContext__ctor_RisingV_Shared_Plugins_PluginInfo_RisingV_Shared_Plugins_PluginConfig_RisingV_Shared_Plugins_PluginTarget_
+  commentId: M:RisingV.Shared.Plugins.PluginContext.#ctor(RisingV.Shared.Plugins.PluginInfo,RisingV.Shared.Plugins.PluginConfig,RisingV.Shared.Plugins.PluginTarget)
+  name.vb: New(PluginInfo, PluginConfig, PluginTarget)
+  fullName: RisingV.Shared.Plugins.PluginContext.PluginContext(RisingV.Shared.Plugins.PluginInfo, RisingV.Shared.Plugins.PluginConfig?, RisingV.Shared.Plugins.PluginTarget)
+  fullName.vb: RisingV.Shared.Plugins.PluginContext.New(RisingV.Shared.Plugins.PluginInfo, RisingV.Shared.Plugins.PluginConfig, RisingV.Shared.Plugins.PluginTarget)
+  nameWithType: PluginContext.PluginContext(PluginInfo, PluginConfig?, PluginTarget)
+  nameWithType.vb: PluginContext.New(PluginInfo, PluginConfig, PluginTarget)
+- uid: RisingV.Shared.Plugins.PluginContext.#ctor(System.Type,RisingV.Shared.Plugins.PluginConfig,RisingV.Shared.Plugins.PluginTarget)
+  name: PluginContext(Type, PluginConfig?, PluginTarget)
+  href: api/RisingV.Shared.Plugins.PluginContext.html#RisingV_Shared_Plugins_PluginContext__ctor_System_Type_RisingV_Shared_Plugins_PluginConfig_RisingV_Shared_Plugins_PluginTarget_
+  commentId: M:RisingV.Shared.Plugins.PluginContext.#ctor(System.Type,RisingV.Shared.Plugins.PluginConfig,RisingV.Shared.Plugins.PluginTarget)
+  name.vb: New(Type, PluginConfig, PluginTarget)
+  fullName: RisingV.Shared.Plugins.PluginContext.PluginContext(System.Type, RisingV.Shared.Plugins.PluginConfig?, RisingV.Shared.Plugins.PluginTarget)
+  fullName.vb: RisingV.Shared.Plugins.PluginContext.New(System.Type, RisingV.Shared.Plugins.PluginConfig, RisingV.Shared.Plugins.PluginTarget)
+  nameWithType: PluginContext.PluginContext(Type, PluginConfig?, PluginTarget)
+  nameWithType.vb: PluginContext.New(Type, PluginConfig, PluginTarget)
+- uid: RisingV.Shared.Plugins.PluginContext.#ctor*
+  name: PluginContext
+  href: api/RisingV.Shared.Plugins.PluginContext.html#RisingV_Shared_Plugins_PluginContext__ctor_
+  commentId: Overload:RisingV.Shared.Plugins.PluginContext.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: RisingV.Shared.Plugins.PluginContext.PluginContext
+  fullName.vb: RisingV.Shared.Plugins.PluginContext.New
+  nameWithType: PluginContext.PluginContext
+  nameWithType.vb: PluginContext.New
+- uid: RisingV.Shared.Plugins.PluginContext.Harmony
+  name: Harmony
+  href: api/RisingV.Shared.Plugins.PluginContext.html#RisingV_Shared_Plugins_PluginContext_Harmony
+  commentId: P:RisingV.Shared.Plugins.PluginContext.Harmony
+  fullName: RisingV.Shared.Plugins.PluginContext.Harmony
+  nameWithType: PluginContext.Harmony
+- uid: RisingV.Shared.Plugins.PluginContext.Harmony*
+  name: Harmony
+  href: api/RisingV.Shared.Plugins.PluginContext.html#RisingV_Shared_Plugins_PluginContext_Harmony_
+  commentId: Overload:RisingV.Shared.Plugins.PluginContext.Harmony
+  isSpec: "True"
+  fullName: RisingV.Shared.Plugins.PluginContext.Harmony
+  nameWithType: PluginContext.Harmony
+- uid: RisingV.Shared.Plugins.PluginContext.PluginConfig
+  name: PluginConfig
+  href: api/RisingV.Shared.Plugins.PluginContext.html#RisingV_Shared_Plugins_PluginContext_PluginConfig
+  commentId: P:RisingV.Shared.Plugins.PluginContext.PluginConfig
+  fullName: RisingV.Shared.Plugins.PluginContext.PluginConfig
+  nameWithType: PluginContext.PluginConfig
+- uid: RisingV.Shared.Plugins.PluginContext.PluginConfig*
+  name: PluginConfig
+  href: api/RisingV.Shared.Plugins.PluginContext.html#RisingV_Shared_Plugins_PluginContext_PluginConfig_
+  commentId: Overload:RisingV.Shared.Plugins.PluginContext.PluginConfig
+  isSpec: "True"
+  fullName: RisingV.Shared.Plugins.PluginContext.PluginConfig
+  nameWithType: PluginContext.PluginConfig
+- uid: RisingV.Shared.Plugins.PluginContext.PluginInfo
+  name: PluginInfo
+  href: api/RisingV.Shared.Plugins.PluginContext.html#RisingV_Shared_Plugins_PluginContext_PluginInfo
+  commentId: P:RisingV.Shared.Plugins.PluginContext.PluginInfo
+  fullName: RisingV.Shared.Plugins.PluginContext.PluginInfo
+  nameWithType: PluginContext.PluginInfo
+- uid: RisingV.Shared.Plugins.PluginContext.PluginInfo*
+  name: PluginInfo
+  href: api/RisingV.Shared.Plugins.PluginContext.html#RisingV_Shared_Plugins_PluginContext_PluginInfo_
+  commentId: Overload:RisingV.Shared.Plugins.PluginContext.PluginInfo
+  isSpec: "True"
+  fullName: RisingV.Shared.Plugins.PluginContext.PluginInfo
+  nameWithType: PluginContext.PluginInfo
+- uid: RisingV.Shared.Plugins.PluginContext.PluginTarget
+  name: PluginTarget
+  href: api/RisingV.Shared.Plugins.PluginContext.html#RisingV_Shared_Plugins_PluginContext_PluginTarget
+  commentId: P:RisingV.Shared.Plugins.PluginContext.PluginTarget
+  fullName: RisingV.Shared.Plugins.PluginContext.PluginTarget
+  nameWithType: PluginContext.PluginTarget
+- uid: RisingV.Shared.Plugins.PluginContext.PluginTarget*
+  name: PluginTarget
+  href: api/RisingV.Shared.Plugins.PluginContext.html#RisingV_Shared_Plugins_PluginContext_PluginTarget_
+  commentId: Overload:RisingV.Shared.Plugins.PluginContext.PluginTarget
+  isSpec: "True"
+  fullName: RisingV.Shared.Plugins.PluginContext.PluginTarget
+  nameWithType: PluginContext.PluginTarget
 - uid: RisingV.Shared.Plugins.PluginInfo
   name: PluginInfo
   href: api/RisingV.Shared.Plugins.PluginInfo.html
@@ -17599,6 +18015,550 @@ references:
   commentId: F:RisingV.Shared.Plugins.PluginTarget.Server
   fullName: RisingV.Shared.Plugins.PluginTarget.Server
   nameWithType: PluginTarget.Server
+- uid: RisingV.Shared.Plugins.RisingPluginBase
+  name: RisingPluginBase
+  href: api/RisingV.Shared.Plugins.RisingPluginBase.html
+  commentId: T:RisingV.Shared.Plugins.RisingPluginBase
+  fullName: RisingV.Shared.Plugins.RisingPluginBase
+  nameWithType: RisingPluginBase
+- uid: RisingV.Shared.Plugins.RisingPluginBase.#ctor(RisingV.Shared.Plugins.PluginContext)
+  name: RisingPluginBase(PluginContext)
+  href: api/RisingV.Shared.Plugins.RisingPluginBase.html#RisingV_Shared_Plugins_RisingPluginBase__ctor_RisingV_Shared_Plugins_PluginContext_
+  commentId: M:RisingV.Shared.Plugins.RisingPluginBase.#ctor(RisingV.Shared.Plugins.PluginContext)
+  name.vb: New(PluginContext)
+  fullName: RisingV.Shared.Plugins.RisingPluginBase.RisingPluginBase(RisingV.Shared.Plugins.PluginContext)
+  fullName.vb: RisingV.Shared.Plugins.RisingPluginBase.New(RisingV.Shared.Plugins.PluginContext)
+  nameWithType: RisingPluginBase.RisingPluginBase(PluginContext)
+  nameWithType.vb: RisingPluginBase.New(PluginContext)
+- uid: RisingV.Shared.Plugins.RisingPluginBase.#ctor*
+  name: RisingPluginBase
+  href: api/RisingV.Shared.Plugins.RisingPluginBase.html#RisingV_Shared_Plugins_RisingPluginBase__ctor_
+  commentId: Overload:RisingV.Shared.Plugins.RisingPluginBase.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: RisingV.Shared.Plugins.RisingPluginBase.RisingPluginBase
+  fullName.vb: RisingV.Shared.Plugins.RisingPluginBase.New
+  nameWithType: RisingPluginBase.RisingPluginBase
+  nameWithType.vb: RisingPluginBase.New
+- uid: RisingV.Shared.Plugins.RisingPluginBase.AddSharedComponent*
+  name: AddSharedComponent
+  href: api/RisingV.Shared.Plugins.RisingPluginBase.html#RisingV_Shared_Plugins_RisingPluginBase_AddSharedComponent_
+  commentId: Overload:RisingV.Shared.Plugins.RisingPluginBase.AddSharedComponent
+  isSpec: "True"
+  fullName: RisingV.Shared.Plugins.RisingPluginBase.AddSharedComponent
+  nameWithType: RisingPluginBase.AddSharedComponent
+- uid: RisingV.Shared.Plugins.RisingPluginBase.AddSharedComponent``1(RisingV.Shared.Plugins.IPlugin,System.Boolean)
+  name: AddSharedComponent<T>(IPlugin, bool)
+  href: api/RisingV.Shared.Plugins.RisingPluginBase.html#RisingV_Shared_Plugins_RisingPluginBase_AddSharedComponent__1_RisingV_Shared_Plugins_IPlugin_System_Boolean_
+  commentId: M:RisingV.Shared.Plugins.RisingPluginBase.AddSharedComponent``1(RisingV.Shared.Plugins.IPlugin,System.Boolean)
+  name.vb: AddSharedComponent(Of T)(IPlugin, Boolean)
+  fullName: RisingV.Shared.Plugins.RisingPluginBase.AddSharedComponent<T>(RisingV.Shared.Plugins.IPlugin, bool)
+  fullName.vb: RisingV.Shared.Plugins.RisingPluginBase.AddSharedComponent(Of T)(RisingV.Shared.Plugins.IPlugin, Boolean)
+  nameWithType: RisingPluginBase.AddSharedComponent<T>(IPlugin, bool)
+  nameWithType.vb: RisingPluginBase.AddSharedComponent(Of T)(IPlugin, Boolean)
+- uid: RisingV.Shared.Plugins.RisingPluginBase.AddSharedComponent``1(RisingV.Shared.Plugins.IPlugin,``0,System.Boolean)
+  name: AddSharedComponent<T>(IPlugin, T, bool)
+  href: api/RisingV.Shared.Plugins.RisingPluginBase.html#RisingV_Shared_Plugins_RisingPluginBase_AddSharedComponent__1_RisingV_Shared_Plugins_IPlugin___0_System_Boolean_
+  commentId: M:RisingV.Shared.Plugins.RisingPluginBase.AddSharedComponent``1(RisingV.Shared.Plugins.IPlugin,``0,System.Boolean)
+  name.vb: AddSharedComponent(Of T)(IPlugin, T, Boolean)
+  fullName: RisingV.Shared.Plugins.RisingPluginBase.AddSharedComponent<T>(RisingV.Shared.Plugins.IPlugin, T, bool)
+  fullName.vb: RisingV.Shared.Plugins.RisingPluginBase.AddSharedComponent(Of T)(RisingV.Shared.Plugins.IPlugin, T, Boolean)
+  nameWithType: RisingPluginBase.AddSharedComponent<T>(IPlugin, T, bool)
+  nameWithType.vb: RisingPluginBase.AddSharedComponent(Of T)(IPlugin, T, Boolean)
+- uid: RisingV.Shared.Plugins.RisingPluginBase.Composites
+  name: Composites
+  href: api/RisingV.Shared.Plugins.RisingPluginBase.html#RisingV_Shared_Plugins_RisingPluginBase_Composites
+  commentId: P:RisingV.Shared.Plugins.RisingPluginBase.Composites
+  fullName: RisingV.Shared.Plugins.RisingPluginBase.Composites
+  nameWithType: RisingPluginBase.Composites
+- uid: RisingV.Shared.Plugins.RisingPluginBase.Composites*
+  name: Composites
+  href: api/RisingV.Shared.Plugins.RisingPluginBase.html#RisingV_Shared_Plugins_RisingPluginBase_Composites_
+  commentId: Overload:RisingV.Shared.Plugins.RisingPluginBase.Composites
+  isSpec: "True"
+  fullName: RisingV.Shared.Plugins.RisingPluginBase.Composites
+  nameWithType: RisingPluginBase.Composites
+- uid: RisingV.Shared.Plugins.RisingPluginBase.Context
+  name: Context
+  href: api/RisingV.Shared.Plugins.RisingPluginBase.html#RisingV_Shared_Plugins_RisingPluginBase_Context
+  commentId: P:RisingV.Shared.Plugins.RisingPluginBase.Context
+  fullName: RisingV.Shared.Plugins.RisingPluginBase.Context
+  nameWithType: RisingPluginBase.Context
+- uid: RisingV.Shared.Plugins.RisingPluginBase.Context*
+  name: Context
+  href: api/RisingV.Shared.Plugins.RisingPluginBase.html#RisingV_Shared_Plugins_RisingPluginBase_Context_
+  commentId: Overload:RisingV.Shared.Plugins.RisingPluginBase.Context
+  isSpec: "True"
+  fullName: RisingV.Shared.Plugins.RisingPluginBase.Context
+  nameWithType: RisingPluginBase.Context
+- uid: RisingV.Shared.Plugins.RisingPluginBase.DatabaseManager
+  name: DatabaseManager
+  href: api/RisingV.Shared.Plugins.RisingPluginBase.html#RisingV_Shared_Plugins_RisingPluginBase_DatabaseManager
+  commentId: P:RisingV.Shared.Plugins.RisingPluginBase.DatabaseManager
+  fullName: RisingV.Shared.Plugins.RisingPluginBase.DatabaseManager
+  nameWithType: RisingPluginBase.DatabaseManager
+- uid: RisingV.Shared.Plugins.RisingPluginBase.DatabaseManager*
+  name: DatabaseManager
+  href: api/RisingV.Shared.Plugins.RisingPluginBase.html#RisingV_Shared_Plugins_RisingPluginBase_DatabaseManager_
+  commentId: Overload:RisingV.Shared.Plugins.RisingPluginBase.DatabaseManager
+  isSpec: "True"
+  fullName: RisingV.Shared.Plugins.RisingPluginBase.DatabaseManager
+  nameWithType: RisingPluginBase.DatabaseManager
+- uid: RisingV.Shared.Plugins.RisingPluginBase.Dispose
+  name: Dispose()
+  href: api/RisingV.Shared.Plugins.RisingPluginBase.html#RisingV_Shared_Plugins_RisingPluginBase_Dispose
+  commentId: M:RisingV.Shared.Plugins.RisingPluginBase.Dispose
+  fullName: RisingV.Shared.Plugins.RisingPluginBase.Dispose()
+  nameWithType: RisingPluginBase.Dispose()
+- uid: RisingV.Shared.Plugins.RisingPluginBase.Dispose*
+  name: Dispose
+  href: api/RisingV.Shared.Plugins.RisingPluginBase.html#RisingV_Shared_Plugins_RisingPluginBase_Dispose_
+  commentId: Overload:RisingV.Shared.Plugins.RisingPluginBase.Dispose
+  isSpec: "True"
+  fullName: RisingV.Shared.Plugins.RisingPluginBase.Dispose
+  nameWithType: RisingPluginBase.Dispose
+- uid: RisingV.Shared.Plugins.RisingPluginBase.EngineManager
+  name: EngineManager
+  href: api/RisingV.Shared.Plugins.RisingPluginBase.html#RisingV_Shared_Plugins_RisingPluginBase_EngineManager
+  commentId: P:RisingV.Shared.Plugins.RisingPluginBase.EngineManager
+  fullName: RisingV.Shared.Plugins.RisingPluginBase.EngineManager
+  nameWithType: RisingPluginBase.EngineManager
+- uid: RisingV.Shared.Plugins.RisingPluginBase.EngineManager*
+  name: EngineManager
+  href: api/RisingV.Shared.Plugins.RisingPluginBase.html#RisingV_Shared_Plugins_RisingPluginBase_EngineManager_
+  commentId: Overload:RisingV.Shared.Plugins.RisingPluginBase.EngineManager
+  isSpec: "True"
+  fullName: RisingV.Shared.Plugins.RisingPluginBase.EngineManager
+  nameWithType: RisingPluginBase.EngineManager
+- uid: RisingV.Shared.Plugins.RisingPluginBase.EventBus
+  name: EventBus
+  href: api/RisingV.Shared.Plugins.RisingPluginBase.html#RisingV_Shared_Plugins_RisingPluginBase_EventBus
+  commentId: P:RisingV.Shared.Plugins.RisingPluginBase.EventBus
+  fullName: RisingV.Shared.Plugins.RisingPluginBase.EventBus
+  nameWithType: RisingPluginBase.EventBus
+- uid: RisingV.Shared.Plugins.RisingPluginBase.EventBus*
+  name: EventBus
+  href: api/RisingV.Shared.Plugins.RisingPluginBase.html#RisingV_Shared_Plugins_RisingPluginBase_EventBus_
+  commentId: Overload:RisingV.Shared.Plugins.RisingPluginBase.EventBus
+  isSpec: "True"
+  fullName: RisingV.Shared.Plugins.RisingPluginBase.EventBus
+  nameWithType: RisingPluginBase.EventBus
+- uid: RisingV.Shared.Plugins.RisingPluginBase.GetSharedComponent(System.Type)
+  name: GetSharedComponent(Type)
+  href: api/RisingV.Shared.Plugins.RisingPluginBase.html#RisingV_Shared_Plugins_RisingPluginBase_GetSharedComponent_System_Type_
+  commentId: M:RisingV.Shared.Plugins.RisingPluginBase.GetSharedComponent(System.Type)
+  fullName: RisingV.Shared.Plugins.RisingPluginBase.GetSharedComponent(System.Type)
+  nameWithType: RisingPluginBase.GetSharedComponent(Type)
+- uid: RisingV.Shared.Plugins.RisingPluginBase.GetSharedComponent*
+  name: GetSharedComponent
+  href: api/RisingV.Shared.Plugins.RisingPluginBase.html#RisingV_Shared_Plugins_RisingPluginBase_GetSharedComponent_
+  commentId: Overload:RisingV.Shared.Plugins.RisingPluginBase.GetSharedComponent
+  isSpec: "True"
+  fullName: RisingV.Shared.Plugins.RisingPluginBase.GetSharedComponent
+  nameWithType: RisingPluginBase.GetSharedComponent
+- uid: RisingV.Shared.Plugins.RisingPluginBase.GetSharedComponent``1
+  name: GetSharedComponent<TX>()
+  href: api/RisingV.Shared.Plugins.RisingPluginBase.html#RisingV_Shared_Plugins_RisingPluginBase_GetSharedComponent__1
+  commentId: M:RisingV.Shared.Plugins.RisingPluginBase.GetSharedComponent``1
+  name.vb: GetSharedComponent(Of TX)()
+  fullName: RisingV.Shared.Plugins.RisingPluginBase.GetSharedComponent<TX>()
+  fullName.vb: RisingV.Shared.Plugins.RisingPluginBase.GetSharedComponent(Of TX)()
+  nameWithType: RisingPluginBase.GetSharedComponent<TX>()
+  nameWithType.vb: RisingPluginBase.GetSharedComponent(Of TX)()
+- uid: RisingV.Shared.Plugins.RisingPluginBase.Harmony
+  name: Harmony
+  href: api/RisingV.Shared.Plugins.RisingPluginBase.html#RisingV_Shared_Plugins_RisingPluginBase_Harmony
+  commentId: P:RisingV.Shared.Plugins.RisingPluginBase.Harmony
+  fullName: RisingV.Shared.Plugins.RisingPluginBase.Harmony
+  nameWithType: RisingPluginBase.Harmony
+- uid: RisingV.Shared.Plugins.RisingPluginBase.Harmony*
+  name: Harmony
+  href: api/RisingV.Shared.Plugins.RisingPluginBase.html#RisingV_Shared_Plugins_RisingPluginBase_Harmony_
+  commentId: Overload:RisingV.Shared.Plugins.RisingPluginBase.Harmony
+  isSpec: "True"
+  fullName: RisingV.Shared.Plugins.RisingPluginBase.Harmony
+  nameWithType: RisingPluginBase.Harmony
+- uid: RisingV.Shared.Plugins.RisingPluginBase.Load
+  name: Load()
+  href: api/RisingV.Shared.Plugins.RisingPluginBase.html#RisingV_Shared_Plugins_RisingPluginBase_Load
+  commentId: M:RisingV.Shared.Plugins.RisingPluginBase.Load
+  fullName: RisingV.Shared.Plugins.RisingPluginBase.Load()
+  nameWithType: RisingPluginBase.Load()
+- uid: RisingV.Shared.Plugins.RisingPluginBase.Load*
+  name: Load
+  href: api/RisingV.Shared.Plugins.RisingPluginBase.html#RisingV_Shared_Plugins_RisingPluginBase_Load_
+  commentId: Overload:RisingV.Shared.Plugins.RisingPluginBase.Load
+  isSpec: "True"
+  fullName: RisingV.Shared.Plugins.RisingPluginBase.Load
+  nameWithType: RisingPluginBase.Load
+- uid: RisingV.Shared.Plugins.RisingPluginBase.Log
+  name: Log
+  href: api/RisingV.Shared.Plugins.RisingPluginBase.html#RisingV_Shared_Plugins_RisingPluginBase_Log
+  commentId: P:RisingV.Shared.Plugins.RisingPluginBase.Log
+  fullName: RisingV.Shared.Plugins.RisingPluginBase.Log
+  nameWithType: RisingPluginBase.Log
+- uid: RisingV.Shared.Plugins.RisingPluginBase.Log*
+  name: Log
+  href: api/RisingV.Shared.Plugins.RisingPluginBase.html#RisingV_Shared_Plugins_RisingPluginBase_Log_
+  commentId: Overload:RisingV.Shared.Plugins.RisingPluginBase.Log
+  isSpec: "True"
+  fullName: RisingV.Shared.Plugins.RisingPluginBase.Log
+  nameWithType: RisingPluginBase.Log
+- uid: RisingV.Shared.Plugins.RisingPluginBase.OnGameDataInitialized(RisingV.Shared.EventBridge.OnGameDataInitializedEvent)
+  name: OnGameDataInitialized(OnGameDataInitializedEvent)
+  href: api/RisingV.Shared.Plugins.RisingPluginBase.html#RisingV_Shared_Plugins_RisingPluginBase_OnGameDataInitialized_RisingV_Shared_EventBridge_OnGameDataInitializedEvent_
+  commentId: M:RisingV.Shared.Plugins.RisingPluginBase.OnGameDataInitialized(RisingV.Shared.EventBridge.OnGameDataInitializedEvent)
+  fullName: RisingV.Shared.Plugins.RisingPluginBase.OnGameDataInitialized(RisingV.Shared.EventBridge.OnGameDataInitializedEvent)
+  nameWithType: RisingPluginBase.OnGameDataInitialized(EventBridge.OnGameDataInitializedEvent)
+- uid: RisingV.Shared.Plugins.RisingPluginBase.OnGameDataInitialized*
+  name: OnGameDataInitialized
+  href: api/RisingV.Shared.Plugins.RisingPluginBase.html#RisingV_Shared_Plugins_RisingPluginBase_OnGameDataInitialized_
+  commentId: Overload:RisingV.Shared.Plugins.RisingPluginBase.OnGameDataInitialized
+  isSpec: "True"
+  fullName: RisingV.Shared.Plugins.RisingPluginBase.OnGameDataInitialized
+  nameWithType: RisingPluginBase.OnGameDataInitialized
+- uid: RisingV.Shared.Plugins.RisingPluginBase.OnInitialize
+  name: OnInitialize()
+  href: api/RisingV.Shared.Plugins.RisingPluginBase.html#RisingV_Shared_Plugins_RisingPluginBase_OnInitialize
+  commentId: M:RisingV.Shared.Plugins.RisingPluginBase.OnInitialize
+  fullName: RisingV.Shared.Plugins.RisingPluginBase.OnInitialize()
+  nameWithType: RisingPluginBase.OnInitialize()
+- uid: RisingV.Shared.Plugins.RisingPluginBase.OnInitialize*
+  name: OnInitialize
+  href: api/RisingV.Shared.Plugins.RisingPluginBase.html#RisingV_Shared_Plugins_RisingPluginBase_OnInitialize_
+  commentId: Overload:RisingV.Shared.Plugins.RisingPluginBase.OnInitialize
+  isSpec: "True"
+  fullName: RisingV.Shared.Plugins.RisingPluginBase.OnInitialize
+  nameWithType: RisingPluginBase.OnInitialize
+- uid: RisingV.Shared.Plugins.RisingPluginBase.OnLoad
+  name: OnLoad()
+  href: api/RisingV.Shared.Plugins.RisingPluginBase.html#RisingV_Shared_Plugins_RisingPluginBase_OnLoad
+  commentId: M:RisingV.Shared.Plugins.RisingPluginBase.OnLoad
+  fullName: RisingV.Shared.Plugins.RisingPluginBase.OnLoad()
+  nameWithType: RisingPluginBase.OnLoad()
+- uid: RisingV.Shared.Plugins.RisingPluginBase.OnLoad*
+  name: OnLoad
+  href: api/RisingV.Shared.Plugins.RisingPluginBase.html#RisingV_Shared_Plugins_RisingPluginBase_OnLoad_
+  commentId: Overload:RisingV.Shared.Plugins.RisingPluginBase.OnLoad
+  isSpec: "True"
+  fullName: RisingV.Shared.Plugins.RisingPluginBase.OnLoad
+  nameWithType: RisingPluginBase.OnLoad
+- uid: RisingV.Shared.Plugins.RisingPluginBase.OnPluginsInitializing(RisingV.Shared.EventBridge.OnPluginsInitializingEvent)
+  name: OnPluginsInitializing(OnPluginsInitializingEvent)
+  href: api/RisingV.Shared.Plugins.RisingPluginBase.html#RisingV_Shared_Plugins_RisingPluginBase_OnPluginsInitializing_RisingV_Shared_EventBridge_OnPluginsInitializingEvent_
+  commentId: M:RisingV.Shared.Plugins.RisingPluginBase.OnPluginsInitializing(RisingV.Shared.EventBridge.OnPluginsInitializingEvent)
+  fullName: RisingV.Shared.Plugins.RisingPluginBase.OnPluginsInitializing(RisingV.Shared.EventBridge.OnPluginsInitializingEvent)
+  nameWithType: RisingPluginBase.OnPluginsInitializing(EventBridge.OnPluginsInitializingEvent)
+- uid: RisingV.Shared.Plugins.RisingPluginBase.OnPluginsInitializing*
+  name: OnPluginsInitializing
+  href: api/RisingV.Shared.Plugins.RisingPluginBase.html#RisingV_Shared_Plugins_RisingPluginBase_OnPluginsInitializing_
+  commentId: Overload:RisingV.Shared.Plugins.RisingPluginBase.OnPluginsInitializing
+  isSpec: "True"
+  fullName: RisingV.Shared.Plugins.RisingPluginBase.OnPluginsInitializing
+  nameWithType: RisingPluginBase.OnPluginsInitializing
+- uid: RisingV.Shared.Plugins.RisingPluginBase.OnPluginsLoaded(RisingV.Shared.EventBridge.OnPluginsLoadedEvent)
+  name: OnPluginsLoaded(OnPluginsLoadedEvent)
+  href: api/RisingV.Shared.Plugins.RisingPluginBase.html#RisingV_Shared_Plugins_RisingPluginBase_OnPluginsLoaded_RisingV_Shared_EventBridge_OnPluginsLoadedEvent_
+  commentId: M:RisingV.Shared.Plugins.RisingPluginBase.OnPluginsLoaded(RisingV.Shared.EventBridge.OnPluginsLoadedEvent)
+  fullName: RisingV.Shared.Plugins.RisingPluginBase.OnPluginsLoaded(RisingV.Shared.EventBridge.OnPluginsLoadedEvent)
+  nameWithType: RisingPluginBase.OnPluginsLoaded(EventBridge.OnPluginsLoadedEvent)
+- uid: RisingV.Shared.Plugins.RisingPluginBase.OnPluginsLoaded*
+  name: OnPluginsLoaded
+  href: api/RisingV.Shared.Plugins.RisingPluginBase.html#RisingV_Shared_Plugins_RisingPluginBase_OnPluginsLoaded_
+  commentId: Overload:RisingV.Shared.Plugins.RisingPluginBase.OnPluginsLoaded
+  isSpec: "True"
+  fullName: RisingV.Shared.Plugins.RisingPluginBase.OnPluginsLoaded
+  nameWithType: RisingPluginBase.OnPluginsLoaded
+- uid: RisingV.Shared.Plugins.RisingPluginBase.OnPluginsLoading(RisingV.Shared.EventBridge.OnPluginsLoadingEvent)
+  name: OnPluginsLoading(OnPluginsLoadingEvent)
+  href: api/RisingV.Shared.Plugins.RisingPluginBase.html#RisingV_Shared_Plugins_RisingPluginBase_OnPluginsLoading_RisingV_Shared_EventBridge_OnPluginsLoadingEvent_
+  commentId: M:RisingV.Shared.Plugins.RisingPluginBase.OnPluginsLoading(RisingV.Shared.EventBridge.OnPluginsLoadingEvent)
+  fullName: RisingV.Shared.Plugins.RisingPluginBase.OnPluginsLoading(RisingV.Shared.EventBridge.OnPluginsLoadingEvent)
+  nameWithType: RisingPluginBase.OnPluginsLoading(EventBridge.OnPluginsLoadingEvent)
+- uid: RisingV.Shared.Plugins.RisingPluginBase.OnPluginsLoading*
+  name: OnPluginsLoading
+  href: api/RisingV.Shared.Plugins.RisingPluginBase.html#RisingV_Shared_Plugins_RisingPluginBase_OnPluginsLoading_
+  commentId: Overload:RisingV.Shared.Plugins.RisingPluginBase.OnPluginsLoading
+  isSpec: "True"
+  fullName: RisingV.Shared.Plugins.RisingPluginBase.OnPluginsLoading
+  nameWithType: RisingPluginBase.OnPluginsLoading
+- uid: RisingV.Shared.Plugins.RisingPluginBase.OnPreLoad
+  name: OnPreLoad()
+  href: api/RisingV.Shared.Plugins.RisingPluginBase.html#RisingV_Shared_Plugins_RisingPluginBase_OnPreLoad
+  commentId: M:RisingV.Shared.Plugins.RisingPluginBase.OnPreLoad
+  fullName: RisingV.Shared.Plugins.RisingPluginBase.OnPreLoad()
+  nameWithType: RisingPluginBase.OnPreLoad()
+- uid: RisingV.Shared.Plugins.RisingPluginBase.OnPreLoad*
+  name: OnPreLoad
+  href: api/RisingV.Shared.Plugins.RisingPluginBase.html#RisingV_Shared_Plugins_RisingPluginBase_OnPreLoad_
+  commentId: Overload:RisingV.Shared.Plugins.RisingPluginBase.OnPreLoad
+  isSpec: "True"
+  fullName: RisingV.Shared.Plugins.RisingPluginBase.OnPreLoad
+  nameWithType: RisingPluginBase.OnPreLoad
+- uid: RisingV.Shared.Plugins.RisingPluginBase.OnReload(RisingV.Shared.Managers.IManager,System.Collections.Generic.List{RisingV.Shared.Plugins.IPlugin},RisingV.Shared.Managers.ReloadReason)
+  name: OnReload(IManager, List<IPlugin>, ReloadReason)
+  href: api/RisingV.Shared.Plugins.RisingPluginBase.html#RisingV_Shared_Plugins_RisingPluginBase_OnReload_RisingV_Shared_Managers_IManager_System_Collections_Generic_List_RisingV_Shared_Plugins_IPlugin__RisingV_Shared_Managers_ReloadReason_
+  commentId: M:RisingV.Shared.Plugins.RisingPluginBase.OnReload(RisingV.Shared.Managers.IManager,System.Collections.Generic.List{RisingV.Shared.Plugins.IPlugin},RisingV.Shared.Managers.ReloadReason)
+  name.vb: OnReload(IManager, List(Of IPlugin), ReloadReason)
+  fullName: RisingV.Shared.Plugins.RisingPluginBase.OnReload(RisingV.Shared.Managers.IManager, System.Collections.Generic.List<RisingV.Shared.Plugins.IPlugin>, RisingV.Shared.Managers.ReloadReason)
+  fullName.vb: RisingV.Shared.Plugins.RisingPluginBase.OnReload(RisingV.Shared.Managers.IManager, System.Collections.Generic.List(Of RisingV.Shared.Plugins.IPlugin), RisingV.Shared.Managers.ReloadReason)
+  nameWithType: RisingPluginBase.OnReload(IManager, List<IPlugin>, ReloadReason)
+  nameWithType.vb: RisingPluginBase.OnReload(IManager, List(Of IPlugin), ReloadReason)
+- uid: RisingV.Shared.Plugins.RisingPluginBase.OnReload(RisingV.Shared.Plugins.PluginManager,System.Collections.Generic.List{RisingV.Shared.Plugins.IPlugin},RisingV.Shared.Managers.ReloadReason)
+  name: OnReload(PluginManager, List<IPlugin>, ReloadReason)
+  href: api/RisingV.Shared.Plugins.RisingPluginBase.html#RisingV_Shared_Plugins_RisingPluginBase_OnReload_RisingV_Shared_Plugins_PluginManager_System_Collections_Generic_List_RisingV_Shared_Plugins_IPlugin__RisingV_Shared_Managers_ReloadReason_
+  commentId: M:RisingV.Shared.Plugins.RisingPluginBase.OnReload(RisingV.Shared.Plugins.PluginManager,System.Collections.Generic.List{RisingV.Shared.Plugins.IPlugin},RisingV.Shared.Managers.ReloadReason)
+  name.vb: OnReload(PluginManager, List(Of IPlugin), ReloadReason)
+  fullName: RisingV.Shared.Plugins.RisingPluginBase.OnReload(RisingV.Shared.Plugins.PluginManager, System.Collections.Generic.List<RisingV.Shared.Plugins.IPlugin>, RisingV.Shared.Managers.ReloadReason)
+  fullName.vb: RisingV.Shared.Plugins.RisingPluginBase.OnReload(RisingV.Shared.Plugins.PluginManager, System.Collections.Generic.List(Of RisingV.Shared.Plugins.IPlugin), RisingV.Shared.Managers.ReloadReason)
+  nameWithType: RisingPluginBase.OnReload(PluginManager, List<IPlugin>, ReloadReason)
+  nameWithType.vb: RisingPluginBase.OnReload(PluginManager, List(Of IPlugin), ReloadReason)
+- uid: RisingV.Shared.Plugins.RisingPluginBase.OnReload*
+  name: OnReload
+  href: api/RisingV.Shared.Plugins.RisingPluginBase.html#RisingV_Shared_Plugins_RisingPluginBase_OnReload_
+  commentId: Overload:RisingV.Shared.Plugins.RisingPluginBase.OnReload
+  isSpec: "True"
+  fullName: RisingV.Shared.Plugins.RisingPluginBase.OnReload
+  nameWithType: RisingPluginBase.OnReload
+- uid: RisingV.Shared.Plugins.RisingPluginBase.OnUnload
+  name: OnUnload()
+  href: api/RisingV.Shared.Plugins.RisingPluginBase.html#RisingV_Shared_Plugins_RisingPluginBase_OnUnload
+  commentId: M:RisingV.Shared.Plugins.RisingPluginBase.OnUnload
+  fullName: RisingV.Shared.Plugins.RisingPluginBase.OnUnload()
+  nameWithType: RisingPluginBase.OnUnload()
+- uid: RisingV.Shared.Plugins.RisingPluginBase.OnUnload*
+  name: OnUnload
+  href: api/RisingV.Shared.Plugins.RisingPluginBase.html#RisingV_Shared_Plugins_RisingPluginBase_OnUnload_
+  commentId: Overload:RisingV.Shared.Plugins.RisingPluginBase.OnUnload
+  isSpec: "True"
+  fullName: RisingV.Shared.Plugins.RisingPluginBase.OnUnload
+  nameWithType: RisingPluginBase.OnUnload
+- uid: RisingV.Shared.Plugins.RisingPluginBase.PluginConfig
+  name: PluginConfig
+  href: api/RisingV.Shared.Plugins.RisingPluginBase.html#RisingV_Shared_Plugins_RisingPluginBase_PluginConfig
+  commentId: P:RisingV.Shared.Plugins.RisingPluginBase.PluginConfig
+  fullName: RisingV.Shared.Plugins.RisingPluginBase.PluginConfig
+  nameWithType: RisingPluginBase.PluginConfig
+- uid: RisingV.Shared.Plugins.RisingPluginBase.PluginConfig*
+  name: PluginConfig
+  href: api/RisingV.Shared.Plugins.RisingPluginBase.html#RisingV_Shared_Plugins_RisingPluginBase_PluginConfig_
+  commentId: Overload:RisingV.Shared.Plugins.RisingPluginBase.PluginConfig
+  isSpec: "True"
+  fullName: RisingV.Shared.Plugins.RisingPluginBase.PluginConfig
+  nameWithType: RisingPluginBase.PluginConfig
+- uid: RisingV.Shared.Plugins.RisingPluginBase.PluginInfo
+  name: PluginInfo
+  href: api/RisingV.Shared.Plugins.RisingPluginBase.html#RisingV_Shared_Plugins_RisingPluginBase_PluginInfo
+  commentId: P:RisingV.Shared.Plugins.RisingPluginBase.PluginInfo
+  fullName: RisingV.Shared.Plugins.RisingPluginBase.PluginInfo
+  nameWithType: RisingPluginBase.PluginInfo
+- uid: RisingV.Shared.Plugins.RisingPluginBase.PluginInfo*
+  name: PluginInfo
+  href: api/RisingV.Shared.Plugins.RisingPluginBase.html#RisingV_Shared_Plugins_RisingPluginBase_PluginInfo_
+  commentId: Overload:RisingV.Shared.Plugins.RisingPluginBase.PluginInfo
+  isSpec: "True"
+  fullName: RisingV.Shared.Plugins.RisingPluginBase.PluginInfo
+  nameWithType: RisingPluginBase.PluginInfo
+- uid: RisingV.Shared.Plugins.RisingPluginBase.PluginTarget
+  name: PluginTarget
+  href: api/RisingV.Shared.Plugins.RisingPluginBase.html#RisingV_Shared_Plugins_RisingPluginBase_PluginTarget
+  commentId: P:RisingV.Shared.Plugins.RisingPluginBase.PluginTarget
+  fullName: RisingV.Shared.Plugins.RisingPluginBase.PluginTarget
+  nameWithType: RisingPluginBase.PluginTarget
+- uid: RisingV.Shared.Plugins.RisingPluginBase.PluginTarget*
+  name: PluginTarget
+  href: api/RisingV.Shared.Plugins.RisingPluginBase.html#RisingV_Shared_Plugins_RisingPluginBase_PluginTarget_
+  commentId: Overload:RisingV.Shared.Plugins.RisingPluginBase.PluginTarget
+  isSpec: "True"
+  fullName: RisingV.Shared.Plugins.RisingPluginBase.PluginTarget
+  nameWithType: RisingPluginBase.PluginTarget
+- uid: RisingV.Shared.Plugins.RisingPluginBase.ProcessorManager
+  name: ProcessorManager
+  href: api/RisingV.Shared.Plugins.RisingPluginBase.html#RisingV_Shared_Plugins_RisingPluginBase_ProcessorManager
+  commentId: P:RisingV.Shared.Plugins.RisingPluginBase.ProcessorManager
+  fullName: RisingV.Shared.Plugins.RisingPluginBase.ProcessorManager
+  nameWithType: RisingPluginBase.ProcessorManager
+- uid: RisingV.Shared.Plugins.RisingPluginBase.ProcessorManager*
+  name: ProcessorManager
+  href: api/RisingV.Shared.Plugins.RisingPluginBase.html#RisingV_Shared_Plugins_RisingPluginBase_ProcessorManager_
+  commentId: Overload:RisingV.Shared.Plugins.RisingPluginBase.ProcessorManager
+  isSpec: "True"
+  fullName: RisingV.Shared.Plugins.RisingPluginBase.ProcessorManager
+  nameWithType: RisingPluginBase.ProcessorManager
+- uid: RisingV.Shared.Plugins.RisingPluginBase.Reload(RisingV.Shared.Plugins.PluginManager,RisingV.Shared.Managers.ReloadReason)
+  name: Reload(PluginManager, ReloadReason)
+  href: api/RisingV.Shared.Plugins.RisingPluginBase.html#RisingV_Shared_Plugins_RisingPluginBase_Reload_RisingV_Shared_Plugins_PluginManager_RisingV_Shared_Managers_ReloadReason_
+  commentId: M:RisingV.Shared.Plugins.RisingPluginBase.Reload(RisingV.Shared.Plugins.PluginManager,RisingV.Shared.Managers.ReloadReason)
+  fullName: RisingV.Shared.Plugins.RisingPluginBase.Reload(RisingV.Shared.Plugins.PluginManager, RisingV.Shared.Managers.ReloadReason)
+  nameWithType: RisingPluginBase.Reload(PluginManager, ReloadReason)
+- uid: RisingV.Shared.Plugins.RisingPluginBase.Reload(RisingV.Shared.Plugins.PluginManager,System.Collections.Generic.List{RisingV.Shared.Plugins.IPlugin},RisingV.Shared.Managers.ReloadReason)
+  name: Reload(PluginManager, List<IPlugin>, ReloadReason)
+  href: api/RisingV.Shared.Plugins.RisingPluginBase.html#RisingV_Shared_Plugins_RisingPluginBase_Reload_RisingV_Shared_Plugins_PluginManager_System_Collections_Generic_List_RisingV_Shared_Plugins_IPlugin__RisingV_Shared_Managers_ReloadReason_
+  commentId: M:RisingV.Shared.Plugins.RisingPluginBase.Reload(RisingV.Shared.Plugins.PluginManager,System.Collections.Generic.List{RisingV.Shared.Plugins.IPlugin},RisingV.Shared.Managers.ReloadReason)
+  name.vb: Reload(PluginManager, List(Of IPlugin), ReloadReason)
+  fullName: RisingV.Shared.Plugins.RisingPluginBase.Reload(RisingV.Shared.Plugins.PluginManager, System.Collections.Generic.List<RisingV.Shared.Plugins.IPlugin>, RisingV.Shared.Managers.ReloadReason)
+  fullName.vb: RisingV.Shared.Plugins.RisingPluginBase.Reload(RisingV.Shared.Plugins.PluginManager, System.Collections.Generic.List(Of RisingV.Shared.Plugins.IPlugin), RisingV.Shared.Managers.ReloadReason)
+  nameWithType: RisingPluginBase.Reload(PluginManager, List<IPlugin>, ReloadReason)
+  nameWithType.vb: RisingPluginBase.Reload(PluginManager, List(Of IPlugin), ReloadReason)
+- uid: RisingV.Shared.Plugins.RisingPluginBase.Reload*
+  name: Reload
+  href: api/RisingV.Shared.Plugins.RisingPluginBase.html#RisingV_Shared_Plugins_RisingPluginBase_Reload_
+  commentId: Overload:RisingV.Shared.Plugins.RisingPluginBase.Reload
+  isSpec: "True"
+  fullName: RisingV.Shared.Plugins.RisingPluginBase.Reload
+  nameWithType: RisingPluginBase.Reload
+- uid: RisingV.Shared.Plugins.RisingPluginBase.SetupConfiguration(RisingV.Shared.Plugins.PluginConfig)
+  name: SetupConfiguration(PluginConfig?)
+  href: api/RisingV.Shared.Plugins.RisingPluginBase.html#RisingV_Shared_Plugins_RisingPluginBase_SetupConfiguration_RisingV_Shared_Plugins_PluginConfig_
+  commentId: M:RisingV.Shared.Plugins.RisingPluginBase.SetupConfiguration(RisingV.Shared.Plugins.PluginConfig)
+  name.vb: SetupConfiguration(PluginConfig)
+  fullName: RisingV.Shared.Plugins.RisingPluginBase.SetupConfiguration(RisingV.Shared.Plugins.PluginConfig?)
+  fullName.vb: RisingV.Shared.Plugins.RisingPluginBase.SetupConfiguration(RisingV.Shared.Plugins.PluginConfig)
+  nameWithType: RisingPluginBase.SetupConfiguration(PluginConfig?)
+  nameWithType.vb: RisingPluginBase.SetupConfiguration(PluginConfig)
+- uid: RisingV.Shared.Plugins.RisingPluginBase.SetupConfiguration*
+  name: SetupConfiguration
+  href: api/RisingV.Shared.Plugins.RisingPluginBase.html#RisingV_Shared_Plugins_RisingPluginBase_SetupConfiguration_
+  commentId: Overload:RisingV.Shared.Plugins.RisingPluginBase.SetupConfiguration
+  isSpec: "True"
+  fullName: RisingV.Shared.Plugins.RisingPluginBase.SetupConfiguration
+  nameWithType: RisingPluginBase.SetupConfiguration
+- uid: RisingV.Shared.Plugins.RisingPluginBase.SetupSharedEventBus(RisingV.Shared.Events.ManagedEventBus)
+  name: SetupSharedEventBus(ManagedEventBus)
+  href: api/RisingV.Shared.Plugins.RisingPluginBase.html#RisingV_Shared_Plugins_RisingPluginBase_SetupSharedEventBus_RisingV_Shared_Events_ManagedEventBus_
+  commentId: M:RisingV.Shared.Plugins.RisingPluginBase.SetupSharedEventBus(RisingV.Shared.Events.ManagedEventBus)
+  fullName: RisingV.Shared.Plugins.RisingPluginBase.SetupSharedEventBus(RisingV.Shared.Events.ManagedEventBus)
+  nameWithType: RisingPluginBase.SetupSharedEventBus(ManagedEventBus)
+- uid: RisingV.Shared.Plugins.RisingPluginBase.SetupSharedEventBus*
+  name: SetupSharedEventBus
+  href: api/RisingV.Shared.Plugins.RisingPluginBase.html#RisingV_Shared_Plugins_RisingPluginBase_SetupSharedEventBus_
+  commentId: Overload:RisingV.Shared.Plugins.RisingPluginBase.SetupSharedEventBus
+  isSpec: "True"
+  fullName: RisingV.Shared.Plugins.RisingPluginBase.SetupSharedEventBus
+  nameWithType: RisingPluginBase.SetupSharedEventBus
+- uid: RisingV.Shared.Plugins.RisingPluginBase.SystemManager
+  name: SystemManager
+  href: api/RisingV.Shared.Plugins.RisingPluginBase.html#RisingV_Shared_Plugins_RisingPluginBase_SystemManager
+  commentId: P:RisingV.Shared.Plugins.RisingPluginBase.SystemManager
+  fullName: RisingV.Shared.Plugins.RisingPluginBase.SystemManager
+  nameWithType: RisingPluginBase.SystemManager
+- uid: RisingV.Shared.Plugins.RisingPluginBase.SystemManager*
+  name: SystemManager
+  href: api/RisingV.Shared.Plugins.RisingPluginBase.html#RisingV_Shared_Plugins_RisingPluginBase_SystemManager_
+  commentId: Overload:RisingV.Shared.Plugins.RisingPluginBase.SystemManager
+  isSpec: "True"
+  fullName: RisingV.Shared.Plugins.RisingPluginBase.SystemManager
+  nameWithType: RisingPluginBase.SystemManager
+- uid: RisingV.Shared.Plugins.RisingPluginBase.Unload
+  name: Unload()
+  href: api/RisingV.Shared.Plugins.RisingPluginBase.html#RisingV_Shared_Plugins_RisingPluginBase_Unload
+  commentId: M:RisingV.Shared.Plugins.RisingPluginBase.Unload
+  fullName: RisingV.Shared.Plugins.RisingPluginBase.Unload()
+  nameWithType: RisingPluginBase.Unload()
+- uid: RisingV.Shared.Plugins.RisingPluginBase.Unload*
+  name: Unload
+  href: api/RisingV.Shared.Plugins.RisingPluginBase.html#RisingV_Shared_Plugins_RisingPluginBase_Unload_
+  commentId: Overload:RisingV.Shared.Plugins.RisingPluginBase.Unload
+  isSpec: "True"
+  fullName: RisingV.Shared.Plugins.RisingPluginBase.Unload
+  nameWithType: RisingPluginBase.Unload
+- uid: RisingV.Shared.Plugins.RisingSharedPlugin`1
+  name: RisingSharedPlugin<TContext>
+  href: api/RisingV.Shared.Plugins.RisingSharedPlugin-1.html
+  commentId: T:RisingV.Shared.Plugins.RisingSharedPlugin`1
+  name.vb: RisingSharedPlugin(Of TContext)
+  fullName: RisingV.Shared.Plugins.RisingSharedPlugin<TContext>
+  fullName.vb: RisingV.Shared.Plugins.RisingSharedPlugin(Of TContext)
+  nameWithType: RisingSharedPlugin<TContext>
+  nameWithType.vb: RisingSharedPlugin(Of TContext)
+- uid: RisingV.Shared.Plugins.RisingSharedPlugin`1.#ctor
+  name: RisingSharedPlugin()
+  href: api/RisingV.Shared.Plugins.RisingSharedPlugin-1.html#RisingV_Shared_Plugins_RisingSharedPlugin_1__ctor
+  commentId: M:RisingV.Shared.Plugins.RisingSharedPlugin`1.#ctor
+  name.vb: New()
+  fullName: RisingV.Shared.Plugins.RisingSharedPlugin<TContext>.RisingSharedPlugin()
+  fullName.vb: RisingV.Shared.Plugins.RisingSharedPlugin(Of TContext).New()
+  nameWithType: RisingSharedPlugin<TContext>.RisingSharedPlugin()
+  nameWithType.vb: RisingSharedPlugin(Of TContext).New()
+- uid: RisingV.Shared.Plugins.RisingSharedPlugin`1.#ctor(`0)
+  name: RisingSharedPlugin(TContext)
+  href: api/RisingV.Shared.Plugins.RisingSharedPlugin-1.html#RisingV_Shared_Plugins_RisingSharedPlugin_1__ctor__0_
+  commentId: M:RisingV.Shared.Plugins.RisingSharedPlugin`1.#ctor(`0)
+  name.vb: New(TContext)
+  fullName: RisingV.Shared.Plugins.RisingSharedPlugin<TContext>.RisingSharedPlugin(TContext)
+  fullName.vb: RisingV.Shared.Plugins.RisingSharedPlugin(Of TContext).New(TContext)
+  nameWithType: RisingSharedPlugin<TContext>.RisingSharedPlugin(TContext)
+  nameWithType.vb: RisingSharedPlugin(Of TContext).New(TContext)
+- uid: RisingV.Shared.Plugins.RisingSharedPlugin`1.#ctor*
+  name: RisingSharedPlugin
+  href: api/RisingV.Shared.Plugins.RisingSharedPlugin-1.html#RisingV_Shared_Plugins_RisingSharedPlugin_1__ctor_
+  commentId: Overload:RisingV.Shared.Plugins.RisingSharedPlugin`1.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: RisingV.Shared.Plugins.RisingSharedPlugin<TContext>.RisingSharedPlugin
+  fullName.vb: RisingV.Shared.Plugins.RisingSharedPlugin(Of TContext).New
+  nameWithType: RisingSharedPlugin<TContext>.RisingSharedPlugin
+  nameWithType.vb: RisingSharedPlugin(Of TContext).New
+- uid: RisingV.Shared.Plugins.RisingSharedPlugin`1.Context
+  name: Context
+  href: api/RisingV.Shared.Plugins.RisingSharedPlugin-1.html#RisingV_Shared_Plugins_RisingSharedPlugin_1_Context
+  commentId: P:RisingV.Shared.Plugins.RisingSharedPlugin`1.Context
+  fullName: RisingV.Shared.Plugins.RisingSharedPlugin<TContext>.Context
+  fullName.vb: RisingV.Shared.Plugins.RisingSharedPlugin(Of TContext).Context
+  nameWithType: RisingSharedPlugin<TContext>.Context
+  nameWithType.vb: RisingSharedPlugin(Of TContext).Context
+- uid: RisingV.Shared.Plugins.RisingSharedPlugin`1.Context*
+  name: Context
+  href: api/RisingV.Shared.Plugins.RisingSharedPlugin-1.html#RisingV_Shared_Plugins_RisingSharedPlugin_1_Context_
+  commentId: Overload:RisingV.Shared.Plugins.RisingSharedPlugin`1.Context
+  isSpec: "True"
+  fullName: RisingV.Shared.Plugins.RisingSharedPlugin<TContext>.Context
+  fullName.vb: RisingV.Shared.Plugins.RisingSharedPlugin(Of TContext).Context
+  nameWithType: RisingSharedPlugin<TContext>.Context
+  nameWithType.vb: RisingSharedPlugin(Of TContext).Context
+- uid: RisingV.Shared.Plugins.RisingSharedPlugin`1.Get
+  name: Get()
+  href: api/RisingV.Shared.Plugins.RisingSharedPlugin-1.html#RisingV_Shared_Plugins_RisingSharedPlugin_1_Get
+  commentId: M:RisingV.Shared.Plugins.RisingSharedPlugin`1.Get
+  fullName: RisingV.Shared.Plugins.RisingSharedPlugin<TContext>.Get()
+  fullName.vb: RisingV.Shared.Plugins.RisingSharedPlugin(Of TContext).Get()
+  nameWithType: RisingSharedPlugin<TContext>.Get()
+  nameWithType.vb: RisingSharedPlugin(Of TContext).Get()
+- uid: RisingV.Shared.Plugins.RisingSharedPlugin`1.Get*
+  name: Get
+  href: api/RisingV.Shared.Plugins.RisingSharedPlugin-1.html#RisingV_Shared_Plugins_RisingSharedPlugin_1_Get_
+  commentId: Overload:RisingV.Shared.Plugins.RisingSharedPlugin`1.Get
+  isSpec: "True"
+  fullName: RisingV.Shared.Plugins.RisingSharedPlugin<TContext>.Get
+  fullName.vb: RisingV.Shared.Plugins.RisingSharedPlugin(Of TContext).Get
+  nameWithType: RisingSharedPlugin<TContext>.Get
+  nameWithType.vb: RisingSharedPlugin(Of TContext).Get
+- uid: RisingV.Shared.Plugins.RisingSharedPlugin`1.Get``1
+  name: Get<TX>()
+  href: api/RisingV.Shared.Plugins.RisingSharedPlugin-1.html#RisingV_Shared_Plugins_RisingSharedPlugin_1_Get__1
+  commentId: M:RisingV.Shared.Plugins.RisingSharedPlugin`1.Get``1
+  name.vb: Get(Of TX)()
+  fullName: RisingV.Shared.Plugins.RisingSharedPlugin<TContext>.Get<TX>()
+  fullName.vb: RisingV.Shared.Plugins.RisingSharedPlugin(Of TContext).Get(Of TX)()
+  nameWithType: RisingSharedPlugin<TContext>.Get<TX>()
+  nameWithType.vb: RisingSharedPlugin(Of TContext).Get(Of TX)()
+- uid: RisingV.Shared.Plugins.RisingSharedPlugin`1.OnPluginsLoaded(RisingV.Shared.EventBridge.OnPluginsLoadedEvent)
+  name: OnPluginsLoaded(OnPluginsLoadedEvent)
+  href: api/RisingV.Shared.Plugins.RisingSharedPlugin-1.html#RisingV_Shared_Plugins_RisingSharedPlugin_1_OnPluginsLoaded_RisingV_Shared_EventBridge_OnPluginsLoadedEvent_
+  commentId: M:RisingV.Shared.Plugins.RisingSharedPlugin`1.OnPluginsLoaded(RisingV.Shared.EventBridge.OnPluginsLoadedEvent)
+  fullName: RisingV.Shared.Plugins.RisingSharedPlugin<TContext>.OnPluginsLoaded(RisingV.Shared.EventBridge.OnPluginsLoadedEvent)
+  fullName.vb: RisingV.Shared.Plugins.RisingSharedPlugin(Of TContext).OnPluginsLoaded(RisingV.Shared.EventBridge.OnPluginsLoadedEvent)
+  nameWithType: RisingSharedPlugin<TContext>.OnPluginsLoaded(EventBridge.OnPluginsLoadedEvent)
+  nameWithType.vb: RisingSharedPlugin(Of TContext).OnPluginsLoaded(EventBridge.OnPluginsLoadedEvent)
+- uid: RisingV.Shared.Plugins.RisingSharedPlugin`1.OnPluginsLoaded*
+  name: OnPluginsLoaded
+  href: api/RisingV.Shared.Plugins.RisingSharedPlugin-1.html#RisingV_Shared_Plugins_RisingSharedPlugin_1_OnPluginsLoaded_
+  commentId: Overload:RisingV.Shared.Plugins.RisingSharedPlugin`1.OnPluginsLoaded
+  isSpec: "True"
+  fullName: RisingV.Shared.Plugins.RisingSharedPlugin<TContext>.OnPluginsLoaded
+  fullName.vb: RisingV.Shared.Plugins.RisingSharedPlugin(Of TContext).OnPluginsLoaded
+  nameWithType: RisingSharedPlugin<TContext>.OnPluginsLoaded
+  nameWithType.vb: RisingSharedPlugin(Of TContext).OnPluginsLoaded
 - uid: RisingV.Shared.Processors
   name: RisingV.Shared.Processors
   href: api/RisingV.Shared.Processors.html
