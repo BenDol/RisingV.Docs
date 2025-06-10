@@ -111,7 +111,7 @@ dotnet add package RisingV.Scripting
 [BepInDependency(&quot;RisingV.Scripting&quot;)]
 </code></pre>
 </li>
-<li><p>Add the <code>ScriptingEngine</code> to your plugin's <code>Initialize</code> method:</p>
+<li><p>Add the <code>ScriptingEngine</code> to your plugin's <code>OnInitialize</code> method:</p>
 <pre><code class="lang-csharp">public override void OnInitialize()
 {
     EngineManager.AddEngine&lt;ScripingEngine&gt;();
