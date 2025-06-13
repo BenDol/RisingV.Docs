@@ -115,7 +115,7 @@ dotnet add package RisingV.Scripting
     EngineManager.AddEngine&lt;ScripingEngine&gt;();
 }
 </code></pre>
-<p>or, if you aren't using the RisingPlugin base class you can add the engine directly:</p>
+<p>or, if you aren't using the <code>RisingPlugin</code> base class you can add the engine directly:</p>
 <pre><code class="lang-csharp">[BepInPlugin(MyPluginInfo.PLUGIN_GUID, MyPluginInfo.PLUGIN_NAME, MyPluginInfo.PLUGIN_VERSION)]
 [BepInDependency(&quot;RisingV.Scripting&quot;)]
 public class Plugin : BasePlugin

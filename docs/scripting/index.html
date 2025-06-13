@@ -73,7 +73,7 @@
         <article data-uid="">
 
 <p align="center" class="risingv-title-logo">
-    <a href="https://risingv.dev"><img src="https://risingv.dev/images/scripting-logo-rounded.png" width="220" alt="RisingV.Scripting"></a>
+    <a href="https://github.com/RisingV-Mods/RisingV.Scripting"><img src="https://risingv.dev/images/scripting-logo-rounded.png" width="220" alt="RisingV.Scripting"></a>
 </p>
 <p><a href="https://github.com/RisingV-Mods/RisingV.Scripting/actions/workflows/build.yml"><img src="https://github.com/RisingV-Mods/RisingV.Scripting/actions/workflows/build.yml/badge.svg" alt="Build"></a>
 <a href="https://github.com/RisingV-Mods/RisingV.Scripting/actions/workflows/docfx.yml"><img src="https://github.com/RisingV-Mods/RisingV.Scripting/actions/workflows/docfx.yml/badge.svg" alt="DocFX"></a></p>
@@ -117,7 +117,7 @@ dotnet add package RisingV.Scripting
     EngineManager.AddEngine&lt;ScripingEngine&gt;();
 }
 </code></pre>
-<p>or, if you aren't using the RisingPlugin base class you can add the engine directly:</p>
+<p>or, if you aren't using the <code>RisingPlugin</code> base class you can add the engine directly:</p>
 <pre><code class="lang-csharp">[BepInPlugin(MyPluginInfo.PLUGIN_GUID, MyPluginInfo.PLUGIN_NAME, MyPluginInfo.PLUGIN_VERSION)]
 [BepInDependency(&quot;RisingV.Scripting&quot;)]
 public class Plugin : BasePlugin
