@@ -105,7 +105,7 @@ Class Plugin  <a class="header-action link-secondary" title="View source" href="
 [BepInDependency(&quot;gg.deca.VampireCommandFramework&quot;, BepInDependency.DependencyFlags.HardDependency)]
 [BepInDependency(&quot;RisingV.Core&quot;, BepInDependency.DependencyFlags.HardDependency)]
 [BepInDependency(&quot;RisingV.Scripting&quot;, BepInDependency.DependencyFlags.HardDependency)]
-public class Plugin : RisingPlugin&lt;TemplatePluginContext&gt;, IDisposable, IPlugin&lt;TemplatePluginContext&gt;, IPlugin, IManageable&lt;PluginManager&gt;, IReloadable&lt;PluginManager&gt;, IReloadable, IHasPluginContext&lt;TemplatePluginContext&gt;, IPluginContext, IPluginComponent, IManageable&lt;PluginComponentsManager&gt;, IManageable</code></pre>
+public class Plugin : RisingPlugin&lt;TemplatePluginContext&gt;, IPlugin&lt;TemplatePluginContext&gt;, IPlugin, IManageable&lt;PluginManager&gt;, IReloadable&lt;PluginManager&gt;, IReloadable, IDisposable, IHasPluginContext&lt;TemplatePluginContext&gt;, IPluginContext, IPluginComponent, IManageable&lt;PluginComponentsManager&gt;, IManageable</code></pre>
   </div>
 
 
@@ -116,7 +116,6 @@ public class Plugin : RisingPlugin&lt;TemplatePluginContext&gt;, IDisposable, IP
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
       <div><span class="xref">BasePlugin</span></div>
-      <div><a class="xref" href="https://docs.risingv.dev/core/api/RisingV.Core.Plugins.RisingPluginBase.html">RisingPluginBase</a></div>
       <div><a class="xref" href="https://docs.risingv.dev/core/api/RisingV.Core.Plugins.RisingPlugin-1.html">RisingPlugin</a>&lt;<a class="xref" href="RisingV.Template.TemplatePluginContext.html">TemplatePluginContext</a>&gt;</div>
       <div><span class="xref">Plugin</span></div>
     </dd>
@@ -125,12 +124,12 @@ public class Plugin : RisingPlugin&lt;TemplatePluginContext&gt;, IDisposable, IP
   <dl class="typelist implements">
     <dt>Implements</dt>
     <dd>
-      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
       <div><a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Plugins.IPlugin-1.html">IPlugin</a>&lt;<a class="xref" href="RisingV.Template.TemplatePluginContext.html">TemplatePluginContext</a>&gt;</div>
       <div><a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Plugins.IPlugin.html">IPlugin</a></div>
       <div><a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Managers.IManageable-1.html">IManageable</a>&lt;<a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Plugins.PluginManager.html">PluginManager</a>&gt;</div>
       <div><a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Managers.IReloadable-1.html">IReloadable</a>&lt;<a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Plugins.PluginManager.html">PluginManager</a>&gt;</div>
       <div><a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Managers.IReloadable.html">IReloadable</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
       <div><a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Plugins.IHasPluginContext-1.html">IHasPluginContext</a>&lt;<a class="xref" href="RisingV.Template.TemplatePluginContext.html">TemplatePluginContext</a>&gt;</div>
       <div><a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Plugins.IPluginContext.html">IPluginContext</a></div>
       <div><a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Plugins.IPluginComponent.html">IPluginComponent</a></div>
@@ -144,100 +143,85 @@ public class Plugin : RisingPlugin&lt;TemplatePluginContext&gt;, IDisposable, IP
     <dt>Inherited Members</dt>
     <dd>
     <div>
+      <a class="xref" href="RisingV.Core.Plugins.RisingPlugin-1.html#RisingV_Core_Plugins_RisingPlugin_1_Delegate">RisingPlugin&lt;TemplatePluginContext&gt;.Delegate</a>
+    </div>
+    <div>
       <a class="xref" href="RisingV.Core.Plugins.RisingPlugin-1.html#RisingV_Core_Plugins_RisingPlugin_1_Get">RisingPlugin&lt;TemplatePluginContext&gt;.Get()</a>
     </div>
     <div>
-      <a class="xref" href="RisingV.Core.Plugins.RisingPlugin-1.html#RisingV_Core_Plugins_RisingPlugin_1_Get__1">RisingPlugin&lt;TemplatePluginContext&gt;.Get&lt;TX&gt;()</a>
+      <a class="xref" href="RisingV.Core.Plugins.RisingPlugin-1.html#RisingV_Core_Plugins_RisingPlugin_1_PluginInfo">RisingPlugin&lt;TemplatePluginContext&gt;.PluginInfo</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Core.Plugins.RisingPlugin-1.html#RisingV_Core_Plugins_RisingPlugin_1_PluginConfig">RisingPlugin&lt;TemplatePluginContext&gt;.PluginConfig</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Core.Plugins.RisingPlugin-1.html#RisingV_Core_Plugins_RisingPlugin_1_PluginTarget">RisingPlugin&lt;TemplatePluginContext&gt;.PluginTarget</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Core.Plugins.RisingPlugin-1.html#RisingV_Core_Plugins_RisingPlugin_1_Harmony">RisingPlugin&lt;TemplatePluginContext&gt;.Harmony</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Core.Plugins.RisingPlugin-1.html#RisingV_Core_Plugins_RisingPlugin_1_EventBus">RisingPlugin&lt;TemplatePluginContext&gt;.EventBus</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Core.Plugins.RisingPlugin-1.html#RisingV_Core_Plugins_RisingPlugin_1_SystemManager">RisingPlugin&lt;TemplatePluginContext&gt;.SystemManager</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Core.Plugins.RisingPlugin-1.html#RisingV_Core_Plugins_RisingPlugin_1_ProcessorManager">RisingPlugin&lt;TemplatePluginContext&gt;.ProcessorManager</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Core.Plugins.RisingPlugin-1.html#RisingV_Core_Plugins_RisingPlugin_1_DatabaseManager">RisingPlugin&lt;TemplatePluginContext&gt;.DatabaseManager</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Core.Plugins.RisingPlugin-1.html#RisingV_Core_Plugins_RisingPlugin_1_EngineManager">RisingPlugin&lt;TemplatePluginContext&gt;.EngineManager</a>
     </div>
     <div>
       <a class="xref" href="RisingV.Core.Plugins.RisingPlugin-1.html#RisingV_Core_Plugins_RisingPlugin_1_Context">RisingPlugin&lt;TemplatePluginContext&gt;.Context</a>
     </div>
     <div>
+      <a class="xref" href="RisingV.Core.Plugins.RisingPlugin-1.html#RisingV_Core_Plugins_RisingPlugin_1_SetupConfiguration_RisingV_Shared_Plugins_PluginConfig_">RisingPlugin&lt;TemplatePluginContext&gt;.SetupConfiguration(PluginConfig)</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Core.Plugins.RisingPlugin-1.html#RisingV_Core_Plugins_RisingPlugin_1_SetupSharedEventBus_RisingV_Shared_Events_ManagedEventBus_">RisingPlugin&lt;TemplatePluginContext&gt;.SetupSharedEventBus(ManagedEventBus)</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Core.Plugins.RisingPlugin-1.html#RisingV_Core_Plugins_RisingPlugin_1_Dispose">RisingPlugin&lt;TemplatePluginContext&gt;.Dispose()</a>
+    </div>
+    <div>
       <a class="xref" href="RisingV.Core.Plugins.RisingPlugin-1.html#RisingV_Core_Plugins_RisingPlugin_1_Load">RisingPlugin&lt;TemplatePluginContext&gt;.Load()</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Core.Plugins.RisingPlugin-1.html#RisingV_Core_Plugins_RisingPlugin_1_OnReload_RisingV_Shared_Managers_IManager_System_Collections_Generic_List_RisingV_Shared_Plugins_IPlugin__RisingV_Shared_Managers_ReloadReason_">RisingPlugin&lt;TemplatePluginContext&gt;.OnReload(IManager, List&lt;IPlugin&gt;, ReloadReason)</a>
     </div>
     <div>
       <a class="xref" href="RisingV.Core.Plugins.RisingPlugin-1.html#RisingV_Core_Plugins_RisingPlugin_1_Unload">RisingPlugin&lt;TemplatePluginContext&gt;.Unload()</a>
     </div>
     <div>
-      <a class="xref" href="RisingV.Core.Plugins.RisingPlugin-1.html#RisingV_Core_Plugins_RisingPlugin_1_OnPluginsLoaded_RisingV_Shared_EventBridge_OnPluginsLoadedEvent_">RisingPlugin&lt;TemplatePluginContext&gt;.OnPluginsLoaded(EventBridge.OnPluginsLoadedEvent)</a>
+      <a class="xref" href="RisingV.Core.Plugins.RisingPlugin-1.html#RisingV_Core_Plugins_RisingPlugin_1_OnReload_RisingV_Shared_Plugins_PluginManager_System_Collections_Generic_List_RisingV_Shared_Plugins_IPlugin__RisingV_Shared_Managers_ReloadReason_">RisingPlugin&lt;TemplatePluginContext&gt;.OnReload(PluginManager, List&lt;IPlugin&gt;, ReloadReason)</a>
     </div>
     <div>
-      <a class="xref" href="RisingV.Core.Plugins.RisingPluginBase.html#RisingV_Core_Plugins_RisingPluginBase_PluginInfo">RisingPluginBase.PluginInfo</a>
+      <a class="xref" href="RisingV.Core.Plugins.RisingPlugin-1.html#RisingV_Core_Plugins_RisingPlugin_1_Reload_RisingV_Shared_Plugins_PluginManager_System_Collections_Generic_List_RisingV_Shared_Plugins_IPlugin__RisingV_Shared_Managers_ReloadReason_">RisingPlugin&lt;TemplatePluginContext&gt;.Reload(PluginManager, List&lt;IPlugin&gt;, ReloadReason)</a>
     </div>
     <div>
-      <a class="xref" href="RisingV.Core.Plugins.RisingPluginBase.html#RisingV_Core_Plugins_RisingPluginBase_PluginConfig">RisingPluginBase.PluginConfig</a>
+      <a class="xref" href="RisingV.Core.Plugins.RisingPlugin-1.html#RisingV_Core_Plugins_RisingPlugin_1_Reload_RisingV_Shared_Plugins_PluginManager_RisingV_Shared_Managers_ReloadReason_">RisingPlugin&lt;TemplatePluginContext&gt;.Reload(PluginManager, ReloadReason)</a>
     </div>
     <div>
-      <a class="xref" href="RisingV.Core.Plugins.RisingPluginBase.html#RisingV_Core_Plugins_RisingPluginBase_PluginTarget">RisingPluginBase.PluginTarget</a>
+      <a class="xref" href="RisingV.Core.Plugins.RisingPlugin-1.html#RisingV_Core_Plugins_RisingPlugin_1_GetSharedComponent_System_Type_">RisingPlugin&lt;TemplatePluginContext&gt;.GetSharedComponent(Type)</a>
     </div>
     <div>
-      <a class="xref" href="RisingV.Core.Plugins.RisingPluginBase.html#RisingV_Core_Plugins_RisingPluginBase_Harmony">RisingPluginBase.Harmony</a>
+      <a class="xref" href="RisingV.Core.Plugins.RisingPlugin-1.html#RisingV_Core_Plugins_RisingPlugin_1_GetSharedComponent__1">RisingPlugin&lt;TemplatePluginContext&gt;.GetSharedComponent&lt;TX&gt;()</a>
     </div>
     <div>
-      <a class="xref" href="RisingV.Core.Plugins.RisingPluginBase.html#RisingV_Core_Plugins_RisingPluginBase_EventBus">RisingPluginBase.EventBus</a>
+      <a class="xref" href="RisingV.Core.Plugins.RisingPlugin-1.html#RisingV_Core_Plugins_RisingPlugin_1_AddSharedComponent__1_RisingV_Shared_Plugins_IPlugin_System_Boolean_">RisingPlugin&lt;TemplatePluginContext&gt;.AddSharedComponent&lt;T&gt;(IPlugin, bool)</a>
     </div>
     <div>
-      <a class="xref" href="RisingV.Core.Plugins.RisingPluginBase.html#RisingV_Core_Plugins_RisingPluginBase_SystemManager">RisingPluginBase.SystemManager</a>
-    </div>
-    <div>
-      <a class="xref" href="RisingV.Core.Plugins.RisingPluginBase.html#RisingV_Core_Plugins_RisingPluginBase_ProcessorManager">RisingPluginBase.ProcessorManager</a>
-    </div>
-    <div>
-      <a class="xref" href="RisingV.Core.Plugins.RisingPluginBase.html#RisingV_Core_Plugins_RisingPluginBase_DatabaseManager">RisingPluginBase.DatabaseManager</a>
-    </div>
-    <div>
-      <a class="xref" href="RisingV.Core.Plugins.RisingPluginBase.html#RisingV_Core_Plugins_RisingPluginBase_EngineManager">RisingPluginBase.EngineManager</a>
-    </div>
-    <div>
-      <a class="xref" href="RisingV.Core.Plugins.RisingPluginBase.html#RisingV_Core_Plugins_RisingPluginBase_Log">RisingPluginBase.Log</a>
-    </div>
-    <div>
-      <a class="xref" href="RisingV.Core.Plugins.RisingPluginBase.html#RisingV_Core_Plugins_RisingPluginBase_Initialized">RisingPluginBase.Initialized</a>
-    </div>
-    <div>
-      <a class="xref" href="RisingV.Core.Plugins.RisingPluginBase.html#RisingV_Core_Plugins_RisingPluginBase_OnReload_RisingV_Shared_Managers_IManager_System_Collections_Generic_List_RisingV_Shared_Plugins_IPlugin__RisingV_Shared_Managers_ReloadReason_">RisingPluginBase.OnReload(IManager, List&lt;IPlugin&gt;, ReloadReason)</a>
-    </div>
-    <div>
-      <a class="xref" href="RisingV.Core.Plugins.RisingPluginBase.html#RisingV_Core_Plugins_RisingPluginBase_OnGameDataInitialized_RisingV_Shared_EventBridge_OnGameDataInitializedEvent_">RisingPluginBase.OnGameDataInitialized(EventBridge.OnGameDataInitializedEvent)</a>
-    </div>
-    <div>
-      <a class="xref" href="RisingV.Core.Plugins.RisingPluginBase.html#RisingV_Core_Plugins_RisingPluginBase_OnReload_RisingV_Shared_Plugins_PluginManager_System_Collections_Generic_List_RisingV_Shared_Plugins_IPlugin__RisingV_Shared_Managers_ReloadReason_">RisingPluginBase.OnReload(PluginManager, List&lt;IPlugin&gt;, ReloadReason)</a>
-    </div>
-    <div>
-      <a class="xref" href="RisingV.Core.Plugins.RisingPluginBase.html#RisingV_Core_Plugins_RisingPluginBase_Reload_RisingV_Shared_Plugins_PluginManager_System_Collections_Generic_List_RisingV_Shared_Plugins_IPlugin__RisingV_Shared_Managers_ReloadReason_">RisingPluginBase.Reload(PluginManager, List&lt;IPlugin&gt;, ReloadReason)</a>
-    </div>
-    <div>
-      <a class="xref" href="RisingV.Core.Plugins.RisingPluginBase.html#RisingV_Core_Plugins_RisingPluginBase_Reload_RisingV_Shared_Plugins_PluginManager_RisingV_Shared_Managers_ReloadReason_">RisingPluginBase.Reload(PluginManager, ReloadReason)</a>
-    </div>
-    <div>
-      <a class="xref" href="RisingV.Core.Plugins.RisingPluginBase.html#RisingV_Core_Plugins_RisingPluginBase_OnPluginsInitializing_RisingV_Shared_EventBridge_OnPluginsInitializingEvent_">RisingPluginBase.OnPluginsInitializing(EventBridge.OnPluginsInitializingEvent)</a>
-    </div>
-    <div>
-      <a class="xref" href="RisingV.Core.Plugins.RisingPluginBase.html#RisingV_Core_Plugins_RisingPluginBase_OnPluginsLoading_RisingV_Shared_EventBridge_OnPluginsLoadingEvent_">RisingPluginBase.OnPluginsLoading(EventBridge.OnPluginsLoadingEvent)</a>
-    </div>
-    <div>
-      <a class="xref" href="RisingV.Core.Plugins.RisingPluginBase.html#RisingV_Core_Plugins_RisingPluginBase_SetupConfiguration_RisingV_Shared_Plugins_PluginConfig_">RisingPluginBase.SetupConfiguration(PluginConfig)</a>
-    </div>
-    <div>
-      <a class="xref" href="RisingV.Core.Plugins.RisingPluginBase.html#RisingV_Core_Plugins_RisingPluginBase_SetupSharedEventBus_RisingV_Shared_Events_ManagedEventBus_">RisingPluginBase.SetupSharedEventBus(ManagedEventBus)</a>
-    </div>
-    <div>
-      <a class="xref" href="RisingV.Core.Plugins.RisingPluginBase.html#RisingV_Core_Plugins_RisingPluginBase_GetSharedComponent_System_Type_">RisingPluginBase.GetSharedComponent(Type)</a>
-    </div>
-    <div>
-      <a class="xref" href="RisingV.Core.Plugins.RisingPluginBase.html#RisingV_Core_Plugins_RisingPluginBase_GetSharedComponent__1">RisingPluginBase.GetSharedComponent&lt;TX&gt;()</a>
-    </div>
-    <div>
-      <a class="xref" href="RisingV.Core.Plugins.RisingPluginBase.html#RisingV_Core_Plugins_RisingPluginBase_AddSharedComponent__1_RisingV_Shared_Plugins_IPlugin_System_Boolean_">RisingPluginBase.AddSharedComponent&lt;T&gt;(IPlugin, bool)</a>
-    </div>
-    <div>
-      <a class="xref" href="RisingV.Core.Plugins.RisingPluginBase.html#RisingV_Core_Plugins_RisingPluginBase_AddSharedComponent__1_RisingV_Shared_Plugins_IPlugin___0_System_Boolean_">RisingPluginBase.AddSharedComponent&lt;T&gt;(IPlugin, T, bool)</a>
-    </div>
-    <div>
-      <a class="xref" href="RisingV.Core.Plugins.RisingPluginBase.html#RisingV_Core_Plugins_RisingPluginBase_Dispose">RisingPluginBase.Dispose()</a>
+      <a class="xref" href="RisingV.Core.Plugins.RisingPlugin-1.html#RisingV_Core_Plugins_RisingPlugin_1_AddSharedComponent__1_RisingV_Shared_Plugins_IPlugin___0_System_Boolean_">RisingPlugin&lt;TemplatePluginContext&gt;.AddSharedComponent&lt;T&gt;(IPlugin, T, bool)</a>
     </div>
     <div>
       <span class="xref">BasePlugin.AddComponent&lt;T&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">BasePlugin.Log</span>
     </div>
     <div>
       <span class="xref">BasePlugin.Config</span>
@@ -294,12 +278,12 @@ public class Plugin : RisingPlugin&lt;TemplatePluginContext&gt;, IDisposable, IP
   <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Template/blob/main/RisingV.Template/Plugin.cs/#L34"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Called when the plugin is initialized (after <a class="xref" href="RisingV.Core.Plugins.RisingPluginBase.html#RisingV_Core_Plugins_RisingPluginBase_OnPreLoad">OnPreLoad()</a>).</p>
+  <div class="markdown level1 summary"><p>Called when the plugin is initialized (after <a class="xref" href="RisingV.Core.Plugins.RisingPlugin-1.html#RisingV_Core_Plugins_RisingPlugin_1_OnPreLoad">OnPreLoad()</a>).</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected override void OnInitialize()</code></pre>
+    <pre><code class="lang-csharp hljs">public override void OnInitialize()</code></pre>
   </div>
 
 
@@ -321,12 +305,12 @@ public class Plugin : RisingPlugin&lt;TemplatePluginContext&gt;, IDisposable, IP
   <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Template/blob/main/RisingV.Template/Plugin.cs/#L55"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Called when the plugin is loaded (after <a class="xref" href="RisingV.Core.Plugins.RisingPluginBase.html#RisingV_Core_Plugins_RisingPluginBase_OnInitialize">OnInitialize()</a>).</p>
+  <div class="markdown level1 summary"><p>Called when the plugin is loaded (after <a class="xref" href="RisingV.Core.Plugins.RisingPlugin-1.html#RisingV_Core_Plugins_RisingPlugin_1_OnInitialize">OnInitialize()</a>).</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected override void OnLoad()</code></pre>
+    <pre><code class="lang-csharp hljs">public override void OnLoad()</code></pre>
   </div>
 
 
@@ -353,7 +337,7 @@ public class Plugin : RisingPlugin&lt;TemplatePluginContext&gt;, IDisposable, IP
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected override void OnPreLoad()</code></pre>
+    <pre><code class="lang-csharp hljs">public override void OnPreLoad()</code></pre>
   </div>
 
 
@@ -380,7 +364,7 @@ public class Plugin : RisingPlugin&lt;TemplatePluginContext&gt;, IDisposable, IP
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected override bool OnUnload()</code></pre>
+    <pre><code class="lang-csharp hljs">public override bool OnUnload()</code></pre>
   </div>
 
 
