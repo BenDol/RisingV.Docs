@@ -19265,6 +19265,19 @@ references:
   isSpec: "True"
   fullName: RisingV.Shared.SharedPluginConfig.ActiveLogTags
   nameWithType: SharedPluginConfig.ActiveLogTags
+- uid: RisingV.Shared.SharedPluginConfig.DevelopmentMode
+  name: DevelopmentMode
+  href: api/RisingV.Shared.SharedPluginConfig.html#RisingV_Shared_SharedPluginConfig_DevelopmentMode
+  commentId: P:RisingV.Shared.SharedPluginConfig.DevelopmentMode
+  fullName: RisingV.Shared.SharedPluginConfig.DevelopmentMode
+  nameWithType: SharedPluginConfig.DevelopmentMode
+- uid: RisingV.Shared.SharedPluginConfig.DevelopmentMode*
+  name: DevelopmentMode
+  href: api/RisingV.Shared.SharedPluginConfig.html#RisingV_Shared_SharedPluginConfig_DevelopmentMode_
+  commentId: Overload:RisingV.Shared.SharedPluginConfig.DevelopmentMode
+  isSpec: "True"
+  fullName: RisingV.Shared.SharedPluginConfig.DevelopmentMode
+  nameWithType: SharedPluginConfig.DevelopmentMode
 - uid: RisingV.Shared.SharedPluginConfig.DumpUnqualifiedAspectEntities
   name: DumpUnqualifiedAspectEntities
   href: api/RisingV.Shared.SharedPluginConfig.html#RisingV_Shared_SharedPluginConfig_DumpUnqualifiedAspectEntities
@@ -19291,19 +19304,6 @@ references:
   isSpec: "True"
   fullName: RisingV.Shared.SharedPluginConfig.InactiveLogTags
   nameWithType: SharedPluginConfig.InactiveLogTags
-- uid: RisingV.Shared.SharedPluginConfig.IsDevelopmentMode
-  name: IsDevelopmentMode
-  href: api/RisingV.Shared.SharedPluginConfig.html#RisingV_Shared_SharedPluginConfig_IsDevelopmentMode
-  commentId: P:RisingV.Shared.SharedPluginConfig.IsDevelopmentMode
-  fullName: RisingV.Shared.SharedPluginConfig.IsDevelopmentMode
-  nameWithType: SharedPluginConfig.IsDevelopmentMode
-- uid: RisingV.Shared.SharedPluginConfig.IsDevelopmentMode*
-  name: IsDevelopmentMode
-  href: api/RisingV.Shared.SharedPluginConfig.html#RisingV_Shared_SharedPluginConfig_IsDevelopmentMode_
-  commentId: Overload:RisingV.Shared.SharedPluginConfig.IsDevelopmentMode
-  isSpec: "True"
-  fullName: RisingV.Shared.SharedPluginConfig.IsDevelopmentMode
-  nameWithType: SharedPluginConfig.IsDevelopmentMode
 - uid: RisingV.Shared.SharedPluginConfig.Load
   name: Load()
   href: api/RisingV.Shared.SharedPluginConfig.html#RisingV_Shared_SharedPluginConfig_Load
