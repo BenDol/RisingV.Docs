@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class ComponentMonolith | RisingV.Core ">
       
-      <meta name="description" content="A monolithic component that provides access to various components of an entity.">
+      <meta name="description" content="Monolithic component glue that provides access to various components/data of an entity.">
       <link rel="icon" href="../assets/favicon/favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -89,7 +89,7 @@
 
 
   <h1 id="RisingV_Core_Aspects_ComponentMonolith" data-uid="RisingV.Core.Aspects.ComponentMonolith" class="text-break">
-Class ComponentMonolith  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L23"><i class="bi bi-code-slash"></i></a>
+Class ComponentMonolith  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L24"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -97,12 +97,12 @@ Class ComponentMonolith  <a class="header-action link-secondary" title="View sou
   <dl><dt>Assembly</dt><dd>RisingV.Core.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>A monolithic component that provides access to various components of an entity.</p>
+  <div class="markdown summary"><p>Monolithic component glue that provides access to various components/data of an entity.</p>
 </div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ComponentMonolith</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class ComponentMonolith</code></pre>
   </div>
 
 
@@ -117,6 +117,12 @@ Class ComponentMonolith  <a class="header-action link-secondary" title="View sou
   </dl>
 
 
+  <dl class="typelist derived">
+    <dt>Derived</dt>
+    <dd>
+      <div><a class="xref" href="RisingV.Core.Aspects.DefaultComponentMonolith.html">DefaultComponentMonolith</a></div>
+    </dd>
+  </dl>
 
   <dl class="typelist inheritedMembers">
     <dt>Inherited Members</dt>
@@ -159,76 +165,6 @@ Class ComponentMonolith  <a class="header-action link-secondary" title="View sou
 
 
 
-  <h2 class="section" id="constructors">Constructors
-</h2>
-
-
-  <a id="RisingV_Core_Aspects_ComponentMonolith__ctor_" data-uid="RisingV.Core.Aspects.ComponentMonolith.#ctor*"></a>
-
-  <h3 id="RisingV_Core_Aspects_ComponentMonolith__ctor_RisingV_Core_Aspects_EntityAspect_" data-uid="RisingV.Core.Aspects.ComponentMonolith.#ctor(RisingV.Core.Aspects.EntityAspect)">
-  ComponentMonolith(EntityAspect)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L31"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="RisingV.Core.Aspects.ComponentMonolith.html">ComponentMonolith</a> class with the specified entity.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ComponentMonolith(EntityAspect aspect)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>aspect</code> <a class="xref" href="RisingV.Core.Aspects.EntityAspect.html">EntityAspect</a></dt>
-    <dd><p>The entity aspect to wrap.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-
-  <a id="RisingV_Core_Aspects_ComponentMonolith__ctor_" data-uid="RisingV.Core.Aspects.ComponentMonolith.#ctor*"></a>
-
-  <h3 id="RisingV_Core_Aspects_ComponentMonolith__ctor_Unity_Entities_Entity_" data-uid="RisingV.Core.Aspects.ComponentMonolith.#ctor(Unity.Entities.Entity)">
-  ComponentMonolith(Entity)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L23"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>A monolithic component that provides access to various components of an entity.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ComponentMonolith(Entity entity)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>entity</code> <span class="xref">Entity</span></dt>
-    <dd><p>The entity to wrap.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-
   <h2 class="section" id="properties">Properties
 </h2>
 
@@ -237,14 +173,14 @@ Class ComponentMonolith  <a class="header-action link-secondary" title="View sou
 
   <h3 id="RisingV_Core_Aspects_ComponentMonolith_AdminUser" data-uid="RisingV.Core.Aspects.ComponentMonolith.AdminUser">
   AdminUser
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L68"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L113"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public AdminUser? AdminUser { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract AdminUser? AdminUser { get; }</code></pre>
   </div>
 
 
@@ -268,14 +204,14 @@ Class ComponentMonolith  <a class="header-action link-secondary" title="View sou
 
   <h3 id="RisingV_Core_Aspects_ComponentMonolith_BehaviourTreeBinding" data-uid="RisingV.Core.Aspects.ComponentMonolith.BehaviourTreeBinding">
   BehaviourTreeBinding
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L105"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L150"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public BehaviourTreeBinding? BehaviourTreeBinding { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract BehaviourTreeBinding? BehaviourTreeBinding { get; }</code></pre>
   </div>
 
 
@@ -299,14 +235,14 @@ Class ComponentMonolith  <a class="header-action link-secondary" title="View sou
 
   <h3 id="RisingV_Core_Aspects_ComponentMonolith_BehaviourTreeState" data-uid="RisingV.Core.Aspects.ComponentMonolith.BehaviourTreeState">
   BehaviourTreeState
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L106"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L151"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public BehaviourTreeState? BehaviourTreeState { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract BehaviourTreeState? BehaviourTreeState { get; }</code></pre>
   </div>
 
 
@@ -330,14 +266,14 @@ Class ComponentMonolith  <a class="header-action link-secondary" title="View sou
 
   <h3 id="RisingV_Core_Aspects_ComponentMonolith_BehaviourTreeStateMetadata" data-uid="RisingV.Core.Aspects.ComponentMonolith.BehaviourTreeStateMetadata">
   BehaviourTreeStateMetadata
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L107"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L152"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public BehaviourTreeStateMetadata? BehaviourTreeStateMetadata { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract BehaviourTreeStateMetadata? BehaviourTreeStateMetadata { get; }</code></pre>
   </div>
 
 
@@ -361,14 +297,14 @@ Class ComponentMonolith  <a class="header-action link-secondary" title="View sou
 
   <h3 id="RisingV_Core_Aspects_ComponentMonolith_BloodConsumeSource" data-uid="RisingV.Core.Aspects.ComponentMonolith.BloodConsumeSource">
   BloodConsumeSource
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L97"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L142"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public BloodConsumeSource? BloodConsumeSource { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract BloodConsumeSource? BloodConsumeSource { get; }</code></pre>
   </div>
 
 
@@ -392,14 +328,14 @@ Class ComponentMonolith  <a class="header-action link-secondary" title="View sou
 
   <h3 id="RisingV_Core_Aspects_ComponentMonolith_Buff" data-uid="RisingV.Core.Aspects.ComponentMonolith.Buff">
   Buff
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L111"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L156"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Buff? Buff { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract Buff? Buff { get; }</code></pre>
   </div>
 
 
@@ -423,14 +359,14 @@ Class ComponentMonolith  <a class="header-action link-secondary" title="View sou
 
   <h3 id="RisingV_Core_Aspects_ComponentMonolith_CurrentHealth" data-uid="RisingV.Core.Aspects.ComponentMonolith.CurrentHealth">
   CurrentHealth
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L118"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L164"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public float? CurrentHealth { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract float? CurrentHealth { get; }</code></pre>
   </div>
 
 
@@ -450,18 +386,51 @@ Class ComponentMonolith  <a class="header-action link-secondary" title="View sou
 
 
 
+  <a id="RisingV_Core_Aspects_ComponentMonolith_CustomDefault_" data-uid="RisingV.Core.Aspects.ComponentMonolith.CustomDefault*"></a>
+
+  <h3 id="RisingV_Core_Aspects_ComponentMonolith_CustomDefault" data-uid="RisingV.Core.Aspects.ComponentMonolith.CustomDefault">
+  CustomDefault
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L31"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The type of the <a class="xref" href="RisingV.Core.Aspects.ComponentMonolith.html">ComponentMonolith</a> class, used for instantiation.
+Can be assigned if you require a customized component monolith implementation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Type? CustomDefault { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="RisingV_Core_Aspects_ComponentMonolith_DeathBuff_" data-uid="RisingV.Core.Aspects.ComponentMonolith.DeathBuff*"></a>
 
   <h3 id="RisingV_Core_Aspects_ComponentMonolith_DeathBuff" data-uid="RisingV.Core.Aspects.ComponentMonolith.DeathBuff">
   DeathBuff
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L83"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L128"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public DeathBuff? DeathBuff { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract DeathBuff? DeathBuff { get; }</code></pre>
   </div>
 
 
@@ -485,14 +454,14 @@ Class ComponentMonolith  <a class="header-action link-secondary" title="View sou
 
   <h3 id="RisingV_Core_Aspects_ComponentMonolith_DeathRagdollForce" data-uid="RisingV.Core.Aspects.ComponentMonolith.DeathRagdollForce">
   DeathRagdollForce
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L102"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L147"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public DeathRagdollForce? DeathRagdollForce { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract DeathRagdollForce? DeathRagdollForce { get; }</code></pre>
   </div>
 
 
@@ -516,14 +485,14 @@ Class ComponentMonolith  <a class="header-action link-secondary" title="View sou
 
   <h3 id="RisingV_Core_Aspects_ComponentMonolith_DestroyData" data-uid="RisingV.Core.Aspects.ComponentMonolith.DestroyData">
   DestroyData
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L72"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L117"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public DestroyData? DestroyData { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract DestroyData? DestroyData { get; }</code></pre>
   </div>
 
 
@@ -547,14 +516,14 @@ Class ComponentMonolith  <a class="header-action link-secondary" title="View sou
 
   <h3 id="RisingV_Core_Aspects_ComponentMonolith_DestroyState" data-uid="RisingV.Core.Aspects.ComponentMonolith.DestroyState">
   DestroyState
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L73"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L118"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public DestroyState? DestroyState { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract DestroyState? DestroyState { get; }</code></pre>
   </div>
 
 
@@ -578,14 +547,14 @@ Class ComponentMonolith  <a class="header-action link-secondary" title="View sou
 
   <h3 id="RisingV_Core_Aspects_ComponentMonolith_DropTable" data-uid="RisingV.Core.Aspects.ComponentMonolith.DropTable">
   DropTable
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L91"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L136"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public DropTable? DropTable { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract DropTable? DropTable { get; }</code></pre>
   </div>
 
 
@@ -609,7 +578,7 @@ Class ComponentMonolith  <a class="header-action link-secondary" title="View sou
 
   <h3 id="RisingV_Core_Aspects_ComponentMonolith_Entity" data-uid="RisingV.Core.Aspects.ComponentMonolith.Entity">
   Entity
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L35"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L65"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -640,14 +609,14 @@ Class ComponentMonolith  <a class="header-action link-secondary" title="View sou
 
   <h3 id="RisingV_Core_Aspects_ComponentMonolith_EntityCategory" data-uid="RisingV.Core.Aspects.ComponentMonolith.EntityCategory">
   EntityCategory
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L70"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L115"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public EntityCategory? EntityCategory { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract EntityCategory? EntityCategory { get; }</code></pre>
   </div>
 
 
@@ -671,14 +640,14 @@ Class ComponentMonolith  <a class="header-action link-secondary" title="View sou
 
   <h3 id="RisingV_Core_Aspects_ComponentMonolith_EntityManager" data-uid="RisingV.Core.Aspects.ComponentMonolith.EntityManager">
   EntityManager
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L37"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L63"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public EntityManager EntityManager { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static EntityManager EntityManager { get; }</code></pre>
   </div>
 
 
@@ -702,14 +671,14 @@ Class ComponentMonolith  <a class="header-action link-secondary" title="View sou
 
   <h3 id="RisingV_Core_Aspects_ComponentMonolith_EntityOwner" data-uid="RisingV.Core.Aspects.ComponentMonolith.EntityOwner">
   EntityOwner
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L71"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L116"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public EntityOwner? EntityOwner { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract EntityOwner? EntityOwner { get; }</code></pre>
   </div>
 
 
@@ -733,14 +702,14 @@ Class ComponentMonolith  <a class="header-action link-secondary" title="View sou
 
   <h3 id="RisingV_Core_Aspects_ComponentMonolith_EquipableData" data-uid="RisingV.Core.Aspects.ComponentMonolith.EquipableData">
   EquipableData
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L64"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L109"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public EquippableData? EquipableData { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract EquippableData? EquipableData { get; }</code></pre>
   </div>
 
 
@@ -764,14 +733,14 @@ Class ComponentMonolith  <a class="header-action link-secondary" title="View sou
 
   <h3 id="RisingV_Core_Aspects_ComponentMonolith_Equipment" data-uid="RisingV.Core.Aspects.ComponentMonolith.Equipment">
   Equipment
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L66"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L111"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Equipment? Equipment { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract Equipment? Equipment { get; }</code></pre>
   </div>
 
 
@@ -795,14 +764,14 @@ Class ComponentMonolith  <a class="header-action link-secondary" title="View sou
 
   <h3 id="RisingV_Core_Aspects_ComponentMonolith_EquipmentType" data-uid="RisingV.Core.Aspects.ComponentMonolith.EquipmentType">
   EquipmentType
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L124"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L170"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public EquipmentType? EquipmentType { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract EquipmentType? EquipmentType { get; }</code></pre>
   </div>
 
 
@@ -826,14 +795,14 @@ Class ComponentMonolith  <a class="header-action link-secondary" title="View sou
 
   <h3 id="RisingV_Core_Aspects_ComponentMonolith_Follower" data-uid="RisingV.Core.Aspects.ComponentMonolith.Follower">
   Follower
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L109"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L154"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Follower? Follower { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract Follower? Follower { get; }</code></pre>
   </div>
 
 
@@ -857,14 +826,14 @@ Class ComponentMonolith  <a class="header-action link-secondary" title="View sou
 
   <h3 id="RisingV_Core_Aspects_ComponentMonolith_FrameChanged" data-uid="RisingV.Core.Aspects.ComponentMonolith.FrameChanged">
   FrameChanged
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L95"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L140"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public FrameChanged? FrameChanged { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract FrameChanged? FrameChanged { get; }</code></pre>
   </div>
 
 
@@ -888,14 +857,14 @@ Class ComponentMonolith  <a class="header-action link-secondary" title="View sou
 
   <h3 id="RisingV_Core_Aspects_ComponentMonolith_GenericCombatMovementData" data-uid="RisingV.Core.Aspects.ComponentMonolith.GenericCombatMovementData">
   GenericCombatMovementData
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L100"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L145"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public GenericCombatMovementData? GenericCombatMovementData { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract GenericCombatMovementData? GenericCombatMovementData { get; }</code></pre>
   </div>
 
 
@@ -919,14 +888,14 @@ Class ComponentMonolith  <a class="header-action link-secondary" title="View sou
 
   <h3 id="RisingV_Core_Aspects_ComponentMonolith_Health" data-uid="RisingV.Core.Aspects.ComponentMonolith.Health">
   Health
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L88"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L133"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Health? Health { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract Health? Health { get; }</code></pre>
   </div>
 
 
@@ -950,14 +919,14 @@ Class ComponentMonolith  <a class="header-action link-secondary" title="View sou
 
   <h3 id="RisingV_Core_Aspects_ComponentMonolith_HybridModelSeed" data-uid="RisingV.Core.Aspects.ComponentMonolith.HybridModelSeed">
   HybridModelSeed
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L103"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L148"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public HybridModelSeed? HybridModelSeed { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract HybridModelSeed? HybridModelSeed { get; }</code></pre>
   </div>
 
 
@@ -981,14 +950,14 @@ Class ComponentMonolith  <a class="header-action link-secondary" title="View sou
 
   <h3 id="RisingV_Core_Aspects_ComponentMonolith_HybridModelState" data-uid="RisingV.Core.Aspects.ComponentMonolith.HybridModelState">
   HybridModelState
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L104"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L149"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public HybridModelState? HybridModelState { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract HybridModelState? HybridModelState { get; }</code></pre>
   </div>
 
 
@@ -1012,14 +981,14 @@ Class ComponentMonolith  <a class="header-action link-secondary" title="View sou
 
   <h3 id="RisingV_Core_Aspects_ComponentMonolith_InventoryBuffer" data-uid="RisingV.Core.Aspects.ComponentMonolith.InventoryBuffer">
   InventoryBuffer
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L112"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L157"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public InventoryBuffer? InventoryBuffer { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract InventoryBuffer? InventoryBuffer { get; }</code></pre>
   </div>
 
 
@@ -1043,14 +1012,14 @@ Class ComponentMonolith  <a class="header-action link-secondary" title="View sou
 
   <h3 id="RisingV_Core_Aspects_ComponentMonolith_InventoryBuffers" data-uid="RisingV.Core.Aspects.ComponentMonolith.InventoryBuffers">
   InventoryBuffers
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L82"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L127"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public List&lt;InventoryBuffer&gt;? InventoryBuffers { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract List&lt;InventoryBuffer&gt;? InventoryBuffers { get; }</code></pre>
   </div>
 
 
@@ -1074,14 +1043,14 @@ Class ComponentMonolith  <a class="header-action link-secondary" title="View sou
 
   <h3 id="RisingV_Core_Aspects_ComponentMonolith_IsDead" data-uid="RisingV.Core.Aspects.ComponentMonolith.IsDead">
   IsDead
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L120"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L166"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool? IsDead { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract bool? IsDead { get; }</code></pre>
   </div>
 
 
@@ -1105,14 +1074,14 @@ Class ComponentMonolith  <a class="header-action link-secondary" title="View sou
 
   <h3 id="RisingV_Core_Aspects_ComponentMonolith_IsGatherable" data-uid="RisingV.Core.Aspects.ComponentMonolith.IsGatherable">
   IsGatherable
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L136"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L182"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool IsGatherable { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract bool IsGatherable { get; }</code></pre>
   </div>
 
 
@@ -1136,14 +1105,14 @@ Class ComponentMonolith  <a class="header-action link-secondary" title="View sou
 
   <h3 id="RisingV_Core_Aspects_ComponentMonolith_IsMinion" data-uid="RisingV.Core.Aspects.ComponentMonolith.IsMinion">
   IsMinion
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L90"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L135"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool IsMinion { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract bool IsMinion { get; }</code></pre>
   </div>
 
 
@@ -1167,14 +1136,14 @@ Class ComponentMonolith  <a class="header-action link-secondary" title="View sou
 
   <h3 id="RisingV_Core_Aspects_ComponentMonolith_IsProjectile" data-uid="RisingV.Core.Aspects.ComponentMonolith.IsProjectile">
   IsProjectile
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L131"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L177"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool IsProjectile { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract bool IsProjectile { get; }</code></pre>
   </div>
 
 
@@ -1198,14 +1167,14 @@ Class ComponentMonolith  <a class="header-action link-secondary" title="View sou
 
   <h3 id="RisingV_Core_Aspects_ComponentMonolith_IsResource" data-uid="RisingV.Core.Aspects.ComponentMonolith.IsResource">
   IsResource
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L130"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L176"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool IsResource { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract bool IsResource { get; }</code></pre>
   </div>
 
 
@@ -1229,14 +1198,14 @@ Class ComponentMonolith  <a class="header-action link-secondary" title="View sou
 
   <h3 id="RisingV_Core_Aspects_ComponentMonolith_IsSpell" data-uid="RisingV.Core.Aspects.ComponentMonolith.IsSpell">
   IsSpell
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L132"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L178"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool IsSpell { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract bool IsSpell { get; }</code></pre>
   </div>
 
 
@@ -1260,14 +1229,14 @@ Class ComponentMonolith  <a class="header-action link-secondary" title="View sou
 
   <h3 id="RisingV_Core_Aspects_ComponentMonolith_IsStructure" data-uid="RisingV.Core.Aspects.ComponentMonolith.IsStructure">
   IsStructure
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L133"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L179"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool IsStructure { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract bool IsStructure { get; }</code></pre>
   </div>
 
 
@@ -1291,14 +1260,14 @@ Class ComponentMonolith  <a class="header-action link-secondary" title="View sou
 
   <h3 id="RisingV_Core_Aspects_ComponentMonolith_IsTerrain" data-uid="RisingV.Core.Aspects.ComponentMonolith.IsTerrain">
   IsTerrain
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L134"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L180"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool IsTerrain { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract bool IsTerrain { get; }</code></pre>
   </div>
 
 
@@ -1322,14 +1291,14 @@ Class ComponentMonolith  <a class="header-action link-secondary" title="View sou
 
   <h3 id="RisingV_Core_Aspects_ComponentMonolith_IsUnit" data-uid="RisingV.Core.Aspects.ComponentMonolith.IsUnit">
   IsUnit
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L135"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L181"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool IsUnit { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract bool IsUnit { get; }</code></pre>
   </div>
 
 
@@ -1353,14 +1322,14 @@ Class ComponentMonolith  <a class="header-action link-secondary" title="View sou
 
   <h3 id="RisingV_Core_Aspects_ComponentMonolith_ItemCategory" data-uid="RisingV.Core.Aspects.ComponentMonolith.ItemCategory">
   ItemCategory
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L122"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L168"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ItemCategory? ItemCategory { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract ItemCategory? ItemCategory { get; }</code></pre>
   </div>
 
 
@@ -1384,14 +1353,14 @@ Class ComponentMonolith  <a class="header-action link-secondary" title="View sou
 
   <h3 id="RisingV_Core_Aspects_ComponentMonolith_ItemData" data-uid="RisingV.Core.Aspects.ComponentMonolith.ItemData">
   ItemData
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L63"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L108"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ItemData? ItemData { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract ItemData? ItemData { get; }</code></pre>
   </div>
 
 
@@ -1415,14 +1384,14 @@ Class ComponentMonolith  <a class="header-action link-secondary" title="View sou
 
   <h3 id="RisingV_Core_Aspects_ComponentMonolith_ItemType" data-uid="RisingV.Core.Aspects.ComponentMonolith.ItemType">
   ItemType
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L123"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L169"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ItemType? ItemType { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract ItemType? ItemType { get; }</code></pre>
   </div>
 
 
@@ -1446,14 +1415,14 @@ Class ComponentMonolith  <a class="header-action link-secondary" title="View sou
 
   <h3 id="RisingV_Core_Aspects_ComponentMonolith_LifeTime" data-uid="RisingV.Core.Aspects.ComponentMonolith.LifeTime">
   LifeTime
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L84"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L129"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public LifeTime? LifeTime { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract LifeTime? LifeTime { get; }</code></pre>
   </div>
 
 
@@ -1477,14 +1446,14 @@ Class ComponentMonolith  <a class="header-action link-secondary" title="View sou
 
   <h3 id="RisingV_Core_Aspects_ComponentMonolith_LocalToWorld" data-uid="RisingV.Core.Aspects.ComponentMonolith.LocalToWorld">
   LocalToWorld
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L74"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L119"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public LocalToWorld? LocalToWorld { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract LocalToWorld? LocalToWorld { get; }</code></pre>
   </div>
 
 
@@ -1508,14 +1477,14 @@ Class ComponentMonolith  <a class="header-action link-secondary" title="View sou
 
   <h3 id="RisingV_Core_Aspects_ComponentMonolith_LocalTransform" data-uid="RisingV.Core.Aspects.ComponentMonolith.LocalTransform">
   LocalTransform
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L75"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L120"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public LocalTransform? LocalTransform { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract LocalTransform? LocalTransform { get; }</code></pre>
   </div>
 
 
@@ -1539,14 +1508,14 @@ Class ComponentMonolith  <a class="header-action link-secondary" title="View sou
 
   <h3 id="RisingV_Core_Aspects_ComponentMonolith_MainCategory" data-uid="RisingV.Core.Aspects.ComponentMonolith.MainCategory">
   MainCategory
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L128"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L174"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public MainEntityCategory? MainCategory { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract MainEntityCategory? MainCategory { get; }</code></pre>
   </div>
 
 
@@ -1570,14 +1539,14 @@ Class ComponentMonolith  <a class="header-action link-secondary" title="View sou
 
   <h3 id="RisingV_Core_Aspects_ComponentMonolith_ManagedItemData" data-uid="RisingV.Core.Aspects.ComponentMonolith.ManagedItemData">
   ManagedItemData
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L65"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L110"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ManagedItemData? ManagedItemData { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract ManagedItemData? ManagedItemData { get; }</code></pre>
   </div>
 
 
@@ -1601,14 +1570,14 @@ Class ComponentMonolith  <a class="header-action link-secondary" title="View sou
 
   <h3 id="RisingV_Core_Aspects_ComponentMonolith_MapCollision" data-uid="RisingV.Core.Aspects.ComponentMonolith.MapCollision">
   MapCollision
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L108"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L153"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public MapCollision? MapCollision { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract MapCollision? MapCollision { get; }</code></pre>
   </div>
 
 
@@ -1632,14 +1601,14 @@ Class ComponentMonolith  <a class="header-action link-secondary" title="View sou
 
   <h3 id="RisingV_Core_Aspects_ComponentMonolith_MaterialCategory" data-uid="RisingV.Core.Aspects.ComponentMonolith.MaterialCategory">
   MaterialCategory
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L127"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L173"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public MaterialCategory? MaterialCategory { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract MaterialCategory? MaterialCategory { get; }</code></pre>
   </div>
 
 
@@ -1663,14 +1632,14 @@ Class ComponentMonolith  <a class="header-action link-secondary" title="View sou
 
   <h3 id="RisingV_Core_Aspects_ComponentMonolith_MaxHealth" data-uid="RisingV.Core.Aspects.ComponentMonolith.MaxHealth">
   MaxHealth
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L117"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L163"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public float? MaxHealth { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract float? MaxHealth { get; }</code></pre>
   </div>
 
 
@@ -1694,14 +1663,14 @@ Class ComponentMonolith  <a class="header-action link-secondary" title="View sou
 
   <h3 id="RisingV_Core_Aspects_ComponentMonolith_MaxRecoveryHealth" data-uid="RisingV.Core.Aspects.ComponentMonolith.MaxRecoveryHealth">
   MaxRecoveryHealth
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L119"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L165"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public float? MaxRecoveryHealth { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract float? MaxRecoveryHealth { get; }</code></pre>
   </div>
 
 
@@ -1725,14 +1694,14 @@ Class ComponentMonolith  <a class="header-action link-secondary" title="View sou
 
   <h3 id="RisingV_Core_Aspects_ComponentMonolith_Minion" data-uid="RisingV.Core.Aspects.ComponentMonolith.Minion">
   Minion
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L89"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L134"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Minion? Minion { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract Minion? Minion { get; }</code></pre>
   </div>
 
 
@@ -1756,14 +1725,14 @@ Class ComponentMonolith  <a class="header-action link-secondary" title="View sou
 
   <h3 id="RisingV_Core_Aspects_ComponentMonolith_MoveEntity" data-uid="RisingV.Core.Aspects.ComponentMonolith.MoveEntity">
   MoveEntity
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L79"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L124"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public MoveEntity? MoveEntity { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract MoveEntity? MoveEntity { get; }</code></pre>
   </div>
 
 
@@ -1787,14 +1756,14 @@ Class ComponentMonolith  <a class="header-action link-secondary" title="View sou
 
   <h3 id="RisingV_Core_Aspects_ComponentMonolith_MoveVelocity" data-uid="RisingV.Core.Aspects.ComponentMonolith.MoveVelocity">
   MoveVelocity
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L80"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L125"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public MoveVelocity? MoveVelocity { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract MoveVelocity? MoveVelocity { get; }</code></pre>
   </div>
 
 
@@ -1818,14 +1787,14 @@ Class ComponentMonolith  <a class="header-action link-secondary" title="View sou
 
   <h3 id="RisingV_Core_Aspects_ComponentMonolith_Movement" data-uid="RisingV.Core.Aspects.ComponentMonolith.Movement">
   Movement
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L78"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L123"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Movement? Movement { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract Movement? Movement { get; }</code></pre>
   </div>
 
 
@@ -1849,14 +1818,14 @@ Class ComponentMonolith  <a class="header-action link-secondary" title="View sou
 
   <h3 id="RisingV_Core_Aspects_ComponentMonolith_NetworkId" data-uid="RisingV.Core.Aspects.ComponentMonolith.NetworkId">
   NetworkId
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L92"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L137"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public NetworkId? NetworkId { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract NetworkId? NetworkId { get; }</code></pre>
   </div>
 
 
@@ -1880,14 +1849,14 @@ Class ComponentMonolith  <a class="header-action link-secondary" title="View sou
 
   <h3 id="RisingV_Core_Aspects_ComponentMonolith_NetworkSnapshot" data-uid="RisingV.Core.Aspects.ComponentMonolith.NetworkSnapshot">
   NetworkSnapshot
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L96"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L141"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public NetworkSnapshot? NetworkSnapshot { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract NetworkSnapshot? NetworkSnapshot { get; }</code></pre>
   </div>
 
 
@@ -1911,14 +1880,14 @@ Class ComponentMonolith  <a class="header-action link-secondary" title="View sou
 
   <h3 id="RisingV_Core_Aspects_ComponentMonolith_NetworkedTimeout" data-uid="RisingV.Core.Aspects.ComponentMonolith.NetworkedTimeout">
   NetworkedTimeout
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L93"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L138"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public NetworkedTimeout? NetworkedTimeout { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract NetworkedTimeout? NetworkedTimeout { get; }</code></pre>
   </div>
 
 
@@ -1942,14 +1911,14 @@ Class ComponentMonolith  <a class="header-action link-secondary" title="View sou
 
   <h3 id="RisingV_Core_Aspects_ComponentMonolith_PlayerCharacter" data-uid="RisingV.Core.Aspects.ComponentMonolith.PlayerCharacter">
   PlayerCharacter
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L69"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L114"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public PlayerCharacter? PlayerCharacter { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract PlayerCharacter? PlayerCharacter { get; }</code></pre>
   </div>
 
 
@@ -1973,14 +1942,14 @@ Class ComponentMonolith  <a class="header-action link-secondary" title="View sou
 
   <h3 id="RisingV_Core_Aspects_ComponentMonolith_ResistanceData" data-uid="RisingV.Core.Aspects.ComponentMonolith.ResistanceData">
   ResistanceData
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L101"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L146"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ResistanceData? ResistanceData { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract ResistanceData? ResistanceData { get; }</code></pre>
   </div>
 
 
@@ -2004,14 +1973,14 @@ Class ComponentMonolith  <a class="header-action link-secondary" title="View sou
 
   <h3 id="RisingV_Core_Aspects_ComponentMonolith_ResourceLevel" data-uid="RisingV.Core.Aspects.ComponentMonolith.ResourceLevel">
   ResourceLevel
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L125"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L171"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int? ResourceLevel { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract int? ResourceLevel { get; }</code></pre>
   </div>
 
 
@@ -2035,14 +2004,14 @@ Class ComponentMonolith  <a class="header-action link-secondary" title="View sou
 
   <h3 id="RisingV_Core_Aspects_ComponentMonolith_Rotation" data-uid="RisingV.Core.Aspects.ComponentMonolith.Rotation">
   Rotation
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L77"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L122"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Rotation? Rotation { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract Rotation? Rotation { get; }</code></pre>
   </div>
 
 
@@ -2066,14 +2035,14 @@ Class ComponentMonolith  <a class="header-action link-secondary" title="View sou
 
   <h3 id="RisingV_Core_Aspects_ComponentMonolith_SpawnTransform" data-uid="RisingV.Core.Aspects.ComponentMonolith.SpawnTransform">
   SpawnTransform
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L81"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L126"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public SpawnTransform? SpawnTransform { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract SpawnTransform? SpawnTransform { get; }</code></pre>
   </div>
 
 
@@ -2097,14 +2066,14 @@ Class ComponentMonolith  <a class="header-action link-secondary" title="View sou
 
   <h3 id="RisingV_Core_Aspects_ComponentMonolith_StructureCategory" data-uid="RisingV.Core.Aspects.ComponentMonolith.StructureCategory">
   StructureCategory
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L129"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L175"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public StructureCategory? StructureCategory { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract StructureCategory? StructureCategory { get; }</code></pre>
   </div>
 
 
@@ -2128,14 +2097,14 @@ Class ComponentMonolith  <a class="header-action link-secondary" title="View sou
 
   <h3 id="RisingV_Core_Aspects_ComponentMonolith_Team" data-uid="RisingV.Core.Aspects.ComponentMonolith.Team">
   Team
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L98"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L143"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Team? Team { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract Team? Team { get; }</code></pre>
   </div>
 
 
@@ -2159,14 +2128,14 @@ Class ComponentMonolith  <a class="header-action link-secondary" title="View sou
 
   <h3 id="RisingV_Core_Aspects_ComponentMonolith_TeamReference" data-uid="RisingV.Core.Aspects.ComponentMonolith.TeamReference">
   TeamReference
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L99"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L144"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public TeamReference? TeamReference { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract TeamReference? TeamReference { get; }</code></pre>
   </div>
 
 
@@ -2190,14 +2159,14 @@ Class ComponentMonolith  <a class="header-action link-secondary" title="View sou
 
   <h3 id="RisingV_Core_Aspects_ComponentMonolith_TimeOfDeath" data-uid="RisingV.Core.Aspects.ComponentMonolith.TimeOfDeath">
   TimeOfDeath
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L121"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L167"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public double? TimeOfDeath { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract double? TimeOfDeath { get; }</code></pre>
   </div>
 
 
@@ -2221,14 +2190,14 @@ Class ComponentMonolith  <a class="header-action link-secondary" title="View sou
 
   <h3 id="RisingV_Core_Aspects_ComponentMonolith_Translation" data-uid="RisingV.Core.Aspects.ComponentMonolith.Translation">
   Translation
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L76"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L121"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Translation? Translation { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract Translation? Translation { get; }</code></pre>
   </div>
 
 
@@ -2252,14 +2221,14 @@ Class ComponentMonolith  <a class="header-action link-secondary" title="View sou
 
   <h3 id="RisingV_Core_Aspects_ComponentMonolith_UnitCategory" data-uid="RisingV.Core.Aspects.ComponentMonolith.UnitCategory">
   UnitCategory
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L126"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L172"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public UnitCategory? UnitCategory { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract UnitCategory? UnitCategory { get; }</code></pre>
   </div>
 
 
@@ -2283,14 +2252,14 @@ Class ComponentMonolith  <a class="header-action link-secondary" title="View sou
 
   <h3 id="RisingV_Core_Aspects_ComponentMonolith_UnitLevel" data-uid="RisingV.Core.Aspects.ComponentMonolith.UnitLevel">
   UnitLevel
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L85"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L130"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public UnitLevel? UnitLevel { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract UnitLevel? UnitLevel { get; }</code></pre>
   </div>
 
 
@@ -2314,14 +2283,14 @@ Class ComponentMonolith  <a class="header-action link-secondary" title="View sou
 
   <h3 id="RisingV_Core_Aspects_ComponentMonolith_UnitRespawnTime" data-uid="RisingV.Core.Aspects.ComponentMonolith.UnitRespawnTime">
   UnitRespawnTime
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L86"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L131"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public UnitRespawnTime? UnitRespawnTime { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract UnitRespawnTime? UnitRespawnTime { get; }</code></pre>
   </div>
 
 
@@ -2345,14 +2314,14 @@ Class ComponentMonolith  <a class="header-action link-secondary" title="View sou
 
   <h3 id="RisingV_Core_Aspects_ComponentMonolith_UnitStats" data-uid="RisingV.Core.Aspects.ComponentMonolith.UnitStats">
   UnitStats
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L87"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L132"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public UnitStats? UnitStats { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract UnitStats? UnitStats { get; }</code></pre>
   </div>
 
 
@@ -2376,14 +2345,14 @@ Class ComponentMonolith  <a class="header-action link-secondary" title="View sou
 
   <h3 id="RisingV_Core_Aspects_ComponentMonolith_UpToDateUserBitMask" data-uid="RisingV.Core.Aspects.ComponentMonolith.UpToDateUserBitMask">
   UpToDateUserBitMask
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L94"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L139"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public UpToDateUserBitMask? UpToDateUserBitMask { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract UpToDateUserBitMask? UpToDateUserBitMask { get; }</code></pre>
   </div>
 
 
@@ -2407,14 +2376,14 @@ Class ComponentMonolith  <a class="header-action link-secondary" title="View sou
 
   <h3 id="RisingV_Core_Aspects_ComponentMonolith_User" data-uid="RisingV.Core.Aspects.ComponentMonolith.User">
   User
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L67"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L112"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public User? User { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract User? User { get; }</code></pre>
   </div>
 
 
@@ -2438,14 +2407,14 @@ Class ComponentMonolith  <a class="header-action link-secondary" title="View sou
 
   <h3 id="RisingV_Core_Aspects_ComponentMonolith_World" data-uid="RisingV.Core.Aspects.ComponentMonolith.World">
   World
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L36"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L62"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public World World { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static World World { get; }</code></pre>
   </div>
 
 
@@ -2469,14 +2438,14 @@ Class ComponentMonolith  <a class="header-action link-secondary" title="View sou
 
   <h3 id="RisingV_Core_Aspects_ComponentMonolith_YieldResourcesOnDamageTaken" data-uid="RisingV.Core.Aspects.ComponentMonolith.YieldResourcesOnDamageTaken">
   YieldResourcesOnDamageTaken
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L110"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L155"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public YieldResourcesOnDamageTaken? YieldResourcesOnDamageTaken { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract YieldResourcesOnDamageTaken? YieldResourcesOnDamageTaken { get; }</code></pre>
   </div>
 
 
@@ -2504,7 +2473,7 @@ Class ComponentMonolith  <a class="header-action link-secondary" title="View sou
 
   <h3 id="RisingV_Core_Aspects_ComponentMonolith_GetBufferInternal__1" data-uid="RisingV.Core.Aspects.ComponentMonolith.GetBufferInternal``1">
   GetBufferInternal&lt;T&gt;()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L58"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L103"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the buffer of type <code class="typeparamref">T</code> from the entity.</p>
@@ -2512,7 +2481,7 @@ Class ComponentMonolith  <a class="header-action link-secondary" title="View sou
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public List&lt;T&gt;? GetBufferInternal&lt;T&gt;() where T : struct</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual List&lt;T&gt;? GetBufferInternal&lt;T&gt;() where T : struct</code></pre>
   </div>
 
 
@@ -2543,7 +2512,7 @@ Class ComponentMonolith  <a class="header-action link-secondary" title="View sou
 
   <h3 id="RisingV_Core_Aspects_ComponentMonolith_GetComponentData__1" data-uid="RisingV.Core.Aspects.ComponentMonolith.GetComponentData``1">
   GetComponentData&lt;T&gt;()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L46"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L91"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the component data of type <code class="typeparamref">T</code> from the entity.</p>
@@ -2551,7 +2520,7 @@ Class ComponentMonolith  <a class="header-action link-secondary" title="View sou
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public T? GetComponentData&lt;T&gt;() where T : new()</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual T? GetComponentData&lt;T&gt;() where T : new()</code></pre>
   </div>
 
 
@@ -2582,7 +2551,7 @@ Class ComponentMonolith  <a class="header-action link-secondary" title="View sou
 
   <h3 id="RisingV_Core_Aspects_ComponentMonolith_GetManagedComponentData__1" data-uid="RisingV.Core.Aspects.ComponentMonolith.GetManagedComponentData``1">
   GetManagedComponentData&lt;T&gt;()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L52"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L97"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the component data of type <code class="typeparamref">T</code> from the entity, or returns a default value if it does not exist.</p>
@@ -2590,7 +2559,7 @@ Class ComponentMonolith  <a class="header-action link-secondary" title="View sou
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public T? GetManagedComponentData&lt;T&gt;() where T : class</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual T? GetManagedComponentData&lt;T&gt;() where T : class</code></pre>
   </div>
 
 
@@ -2619,21 +2588,23 @@ Class ComponentMonolith  <a class="header-action link-secondary" title="View sou
 
   <a id="RisingV_Core_Aspects_ComponentMonolith_Of_" data-uid="RisingV.Core.Aspects.ComponentMonolith.Of*"></a>
 
-  <h3 id="RisingV_Core_Aspects_ComponentMonolith_Of_Unity_Entities_Entity_" data-uid="RisingV.Core.Aspects.ComponentMonolith.Of(Unity.Entities.Entity)">
-  Of(Entity)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L25"><i class="bi bi-code-slash"></i></a>
+  <h3 id="RisingV_Core_Aspects_ComponentMonolith_Of_RisingV_Core_Aspects_EntityAspect_System_Type_" data-uid="RisingV.Core.Aspects.ComponentMonolith.Of(RisingV.Core.Aspects.EntityAspect,System.Type)">
+  Of(EntityAspect, Type?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L54"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static ComponentMonolith Of(Entity entity)</code></pre>
+    <pre><code class="lang-csharp hljs">public static ComponentMonolith Of(EntityAspect aspect, Type? componentMonolithType = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>entity</code> <span class="xref">Entity</span></dt>
+    <dt><code>aspect</code> <a class="xref" href="RisingV.Core.Aspects.EntityAspect.html">EntityAspect</a></dt>
+    <dd></dd>
+    <dt><code>componentMonolithType</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
     <dd></dd>
   </dl>
 
@@ -2653,11 +2624,131 @@ Class ComponentMonolith  <a class="header-action link-secondary" title="View sou
 
 
 
+  <a id="RisingV_Core_Aspects_ComponentMonolith_Of_" data-uid="RisingV.Core.Aspects.ComponentMonolith.Of*"></a>
+
+  <h3 id="RisingV_Core_Aspects_ComponentMonolith_Of_Unity_Entities_Entity_System_Type_" data-uid="RisingV.Core.Aspects.ComponentMonolith.Of(Unity.Entities.Entity,System.Type)">
+  Of(Entity, Type?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L45"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ComponentMonolith Of(Entity entity, Type? componentMonolithType = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>entity</code> <span class="xref">Entity</span></dt>
+    <dd></dd>
+    <dt><code>componentMonolithType</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="RisingV.Core.Aspects.ComponentMonolith.html">ComponentMonolith</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Aspects_ComponentMonolith_Of_" data-uid="RisingV.Core.Aspects.ComponentMonolith.Of*"></a>
+
+  <h3 id="RisingV_Core_Aspects_ComponentMonolith_Of__1_RisingV_Core_Aspects_EntityAspect_" data-uid="RisingV.Core.Aspects.ComponentMonolith.Of``1(RisingV.Core.Aspects.EntityAspect)">
+  Of&lt;T&gt;(EntityAspect)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L53"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static T Of&lt;T&gt;(EntityAspect aspect) where T : ComponentMonolith</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>aspect</code> <a class="xref" href="RisingV.Core.Aspects.EntityAspect.html">EntityAspect</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Aspects_ComponentMonolith_Of_" data-uid="RisingV.Core.Aspects.ComponentMonolith.Of*"></a>
+
+  <h3 id="RisingV_Core_Aspects_ComponentMonolith_Of__1_Unity_Entities_Entity_" data-uid="RisingV.Core.Aspects.ComponentMonolith.Of``1(Unity.Entities.Entity)">
+  Of&lt;T&gt;(Entity)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L44"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static T Of&lt;T&gt;(Entity entity) where T : ComponentMonolith</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>entity</code> <span class="xref">Entity</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L23" class="edit-link">Edit this page</a>
+          <a href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L24" class="edit-link">Edit this page</a>
         </div>
 
 

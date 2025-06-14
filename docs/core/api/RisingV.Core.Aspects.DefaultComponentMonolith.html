@@ -1,0 +1,2461 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class DefaultComponentMonolith | RisingV.Core </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class DefaultComponentMonolith | RisingV.Core ">
+      
+      <meta name="description" content="The default implementation of the  class.">
+      <link rel="icon" href="../assets/favicon/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/RisingV-Mods/RisingV.Core/new/main/apiSpec/new?filename=RisingV_Core_Aspects_DefaultComponentMonolith.md&amp;value=---%0Auid%3A%20RisingV.Core.Aspects.DefaultComponentMonolith%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../assets/images/logo_50.png" alt="RisingV.Core">
+            RisingV.Core
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="RisingV.Core.Aspects.DefaultComponentMonolith">
+
+
+
+  <h1 id="RisingV_Core_Aspects_DefaultComponentMonolith" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith" class="text-break">
+Class DefaultComponentMonolith  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L190"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="RisingV.html">RisingV</a>.<a class="xref" href="RisingV.Core.html">Core</a>.<a class="xref" href="RisingV.Core.Aspects.html">Aspects</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>RisingV.Core.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>The default implementation of the <a class="xref" href="RisingV.Core.Aspects.ComponentMonolith.html">ComponentMonolith</a> class.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class DefaultComponentMonolith : ComponentMonolith</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="RisingV.Core.Aspects.ComponentMonolith.html">ComponentMonolith</a></div>
+      <div><span class="xref">DefaultComponentMonolith</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="RisingV.Core.Aspects.ComponentMonolith.html#RisingV_Core_Aspects_ComponentMonolith_CustomDefault">ComponentMonolith.CustomDefault</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Core.Aspects.ComponentMonolith.html#RisingV_Core_Aspects_ComponentMonolith_Of__1_Unity_Entities_Entity_">ComponentMonolith.Of&lt;T&gt;(Entity)</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Core.Aspects.ComponentMonolith.html#RisingV_Core_Aspects_ComponentMonolith_Of_Unity_Entities_Entity_System_Type_">ComponentMonolith.Of(Entity, Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Core.Aspects.ComponentMonolith.html#RisingV_Core_Aspects_ComponentMonolith_Of__1_RisingV_Core_Aspects_EntityAspect_">ComponentMonolith.Of&lt;T&gt;(EntityAspect)</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Core.Aspects.ComponentMonolith.html#RisingV_Core_Aspects_ComponentMonolith_Of_RisingV_Core_Aspects_EntityAspect_System_Type_">ComponentMonolith.Of(EntityAspect, Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Core.Aspects.ComponentMonolith.html#RisingV_Core_Aspects_ComponentMonolith_World">ComponentMonolith.World</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Core.Aspects.ComponentMonolith.html#RisingV_Core_Aspects_ComponentMonolith_EntityManager">ComponentMonolith.EntityManager</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Core.Aspects.ComponentMonolith.html#RisingV_Core_Aspects_ComponentMonolith_Entity">ComponentMonolith.Entity</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Core.Aspects.ComponentMonolith.html#RisingV_Core_Aspects_ComponentMonolith_GetComponentData__1">ComponentMonolith.GetComponentData&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Core.Aspects.ComponentMonolith.html#RisingV_Core_Aspects_ComponentMonolith_GetManagedComponentData__1">ComponentMonolith.GetManagedComponentData&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Core.Aspects.ComponentMonolith.html#RisingV_Core_Aspects_ComponentMonolith_GetBufferInternal__1">ComponentMonolith.GetBufferInternal&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="RisingV.Core.Extensions.EntityExtensions.html#RisingV_Core_Extensions_EntityExtensions_IsAspect__1_System_Object_">EntityExtensions.IsAspect&lt;TAspect&gt;(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="RisingV.Shared.Extensions.EntityExtensions.html#RisingV_Shared_Extensions_EntityExtensions_IsAspect__1_System_Object_">EntityExtensions.IsAspect&lt;TAspect&gt;(object)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="RisingV_Core_Aspects_DefaultComponentMonolith__ctor_" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.#ctor*"></a>
+
+  <h3 id="RisingV_Core_Aspects_DefaultComponentMonolith__ctor_RisingV_Core_Aspects_EntityAspect_" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.#ctor(RisingV.Core.Aspects.EntityAspect)">
+  DefaultComponentMonolith(EntityAspect)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L194"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected DefaultComponentMonolith(EntityAspect aspect)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>aspect</code> <a class="xref" href="RisingV.Core.Aspects.EntityAspect.html">EntityAspect</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Aspects_DefaultComponentMonolith__ctor_" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.#ctor*"></a>
+
+  <h3 id="RisingV_Core_Aspects_DefaultComponentMonolith__ctor_Unity_Entities_Entity_" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.#ctor(Unity.Entities.Entity)">
+  DefaultComponentMonolith(Entity)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L192"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected DefaultComponentMonolith(Entity entity)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>entity</code> <span class="xref">Entity</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="RisingV_Core_Aspects_DefaultComponentMonolith_AdminUser_" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.AdminUser*"></a>
+
+  <h3 id="RisingV_Core_Aspects_DefaultComponentMonolith_AdminUser" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.AdminUser">
+  AdminUser
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L203"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override AdminUser? AdminUser { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">AdminUser</span>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Aspects_DefaultComponentMonolith_BehaviourTreeBinding_" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.BehaviourTreeBinding*"></a>
+
+  <h3 id="RisingV_Core_Aspects_DefaultComponentMonolith_BehaviourTreeBinding" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.BehaviourTreeBinding">
+  BehaviourTreeBinding
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L240"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override BehaviourTreeBinding? BehaviourTreeBinding { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">BehaviourTreeBinding</span>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Aspects_DefaultComponentMonolith_BehaviourTreeState_" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.BehaviourTreeState*"></a>
+
+  <h3 id="RisingV_Core_Aspects_DefaultComponentMonolith_BehaviourTreeState" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.BehaviourTreeState">
+  BehaviourTreeState
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L241"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override BehaviourTreeState? BehaviourTreeState { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">BehaviourTreeState</span>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Aspects_DefaultComponentMonolith_BehaviourTreeStateMetadata_" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.BehaviourTreeStateMetadata*"></a>
+
+  <h3 id="RisingV_Core_Aspects_DefaultComponentMonolith_BehaviourTreeStateMetadata" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.BehaviourTreeStateMetadata">
+  BehaviourTreeStateMetadata
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L242"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override BehaviourTreeStateMetadata? BehaviourTreeStateMetadata { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">BehaviourTreeStateMetadata</span>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Aspects_DefaultComponentMonolith_BloodConsumeSource_" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.BloodConsumeSource*"></a>
+
+  <h3 id="RisingV_Core_Aspects_DefaultComponentMonolith_BloodConsumeSource" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.BloodConsumeSource">
+  BloodConsumeSource
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L232"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override BloodConsumeSource? BloodConsumeSource { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">BloodConsumeSource</span>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Aspects_DefaultComponentMonolith_Buff_" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.Buff*"></a>
+
+  <h3 id="RisingV_Core_Aspects_DefaultComponentMonolith_Buff" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.Buff">
+  Buff
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L246"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Buff? Buff { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Buff</span>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Aspects_DefaultComponentMonolith_CurrentHealth_" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.CurrentHealth*"></a>
+
+  <h3 id="RisingV_Core_Aspects_DefaultComponentMonolith_CurrentHealth" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.CurrentHealth">
+  CurrentHealth
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L253"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override float? CurrentHealth { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Aspects_DefaultComponentMonolith_DeathBuff_" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.DeathBuff*"></a>
+
+  <h3 id="RisingV_Core_Aspects_DefaultComponentMonolith_DeathBuff" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.DeathBuff">
+  DeathBuff
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L218"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override DeathBuff? DeathBuff { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">DeathBuff</span>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Aspects_DefaultComponentMonolith_DeathRagdollForce_" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.DeathRagdollForce*"></a>
+
+  <h3 id="RisingV_Core_Aspects_DefaultComponentMonolith_DeathRagdollForce" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.DeathRagdollForce">
+  DeathRagdollForce
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L237"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override DeathRagdollForce? DeathRagdollForce { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">DeathRagdollForce</span>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Aspects_DefaultComponentMonolith_DestroyData_" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.DestroyData*"></a>
+
+  <h3 id="RisingV_Core_Aspects_DefaultComponentMonolith_DestroyData" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.DestroyData">
+  DestroyData
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L207"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override DestroyData? DestroyData { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">DestroyData</span>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Aspects_DefaultComponentMonolith_DestroyState_" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.DestroyState*"></a>
+
+  <h3 id="RisingV_Core_Aspects_DefaultComponentMonolith_DestroyState" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.DestroyState">
+  DestroyState
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L208"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override DestroyState? DestroyState { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">DestroyState</span>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Aspects_DefaultComponentMonolith_DropTable_" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.DropTable*"></a>
+
+  <h3 id="RisingV_Core_Aspects_DefaultComponentMonolith_DropTable" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.DropTable">
+  DropTable
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L226"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override DropTable? DropTable { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">DropTable</span>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Aspects_DefaultComponentMonolith_EntityCategory_" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.EntityCategory*"></a>
+
+  <h3 id="RisingV_Core_Aspects_DefaultComponentMonolith_EntityCategory" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.EntityCategory">
+  EntityCategory
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L205"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override EntityCategory? EntityCategory { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">EntityCategory</span>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Aspects_DefaultComponentMonolith_EntityOwner_" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.EntityOwner*"></a>
+
+  <h3 id="RisingV_Core_Aspects_DefaultComponentMonolith_EntityOwner" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.EntityOwner">
+  EntityOwner
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L206"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override EntityOwner? EntityOwner { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">EntityOwner</span>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Aspects_DefaultComponentMonolith_EquipableData_" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.EquipableData*"></a>
+
+  <h3 id="RisingV_Core_Aspects_DefaultComponentMonolith_EquipableData" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.EquipableData">
+  EquipableData
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L199"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override EquippableData? EquipableData { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">EquippableData</span>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Aspects_DefaultComponentMonolith_Equipment_" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.Equipment*"></a>
+
+  <h3 id="RisingV_Core_Aspects_DefaultComponentMonolith_Equipment" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.Equipment">
+  Equipment
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L201"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Equipment? Equipment { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Equipment</span>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Aspects_DefaultComponentMonolith_EquipmentType_" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.EquipmentType*"></a>
+
+  <h3 id="RisingV_Core_Aspects_DefaultComponentMonolith_EquipmentType" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.EquipmentType">
+  EquipmentType
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L259"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override EquipmentType? EquipmentType { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">EquipmentType</span>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Aspects_DefaultComponentMonolith_Follower_" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.Follower*"></a>
+
+  <h3 id="RisingV_Core_Aspects_DefaultComponentMonolith_Follower" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.Follower">
+  Follower
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L244"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Follower? Follower { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Follower</span>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Aspects_DefaultComponentMonolith_FrameChanged_" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.FrameChanged*"></a>
+
+  <h3 id="RisingV_Core_Aspects_DefaultComponentMonolith_FrameChanged" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.FrameChanged">
+  FrameChanged
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L230"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override FrameChanged? FrameChanged { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">FrameChanged</span>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Aspects_DefaultComponentMonolith_GenericCombatMovementData_" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.GenericCombatMovementData*"></a>
+
+  <h3 id="RisingV_Core_Aspects_DefaultComponentMonolith_GenericCombatMovementData" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.GenericCombatMovementData">
+  GenericCombatMovementData
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L235"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override GenericCombatMovementData? GenericCombatMovementData { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">GenericCombatMovementData</span>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Aspects_DefaultComponentMonolith_Health_" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.Health*"></a>
+
+  <h3 id="RisingV_Core_Aspects_DefaultComponentMonolith_Health" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.Health">
+  Health
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L223"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Health? Health { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Health</span>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Aspects_DefaultComponentMonolith_HybridModelSeed_" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.HybridModelSeed*"></a>
+
+  <h3 id="RisingV_Core_Aspects_DefaultComponentMonolith_HybridModelSeed" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.HybridModelSeed">
+  HybridModelSeed
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L238"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override HybridModelSeed? HybridModelSeed { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">HybridModelSeed</span>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Aspects_DefaultComponentMonolith_HybridModelState_" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.HybridModelState*"></a>
+
+  <h3 id="RisingV_Core_Aspects_DefaultComponentMonolith_HybridModelState" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.HybridModelState">
+  HybridModelState
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L239"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override HybridModelState? HybridModelState { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">HybridModelState</span>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Aspects_DefaultComponentMonolith_InventoryBuffer_" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.InventoryBuffer*"></a>
+
+  <h3 id="RisingV_Core_Aspects_DefaultComponentMonolith_InventoryBuffer" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.InventoryBuffer">
+  InventoryBuffer
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L247"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override InventoryBuffer? InventoryBuffer { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">InventoryBuffer</span>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Aspects_DefaultComponentMonolith_InventoryBuffers_" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.InventoryBuffers*"></a>
+
+  <h3 id="RisingV_Core_Aspects_DefaultComponentMonolith_InventoryBuffers" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.InventoryBuffers">
+  InventoryBuffers
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L217"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override List&lt;InventoryBuffer&gt;? InventoryBuffers { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<span class="xref">InventoryBuffer</span>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Aspects_DefaultComponentMonolith_IsDead_" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.IsDead*"></a>
+
+  <h3 id="RisingV_Core_Aspects_DefaultComponentMonolith_IsDead" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.IsDead">
+  IsDead
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L255"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool? IsDead { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Aspects_DefaultComponentMonolith_IsGatherable_" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.IsGatherable*"></a>
+
+  <h3 id="RisingV_Core_Aspects_DefaultComponentMonolith_IsGatherable" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.IsGatherable">
+  IsGatherable
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L271"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool IsGatherable { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Aspects_DefaultComponentMonolith_IsMinion_" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.IsMinion*"></a>
+
+  <h3 id="RisingV_Core_Aspects_DefaultComponentMonolith_IsMinion" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.IsMinion">
+  IsMinion
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L225"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool IsMinion { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Aspects_DefaultComponentMonolith_IsProjectile_" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.IsProjectile*"></a>
+
+  <h3 id="RisingV_Core_Aspects_DefaultComponentMonolith_IsProjectile" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.IsProjectile">
+  IsProjectile
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L266"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool IsProjectile { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Aspects_DefaultComponentMonolith_IsResource_" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.IsResource*"></a>
+
+  <h3 id="RisingV_Core_Aspects_DefaultComponentMonolith_IsResource" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.IsResource">
+  IsResource
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L265"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool IsResource { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Aspects_DefaultComponentMonolith_IsSpell_" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.IsSpell*"></a>
+
+  <h3 id="RisingV_Core_Aspects_DefaultComponentMonolith_IsSpell" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.IsSpell">
+  IsSpell
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L267"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool IsSpell { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Aspects_DefaultComponentMonolith_IsStructure_" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.IsStructure*"></a>
+
+  <h3 id="RisingV_Core_Aspects_DefaultComponentMonolith_IsStructure" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.IsStructure">
+  IsStructure
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L268"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool IsStructure { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Aspects_DefaultComponentMonolith_IsTerrain_" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.IsTerrain*"></a>
+
+  <h3 id="RisingV_Core_Aspects_DefaultComponentMonolith_IsTerrain" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.IsTerrain">
+  IsTerrain
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L269"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool IsTerrain { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Aspects_DefaultComponentMonolith_IsUnit_" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.IsUnit*"></a>
+
+  <h3 id="RisingV_Core_Aspects_DefaultComponentMonolith_IsUnit" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.IsUnit">
+  IsUnit
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L270"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool IsUnit { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Aspects_DefaultComponentMonolith_ItemCategory_" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.ItemCategory*"></a>
+
+  <h3 id="RisingV_Core_Aspects_DefaultComponentMonolith_ItemCategory" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.ItemCategory">
+  ItemCategory
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L257"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override ItemCategory? ItemCategory { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">ItemCategory</span>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Aspects_DefaultComponentMonolith_ItemData_" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.ItemData*"></a>
+
+  <h3 id="RisingV_Core_Aspects_DefaultComponentMonolith_ItemData" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.ItemData">
+  ItemData
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L198"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override ItemData? ItemData { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">ItemData</span>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Aspects_DefaultComponentMonolith_ItemType_" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.ItemType*"></a>
+
+  <h3 id="RisingV_Core_Aspects_DefaultComponentMonolith_ItemType" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.ItemType">
+  ItemType
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L258"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override ItemType? ItemType { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">ItemType</span>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Aspects_DefaultComponentMonolith_LifeTime_" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.LifeTime*"></a>
+
+  <h3 id="RisingV_Core_Aspects_DefaultComponentMonolith_LifeTime" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.LifeTime">
+  LifeTime
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L219"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override LifeTime? LifeTime { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">LifeTime</span>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Aspects_DefaultComponentMonolith_LocalToWorld_" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.LocalToWorld*"></a>
+
+  <h3 id="RisingV_Core_Aspects_DefaultComponentMonolith_LocalToWorld" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.LocalToWorld">
+  LocalToWorld
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L209"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override LocalToWorld? LocalToWorld { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">LocalToWorld</span>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Aspects_DefaultComponentMonolith_LocalTransform_" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.LocalTransform*"></a>
+
+  <h3 id="RisingV_Core_Aspects_DefaultComponentMonolith_LocalTransform" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.LocalTransform">
+  LocalTransform
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L210"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override LocalTransform? LocalTransform { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">LocalTransform</span>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Aspects_DefaultComponentMonolith_MainCategory_" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.MainCategory*"></a>
+
+  <h3 id="RisingV_Core_Aspects_DefaultComponentMonolith_MainCategory" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.MainCategory">
+  MainCategory
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L263"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override MainEntityCategory? MainCategory { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">MainEntityCategory</span>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Aspects_DefaultComponentMonolith_ManagedItemData_" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.ManagedItemData*"></a>
+
+  <h3 id="RisingV_Core_Aspects_DefaultComponentMonolith_ManagedItemData" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.ManagedItemData">
+  ManagedItemData
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L200"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override ManagedItemData? ManagedItemData { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">ManagedItemData</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Aspects_DefaultComponentMonolith_MapCollision_" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.MapCollision*"></a>
+
+  <h3 id="RisingV_Core_Aspects_DefaultComponentMonolith_MapCollision" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.MapCollision">
+  MapCollision
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L243"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override MapCollision? MapCollision { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">MapCollision</span>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Aspects_DefaultComponentMonolith_MaterialCategory_" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.MaterialCategory*"></a>
+
+  <h3 id="RisingV_Core_Aspects_DefaultComponentMonolith_MaterialCategory" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.MaterialCategory">
+  MaterialCategory
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L262"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override MaterialCategory? MaterialCategory { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">MaterialCategory</span>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Aspects_DefaultComponentMonolith_MaxHealth_" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.MaxHealth*"></a>
+
+  <h3 id="RisingV_Core_Aspects_DefaultComponentMonolith_MaxHealth" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.MaxHealth">
+  MaxHealth
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L252"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override float? MaxHealth { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Aspects_DefaultComponentMonolith_MaxRecoveryHealth_" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.MaxRecoveryHealth*"></a>
+
+  <h3 id="RisingV_Core_Aspects_DefaultComponentMonolith_MaxRecoveryHealth" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.MaxRecoveryHealth">
+  MaxRecoveryHealth
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L254"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override float? MaxRecoveryHealth { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Aspects_DefaultComponentMonolith_Minion_" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.Minion*"></a>
+
+  <h3 id="RisingV_Core_Aspects_DefaultComponentMonolith_Minion" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.Minion">
+  Minion
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L224"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Minion? Minion { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Minion</span>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Aspects_DefaultComponentMonolith_MoveEntity_" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.MoveEntity*"></a>
+
+  <h3 id="RisingV_Core_Aspects_DefaultComponentMonolith_MoveEntity" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.MoveEntity">
+  MoveEntity
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L214"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override MoveEntity? MoveEntity { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">MoveEntity</span>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Aspects_DefaultComponentMonolith_MoveVelocity_" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.MoveVelocity*"></a>
+
+  <h3 id="RisingV_Core_Aspects_DefaultComponentMonolith_MoveVelocity" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.MoveVelocity">
+  MoveVelocity
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L215"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override MoveVelocity? MoveVelocity { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">MoveVelocity</span>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Aspects_DefaultComponentMonolith_Movement_" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.Movement*"></a>
+
+  <h3 id="RisingV_Core_Aspects_DefaultComponentMonolith_Movement" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.Movement">
+  Movement
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L213"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Movement? Movement { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Movement</span>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Aspects_DefaultComponentMonolith_NetworkId_" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.NetworkId*"></a>
+
+  <h3 id="RisingV_Core_Aspects_DefaultComponentMonolith_NetworkId" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.NetworkId">
+  NetworkId
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L227"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override NetworkId? NetworkId { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">NetworkId</span>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Aspects_DefaultComponentMonolith_NetworkSnapshot_" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.NetworkSnapshot*"></a>
+
+  <h3 id="RisingV_Core_Aspects_DefaultComponentMonolith_NetworkSnapshot" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.NetworkSnapshot">
+  NetworkSnapshot
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L231"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override NetworkSnapshot? NetworkSnapshot { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">NetworkSnapshot</span>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Aspects_DefaultComponentMonolith_NetworkedTimeout_" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.NetworkedTimeout*"></a>
+
+  <h3 id="RisingV_Core_Aspects_DefaultComponentMonolith_NetworkedTimeout" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.NetworkedTimeout">
+  NetworkedTimeout
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L228"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override NetworkedTimeout? NetworkedTimeout { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">NetworkedTimeout</span>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Aspects_DefaultComponentMonolith_PlayerCharacter_" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.PlayerCharacter*"></a>
+
+  <h3 id="RisingV_Core_Aspects_DefaultComponentMonolith_PlayerCharacter" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.PlayerCharacter">
+  PlayerCharacter
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L204"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override PlayerCharacter? PlayerCharacter { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">PlayerCharacter</span>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Aspects_DefaultComponentMonolith_ResistanceData_" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.ResistanceData*"></a>
+
+  <h3 id="RisingV_Core_Aspects_DefaultComponentMonolith_ResistanceData" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.ResistanceData">
+  ResistanceData
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L236"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override ResistanceData? ResistanceData { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">ResistanceData</span>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Aspects_DefaultComponentMonolith_ResourceLevel_" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.ResourceLevel*"></a>
+
+  <h3 id="RisingV_Core_Aspects_DefaultComponentMonolith_ResourceLevel" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.ResourceLevel">
+  ResourceLevel
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L260"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int? ResourceLevel { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Aspects_DefaultComponentMonolith_Rotation_" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.Rotation*"></a>
+
+  <h3 id="RisingV_Core_Aspects_DefaultComponentMonolith_Rotation" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.Rotation">
+  Rotation
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L212"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Rotation? Rotation { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Rotation</span>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Aspects_DefaultComponentMonolith_SpawnTransform_" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.SpawnTransform*"></a>
+
+  <h3 id="RisingV_Core_Aspects_DefaultComponentMonolith_SpawnTransform" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.SpawnTransform">
+  SpawnTransform
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L216"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override SpawnTransform? SpawnTransform { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">SpawnTransform</span>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Aspects_DefaultComponentMonolith_StructureCategory_" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.StructureCategory*"></a>
+
+  <h3 id="RisingV_Core_Aspects_DefaultComponentMonolith_StructureCategory" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.StructureCategory">
+  StructureCategory
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L264"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override StructureCategory? StructureCategory { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">StructureCategory</span>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Aspects_DefaultComponentMonolith_Team_" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.Team*"></a>
+
+  <h3 id="RisingV_Core_Aspects_DefaultComponentMonolith_Team" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.Team">
+  Team
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L233"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Team? Team { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Team</span>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Aspects_DefaultComponentMonolith_TeamReference_" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.TeamReference*"></a>
+
+  <h3 id="RisingV_Core_Aspects_DefaultComponentMonolith_TeamReference" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.TeamReference">
+  TeamReference
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L234"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override TeamReference? TeamReference { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">TeamReference</span>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Aspects_DefaultComponentMonolith_TimeOfDeath_" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.TimeOfDeath*"></a>
+
+  <h3 id="RisingV_Core_Aspects_DefaultComponentMonolith_TimeOfDeath" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.TimeOfDeath">
+  TimeOfDeath
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L256"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override double? TimeOfDeath { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Aspects_DefaultComponentMonolith_Translation_" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.Translation*"></a>
+
+  <h3 id="RisingV_Core_Aspects_DefaultComponentMonolith_Translation" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.Translation">
+  Translation
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L211"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Translation? Translation { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Translation</span>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Aspects_DefaultComponentMonolith_UnitCategory_" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.UnitCategory*"></a>
+
+  <h3 id="RisingV_Core_Aspects_DefaultComponentMonolith_UnitCategory" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.UnitCategory">
+  UnitCategory
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L261"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override UnitCategory? UnitCategory { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">UnitCategory</span>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Aspects_DefaultComponentMonolith_UnitLevel_" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.UnitLevel*"></a>
+
+  <h3 id="RisingV_Core_Aspects_DefaultComponentMonolith_UnitLevel" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.UnitLevel">
+  UnitLevel
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L220"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override UnitLevel? UnitLevel { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">UnitLevel</span>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Aspects_DefaultComponentMonolith_UnitRespawnTime_" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.UnitRespawnTime*"></a>
+
+  <h3 id="RisingV_Core_Aspects_DefaultComponentMonolith_UnitRespawnTime" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.UnitRespawnTime">
+  UnitRespawnTime
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L221"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override UnitRespawnTime? UnitRespawnTime { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">UnitRespawnTime</span>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Aspects_DefaultComponentMonolith_UnitStats_" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.UnitStats*"></a>
+
+  <h3 id="RisingV_Core_Aspects_DefaultComponentMonolith_UnitStats" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.UnitStats">
+  UnitStats
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L222"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override UnitStats? UnitStats { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">UnitStats</span>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Aspects_DefaultComponentMonolith_UpToDateUserBitMask_" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.UpToDateUserBitMask*"></a>
+
+  <h3 id="RisingV_Core_Aspects_DefaultComponentMonolith_UpToDateUserBitMask" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.UpToDateUserBitMask">
+  UpToDateUserBitMask
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L229"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override UpToDateUserBitMask? UpToDateUserBitMask { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">UpToDateUserBitMask</span>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Aspects_DefaultComponentMonolith_User_" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.User*"></a>
+
+  <h3 id="RisingV_Core_Aspects_DefaultComponentMonolith_User" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.User">
+  User
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L202"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override User? User { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">User</span>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="RisingV_Core_Aspects_DefaultComponentMonolith_YieldResourcesOnDamageTaken_" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.YieldResourcesOnDamageTaken*"></a>
+
+  <h3 id="RisingV_Core_Aspects_DefaultComponentMonolith_YieldResourcesOnDamageTaken" data-uid="RisingV.Core.Aspects.DefaultComponentMonolith.YieldResourcesOnDamageTaken">
+  YieldResourcesOnDamageTaken
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L245"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override YieldResourcesOnDamageTaken? YieldResourcesOnDamageTaken { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">YieldResourcesOnDamageTaken</span>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs/#L190" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
