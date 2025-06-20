@@ -430,7 +430,21 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "RisingV.Core.Aspects.ComponentMonolith",
-      "Summary": "<p sourcefile=\"api/RisingV.Core.Aspects.ComponentMonolith.yml\" sourcestartlinenumber=\"1\">A monolithic component that provides access to various components of an entity.</p>\n"
+      "Summary": "<p sourcefile=\"api/RisingV.Core.Aspects.ComponentMonolith.yml\" sourcestartlinenumber=\"1\">Monolithic component glue that provides access to various components/data of an entity.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Aspects.DefaultComponentMonolith.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Aspects.DefaultComponentMonolith.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Aspects.DefaultComponentMonolith",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.Aspects.DefaultComponentMonolith.yml\" sourcestartlinenumber=\"1\">The default implementation of the <xref href=\"RisingV.Core.Aspects.ComponentMonolith\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
     },
     {
       "type": "ManagedReference",
