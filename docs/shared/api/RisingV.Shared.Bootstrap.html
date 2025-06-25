@@ -320,7 +320,7 @@ Class Bootstrap  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="RisingV_Shared_Bootstrap_AddSharedComponent__1_RisingV_Shared_Plugins_IPlugin_System_Boolean_" data-uid="RisingV.Shared.Bootstrap.AddSharedComponent``1(RisingV.Shared.Plugins.IPlugin,System.Boolean)">
   AddSharedComponent&lt;T&gt;(IPlugin, bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Bootstrap.cs/#L251"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Bootstrap.cs/#L252"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Adds a shared component of the specified type to the plugin's shared components.</p>
@@ -368,7 +368,7 @@ Class Bootstrap  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="RisingV_Shared_Bootstrap_AddSharedComponent__1_RisingV_Shared_Plugins_IPlugin___0_System_Boolean_" data-uid="RisingV.Shared.Bootstrap.AddSharedComponent``1(RisingV.Shared.Plugins.IPlugin,``0,System.Boolean)">
   AddSharedComponent&lt;T&gt;(IPlugin, T, bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Bootstrap.cs/#L263"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Bootstrap.cs/#L264"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Adds a shared component of the specified type to the plugin's shared components.</p>
@@ -413,7 +413,7 @@ Class Bootstrap  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="RisingV_Shared_Bootstrap_GetSharedComponent_System_Type_" data-uid="RisingV.Shared.Bootstrap.GetSharedComponent(System.Type)">
   GetSharedComponent(Type)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Bootstrap.cs/#L220"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Bootstrap.cs/#L221"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets a shared component of the specified type from the plugin's shared components.</p>
@@ -458,7 +458,7 @@ Class Bootstrap  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="RisingV_Shared_Bootstrap_GetSharedComponent__1" data-uid="RisingV.Shared.Bootstrap.GetSharedComponent``1">
   GetSharedComponent&lt;TX&gt;()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Bootstrap.cs/#L235"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Bootstrap.cs/#L236"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets a shared component of the specified type from the plugin's shared components.</p>
@@ -503,7 +503,7 @@ Class Bootstrap  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="RisingV_Shared_Bootstrap_Load_RisingV_Shared_Plugins_IPlugin_" data-uid="RisingV.Shared.Bootstrap.Load(RisingV.Shared.Plugins.IPlugin)">
   Load(IPlugin?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Bootstrap.cs/#L78"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Bootstrap.cs/#L79"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -541,7 +541,7 @@ Class Bootstrap  <a class="header-action link-secondary" title="View source" hre
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void Load(string pluginGuid, string pluginName, string pluginVersion, Action&lt;IPlugin&gt; onLoading)</code></pre>
+    <pre><code class="lang-csharp hljs">public static IPlugin Load(string pluginGuid, string pluginName, string pluginVersion, Action&lt;IPlugin&gt; onLoading)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -556,6 +556,11 @@ Class Bootstrap  <a class="header-action link-secondary" title="View source" hre
     <dd></dd>
   </dl>
 
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="RisingV.Shared.Plugins.IPlugin.html">IPlugin</a></dt>
+    <dd></dd>
+  </dl>
 
 
 
@@ -571,7 +576,7 @@ Class Bootstrap  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="RisingV_Shared_Bootstrap_OnGameDataInitialized_RisingV_Shared_EventBridge_OnGameDataInitializedEvent_" data-uid="RisingV.Shared.Bootstrap.OnGameDataInitialized(RisingV.Shared.EventBridge.OnGameDataInitializedEvent)">
   OnGameDataInitialized(OnGameDataInitializedEvent)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Bootstrap.cs/#L130"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Bootstrap.cs/#L131"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Called when the game data is initialized. This method is triggered by the <a class="xref" href="RisingV.Shared.EventBridge.OnGameDataInitializedEvent.html">EventBridge.OnGameDataInitializedEvent</a>.</p>
@@ -604,7 +609,7 @@ Class Bootstrap  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="RisingV_Shared_Bootstrap_OnPluginsInitializing_RisingV_Shared_EventBridge_OnPluginsInitializingEvent_RisingV_Shared_Plugins_IPlugin_" data-uid="RisingV.Shared.Bootstrap.OnPluginsInitializing(RisingV.Shared.EventBridge.OnPluginsInitializingEvent,RisingV.Shared.Plugins.IPlugin)">
   OnPluginsInitializing(OnPluginsInitializingEvent, IPlugin)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Bootstrap.cs/#L146"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Bootstrap.cs/#L147"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -637,7 +642,7 @@ Class Bootstrap  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="RisingV_Shared_Bootstrap_OnPluginsLoaded_RisingV_Shared_EventBridge_OnPluginsLoadedEvent_RisingV_Shared_Plugins_IPlugin_" data-uid="RisingV.Shared.Bootstrap.OnPluginsLoaded(RisingV.Shared.EventBridge.OnPluginsLoadedEvent,RisingV.Shared.Plugins.IPlugin)">
   OnPluginsLoaded(OnPluginsLoadedEvent, IPlugin)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Bootstrap.cs/#L200"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Bootstrap.cs/#L201"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -670,7 +675,7 @@ Class Bootstrap  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="RisingV_Shared_Bootstrap_OnPluginsLoading_RisingV_Shared_EventBridge_OnPluginsLoadingEvent_RisingV_Shared_Plugins_IPlugin_" data-uid="RisingV.Shared.Bootstrap.OnPluginsLoading(RisingV.Shared.EventBridge.OnPluginsLoadingEvent,RisingV.Shared.Plugins.IPlugin)">
   OnPluginsLoading(OnPluginsLoadingEvent, IPlugin)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Bootstrap.cs/#L164"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Bootstrap.cs/#L165"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -703,7 +708,7 @@ Class Bootstrap  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="RisingV_Shared_Bootstrap_Reload_RisingV_Shared_Plugins_IPlugin_" data-uid="RisingV.Shared.Bootstrap.Reload(RisingV.Shared.Plugins.IPlugin)">
   Reload(IPlugin?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Bootstrap.cs/#L117"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Bootstrap.cs/#L118"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -734,7 +739,7 @@ Class Bootstrap  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="RisingV_Shared_Bootstrap_Unload_RisingV_Shared_Plugins_IPlugin_" data-uid="RisingV.Shared.Bootstrap.Unload(RisingV.Shared.Plugins.IPlugin)">
   Unload(IPlugin?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Bootstrap.cs/#L98"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Bootstrap.cs/#L99"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Unloads the plugin, unregistering events and cleaning up resources.</p>
