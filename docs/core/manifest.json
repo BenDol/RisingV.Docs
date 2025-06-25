@@ -1770,17 +1770,45 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/RisingV.Core.Hooks.ClientChatHook.yml",
+      "source_relative_path": "api/RisingV.Core.Hooks.Client.ClientChatHook.yml",
       "output": {
         ".html": {
-          "relative_path": "api/RisingV.Core.Hooks.ClientChatHook.html"
+          "relative_path": "api/RisingV.Core.Hooks.Client.ClientChatHook.html"
         }
       },
       "version": "",
       "Uid": null,
       "IsMRef": true,
-      "Title": "RisingV.Core.Hooks.ClientChatHook",
-      "Summary": "<p sourcefile=\"api/RisingV.Core.Hooks.ClientChatHook.yml\" sourcestartlinenumber=\"1\">Hook into the client chat system to monitor and handle chat messages.</p>\n"
+      "Title": "RisingV.Core.Hooks.Client.ClientChatHook",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.Hooks.Client.ClientChatHook.yml\" sourcestartlinenumber=\"1\">Hook into the client chat system to monitor and handle chat messages.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Hooks.Client.GameplayInputSystemHook.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Hooks.Client.GameplayInputSystemHook.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Hooks.Client.GameplayInputSystemHook",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.Hooks.Client.GameplayInputSystemHook.yml\" sourcestartlinenumber=\"1\">Hooks for the <xref href=\"ProjectM.GameplayInputSystem\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Hooks.Client.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Hooks.Client.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Hooks.Client",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -1809,20 +1837,6 @@
       "IsMRef": true,
       "Title": "RisingV.Core.Hooks.EquipmentHooks",
       "Summary": "<p sourcefile=\"api/RisingV.Core.Hooks.EquipmentHooks.yml\" sourcestartlinenumber=\"1\">Hooks for equipment-related systems in the game.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/RisingV.Core.Hooks.GameplayInputSystemHook.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/RisingV.Core.Hooks.GameplayInputSystemHook.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "RisingV.Core.Hooks.GameplayInputSystemHook",
-      "Summary": "<p sourcefile=\"api/RisingV.Core.Hooks.GameplayInputSystemHook.yml\" sourcestartlinenumber=\"1\">Hooks for the <xref href=\"ProjectM.GameplayInputSystem\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1952,6 +1966,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Hooks.Server.ServerChatHook.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Hooks.Server.ServerChatHook.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Hooks.Server.ServerChatHook",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.Hooks.Server.ServerChatHook.yml\" sourcestartlinenumber=\"1\">Patch for the ChatMessageSystem to hook into the OnUpdate method.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/RisingV.Core.Hooks.Server.SettingsManagerHook.yml",
       "output": {
         ".html": {
@@ -1977,20 +2005,6 @@
       "IsMRef": true,
       "Title": "RisingV.Core.Hooks.Server",
       "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/RisingV.Core.Hooks.ServerChatHook.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/RisingV.Core.Hooks.ServerChatHook.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "RisingV.Core.Hooks.ServerChatHook",
-      "Summary": "<p sourcefile=\"api/RisingV.Core.Hooks.ServerChatHook.yml\" sourcestartlinenumber=\"1\">Patch for the ChatMessageSystem to hook into the OnUpdate method.</p>\n"
     },
     {
       "type": "ManagedReference",
