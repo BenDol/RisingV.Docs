@@ -2,11 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Class ItemStrings | RisingV.TemplateNoPlugin </title>
+      <title>Class Plugin | RisingV.TemplateNoPlugin </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Class ItemStrings | RisingV.TemplateNoPlugin ">
+      <meta name="title" content="Class Plugin | RisingV.TemplateNoPlugin ">
       
-      <meta name="description" content="Provides methods to retrieve strings (like names, etc.) for items.">
+      
       <link rel="icon" href="../assets/favicon/favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/RisingV-Mods/RisingV.GameData/new/main/apiSpec/new?filename=RisingV_GameData_Strings_ItemStrings.md&amp;value=---%0Auid%3A%20RisingV.GameData.Strings.ItemStrings%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/RisingV-Mods/RisingV.TemplateNoPlugin/new/main/apiSpec/new?filename=RisingV_TemplateNoPlugin_Plugin.md&amp;value=---%0Auid%3A%20RisingV.TemplateNoPlugin.Plugin%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -84,25 +84,28 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="RisingV.GameData.Strings.ItemStrings">
+        <article data-uid="RisingV.TemplateNoPlugin.Plugin">
 
 
 
-  <h1 id="RisingV_GameData_Strings_ItemStrings" data-uid="RisingV.GameData.Strings.ItemStrings" class="text-break">
-Class ItemStrings  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.GameData/blob/main/RisingV.GameData/Strings/ItemStrings.cs/#L12"><i class="bi bi-code-slash"></i></a>
+  <h1 id="RisingV_TemplateNoPlugin_Plugin" data-uid="RisingV.TemplateNoPlugin.Plugin" class="text-break">
+Class Plugin  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.TemplateNoPlugin/blob/main/RisingV.TemplateNoPlugin/Plugin.cs/#L24"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
-    <dl><dt>Namespace</dt><dd><a class="xref" href="RisingV.html">RisingV</a>.<a class="xref" href="RisingV.GameData.html">GameData</a>.<a class="xref" href="RisingV.GameData.Strings.html">Strings</a></dd></dl>
-  <dl><dt>Assembly</dt><dd>RisingV.GameData.dll</dd></dl>
+    <dl><dt>Namespace</dt><dd><a class="xref" href="RisingV.html">RisingV</a>.<a class="xref" href="RisingV.TemplateNoPlugin.html">TemplateNoPlugin</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>RisingV.TemplateNoPlugin.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Provides methods to retrieve strings (like names, etc.) for items.</p>
-</div>
+  <div class="markdown summary"></div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ItemStrings</code></pre>
+    <pre><code class="lang-csharp hljs">[BepInPlugin(&quot;RisingV.TemplateNoPlugin&quot;, &quot;RisingV.TemplateNoPlugin&quot;, &quot;1.0.0&quot;)]
+[BepInDependency(&quot;gg.deca.VampireCommandFramework&quot;, BepInDependency.DependencyFlags.HardDependency)]
+[BepInDependency(&quot;RisingV.Core&quot;, BepInDependency.DependencyFlags.HardDependency)]
+[BepInDependency(&quot;RisingV.Scripting&quot;, BepInDependency.DependencyFlags.HardDependency)]
+public class Plugin : BasePlugin</code></pre>
   </div>
 
 
@@ -112,7 +115,8 @@ Class ItemStrings  <a class="header-action link-secondary" title="View source" h
     <dt>Inheritance</dt>
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
-      <div><span class="xref">ItemStrings</span></div>
+      <div><span class="xref">BasePlugin</span></div>
+      <div><span class="xref">Plugin</span></div>
     </dd>
   </dl>
 
@@ -121,6 +125,15 @@ Class ItemStrings  <a class="header-action link-secondary" title="View source" h
   <dl class="typelist inheritedMembers">
     <dt>Inherited Members</dt>
     <dd>
+    <div>
+      <span class="xref">BasePlugin.AddComponent&lt;T&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">BasePlugin.Log</span>
+    </div>
+    <div>
+      <span class="xref">BasePlugin.Config</span>
+    </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
     </div>
@@ -162,11 +175,108 @@ Class ItemStrings  <a class="header-action link-secondary" title="View source" h
 
 
 
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="RisingV_TemplateNoPlugin_Plugin_RisingV_" data-uid="RisingV.TemplateNoPlugin.Plugin.RisingV*"></a>
+
+  <h3 id="RisingV_TemplateNoPlugin_Plugin_RisingV" data-uid="RisingV.TemplateNoPlugin.Plugin.RisingV">
+  RisingV
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.TemplateNoPlugin/blob/main/RisingV.TemplateNoPlugin/Plugin.cs/#L33"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Stored reference to the RisingV plugin instance for use in other parts of our plugin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IPlugin? RisingV { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Plugins.IPlugin.html">IPlugin</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="RisingV_TemplateNoPlugin_Plugin_Load_" data-uid="RisingV.TemplateNoPlugin.Plugin.Load*"></a>
+
+  <h3 id="RisingV_TemplateNoPlugin_Plugin_Load" data-uid="RisingV.TemplateNoPlugin.Plugin.Load">
+  Load()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.TemplateNoPlugin/blob/main/RisingV.TemplateNoPlugin/Plugin.cs/#L35"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Load()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RisingV_TemplateNoPlugin_Plugin_Unload_" data-uid="RisingV.TemplateNoPlugin.Plugin.Unload*"></a>
+
+  <h3 id="RisingV_TemplateNoPlugin_Plugin_Unload" data-uid="RisingV.TemplateNoPlugin.Plugin.Unload">
+  Unload()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.TemplateNoPlugin/blob/main/RisingV.TemplateNoPlugin/Plugin.cs/#L58"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool Unload()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/RisingV-Mods/RisingV.GameData/blob/main/RisingV.GameData/Strings/ItemStrings.cs/#L12" class="edit-link">Edit this page</a>
+          <a href="https://github.com/RisingV-Mods/RisingV.TemplateNoPlugin/blob/main/RisingV.TemplateNoPlugin/Plugin.cs/#L24" class="edit-link">Edit this page</a>
         </div>
 
 

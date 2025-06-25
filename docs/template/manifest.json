@@ -1,5 +1,5 @@
 {
-  "source_base_path": "/home/runner/work/RisingV.Template/RisingV.Template",
+  "source_base_path": "/home/runner/work/RisingV.TemplateNoPlugin/RisingV.TemplateNoPlugin",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -7798,58 +7798,58 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/RisingV.Template.MyPluginInfo.yml",
+      "source_relative_path": "api/RisingV.TemplateNoPlugin.MyPluginInfo.yml",
       "output": {
         ".html": {
-          "relative_path": "api/RisingV.Template.MyPluginInfo.html"
+          "relative_path": "api/RisingV.TemplateNoPlugin.MyPluginInfo.html"
         }
       },
       "version": "",
       "Uid": null,
       "IsMRef": true,
-      "Title": "RisingV.Template.MyPluginInfo",
+      "Title": "RisingV.TemplateNoPlugin.MyPluginInfo",
       "Summary": null
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/RisingV.Template.Plugin.yml",
+      "source_relative_path": "api/RisingV.TemplateNoPlugin.Plugin.yml",
       "output": {
         ".html": {
-          "relative_path": "api/RisingV.Template.Plugin.html"
+          "relative_path": "api/RisingV.TemplateNoPlugin.Plugin.html"
         }
       },
       "version": "",
       "Uid": null,
       "IsMRef": true,
-      "Title": "RisingV.Template.Plugin",
+      "Title": "RisingV.TemplateNoPlugin.Plugin",
       "Summary": null
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/RisingV.Template.TemplatePluginContext.yml",
+      "source_relative_path": "api/RisingV.TemplateNoPlugin.TemplatePluginContext.yml",
       "output": {
         ".html": {
-          "relative_path": "api/RisingV.Template.TemplatePluginContext.html"
+          "relative_path": "api/RisingV.TemplateNoPlugin.TemplatePluginContext.html"
         }
       },
       "version": "",
       "Uid": null,
       "IsMRef": true,
-      "Title": "RisingV.Template.TemplatePluginContext",
+      "Title": "RisingV.TemplateNoPlugin.TemplatePluginContext",
       "Summary": null
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/RisingV.Template.yml",
+      "source_relative_path": "api/RisingV.TemplateNoPlugin.yml",
       "output": {
         ".html": {
-          "relative_path": "api/RisingV.Template.html"
+          "relative_path": "api/RisingV.TemplateNoPlugin.html"
         }
       },
       "version": "",
       "Uid": null,
       "IsMRef": true,
-      "Title": "RisingV.Template",
+      "Title": "RisingV.TemplateNoPlugin",
       "Summary": null
     },
     {
