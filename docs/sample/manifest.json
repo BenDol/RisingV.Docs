@@ -1,5 +1,5 @@
 {
-  "source_base_path": "/home/runner/work/RisingV.SampleLite/RisingV.SampleLite",
+  "source_base_path": "/home/runner/work/RisingV.Sample/RisingV.Sample",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -42,6 +42,76 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Sample.Engines.SampleEngine.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Sample.Engines.SampleEngine.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Sample.Engines.SampleEngine",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Sample.Engines.SampleEngineConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Sample.Engines.SampleEngineConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Sample.Engines.SampleEngineConfig",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Sample.Engines.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Sample.Engines.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Sample.Engines",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Sample.Events.SampleEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Sample.Events.SampleEvent.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Sample.Events.SampleEvent",
+      "Summary": "<p sourcefile=\"api/RisingV.Sample.Events.SampleEvent.yml\" sourcestartlinenumber=\"1\">Represents a sample event for the EventBus system.\n<xref href=\"RisingV.Shared.Events.ManagedEventBus\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Sample.Events.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Sample.Events.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Sample.Events",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/RisingV.Sample.MyPluginInfo.yml",
       "output": {
         ".html": {
@@ -70,6 +140,34 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Sample.Processors.SampleProcessor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Sample.Processors.SampleProcessor.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Sample.Processors.SampleProcessor",
+      "Summary": "<p sourcefile=\"api/RisingV.Sample.Processors.SampleProcessor.yml\" sourcestartlinenumber=\"1\">SampleProcessor is a default processor for handling DeathEvent.\nCall this processor from a game system hook with an event (in this example DeathEvent).\nThis could be an internal game event or a custom event you define.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Sample.Processors.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Sample.Processors.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Sample.Processors",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/RisingV.Sample.SamplePluginContext.yml",
       "output": {
         ".html": {
@@ -80,6 +178,48 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "RisingV.Sample.SamplePluginContext",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Sample.Systems.SampleSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Sample.Systems.SampleSystem.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Sample.Systems.SampleSystem",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Sample.Systems.SampleSystemConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Sample.Systems.SampleSystemConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Sample.Systems.SampleSystemConfig",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Sample.Systems.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Sample.Systems.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Sample.Systems",
       "Summary": null
     },
     {

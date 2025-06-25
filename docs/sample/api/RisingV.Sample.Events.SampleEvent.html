@@ -2,11 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Class MyPluginInfo | RisingV.Sample </title>
+      <title>Class SampleEvent | RisingV.Sample </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Class MyPluginInfo | RisingV.Sample ">
+      <meta name="title" content="Class SampleEvent | RisingV.Sample ">
       
-      
+      <meta name="description" content="Represents a sample event for the EventBus system.">
       <link rel="icon" href="../assets/favicon/favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/RisingV-Mods/RisingV.Sample/new/main/apiSpec/new?filename=RisingV_Sample_MyPluginInfo.md&amp;value=---%0Auid%3A%20RisingV.Sample.MyPluginInfo%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/RisingV-Mods/RisingV.Sample/new/main/apiSpec/new?filename=RisingV_Sample_Events_SampleEvent.md&amp;value=---%0Auid%3A%20RisingV.Sample.Events.SampleEvent%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -84,24 +84,26 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="RisingV.Sample.MyPluginInfo">
+        <article data-uid="RisingV.Sample.Events.SampleEvent">
 
 
 
-  <h1 id="RisingV_Sample_MyPluginInfo" data-uid="RisingV.Sample.MyPluginInfo" class="text-break">
-Class MyPluginInfo  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Sample/blob/main/RisingV.Sample/obj/Release/net6.0/MyPluginInfo.cs/#L3"><i class="bi bi-code-slash"></i></a>
+  <h1 id="RisingV_Sample_Events_SampleEvent" data-uid="RisingV.Sample.Events.SampleEvent" class="text-break">
+Class SampleEvent  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Sample/blob/main/RisingV.Sample/Events/SampleEvent.cs/#L16"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
-    <dl><dt>Namespace</dt><dd><a class="xref" href="RisingV.html">RisingV</a>.<a class="xref" href="RisingV.Sample.html">Sample</a></dd></dl>
+    <dl><dt>Namespace</dt><dd><a class="xref" href="RisingV.html">RisingV</a>.<a class="xref" href="RisingV.Sample.html">Sample</a>.<a class="xref" href="RisingV.Sample.Events.html">Events</a></dd></dl>
   <dl><dt>Assembly</dt><dd>RisingV.Sample.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"></div>
+  <div class="markdown summary"><p>Represents a sample event for the EventBus system.
+<a class="xref" href="https://docs.risingv.dev/scripting/api/RisingV.Shared.Events.ManagedEventBus.html">ManagedEventBus</a></p>
+</div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static class MyPluginInfo</code></pre>
+    <pre><code class="lang-csharp hljs">public record SampleEvent : Event, IEvent, IEquatable&lt;Event&gt;, IEquatable&lt;SampleEvent&gt;</code></pre>
   </div>
 
 
@@ -111,23 +113,47 @@ Class MyPluginInfo  <a class="header-action link-secondary" title="View source" 
     <dt>Inheritance</dt>
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
-      <div><span class="xref">MyPluginInfo</span></div>
+      <div><a class="xref" href="https://docs.risingv.dev/scripting/api/RisingV.Shared.Events.Event.html">Event</a></div>
+      <div><span class="xref">SampleEvent</span></div>
     </dd>
   </dl>
 
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://docs.risingv.dev/scripting/api/RisingV.Shared.Events.IEvent.html">IEvent</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="https://docs.risingv.dev/scripting/api/RisingV.Shared.Events.Event.html">Event</a>&gt;</div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="RisingV.Sample.Events.SampleEvent.html">SampleEvent</a>&gt;</div>
+    </dd>
+  </dl>
 
 
   <dl class="typelist inheritedMembers">
     <dt>Inherited Members</dt>
     <dd>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+      <span class="xref">Event.ToString()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.stringbuilder">Event.PrintMembers(StringBuilder)</a>
+    </div>
+    <div>
+      <span class="xref">Event.GetHashCode()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Event.Equals(object)</a>
+    </div>
+    <div>
+      <span class="xref">Event.Equals(Event)</span>
+    </div>
+    <div>
+      <span class="xref">Event.&lt;Clone&gt;$()</span>
+    </div>
+    <div>
+      <span class="xref">Event.EqualityContract</span>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
@@ -138,9 +164,6 @@ Class MyPluginInfo  <a class="header-action link-secondary" title="View source" 
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
     </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
-    </div>
   </dd></dl>
 
 
@@ -148,30 +171,31 @@ Class MyPluginInfo  <a class="header-action link-secondary" title="View source" 
 
 
 
-  <h2 class="section" id="fields">Fields
+  <h2 class="section" id="constructors">Constructors
 </h2>
 
 
+  <a id="RisingV_Sample_Events_SampleEvent__ctor_" data-uid="RisingV.Sample.Events.SampleEvent.#ctor*"></a>
 
-  <h3 id="RisingV_Sample_MyPluginInfo_PLUGIN_GUID" data-uid="RisingV.Sample.MyPluginInfo.PLUGIN_GUID">
-  PLUGIN_GUID
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Sample/blob/main/RisingV.Sample/obj/Release/net6.0/MyPluginInfo.cs/#L5"><i class="bi bi-code-slash"></i></a>
+  <h3 id="RisingV_Sample_Events_SampleEvent__ctor_System_String_" data-uid="RisingV.Sample.Events.SampleEvent.#ctor(System.String)">
+  SampleEvent(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Sample/blob/main/RisingV.Sample/Events/SampleEvent.cs/#L16"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Represents a sample event for the EventBus system.
+<a class="xref" href="https://docs.risingv.dev/scripting/api/RisingV.Shared.Events.ManagedEventBus.html">ManagedEventBus</a></p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public const string PLUGIN_GUID = &quot;RisingV.Sample&quot;</code></pre>
+    <pre><code class="lang-csharp hljs">public SampleEvent(string Data)</code></pre>
   </div>
 
-
-
-
-  <h4 class="section">Field Value</h4>
+  <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dt><code>Data</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Event data</p>
+</dd>
   </dl>
 
 
@@ -183,57 +207,36 @@ Class MyPluginInfo  <a class="header-action link-secondary" title="View source" 
 
 
 
-  <h3 id="RisingV_Sample_MyPluginInfo_PLUGIN_NAME" data-uid="RisingV.Sample.MyPluginInfo.PLUGIN_NAME">
-  PLUGIN_NAME
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Sample/blob/main/RisingV.Sample/obj/Release/net6.0/MyPluginInfo.cs/#L6"><i class="bi bi-code-slash"></i></a>
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="RisingV_Sample_Events_SampleEvent_Data_" data-uid="RisingV.Sample.Events.SampleEvent.Data*"></a>
+
+  <h3 id="RisingV_Sample_Events_SampleEvent_Data" data-uid="RisingV.Sample.Events.SampleEvent.Data">
+  Data
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Sample/blob/main/RisingV.Sample/Events/SampleEvent.cs/#L16"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Event data</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public const string PLUGIN_NAME = &quot;RisingV.Sample&quot;</code></pre>
+    <pre><code class="lang-csharp hljs">public string Data { get; init; }</code></pre>
   </div>
 
 
 
 
-  <h4 class="section">Field Value</h4>
+
+  <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd></dd>
   </dl>
-
-
-
-
-
-
-
-
-
-
-  <h3 id="RisingV_Sample_MyPluginInfo_PLUGIN_VERSION" data-uid="RisingV.Sample.MyPluginInfo.PLUGIN_VERSION">
-  PLUGIN_VERSION
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Sample/blob/main/RisingV.Sample/obj/Release/net6.0/MyPluginInfo.cs/#L7"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public const string PLUGIN_VERSION = &quot;1.0.0&quot;</code></pre>
-  </div>
-
-
-
-
-  <h4 class="section">Field Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-  </dl>
-
 
 
 
@@ -246,7 +249,7 @@ Class MyPluginInfo  <a class="header-action link-secondary" title="View source" 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/RisingV-Mods/RisingV.Sample/blob/main/RisingV.Sample/obj/Release/net6.0/MyPluginInfo.cs/#L3" class="edit-link">Edit this page</a>
+          <a href="https://github.com/RisingV-Mods/RisingV.Sample/blob/main/RisingV.Sample/Events/SampleEvent.cs/#L16" class="edit-link">Edit this page</a>
         </div>
 
 

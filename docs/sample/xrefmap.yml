@@ -7,6 +7,145 @@ references:
   commentId: N:RisingV.Sample
   fullName: RisingV.Sample
   nameWithType: RisingV.Sample
+- uid: RisingV.Sample.Engines
+  name: RisingV.Sample.Engines
+  href: api/RisingV.Sample.Engines.html
+  commentId: N:RisingV.Sample.Engines
+  fullName: RisingV.Sample.Engines
+  nameWithType: RisingV.Sample.Engines
+- uid: RisingV.Sample.Engines.SampleEngine
+  name: SampleEngine
+  href: api/RisingV.Sample.Engines.SampleEngine.html
+  commentId: T:RisingV.Sample.Engines.SampleEngine
+  fullName: RisingV.Sample.Engines.SampleEngine
+  nameWithType: SampleEngine
+- uid: RisingV.Sample.Engines.SampleEngine.Dependencies
+  name: Dependencies
+  href: api/RisingV.Sample.Engines.SampleEngine.html#RisingV_Sample_Engines_SampleEngine_Dependencies
+  commentId: P:RisingV.Sample.Engines.SampleEngine.Dependencies
+  fullName: RisingV.Sample.Engines.SampleEngine.Dependencies
+  nameWithType: SampleEngine.Dependencies
+- uid: RisingV.Sample.Engines.SampleEngine.Dependencies*
+  name: Dependencies
+  href: api/RisingV.Sample.Engines.SampleEngine.html#RisingV_Sample_Engines_SampleEngine_Dependencies_
+  commentId: Overload:RisingV.Sample.Engines.SampleEngine.Dependencies
+  isSpec: "True"
+  fullName: RisingV.Sample.Engines.SampleEngine.Dependencies
+  nameWithType: SampleEngine.Dependencies
+- uid: RisingV.Sample.Engines.SampleEngine.Load(RisingV.Shared.Engines.EngineManager,System.Collections.Generic.List{RisingV.Shared.Plugins.IPlugin})
+  name: Load(EngineManager, List<IPlugin>)
+  href: api/RisingV.Sample.Engines.SampleEngine.html#RisingV_Sample_Engines_SampleEngine_Load_RisingV_Shared_Engines_EngineManager_System_Collections_Generic_List_RisingV_Shared_Plugins_IPlugin__
+  commentId: M:RisingV.Sample.Engines.SampleEngine.Load(RisingV.Shared.Engines.EngineManager,System.Collections.Generic.List{RisingV.Shared.Plugins.IPlugin})
+  name.vb: Load(EngineManager, List(Of IPlugin))
+  fullName: RisingV.Sample.Engines.SampleEngine.Load(RisingV.Shared.Engines.EngineManager, System.Collections.Generic.List<RisingV.Shared.Plugins.IPlugin>)
+  fullName.vb: RisingV.Sample.Engines.SampleEngine.Load(RisingV.Shared.Engines.EngineManager, System.Collections.Generic.List(Of RisingV.Shared.Plugins.IPlugin))
+  nameWithType: SampleEngine.Load(EngineManager, List<IPlugin>)
+  nameWithType.vb: SampleEngine.Load(EngineManager, List(Of IPlugin))
+- uid: RisingV.Sample.Engines.SampleEngine.Load*
+  name: Load
+  href: api/RisingV.Sample.Engines.SampleEngine.html#RisingV_Sample_Engines_SampleEngine_Load_
+  commentId: Overload:RisingV.Sample.Engines.SampleEngine.Load
+  isSpec: "True"
+  fullName: RisingV.Sample.Engines.SampleEngine.Load
+  nameWithType: SampleEngine.Load
+- uid: RisingV.Sample.Engines.SampleEngine.Ready(RisingV.Shared.Engines.EngineManager,System.Collections.Generic.List{RisingV.Shared.Plugins.IPlugin})
+  name: Ready(EngineManager, List<IPlugin>)
+  href: api/RisingV.Sample.Engines.SampleEngine.html#RisingV_Sample_Engines_SampleEngine_Ready_RisingV_Shared_Engines_EngineManager_System_Collections_Generic_List_RisingV_Shared_Plugins_IPlugin__
+  commentId: M:RisingV.Sample.Engines.SampleEngine.Ready(RisingV.Shared.Engines.EngineManager,System.Collections.Generic.List{RisingV.Shared.Plugins.IPlugin})
+  name.vb: Ready(EngineManager, List(Of IPlugin))
+  fullName: RisingV.Sample.Engines.SampleEngine.Ready(RisingV.Shared.Engines.EngineManager, System.Collections.Generic.List<RisingV.Shared.Plugins.IPlugin>)
+  fullName.vb: RisingV.Sample.Engines.SampleEngine.Ready(RisingV.Shared.Engines.EngineManager, System.Collections.Generic.List(Of RisingV.Shared.Plugins.IPlugin))
+  nameWithType: SampleEngine.Ready(EngineManager, List<IPlugin>)
+  nameWithType.vb: SampleEngine.Ready(EngineManager, List(Of IPlugin))
+- uid: RisingV.Sample.Engines.SampleEngine.Ready*
+  name: Ready
+  href: api/RisingV.Sample.Engines.SampleEngine.html#RisingV_Sample_Engines_SampleEngine_Ready_
+  commentId: Overload:RisingV.Sample.Engines.SampleEngine.Ready
+  isSpec: "True"
+  fullName: RisingV.Sample.Engines.SampleEngine.Ready
+  nameWithType: SampleEngine.Ready
+- uid: RisingV.Sample.Engines.SampleEngine.Recommended
+  name: Recommended
+  href: api/RisingV.Sample.Engines.SampleEngine.html#RisingV_Sample_Engines_SampleEngine_Recommended
+  commentId: P:RisingV.Sample.Engines.SampleEngine.Recommended
+  fullName: RisingV.Sample.Engines.SampleEngine.Recommended
+  nameWithType: SampleEngine.Recommended
+- uid: RisingV.Sample.Engines.SampleEngine.Recommended*
+  name: Recommended
+  href: api/RisingV.Sample.Engines.SampleEngine.html#RisingV_Sample_Engines_SampleEngine_Recommended_
+  commentId: Overload:RisingV.Sample.Engines.SampleEngine.Recommended
+  isSpec: "True"
+  fullName: RisingV.Sample.Engines.SampleEngine.Recommended
+  nameWithType: SampleEngine.Recommended
+- uid: RisingV.Sample.Engines.SampleEngineConfig
+  name: SampleEngineConfig
+  href: api/RisingV.Sample.Engines.SampleEngineConfig.html
+  commentId: T:RisingV.Sample.Engines.SampleEngineConfig
+  fullName: RisingV.Sample.Engines.SampleEngineConfig
+  nameWithType: SampleEngineConfig
+- uid: RisingV.Sample.Engines.SampleEngineConfig.#ctor
+  name: SampleEngineConfig()
+  href: api/RisingV.Sample.Engines.SampleEngineConfig.html#RisingV_Sample_Engines_SampleEngineConfig__ctor
+  commentId: M:RisingV.Sample.Engines.SampleEngineConfig.#ctor
+  name.vb: New()
+  fullName: RisingV.Sample.Engines.SampleEngineConfig.SampleEngineConfig()
+  fullName.vb: RisingV.Sample.Engines.SampleEngineConfig.New()
+  nameWithType: SampleEngineConfig.SampleEngineConfig()
+  nameWithType.vb: SampleEngineConfig.New()
+- uid: RisingV.Sample.Engines.SampleEngineConfig.#ctor*
+  name: SampleEngineConfig
+  href: api/RisingV.Sample.Engines.SampleEngineConfig.html#RisingV_Sample_Engines_SampleEngineConfig__ctor_
+  commentId: Overload:RisingV.Sample.Engines.SampleEngineConfig.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: RisingV.Sample.Engines.SampleEngineConfig.SampleEngineConfig
+  fullName.vb: RisingV.Sample.Engines.SampleEngineConfig.New
+  nameWithType: SampleEngineConfig.SampleEngineConfig
+  nameWithType.vb: SampleEngineConfig.New
+- uid: RisingV.Sample.Events
+  name: RisingV.Sample.Events
+  href: api/RisingV.Sample.Events.html
+  commentId: N:RisingV.Sample.Events
+  fullName: RisingV.Sample.Events
+  nameWithType: RisingV.Sample.Events
+- uid: RisingV.Sample.Events.SampleEvent
+  name: SampleEvent
+  href: api/RisingV.Sample.Events.SampleEvent.html
+  commentId: T:RisingV.Sample.Events.SampleEvent
+  fullName: RisingV.Sample.Events.SampleEvent
+  nameWithType: SampleEvent
+- uid: RisingV.Sample.Events.SampleEvent.#ctor(System.String)
+  name: SampleEvent(string)
+  href: api/RisingV.Sample.Events.SampleEvent.html#RisingV_Sample_Events_SampleEvent__ctor_System_String_
+  commentId: M:RisingV.Sample.Events.SampleEvent.#ctor(System.String)
+  name.vb: New(String)
+  fullName: RisingV.Sample.Events.SampleEvent.SampleEvent(string)
+  fullName.vb: RisingV.Sample.Events.SampleEvent.New(String)
+  nameWithType: SampleEvent.SampleEvent(string)
+  nameWithType.vb: SampleEvent.New(String)
+- uid: RisingV.Sample.Events.SampleEvent.#ctor*
+  name: SampleEvent
+  href: api/RisingV.Sample.Events.SampleEvent.html#RisingV_Sample_Events_SampleEvent__ctor_
+  commentId: Overload:RisingV.Sample.Events.SampleEvent.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: RisingV.Sample.Events.SampleEvent.SampleEvent
+  fullName.vb: RisingV.Sample.Events.SampleEvent.New
+  nameWithType: SampleEvent.SampleEvent
+  nameWithType.vb: SampleEvent.New
+- uid: RisingV.Sample.Events.SampleEvent.Data
+  name: Data
+  href: api/RisingV.Sample.Events.SampleEvent.html#RisingV_Sample_Events_SampleEvent_Data
+  commentId: P:RisingV.Sample.Events.SampleEvent.Data
+  fullName: RisingV.Sample.Events.SampleEvent.Data
+  nameWithType: SampleEvent.Data
+- uid: RisingV.Sample.Events.SampleEvent.Data*
+  name: Data
+  href: api/RisingV.Sample.Events.SampleEvent.html#RisingV_Sample_Events_SampleEvent_Data_
+  commentId: Overload:RisingV.Sample.Events.SampleEvent.Data
+  isSpec: "True"
+  fullName: RisingV.Sample.Events.SampleEvent.Data
+  nameWithType: SampleEvent.Data
 - uid: RisingV.Sample.MyPluginInfo
   name: MyPluginInfo
   href: api/RisingV.Sample.MyPluginInfo.html
@@ -89,6 +228,66 @@ references:
   isSpec: "True"
   fullName: RisingV.Sample.Plugin.OnUnload
   nameWithType: Plugin.OnUnload
+- uid: RisingV.Sample.Processors
+  name: RisingV.Sample.Processors
+  href: api/RisingV.Sample.Processors.html
+  commentId: N:RisingV.Sample.Processors
+  fullName: RisingV.Sample.Processors
+  nameWithType: RisingV.Sample.Processors
+- uid: RisingV.Sample.Processors.SampleProcessor
+  name: SampleProcessor
+  href: api/RisingV.Sample.Processors.SampleProcessor.html
+  commentId: T:RisingV.Sample.Processors.SampleProcessor
+  fullName: RisingV.Sample.Processors.SampleProcessor
+  nameWithType: SampleProcessor
+- uid: RisingV.Sample.Processors.SampleProcessor.CanProcess(ProjectM.DeathEvent,System.Boolean)
+  name: CanProcess(DeathEvent, bool)
+  href: api/RisingV.Sample.Processors.SampleProcessor.html#RisingV_Sample_Processors_SampleProcessor_CanProcess_ProjectM_DeathEvent_System_Boolean_
+  commentId: M:RisingV.Sample.Processors.SampleProcessor.CanProcess(ProjectM.DeathEvent,System.Boolean)
+  name.vb: CanProcess(DeathEvent, Boolean)
+  fullName: RisingV.Sample.Processors.SampleProcessor.CanProcess(ProjectM.DeathEvent, bool)
+  fullName.vb: RisingV.Sample.Processors.SampleProcessor.CanProcess(ProjectM.DeathEvent, Boolean)
+  nameWithType: SampleProcessor.CanProcess(DeathEvent, bool)
+  nameWithType.vb: SampleProcessor.CanProcess(DeathEvent, Boolean)
+- uid: RisingV.Sample.Processors.SampleProcessor.CanProcess*
+  name: CanProcess
+  href: api/RisingV.Sample.Processors.SampleProcessor.html#RisingV_Sample_Processors_SampleProcessor_CanProcess_
+  commentId: Overload:RisingV.Sample.Processors.SampleProcessor.CanProcess
+  isSpec: "True"
+  fullName: RisingV.Sample.Processors.SampleProcessor.CanProcess
+  nameWithType: SampleProcessor.CanProcess
+- uid: RisingV.Sample.Processors.SampleProcessor.PostProcess(ProjectM.DeathEvent,System.Nullable{System.Boolean}@)
+  name: PostProcess(DeathEvent, out bool?)
+  href: api/RisingV.Sample.Processors.SampleProcessor.html#RisingV_Sample_Processors_SampleProcessor_PostProcess_ProjectM_DeathEvent_System_Nullable_System_Boolean___
+  commentId: M:RisingV.Sample.Processors.SampleProcessor.PostProcess(ProjectM.DeathEvent,System.Nullable{System.Boolean}@)
+  name.vb: PostProcess(DeathEvent, Boolean?)
+  fullName: RisingV.Sample.Processors.SampleProcessor.PostProcess(ProjectM.DeathEvent, out bool?)
+  fullName.vb: RisingV.Sample.Processors.SampleProcessor.PostProcess(ProjectM.DeathEvent, Boolean?)
+  nameWithType: SampleProcessor.PostProcess(DeathEvent, out bool?)
+  nameWithType.vb: SampleProcessor.PostProcess(DeathEvent, Boolean?)
+- uid: RisingV.Sample.Processors.SampleProcessor.PostProcess*
+  name: PostProcess
+  href: api/RisingV.Sample.Processors.SampleProcessor.html#RisingV_Sample_Processors_SampleProcessor_PostProcess_
+  commentId: Overload:RisingV.Sample.Processors.SampleProcessor.PostProcess
+  isSpec: "True"
+  fullName: RisingV.Sample.Processors.SampleProcessor.PostProcess
+  nameWithType: SampleProcessor.PostProcess
+- uid: RisingV.Sample.Processors.SampleProcessor.PreProcess(ProjectM.DeathEvent,System.Nullable{System.Boolean}@)
+  name: PreProcess(DeathEvent, out bool?)
+  href: api/RisingV.Sample.Processors.SampleProcessor.html#RisingV_Sample_Processors_SampleProcessor_PreProcess_ProjectM_DeathEvent_System_Nullable_System_Boolean___
+  commentId: M:RisingV.Sample.Processors.SampleProcessor.PreProcess(ProjectM.DeathEvent,System.Nullable{System.Boolean}@)
+  name.vb: PreProcess(DeathEvent, Boolean?)
+  fullName: RisingV.Sample.Processors.SampleProcessor.PreProcess(ProjectM.DeathEvent, out bool?)
+  fullName.vb: RisingV.Sample.Processors.SampleProcessor.PreProcess(ProjectM.DeathEvent, Boolean?)
+  nameWithType: SampleProcessor.PreProcess(DeathEvent, out bool?)
+  nameWithType.vb: SampleProcessor.PreProcess(DeathEvent, Boolean?)
+- uid: RisingV.Sample.Processors.SampleProcessor.PreProcess*
+  name: PreProcess
+  href: api/RisingV.Sample.Processors.SampleProcessor.html#RisingV_Sample_Processors_SampleProcessor_PreProcess_
+  commentId: Overload:RisingV.Sample.Processors.SampleProcessor.PreProcess
+  isSpec: "True"
+  fullName: RisingV.Sample.Processors.SampleProcessor.PreProcess
+  nameWithType: SampleProcessor.PreProcess
 - uid: RisingV.Sample.SamplePluginContext
   name: SamplePluginContext
   href: api/RisingV.Sample.SamplePluginContext.html
@@ -114,3 +313,162 @@ references:
   fullName.vb: RisingV.Sample.SamplePluginContext.New
   nameWithType: SamplePluginContext.SamplePluginContext
   nameWithType.vb: SamplePluginContext.New
+- uid: RisingV.Sample.Systems
+  name: RisingV.Sample.Systems
+  href: api/RisingV.Sample.Systems.html
+  commentId: N:RisingV.Sample.Systems
+  fullName: RisingV.Sample.Systems
+  nameWithType: RisingV.Sample.Systems
+- uid: RisingV.Sample.Systems.SampleSystem
+  name: SampleSystem
+  href: api/RisingV.Sample.Systems.SampleSystem.html
+  commentId: T:RisingV.Sample.Systems.SampleSystem
+  fullName: RisingV.Sample.Systems.SampleSystem
+  nameWithType: SampleSystem
+- uid: RisingV.Sample.Systems.SampleSystem.Initialize(RisingV.Shared.Systems.SystemManager,System.Collections.Generic.List{RisingV.Shared.Plugins.IPlugin})
+  name: Initialize(SystemManager, List<IPlugin>)
+  href: api/RisingV.Sample.Systems.SampleSystem.html#RisingV_Sample_Systems_SampleSystem_Initialize_RisingV_Shared_Systems_SystemManager_System_Collections_Generic_List_RisingV_Shared_Plugins_IPlugin__
+  commentId: M:RisingV.Sample.Systems.SampleSystem.Initialize(RisingV.Shared.Systems.SystemManager,System.Collections.Generic.List{RisingV.Shared.Plugins.IPlugin})
+  name.vb: Initialize(SystemManager, List(Of IPlugin))
+  fullName: RisingV.Sample.Systems.SampleSystem.Initialize(RisingV.Shared.Systems.SystemManager, System.Collections.Generic.List<RisingV.Shared.Plugins.IPlugin>)
+  fullName.vb: RisingV.Sample.Systems.SampleSystem.Initialize(RisingV.Shared.Systems.SystemManager, System.Collections.Generic.List(Of RisingV.Shared.Plugins.IPlugin))
+  nameWithType: SampleSystem.Initialize(SystemManager, List<IPlugin>)
+  nameWithType.vb: SampleSystem.Initialize(SystemManager, List(Of IPlugin))
+- uid: RisingV.Sample.Systems.SampleSystem.Initialize*
+  name: Initialize
+  href: api/RisingV.Sample.Systems.SampleSystem.html#RisingV_Sample_Systems_SampleSystem_Initialize_
+  commentId: Overload:RisingV.Sample.Systems.SampleSystem.Initialize
+  isSpec: "True"
+  fullName: RisingV.Sample.Systems.SampleSystem.Initialize
+  nameWithType: SampleSystem.Initialize
+- uid: RisingV.Sample.Systems.SampleSystem.Load(RisingV.Shared.Systems.SystemManager,System.Collections.Generic.List{RisingV.Shared.Plugins.IPlugin})
+  name: Load(SystemManager, List<IPlugin>)
+  href: api/RisingV.Sample.Systems.SampleSystem.html#RisingV_Sample_Systems_SampleSystem_Load_RisingV_Shared_Systems_SystemManager_System_Collections_Generic_List_RisingV_Shared_Plugins_IPlugin__
+  commentId: M:RisingV.Sample.Systems.SampleSystem.Load(RisingV.Shared.Systems.SystemManager,System.Collections.Generic.List{RisingV.Shared.Plugins.IPlugin})
+  name.vb: Load(SystemManager, List(Of IPlugin))
+  fullName: RisingV.Sample.Systems.SampleSystem.Load(RisingV.Shared.Systems.SystemManager, System.Collections.Generic.List<RisingV.Shared.Plugins.IPlugin>)
+  fullName.vb: RisingV.Sample.Systems.SampleSystem.Load(RisingV.Shared.Systems.SystemManager, System.Collections.Generic.List(Of RisingV.Shared.Plugins.IPlugin))
+  nameWithType: SampleSystem.Load(SystemManager, List<IPlugin>)
+  nameWithType.vb: SampleSystem.Load(SystemManager, List(Of IPlugin))
+- uid: RisingV.Sample.Systems.SampleSystem.Load*
+  name: Load
+  href: api/RisingV.Sample.Systems.SampleSystem.html#RisingV_Sample_Systems_SampleSystem_Load_
+  commentId: Overload:RisingV.Sample.Systems.SampleSystem.Load
+  isSpec: "True"
+  fullName: RisingV.Sample.Systems.SampleSystem.Load
+  nameWithType: SampleSystem.Load
+- uid: RisingV.Sample.Systems.SampleSystem.Ready(RisingV.Shared.Systems.SystemManager,System.Collections.Generic.List{RisingV.Shared.Plugins.IPlugin})
+  name: Ready(SystemManager, List<IPlugin>)
+  href: api/RisingV.Sample.Systems.SampleSystem.html#RisingV_Sample_Systems_SampleSystem_Ready_RisingV_Shared_Systems_SystemManager_System_Collections_Generic_List_RisingV_Shared_Plugins_IPlugin__
+  commentId: M:RisingV.Sample.Systems.SampleSystem.Ready(RisingV.Shared.Systems.SystemManager,System.Collections.Generic.List{RisingV.Shared.Plugins.IPlugin})
+  name.vb: Ready(SystemManager, List(Of IPlugin))
+  fullName: RisingV.Sample.Systems.SampleSystem.Ready(RisingV.Shared.Systems.SystemManager, System.Collections.Generic.List<RisingV.Shared.Plugins.IPlugin>)
+  fullName.vb: RisingV.Sample.Systems.SampleSystem.Ready(RisingV.Shared.Systems.SystemManager, System.Collections.Generic.List(Of RisingV.Shared.Plugins.IPlugin))
+  nameWithType: SampleSystem.Ready(SystemManager, List<IPlugin>)
+  nameWithType.vb: SampleSystem.Ready(SystemManager, List(Of IPlugin))
+- uid: RisingV.Sample.Systems.SampleSystem.Ready*
+  name: Ready
+  href: api/RisingV.Sample.Systems.SampleSystem.html#RisingV_Sample_Systems_SampleSystem_Ready_
+  commentId: Overload:RisingV.Sample.Systems.SampleSystem.Ready
+  isSpec: "True"
+  fullName: RisingV.Sample.Systems.SampleSystem.Ready
+  nameWithType: SampleSystem.Ready
+- uid: RisingV.Sample.Systems.SampleSystem.Reload(RisingV.Shared.Systems.SystemManager,System.Collections.Generic.List{RisingV.Shared.Plugins.IPlugin},RisingV.Shared.Managers.ReloadReason)
+  name: Reload(SystemManager, List<IPlugin>, ReloadReason)
+  href: api/RisingV.Sample.Systems.SampleSystem.html#RisingV_Sample_Systems_SampleSystem_Reload_RisingV_Shared_Systems_SystemManager_System_Collections_Generic_List_RisingV_Shared_Plugins_IPlugin__RisingV_Shared_Managers_ReloadReason_
+  commentId: M:RisingV.Sample.Systems.SampleSystem.Reload(RisingV.Shared.Systems.SystemManager,System.Collections.Generic.List{RisingV.Shared.Plugins.IPlugin},RisingV.Shared.Managers.ReloadReason)
+  name.vb: Reload(SystemManager, List(Of IPlugin), ReloadReason)
+  fullName: RisingV.Sample.Systems.SampleSystem.Reload(RisingV.Shared.Systems.SystemManager, System.Collections.Generic.List<RisingV.Shared.Plugins.IPlugin>, RisingV.Shared.Managers.ReloadReason)
+  fullName.vb: RisingV.Sample.Systems.SampleSystem.Reload(RisingV.Shared.Systems.SystemManager, System.Collections.Generic.List(Of RisingV.Shared.Plugins.IPlugin), RisingV.Shared.Managers.ReloadReason)
+  nameWithType: SampleSystem.Reload(SystemManager, List<IPlugin>, ReloadReason)
+  nameWithType.vb: SampleSystem.Reload(SystemManager, List(Of IPlugin), ReloadReason)
+- uid: RisingV.Sample.Systems.SampleSystem.Reload*
+  name: Reload
+  href: api/RisingV.Sample.Systems.SampleSystem.html#RisingV_Sample_Systems_SampleSystem_Reload_
+  commentId: Overload:RisingV.Sample.Systems.SampleSystem.Reload
+  isSpec: "True"
+  fullName: RisingV.Sample.Systems.SampleSystem.Reload
+  nameWithType: SampleSystem.Reload
+- uid: RisingV.Sample.Systems.SampleSystem.Terminate(RisingV.Shared.Systems.SystemManager,System.Collections.Generic.List{RisingV.Shared.Plugins.IPlugin})
+  name: Terminate(SystemManager, List<IPlugin>)
+  href: api/RisingV.Sample.Systems.SampleSystem.html#RisingV_Sample_Systems_SampleSystem_Terminate_RisingV_Shared_Systems_SystemManager_System_Collections_Generic_List_RisingV_Shared_Plugins_IPlugin__
+  commentId: M:RisingV.Sample.Systems.SampleSystem.Terminate(RisingV.Shared.Systems.SystemManager,System.Collections.Generic.List{RisingV.Shared.Plugins.IPlugin})
+  name.vb: Terminate(SystemManager, List(Of IPlugin))
+  fullName: RisingV.Sample.Systems.SampleSystem.Terminate(RisingV.Shared.Systems.SystemManager, System.Collections.Generic.List<RisingV.Shared.Plugins.IPlugin>)
+  fullName.vb: RisingV.Sample.Systems.SampleSystem.Terminate(RisingV.Shared.Systems.SystemManager, System.Collections.Generic.List(Of RisingV.Shared.Plugins.IPlugin))
+  nameWithType: SampleSystem.Terminate(SystemManager, List<IPlugin>)
+  nameWithType.vb: SampleSystem.Terminate(SystemManager, List(Of IPlugin))
+- uid: RisingV.Sample.Systems.SampleSystem.Terminate*
+  name: Terminate
+  href: api/RisingV.Sample.Systems.SampleSystem.html#RisingV_Sample_Systems_SampleSystem_Terminate_
+  commentId: Overload:RisingV.Sample.Systems.SampleSystem.Terminate
+  isSpec: "True"
+  fullName: RisingV.Sample.Systems.SampleSystem.Terminate
+  nameWithType: SampleSystem.Terminate
+- uid: RisingV.Sample.Systems.SampleSystem.Unload(RisingV.Shared.Systems.SystemManager,System.Collections.Generic.List{RisingV.Shared.Plugins.IPlugin})
+  name: Unload(SystemManager, List<IPlugin>)
+  href: api/RisingV.Sample.Systems.SampleSystem.html#RisingV_Sample_Systems_SampleSystem_Unload_RisingV_Shared_Systems_SystemManager_System_Collections_Generic_List_RisingV_Shared_Plugins_IPlugin__
+  commentId: M:RisingV.Sample.Systems.SampleSystem.Unload(RisingV.Shared.Systems.SystemManager,System.Collections.Generic.List{RisingV.Shared.Plugins.IPlugin})
+  name.vb: Unload(SystemManager, List(Of IPlugin))
+  fullName: RisingV.Sample.Systems.SampleSystem.Unload(RisingV.Shared.Systems.SystemManager, System.Collections.Generic.List<RisingV.Shared.Plugins.IPlugin>)
+  fullName.vb: RisingV.Sample.Systems.SampleSystem.Unload(RisingV.Shared.Systems.SystemManager, System.Collections.Generic.List(Of RisingV.Shared.Plugins.IPlugin))
+  nameWithType: SampleSystem.Unload(SystemManager, List<IPlugin>)
+  nameWithType.vb: SampleSystem.Unload(SystemManager, List(Of IPlugin))
+- uid: RisingV.Sample.Systems.SampleSystem.Unload*
+  name: Unload
+  href: api/RisingV.Sample.Systems.SampleSystem.html#RisingV_Sample_Systems_SampleSystem_Unload_
+  commentId: Overload:RisingV.Sample.Systems.SampleSystem.Unload
+  isSpec: "True"
+  fullName: RisingV.Sample.Systems.SampleSystem.Unload
+  nameWithType: SampleSystem.Unload
+- uid: RisingV.Sample.Systems.SampleSystemConfig
+  name: SampleSystemConfig
+  href: api/RisingV.Sample.Systems.SampleSystemConfig.html
+  commentId: T:RisingV.Sample.Systems.SampleSystemConfig
+  fullName: RisingV.Sample.Systems.SampleSystemConfig
+  nameWithType: SampleSystemConfig
+- uid: RisingV.Sample.Systems.SampleSystemConfig.#ctor
+  name: SampleSystemConfig()
+  href: api/RisingV.Sample.Systems.SampleSystemConfig.html#RisingV_Sample_Systems_SampleSystemConfig__ctor
+  commentId: M:RisingV.Sample.Systems.SampleSystemConfig.#ctor
+  name.vb: New()
+  fullName: RisingV.Sample.Systems.SampleSystemConfig.SampleSystemConfig()
+  fullName.vb: RisingV.Sample.Systems.SampleSystemConfig.New()
+  nameWithType: SampleSystemConfig.SampleSystemConfig()
+  nameWithType.vb: SampleSystemConfig.New()
+- uid: RisingV.Sample.Systems.SampleSystemConfig.#ctor*
+  name: SampleSystemConfig
+  href: api/RisingV.Sample.Systems.SampleSystemConfig.html#RisingV_Sample_Systems_SampleSystemConfig__ctor_
+  commentId: Overload:RisingV.Sample.Systems.SampleSystemConfig.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: RisingV.Sample.Systems.SampleSystemConfig.SampleSystemConfig
+  fullName.vb: RisingV.Sample.Systems.SampleSystemConfig.New
+  nameWithType: SampleSystemConfig.SampleSystemConfig
+  nameWithType.vb: SampleSystemConfig.New
+- uid: RisingV.Sample.Systems.SampleSystemConfig.ListenToEvents
+  name: ListenToEvents
+  href: api/RisingV.Sample.Systems.SampleSystemConfig.html#RisingV_Sample_Systems_SampleSystemConfig_ListenToEvents
+  commentId: P:RisingV.Sample.Systems.SampleSystemConfig.ListenToEvents
+  fullName: RisingV.Sample.Systems.SampleSystemConfig.ListenToEvents
+  nameWithType: SampleSystemConfig.ListenToEvents
+- uid: RisingV.Sample.Systems.SampleSystemConfig.ListenToEvents*
+  name: ListenToEvents
+  href: api/RisingV.Sample.Systems.SampleSystemConfig.html#RisingV_Sample_Systems_SampleSystemConfig_ListenToEvents_
+  commentId: Overload:RisingV.Sample.Systems.SampleSystemConfig.ListenToEvents
+  isSpec: "True"
+  fullName: RisingV.Sample.Systems.SampleSystemConfig.ListenToEvents
+  nameWithType: SampleSystemConfig.ListenToEvents
+- uid: RisingV.Sample.Systems.SampleSystemConfig.Load
+  name: Load()
+  href: api/RisingV.Sample.Systems.SampleSystemConfig.html#RisingV_Sample_Systems_SampleSystemConfig_Load
+  commentId: M:RisingV.Sample.Systems.SampleSystemConfig.Load
+  fullName: RisingV.Sample.Systems.SampleSystemConfig.Load()
+  nameWithType: SampleSystemConfig.Load()
+- uid: RisingV.Sample.Systems.SampleSystemConfig.Load*
+  name: Load
+  href: api/RisingV.Sample.Systems.SampleSystemConfig.html#RisingV_Sample_Systems_SampleSystemConfig_Load_
+  commentId: Overload:RisingV.Sample.Systems.SampleSystemConfig.Load
+  isSpec: "True"
+  fullName: RisingV.Sample.Systems.SampleSystemConfig.Load
+  nameWithType: SampleSystemConfig.Load
