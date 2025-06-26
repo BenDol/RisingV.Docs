@@ -42,6 +42,26 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "RisingV.Core.DeathEngine/CHANGELOG.md",
+      "output": {
+        ".html": {
+          "relative_path": "RisingV.Core.DeathEngine/CHANGELOG.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "RisingV.Core.DeathEngine/README.md",
+      "output": {
+        ".html": {
+          "relative_path": "RisingV.Core.DeathEngine/README.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "RisingV.GameData/CHANGELOG.md",
       "output": {
         ".html": {
@@ -744,6 +764,34 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "RisingV.Core.Databases",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.DeathEngine.MyPluginInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.DeathEngine.MyPluginInfo.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.DeathEngine.MyPluginInfo",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.DeathEngine.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.DeathEngine.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.DeathEngine",
       "Summary": null
     },
     {
@@ -1809,20 +1857,6 @@
       "IsMRef": true,
       "Title": "RisingV.Core.Hooks.Client",
       "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/RisingV.Core.Hooks.DownedHook.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/RisingV.Core.Hooks.DownedHook.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "RisingV.Core.Hooks.DownedHook",
-      "Summary": "<p sourcefile=\"api/RisingV.Core.Hooks.DownedHook.yml\" sourcestartlinenumber=\"1\">Hook for the DownedEventSystem to process downed events.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -4315,6 +4349,20 @@
       "IsMRef": true,
       "Title": "RisingV.Shared.Engines.IEngineConfig",
       "Summary": "<p sourcefile=\"api/RisingV.Shared.Engines.IEngineConfig.yml\" sourcestartlinenumber=\"1\">Represents the configuration for an engine.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Shared.Engines.Recommendation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Shared.Engines.Recommendation.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Shared.Engines.Recommendation",
+      "Summary": "<p sourcefile=\"api/RisingV.Shared.Engines.Recommendation.yml\" sourcestartlinenumber=\"1\">Represents a recommendation for an engine.</p>\n"
     },
     {
       "type": "ManagedReference",
