@@ -768,34 +768,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/RisingV.Core.DeathEngine.MyPluginInfo.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/RisingV.Core.DeathEngine.MyPluginInfo.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "RisingV.Core.DeathEngine.MyPluginInfo",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/RisingV.Core.DeathEngine.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/RisingV.Core.DeathEngine.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "RisingV.Core.DeathEngine",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/RisingV.Core.Engines.AchievementEngine.yml",
       "output": {
         ".html": {
