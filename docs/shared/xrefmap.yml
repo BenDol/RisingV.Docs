@@ -6459,6 +6459,23 @@ references:
   fullName.vb: RisingV.Shared.Engines.Engine(Of TConfig).GetRecommended
   nameWithType: Engine<TConfig>.GetRecommended
   nameWithType.vb: Engine(Of TConfig).GetRecommended
+- uid: RisingV.Shared.Engines.Engine`1.GetRecommendedAsDependencies
+  name: GetRecommendedAsDependencies()
+  href: api/RisingV.Shared.Engines.Engine-1.html#RisingV_Shared_Engines_Engine_1_GetRecommendedAsDependencies
+  commentId: M:RisingV.Shared.Engines.Engine`1.GetRecommendedAsDependencies
+  fullName: RisingV.Shared.Engines.Engine<TConfig>.GetRecommendedAsDependencies()
+  fullName.vb: RisingV.Shared.Engines.Engine(Of TConfig).GetRecommendedAsDependencies()
+  nameWithType: Engine<TConfig>.GetRecommendedAsDependencies()
+  nameWithType.vb: Engine(Of TConfig).GetRecommendedAsDependencies()
+- uid: RisingV.Shared.Engines.Engine`1.GetRecommendedAsDependencies*
+  name: GetRecommendedAsDependencies
+  href: api/RisingV.Shared.Engines.Engine-1.html#RisingV_Shared_Engines_Engine_1_GetRecommendedAsDependencies_
+  commentId: Overload:RisingV.Shared.Engines.Engine`1.GetRecommendedAsDependencies
+  isSpec: "True"
+  fullName: RisingV.Shared.Engines.Engine<TConfig>.GetRecommendedAsDependencies
+  fullName.vb: RisingV.Shared.Engines.Engine(Of TConfig).GetRecommendedAsDependencies
+  nameWithType: Engine<TConfig>.GetRecommendedAsDependencies
+  nameWithType.vb: Engine(Of TConfig).GetRecommendedAsDependencies
 - uid: RisingV.Shared.Engines.Engine`1.GetRecommended``1
   name: GetRecommended<TX>()
   href: api/RisingV.Shared.Engines.Engine-1.html#RisingV_Shared_Engines_Engine_1_GetRecommended__1
@@ -6695,6 +6712,19 @@ references:
   isSpec: "True"
   fullName: RisingV.Shared.Engines.IEngine.GetRecommended
   nameWithType: IEngine.GetRecommended
+- uid: RisingV.Shared.Engines.IEngine.GetRecommendedAsDependencies
+  name: GetRecommendedAsDependencies()
+  href: api/RisingV.Shared.Engines.IEngine.html#RisingV_Shared_Engines_IEngine_GetRecommendedAsDependencies
+  commentId: M:RisingV.Shared.Engines.IEngine.GetRecommendedAsDependencies
+  fullName: RisingV.Shared.Engines.IEngine.GetRecommendedAsDependencies()
+  nameWithType: IEngine.GetRecommendedAsDependencies()
+- uid: RisingV.Shared.Engines.IEngine.GetRecommendedAsDependencies*
+  name: GetRecommendedAsDependencies
+  href: api/RisingV.Shared.Engines.IEngine.html#RisingV_Shared_Engines_IEngine_GetRecommendedAsDependencies_
+  commentId: Overload:RisingV.Shared.Engines.IEngine.GetRecommendedAsDependencies
+  isSpec: "True"
+  fullName: RisingV.Shared.Engines.IEngine.GetRecommendedAsDependencies
+  nameWithType: IEngine.GetRecommendedAsDependencies
 - uid: RisingV.Shared.Engines.IEngine.GetRecommended``1
   name: GetRecommended<TX>()
   href: api/RisingV.Shared.Engines.IEngine.html#RisingV_Shared_Engines_IEngine_GetRecommended__1
@@ -6749,6 +6779,121 @@ references:
   fullName.vb: RisingV.Shared.Engines.IEngine(Of TConfig).Config
   nameWithType: IEngine<TConfig>.Config
   nameWithType.vb: IEngine(Of TConfig).Config
+- uid: RisingV.Shared.Engines.Recommendation
+  name: Recommendation
+  href: api/RisingV.Shared.Engines.Recommendation.html
+  commentId: T:RisingV.Shared.Engines.Recommendation
+  fullName: RisingV.Shared.Engines.Recommendation
+  nameWithType: Recommendation
+- uid: RisingV.Shared.Engines.Recommendation.#ctor(System.String,System.String)
+  name: Recommendation(string, string?)
+  href: api/RisingV.Shared.Engines.Recommendation.html#RisingV_Shared_Engines_Recommendation__ctor_System_String_System_String_
+  commentId: M:RisingV.Shared.Engines.Recommendation.#ctor(System.String,System.String)
+  name.vb: New(String, String)
+  fullName: RisingV.Shared.Engines.Recommendation.Recommendation(string, string?)
+  fullName.vb: RisingV.Shared.Engines.Recommendation.New(String, String)
+  nameWithType: Recommendation.Recommendation(string, string?)
+  nameWithType.vb: Recommendation.New(String, String)
+- uid: RisingV.Shared.Engines.Recommendation.#ctor(System.Type,System.String)
+  name: Recommendation(Type, string?)
+  href: api/RisingV.Shared.Engines.Recommendation.html#RisingV_Shared_Engines_Recommendation__ctor_System_Type_System_String_
+  commentId: M:RisingV.Shared.Engines.Recommendation.#ctor(System.Type,System.String)
+  name.vb: New(Type, String)
+  fullName: RisingV.Shared.Engines.Recommendation.Recommendation(System.Type, string?)
+  fullName.vb: RisingV.Shared.Engines.Recommendation.New(System.Type, String)
+  nameWithType: Recommendation.Recommendation(Type, string?)
+  nameWithType.vb: Recommendation.New(Type, String)
+- uid: RisingV.Shared.Engines.Recommendation.#ctor*
+  name: Recommendation
+  href: api/RisingV.Shared.Engines.Recommendation.html#RisingV_Shared_Engines_Recommendation__ctor_
+  commentId: Overload:RisingV.Shared.Engines.Recommendation.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: RisingV.Shared.Engines.Recommendation.Recommendation
+  fullName.vb: RisingV.Shared.Engines.Recommendation.New
+  nameWithType: Recommendation.Recommendation
+  nameWithType.vb: Recommendation.New
+- uid: RisingV.Shared.Engines.Recommendation.Equals(RisingV.Shared.Engines.Recommendation)
+  name: Equals(Recommendation?)
+  href: api/RisingV.Shared.Engines.Recommendation.html#RisingV_Shared_Engines_Recommendation_Equals_RisingV_Shared_Engines_Recommendation_
+  commentId: M:RisingV.Shared.Engines.Recommendation.Equals(RisingV.Shared.Engines.Recommendation)
+  name.vb: Equals(Recommendation)
+  fullName: RisingV.Shared.Engines.Recommendation.Equals(RisingV.Shared.Engines.Recommendation?)
+  fullName.vb: RisingV.Shared.Engines.Recommendation.Equals(RisingV.Shared.Engines.Recommendation)
+  nameWithType: Recommendation.Equals(Recommendation?)
+  nameWithType.vb: Recommendation.Equals(Recommendation)
+- uid: RisingV.Shared.Engines.Recommendation.Equals*
+  name: Equals
+  href: api/RisingV.Shared.Engines.Recommendation.html#RisingV_Shared_Engines_Recommendation_Equals_
+  commentId: Overload:RisingV.Shared.Engines.Recommendation.Equals
+  isSpec: "True"
+  fullName: RisingV.Shared.Engines.Recommendation.Equals
+  nameWithType: Recommendation.Equals
+- uid: RisingV.Shared.Engines.Recommendation.GetHashCode
+  name: GetHashCode()
+  href: api/RisingV.Shared.Engines.Recommendation.html#RisingV_Shared_Engines_Recommendation_GetHashCode
+  commentId: M:RisingV.Shared.Engines.Recommendation.GetHashCode
+  fullName: RisingV.Shared.Engines.Recommendation.GetHashCode()
+  nameWithType: Recommendation.GetHashCode()
+- uid: RisingV.Shared.Engines.Recommendation.GetHashCode*
+  name: GetHashCode
+  href: api/RisingV.Shared.Engines.Recommendation.html#RisingV_Shared_Engines_Recommendation_GetHashCode_
+  commentId: Overload:RisingV.Shared.Engines.Recommendation.GetHashCode
+  isSpec: "True"
+  fullName: RisingV.Shared.Engines.Recommendation.GetHashCode
+  nameWithType: Recommendation.GetHashCode
+- uid: RisingV.Shared.Engines.Recommendation.IsAssignableTo(System.Type)
+  name: IsAssignableTo(Type)
+  href: api/RisingV.Shared.Engines.Recommendation.html#RisingV_Shared_Engines_Recommendation_IsAssignableTo_System_Type_
+  commentId: M:RisingV.Shared.Engines.Recommendation.IsAssignableTo(System.Type)
+  fullName: RisingV.Shared.Engines.Recommendation.IsAssignableTo(System.Type)
+  nameWithType: Recommendation.IsAssignableTo(Type)
+- uid: RisingV.Shared.Engines.Recommendation.IsAssignableTo*
+  name: IsAssignableTo
+  href: api/RisingV.Shared.Engines.Recommendation.html#RisingV_Shared_Engines_Recommendation_IsAssignableTo_
+  commentId: Overload:RisingV.Shared.Engines.Recommendation.IsAssignableTo
+  isSpec: "True"
+  fullName: RisingV.Shared.Engines.Recommendation.IsAssignableTo
+  nameWithType: Recommendation.IsAssignableTo
+- uid: RisingV.Shared.Engines.Recommendation.Name
+  name: Name
+  href: api/RisingV.Shared.Engines.Recommendation.html#RisingV_Shared_Engines_Recommendation_Name
+  commentId: P:RisingV.Shared.Engines.Recommendation.Name
+  fullName: RisingV.Shared.Engines.Recommendation.Name
+  nameWithType: Recommendation.Name
+- uid: RisingV.Shared.Engines.Recommendation.Name*
+  name: Name
+  href: api/RisingV.Shared.Engines.Recommendation.html#RisingV_Shared_Engines_Recommendation_Name_
+  commentId: Overload:RisingV.Shared.Engines.Recommendation.Name
+  isSpec: "True"
+  fullName: RisingV.Shared.Engines.Recommendation.Name
+  nameWithType: Recommendation.Name
+- uid: RisingV.Shared.Engines.Recommendation.Type
+  name: Type
+  href: api/RisingV.Shared.Engines.Recommendation.html#RisingV_Shared_Engines_Recommendation_Type
+  commentId: P:RisingV.Shared.Engines.Recommendation.Type
+  fullName: RisingV.Shared.Engines.Recommendation.Type
+  nameWithType: Recommendation.Type
+- uid: RisingV.Shared.Engines.Recommendation.Type*
+  name: Type
+  href: api/RisingV.Shared.Engines.Recommendation.html#RisingV_Shared_Engines_Recommendation_Type_
+  commentId: Overload:RisingV.Shared.Engines.Recommendation.Type
+  isSpec: "True"
+  fullName: RisingV.Shared.Engines.Recommendation.Type
+  nameWithType: Recommendation.Type
+- uid: RisingV.Shared.Engines.Recommendation.Version
+  name: Version
+  href: api/RisingV.Shared.Engines.Recommendation.html#RisingV_Shared_Engines_Recommendation_Version
+  commentId: P:RisingV.Shared.Engines.Recommendation.Version
+  fullName: RisingV.Shared.Engines.Recommendation.Version
+  nameWithType: Recommendation.Version
+- uid: RisingV.Shared.Engines.Recommendation.Version*
+  name: Version
+  href: api/RisingV.Shared.Engines.Recommendation.html#RisingV_Shared_Engines_Recommendation_Version_
+  commentId: Overload:RisingV.Shared.Engines.Recommendation.Version
+  isSpec: "True"
+  fullName: RisingV.Shared.Engines.Recommendation.Version
+  nameWithType: Recommendation.Version
 - uid: RisingV.Shared.Entities
   name: RisingV.Shared.Entities
   href: api/RisingV.Shared.Entities.html

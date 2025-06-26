@@ -89,7 +89,7 @@
 
 
   <h1 id="RisingV_Shared_Engines_IEngine" data-uid="RisingV.Shared.Engines.IEngine" class="text-break">
-Interface IEngine  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Engines/Engine.cs/#L75"><i class="bi bi-code-slash"></i></a>
+Interface IEngine  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Engines/Engine.cs/#L101"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -196,7 +196,7 @@ Interface IEngine  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="RisingV_Shared_Engines_IEngine_Config" data-uid="RisingV.Shared.Engines.IEngine.Config">
   Config
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Engines/Engine.cs/#L77"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Engines/Engine.cs/#L103"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -227,7 +227,7 @@ Interface IEngine  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="RisingV_Shared_Engines_IEngine_Enabled" data-uid="RisingV.Shared.Engines.IEngine.Enabled">
   Enabled
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Engines/Engine.cs/#L78"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Engines/Engine.cs/#L104"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -262,7 +262,7 @@ Interface IEngine  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="RisingV_Shared_Engines_IEngine_GetDependencies" data-uid="RisingV.Shared.Engines.IEngine.GetDependencies">
   GetDependencies()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Engines/Engine.cs/#L81"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Engines/Engine.cs/#L107"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -293,7 +293,7 @@ Interface IEngine  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="RisingV_Shared_Engines_IEngine_GetDependencies__1" data-uid="RisingV.Shared.Engines.IEngine.GetDependencies``1">
   GetDependencies&lt;TX&gt;()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Engines/Engine.cs/#L80"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Engines/Engine.cs/#L106"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -329,20 +329,51 @@ Interface IEngine  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="RisingV_Shared_Engines_IEngine_GetRecommended" data-uid="RisingV.Shared.Engines.IEngine.GetRecommended">
   GetRecommended()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Engines/Engine.cs/#L83"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Engines/Engine.cs/#L109"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">List&lt;Dependency&gt; GetRecommended()</code></pre>
+    <pre><code class="lang-csharp hljs">List&lt;Recommendation&gt; GetRecommended()</code></pre>
   </div>
 
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="RisingV.Shared.Engines.Dependency.html">Dependency</a>&gt;</dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="RisingV.Shared.Engines.Recommendation.html">Recommendation</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RisingV_Shared_Engines_IEngine_GetRecommendedAsDependencies_" data-uid="RisingV.Shared.Engines.IEngine.GetRecommendedAsDependencies*"></a>
+
+  <h3 id="RisingV_Shared_Engines_IEngine_GetRecommendedAsDependencies" data-uid="RisingV.Shared.Engines.IEngine.GetRecommendedAsDependencies">
+  GetRecommendedAsDependencies()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Engines/Engine.cs/#L110"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">(List&lt;Dependency&gt;, List&lt;Recommendation&gt;) GetRecommendedAsDependencies()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt>(<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="RisingV.Shared.Engines.Dependency.html">Dependency</a>&gt;, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="RisingV.Shared.Engines.Recommendation.html">Recommendation</a>&gt;)</dt>
     <dd></dd>
   </dl>
 
@@ -360,20 +391,20 @@ Interface IEngine  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="RisingV_Shared_Engines_IEngine_GetRecommended__1" data-uid="RisingV.Shared.Engines.IEngine.GetRecommended``1">
   GetRecommended&lt;TX&gt;()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Engines/Engine.cs/#L82"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Engines/Engine.cs/#L108"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">List&lt;Dependency&gt; GetRecommended&lt;TX&gt;()</code></pre>
+    <pre><code class="lang-csharp hljs">List&lt;Recommendation&gt; GetRecommended&lt;TX&gt;()</code></pre>
   </div>
 
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="RisingV.Shared.Engines.Dependency.html">Dependency</a>&gt;</dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="RisingV.Shared.Engines.Recommendation.html">Recommendation</a>&gt;</dt>
     <dd></dd>
   </dl>
 
@@ -396,7 +427,7 @@ Interface IEngine  <a class="header-action link-secondary" title="View source" h
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Engines/Engine.cs/#L75" class="edit-link">Edit this page</a>
+          <a href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Engines/Engine.cs/#L101" class="edit-link">Edit this page</a>
         </div>
 
 

@@ -1078,6 +1078,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Shared.Engines.Recommendation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Shared.Engines.Recommendation.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Shared.Engines.Recommendation",
+      "Summary": "<p sourcefile=\"api/RisingV.Shared.Engines.Recommendation.yml\" sourcestartlinenumber=\"1\">Represents a recommendation for an engine.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/RisingV.Shared.Engines.yml",
       "output": {
         ".html": {
