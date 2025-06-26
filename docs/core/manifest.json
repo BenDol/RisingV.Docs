@@ -42,16 +42,6 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "RisingV.Core.DeathEngine/CHANGELOG.md",
-      "output": {
-        ".html": {
-          "relative_path": "RisingV.Core.DeathEngine/CHANGELOG.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "RisingV.Core.DeathEngine/README.md",
       "output": {
         ".html": {
