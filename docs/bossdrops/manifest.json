@@ -938,6 +938,34 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.DeathEngine.MyPluginInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.DeathEngine.MyPluginInfo.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.DeathEngine.MyPluginInfo",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.DeathEngine.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.DeathEngine.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.DeathEngine",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/RisingV.Core.Engines.AchievementEngine.yml",
       "output": {
         ".html": {
@@ -962,6 +990,20 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "RisingV.Core.Engines.AchievementEngineConfig",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Engines.AchievementEnginePlugin.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Engines.AchievementEnginePlugin.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Engines.AchievementEnginePlugin",
       "Summary": null
     },
     {
@@ -1134,6 +1176,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Engines.DamageEnginePlugin.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Engines.DamageEnginePlugin.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Engines.DamageEnginePlugin",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/RisingV.Core.Engines.DeathEngine.yml",
       "output": {
         ".html": {
@@ -1158,6 +1214,34 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "RisingV.Core.Engines.DeathEngineConfig",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Engines.DeathEnginePlugin.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Engines.DeathEnginePlugin.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Engines.DeathEnginePlugin",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Engines.EnginePlugin-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Engines.EnginePlugin-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Engines.EnginePlugin<T>",
       "Summary": null
     },
     {
@@ -1218,6 +1302,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Engines.ItemEnginePlugin.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Engines.ItemEnginePlugin.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Engines.ItemEnginePlugin",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/RisingV.Core.Engines.LootEngine.yml",
       "output": {
         ".html": {
@@ -1242,6 +1340,20 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "RisingV.Core.Engines.LootEngineConfig",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Engines.LootEnginePlugin.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Engines.LootEnginePlugin.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Engines.LootEnginePlugin",
       "Summary": null
     },
     {
@@ -1326,6 +1438,20 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "RisingV.Core.Engines.StatEngineConfig",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Engines.StatEnginePlugin.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Engines.StatEnginePlugin.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Engines.StatEnginePlugin",
       "Summary": null
     },
     {
@@ -1999,20 +2125,6 @@
       "IsMRef": true,
       "Title": "RisingV.Core.Hooks.Client",
       "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/RisingV.Core.Hooks.DownedHook.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/RisingV.Core.Hooks.DownedHook.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "RisingV.Core.Hooks.DownedHook",
-      "Summary": "<p sourcefile=\"api/RisingV.Core.Hooks.DownedHook.yml\" sourcestartlinenumber=\"1\">Hook for the DownedEventSystem to process downed events.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -4508,6 +4620,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Shared.Engines.Recommendation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Shared.Engines.Recommendation.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Shared.Engines.Recommendation",
+      "Summary": "<p sourcefile=\"api/RisingV.Shared.Engines.Recommendation.yml\" sourcestartlinenumber=\"1\">Represents a recommendation for an engine.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/RisingV.Shared.Engines.yml",
       "output": {
         ".html": {
@@ -6422,6 +6548,20 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "RisingV.Shared.Logging",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Shared.Managers.IEnableable.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Shared.Managers.IEnableable.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Shared.Managers.IEnableable",
       "Summary": null
     },
     {
