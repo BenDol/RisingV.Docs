@@ -92,6 +92,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "Engines/ClientEngine/README.md",
+      "output": {
+        ".html": {
+          "relative_path": "Engines/ClientEngine/README.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "Engines/DamageEngine/README.md",
       "output": {
         ".html": {
@@ -106,6 +116,16 @@
       "output": {
         ".html": {
           "relative_path": "Engines/DeathEngine/README.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "Engines/DefaultComponentEngine/README.md",
+      "output": {
+        ".html": {
+          "relative_path": "Engines/DefaultComponentEngine/README.html"
         }
       },
       "version": ""
@@ -1168,6 +1188,48 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Engines.ClientEngine.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Engines.ClientEngine.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Engines.ClientEngine",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.Engines.ClientEngine.yml\" sourcestartlinenumber=\"1\">StatEngine is responsible for managing and processing stat changes in the game.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Engines.ClientEngineConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Engines.ClientEngineConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Engines.ClientEngineConfig",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Engines.ClientEnginePlugin.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Engines.ClientEnginePlugin.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Engines.ClientEnginePlugin",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/RisingV.Core.Engines.DamageEngine.yml",
       "output": {
         ".html": {
@@ -1248,6 +1310,48 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "RisingV.Core.Engines.DeathEnginePlugin",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Engines.DefaultComponentEngine.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Engines.DefaultComponentEngine.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Engines.DefaultComponentEngine",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.Engines.DefaultComponentEngine.yml\" sourcestartlinenumber=\"1\">DefaultComponentEngine is responsible for managing the default component monolith in RisingV.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Engines.DefaultComponentEngineConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Engines.DefaultComponentEngineConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Engines.DefaultComponentEngineConfig",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Engines.DefaultComponentEnginePlugin.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Engines.DefaultComponentEnginePlugin.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Engines.DefaultComponentEnginePlugin",
       "Summary": null
     },
     {
