@@ -2,11 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Interface IManagerSource | RisingV.Shared </title>
+      <title>Interface IEnableable | RisingV.Shared </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Interface IManagerSource | RisingV.Shared ">
+      <meta name="title" content="Interface IEnableable | RisingV.Shared ">
       
-      <meta name="description" content="Represents a source of managers that can be used to manage instances of type T.">
+      
       <link rel="icon" href="../assets/favicon/favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/RisingV-Mods/RisingV.Shared/new/main/apiSpec/new?filename=RisingV_Shared_Managers_IManagerSource.md&amp;value=---%0Auid%3A%20RisingV.Shared.Managers.IManagerSource%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/RisingV-Mods/RisingV.Shared/new/main/apiSpec/new?filename=RisingV_Shared_Managers_IEnableable.md&amp;value=---%0Auid%3A%20RisingV.Shared.Managers.IEnableable%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -84,12 +84,12 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="RisingV.Shared.Managers.IManagerSource">
+        <article data-uid="RisingV.Shared.Managers.IEnableable">
 
 
 
-  <h1 id="RisingV_Shared_Managers_IManagerSource" data-uid="RisingV.Shared.Managers.IManagerSource" class="text-break">
-Interface IManagerSource  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Managers/ManagerSource.cs/#L15"><i class="bi bi-code-slash"></i></a>
+  <h1 id="RisingV_Shared_Managers_IEnableable" data-uid="RisingV.Shared.Managers.IEnableable" class="text-break">
+Interface IEnableable  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Managers/IEnableable.cs/#L9"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -97,12 +97,11 @@ Interface IManagerSource  <a class="header-action link-secondary" title="View so
   <dl><dt>Assembly</dt><dd>RisingV.Shared.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Represents a source of managers that can be used to manage instances of type T.</p>
-</div>
+  <div class="markdown summary"></div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface IManagerSource : ITypeSource</code></pre>
+    <pre><code class="lang-csharp hljs">public interface IEnableable</code></pre>
   </div>
 
 
@@ -111,22 +110,6 @@ Interface IManagerSource  <a class="header-action link-secondary" title="View so
 
 
 
-  <dl class="typelist inheritedMembers">
-    <dt>Inherited Members</dt>
-    <dd>
-    <div>
-      <a class="xref" href="RisingV.Shared.Managers.ITypeSource.html#RisingV_Shared_Managers_ITypeSource_Count">ITypeSource.Count()</a>
-    </div>
-    <div>
-      <a class="xref" href="RisingV.Shared.Managers.ITypeSource.html#RisingV_Shared_Managers_ITypeSource_Has_System_Type_RisingV_Shared_Managers_IManageable__System_Boolean_">ITypeSource.Has(Type, out IManageable, bool)</a>
-    </div>
-    <div>
-      <a class="xref" href="RisingV.Shared.Managers.ITypeSource.html#RisingV_Shared_Managers_ITypeSource_Has_System_String_RisingV_Shared_Managers_IManageable__System_Boolean_">ITypeSource.Has(string, out IManageable, bool)</a>
-    </div>
-    <div>
-      <a class="xref" href="RisingV.Shared.Managers.ITypeSource.html#RisingV_Shared_Managers_ITypeSource_Add__1_RisingV_Shared_Plugins_IPlugin_System_Type_System_Boolean_">ITypeSource.Add&lt;TX&gt;(IPlugin, Type, bool)</a>
-    </div>
-  </dd></dl>
 
   <dl class="typelist extensionMethods">
     <dt>Extension Methods</dt>
@@ -140,34 +123,33 @@ Interface IManagerSource  <a class="header-action link-secondary" title="View so
 
 
 
-  <h2 class="section" id="methods">Methods
+  <h2 class="section" id="properties">Properties
 </h2>
 
 
-  <a id="RisingV_Shared_Managers_IManagerSource_GetManagedInfo_" data-uid="RisingV.Shared.Managers.IManagerSource.GetManagedInfo*"></a>
+  <a id="RisingV_Shared_Managers_IEnableable_Enabled_" data-uid="RisingV.Shared.Managers.IEnableable.Enabled*"></a>
 
-  <h3 id="RisingV_Shared_Managers_IManagerSource_GetManagedInfo" data-uid="RisingV.Shared.Managers.IManagerSource.GetManagedInfo">
-  GetManagedInfo()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Managers/ManagerSource.cs/#L20"><i class="bi bi-code-slash"></i></a>
+  <h3 id="RisingV_Shared_Managers_IEnableable_Enabled" data-uid="RisingV.Shared.Managers.IEnableable.Enabled">
+  Enabled
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Managers/IEnableable.cs/#L11"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Get information about the managed instances.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">string GetManagedInfo()</code></pre>
+    <pre><code class="lang-csharp hljs">bool Enabled { get; }</code></pre>
   </div>
 
 
-  <h4 class="section">Returns</h4>
+
+
+
+  <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
     <dd></dd>
   </dl>
-
-
-
 
 
 
@@ -180,7 +162,7 @@ Interface IManagerSource  <a class="header-action link-secondary" title="View so
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Managers/ManagerSource.cs/#L15" class="edit-link">Edit this page</a>
+          <a href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Managers/IEnableable.cs/#L9" class="edit-link">Edit this page</a>
         </div>
 
 

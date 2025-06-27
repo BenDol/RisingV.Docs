@@ -3010,6 +3010,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Shared.Managers.IEnableable.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Shared.Managers.IEnableable.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Shared.Managers.IEnableable",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/RisingV.Shared.Managers.IManageable-1.yml",
       "output": {
         ".html": {

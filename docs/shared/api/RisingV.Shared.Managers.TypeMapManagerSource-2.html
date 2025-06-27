@@ -174,10 +174,13 @@ Class TypeMapManagerSource&lt;T, TM&gt;  <a class="header-action link-secondary"
       <a class="xref" href="RisingV.Shared.Managers.ManagerSource-2.html#RisingV_Shared_Managers_ManagerSource_2_GetOrCreate__1_RisingV_Shared_Plugins_IPlugin_">ManagerSource&lt;T, TM&gt;.GetOrCreate&lt;TX&gt;(IPlugin)</a>
     </div>
     <div>
-      <a class="xref" href="RisingV.Shared.Managers.ManagerSource-2.html#RisingV_Shared_Managers_ManagerSource_2_Has__1">ManagerSource&lt;T, TM&gt;.Has&lt;TX&gt;()</a>
+      <a class="xref" href="RisingV.Shared.Managers.ManagerSource-2.html#RisingV_Shared_Managers_ManagerSource_2_Has__1___0__">ManagerSource&lt;T, TM&gt;.Has&lt;TX&gt;(out TX)</a>
     </div>
     <div>
-      <a class="xref" href="RisingV.Shared.Managers.ManagerSource-2.html#RisingV_Shared_Managers_ManagerSource_2_Has_System_Type_System_Boolean_">ManagerSource&lt;T, TM&gt;.Has(Type, bool)</a>
+      <a class="xref" href="RisingV.Shared.Managers.ManagerSource-2.html#RisingV_Shared_Managers_ManagerSource_2_Has_System_Type_RisingV_Shared_Managers_IManageable__System_Boolean_">ManagerSource&lt;T, TM&gt;.Has(Type, out IManageable, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Managers.ManagerSource-2.html#RisingV_Shared_Managers_ManagerSource_2_Has_System_String_RisingV_Shared_Managers_IManageable__System_Boolean_">ManagerSource&lt;T, TM&gt;.Has(string, out IManageable, bool)</a>
     </div>
     <div>
       <a class="xref" href="RisingV.Shared.Managers.ManagerSource-2.html#RisingV_Shared_Managers_ManagerSource_2_ForEach_System_Action__0__">ManagerSource&lt;T, TM&gt;.ForEach(Action&lt;T&gt;)</a>
@@ -363,7 +366,7 @@ Class TypeMapManagerSource&lt;T, TM&gt;  <a class="header-action link-secondary"
 
   <h3 id="RisingV_Shared_Managers_TypeMapManagerSource_2_Count" data-uid="RisingV.Shared.Managers.TypeMapManagerSource`2.Count">
   Count()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Managers/TypeMapManager.cs/#L110"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Managers/TypeMapManager.cs/#L140"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Get the count of objects in the source.</p>
@@ -395,7 +398,7 @@ Class TypeMapManagerSource&lt;T, TM&gt;  <a class="header-action link-secondary"
 
   <h3 id="RisingV_Shared_Managers_TypeMapManagerSource_2_ForEach_System_Action__0__" data-uid="RisingV.Shared.Managers.TypeMapManagerSource`2.ForEach(System.Action{`0})">
   ForEach(Action&lt;T&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Managers/TypeMapManager.cs/#L121"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Managers/TypeMapManager.cs/#L151"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Get an object from the source.</p>
@@ -466,7 +469,7 @@ Class TypeMapManagerSource&lt;T, TM&gt;  <a class="header-action link-secondary"
 
   <h3 id="RisingV_Shared_Managers_TypeMapManagerSource_2_GetList" data-uid="RisingV.Shared.Managers.TypeMapManagerSource`2.GetList">
   GetList()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Managers/TypeMapManager.cs/#L128"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Managers/TypeMapManager.cs/#L158"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Get all objects from the source.</p>
@@ -498,7 +501,7 @@ Class TypeMapManagerSource&lt;T, TM&gt;  <a class="header-action link-secondary"
 
   <h3 id="RisingV_Shared_Managers_TypeMapManagerSource_2_GetManagedInfo" data-uid="RisingV.Shared.Managers.TypeMapManagerSource`2.GetManagedInfo">
   GetManagedInfo()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Managers/TypeMapManager.cs/#L115"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Managers/TypeMapManager.cs/#L145"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Get information about the managed instances.</p>
@@ -612,22 +615,24 @@ Class TypeMapManagerSource&lt;T, TM&gt;  <a class="header-action link-secondary"
 
   <a id="RisingV_Shared_Managers_TypeMapManagerSource_2_Has_" data-uid="RisingV.Shared.Managers.TypeMapManagerSource`2.Has*"></a>
 
-  <h3 id="RisingV_Shared_Managers_TypeMapManagerSource_2_Has_System_Type_System_Boolean_" data-uid="RisingV.Shared.Managers.TypeMapManagerSource`2.Has(System.Type,System.Boolean)">
-  Has(Type, bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Managers/TypeMapManager.cs/#L101"><i class="bi bi-code-slash"></i></a>
+  <h3 id="RisingV_Shared_Managers_TypeMapManagerSource_2_Has_System_String_RisingV_Shared_Managers_IManageable__System_Boolean_" data-uid="RisingV.Shared.Managers.TypeMapManagerSource`2.Has(System.String,RisingV.Shared.Managers.IManageable@,System.Boolean)">
+  Has(string, out IManageable?, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Managers/TypeMapManager.cs/#L128"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Do we have an object of the type TX in the source.</p>
+  <div class="markdown level1 summary"><p>Do we have a manageable of a type name.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override bool Has(Type type, bool checkAssignable = true)</code></pre>
+    <pre><code class="lang-csharp hljs">public override bool Has(string typeName, out IManageable? manageable, bool checkAssignable = true)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>type</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dt><code>typeName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>manageable</code> <a class="xref" href="RisingV.Shared.Managers.IManageable.html">IManageable</a></dt>
     <dd></dd>
     <dt><code>checkAssignable</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
     <dd></dd>
@@ -651,8 +656,49 @@ Class TypeMapManagerSource&lt;T, TM&gt;  <a class="header-action link-secondary"
 
   <a id="RisingV_Shared_Managers_TypeMapManagerSource_2_Has_" data-uid="RisingV.Shared.Managers.TypeMapManagerSource`2.Has*"></a>
 
-  <h3 id="RisingV_Shared_Managers_TypeMapManagerSource_2_Has__1" data-uid="RisingV.Shared.Managers.TypeMapManagerSource`2.Has``1">
-  Has&lt;TX&gt;()
+  <h3 id="RisingV_Shared_Managers_TypeMapManagerSource_2_Has_System_Type_RisingV_Shared_Managers_IManageable__System_Boolean_" data-uid="RisingV.Shared.Managers.TypeMapManagerSource`2.Has(System.Type,RisingV.Shared.Managers.IManageable@,System.Boolean)">
+  Has(Type, out IManageable, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Managers/TypeMapManager.cs/#L106"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Do we have an object of the type TX in the source.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool Has(Type type, out IManageable manageable, bool checkAssignable = true)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>type</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd></dd>
+    <dt><code>manageable</code> <a class="xref" href="RisingV.Shared.Managers.IManageable.html">IManageable</a></dt>
+    <dd></dd>
+    <dt><code>checkAssignable</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RisingV_Shared_Managers_TypeMapManagerSource_2_Has_" data-uid="RisingV.Shared.Managers.TypeMapManagerSource`2.Has*"></a>
+
+  <h3 id="RisingV_Shared_Managers_TypeMapManagerSource_2_Has__1___0__" data-uid="RisingV.Shared.Managers.TypeMapManagerSource`2.Has``1(``0@)">
+  Has&lt;TX&gt;(out TX)
   <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Managers/TypeMapManager.cs/#L96"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -661,9 +707,14 @@ Class TypeMapManagerSource&lt;T, TM&gt;  <a class="header-action link-secondary"
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override bool Has&lt;TX&gt;() where TX : T</code></pre>
+    <pre><code class="lang-csharp hljs">public override bool Has&lt;TX&gt;(out TX manageable) where TX : T</code></pre>
   </div>
 
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>manageable</code> <span class="xref">TX</span></dt>
+    <dd></dd>
+  </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
@@ -727,7 +778,7 @@ Class TypeMapManagerSource&lt;T, TM&gt;  <a class="header-action link-secondary"
 
   <h3 id="RisingV_Shared_Managers_TypeMapManagerSource_2_Select_System_Func_System_Collections_Generic_KeyValuePair_System_Type__0___0__" data-uid="RisingV.Shared.Managers.TypeMapManagerSource`2.Select(System.Func{System.Collections.Generic.KeyValuePair{System.Type,`0},`0})">
   Select(Func&lt;KeyValuePair&lt;Type, T&gt;, T&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Managers/TypeMapManager.cs/#L133"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Managers/TypeMapManager.cs/#L163"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Select an enumerable of objects from the source.</p>

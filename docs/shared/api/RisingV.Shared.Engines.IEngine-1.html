@@ -102,7 +102,7 @@ Interface IEngine&lt;TConfig&gt;  <a class="header-action link-secondary" title=
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface IEngine&lt;out TConfig&gt; : IEngine, IManageableLifecycle&lt;EngineManager&gt;, IManageableLifecycle, IReloadable, IManageable&lt;EngineManager&gt;, IManageable where TConfig : IEngineConfig</code></pre>
+    <pre><code class="lang-csharp hljs">public interface IEngine&lt;out TConfig&gt; : IEngine, IManageableLifecycle&lt;EngineManager&gt;, IManageableLifecycle, IReloadable, IManageable&lt;EngineManager&gt;, IManageable, IEnableable where TConfig : IEngineConfig</code></pre>
   </div>
 
 

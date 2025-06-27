@@ -170,6 +170,9 @@ Class EngineManager  <a class="header-action link-secondary" title="View source"
       <a class="xref" href="RisingV.Shared.Managers.ManagerBase-2.html#RisingV_Shared_Managers_ManagerBase_2_IsFullReloading">ManagerBase&lt;IEngine, EngineManager&gt;.IsFullReloading</a>
     </div>
     <div>
+      <a class="xref" href="RisingV.Shared.Managers.ManagerBase-2.html#RisingV_Shared_Managers_ManagerBase_2_IsEnabled_RisingV_Shared_Managers_IManageable_">ManagerBase&lt;IEngine, EngineManager&gt;.IsEnabled(IManageable)</a>
+    </div>
+    <div>
       <a class="xref" href="RisingV.Shared.Managers.ManagerBase-2.html#RisingV_Shared_Managers_ManagerBase_2_IsEnabled__1___0_">ManagerBase&lt;IEngine, EngineManager&gt;.IsEnabled&lt;TX&gt;(TX)</a>
     </div>
     <div>
@@ -260,10 +263,13 @@ Class EngineManager  <a class="header-action link-secondary" title="View source"
       <a class="xref" href="RisingV.Shared.Managers.ManagerBase-2.html#RisingV_Shared_Managers_ManagerBase_2_GetOrCreate__1_RisingV_Shared_Plugins_IPlugin_">ManagerBase&lt;IEngine, EngineManager&gt;.GetOrCreate&lt;TX&gt;(IPlugin)</a>
     </div>
     <div>
-      <a class="xref" href="RisingV.Shared.Managers.ManagerBase-2.html#RisingV_Shared_Managers_ManagerBase_2_Has__1">ManagerBase&lt;IEngine, EngineManager&gt;.Has&lt;TX&gt;()</a>
+      <a class="xref" href="RisingV.Shared.Managers.ManagerBase-2.html#RisingV_Shared_Managers_ManagerBase_2_Has__1_System_Boolean_">ManagerBase&lt;IEngine, EngineManager&gt;.Has&lt;TX&gt;(bool)</a>
     </div>
     <div>
-      <a class="xref" href="RisingV.Shared.Managers.ManagerBase-2.html#RisingV_Shared_Managers_ManagerBase_2_Has_System_Type_System_Boolean_">ManagerBase&lt;IEngine, EngineManager&gt;.Has(Type, bool)</a>
+      <a class="xref" href="RisingV.Shared.Managers.ManagerBase-2.html#RisingV_Shared_Managers_ManagerBase_2_Has_System_Type_System_Boolean_System_Boolean_">ManagerBase&lt;IEngine, EngineManager&gt;.Has(Type, bool, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="RisingV.Shared.Managers.ManagerBase-2.html#RisingV_Shared_Managers_ManagerBase_2_Has_System_String_System_Boolean_System_Boolean_">ManagerBase&lt;IEngine, EngineManager&gt;.Has(string, bool, bool)</a>
     </div>
     <div>
       <a class="xref" href="RisingV.Shared.Managers.ManagerBase-2.html#RisingV_Shared_Managers_ManagerBase_2_Count">ManagerBase&lt;IEngine, EngineManager&gt;.Count()</a>
@@ -454,7 +460,7 @@ Class EngineManager  <a class="header-action link-secondary" title="View source"
 
   <h3 id="RisingV_Shared_Engines_EngineManager_AddEngine__1_RisingV_Shared_Plugins_IPlugin___0_System_Boolean_" data-uid="RisingV.Shared.Engines.EngineManager.AddEngine``1(RisingV.Shared.Plugins.IPlugin,``0,System.Boolean)">
   AddEngine&lt;T&gt;(IPlugin, T, bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Engines/EngineManager.cs/#L29"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Engines/EngineManager.cs/#L30"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -490,11 +496,90 @@ Class EngineManager  <a class="header-action link-secondary" title="View source"
 
 
 
+  <a id="RisingV_Shared_Engines_EngineManager_AddEngine_" data-uid="RisingV.Shared.Engines.EngineManager.AddEngine*"></a>
+
+  <h3 id="RisingV_Shared_Engines_EngineManager_AddEngine__1_System_Boolean_" data-uid="RisingV.Shared.Engines.EngineManager.AddEngine``1(System.Boolean)">
+  AddEngine&lt;T&gt;(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Engines/EngineManager.cs/#L29"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public T? AddEngine&lt;T&gt;(bool failIfExists = true) where T : IEngine</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>failIfExists</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="RisingV_Shared_Engines_EngineManager_AddEngine_" data-uid="RisingV.Shared.Engines.EngineManager.AddEngine*"></a>
+
+  <h3 id="RisingV_Shared_Engines_EngineManager_AddEngine__1___0_System_Boolean_" data-uid="RisingV.Shared.Engines.EngineManager.AddEngine``1(``0,System.Boolean)">
+  AddEngine&lt;T&gt;(T, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Engines/EngineManager.cs/#L31"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddEngine&lt;T&gt;(T engine, bool failIfExists = true) where T : IEngine</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>engine</code> <span class="xref">T</span></dt>
+    <dd></dd>
+    <dt><code>failIfExists</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
   <a id="RisingV_Shared_Engines_EngineManager_CheckDependencies_" data-uid="RisingV.Shared.Engines.EngineManager.CheckDependencies*"></a>
 
   <h3 id="RisingV_Shared_Engines_EngineManager_CheckDependencies_RisingV_Shared_Plugins_IPlugin_System_Boolean_" data-uid="RisingV.Shared.Engines.EngineManager.CheckDependencies(RisingV.Shared.Plugins.IPlugin,System.Boolean)">
   CheckDependencies(IPlugin, bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Engines/EngineManager.cs/#L194"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Engines/EngineManager.cs/#L185"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Checks the dependencies of the engine and attempts to auto-load them if allowed.</p>
@@ -533,7 +618,7 @@ Class EngineManager  <a class="header-action link-secondary" title="View source"
 
   <h3 id="RisingV_Shared_Engines_EngineManager_CheckRecommended_RisingV_Shared_Plugins_IPlugin_System_Boolean_" data-uid="RisingV.Shared.Engines.EngineManager.CheckRecommended(RisingV.Shared.Plugins.IPlugin,System.Boolean)">
   CheckRecommended(IPlugin, bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Engines/EngineManager.cs/#L262"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Engines/EngineManager.cs/#L253"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Checks the recommended manageables for the engine and logs any missing ones.</p>
@@ -572,7 +657,7 @@ Class EngineManager  <a class="header-action link-secondary" title="View source"
 
   <h3 id="RisingV_Shared_Engines_EngineManager_GetEngine__1_System_Boolean_" data-uid="RisingV.Shared.Engines.EngineManager.GetEngine``1(System.Boolean)">
   GetEngine&lt;T&gt;(bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Engines/EngineManager.cs/#L31"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Engines/EngineManager.cs/#L33"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -613,7 +698,7 @@ Class EngineManager  <a class="header-action link-secondary" title="View source"
 
   <h3 id="RisingV_Shared_Engines_EngineManager_GetMissingManageables_RisingV_Shared_Plugins_IPlugin_RisingV_Shared_Engines_IEngine_System_Collections_Generic_List_RisingV_Shared_Engines_Dependency__" data-uid="RisingV.Shared.Engines.EngineManager.GetMissingManageables(RisingV.Shared.Plugins.IPlugin,RisingV.Shared.Engines.IEngine,System.Collections.Generic.List{RisingV.Shared.Engines.Dependency})">
   GetMissingManageables(IPlugin, IEngine, List&lt;Dependency&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Engines/EngineManager.cs/#L151"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Engines/EngineManager.cs/#L142"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the missing manageable dependencies for a given engine.</p>
@@ -651,53 +736,11 @@ Class EngineManager  <a class="header-action link-secondary" title="View source"
 
 
 
-  <a id="RisingV_Shared_Engines_EngineManager_IsEnabled_" data-uid="RisingV.Shared.Engines.EngineManager.IsEnabled*"></a>
-
-  <h3 id="RisingV_Shared_Engines_EngineManager_IsEnabled__1___0_" data-uid="RisingV.Shared.Engines.EngineManager.IsEnabled``1(``0)">
-  IsEnabled&lt;TX&gt;(TX?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Engines/EngineManager.cs/#L121"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Checks if the engine is enabled.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override bool IsEnabled&lt;TX&gt;(TX? manageable) where TX : IEngine</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>manageable</code> <span class="xref">TX</span></dt>
-    <dd></dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd></dd>
-  </dl>
-
-  <h4 class="section">Type Parameters</h4>
-  <dl class="parameters">
-    <dt><code>TX</code></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
   <a id="RisingV_Shared_Engines_EngineManager_Ready_" data-uid="RisingV.Shared.Engines.EngineManager.Ready*"></a>
 
   <h3 id="RisingV_Shared_Engines_EngineManager_Ready_RisingV_Shared_Plugins_IPlugin_" data-uid="RisingV.Shared.Engines.EngineManager.Ready(RisingV.Shared.Plugins.IPlugin)">
   Ready(IPlugin)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Engines/EngineManager.cs/#L38"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Engines/EngineManager.cs/#L40"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Ready the manager with the given plugin including its manageable objects.
@@ -730,7 +773,7 @@ This should be called after all other Managers have been loaded.</p>
 
   <h3 id="RisingV_Shared_Engines_EngineManager_Reload_RisingV_Shared_Plugins_IPlugin_RisingV_Shared_Managers_ReloadReason_" data-uid="RisingV.Shared.Engines.EngineManager.Reload(RisingV.Shared.Plugins.IPlugin,RisingV.Shared.Managers.ReloadReason)">
   Reload(IPlugin, ReloadReason)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Engines/EngineManager.cs/#L33"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Engines/EngineManager.cs/#L35"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Reload the manager with the given plugin including its manageable objects.
@@ -765,7 +808,7 @@ The manageable objects should be unloaded before calling their Reload method and
 
   <h3 id="RisingV_Shared_Engines_EngineManager_RemoveEngine__1_RisingV_Shared_Plugins_IPlugin_" data-uid="RisingV.Shared.Engines.EngineManager.RemoveEngine``1(RisingV.Shared.Plugins.IPlugin)">
   RemoveEngine&lt;T&gt;(IPlugin)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Engines/EngineManager.cs/#L30"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Engines/EngineManager.cs/#L32"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -801,7 +844,7 @@ The manageable objects should be unloaded before calling their Reload method and
 
   <h3 id="RisingV_Shared_Engines_EngineManager_TryReady_RisingV_Shared_Engines_IEngine_RisingV_Shared_Plugins_IPlugin_" data-uid="RisingV.Shared.Engines.EngineManager.TryReady(RisingV.Shared.Engines.IEngine,RisingV.Shared.Plugins.IPlugin)">
   TryReady(IEngine, IPlugin)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Engines/EngineManager.cs/#L126"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Engines/EngineManager.cs/#L117"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>

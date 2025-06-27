@@ -6167,6 +6167,24 @@ references:
   fullName.vb: RisingV.Shared.Engines.EngineManager.AddEngine(Of T)(RisingV.Shared.Plugins.IPlugin, T, Boolean)
   nameWithType: EngineManager.AddEngine<T>(IPlugin, T, bool)
   nameWithType.vb: EngineManager.AddEngine(Of T)(IPlugin, T, Boolean)
+- uid: RisingV.Shared.Engines.EngineManager.AddEngine``1(System.Boolean)
+  name: AddEngine<T>(bool)
+  href: api/RisingV.Shared.Engines.EngineManager.html#RisingV_Shared_Engines_EngineManager_AddEngine__1_System_Boolean_
+  commentId: M:RisingV.Shared.Engines.EngineManager.AddEngine``1(System.Boolean)
+  name.vb: AddEngine(Of T)(Boolean)
+  fullName: RisingV.Shared.Engines.EngineManager.AddEngine<T>(bool)
+  fullName.vb: RisingV.Shared.Engines.EngineManager.AddEngine(Of T)(Boolean)
+  nameWithType: EngineManager.AddEngine<T>(bool)
+  nameWithType.vb: EngineManager.AddEngine(Of T)(Boolean)
+- uid: RisingV.Shared.Engines.EngineManager.AddEngine``1(``0,System.Boolean)
+  name: AddEngine<T>(T, bool)
+  href: api/RisingV.Shared.Engines.EngineManager.html#RisingV_Shared_Engines_EngineManager_AddEngine__1___0_System_Boolean_
+  commentId: M:RisingV.Shared.Engines.EngineManager.AddEngine``1(``0,System.Boolean)
+  name.vb: AddEngine(Of T)(T, Boolean)
+  fullName: RisingV.Shared.Engines.EngineManager.AddEngine<T>(T, bool)
+  fullName.vb: RisingV.Shared.Engines.EngineManager.AddEngine(Of T)(T, Boolean)
+  nameWithType: EngineManager.AddEngine<T>(T, bool)
+  nameWithType.vb: EngineManager.AddEngine(Of T)(T, Boolean)
 - uid: RisingV.Shared.Engines.EngineManager.AllowAutoLoad
   name: AllowAutoLoad
   href: api/RisingV.Shared.Engines.EngineManager.html#RisingV_Shared_Engines_EngineManager_AllowAutoLoad
@@ -6244,22 +6262,6 @@ references:
   isSpec: "True"
   fullName: RisingV.Shared.Engines.EngineManager.GetMissingManageables
   nameWithType: EngineManager.GetMissingManageables
-- uid: RisingV.Shared.Engines.EngineManager.IsEnabled*
-  name: IsEnabled
-  href: api/RisingV.Shared.Engines.EngineManager.html#RisingV_Shared_Engines_EngineManager_IsEnabled_
-  commentId: Overload:RisingV.Shared.Engines.EngineManager.IsEnabled
-  isSpec: "True"
-  fullName: RisingV.Shared.Engines.EngineManager.IsEnabled
-  nameWithType: EngineManager.IsEnabled
-- uid: RisingV.Shared.Engines.EngineManager.IsEnabled``1(``0)
-  name: IsEnabled<TX>(TX?)
-  href: api/RisingV.Shared.Engines.EngineManager.html#RisingV_Shared_Engines_EngineManager_IsEnabled__1___0_
-  commentId: M:RisingV.Shared.Engines.EngineManager.IsEnabled``1(``0)
-  name.vb: IsEnabled(Of TX)(TX)
-  fullName: RisingV.Shared.Engines.EngineManager.IsEnabled<TX>(TX?)
-  fullName.vb: RisingV.Shared.Engines.EngineManager.IsEnabled(Of TX)(TX)
-  nameWithType: EngineManager.IsEnabled<TX>(TX?)
-  nameWithType.vb: EngineManager.IsEnabled(Of TX)(TX)
 - uid: RisingV.Shared.Engines.EngineManager.Log
   name: Log
   href: api/RisingV.Shared.Engines.EngineManager.html#RisingV_Shared_Engines_EngineManager_Log
@@ -14424,6 +14426,25 @@ references:
   commentId: N:RisingV.Shared.Managers
   fullName: RisingV.Shared.Managers
   nameWithType: RisingV.Shared.Managers
+- uid: RisingV.Shared.Managers.IEnableable
+  name: IEnableable
+  href: api/RisingV.Shared.Managers.IEnableable.html
+  commentId: T:RisingV.Shared.Managers.IEnableable
+  fullName: RisingV.Shared.Managers.IEnableable
+  nameWithType: IEnableable
+- uid: RisingV.Shared.Managers.IEnableable.Enabled
+  name: Enabled
+  href: api/RisingV.Shared.Managers.IEnableable.html#RisingV_Shared_Managers_IEnableable_Enabled
+  commentId: P:RisingV.Shared.Managers.IEnableable.Enabled
+  fullName: RisingV.Shared.Managers.IEnableable.Enabled
+  nameWithType: IEnableable.Enabled
+- uid: RisingV.Shared.Managers.IEnableable.Enabled*
+  name: Enabled
+  href: api/RisingV.Shared.Managers.IEnableable.html#RisingV_Shared_Managers_IEnableable_Enabled_
+  commentId: Overload:RisingV.Shared.Managers.IEnableable.Enabled
+  isSpec: "True"
+  fullName: RisingV.Shared.Managers.IEnableable.Enabled
+  nameWithType: IEnableable.Enabled
 - uid: RisingV.Shared.Managers.IManageable
   name: IManageable
   href: api/RisingV.Shared.Managers.IManageable.html
@@ -14770,15 +14791,24 @@ references:
   isSpec: "True"
   fullName: RisingV.Shared.Managers.IManager.GetManagedInfo
   nameWithType: IManager.GetManagedInfo
-- uid: RisingV.Shared.Managers.IManager.Has(System.Type,System.Boolean)
-  name: Has(Type, bool)
-  href: api/RisingV.Shared.Managers.IManager.html#RisingV_Shared_Managers_IManager_Has_System_Type_System_Boolean_
-  commentId: M:RisingV.Shared.Managers.IManager.Has(System.Type,System.Boolean)
-  name.vb: Has(Type, Boolean)
-  fullName: RisingV.Shared.Managers.IManager.Has(System.Type, bool)
-  fullName.vb: RisingV.Shared.Managers.IManager.Has(System.Type, Boolean)
-  nameWithType: IManager.Has(Type, bool)
-  nameWithType.vb: IManager.Has(Type, Boolean)
+- uid: RisingV.Shared.Managers.IManager.Has(System.String,System.Boolean,System.Boolean)
+  name: Has(string, bool, bool)
+  href: api/RisingV.Shared.Managers.IManager.html#RisingV_Shared_Managers_IManager_Has_System_String_System_Boolean_System_Boolean_
+  commentId: M:RisingV.Shared.Managers.IManager.Has(System.String,System.Boolean,System.Boolean)
+  name.vb: Has(String, Boolean, Boolean)
+  fullName: RisingV.Shared.Managers.IManager.Has(string, bool, bool)
+  fullName.vb: RisingV.Shared.Managers.IManager.Has(String, Boolean, Boolean)
+  nameWithType: IManager.Has(string, bool, bool)
+  nameWithType.vb: IManager.Has(String, Boolean, Boolean)
+- uid: RisingV.Shared.Managers.IManager.Has(System.Type,System.Boolean,System.Boolean)
+  name: Has(Type, bool, bool)
+  href: api/RisingV.Shared.Managers.IManager.html#RisingV_Shared_Managers_IManager_Has_System_Type_System_Boolean_System_Boolean_
+  commentId: M:RisingV.Shared.Managers.IManager.Has(System.Type,System.Boolean,System.Boolean)
+  name.vb: Has(Type, Boolean, Boolean)
+  fullName: RisingV.Shared.Managers.IManager.Has(System.Type, bool, bool)
+  fullName.vb: RisingV.Shared.Managers.IManager.Has(System.Type, Boolean, Boolean)
+  nameWithType: IManager.Has(Type, bool, bool)
+  nameWithType.vb: IManager.Has(Type, Boolean, Boolean)
 - uid: RisingV.Shared.Managers.IManager.Has*
   name: Has
   href: api/RisingV.Shared.Managers.IManager.html#RisingV_Shared_Managers_IManager_Has_
@@ -14799,6 +14829,22 @@ references:
   isSpec: "True"
   fullName: RisingV.Shared.Managers.IManager.Initialize
   nameWithType: IManager.Initialize
+- uid: RisingV.Shared.Managers.IManager.IsEnabled(RisingV.Shared.Managers.IManageable)
+  name: IsEnabled(IManageable?)
+  href: api/RisingV.Shared.Managers.IManager.html#RisingV_Shared_Managers_IManager_IsEnabled_RisingV_Shared_Managers_IManageable_
+  commentId: M:RisingV.Shared.Managers.IManager.IsEnabled(RisingV.Shared.Managers.IManageable)
+  name.vb: IsEnabled(IManageable)
+  fullName: RisingV.Shared.Managers.IManager.IsEnabled(RisingV.Shared.Managers.IManageable?)
+  fullName.vb: RisingV.Shared.Managers.IManager.IsEnabled(RisingV.Shared.Managers.IManageable)
+  nameWithType: IManager.IsEnabled(IManageable?)
+  nameWithType.vb: IManager.IsEnabled(IManageable)
+- uid: RisingV.Shared.Managers.IManager.IsEnabled*
+  name: IsEnabled
+  href: api/RisingV.Shared.Managers.IManager.html#RisingV_Shared_Managers_IManager_IsEnabled_
+  commentId: Overload:RisingV.Shared.Managers.IManager.IsEnabled
+  isSpec: "True"
+  fullName: RisingV.Shared.Managers.IManager.IsEnabled
+  nameWithType: IManager.IsEnabled
 - uid: RisingV.Shared.Managers.IManager.IsInitialized
   name: IsInitialized
   href: api/RisingV.Shared.Managers.IManager.html#RisingV_Shared_Managers_IManager_IsInitialized
@@ -15199,15 +15245,15 @@ references:
   fullName.vb: RisingV.Shared.Managers.IManager(Of T, TM).Has
   nameWithType: IManager<T, TM>.Has
   nameWithType.vb: IManager(Of T, TM).Has
-- uid: RisingV.Shared.Managers.IManager`2.Has``1
-  name: Has<TX>()
-  href: api/RisingV.Shared.Managers.IManager-2.html#RisingV_Shared_Managers_IManager_2_Has__1
-  commentId: M:RisingV.Shared.Managers.IManager`2.Has``1
-  name.vb: Has(Of TX)()
-  fullName: RisingV.Shared.Managers.IManager<T, TM>.Has<TX>()
-  fullName.vb: RisingV.Shared.Managers.IManager(Of T, TM).Has(Of TX)()
-  nameWithType: IManager<T, TM>.Has<TX>()
-  nameWithType.vb: IManager(Of T, TM).Has(Of TX)()
+- uid: RisingV.Shared.Managers.IManager`2.Has``1(System.Boolean)
+  name: Has<TX>(bool)
+  href: api/RisingV.Shared.Managers.IManager-2.html#RisingV_Shared_Managers_IManager_2_Has__1_System_Boolean_
+  commentId: M:RisingV.Shared.Managers.IManager`2.Has``1(System.Boolean)
+  name.vb: Has(Of TX)(Boolean)
+  fullName: RisingV.Shared.Managers.IManager<T, TM>.Has<TX>(bool)
+  fullName.vb: RisingV.Shared.Managers.IManager(Of T, TM).Has(Of TX)(Boolean)
+  nameWithType: IManager<T, TM>.Has<TX>(bool)
+  nameWithType.vb: IManager(Of T, TM).Has(Of TX)(Boolean)
 - uid: RisingV.Shared.Managers.IManager`2.IsEnabled*
   name: IsEnabled
   href: api/RisingV.Shared.Managers.IManager-2.html#RisingV_Shared_Managers_IManager_2_IsEnabled_
@@ -15395,15 +15441,24 @@ references:
   isSpec: "True"
   fullName: RisingV.Shared.Managers.ITypeSource.Count
   nameWithType: ITypeSource.Count
-- uid: RisingV.Shared.Managers.ITypeSource.Has(System.Type,System.Boolean)
-  name: Has(Type, bool)
-  href: api/RisingV.Shared.Managers.ITypeSource.html#RisingV_Shared_Managers_ITypeSource_Has_System_Type_System_Boolean_
-  commentId: M:RisingV.Shared.Managers.ITypeSource.Has(System.Type,System.Boolean)
-  name.vb: Has(Type, Boolean)
-  fullName: RisingV.Shared.Managers.ITypeSource.Has(System.Type, bool)
-  fullName.vb: RisingV.Shared.Managers.ITypeSource.Has(System.Type, Boolean)
-  nameWithType: ITypeSource.Has(Type, bool)
-  nameWithType.vb: ITypeSource.Has(Type, Boolean)
+- uid: RisingV.Shared.Managers.ITypeSource.Has(System.String,RisingV.Shared.Managers.IManageable@,System.Boolean)
+  name: Has(string, out IManageable?, bool)
+  href: api/RisingV.Shared.Managers.ITypeSource.html#RisingV_Shared_Managers_ITypeSource_Has_System_String_RisingV_Shared_Managers_IManageable__System_Boolean_
+  commentId: M:RisingV.Shared.Managers.ITypeSource.Has(System.String,RisingV.Shared.Managers.IManageable@,System.Boolean)
+  name.vb: Has(String, IManageable, Boolean)
+  fullName: RisingV.Shared.Managers.ITypeSource.Has(string, out RisingV.Shared.Managers.IManageable?, bool)
+  fullName.vb: RisingV.Shared.Managers.ITypeSource.Has(String, RisingV.Shared.Managers.IManageable, Boolean)
+  nameWithType: ITypeSource.Has(string, out IManageable?, bool)
+  nameWithType.vb: ITypeSource.Has(String, IManageable, Boolean)
+- uid: RisingV.Shared.Managers.ITypeSource.Has(System.Type,RisingV.Shared.Managers.IManageable@,System.Boolean)
+  name: Has(Type, out IManageable?, bool)
+  href: api/RisingV.Shared.Managers.ITypeSource.html#RisingV_Shared_Managers_ITypeSource_Has_System_Type_RisingV_Shared_Managers_IManageable__System_Boolean_
+  commentId: M:RisingV.Shared.Managers.ITypeSource.Has(System.Type,RisingV.Shared.Managers.IManageable@,System.Boolean)
+  name.vb: Has(Type, IManageable, Boolean)
+  fullName: RisingV.Shared.Managers.ITypeSource.Has(System.Type, out RisingV.Shared.Managers.IManageable?, bool)
+  fullName.vb: RisingV.Shared.Managers.ITypeSource.Has(System.Type, RisingV.Shared.Managers.IManageable, Boolean)
+  nameWithType: ITypeSource.Has(Type, out IManageable?, bool)
+  nameWithType.vb: ITypeSource.Has(Type, IManageable, Boolean)
 - uid: RisingV.Shared.Managers.ITypeSource.Has*
   name: Has
   href: api/RisingV.Shared.Managers.ITypeSource.html#RisingV_Shared_Managers_ITypeSource_Has_
@@ -15536,15 +15591,15 @@ references:
   fullName.vb: RisingV.Shared.Managers.ITypeSource(Of T).Has
   nameWithType: ITypeSource<T>.Has
   nameWithType.vb: ITypeSource(Of T).Has
-- uid: RisingV.Shared.Managers.ITypeSource`1.Has``1
-  name: Has<TX>()
-  href: api/RisingV.Shared.Managers.ITypeSource-1.html#RisingV_Shared_Managers_ITypeSource_1_Has__1
-  commentId: M:RisingV.Shared.Managers.ITypeSource`1.Has``1
-  name.vb: Has(Of TX)()
-  fullName: RisingV.Shared.Managers.ITypeSource<T>.Has<TX>()
-  fullName.vb: RisingV.Shared.Managers.ITypeSource(Of T).Has(Of TX)()
-  nameWithType: ITypeSource<T>.Has<TX>()
-  nameWithType.vb: ITypeSource(Of T).Has(Of TX)()
+- uid: RisingV.Shared.Managers.ITypeSource`1.Has``1(``0@)
+  name: Has<TX>(out TX?)
+  href: api/RisingV.Shared.Managers.ITypeSource-1.html#RisingV_Shared_Managers_ITypeSource_1_Has__1___0__
+  commentId: M:RisingV.Shared.Managers.ITypeSource`1.Has``1(``0@)
+  name.vb: Has(Of TX)(TX)
+  fullName: RisingV.Shared.Managers.ITypeSource<T>.Has<TX>(out TX?)
+  fullName.vb: RisingV.Shared.Managers.ITypeSource(Of T).Has(Of TX)(TX)
+  nameWithType: ITypeSource<T>.Has<TX>(out TX?)
+  nameWithType.vb: ITypeSource(Of T).Has(Of TX)(TX)
 - uid: RisingV.Shared.Managers.ITypeSource`1.Remove*
   name: Remove
   href: api/RisingV.Shared.Managers.ITypeSource-1.html#RisingV_Shared_Managers_ITypeSource_1_Remove_
@@ -15962,15 +16017,24 @@ references:
   fullName.vb: RisingV.Shared.Managers.ManagerBase(Of T, TM).Get(Of TX)(Boolean)
   nameWithType: ManagerBase<T, TM>.Get<TX>(bool)
   nameWithType.vb: ManagerBase(Of T, TM).Get(Of TX)(Boolean)
-- uid: RisingV.Shared.Managers.ManagerBase`2.Has(System.Type,System.Boolean)
-  name: Has(Type, bool)
-  href: api/RisingV.Shared.Managers.ManagerBase-2.html#RisingV_Shared_Managers_ManagerBase_2_Has_System_Type_System_Boolean_
-  commentId: M:RisingV.Shared.Managers.ManagerBase`2.Has(System.Type,System.Boolean)
-  name.vb: Has(Type, Boolean)
-  fullName: RisingV.Shared.Managers.ManagerBase<T, TM>.Has(System.Type, bool)
-  fullName.vb: RisingV.Shared.Managers.ManagerBase(Of T, TM).Has(System.Type, Boolean)
-  nameWithType: ManagerBase<T, TM>.Has(Type, bool)
-  nameWithType.vb: ManagerBase(Of T, TM).Has(Type, Boolean)
+- uid: RisingV.Shared.Managers.ManagerBase`2.Has(System.String,System.Boolean,System.Boolean)
+  name: Has(string, bool, bool)
+  href: api/RisingV.Shared.Managers.ManagerBase-2.html#RisingV_Shared_Managers_ManagerBase_2_Has_System_String_System_Boolean_System_Boolean_
+  commentId: M:RisingV.Shared.Managers.ManagerBase`2.Has(System.String,System.Boolean,System.Boolean)
+  name.vb: Has(String, Boolean, Boolean)
+  fullName: RisingV.Shared.Managers.ManagerBase<T, TM>.Has(string, bool, bool)
+  fullName.vb: RisingV.Shared.Managers.ManagerBase(Of T, TM).Has(String, Boolean, Boolean)
+  nameWithType: ManagerBase<T, TM>.Has(string, bool, bool)
+  nameWithType.vb: ManagerBase(Of T, TM).Has(String, Boolean, Boolean)
+- uid: RisingV.Shared.Managers.ManagerBase`2.Has(System.Type,System.Boolean,System.Boolean)
+  name: Has(Type, bool, bool)
+  href: api/RisingV.Shared.Managers.ManagerBase-2.html#RisingV_Shared_Managers_ManagerBase_2_Has_System_Type_System_Boolean_System_Boolean_
+  commentId: M:RisingV.Shared.Managers.ManagerBase`2.Has(System.Type,System.Boolean,System.Boolean)
+  name.vb: Has(Type, Boolean, Boolean)
+  fullName: RisingV.Shared.Managers.ManagerBase<T, TM>.Has(System.Type, bool, bool)
+  fullName.vb: RisingV.Shared.Managers.ManagerBase(Of T, TM).Has(System.Type, Boolean, Boolean)
+  nameWithType: ManagerBase<T, TM>.Has(Type, bool, bool)
+  nameWithType.vb: ManagerBase(Of T, TM).Has(Type, Boolean, Boolean)
 - uid: RisingV.Shared.Managers.ManagerBase`2.Has*
   name: Has
   href: api/RisingV.Shared.Managers.ManagerBase-2.html#RisingV_Shared_Managers_ManagerBase_2_Has_
@@ -15980,15 +16044,15 @@ references:
   fullName.vb: RisingV.Shared.Managers.ManagerBase(Of T, TM).Has
   nameWithType: ManagerBase<T, TM>.Has
   nameWithType.vb: ManagerBase(Of T, TM).Has
-- uid: RisingV.Shared.Managers.ManagerBase`2.Has``1
-  name: Has<TX>()
-  href: api/RisingV.Shared.Managers.ManagerBase-2.html#RisingV_Shared_Managers_ManagerBase_2_Has__1
-  commentId: M:RisingV.Shared.Managers.ManagerBase`2.Has``1
-  name.vb: Has(Of TX)()
-  fullName: RisingV.Shared.Managers.ManagerBase<T, TM>.Has<TX>()
-  fullName.vb: RisingV.Shared.Managers.ManagerBase(Of T, TM).Has(Of TX)()
-  nameWithType: ManagerBase<T, TM>.Has<TX>()
-  nameWithType.vb: ManagerBase(Of T, TM).Has(Of TX)()
+- uid: RisingV.Shared.Managers.ManagerBase`2.Has``1(System.Boolean)
+  name: Has<TX>(bool)
+  href: api/RisingV.Shared.Managers.ManagerBase-2.html#RisingV_Shared_Managers_ManagerBase_2_Has__1_System_Boolean_
+  commentId: M:RisingV.Shared.Managers.ManagerBase`2.Has``1(System.Boolean)
+  name.vb: Has(Of TX)(Boolean)
+  fullName: RisingV.Shared.Managers.ManagerBase<T, TM>.Has<TX>(bool)
+  fullName.vb: RisingV.Shared.Managers.ManagerBase(Of T, TM).Has(Of TX)(Boolean)
+  nameWithType: ManagerBase<T, TM>.Has<TX>(bool)
+  nameWithType.vb: ManagerBase(Of T, TM).Has(Of TX)(Boolean)
 - uid: RisingV.Shared.Managers.ManagerBase`2.Initialize(RisingV.Shared.Plugins.IPlugin)
   name: Initialize(IPlugin)
   href: api/RisingV.Shared.Managers.ManagerBase-2.html#RisingV_Shared_Managers_ManagerBase_2_Initialize_RisingV_Shared_Plugins_IPlugin_
@@ -16014,6 +16078,15 @@ references:
   fullName.vb: RisingV.Shared.Managers.ManagerBase(Of T, TM).InitializedMap
   nameWithType: ManagerBase<T, TM>.InitializedMap
   nameWithType.vb: ManagerBase(Of T, TM).InitializedMap
+- uid: RisingV.Shared.Managers.ManagerBase`2.IsEnabled(RisingV.Shared.Managers.IManageable)
+  name: IsEnabled(IManageable?)
+  href: api/RisingV.Shared.Managers.ManagerBase-2.html#RisingV_Shared_Managers_ManagerBase_2_IsEnabled_RisingV_Shared_Managers_IManageable_
+  commentId: M:RisingV.Shared.Managers.ManagerBase`2.IsEnabled(RisingV.Shared.Managers.IManageable)
+  name.vb: IsEnabled(IManageable)
+  fullName: RisingV.Shared.Managers.ManagerBase<T, TM>.IsEnabled(RisingV.Shared.Managers.IManageable?)
+  fullName.vb: RisingV.Shared.Managers.ManagerBase(Of T, TM).IsEnabled(RisingV.Shared.Managers.IManageable)
+  nameWithType: ManagerBase<T, TM>.IsEnabled(IManageable?)
+  nameWithType.vb: ManagerBase(Of T, TM).IsEnabled(IManageable)
 - uid: RisingV.Shared.Managers.ManagerBase`2.IsEnabled*
   name: IsEnabled
   href: api/RisingV.Shared.Managers.ManagerBase-2.html#RisingV_Shared_Managers_ManagerBase_2_IsEnabled_
@@ -16686,15 +16759,24 @@ references:
   fullName.vb: RisingV.Shared.Managers.ManagerSource(Of T, TM).Get(Of TX)(Boolean)
   nameWithType: ManagerSource<T, TM>.Get<TX>(bool)
   nameWithType.vb: ManagerSource(Of T, TM).Get(Of TX)(Boolean)
-- uid: RisingV.Shared.Managers.ManagerSource`2.Has(System.Type,System.Boolean)
-  name: Has(Type, bool)
-  href: api/RisingV.Shared.Managers.ManagerSource-2.html#RisingV_Shared_Managers_ManagerSource_2_Has_System_Type_System_Boolean_
-  commentId: M:RisingV.Shared.Managers.ManagerSource`2.Has(System.Type,System.Boolean)
-  name.vb: Has(Type, Boolean)
-  fullName: RisingV.Shared.Managers.ManagerSource<T, TM>.Has(System.Type, bool)
-  fullName.vb: RisingV.Shared.Managers.ManagerSource(Of T, TM).Has(System.Type, Boolean)
-  nameWithType: ManagerSource<T, TM>.Has(Type, bool)
-  nameWithType.vb: ManagerSource(Of T, TM).Has(Type, Boolean)
+- uid: RisingV.Shared.Managers.ManagerSource`2.Has(System.String,RisingV.Shared.Managers.IManageable@,System.Boolean)
+  name: Has(string, out IManageable?, bool)
+  href: api/RisingV.Shared.Managers.ManagerSource-2.html#RisingV_Shared_Managers_ManagerSource_2_Has_System_String_RisingV_Shared_Managers_IManageable__System_Boolean_
+  commentId: M:RisingV.Shared.Managers.ManagerSource`2.Has(System.String,RisingV.Shared.Managers.IManageable@,System.Boolean)
+  name.vb: Has(String, IManageable, Boolean)
+  fullName: RisingV.Shared.Managers.ManagerSource<T, TM>.Has(string, out RisingV.Shared.Managers.IManageable?, bool)
+  fullName.vb: RisingV.Shared.Managers.ManagerSource(Of T, TM).Has(String, RisingV.Shared.Managers.IManageable, Boolean)
+  nameWithType: ManagerSource<T, TM>.Has(string, out IManageable?, bool)
+  nameWithType.vb: ManagerSource(Of T, TM).Has(String, IManageable, Boolean)
+- uid: RisingV.Shared.Managers.ManagerSource`2.Has(System.Type,RisingV.Shared.Managers.IManageable@,System.Boolean)
+  name: Has(Type, out IManageable?, bool)
+  href: api/RisingV.Shared.Managers.ManagerSource-2.html#RisingV_Shared_Managers_ManagerSource_2_Has_System_Type_RisingV_Shared_Managers_IManageable__System_Boolean_
+  commentId: M:RisingV.Shared.Managers.ManagerSource`2.Has(System.Type,RisingV.Shared.Managers.IManageable@,System.Boolean)
+  name.vb: Has(Type, IManageable, Boolean)
+  fullName: RisingV.Shared.Managers.ManagerSource<T, TM>.Has(System.Type, out RisingV.Shared.Managers.IManageable?, bool)
+  fullName.vb: RisingV.Shared.Managers.ManagerSource(Of T, TM).Has(System.Type, RisingV.Shared.Managers.IManageable, Boolean)
+  nameWithType: ManagerSource<T, TM>.Has(Type, out IManageable?, bool)
+  nameWithType.vb: ManagerSource(Of T, TM).Has(Type, IManageable, Boolean)
 - uid: RisingV.Shared.Managers.ManagerSource`2.Has*
   name: Has
   href: api/RisingV.Shared.Managers.ManagerSource-2.html#RisingV_Shared_Managers_ManagerSource_2_Has_
@@ -16704,15 +16786,15 @@ references:
   fullName.vb: RisingV.Shared.Managers.ManagerSource(Of T, TM).Has
   nameWithType: ManagerSource<T, TM>.Has
   nameWithType.vb: ManagerSource(Of T, TM).Has
-- uid: RisingV.Shared.Managers.ManagerSource`2.Has``1
-  name: Has<TX>()
-  href: api/RisingV.Shared.Managers.ManagerSource-2.html#RisingV_Shared_Managers_ManagerSource_2_Has__1
-  commentId: M:RisingV.Shared.Managers.ManagerSource`2.Has``1
-  name.vb: Has(Of TX)()
-  fullName: RisingV.Shared.Managers.ManagerSource<T, TM>.Has<TX>()
-  fullName.vb: RisingV.Shared.Managers.ManagerSource(Of T, TM).Has(Of TX)()
-  nameWithType: ManagerSource<T, TM>.Has<TX>()
-  nameWithType.vb: ManagerSource(Of T, TM).Has(Of TX)()
+- uid: RisingV.Shared.Managers.ManagerSource`2.Has``1(``0@)
+  name: Has<TX>(out TX?)
+  href: api/RisingV.Shared.Managers.ManagerSource-2.html#RisingV_Shared_Managers_ManagerSource_2_Has__1___0__
+  commentId: M:RisingV.Shared.Managers.ManagerSource`2.Has``1(``0@)
+  name.vb: Has(Of TX)(TX)
+  fullName: RisingV.Shared.Managers.ManagerSource<T, TM>.Has<TX>(out TX?)
+  fullName.vb: RisingV.Shared.Managers.ManagerSource(Of T, TM).Has(Of TX)(TX)
+  nameWithType: ManagerSource<T, TM>.Has<TX>(out TX?)
+  nameWithType.vb: ManagerSource(Of T, TM).Has(Of TX)(TX)
 - uid: RisingV.Shared.Managers.ManagerSource`2.Log
   name: Log
   href: api/RisingV.Shared.Managers.ManagerSource-2.html#RisingV_Shared_Managers_ManagerSource_2_Log
@@ -17083,15 +17165,24 @@ references:
   fullName.vb: RisingV.Shared.Managers.TypeMapManagerSource(Of T, TM).Get(Of TX)(Boolean)
   nameWithType: TypeMapManagerSource<T, TM>.Get<TX>(bool)
   nameWithType.vb: TypeMapManagerSource(Of T, TM).Get(Of TX)(Boolean)
-- uid: RisingV.Shared.Managers.TypeMapManagerSource`2.Has(System.Type,System.Boolean)
-  name: Has(Type, bool)
-  href: api/RisingV.Shared.Managers.TypeMapManagerSource-2.html#RisingV_Shared_Managers_TypeMapManagerSource_2_Has_System_Type_System_Boolean_
-  commentId: M:RisingV.Shared.Managers.TypeMapManagerSource`2.Has(System.Type,System.Boolean)
-  name.vb: Has(Type, Boolean)
-  fullName: RisingV.Shared.Managers.TypeMapManagerSource<T, TM>.Has(System.Type, bool)
-  fullName.vb: RisingV.Shared.Managers.TypeMapManagerSource(Of T, TM).Has(System.Type, Boolean)
-  nameWithType: TypeMapManagerSource<T, TM>.Has(Type, bool)
-  nameWithType.vb: TypeMapManagerSource(Of T, TM).Has(Type, Boolean)
+- uid: RisingV.Shared.Managers.TypeMapManagerSource`2.Has(System.String,RisingV.Shared.Managers.IManageable@,System.Boolean)
+  name: Has(string, out IManageable?, bool)
+  href: api/RisingV.Shared.Managers.TypeMapManagerSource-2.html#RisingV_Shared_Managers_TypeMapManagerSource_2_Has_System_String_RisingV_Shared_Managers_IManageable__System_Boolean_
+  commentId: M:RisingV.Shared.Managers.TypeMapManagerSource`2.Has(System.String,RisingV.Shared.Managers.IManageable@,System.Boolean)
+  name.vb: Has(String, IManageable, Boolean)
+  fullName: RisingV.Shared.Managers.TypeMapManagerSource<T, TM>.Has(string, out RisingV.Shared.Managers.IManageable?, bool)
+  fullName.vb: RisingV.Shared.Managers.TypeMapManagerSource(Of T, TM).Has(String, RisingV.Shared.Managers.IManageable, Boolean)
+  nameWithType: TypeMapManagerSource<T, TM>.Has(string, out IManageable?, bool)
+  nameWithType.vb: TypeMapManagerSource(Of T, TM).Has(String, IManageable, Boolean)
+- uid: RisingV.Shared.Managers.TypeMapManagerSource`2.Has(System.Type,RisingV.Shared.Managers.IManageable@,System.Boolean)
+  name: Has(Type, out IManageable, bool)
+  href: api/RisingV.Shared.Managers.TypeMapManagerSource-2.html#RisingV_Shared_Managers_TypeMapManagerSource_2_Has_System_Type_RisingV_Shared_Managers_IManageable__System_Boolean_
+  commentId: M:RisingV.Shared.Managers.TypeMapManagerSource`2.Has(System.Type,RisingV.Shared.Managers.IManageable@,System.Boolean)
+  name.vb: Has(Type, IManageable, Boolean)
+  fullName: RisingV.Shared.Managers.TypeMapManagerSource<T, TM>.Has(System.Type, out RisingV.Shared.Managers.IManageable, bool)
+  fullName.vb: RisingV.Shared.Managers.TypeMapManagerSource(Of T, TM).Has(System.Type, RisingV.Shared.Managers.IManageable, Boolean)
+  nameWithType: TypeMapManagerSource<T, TM>.Has(Type, out IManageable, bool)
+  nameWithType.vb: TypeMapManagerSource(Of T, TM).Has(Type, IManageable, Boolean)
 - uid: RisingV.Shared.Managers.TypeMapManagerSource`2.Has*
   name: Has
   href: api/RisingV.Shared.Managers.TypeMapManagerSource-2.html#RisingV_Shared_Managers_TypeMapManagerSource_2_Has_
@@ -17101,15 +17192,15 @@ references:
   fullName.vb: RisingV.Shared.Managers.TypeMapManagerSource(Of T, TM).Has
   nameWithType: TypeMapManagerSource<T, TM>.Has
   nameWithType.vb: TypeMapManagerSource(Of T, TM).Has
-- uid: RisingV.Shared.Managers.TypeMapManagerSource`2.Has``1
-  name: Has<TX>()
-  href: api/RisingV.Shared.Managers.TypeMapManagerSource-2.html#RisingV_Shared_Managers_TypeMapManagerSource_2_Has__1
-  commentId: M:RisingV.Shared.Managers.TypeMapManagerSource`2.Has``1
-  name.vb: Has(Of TX)()
-  fullName: RisingV.Shared.Managers.TypeMapManagerSource<T, TM>.Has<TX>()
-  fullName.vb: RisingV.Shared.Managers.TypeMapManagerSource(Of T, TM).Has(Of TX)()
-  nameWithType: TypeMapManagerSource<T, TM>.Has<TX>()
-  nameWithType.vb: TypeMapManagerSource(Of T, TM).Has(Of TX)()
+- uid: RisingV.Shared.Managers.TypeMapManagerSource`2.Has``1(``0@)
+  name: Has<TX>(out TX)
+  href: api/RisingV.Shared.Managers.TypeMapManagerSource-2.html#RisingV_Shared_Managers_TypeMapManagerSource_2_Has__1___0__
+  commentId: M:RisingV.Shared.Managers.TypeMapManagerSource`2.Has``1(``0@)
+  name.vb: Has(Of TX)(TX)
+  fullName: RisingV.Shared.Managers.TypeMapManagerSource<T, TM>.Has<TX>(out TX)
+  fullName.vb: RisingV.Shared.Managers.TypeMapManagerSource(Of T, TM).Has(Of TX)(TX)
+  nameWithType: TypeMapManagerSource<T, TM>.Has<TX>(out TX)
+  nameWithType.vb: TypeMapManagerSource(Of T, TM).Has(Of TX)(TX)
 - uid: RisingV.Shared.Managers.TypeMapManagerSource`2.Log
   name: Log
   href: api/RisingV.Shared.Managers.TypeMapManagerSource-2.html#RisingV_Shared_Managers_TypeMapManagerSource_2_Log
@@ -17704,6 +17795,19 @@ references:
   fullName.vb: RisingV.Shared.Plugins.PluginConfig.New
   nameWithType: PluginConfig.PluginConfig
   nameWithType.vb: PluginConfig.New
+- uid: RisingV.Shared.Plugins.PluginConfig.AutoLoadEngines
+  name: AutoLoadEngines
+  href: api/RisingV.Shared.Plugins.PluginConfig.html#RisingV_Shared_Plugins_PluginConfig_AutoLoadEngines
+  commentId: P:RisingV.Shared.Plugins.PluginConfig.AutoLoadEngines
+  fullName: RisingV.Shared.Plugins.PluginConfig.AutoLoadEngines
+  nameWithType: PluginConfig.AutoLoadEngines
+- uid: RisingV.Shared.Plugins.PluginConfig.AutoLoadEngines*
+  name: AutoLoadEngines
+  href: api/RisingV.Shared.Plugins.PluginConfig.html#RisingV_Shared_Plugins_PluginConfig_AutoLoadEngines_
+  commentId: Overload:RisingV.Shared.Plugins.PluginConfig.AutoLoadEngines
+  isSpec: "True"
+  fullName: RisingV.Shared.Plugins.PluginConfig.AutoLoadEngines
+  nameWithType: PluginConfig.AutoLoadEngines
 - uid: RisingV.Shared.Plugins.PluginConfig.DependencyAutoLoad
   name: DependencyAutoLoad
   href: api/RisingV.Shared.Plugins.PluginConfig.html#RisingV_Shared_Plugins_PluginConfig_DependencyAutoLoad

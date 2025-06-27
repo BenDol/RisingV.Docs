@@ -419,7 +419,7 @@ Class ManagerSource&lt;T, TM&gt;  <a class="header-action link-secondary" title=
 
   <h3 id="RisingV_Shared_Managers_ManagerSource_2_Count" data-uid="RisingV.Shared.Managers.ManagerSource`2.Count">
   Count()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Managers/ManagerSource.cs/#L95"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Managers/ManagerSource.cs/#L96"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Get the count of objects in the source.</p>
@@ -451,7 +451,7 @@ Class ManagerSource&lt;T, TM&gt;  <a class="header-action link-secondary" title=
 
   <h3 id="RisingV_Shared_Managers_ManagerSource_2_ForEach_System_Action__0__" data-uid="RisingV.Shared.Managers.ManagerSource`2.ForEach(System.Action{`0})">
   ForEach(Action&lt;T&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Managers/ManagerSource.cs/#L92"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Managers/ManagerSource.cs/#L93"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Get an object from the source.</p>
@@ -522,7 +522,7 @@ Class ManagerSource&lt;T, TM&gt;  <a class="header-action link-secondary" title=
 
   <h3 id="RisingV_Shared_Managers_ManagerSource_2_GetList" data-uid="RisingV.Shared.Managers.ManagerSource`2.GetList">
   GetList()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Managers/ManagerSource.cs/#L93"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Managers/ManagerSource.cs/#L94"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Get all objects from the source.</p>
@@ -554,7 +554,7 @@ Class ManagerSource&lt;T, TM&gt;  <a class="header-action link-secondary" title=
 
   <h3 id="RisingV_Shared_Managers_ManagerSource_2_GetManagedInfo" data-uid="RisingV.Shared.Managers.ManagerSource`2.GetManagedInfo">
   GetManagedInfo()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Managers/ManagerSource.cs/#L97"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Managers/ManagerSource.cs/#L98"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Get information about the managed instances.</p>
@@ -668,22 +668,24 @@ Class ManagerSource&lt;T, TM&gt;  <a class="header-action link-secondary" title=
 
   <a id="RisingV_Shared_Managers_ManagerSource_2_Has_" data-uid="RisingV.Shared.Managers.ManagerSource`2.Has*"></a>
 
-  <h3 id="RisingV_Shared_Managers_ManagerSource_2_Has_System_Type_System_Boolean_" data-uid="RisingV.Shared.Managers.ManagerSource`2.Has(System.Type,System.Boolean)">
-  Has(Type, bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Managers/ManagerSource.cs/#L90"><i class="bi bi-code-slash"></i></a>
+  <h3 id="RisingV_Shared_Managers_ManagerSource_2_Has_System_String_RisingV_Shared_Managers_IManageable__System_Boolean_" data-uid="RisingV.Shared.Managers.ManagerSource`2.Has(System.String,RisingV.Shared.Managers.IManageable@,System.Boolean)">
+  Has(string, out IManageable?, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Managers/ManagerSource.cs/#L91"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Do we have an object of the type TX in the source.</p>
+  <div class="markdown level1 summary"><p>Do we have a manageable of a type name.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract bool Has(Type type, bool checkAssignable = true)</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract bool Has(string typeName, out IManageable? manageable, bool checkAssignable = true)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>type</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dt><code>typeName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>manageable</code> <a class="xref" href="RisingV.Shared.Managers.IManageable.html">IManageable</a></dt>
     <dd></dd>
     <dt><code>checkAssignable</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
     <dd></dd>
@@ -707,8 +709,49 @@ Class ManagerSource&lt;T, TM&gt;  <a class="header-action link-secondary" title=
 
   <a id="RisingV_Shared_Managers_ManagerSource_2_Has_" data-uid="RisingV.Shared.Managers.ManagerSource`2.Has*"></a>
 
-  <h3 id="RisingV_Shared_Managers_ManagerSource_2_Has__1" data-uid="RisingV.Shared.Managers.ManagerSource`2.Has``1">
-  Has&lt;TX&gt;()
+  <h3 id="RisingV_Shared_Managers_ManagerSource_2_Has_System_Type_RisingV_Shared_Managers_IManageable__System_Boolean_" data-uid="RisingV.Shared.Managers.ManagerSource`2.Has(System.Type,RisingV.Shared.Managers.IManageable@,System.Boolean)">
+  Has(Type, out IManageable?, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Managers/ManagerSource.cs/#L90"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Do we have an object of the type TX in the source.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract bool Has(Type type, out IManageable? manageable, bool checkAssignable = true)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>type</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd></dd>
+    <dt><code>manageable</code> <a class="xref" href="RisingV.Shared.Managers.IManageable.html">IManageable</a></dt>
+    <dd></dd>
+    <dt><code>checkAssignable</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="RisingV_Shared_Managers_ManagerSource_2_Has_" data-uid="RisingV.Shared.Managers.ManagerSource`2.Has*"></a>
+
+  <h3 id="RisingV_Shared_Managers_ManagerSource_2_Has__1___0__" data-uid="RisingV.Shared.Managers.ManagerSource`2.Has``1(``0@)">
+  Has&lt;TX&gt;(out TX?)
   <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Managers/ManagerSource.cs/#L89"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -717,9 +760,14 @@ Class ManagerSource&lt;T, TM&gt;  <a class="header-action link-secondary" title=
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract bool Has&lt;TX&gt;() where TX : T</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract bool Has&lt;TX&gt;(out TX? manageable) where TX : T</code></pre>
   </div>
 
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>manageable</code> <span class="xref">TX</span></dt>
+    <dd></dd>
+  </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
@@ -822,7 +870,7 @@ Class ManagerSource&lt;T, TM&gt;  <a class="header-action link-secondary" title=
 
   <h3 id="RisingV_Shared_Managers_ManagerSource_2_RequiredType" data-uid="RisingV.Shared.Managers.ManagerSource`2.RequiredType">
   RequiredType()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Managers/ManagerSource.cs/#L99"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Managers/ManagerSource.cs/#L100"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Get the type of the object that is required.</p>
@@ -854,7 +902,7 @@ Class ManagerSource&lt;T, TM&gt;  <a class="header-action link-secondary" title=
 
   <h3 id="RisingV_Shared_Managers_ManagerSource_2_RequiredTypeName" data-uid="RisingV.Shared.Managers.ManagerSource`2.RequiredTypeName">
   RequiredTypeName()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Managers/ManagerSource.cs/#L104"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Managers/ManagerSource.cs/#L105"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Get the name of the type that is required.</p>
@@ -886,7 +934,7 @@ Class ManagerSource&lt;T, TM&gt;  <a class="header-action link-secondary" title=
 
   <h3 id="RisingV_Shared_Managers_ManagerSource_2_Select_System_Func_System_Collections_Generic_KeyValuePair_System_Type__0___0__" data-uid="RisingV.Shared.Managers.ManagerSource`2.Select(System.Func{System.Collections.Generic.KeyValuePair{System.Type,`0},`0})">
   Select(Func&lt;KeyValuePair&lt;Type, T&gt;, T&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Managers/ManagerSource.cs/#L94"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Managers/ManagerSource.cs/#L95"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Select an enumerable of objects from the source.</p>
