@@ -196,34 +196,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/RisingV.BossDrops.Processors.DevAdminAuthProcessor.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/RisingV.BossDrops.Processors.DevAdminAuthProcessor.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "RisingV.BossDrops.Processors.DevAdminAuthProcessor",
-      "Summary": "<p sourcefile=\"api/RisingV.BossDrops.Processors.DevAdminAuthProcessor.yml\" sourcestartlinenumber=\"1\">Processor that always grants admin privileges to players.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/RisingV.BossDrops.Processors.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/RisingV.BossDrops.Processors.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "RisingV.BossDrops.Processors",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/RisingV.BossDrops.Systems.DropEntry.yml",
       "output": {
         ".html": {
@@ -1036,6 +1008,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Engines.AdminEnginePlugin.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Engines.AdminEnginePlugin.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Engines.AdminEnginePlugin",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/RisingV.Core.Engines.BuffEngine.yml",
       "output": {
         ".html": {
@@ -1060,6 +1046,20 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "RisingV.Core.Engines.BuffEngineConfig",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Engines.BuffEnginePlugin.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Engines.BuffEnginePlugin.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Engines.BuffEnginePlugin",
       "Summary": null
     },
     {
@@ -1092,6 +1092,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Engines.CastleEnginePlugin.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Engines.CastleEnginePlugin.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Engines.CastleEnginePlugin",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/RisingV.Core.Engines.ChatEngine.yml",
       "output": {
         ".html": {
@@ -1120,6 +1134,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Engines.ChatEnginePlugin.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Engines.ChatEnginePlugin.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Engines.ChatEnginePlugin",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/RisingV.Core.Engines.ClanEngine.yml",
       "output": {
         ".html": {
@@ -1144,6 +1172,62 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "RisingV.Core.Engines.ClanEngineConfig",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Engines.ClanEnginePlugin.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Engines.ClanEnginePlugin.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Engines.ClanEnginePlugin",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Engines.ClientEngine.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Engines.ClientEngine.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Engines.ClientEngine",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.Engines.ClientEngine.yml\" sourcestartlinenumber=\"1\">StatEngine is responsible for managing and processing stat changes in the game.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Engines.ClientEngineConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Engines.ClientEngineConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Engines.ClientEngineConfig",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Engines.ClientEnginePlugin.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Engines.ClientEnginePlugin.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Engines.ClientEnginePlugin",
       "Summary": null
     },
     {
@@ -1232,6 +1316,48 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Engines.DefaultComponentEngine.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Engines.DefaultComponentEngine.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Engines.DefaultComponentEngine",
+      "Summary": "<p sourcefile=\"api/RisingV.Core.Engines.DefaultComponentEngine.yml\" sourcestartlinenumber=\"1\">DefaultComponentEngine is responsible for managing the default component monolith in RisingV.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Engines.DefaultComponentEngineConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Engines.DefaultComponentEngineConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Engines.DefaultComponentEngineConfig",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Engines.DefaultComponentEnginePlugin.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Engines.DefaultComponentEnginePlugin.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Engines.DefaultComponentEnginePlugin",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/RisingV.Core.Engines.EnginePlugin-1.yml",
       "output": {
         ".html": {
@@ -1270,6 +1396,20 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "RisingV.Core.Engines.EquipmentEngineConfig",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Engines.EquipmentEnginePlugin.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Engines.EquipmentEnginePlugin.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Engines.EquipmentEnginePlugin",
       "Summary": null
     },
     {
@@ -1386,6 +1526,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Engines.SaveEnginePlugin.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Engines.SaveEnginePlugin.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Engines.SaveEnginePlugin",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/RisingV.Core.Engines.SpawnEngine.yml",
       "output": {
         ".html": {
@@ -1410,6 +1564,20 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "RisingV.Core.Engines.SpawnEngineConfig",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Engines.SpawnEnginePlugin.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Engines.SpawnEnginePlugin.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Engines.SpawnEnginePlugin",
       "Summary": null
     },
     {
@@ -1914,7 +2082,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "RisingV.Core.Extensions.EntityExtensions",
-      "Summary": "<p sourcefile=\"api/RisingV.Core.Extensions.EntityExtensions.yml\" sourcestartlinenumber=\"1\">Provides various utility methods for working with entities in the RisingV game.</p>\n"
+      "Summary": null
     },
     {
       "type": "ManagedReference",
