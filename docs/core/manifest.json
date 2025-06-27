@@ -32,70 +32,150 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "Engines/AchievementEngine/README.md",
+      "output": {
+        ".html": {
+          "relative_path": "Engines/AchievementEngine/README.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "Engines/AdminEngine/README.md",
+      "output": {
+        ".html": {
+          "relative_path": "Engines/AdminEngine/README.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "Engines/BuffEngine/README.md",
+      "output": {
+        ".html": {
+          "relative_path": "Engines/BuffEngine/README.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "Engines/CastleEngine/README.md",
+      "output": {
+        ".html": {
+          "relative_path": "Engines/CastleEngine/README.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "Engines/ChatEngine/README.md",
+      "output": {
+        ".html": {
+          "relative_path": "Engines/ChatEngine/README.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "Engines/ClanEngine/README.md",
+      "output": {
+        ".html": {
+          "relative_path": "Engines/ClanEngine/README.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "Engines/DamageEngine/README.md",
+      "output": {
+        ".html": {
+          "relative_path": "Engines/DamageEngine/README.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "Engines/DeathEngine/README.md",
+      "output": {
+        ".html": {
+          "relative_path": "Engines/DeathEngine/README.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "Engines/EquipmentEngine/README.md",
+      "output": {
+        ".html": {
+          "relative_path": "Engines/EquipmentEngine/README.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "Engines/ItemEngine/README.md",
+      "output": {
+        ".html": {
+          "relative_path": "Engines/ItemEngine/README.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "Engines/LootEngine/README.md",
+      "output": {
+        ".html": {
+          "relative_path": "Engines/LootEngine/README.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "Engines/SaveEngine/README.md",
+      "output": {
+        ".html": {
+          "relative_path": "Engines/SaveEngine/README.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "Engines/SpawnEngine/README.md",
+      "output": {
+        ".html": {
+          "relative_path": "Engines/SpawnEngine/README.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "Engines/StatEngine/README.md",
+      "output": {
+        ".html": {
+          "relative_path": "Engines/StatEngine/README.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "README.md",
       "output": {
         ".html": {
           "relative_path": "README.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "RisingV.Core.AchievementEngine/README.md",
-      "output": {
-        ".html": {
-          "relative_path": "RisingV.Core.AchievementEngine/README.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "RisingV.Core.DamageEngine/README.md",
-      "output": {
-        ".html": {
-          "relative_path": "RisingV.Core.DamageEngine/README.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "RisingV.Core.DeathEngine/README.md",
-      "output": {
-        ".html": {
-          "relative_path": "RisingV.Core.DeathEngine/README.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "RisingV.Core.ItemEngine/README.md",
-      "output": {
-        ".html": {
-          "relative_path": "RisingV.Core.ItemEngine/README.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "RisingV.Core.LootEngine/README.md",
-      "output": {
-        ".html": {
-          "relative_path": "RisingV.Core.LootEngine/README.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "RisingV.Core.StatEngine/README.md",
-      "output": {
-        ".html": {
-          "relative_path": "RisingV.Core.StatEngine/README.html"
         }
       },
       "version": ""
@@ -906,6 +986,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Engines.AdminEnginePlugin.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Engines.AdminEnginePlugin.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Engines.AdminEnginePlugin",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/RisingV.Core.Engines.BuffEngine.yml",
       "output": {
         ".html": {
@@ -930,6 +1024,20 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "RisingV.Core.Engines.BuffEngineConfig",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Engines.BuffEnginePlugin.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Engines.BuffEnginePlugin.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Engines.BuffEnginePlugin",
       "Summary": null
     },
     {
@@ -962,6 +1070,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Engines.CastleEnginePlugin.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Engines.CastleEnginePlugin.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Engines.CastleEnginePlugin",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/RisingV.Core.Engines.ChatEngine.yml",
       "output": {
         ".html": {
@@ -990,6 +1112,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Engines.ChatEnginePlugin.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Engines.ChatEnginePlugin.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Engines.ChatEnginePlugin",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/RisingV.Core.Engines.ClanEngine.yml",
       "output": {
         ".html": {
@@ -1014,6 +1150,20 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "RisingV.Core.Engines.ClanEngineConfig",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Engines.ClanEnginePlugin.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Engines.ClanEnginePlugin.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Engines.ClanEnginePlugin",
       "Summary": null
     },
     {
@@ -1144,6 +1294,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Engines.EquipmentEnginePlugin.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Engines.EquipmentEnginePlugin.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Engines.EquipmentEnginePlugin",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/RisingV.Core.Engines.ItemEngine.yml",
       "output": {
         ".html": {
@@ -1256,6 +1420,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Engines.SaveEnginePlugin.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Engines.SaveEnginePlugin.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Engines.SaveEnginePlugin",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/RisingV.Core.Engines.SpawnEngine.yml",
       "output": {
         ".html": {
@@ -1280,6 +1458,20 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "RisingV.Core.Engines.SpawnEngineConfig",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Engines.SpawnEnginePlugin.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Engines.SpawnEnginePlugin.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Engines.SpawnEnginePlugin",
       "Summary": null
     },
     {
@@ -1784,7 +1976,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "RisingV.Core.Extensions.EntityExtensions",
-      "Summary": "<p sourcefile=\"api/RisingV.Core.Extensions.EntityExtensions.yml\" sourcestartlinenumber=\"1\">Provides various utility methods for working with entities in the RisingV game.</p>\n"
+      "Summary": null
     },
     {
       "type": "ManagedReference",
