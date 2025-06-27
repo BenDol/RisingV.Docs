@@ -89,7 +89,7 @@
 
 
   <h1 id="RisingV_Core_Engines_ChatEngine" data-uid="RisingV.Core.Engines.ChatEngine" class="text-break">
-Class ChatEngine  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Engines/ChatEngine.cs/#L26"><i class="bi bi-code-slash"></i></a>
+Class ChatEngine  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Engines/ChatEngine.cs/#L25"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -102,7 +102,7 @@ Class ChatEngine  <a class="header-action link-secondary" title="View source" hr
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ChatEngine : Engine&lt;DamageEngineConfig&gt;, IEngine&lt;DamageEngineConfig&gt;, IEngine, IManageableLifecycle&lt;EngineManager&gt;, IManageableLifecycle, IReloadable, IManageable&lt;EngineManager&gt;, IManageable</code></pre>
+    <pre><code class="lang-csharp hljs">public class ChatEngine : Engine&lt;ChatEngineConfig&gt;, IEngine&lt;ChatEngineConfig&gt;, IEngine, IManageableLifecycle&lt;EngineManager&gt;, IManageableLifecycle, IReloadable, IManageable&lt;EngineManager&gt;, IManageable, IEnableable</code></pre>
   </div>
 
 
@@ -112,7 +112,7 @@ Class ChatEngine  <a class="header-action link-secondary" title="View source" hr
     <dt>Inheritance</dt>
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
-      <div><a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Engines.Engine-1.html">Engine</a>&lt;<a class="xref" href="RisingV.Core.Engines.DamageEngineConfig.html">DamageEngineConfig</a>&gt;</div>
+      <div><a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Engines.Engine-1.html">Engine</a>&lt;<a class="xref" href="RisingV.Core.Engines.ChatEngineConfig.html">ChatEngineConfig</a>&gt;</div>
       <div><span class="xref">ChatEngine</span></div>
     </dd>
   </dl>
@@ -120,13 +120,14 @@ Class ChatEngine  <a class="header-action link-secondary" title="View source" hr
   <dl class="typelist implements">
     <dt>Implements</dt>
     <dd>
-      <div><a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Engines.IEngine-1.html">IEngine</a>&lt;<a class="xref" href="RisingV.Core.Engines.DamageEngineConfig.html">DamageEngineConfig</a>&gt;</div>
+      <div><a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Engines.IEngine-1.html">IEngine</a>&lt;<a class="xref" href="RisingV.Core.Engines.ChatEngineConfig.html">ChatEngineConfig</a>&gt;</div>
       <div><a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Engines.IEngine.html">IEngine</a></div>
       <div><a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Managers.IManageableLifecycle-1.html">IManageableLifecycle</a>&lt;<a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Engines.EngineManager.html">EngineManager</a>&gt;</div>
       <div><a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Managers.IManageableLifecycle.html">IManageableLifecycle</a></div>
       <div><a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Managers.IReloadable.html">IReloadable</a></div>
       <div><a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Managers.IManageable-1.html">IManageable</a>&lt;<a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Engines.EngineManager.html">EngineManager</a>&gt;</div>
       <div><a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Managers.IManageable.html">IManageable</a></div>
+      <div><a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Managers.IEnableable.html">IEnableable</a></div>
     </dd>
   </dl>
 
@@ -135,49 +136,49 @@ Class ChatEngine  <a class="header-action link-secondary" title="View source" hr
     <dt>Inherited Members</dt>
     <dd>
     <div>
-      <a class="xref" href="RisingV.Shared.Engines.Engine-1.html#RisingV_Shared_Engines_Engine_1_Config">Engine&lt;DamageEngineConfig&gt;.Config</a>
+      <a class="xref" href="RisingV.Shared.Engines.Engine-1.html#RisingV_Shared_Engines_Engine_1_Config">Engine&lt;ChatEngineConfig&gt;.Config</a>
     </div>
     <div>
-      <a class="xref" href="RisingV.Shared.Engines.Engine-1.html#RisingV_Shared_Engines_Engine_1_Dependencies">Engine&lt;DamageEngineConfig&gt;.Dependencies</a>
+      <a class="xref" href="RisingV.Shared.Engines.Engine-1.html#RisingV_Shared_Engines_Engine_1_Dependencies">Engine&lt;ChatEngineConfig&gt;.Dependencies</a>
     </div>
     <div>
-      <a class="xref" href="RisingV.Shared.Engines.Engine-1.html#RisingV_Shared_Engines_Engine_1_Recommended">Engine&lt;DamageEngineConfig&gt;.Recommended</a>
+      <a class="xref" href="RisingV.Shared.Engines.Engine-1.html#RisingV_Shared_Engines_Engine_1_Recommended">Engine&lt;ChatEngineConfig&gt;.Recommended</a>
     </div>
     <div>
-      <a class="xref" href="RisingV.Shared.Engines.Engine-1.html#RisingV_Shared_Engines_Engine_1_Enabled">Engine&lt;DamageEngineConfig&gt;.Enabled</a>
+      <a class="xref" href="RisingV.Shared.Engines.Engine-1.html#RisingV_Shared_Engines_Engine_1_Enabled">Engine&lt;ChatEngineConfig&gt;.Enabled</a>
     </div>
     <div>
-      <a class="xref" href="RisingV.Shared.Engines.Engine-1.html#RisingV_Shared_Engines_Engine_1_Reload_RisingV_Shared_Engines_EngineManager_System_Collections_Generic_List_RisingV_Shared_Plugins_IPlugin__RisingV_Shared_Managers_ReloadReason_">Engine&lt;DamageEngineConfig&gt;.Reload(EngineManager, List&lt;IPlugin&gt;, ReloadReason)</a>
+      <a class="xref" href="RisingV.Shared.Engines.Engine-1.html#RisingV_Shared_Engines_Engine_1_Reload_RisingV_Shared_Engines_EngineManager_System_Collections_Generic_List_RisingV_Shared_Plugins_IPlugin__RisingV_Shared_Managers_ReloadReason_">Engine&lt;ChatEngineConfig&gt;.Reload(EngineManager, List&lt;IPlugin&gt;, ReloadReason)</a>
     </div>
     <div>
-      <a class="xref" href="RisingV.Shared.Engines.Engine-1.html#RisingV_Shared_Engines_Engine_1_Initialize_RisingV_Shared_Engines_EngineManager_System_Collections_Generic_List_RisingV_Shared_Plugins_IPlugin__">Engine&lt;DamageEngineConfig&gt;.Initialize(EngineManager, List&lt;IPlugin&gt;)</a>
+      <a class="xref" href="RisingV.Shared.Engines.Engine-1.html#RisingV_Shared_Engines_Engine_1_Initialize_RisingV_Shared_Engines_EngineManager_System_Collections_Generic_List_RisingV_Shared_Plugins_IPlugin__">Engine&lt;ChatEngineConfig&gt;.Initialize(EngineManager, List&lt;IPlugin&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="RisingV.Shared.Engines.Engine-1.html#RisingV_Shared_Engines_Engine_1_Terminate_RisingV_Shared_Engines_EngineManager_System_Collections_Generic_List_RisingV_Shared_Plugins_IPlugin__">Engine&lt;DamageEngineConfig&gt;.Terminate(EngineManager, List&lt;IPlugin&gt;)</a>
+      <a class="xref" href="RisingV.Shared.Engines.Engine-1.html#RisingV_Shared_Engines_Engine_1_Terminate_RisingV_Shared_Engines_EngineManager_System_Collections_Generic_List_RisingV_Shared_Plugins_IPlugin__">Engine&lt;ChatEngineConfig&gt;.Terminate(EngineManager, List&lt;IPlugin&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="RisingV.Shared.Engines.Engine-1.html#RisingV_Shared_Engines_Engine_1_Unload_RisingV_Shared_Engines_EngineManager_System_Collections_Generic_List_RisingV_Shared_Plugins_IPlugin__">Engine&lt;DamageEngineConfig&gt;.Unload(EngineManager, List&lt;IPlugin&gt;)</a>
+      <a class="xref" href="RisingV.Shared.Engines.Engine-1.html#RisingV_Shared_Engines_Engine_1_Unload_RisingV_Shared_Engines_EngineManager_System_Collections_Generic_List_RisingV_Shared_Plugins_IPlugin__">Engine&lt;ChatEngineConfig&gt;.Unload(EngineManager, List&lt;IPlugin&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="RisingV.Shared.Engines.Engine-1.html#RisingV_Shared_Engines_Engine_1_OnReload_RisingV_Shared_Engines_EngineManager_RisingV_Shared_Managers_ReloadReason_">Engine&lt;DamageEngineConfig&gt;.OnReload(EngineManager, ReloadReason)</a>
+      <a class="xref" href="RisingV.Shared.Engines.Engine-1.html#RisingV_Shared_Engines_Engine_1_OnReload_RisingV_Shared_Engines_EngineManager_RisingV_Shared_Managers_ReloadReason_">Engine&lt;ChatEngineConfig&gt;.OnReload(EngineManager, ReloadReason)</a>
     </div>
     <div>
-      <a class="xref" href="RisingV.Shared.Engines.Engine-1.html#RisingV_Shared_Engines_Engine_1_OnDependencyLoaded_System_Type_RisingV_Shared_Engines_EngineManager_System_Collections_Generic_List_RisingV_Shared_Plugins_IPlugin__">Engine&lt;DamageEngineConfig&gt;.OnDependencyLoaded(Type, EngineManager, List&lt;IPlugin&gt;)</a>
+      <a class="xref" href="RisingV.Shared.Engines.Engine-1.html#RisingV_Shared_Engines_Engine_1_OnDependencyLoaded_System_Type_RisingV_Shared_Engines_EngineManager_System_Collections_Generic_List_RisingV_Shared_Plugins_IPlugin__">Engine&lt;ChatEngineConfig&gt;.OnDependencyLoaded(Type, EngineManager, List&lt;IPlugin&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="RisingV.Shared.Engines.Engine-1.html#RisingV_Shared_Engines_Engine_1_GetDependencies__1">Engine&lt;DamageEngineConfig&gt;.GetDependencies&lt;TX&gt;()</a>
+      <a class="xref" href="RisingV.Shared.Engines.Engine-1.html#RisingV_Shared_Engines_Engine_1_GetDependencies__1">Engine&lt;ChatEngineConfig&gt;.GetDependencies&lt;TX&gt;()</a>
     </div>
     <div>
-      <a class="xref" href="RisingV.Shared.Engines.Engine-1.html#RisingV_Shared_Engines_Engine_1_GetDependencies">Engine&lt;DamageEngineConfig&gt;.GetDependencies()</a>
+      <a class="xref" href="RisingV.Shared.Engines.Engine-1.html#RisingV_Shared_Engines_Engine_1_GetDependencies">Engine&lt;ChatEngineConfig&gt;.GetDependencies()</a>
     </div>
     <div>
-      <a class="xref" href="RisingV.Shared.Engines.Engine-1.html#RisingV_Shared_Engines_Engine_1_GetRecommended__1">Engine&lt;DamageEngineConfig&gt;.GetRecommended&lt;TX&gt;()</a>
+      <a class="xref" href="RisingV.Shared.Engines.Engine-1.html#RisingV_Shared_Engines_Engine_1_GetRecommended__1">Engine&lt;ChatEngineConfig&gt;.GetRecommended&lt;TX&gt;()</a>
     </div>
     <div>
-      <a class="xref" href="RisingV.Shared.Engines.Engine-1.html#RisingV_Shared_Engines_Engine_1_GetRecommended">Engine&lt;DamageEngineConfig&gt;.GetRecommended()</a>
+      <a class="xref" href="RisingV.Shared.Engines.Engine-1.html#RisingV_Shared_Engines_Engine_1_GetRecommended">Engine&lt;ChatEngineConfig&gt;.GetRecommended()</a>
     </div>
     <div>
-      <a class="xref" href="RisingV.Shared.Engines.Engine-1.html#RisingV_Shared_Engines_Engine_1_GetRecommendedAsDependencies">Engine&lt;DamageEngineConfig&gt;.GetRecommendedAsDependencies()</a>
+      <a class="xref" href="RisingV.Shared.Engines.Engine-1.html#RisingV_Shared_Engines_Engine_1_GetRecommendedAsDependencies">Engine&lt;ChatEngineConfig&gt;.GetRecommendedAsDependencies()</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
@@ -225,7 +226,7 @@ Class ChatEngine  <a class="header-action link-secondary" title="View source" hr
 
   <h3 id="RisingV_Core_Engines_ChatEngine_Load_RisingV_Shared_Engines_EngineManager_System_Collections_Generic_List_RisingV_Shared_Plugins_IPlugin__" data-uid="RisingV.Core.Engines.ChatEngine.Load(RisingV.Shared.Engines.EngineManager,System.Collections.Generic.List{RisingV.Shared.Plugins.IPlugin})">
   Load(EngineManager, List&lt;IPlugin&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Engines/ChatEngine.cs/#L30"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Engines/ChatEngine.cs/#L29"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Loads the manager and its dependencies with a specific type.</p>
@@ -259,7 +260,7 @@ Class ChatEngine  <a class="header-action link-secondary" title="View source" hr
 
   <h3 id="RisingV_Core_Engines_ChatEngine_Ready_RisingV_Shared_Engines_EngineManager_System_Collections_Generic_List_RisingV_Shared_Plugins_IPlugin__" data-uid="RisingV.Core.Engines.ChatEngine.Ready(RisingV.Shared.Engines.EngineManager,System.Collections.Generic.List{RisingV.Shared.Plugins.IPlugin})">
   Ready(EngineManager, List&lt;IPlugin&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Engines/ChatEngine.cs/#L45"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Engines/ChatEngine.cs/#L44"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Prepares the manager for use with a specific type, typically after loading.</p>
@@ -293,7 +294,7 @@ Class ChatEngine  <a class="header-action link-secondary" title="View source" hr
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Engines/ChatEngine.cs/#L26" class="edit-link">Edit this page</a>
+          <a href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Engines/ChatEngine.cs/#L25" class="edit-link">Edit this page</a>
         </div>
 
 

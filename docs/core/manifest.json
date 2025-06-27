@@ -42,10 +42,60 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "RisingV.Core.AchievementEngine/README.md",
+      "output": {
+        ".html": {
+          "relative_path": "RisingV.Core.AchievementEngine/README.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "RisingV.Core.DamageEngine/README.md",
+      "output": {
+        ".html": {
+          "relative_path": "RisingV.Core.DamageEngine/README.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "RisingV.Core.DeathEngine/README.md",
       "output": {
         ".html": {
           "relative_path": "RisingV.Core.DeathEngine/README.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "RisingV.Core.ItemEngine/README.md",
+      "output": {
+        ".html": {
+          "relative_path": "RisingV.Core.ItemEngine/README.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "RisingV.Core.LootEngine/README.md",
+      "output": {
+        ".html": {
+          "relative_path": "RisingV.Core.LootEngine/README.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "RisingV.Core.StatEngine/README.md",
+      "output": {
+        ".html": {
+          "relative_path": "RisingV.Core.StatEngine/README.html"
         }
       },
       "version": ""
@@ -758,6 +808,34 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.DeathEngine.MyPluginInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.DeathEngine.MyPluginInfo.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.DeathEngine.MyPluginInfo",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.DeathEngine.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.DeathEngine.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.DeathEngine",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/RisingV.Core.Engines.AchievementEngine.yml",
       "output": {
         ".html": {
@@ -782,6 +860,20 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "RisingV.Core.Engines.AchievementEngineConfig",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Engines.AchievementEnginePlugin.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Engines.AchievementEnginePlugin.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Engines.AchievementEnginePlugin",
       "Summary": null
     },
     {
@@ -954,6 +1046,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Engines.DamageEnginePlugin.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Engines.DamageEnginePlugin.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Engines.DamageEnginePlugin",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/RisingV.Core.Engines.DeathEngine.yml",
       "output": {
         ".html": {
@@ -978,6 +1084,34 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "RisingV.Core.Engines.DeathEngineConfig",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Engines.DeathEnginePlugin.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Engines.DeathEnginePlugin.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Engines.DeathEnginePlugin",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Engines.EnginePlugin-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Engines.EnginePlugin-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Engines.EnginePlugin<T>",
       "Summary": null
     },
     {
@@ -1038,6 +1172,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Engines.ItemEnginePlugin.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Engines.ItemEnginePlugin.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Engines.ItemEnginePlugin",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/RisingV.Core.Engines.LootEngine.yml",
       "output": {
         ".html": {
@@ -1062,6 +1210,20 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "RisingV.Core.Engines.LootEngineConfig",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Engines.LootEnginePlugin.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Engines.LootEnginePlugin.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Engines.LootEnginePlugin",
       "Summary": null
     },
     {
@@ -1146,6 +1308,20 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "RisingV.Core.Engines.StatEngineConfig",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Core.Engines.StatEnginePlugin.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Core.Engines.StatEnginePlugin.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Core.Engines.StatEnginePlugin",
       "Summary": null
     },
     {
@@ -6242,6 +6418,20 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "RisingV.Shared.Logging",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RisingV.Shared.Managers.IEnableable.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RisingV.Shared.Managers.IEnableable.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "RisingV.Shared.Managers.IEnableable",
       "Summary": null
     },
     {

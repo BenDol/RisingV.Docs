@@ -89,12 +89,12 @@
 
 
   <h1 id="RisingV_Core_Engines_StatEngine" data-uid="RisingV.Core.Engines.StatEngine" class="text-break">
-Class StatEngine  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Engines/StatEngine.cs/#L25"><i class="bi bi-code-slash"></i></a>
+Class StatEngine  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core.StatEngine/StatEngine.cs/#L26"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
     <dl><dt>Namespace</dt><dd><a class="xref" href="RisingV.html">RisingV</a>.<a class="xref" href="RisingV.Core.html">Core</a>.<a class="xref" href="RisingV.Core.Engines.html">Engines</a></dd></dl>
-  <dl><dt>Assembly</dt><dd>RisingV.Core.dll</dd></dl>
+  <dl><dt>Assembly</dt><dd>RisingV.Core.StatEngine.dll</dd></dl>
   </div>
 
   <div class="markdown summary"><p>StatEngine is responsible for managing and processing stat changes in the game.</p>
@@ -102,7 +102,7 @@ Class StatEngine  <a class="header-action link-secondary" title="View source" hr
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class StatEngine : Engine&lt;StatEngineConfig&gt;, IEngine&lt;StatEngineConfig&gt;, IEngine, IManageableLifecycle&lt;EngineManager&gt;, IManageableLifecycle, IReloadable, IManageable&lt;EngineManager&gt;, IManageable</code></pre>
+    <pre><code class="lang-csharp hljs">public class StatEngine : Engine&lt;StatEngineConfig&gt;, IEngine&lt;StatEngineConfig&gt;, IEngine, IManageableLifecycle&lt;EngineManager&gt;, IManageableLifecycle, IReloadable, IManageable&lt;EngineManager&gt;, IManageable, IEnableable</code></pre>
   </div>
 
 
@@ -127,6 +127,7 @@ Class StatEngine  <a class="header-action link-secondary" title="View source" hr
       <div><a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Managers.IReloadable.html">IReloadable</a></div>
       <div><a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Managers.IManageable-1.html">IManageable</a>&lt;<a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Engines.EngineManager.html">EngineManager</a>&gt;</div>
       <div><a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Managers.IManageable.html">IManageable</a></div>
+      <div><a class="xref" href="https://docs.risingv.dev/shared/api/RisingV.Shared.Managers.IEnableable.html">IEnableable</a></div>
     </dd>
   </dl>
 
@@ -217,6 +218,40 @@ Class StatEngine  <a class="header-action link-secondary" title="View source" hr
 
 
 
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="RisingV_Core_Engines_StatEngine_Guid" data-uid="RisingV.Core.Engines.StatEngine.Guid">
+  Guid
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core.StatEngine/StatEngine.cs/#L28"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string Guid = &quot;RisingV.Core.StatEngine&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
   <h2 class="section" id="methods">Methods
 </h2>
 
@@ -225,7 +260,7 @@ Class StatEngine  <a class="header-action link-secondary" title="View source" hr
 
   <h3 id="RisingV_Core_Engines_StatEngine_Load_RisingV_Shared_Engines_EngineManager_System_Collections_Generic_List_RisingV_Shared_Plugins_IPlugin__" data-uid="RisingV.Core.Engines.StatEngine.Load(RisingV.Shared.Engines.EngineManager,System.Collections.Generic.List{RisingV.Shared.Plugins.IPlugin})">
   Load(EngineManager, List&lt;IPlugin&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Engines/StatEngine.cs/#L29"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core.StatEngine/StatEngine.cs/#L31"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Loads the manager and its dependencies with a specific type.</p>
@@ -259,7 +294,7 @@ Class StatEngine  <a class="header-action link-secondary" title="View source" hr
 
   <h3 id="RisingV_Core_Engines_StatEngine_Ready_RisingV_Shared_Engines_EngineManager_System_Collections_Generic_List_RisingV_Shared_Plugins_IPlugin__" data-uid="RisingV.Core.Engines.StatEngine.Ready(RisingV.Shared.Engines.EngineManager,System.Collections.Generic.List{RisingV.Shared.Plugins.IPlugin})">
   Ready(EngineManager, List&lt;IPlugin&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Engines/StatEngine.cs/#L44"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core.StatEngine/StatEngine.cs/#L46"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Prepares the manager for use with a specific type, typically after loading.</p>
@@ -293,7 +328,7 @@ Class StatEngine  <a class="header-action link-secondary" title="View source" hr
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Engines/StatEngine.cs/#L25" class="edit-link">Edit this page</a>
+          <a href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core.StatEngine/StatEngine.cs/#L26" class="edit-link">Edit this page</a>
         </div>
 
 
