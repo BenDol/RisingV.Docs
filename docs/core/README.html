@@ -164,6 +164,20 @@ It provides a set of APIs and utilities that make it easier to create and manage
 <li>Add NuGet package <code>dotnet add package RisingV.Core</code> to your project.</li>
 <li>Add <code>[BepInDependency(&quot;RisingV.Core&quot;)]</code> BepInEx dependency.</li>
 </ol>
+<h2 id="using-aspects">Using Aspects</h2>
+<p>If you want to make use of the <a href="https://docs.risingv.dev/core/docs/Aspects.html">aspects</a> you just need to make sure you have the following:</p>
+<ul>
+<li>For default component control you need to install the <a href="https://github.com/RisingV-Mods/RisingV.Core/tree/main/Engines/DefaultComponentEngine"><code>DefaultComponentEngine</code></a> (see: <a href="#installing-engines">Installing Engines</a>)
+<ul>
+<li>This is a drop-in engine that sets up the <a href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/Engines/DefaultComponentEngine/Aspects/DefaultComponentMonolith.cs"><code>DefaultComponentMonolith</code></a></li>
+</ul>
+</li>
+<li>For custom component control you just need to make sure you provide your custom <a href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Aspects/ComponentMonolith.cs"><code>ComponentMonolith</code></a> (see the default above)
+<ul>
+<li>Register your ComponentMonolith using the static <code>ComponentMonolith.CustomDefault = typeof(MyComponentMonolith)</code></li>
+</ul>
+</li>
+</ul>
 <h2 id="plugin-quick-start">Plugin quick start</h2>
 <pre><code class="lang-csharp">using BepInEx;
 using RisingV.Shared.Plugins;
@@ -185,7 +199,7 @@ public class Plugin : RisingPlugin&lt;MyCoolPluginContext&gt;
 {
     protected override void OnInitialize()
     {
-        // Manually adding engines, you don't need to do this if you have `AutoLoadEngines` enabled. 
+        // Manually adding engines, you don't need to do this if you have `AutoLoadEngines` enabled (default: true). 
         EngineManager.AddEngine&lt;ScriptingEngine&gt;(this);
         EngineManager.AddEngine&lt;DamageEngine&gt;(this);
         EngineManager.AddEngine&lt;DeathEngine&gt;(this);
