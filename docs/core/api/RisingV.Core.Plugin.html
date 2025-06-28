@@ -142,7 +142,6 @@ public class Plugin : RisingPlugin&lt;MyCoolPluginContext&gt;
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[BepInPlugin(&quot;RisingV.Core&quot;, &quot;RisingV.Core&quot;, &quot;1.0.0&quot;)]
-[BepInDependency(&quot;gg.deca.VampireCommandFramework&quot;, BepInDependency.DependencyFlags.HardDependency)]
 [BepInDependency(&quot;RisingV.Shared&quot;, BepInDependency.DependencyFlags.HardDependency)]
 public class Plugin : RisingPlugin&lt;CorePluginContext&gt;, IPlugin&lt;CorePluginContext&gt;, IPlugin, IManageable&lt;PluginManager&gt;, IReloadable&lt;PluginManager&gt;, IReloadable, IDisposable, IHasPluginContext&lt;CorePluginContext&gt;, IPluginContext, IPluginComponent, IManageable&lt;PluginComponentsManager&gt;, IManageable</code></pre>
   </div>
@@ -314,7 +313,7 @@ public class Plugin : RisingPlugin&lt;CorePluginContext&gt;, IPlugin&lt;CorePlug
 
   <h3 id="RisingV_Core_Plugin_OnInitialize" data-uid="RisingV.Core.Plugin.OnInitialize">
   OnInitialize()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Plugin.cs/#L32"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Plugin.cs/#L31"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Called when the plugin is initialized (after <a class="xref" href="RisingV.Core.Plugins.RisingPlugin-1.html#RisingV_Core_Plugins_RisingPlugin_1_OnPreLoad">OnPreLoad()</a>).</p>
@@ -341,7 +340,7 @@ public class Plugin : RisingPlugin&lt;CorePluginContext&gt;, IPlugin&lt;CorePlug
 
   <h3 id="RisingV_Core_Plugin_OnLoad" data-uid="RisingV.Core.Plugin.OnLoad">
   OnLoad()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Plugin.cs/#L48"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Plugin.cs/#L47"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Called when the plugin is loaded (after <a class="xref" href="RisingV.Core.Plugins.RisingPlugin-1.html#RisingV_Core_Plugins_RisingPlugin_1_OnInitialize">OnInitialize()</a>).</p>
@@ -368,7 +367,7 @@ public class Plugin : RisingPlugin&lt;CorePluginContext&gt;, IPlugin&lt;CorePlug
 
   <h3 id="RisingV_Core_Plugin_OnPreLoad" data-uid="RisingV.Core.Plugin.OnPreLoad">
   OnPreLoad()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Plugin.cs/#L38"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Plugin.cs/#L37"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Called when the BepInEx plugin <code>Load</code> is called.</p>
@@ -395,7 +394,7 @@ public class Plugin : RisingPlugin&lt;CorePluginContext&gt;, IPlugin&lt;CorePlug
 
   <h3 id="RisingV_Core_Plugin_OnUnload" data-uid="RisingV.Core.Plugin.OnUnload">
   OnUnload()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Plugin.cs/#L53"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Core/blob/main/RisingV.Core/Plugin.cs/#L52"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Called when the plugin is unloaded.</p>

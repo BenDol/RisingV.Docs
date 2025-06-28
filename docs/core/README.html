@@ -145,7 +145,6 @@ It provides a set of APIs and utilities that make it easier to create and manage
 <li><strong>Dependencies</strong> – ensure the following are installed:
 <ul>
 <li><a href="https://github.com/RisingV-Mods/RisingV.Shared">RisingV.Shared</a></li>
-<li><a href="https://github.com/decaprime/VampireCommandFramework">VampireCommandFramework</a></li>
 </ul>
 </li>
 <li>Download the latest <code>RisingV.Core.&lt;version&gt;.zip</code> from <a href="https://github.com/RisingV-Mods/RisingV.Core/releases">Releases</a></li>
@@ -194,7 +193,6 @@ public class MyCoolPluginConfig() : PluginConfig(MyPluginInfo.PLUGIN_GUID, MyPlu
 public class MyCoolPluginContext() : PluginContext(typeof(MyPluginInfo), new MyCoolPluginConfig());
 
 [BepInPlugin(MyPluginInfo.PLUGIN_GUID, MyPluginInfo.PLUGIN_NAME, MyPluginInfo.PLUGIN_VERSION)]
-[BepInDependency(&quot;gg.deca.VampireCommandFramework&quot;)]
 [BepInDependency(&quot;RisingV.Core&quot;)]
 public class Plugin : RisingPlugin&lt;MyCoolPluginContext&gt;
 {
