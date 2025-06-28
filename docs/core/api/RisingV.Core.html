@@ -326,7 +326,6 @@ public class MyCoolPluginConfig() : PluginConfig(MyPluginInfo.PLUGIN_GUID, MyPlu
 public class MyCoolPluginContext() : PluginContext(typeof(MyPluginInfo), new MyCoolPluginConfig());
 
 [BepInPlugin(MyPluginInfo.PLUGIN_GUID, MyPluginInfo.PLUGIN_NAME, MyPluginInfo.PLUGIN_VERSION)]
-[BepInDependency("gg.deca.VampireCommandFramework")]
 [BepInDependency("RisingV.Core")]
 [BepInDependency("RisingV.Scripting")]
 public class Plugin : RisingPlugin&lt;MyCoolPluginContext&gt;
