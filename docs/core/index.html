@@ -160,6 +160,7 @@ It provides a set of APIs and utilities that make it easier to create and manage
 <li>Download the latest engine zip from <a href="https://github.com/RisingV-Mods/RisingV.Core/releases">Releases</a></li>
 <li>Extract the zip file into your <code>BepInEx</code> directory.</li>
 <li>Restart your dedicated server or client.</li>
+<li>(Optional) You can make your engines a plugin dependency like so: <code>[BepInDependency(&quot;RisingV.Core.DamageEngine&quot;, SoftDependency)]</code>, marking this with <code>SoftDependency</code> will ensure that your plugin doesn't brick if you remove the engine DLL's (which is recommended), you can adjust this as you require.</li>
 </ol>
 <h2 id="development">Development</h2>
 <ol>
