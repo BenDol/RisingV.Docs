@@ -17895,19 +17895,6 @@ references:
   isSpec: "True"
   fullName: RisingV.Shared.Plugins.PluginConfig.Ready
   nameWithType: PluginConfig.Ready
-- uid: RisingV.Shared.Plugins.PluginConfig.RegisterCommands
-  name: RegisterCommands
-  href: api/RisingV.Shared.Plugins.PluginConfig.html#RisingV_Shared_Plugins_PluginConfig_RegisterCommands
-  commentId: P:RisingV.Shared.Plugins.PluginConfig.RegisterCommands
-  fullName: RisingV.Shared.Plugins.PluginConfig.RegisterCommands
-  nameWithType: PluginConfig.RegisterCommands
-- uid: RisingV.Shared.Plugins.PluginConfig.RegisterCommands*
-  name: RegisterCommands
-  href: api/RisingV.Shared.Plugins.PluginConfig.html#RisingV_Shared_Plugins_PluginConfig_RegisterCommands_
-  commentId: Overload:RisingV.Shared.Plugins.PluginConfig.RegisterCommands
-  isSpec: "True"
-  fullName: RisingV.Shared.Plugins.PluginConfig.RegisterCommands
-  nameWithType: PluginConfig.RegisterCommands
 - uid: RisingV.Shared.Plugins.PluginConfig.Reload(RisingV.Shared.Plugins.PluginConfigManager,System.Collections.Generic.List{RisingV.Shared.Plugins.IPlugin},RisingV.Shared.Managers.ReloadReason)
   name: Reload(PluginConfigManager, List<IPlugin>, ReloadReason)
   href: api/RisingV.Shared.Plugins.PluginConfig.html#RisingV_Shared_Plugins_PluginConfig_Reload_RisingV_Shared_Plugins_PluginConfigManager_System_Collections_Generic_List_RisingV_Shared_Plugins_IPlugin__RisingV_Shared_Managers_ReloadReason_
