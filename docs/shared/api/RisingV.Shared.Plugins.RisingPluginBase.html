@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class RisingPluginBase | RisingV.Shared ">
       
-      <meta name="description" content="Base class for RisingV plugins. Example Usage: using BepInEx; using RisingV.Shared.Plugins; using RisingV.Shared.Engines; using RisingV.Core.Engines;  public class MyCoolPluginConfig() : PluginConfig(MyPluginInfo.PLUGIN_GUID, MyPluginInfo.PLUGIN_GUID) {     public ConfigEntry&amp;lt;float&amp;gt; AttackModifier { get; set; } =         new(&quot;Gameplay&quot;, &quot;AttackModifier&quot;, 1f, &quot;Modifier for attack damage&quot;); }  public class MyCoolPluginContext() : PluginContext(typeof(MyPluginInfo), new MyCoolPluginConfig());  [BepInPlugin(MyPluginInfo.PLUGIN_GUID, MyPluginInfo.PLUGIN_NAME, MyPluginInfo.PLUGIN_VERSION)] [BepInDependency(&quot;gg.deca.VampireCommandFramework&quot;)] [BepInDependency(&quot;RisingV.Core&quot;)] [BepInDependency(&quot;RisingV.Scripting&quot;)] public class Plugin : RisingPlugin&amp;lt;MyCoolPluginContext&amp;gt; {     protected override void OnInitialize()     {         EngineManager.AddEngine&amp;lt;ScriptingEngine&amp;gt;(this);         EngineManager.AddEngine&amp;lt;DamageEngine&amp;gt;(this);         EngineManager.AddEngine&amp;lt;DeathEngine&amp;gt;(this);          // You can also register other systems, databases, or processors here     }      protected override void OnLoad()     {         // Plugin startup logic (pre-initialization)     }      protected override bool OnUnload()     {         return true;     } }">
+      <meta name="description" content="Base class for RisingV plugins. Example Usage: using BepInEx; using RisingV.Shared.Plugins; using RisingV.Shared.Engines; using RisingV.Core.Engines;  public class MyCoolPluginConfig() : PluginConfig(MyPluginInfo.PLUGIN_GUID, MyPluginInfo.PLUGIN_GUID) {     public ConfigEntry&amp;lt;float&amp;gt; AttackModifier { get; set; } =         new(&quot;Gameplay&quot;, &quot;AttackModifier&quot;, 1f, &quot;Modifier for attack damage&quot;); }  public class MyCoolPluginContext() : PluginContext(typeof(MyPluginInfo), new MyCoolPluginConfig());  [BepInPlugin(MyPluginInfo.PLUGIN_GUID, MyPluginInfo.PLUGIN_NAME, MyPluginInfo.PLUGIN_VERSION)] [BepInDependency(&quot;RisingV.Core&quot;)] [BepInDependency(&quot;RisingV.Scripting&quot;)] public class Plugin : RisingPlugin&amp;lt;MyCoolPluginContext&amp;gt; {     protected override void OnInitialize()     {         EngineManager.AddEngine&amp;lt;ScriptingEngine&amp;gt;(this);         EngineManager.AddEngine&amp;lt;DamageEngine&amp;gt;(this);         EngineManager.AddEngine&amp;lt;DeathEngine&amp;gt;(this);          // You can also register other systems, databases, or processors here     }      protected override void OnLoad()     {         // Plugin startup logic (pre-initialization)     }      protected override bool OnUnload()     {         return true;     } }">
       <link rel="icon" href="../assets/favicon/favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -89,7 +89,7 @@
 
 
   <h1 id="RisingV_Shared_Plugins_RisingPluginBase" data-uid="RisingV.Shared.Plugins.RisingPluginBase" class="text-break">
-Class RisingPluginBase  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugins/RisingPlugin.cs/#L66"><i class="bi bi-code-slash"></i></a>
+Class RisingPluginBase  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugins/RisingPlugin.cs/#L65"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -113,7 +113,6 @@ public class MyCoolPluginConfig() : PluginConfig(MyPluginInfo.PLUGIN_GUID, MyPlu
 public class MyCoolPluginContext() : PluginContext(typeof(MyPluginInfo), new MyCoolPluginConfig());
 
 [BepInPlugin(MyPluginInfo.PLUGIN_GUID, MyPluginInfo.PLUGIN_NAME, MyPluginInfo.PLUGIN_VERSION)]
-[BepInDependency("gg.deca.VampireCommandFramework")]
 [BepInDependency("RisingV.Core")]
 [BepInDependency("RisingV.Scripting")]
 public class Plugin : RisingPlugin&lt;MyCoolPluginContext&gt;
@@ -223,7 +222,7 @@ public class Plugin : RisingPlugin&lt;MyCoolPluginContext&gt;
 
   <h3 id="RisingV_Shared_Plugins_RisingPluginBase__ctor_RisingV_Shared_Plugins_PluginContext_" data-uid="RisingV.Shared.Plugins.RisingPluginBase.#ctor(RisingV.Shared.Plugins.PluginContext)">
   RisingPluginBase(PluginContext)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugins/RisingPlugin.cs/#L138"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugins/RisingPlugin.cs/#L137"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="RisingV.Shared.Plugins.RisingPluginBase.html">RisingPluginBase</a> class with the specified plugin context.</p>
@@ -261,7 +260,7 @@ the plugin's configuration, target, and other details.</p>
 
   <h3 id="RisingV_Shared_Plugins_RisingPluginBase_Composites" data-uid="RisingV.Shared.Plugins.RisingPluginBase.Composites">
   Composites
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugins/RisingPlugin.cs/#L129"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugins/RisingPlugin.cs/#L128"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>A list of composite plugins that this plugin depends on or composes with.</p>
@@ -293,7 +292,7 @@ the plugin's configuration, target, and other details.</p>
 
   <h3 id="RisingV_Shared_Plugins_RisingPluginBase_Context" data-uid="RisingV.Shared.Plugins.RisingPluginBase.Context">
   Context
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugins/RisingPlugin.cs/#L72"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugins/RisingPlugin.cs/#L71"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Context for the plugin, containing information about the plugin's configuration,
@@ -326,7 +325,7 @@ target, and other details.</p>
 
   <h3 id="RisingV_Shared_Plugins_RisingPluginBase_DatabaseManager" data-uid="RisingV.Shared.Plugins.RisingPluginBase.DatabaseManager">
   DatabaseManager
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugins/RisingPlugin.cs/#L118"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugins/RisingPlugin.cs/#L117"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the DatabaseManager instance, which is responsible for managing
@@ -359,7 +358,7 @@ databases within the plugin.</p>
 
   <h3 id="RisingV_Shared_Plugins_RisingPluginBase_EngineManager" data-uid="RisingV.Shared.Plugins.RisingPluginBase.EngineManager">
   EngineManager
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugins/RisingPlugin.cs/#L124"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugins/RisingPlugin.cs/#L123"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the EngineManager instance, which is responsible for managing
@@ -392,7 +391,7 @@ engines within the plugin.</p>
 
   <h3 id="RisingV_Shared_Plugins_RisingPluginBase_EventBus" data-uid="RisingV.Shared.Plugins.RisingPluginBase.EventBus">
   EventBus
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugins/RisingPlugin.cs/#L100"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugins/RisingPlugin.cs/#L99"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The event bus used for managing events within the plugin.
@@ -425,7 +424,7 @@ This allows the plugin to publish and subscribe events.</p>
 
   <h3 id="RisingV_Shared_Plugins_RisingPluginBase_Harmony" data-uid="RisingV.Shared.Plugins.RisingPluginBase.Harmony">
   Harmony
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugins/RisingPlugin.cs/#L94"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugins/RisingPlugin.cs/#L93"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The Harmony instance used for patching methods in the plugin.</p>
@@ -457,7 +456,7 @@ This allows the plugin to publish and subscribe events.</p>
 
   <h3 id="RisingV_Shared_Plugins_RisingPluginBase_Log" data-uid="RisingV.Shared.Plugins.RisingPluginBase.Log">
   Log
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugins/RisingPlugin.cs/#L131"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugins/RisingPlugin.cs/#L130"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -488,7 +487,7 @@ This allows the plugin to publish and subscribe events.</p>
 
   <h3 id="RisingV_Shared_Plugins_RisingPluginBase_PluginConfig" data-uid="RisingV.Shared.Plugins.RisingPluginBase.PluginConfig">
   PluginConfig
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugins/RisingPlugin.cs/#L83"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugins/RisingPlugin.cs/#L82"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Configuration for the plugin, if available. This can be used to access settings and
@@ -521,7 +520,7 @@ options defined in the plugin's configuration file.</p>
 
   <h3 id="RisingV_Shared_Plugins_RisingPluginBase_PluginInfo" data-uid="RisingV.Shared.Plugins.RisingPluginBase.PluginInfo">
   PluginInfo
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugins/RisingPlugin.cs/#L77"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugins/RisingPlugin.cs/#L76"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Information about the plugin, such as its name, version, and GUID.</p>
@@ -553,7 +552,7 @@ options defined in the plugin's configuration file.</p>
 
   <h3 id="RisingV_Shared_Plugins_RisingPluginBase_PluginTarget" data-uid="RisingV.Shared.Plugins.RisingPluginBase.PluginTarget">
   PluginTarget
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugins/RisingPlugin.cs/#L89"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugins/RisingPlugin.cs/#L88"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The target platform for the plugin, which can be either Client or DedicatedServer.
@@ -586,7 +585,7 @@ This indicates where the plugin is intended to run.</p>
 
   <h3 id="RisingV_Shared_Plugins_RisingPluginBase_ProcessorManager" data-uid="RisingV.Shared.Plugins.RisingPluginBase.ProcessorManager">
   ProcessorManager
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugins/RisingPlugin.cs/#L112"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugins/RisingPlugin.cs/#L111"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the ProcessorManager instance, which is responsible for managing
@@ -619,7 +618,7 @@ processors within the plugin.</p>
 
   <h3 id="RisingV_Shared_Plugins_RisingPluginBase_SystemManager" data-uid="RisingV.Shared.Plugins.RisingPluginBase.SystemManager">
   SystemManager
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugins/RisingPlugin.cs/#L106"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugins/RisingPlugin.cs/#L105"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the SystemManager instance, which is responsible for managing
@@ -656,7 +655,7 @@ systems within the plugin.</p>
 
   <h3 id="RisingV_Shared_Plugins_RisingPluginBase_AddSharedComponent__1_RisingV_Shared_Plugins_IPlugin_System_Boolean_" data-uid="RisingV.Shared.Plugins.RisingPluginBase.AddSharedComponent``1(RisingV.Shared.Plugins.IPlugin,System.Boolean)">
   AddSharedComponent&lt;T&gt;(IPlugin, bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugins/RisingPlugin.cs/#L382"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugins/RisingPlugin.cs/#L381"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Adds a shared component of the specified type to the plugin's shared components.</p>
@@ -704,7 +703,7 @@ systems within the plugin.</p>
 
   <h3 id="RisingV_Shared_Plugins_RisingPluginBase_AddSharedComponent__1_RisingV_Shared_Plugins_IPlugin___0_System_Boolean_" data-uid="RisingV.Shared.Plugins.RisingPluginBase.AddSharedComponent``1(RisingV.Shared.Plugins.IPlugin,``0,System.Boolean)">
   AddSharedComponent&lt;T&gt;(IPlugin, T, bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugins/RisingPlugin.cs/#L394"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugins/RisingPlugin.cs/#L393"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Adds a shared component of the specified type to the plugin's shared components.</p>
@@ -749,7 +748,7 @@ systems within the plugin.</p>
 
   <h3 id="RisingV_Shared_Plugins_RisingPluginBase_Dispose" data-uid="RisingV.Shared.Plugins.RisingPluginBase.Dispose">
   Dispose()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugins/RisingPlugin.cs/#L402"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugins/RisingPlugin.cs/#L401"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Disposes of the plugin, cleaning up resources and unregistering events.</p>
@@ -776,7 +775,7 @@ systems within the plugin.</p>
 
   <h3 id="RisingV_Shared_Plugins_RisingPluginBase_GetSharedComponent_System_Type_" data-uid="RisingV.Shared.Plugins.RisingPluginBase.GetSharedComponent(System.Type)">
   GetSharedComponent(Type)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugins/RisingPlugin.cs/#L359"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugins/RisingPlugin.cs/#L358"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets a shared component of the specified type from the plugin's shared components.</p>
@@ -821,7 +820,7 @@ systems within the plugin.</p>
 
   <h3 id="RisingV_Shared_Plugins_RisingPluginBase_GetSharedComponent__1" data-uid="RisingV.Shared.Plugins.RisingPluginBase.GetSharedComponent``1">
   GetSharedComponent&lt;TX&gt;()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugins/RisingPlugin.cs/#L370"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugins/RisingPlugin.cs/#L369"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets a shared component of the specified type from the plugin's shared components.</p>
@@ -866,7 +865,7 @@ systems within the plugin.</p>
 
   <h3 id="RisingV_Shared_Plugins_RisingPluginBase_Load" data-uid="RisingV.Shared.Plugins.RisingPluginBase.Load">
   Load()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugins/RisingPlugin.cs/#L180"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugins/RisingPlugin.cs/#L179"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Loads the plugin, initializing it and registering necessary components and events.</p>
@@ -893,7 +892,7 @@ systems within the plugin.</p>
 
   <h3 id="RisingV_Shared_Plugins_RisingPluginBase_OnGameDataInitialized_RisingV_Shared_EventBridge_OnGameDataInitializedEvent_" data-uid="RisingV.Shared.Plugins.RisingPluginBase.OnGameDataInitialized(RisingV.Shared.EventBridge.OnGameDataInitializedEvent)">
   OnGameDataInitialized(OnGameDataInitializedEvent)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugins/RisingPlugin.cs/#L273"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugins/RisingPlugin.cs/#L272"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Called when the game data is initialized. This method is triggered by the <a class="xref" href="RisingV.Shared.EventBridge.OnGameDataInitializedEvent.html">EventBridge.OnGameDataInitializedEvent</a>.</p>
@@ -926,7 +925,7 @@ systems within the plugin.</p>
 
   <h3 id="RisingV_Shared_Plugins_RisingPluginBase_OnInitialize" data-uid="RisingV.Shared.Plugins.RisingPluginBase.OnInitialize">
   OnInitialize()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugins/RisingPlugin.cs/#L152"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugins/RisingPlugin.cs/#L151"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Called when the plugin is initialized (after <a class="xref" href="RisingV.Shared.Plugins.RisingPluginBase.html#RisingV_Shared_Plugins_RisingPluginBase_OnPreLoad">OnPreLoad()</a>).</p>
@@ -953,7 +952,7 @@ systems within the plugin.</p>
 
   <h3 id="RisingV_Shared_Plugins_RisingPluginBase_OnLoad" data-uid="RisingV.Shared.Plugins.RisingPluginBase.OnLoad">
   OnLoad()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugins/RisingPlugin.cs/#L157"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugins/RisingPlugin.cs/#L156"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Called when the plugin is loaded (after <a class="xref" href="RisingV.Shared.Plugins.RisingPluginBase.html#RisingV_Shared_Plugins_RisingPluginBase_OnInitialize">OnInitialize()</a>).</p>
@@ -980,7 +979,7 @@ systems within the plugin.</p>
 
   <h3 id="RisingV_Shared_Plugins_RisingPluginBase_OnPluginsInitializing_RisingV_Shared_EventBridge_OnPluginsInitializingEvent_" data-uid="RisingV.Shared.Plugins.RisingPluginBase.OnPluginsInitializing(RisingV.Shared.EventBridge.OnPluginsInitializingEvent)">
   OnPluginsInitializing(OnPluginsInitializingEvent)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugins/RisingPlugin.cs/#L284"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugins/RisingPlugin.cs/#L283"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Called when the plugins are initializing. This method is triggered by the <a class="xref" href="RisingV.Shared.EventBridge.OnPluginsInitializingEvent.html">EventBridge.OnPluginsInitializingEvent</a>.
@@ -1014,7 +1013,7 @@ Called after OnGameDataInitializedEvent, but before OnPluginsLoadingEvent.</p>
 
   <h3 id="RisingV_Shared_Plugins_RisingPluginBase_OnPluginsLoaded_RisingV_Shared_EventBridge_OnPluginsLoadedEvent_" data-uid="RisingV.Shared.Plugins.RisingPluginBase.OnPluginsLoaded(RisingV.Shared.EventBridge.OnPluginsLoadedEvent)">
   OnPluginsLoaded(OnPluginsLoadedEvent)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugins/RisingPlugin.cs/#L330"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugins/RisingPlugin.cs/#L329"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Called when all the plugins are loaded. This method is triggered by the <a class="xref" href="RisingV.Shared.EventBridge.OnPluginsLoadedEvent.html">EventBridge.OnPluginsLoadedEvent</a>.</p>
@@ -1047,7 +1046,7 @@ Called after OnGameDataInitializedEvent, but before OnPluginsLoadingEvent.</p>
 
   <h3 id="RisingV_Shared_Plugins_RisingPluginBase_OnPluginsLoading_RisingV_Shared_EventBridge_OnPluginsLoadingEvent_" data-uid="RisingV.Shared.Plugins.RisingPluginBase.OnPluginsLoading(RisingV.Shared.EventBridge.OnPluginsLoadingEvent)">
   OnPluginsLoading(OnPluginsLoadingEvent)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugins/RisingPlugin.cs/#L316"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugins/RisingPlugin.cs/#L315"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Called when all the plugins are initialized and soft loaded. This method is triggered by the <a class="xref" href="RisingV.Shared.EventBridge.OnPluginsPartialLoadedEvent.html">EventBridge.OnPluginsPartialLoadedEvent</a>.</p>
@@ -1080,7 +1079,7 @@ Called after OnGameDataInitializedEvent, but before OnPluginsLoadingEvent.</p>
 
   <h3 id="RisingV_Shared_Plugins_RisingPluginBase_OnPreLoad" data-uid="RisingV.Shared.Plugins.RisingPluginBase.OnPreLoad">
   OnPreLoad()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugins/RisingPlugin.cs/#L147"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugins/RisingPlugin.cs/#L146"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Called when the BepInEx plugin <code>Load</code> is called.</p>
@@ -1107,7 +1106,7 @@ Called after OnGameDataInitializedEvent, but before OnPluginsLoadingEvent.</p>
 
   <h3 id="RisingV_Shared_Plugins_RisingPluginBase_OnReload_RisingV_Shared_Managers_IManager_System_Collections_Generic_List_RisingV_Shared_Plugins_IPlugin__RisingV_Shared_Managers_ReloadReason_" data-uid="RisingV.Shared.Plugins.RisingPluginBase.OnReload(RisingV.Shared.Managers.IManager,System.Collections.Generic.List{RisingV.Shared.Plugins.IPlugin},RisingV.Shared.Managers.ReloadReason)">
   OnReload(IManager, List&lt;IPlugin&gt;, ReloadReason)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugins/RisingPlugin.cs/#L209"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugins/RisingPlugin.cs/#L208"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Called when the manager is reloaded. This can be used to handle any specific logic needed during a reload.
@@ -1150,7 +1149,7 @@ This can also override the default reload behavior.</p>
 
   <h3 id="RisingV_Shared_Plugins_RisingPluginBase_OnReload_RisingV_Shared_Plugins_PluginManager_System_Collections_Generic_List_RisingV_Shared_Plugins_IPlugin__RisingV_Shared_Managers_ReloadReason_" data-uid="RisingV.Shared.Plugins.RisingPluginBase.OnReload(RisingV.Shared.Plugins.PluginManager,System.Collections.Generic.List{RisingV.Shared.Plugins.IPlugin},RisingV.Shared.Managers.ReloadReason)">
   OnReload(PluginManager, List&lt;IPlugin&gt;, ReloadReason)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugins/RisingPlugin.cs/#L227"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugins/RisingPlugin.cs/#L226"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Called when the manager is reloaded with a specific type. This can be used to handle any specific logic needed during a reload.
@@ -1193,7 +1192,7 @@ This can also override the default reload behavior.</p>
 
   <h3 id="RisingV_Shared_Plugins_RisingPluginBase_OnUnload" data-uid="RisingV.Shared.Plugins.RisingPluginBase.OnUnload">
   OnUnload()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugins/RisingPlugin.cs/#L163"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugins/RisingPlugin.cs/#L162"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Called when the plugin is unloaded.</p>
@@ -1225,7 +1224,7 @@ This can also override the default reload behavior.</p>
 
   <h3 id="RisingV_Shared_Plugins_RisingPluginBase_Reload_RisingV_Shared_Plugins_PluginManager_RisingV_Shared_Managers_ReloadReason_" data-uid="RisingV.Shared.Plugins.RisingPluginBase.Reload(RisingV.Shared.Plugins.PluginManager,RisingV.Shared.Managers.ReloadReason)">
   Reload(PluginManager, ReloadReason)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugins/RisingPlugin.cs/#L241"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugins/RisingPlugin.cs/#L240"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -1258,7 +1257,7 @@ This can also override the default reload behavior.</p>
 
   <h3 id="RisingV_Shared_Plugins_RisingPluginBase_Reload_RisingV_Shared_Plugins_PluginManager_System_Collections_Generic_List_RisingV_Shared_Plugins_IPlugin__RisingV_Shared_Managers_ReloadReason_" data-uid="RisingV.Shared.Plugins.RisingPluginBase.Reload(RisingV.Shared.Plugins.PluginManager,System.Collections.Generic.List{RisingV.Shared.Plugins.IPlugin},RisingV.Shared.Managers.ReloadReason)">
   Reload(PluginManager, List&lt;IPlugin&gt;, ReloadReason)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugins/RisingPlugin.cs/#L234"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugins/RisingPlugin.cs/#L233"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Reloads the manager and its dependencies with a specific type.</p>
@@ -1294,7 +1293,7 @@ This can also override the default reload behavior.</p>
 
   <h3 id="RisingV_Shared_Plugins_RisingPluginBase_SetupConfiguration_RisingV_Shared_Plugins_PluginConfig_" data-uid="RisingV.Shared.Plugins.RisingPluginBase.SetupConfiguration(RisingV.Shared.Plugins.PluginConfig)">
   SetupConfiguration(PluginConfig?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugins/RisingPlugin.cs/#L339"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugins/RisingPlugin.cs/#L338"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Sets up the plugin configuration. This method can be overridden by derived classes</p>
@@ -1327,7 +1326,7 @@ This can also override the default reload behavior.</p>
 
   <h3 id="RisingV_Shared_Plugins_RisingPluginBase_SetupSharedEventBus_RisingV_Shared_Events_ManagedEventBus_" data-uid="RisingV.Shared.Plugins.RisingPluginBase.SetupSharedEventBus(RisingV.Shared.Events.ManagedEventBus)">
   SetupSharedEventBus(ManagedEventBus)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugins/RisingPlugin.cs/#L348"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugins/RisingPlugin.cs/#L347"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Sets up the shared event bus for the plugin. This method can be overridden by derived classes</p>
@@ -1360,7 +1359,7 @@ This can also override the default reload behavior.</p>
 
   <h3 id="RisingV_Shared_Plugins_RisingPluginBase_Unload" data-uid="RisingV.Shared.Plugins.RisingPluginBase.Unload">
   Unload()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugins/RisingPlugin.cs/#L220"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugins/RisingPlugin.cs/#L219"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Unloads the plugin, unregistering events and cleaning up resources.</p>
@@ -1393,7 +1392,7 @@ This can also override the default reload behavior.</p>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugins/RisingPlugin.cs/#L66" class="edit-link">Edit this page</a>
+          <a href="https://github.com/RisingV-Mods/RisingV.Shared/blob/main/RisingV.Shared/Plugins/RisingPlugin.cs/#L65" class="edit-link">Edit this page</a>
         </div>
 
 
