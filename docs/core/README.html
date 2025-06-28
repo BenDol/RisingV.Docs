@@ -178,6 +178,7 @@ public class Plugin : RisingPlugin&lt;MyCoolPluginContext&gt;
 {
     protected override void OnInitialize()
     {
+        // Manually adding engines, you don't need to do this if you have `AutoLoadEngines` enabled. 
         EngineManager.AddEngine&lt;ScriptingEngine&gt;(this);
         EngineManager.AddEngine&lt;DamageEngine&gt;(this);
         EngineManager.AddEngine&lt;DeathEngine&gt;(this);
